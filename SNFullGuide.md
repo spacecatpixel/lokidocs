@@ -76,15 +76,15 @@ A terminal window will now appear prompting for your log-in details, username(ro
 
 Consoles don't work like the rest of your computer. Here are some basic tips for navigating your way around the command line!
   
--   Don't try copying something by using the usual CTRL + C hotkey! If you want to copy something, do so by highlighting text and then right clicking it. Pasting works by right clicking a blank area in the console.
+-   Don't try copying something by using the usual Ctrl + C hotkey! If you want to copy something, do so by highlighting text and then right clicking it. Pasting works by right clicking a blank area in the console.
     
 -   If you want to kill a process or stop something from running, press Ctrl + C. This is why you shouldn't try copying something with this hotkey ;)
     
--   You can always check the directory you are in and its contents by typing ls
+-   You can always check the directory you are in and its contents by typing `ls`
     
--   You can always return to your home directory by typing cd ~
+-   You can always return to your home directory by typing `cd ~`
     
--   You can move into a given directory by typing cd <name> or move back up one level by typing cd ..
+-   You can move into a given directory by typing `cd <name>` or move back up one level by typing `cd ..`
     
 -   PuTTY allows you to easily duplicate or restart a session by right clicking the top of the window. Handy if you’re trying to do a few things at once.
 
