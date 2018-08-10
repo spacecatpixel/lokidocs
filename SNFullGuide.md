@@ -134,7 +134,7 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget [https://github.com/loki-project/loki/releases/download/v0.3.0-beta/loki-linux-x64-0.3.0-beta.zip`
+`wget https://github.com/loki-project/loki/releases/download/v0.3.0-beta/loki-linux-x64-0.3.0-beta.zip`
 
 If `wget` is not installed you may need to run `sudo apt-get install wget`
 
