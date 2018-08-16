@@ -244,55 +244,13 @@ It is at this point that we should get some Loki in the wallet. Copy your public
 
 Once you have enough Loki in this wallet, just leave it open, we’ll come back to it in a minute.
 
-## Step 6 - Service Node Registration - Individual.
+## Step 6 - Service Node Registration
 
-Duplicate the session one more time. In your new terminal, you won’t need to reattach the first daemon we launched. Instead, we will run the following command from the directory with the binaries to get registration information.
+We have designed an interactive prompt for service node registration, all you need to do is run the loki daemon and type and follow.
 
-`./lokid --testnet --prepare-registration <operator cut> <address> <fraction> <address2> <fraction2> ... <contribution amount>`
+`prepare_registration`
 
-`<operator cut>` is between 0 and 1 and is the percentage of the reward that the operator of the Service Node will receive. So, if I as the pool operator wanted to take a 5% cut, I would type 0.05 here. If I am going solo, it doesn’t really matter what number I put here, as I’ll just be taking to the cut and giving it back to myself, so I’ll just type 0.
-
-The first `<address><fraction>` is the operators Primary address and percentage they are contributing. If I’m staking alone, I don't need to add any other `<address> <fraction>` entries, and I’ll just put my address and the number 1 to say that I will contribute 100% of the Service Node collateral.
-
-`<contribution amount>` is the total collateral I will put up for my Service Node. Right now, in testnet, I can simply set it at 100. In mainnet, this number will change over time, so I’ll need to pay attention to what the current requirement is.
-
-So, a fully prepared command for a solo stake on testnet looks like this:  
-
-```
-./lokid --testnet --prepare-registration 0 T6SNL1nKVoDCU6VYXU6PDscrJnGH3YhJaKzN46JQ5bHxc8qYVD3TRVNWpCaVeH3QPMfqDXYjYwLf9Q3wJxi7THXh1r7YskNfT 1 100
-```
-
-Once the command is run the terminal will show you some information and a new command to run in your wallet, looking something similar to the output:  
-
-`Service node pubkey is 7b6e2752a9f7fbc57fd9fc7d2839c1cc6159e679e4f81a9714bfdd0937c52832`
-
-Run this command in the wallet that will fund this registration:
-
-```
-register_service_node 0 T6SNL1nKVoDCU6VYXU6PDscrJnGH3YhJaKzN46JQ5bHxc8qYVD3TRVNWpCaVeH3QPMfqDXYjYwLf9Q3wJxi7THXh1r7YskNfT 1 100 1534993324 384ee01acd92b7793e034ce750298c207822bf9ed26469809d819644b4b2752d 086a500bdc6912f46c3a6bd3dd43e14ead0a04d4765abcb3e46dadfd44aedf0c47010253d23eebf2770d0173a307b63c6c01d51a0262fc4030502755c4044605  
-```
-
-Copy this pubkey and the command by highlighting it and right clicking, and paste it into a notepad to save it. You can now close this session, we won't need it anymore.
-
-Go back to the session with the wallet running in it, or type screen -ls to see a list of the screens you are running and their port numbers if you detached it.
-
-`screen -x <port number>`
-
-Once we are in our wallet session, we will run the `register_service_node` command the `prepare_registration` command created for us, which we saved in a text file. Reminder that pasting in terminals works by right clicking in the blank area.
-
-```
-register_service_node 0 T6SNL1nKVoDCU6VYXU6PDscrJnGH3YhJaKzN46JQ5bHxc8qYVD3TRVNWpCaVeH3QPMfqDXYjYwLf9Q3wJxi7THXh1r7YskNfT 1 100 1534993324 384ee01acd92b7793e034ce750298c207822bf9ed26469809d819644b4b2752d 086a500bdc6912f46c3a6bd3dd43e14ead0a04d4765abcb3e46dadfd44aedf0c47010253d23eebf2770d0173a307b63c6c01d51a0262fc4030502755c4044605  
-```
-  
-If everything went well, the wallet will prompt you to confirm if you want to stake or not. Confirm by typing `y` and clicking return.
-
-Now we have to wait for the transaction to be added to the blockchain. In most cases this shouldn't take more than 2 minutes. To check which block height our stake was sent on run the command:
-
-`show_transfers`
-
-The blockheight will be shown at the left of your most recent out transfer. Take note of this blockheight as we will use it to check if our Service Node is recognised by the network.
-
-We can now close the wallet, or leave it open to see incoming rewards.
+follow the steps provided, and when the interactive wizard finishes go back to your wallet and paste the command the wizard outputs 
 
 ## Service Node Check
 
@@ -322,28 +280,12 @@ In any given pool, there will be at most 4 contributors including the operator. 
 99 - 1
 ```
 
-### Service Node Operator
-
-The Service Node operator will run the following command in a new terminal to register their Service Node. If the operator wants to reserve slots for their friends, they must have the addresses and percentage of the staking requirement each of the pool contributors will provide.
-
-`./lokid --testnet --prepare-registration <operator cut> <address> <fraction> <address2> <fraction2> [<address3> <fraction3>[<address4> <fraction4>]] <contribution amount>`
-
-The operator can predetermine a cut of the reward `<operator cut>` they wish to receive from running the Service node determined as a fraction. An input of 0.1 would result in the operator receiving 10% of the reward and the other 90% is split between the pool contributors depending on their share.
-
  **For example:** 
 If a Service Node operator wishes to run a pool with 3 other contributors and the operator wishes to receive 10% of the reward for running the Service Node, he must first have the 3 other contributors provide their public addresses. He must also have the information of the percentage of the stake they will provide as a fraction.
 
 Each contributor must provide at least 25% of the stake, so with 4 even contributors each `<fraction>` will be 0.25. Although , it could also be 0.5, 0.4, and 0.1, for example.
 
 The final number, `<contribution amount>`, is the amount the **OPERATOR** will contribute. For example, if the total staking requirement is 100, and the fraction for the operator is 0.25, this number will be set as 25.
-
-So, as a final example for a pool on testnet, here is a command:
-
-`./lokid --testnet --prepare-registration <operators cut> <operators address> 0.25 <address2> 0.25 <address3> 0.25 <address4> 0.25 25`
-
-If the above command has been run correctly, the terminal will output a command which the operator must run within their `loki-wallet-cli`.
-
-Once the command has been run in the wallet, the wallet will prompt for a confirmation to stake 25 loki, confirm by typing `y` and clicking return.
 
 Now the Service Node operator must provide to the other contributors the Service Node Pubkey, which was generated in the daemon, and the amount they need to stake.
 
