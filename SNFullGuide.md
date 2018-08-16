@@ -246,7 +246,7 @@ Once you have enough Loki in this wallet, just leave it open, we’ll come back 
 
 ## Step 6 - Service Node Registration
 
-We have designed an interactive prompt for service node registration, all you need to do is run the loki daemon and type and follow.
+We have designed an interactive prompt for service node registration, all you need to do is run the loki daemon and type
 
 `prepare_registration`
 
