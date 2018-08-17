@@ -134,7 +134,7 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget https://github.com/loki-project/loki/releases/download/v0.3.1-beta/loki-linux-x64-0.3.1-beta.zip`
+`wget https://github.com/loki-project/loki/releases/download/0.3.2-beta/loki-linux-x64-0.3.2-beta.zip`
 
 If `wget` is not installed you may need to run `sudo apt-get install wget`
 
@@ -146,7 +146,7 @@ To get to the binaries, we need to unzip them. Download and install unzip by run
 
 To unzip the downloaded zip file run the following command:
 
-`unzip loki-linux-x64-0.3.1-beta.zip`
+`unzip loki-linux-x64-0.3.2-beta.zip`
 
 You should see 8 files unzipped:
 
@@ -170,9 +170,9 @@ Check they are unzipped by running:
 
 `ls`
 
-If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.0-beta`, so to get into it we can type:
+If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.2-beta`, so to get into it we can type:
 
-`cd loki-linux-x64-0.3.1-beta`
+`cd loki-linux-x64-0.3.2-beta`
 
 To check that they are in that folder, once again, type:
 
@@ -180,7 +180,7 @@ To check that they are in that folder, once again, type:
 
 Excellent! We now have all of the necessary files to get this show on the road!
 
-*NOTE: If you’re nervous about trusting the binaries or the link, you should build it from source yourself. Instructions for that can be found in the README.md of [https://github.com/loki-project/loki](https://github.com/loki-project/loki)*
+> *NOTE: If you’re nervous about trusting the binaries or the link, you should build it from source yourself. Instructions for that can be found in the README.md of [https://github.com/loki-project/loki](https://github.com/loki-project/loki)*
 
 ## Step 4 - Run the Service Node Daemon
 
@@ -204,6 +204,7 @@ To have the daemon to continue to run in the background hold Ctrl and type ad. T
 
 For now, we can just leave the session open to see the daemon messages while we set up the Service Node. Just don't forget to use CTRL + A + D to detach the session before you close PuTTY later on.
 
+
 ## Step 5 - Get/Open A Wallet
 
 While we wait for the daemon to sync, we can now get a wallet going. It’ll probably save us time to open a second PuTTY session. You can do this by right clicking the window of the current PuTTY session and clicking “Duplicate Session.”
@@ -214,10 +215,10 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-0.3.1-beta`
+`cd loki-linux-x64-0.3.2-beta`
 
-Then to launch the wallet run the command:  
-  
+Then to launch the wallet run the command:
+
 `./loki-wallet-cli --testnet`
 
 When `loki-wallet-cli` first runs, it will request for you to specify a wallet name. Assuming we haven't created one yet, we will use the e.g. name `MyWallet`
@@ -226,13 +227,11 @@ Because this is the first time we have used the name `MyWallet` the client will 
 
 The `loki-wallet-cli` has generated us a wallet called `MyWallet` and is now prompting us for a password.
 
-*Note:*
-
-- *when typing the password, the characters will not appear. It will seem as if you are typing and no text is appearing however the terminal is logging every character you type including if it is capitalised or lowercase.*
-
-- *Write down your wallet name and password on a piece of paper as this information will be required every time we want to enter our wallet.*
-
-- *Use a password with uppercase letters, lowercase letters, numbers, symbols and make the password at least 9 characters long.*
+> _Note:_
+>-   _when typing the password, the characters will not appear. It will seem as if you are typing and no text is appearing however the terminal is logging every character you type including if it is capitalised or lowercase._ 
+>-   _Write down your wallet name and password on a piece of paper as this information will be required every time we want to enter our wallet._
+>-   _Use a password with uppercase letters, lowercase letters, numbers, symbols and make the password at least 9 characters long._
+    
 
 Once we have chosen our password for the wallet we must choose our language. For the purposes of this user guide I suggest you use English by typing in `1` and clicking return.
 
@@ -242,67 +241,183 @@ Line 13 to 17 show your 25-word mnemonic (“new-monic”) seed. The seed is use
 
 It is at this point that we should get some Loki in the wallet. Copy your public address and ask someone to send you Loki, or you can run `start_mining` from inside the wallet to instruct the daemon to start mining to the wallet. This might take an hour or so on testnet to get 100 Loki for staking.
 
+We will need our address to register our Service Node later, to get your primary address type the following command:
+
+`address`
+
+Highlight the string of characters that were outputted and save this in a notepad for later use, your public address should look similar to:
+
+`T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz7i5JDeqhFiHqu7ret56411ZJS7Thfeis718bVteBZ2UA6Y7G2d`
+
+> *NOTE: Do not use CTRL + C to copy your address, it will close the wallet down. Simply highlight the address and this will automatically save the portion you highlighted into your clipboard.*
+
 Once you have enough Loki in this wallet, just leave it open, we’ll come back to it in a minute.
 
-## Step 6 - Service Node Registration
 
-We have designed an interactive prompt for service node registration, all you need to do is run the loki daemon and type
+
+## Step 6 - Service Node Registration
+The next part of the guide will split into two sections: 
+* If you are an individual staker and do not require any other contributors to run your Service Node jump into **6.1 - individual Staking**.
+* If you want to run a pooled Service Node or contribute towards a pool jump into **6.2 - Pool Staking**
+
+---
+### 6.1 - Individual Staking
+If you want to run the Service Node as an individual you will require the following things.
+
+* A Loki daemon running with `--service-node` flag (see step 4).
+* A `loki-wallet-cli` primary address with enough Loki in your account to meet the Service Node Staking Requirement (see step 5).
+
+Now if we have the two above items we can proceed to our daemon to register our Service Node.
+
+Type `screen -ls` to get a list of the screens running. Your daemon will normally be the bottom one on the list. To enter our daemon run the following command, replacing `<port number>` with the number that corresponds with your daemon.
+
+`screen -x <port number>`
+
+To start the registration process we are going to run the following interactive command within the daemon terminal:
 
 `prepare_registration`
 
-follow the steps provided, and when the interactive wizard finishes go back to your wallet and paste the command the wizard outputs 
+The daemon will output the current staking requirement and prompt you with an input to clarify if you are an individual staker or you will be running a pool. Type `y` and click enter as we will be the sole staker.
 
-## Service Node Check
+The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your Loki Address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address. Double check the address matches the one of your wallet then click enter if it is the same.
 
-After you have locked your collateral we will need to check if our Service Node Pubkey is sitting in the list with the other Service Node’s on the network. This will prove our Service Node is running, recognised and will receive a reward if it keeps running.
+The daemon will now ask for a final confirmation, if you agree to the information provided type `y` and click enter.
 
-Let’s go into our daemon screen by typing `screen -x <port number>`. To find the port number use `screen -ls` and your daemon should be sitting at the bottom of the list.
+The daemon will output a command for us to run looking similar to:
+```
+register_service_node 4294967292 T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz7i5JDeqhFiHqu7ret56411ZJS7Thfeis718bVteBZ2UA6Y7G2d 4294967292 100.000000000 1535677391 ec3895ea70a4a91b5ec4b5e1df96a45e07046f1fb0123c754d98fb2d70f4529d 5bb35d7b8ab1acb943bc47913ada8f9d2e6d6e22264e57484a04c1bbfd461f0ee2e5435454cd9b7059b221eb506ce9ea4537ddd9faf1f1757e0ef611a41c0609
+```
+Copy the whole line of text and paste it into your notepad as we will need to run this command in our `loki-wallet-cli`.
 
-Once we are in the daemon again we can run the command `print_quorum_state <block height>` where the block height should be 1 or two blocks after the block in which we locked our collateral.
+You have 2 weeks from the moment of registering the Service Node to run the `register_service_node` command, however it is advised to do it as soon as possible.
 
-If your `<Service Node Pubkey>` is sitting in the list you know you are now staking.
+We do not require our daemon terminal anymore, however we do need to daemon to be running. Hold CTRL and type `ad` to detach the screen.
 
-Well done! You will receive a block reward when your Service Node has been active for some time and the network chooses you within the list. 
+Run through step 5 once more to open our Loki wallet. Once we are in our wallet run the command the daemon outputted for us when we prepared our Service Node.
 
-## Service Node Registration - Pool
+The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter. Well done! Let's continue to the next step **"Step 7 - Service Node Check"** to check if our service node is running.
 
+---
+
+### 6.2 - Pool Staking
 Service Nodes can be split between multiple parties. At a minimum, the operator must stake at least 25% of the total required amount. The operator can also reserve contribution slots for specific addresses to prevent random users from adding to the pool.
 
 In any given pool, there will be at most 4 contributors including the operator. After the operator, each new participant must also contribute 25% of the minimum, except the last one. So for example, valid splits might be:
 
+|Operator| Contributor 1 | Contributor 2 | Contributor 3|
+|:-:|:-:|:-:|:-:|
+|25%|25%|40%|10%|
+|65%|25%|10%||
+|90%|10%|||
+|99%|1%|
+
+Depending on the individual and their circumstance they will need to:
+* Jump into section **"6.2.1 - Operator"** if they are running the daemon and hosting the pool;
+* Jump into section **"6.2.2 - Pool Contributor"** if they are contributing to someone's Service Node.
+
+>*NOTE: It is advised to read both sections of ***"6.2 - Pool Staking"*** to have a better understanding of the process.*
+
+---
+#### 6.2.1 - Operator
+The Operator is the individual who will be hosting the pool and running the Service Node daemon, thus incurring the operating expenses encompassed by running a node.
+
+The Operator will need to have:
+* A Loki daemon running with `--service-node` flag (see step 4) at all times.
+* A `loki-wallet-cli` primary address with enough Loki in their account to meet 25% of the Staking Requirement.
+* 1-3 other contributors who also have a `loki-wallet-cli` with enough Loki in their accounts to meet 25% of the staking requirement.
+* The address and contribution amounts the 1-3 contributors will stake.
+>*NOTE: The other contributors addresses are optional to have as you can create your pool to be open to anyone to contribute to, however they are recommended to have to avoid any issues of other individuals stealing their spots.*
+
+Now if we have the three/four above items we can proceed to our daemon to register our Service Node.
+
+Type `screen -ls` to get a list of the screens running. Your daemon will normally be the bottom one on the list. To enter our daemon run the following command, replacing `<port number>` with the number that corresponds with your daemon:
+
+`screen -x <port number>`
+
+To start the registration process we are going to run the following interactive command within the daemon terminal:
+
+`prepare_registration`
+
+The terminal will prompt the operator to specify if they will contribute the entire stake, because we are running this as a pooled Service Node we will type `n` and click enter.
+
+Next the terminal will request the input for the operator cut. This value is between 0-100 and represents the percentage of the reward the operator will receive before the reward is distributor to the share holders. If you have agreed to a 10% operator cut with the other contributors you would type `10` and click return.
+
+The terminal will now display the minimum reserve the operator can contribute and request the operator to input the amount in Loki they wish to contribute. Type your desired `<operator contribution>` and click return.
+
+Once we have set the operators desired stake amount we have the option to either leave the pool open for anyone to contribute or lock a reserve for individuals that have agreed with us to stake within our Service Node. 
+
+---
+>#### Reserved Pool
+>If the operator wishes to have their pool closed they should type `y` and click continue. 
+>
+>The terminal will now prompt the operator for how many additional contributes they have organised to be apart of this Service Node. They must type in the number of contributors, not including themselves, and click return.
+>
+>The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address then click return to confirm your address.
+>
+>Next the operator must input each of the contributors amount of Loki they will stake and each contributors address.
+
+---
+
+>#### Open Pool
+>
+>If the operator wishes to leave their pool open they should type `n` and click continue. The terminal will prompt the operator to input their address. Once the address has been inputted the terminal will display the remaining portion that needs to be contributed by others. If you agree click `y` and hit return.
+
+---
+The daemon will display a summary of the information we entered. This is our chance for a final check over to make sure we entered in the right information. If you confirm the information is correct type `y` and click return.
+
+The daemon will output a command for us to run within our wallet, looking similar to:
 ```
-25 - 25 - 40 -10
-
-90 - 10
-
-65 - 25 - 10
-
-99 - 1
+register_service_node 214748364 T6UCEoWvJHCJq5biK3LMQZ4CRXAaqiPda2kCRRYYYEMFfxYoqnUo7Nx88RL3wmENwN4kfjDSp2jMN1g6PSErKrSu2EEp8UMy5 1073741823 T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz7i5JDeqhFiHqu7ret56411ZJS7Thfeis718bVteBZ2UA6Y7G2d 3221225469 25.000000000 1535692249 5dac247e90ced2dcd9e51faec8792acb0c11b4c700640d9104b17c868ea167e3 cc11eef804c11d3e93cf8c488c10d97b8cec9ee2b38e6666ff07749c2911aa06ce310edc926a4d2f50a588e9c15afcc20e935a0f188aa7caa764a62058dec80d
 ```
+> *NOTE: You must run the command outputed in **your** daemon and not the command shown above.*
 
- **For example:** 
-If a Service Node operator wishes to run a pool with 3 other contributors and the operator wishes to receive 10% of the reward for running the Service Node, he must first have the 3 other contributors provide their public addresses. He must also have the information of the percentage of the stake they will provide as a fraction.
+Copy the whole line of text in your daemon and paste it into your notepad as we will need to run this command in our `loki-wallet-cli`.
 
-Each contributor must provide at least 25% of the stake, so with 4 even contributors each `<fraction>` will be 0.25. Although , it could also be 0.5, 0.4, and 0.1, for example.
+You have 2 weeks from the moment of registering the Service Node to run the `register_service_node` command, however it is advised to do it as soon as possible.
 
-The final number, `<contribution amount>`, is the amount the **OPERATOR** will contribute. For example, if the total staking requirement is 100, and the fraction for the operator is 0.25, this number will be set as 25.
+Before we leave the daemon run the following command to get our `<Service Node Public Key>` and save it in your notepad:
 
-Now the Service Node operator must provide to the other contributors the Service Node Pubkey, which was generated in the daemon, and the amount they need to stake.
+`print_sn_key`
 
-At this point the Operator will need to wait until all contributors have send they’re collateral before rewards will be received.
+Run through step 5 once more to open our Loki wallet. Once we are in our wallet run the command the daemon outputted for us when we prepared our Service Node. The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter.
 
-### Pool Contributor
+We must now send the `<Service Node Public Key>` to our contributors with the amount of Loki they are required to stake.
 
-The pool contributor must first receive the Service Node Pubkey and the requirements(amount of loki to send) from the Service Node Operator.
+At this point the we will need to wait until all contributors have staked before rewards will be received.
 
-The Pool Contributor must have downloaded the necessary binaries, is running a daemon or is connected to a remote node, has generated a wallet through the `loki-wallet-cli`, and has enough Loki to stake. They can then run the following command in their `loki-wallet-cli` (If you do not have the mentioned items you must run through this guide again skipping the Service Node registration section).
+---
+#### 6.2.2 - Pool Contributor
+
+The pool contributor must first receive the Service Node Pubkey and the requirements (amount of loki to send) from the Service Node Operator.
+
+The pool contributor must have downloaded the necessary binaries, is running a daemon or is connected to a remote node, has generated a wallet through the `loki-wallet-cli`, and has enough Loki to stake. They can then run the following command in their `loki-wallet-cli` .
 
 `stake <Service Node Pubkey> <address> <contribution amount>`
 
-Where the `<Service Node Pubkey>` is the Pubkey provided from the Service Node operator, the `<address>` is the Pool contributors address in which they are sending from and receiving the reward to, and the `<contribution amount>` is the amount of $Loki they agreed to with the Service Node Operator.
+Where the `<Service Node Pubkey>` is the Pubkey provided from the Service Node operator, the `<address>` is the Pool contributors address in which they are sending from and receiving the reward to, and the `<contribution amount>` is the amount of Loki they are going to stake which they agreed to with the Service Node Operator.
 
-At this stage you will need to wait for the other contributors to provide their collateral. Once everyone has staked you can refer to “Service Node Check” to see where your Service Node Operator’s node is in the list.
+At this stage you will need to wait for the other contributors to provide their collateral. Once everyone has staked you can refer to **“Step 7 - Service Node Check”** to see where your Service Node Operator’s node is in the list.
 
 Congratulations, you are now staking.
+
+## Step 7 - Service Node Check
+
+After we have locked your collateral we will need to check if our Service Node Pubkey is sitting in the list with the other Service Node’s on the network. This will prove our Service Node is running, recognised and will receive a reward if it keeps running.
+
+Let’s go into our daemon screen by typing `screen -x <port number>`. To find the port number use `screen -ls` and your daemon should be sitting at the bottom of the list.
+
+Once we are in the daemon again we can run the following command to see our Service Node Public Key:
+
+`print_sn_key`
+
+The Service Node Public Key is used to identify our Service Node within the list of Service Nodes currently on the network. You can jump onto https://lokitestnet.com/ to see if your service Node is in the list or we can continue in the terminal to output the same information.
+
+We will want to know the current block height, type `status` into the daemon and it will output this information. Once we have the block height we can then check the current Service Nodes on the network at our specified block height.
+
+Run the command `print_quorum_state <block height>` replacing `<block height>` with the the number minus 1 that was outputted when running `status` command. 
+
+If your `<Service Node Pubkey>` is sitting in the list you know you are now staking.
+
+Well done! You will receive a block reward when your Service Node has been active for some time and the network chooses you within the list.
 
 This guide will be regularly updated when new features are added to Snodes. [Join the discord for more discussion.](https://discord.gg/FkwRPSA)
