@@ -396,6 +396,10 @@ The pool contributor must have downloaded the necessary binaries, is running a d
 
 Where the `<Service Node Pubkey>` is the Pubkey provided from the Service Node operator, the `<address>` is the Pool contributors address in which they are sending from and receiving the reward to, and the `<contribution amount>` is the amount of Loki they are going to stake which they agreed to with the Service Node Operator.
 
+The Pool Contributor can also include the `auto` command, when staking this will create a wallet which runs as a background process and automatically signs a register transaction each 30 days, so the contributor need not sign a new transaction manually each registration period.
+
+`stake auto <Service Node Pubkey> <address> <contribution amount>`
+
 At this stage you will need to wait for the other contributors to provide their collateral. Once everyone has staked you can refer to **“Step 7 - Service Node Check”** to see where your Service Node Operator’s node is in the list.
 
 Congratulations, you are now staking.
