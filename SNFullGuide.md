@@ -134,7 +134,7 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget https://github.com/loki-project/loki/releases/download/0.3.2-beta/loki-linux-x64-0.3.2-beta.zip`
+`wget https://github.com/loki-project/loki/releases/download/v0.3.3-beta/loki-linux-x64-0.3.3-beta.zip`
 
 If `wget` is not installed you may need to run `sudo apt-get install wget`
 
@@ -146,7 +146,7 @@ To get to the binaries, we need to unzip them. Download and install unzip by run
 
 To unzip the downloaded zip file run the following command:
 
-`unzip loki-linux-x64-0.3.2-beta.zip`
+`unzip loki-linux-x64-0.3.3-beta.zip`
 
 You should see 8 files unzipped:
 
@@ -172,7 +172,7 @@ Check they are unzipped by running:
 
 If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.2-beta`, so to get into it we can type:
 
-`cd loki-linux-x64-0.3.2-beta`
+`cd loki-linux-x64-0.3.3-beta`
 
 To check that they are in that folder, once again, type:
 
@@ -215,7 +215,7 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-0.3.2-beta`
+`cd loki-linux-x64-0.3.3-beta`
 
 Then to launch the wallet run the command:
 
@@ -414,7 +414,7 @@ The Service Node Public Key is used to identify our Service Node within the list
 
 We will want to know the current block height, type `status` into the daemon and it will output this information. Once we have the block height we can then check the current Service Nodes on the network at our specified block height.
 
-Run the command `print_quorum_state <block height>` replacing `<block height>` with the the number minus 1 that was outputted when running `status` command. 
+Run the command `print_quorum_state <block height>` replacing `<block height>` with the number minus 1 that was outputted when running `status` command. 
 
 If your `<Service Node Pubkey>` is sitting in the list you know you are now staking.
 
