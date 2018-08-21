@@ -297,6 +297,12 @@ We do not require our daemon terminal anymore, however we do need to daemon to b
 
 Run through step 5 once more to open our Loki wallet. Once we are in our wallet run the command the daemon outputted for us when we prepared our Service Node.
 
+Alternatively, you can also include the `auto` command, this will create a wallet which runs as a background process and automatically signs a register transaction each 30 days, so the contributor need not sign a new transaction manually each registration period.
+
+`register_service_node auto args.....`
+
+> If you run the `auto` command the wallet will close pushing the process into the background. See additional information at the end of this guide to learn how to stop the auto command.
+
 The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter. Well done! Let's continue to the next step **"Step 7 - Service Node Check"** to check if our service node is running.
 
 ---
@@ -387,6 +393,12 @@ Before we leave the daemon run the following command to get our `<Service Node P
 
 Run through step 5 once more to open our Loki wallet. Once we are in our wallet run the command the daemon outputted for us when we prepared our Service Node. The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter.
 
+Alternatively, the operator can also include the `auto` command, when staking this will create a wallet which runs as a background process and automatically signs a register transaction each 30 days, so the contributor need not sign a new transaction manually each registration period.
+
+`register_service_node auto args.....`
+
+> If you run the `auto` command the wallet will close pushing the process into the background. See additional information at the end of this guide to learn how to stop the auto command.
+
 We must now send the `<Service Node Public Key>` to our contributors with the amount of Loki they are required to stake.
 
 At this point the we will need to wait until all contributors have staked before rewards will be received.
@@ -405,6 +417,8 @@ Where the `<Service Node Pubkey>` is the Pubkey provided from the Service Node o
 The Pool Contributor can also include the `auto` command, when staking this will create a wallet which runs as a background process and automatically signs a register transaction each 30 days, so the contributor need not sign a new transaction manually each registration period.
 
 `stake auto <Service Node Pubkey> <address> <contribution amount>`
+
+> If you run the `auto` command the wallet will close pushing the process into the background. See additional information at the end of this guide to learn how to stop autostaking.
 
 At this stage you will need to wait for the other contributors to provide their collateral. Once everyone has staked you can refer to **“Step 7 - Service Node Check”** to see where your Service Node Operator’s node is in the list.
 
@@ -431,3 +445,16 @@ If your `<Service Node Pubkey>` is sitting in the list you know you are now stak
 Well done! You will receive a block reward when your Service Node has been active for some time and the network chooses you within the list.
 
 This guide will be regularly updated when new features are added to Snodes. [Join the discord for more discussion.](https://discord.gg/FkwRPSA)
+
+
+## Additional
+### Autostaking - Checking/stopping autostake command
+To check the processes running in the background, run the command:
+
+`top -u <username>`
+
+Under the `COMMAND` column we should see a process called `loki-wallet-cli`. If you do not see this process you are either looking at the wrong `<username>` or your autostake command is not running. 
+
+If you want to stop the autostake then run the following command while logged on to the specific `<username>` which has `loki-wallet-cli` running in the background:
+
+ `pkill loki-wallet-cli`
