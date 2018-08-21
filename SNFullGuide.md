@@ -10,7 +10,7 @@ To understand what a Service Node is, you can refer to the [whitepaper](https://
 
 -   Service Nodes are full nodes on the Loki network
     
--   Full nodes become Service Nodes when the owner locks the required amount of Loki for 30 days and submits a registration transaction
+-   Full nodes become Service Nodes when the owner locks the required amount of Loki for 30 days (2 days on testnet) and submits a registration transaction
     
 -   Once accepted by the network, the Service Node is eligible to win block rewards
     
@@ -134,11 +134,11 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget https://github.com/loki-project/loki/releases/download/v0.3.3-beta/loki-linux-x64-0.3.3-beta.zip`
+`wget https://github.com/loki-project/loki/releases/download/v0.3.4-beta/loki-linux-x64-0.3.4-beta.zip`
 
 If `wget` is not installed you may need to run `sudo apt-get install wget`
 
-*NOTE: In the off chance this guide is out of date, check [https://github.com/loki-project/loki/releases](https://github.com/loki-project/loki/releases) in your browser to see if this link is up to date with the latest release.*
+*NOTE: In the off chance this guide is out of date, check [https://github.com/loki-project/loki/releases](https://github.com/loki-project/loki/releases) in your browser to see if this link is up to date with the latest release. You will also find the binaries for Windows and Mac users if you are not running your Service Node on Linux.*
 
 To get to the binaries, we need to unzip them. Download and install unzip by running the following command.
 
@@ -146,7 +146,7 @@ To get to the binaries, we need to unzip them. Download and install unzip by run
 
 To unzip the downloaded zip file run the following command:
 
-`unzip loki-linux-x64-0.3.3-beta.zip`
+`unzip loki-linux-x64-0.3.4-beta.zip`
 
 You should see 8 files unzipped:
 
@@ -170,9 +170,9 @@ Check they are unzipped by running:
 
 `ls`
 
-If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.2-beta`, so to get into it we can type:
+If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.4-beta`, so to get into it we can type:
 
-`cd loki-linux-x64-0.3.3-beta`
+`cd loki-linux-x64-0.3.4-beta`
 
 To check that they are in that folder, once again, type:
 
@@ -215,7 +215,7 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-0.3.3-beta`
+`cd loki-linux-x64-0.3.4-beta`
 
 Then to launch the wallet run the command:
 
@@ -280,6 +280,8 @@ To start the registration process we are going to run the following interactive 
 The daemon will output the current staking requirement and prompt you with an input to clarify if you are an individual staker or you will be running a pool. Type `y` and click enter as we will be the sole staker.
 
 The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your Loki Address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address. Double check the address matches the one of your wallet then click enter if it is the same.
+
+The daemon will now ask if you wish to enable automatic re-staking. Type `y` and click enter if you would like to have your Service Node  re-stake automatically for you at the end of every 30 days. Type `n` if you would like to re-stake manually. 
 
 The daemon will now ask for a final confirmation, if you agree to the information provided type `y` and click enter.
 
@@ -350,11 +352,15 @@ Once we have set the operators desired stake amount we have the option to either
 >#### Reserved Pool
 >If the operator wishes to have their pool closed they should type `y` and click continue. 
 >
->The terminal will now prompt the operator for how many additional contributes they have organised to be apart of this Service Node. They must type in the number of contributors, not including themselves, and click return.
+>The terminal will now prompt the operator for the number of additional contributors they have organised to be apart of this Service Node. They must type in the number of contributors, not including themselves, and click return.
 >
 >The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address then click return to confirm your address.
 >
 >Next the operator must input each of the contributors amount of Loki they will stake and each contributors address.
+>
+>The daemon will now ask if you wish to enable automatic re-staking. Type `y` and hit return if you would like to have your Service Node  re-stake automatically at the end of every 30 days. Type `n` if you would like to re-stake manually.
+>
+>You will now be asked to confirm the information above is correct.
 
 ---
 
