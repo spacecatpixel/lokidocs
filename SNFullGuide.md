@@ -458,3 +458,13 @@ Under the `COMMAND` column we should see a process called `loki-wallet-cli`. If 
 If you want to stop the autostake then run the following command while logged on to the specific `<username>` which has `loki-wallet-cli` running in the background:
 
  `pkill loki-wallet-cli`
+ 
+ ### Running Autostake on startup
+ 
+If the host machine your VPS is running on shuts down or restarts unexpectedly then so to will your your autostaking wallet, you can use the following command to start the autostaking wallet again, you can also include these commands in your startup scripts, ensuring if your node goes down it automatically restarts the wallet process.
+
+`loki-wallet-cli --testnet --wallet-file <PATH TO WALLET FILE> --password <WALLET PASSWORD> set ask-password 0`
+
+`register_service_node auto ...`
+
+Running this command if you have already staked will not stake over the top of an already staked node 
