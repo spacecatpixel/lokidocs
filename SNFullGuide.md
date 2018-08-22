@@ -180,7 +180,7 @@ To check that they are in that folder, once again, type:
 
 Excellent! We now have all of the necessary files to get this show on the road!
 
-> *NOTE: If you’re nervous about trusting the binaries or the link, you should build it from source yourself. Instructions for that can be found in the README.md of [https://github.com/loki-project/loki](https://github.com/loki-project/loki)*
+> *NOTE: If you’re nervous about trusting the binaries or the link, you should build it from source yourself. Instructions for that can be found in the README of [https://github.com/loki-project/loki](https://github.com/loki-project/loki)*
 
 ## Step 4 - Run the Service Node Daemon
 
@@ -194,11 +194,13 @@ The `screen` command is generally included in Ubuntu by default. If it isn’t, 
 
 Enter through the information that the terminal shell is providing until we get back a blank screen awaiting an input.
 
-To begin the Service Node Daemon we must launch lokid with two flags `--testnet` and `--service-node`.
+To begin the Service Node daemon we must launch lokid with the flag `--service-node`.
 
-`./lokid --testnet --service-node`
+`./lokid --service-node`
 
-The Daemon will now start syncing. You won’t be able to do much if it hasn’t synced.
+> If you are testing the daemon on testnet run the following command `./lokid --service-node --testnet`
+
+The daemon will now start syncing. You won’t be able to do much if it hasn’t synced.
 
 To have the daemon to continue to run in the background hold Ctrl and type ad. To test your screen is still running in the background run the command `screen -ls` and take note of the port number at the start of the screen. This number will help us re-enter the daemon at future times. Typing `screen -x <port number>` will reattach the session so we can see what’s going on inside. Hold CTRL and type "ad" again to detach the screen once more.
 
@@ -219,7 +221,9 @@ Change directory to where our binaries are saved:
 
 Then to launch the wallet run the command:
 
-`./loki-wallet-cli --testnet`
+`./loki-wallet-cli`
+
+> If you are on testnet run the command with the --testnet flag: `./loki-wallet-cli --testnet`
 
 When `loki-wallet-cli` first runs, it will request for you to specify a wallet name. Assuming we haven't created one yet, we will use the e.g. name `MyWallet`
 
@@ -228,7 +232,7 @@ Because this is the first time we have used the name `MyWallet` the client will 
 The `loki-wallet-cli` has generated us a wallet called `MyWallet` and is now prompting us for a password.
 
 > _Note:_
->-   _when typing the password, the characters will not appear. It will seem as if you are typing and no text is appearing however the terminal is logging every character you type including if it is capitalised or lowercase._ 
+>-   _When typing the password, the characters will not appear. It will seem as if you are typing and no text is appearing however the terminal is logging every character you type including if it is capitalised or lowercase._ 
 >-   _Write down your wallet name and password on a piece of paper as this information will be required every time we want to enter our wallet._
 >-   _Use a password with uppercase letters, lowercase letters, numbers, symbols and make the password at least 9 characters long._
     
@@ -239,7 +243,9 @@ The CLI will generate and spit out several lines of text. The first two lines of
 
 Line 13 to 17 show your 25-word mnemonic (“new-monic”) seed. The seed is used to easily backup and restore your wallet without needing any other information. At this stage, grab a pen and paper, and write down your 25 words in order. Store the piece of paper in a safe and secure place, if your words are stored in a text file on your computer or stored online, you increase your risk of someone else getting control of your wallet.
 
-It is at this point that we should get some Loki in the wallet. Copy your public address and ask someone to send you Loki, or you can run `start_mining` from inside the wallet to instruct the daemon to start mining to the wallet. This might take an hour or so on testnet to get 100 Loki for staking.
+It is at this point that we should get some Loki in the wallet. The amount of Loki required to run a node is derived from the function shown in Lokis [Cryptoeconomic paper](https://loki.network/wp-content/uploads/2018/07/Loki_Cryptoeconomics-1.pdf). Don't worry if you cant work out the formula, the daemon will display the amount of Loki required to run the node. If you do not have enough you will have the option to join in or run your own Service Node pool.
+
+> If you are running a Service Node on the testnet you will only ever require 100 testnet Loki to run the Node. You can ask someone in the Loki Discord Community for some testnet Loki, or alternatively you can run the command `start_mining` in your wallet. This may take an hour or two to get enough Loki.
 
 We will need our address to register our Service Node later, to get your primary address type the following command:
 
@@ -247,7 +253,7 @@ We will need our address to register our Service Node later, to get your primary
 
 Highlight the string of characters that were outputted and save this in a notepad for later use, your public address should look similar to:
 
-`T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz7i5JDeqhFiHqu7ret56411ZJS7Thfeis718bVteBZ2UA6Y7G2d`
+`LPoiZQ43qG18FzKq7WhEbk3gfNNiemGsd7REdSQaFv4RdB8E97RxP8WFLRR2xHQStiSM61EFEicXU3EEPj7GEHdz8WHUrWRkbGeQ1r8ro8`
 
 > *NOTE: Do not use CTRL + C to copy your address, it will close the wallet down. Simply highlight the address and this will automatically save the portion you highlighted into your clipboard.*
 
@@ -303,7 +309,7 @@ Alternatively, you can also include the `auto` command, this will create a walle
 
 > If you run the `auto` command the wallet will close pushing the process into the background. See additional information at the end of this guide to learn how to stop the auto command.
 
-The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter. Well done! Let's continue to the next step **"Step 7 - Service Node Check"** to check if our service node is running.
+The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter. Well done! Let's continue to the next step **"Step 7 - Service Node Check"** to check if our Service Node is running.
 
 ---
 
@@ -355,24 +361,24 @@ The terminal will now display the minimum reserve the operator can contribute an
 Once we have set the operators desired stake amount we have the option to either leave the pool open for anyone to contribute or lock a reserve for individuals that have agreed with us to stake within our Service Node. 
 
 ---
->#### Reserved Pool
->If the operator wishes to have their pool closed they should type `y` and click continue. 
->
->The terminal will now prompt the operator for the number of additional contributors they have organised to be apart of this Service Node. They must type in the number of contributors, not including themselves, and click return.
->
->The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address then click return to confirm your address.
->
->Next the operator must input each of the contributors amount of Loki they will stake and each contributors address.
->
->The daemon will now ask if you wish to enable automatic re-staking. Type `y` and hit return if you would like to have your Service Node  re-stake automatically at the end of every 30 days. Type `n` if you would like to re-stake manually.
->
->You will now be asked to confirm the information above is correct.
+#### Reserved Pool
+If the operator wishes to have their pool closed they should type `y` and click continue. 
+
+The terminal will now prompt the operator for the number of additional contributors they have organised to be apart of this Service Node. They must type in the number of contributors, not including themselves, and click return.
+
+The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address then click return to confirm your address.
+
+Next the operator must input each of the contributors amount of Loki they will stake and each contributors address.
+
+The daemon will now ask if you wish to enable automatic re-staking. Type `y` and hit return if you would like to have your Service Node  re-stake automatically at the end of every 30 days. Type `n` if you would like to re-stake manually.
+
+You will now be asked to confirm the information above is correct.
 
 ---
 
->#### Open Pool
->
->If the operator wishes to leave their pool open they should type `n` and click continue. The terminal will prompt the operator to input their address. Once the address has been inputted the terminal will display the remaining portion that needs to be contributed by others. If you agree click `y` and hit return.
+#### Open Pool
+
+If the operator wishes to leave their pool open they should type `n` and click continue. The terminal will prompt the operator to input their address. Once the address has been inputted the terminal will display the remaining portion that needs to be contributed by others. If you agree click `y` and hit return.
 
 ---
 The daemon will display a summary of the information we entered. This is our chance for a final check over to make sure we entered in the right information. If you confirm the information is correct type `y` and click return.
@@ -434,7 +440,11 @@ Once we are in the daemon again we can run the following command to see our Serv
 
 `print_sn_key`
 
-The Service Node Public Key is used to identify our Service Node within the list of Service Nodes currently on the network. You can jump onto https://lokitestnet.com/ to see if your service Node is in the list or we can continue in the terminal to output the same information.
+The Service Node Public Key is used to identify our Service Node within the list of Service Nodes currently on the network. 
+
+You can jump onto https://lokiblocks.com/ to see if your Service Node is in the list or we can continue in the terminal to output the same information.
+
+>If you are running your Service Node on testnet go to https://lokitestnet.com/ instead.
 
 We will want to know the current block height, type `status` into the daemon and it will output this information. Once we have the block height we can then check the current Service Nodes on the network at our specified block height.
 
@@ -458,6 +468,8 @@ Under the `COMMAND` column we should see a process called `loki-wallet-cli`. If 
 If you want to stop the autostake then run the following command while logged on to the specific `<username>` which has `loki-wallet-cli` running in the background:
 
  `pkill loki-wallet-cli`
+
+
  
  ### Running Autostake on startup
  
