@@ -172,7 +172,7 @@ Check they are unzipped by running:
 
 If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.5-beta`, so to get into it we can type:
 
-`cd loki-linux-x64-v0.3.5-beta.zip`
+`cd loki-linux-x64-v0.3.5-beta`
 
 To check that they are in that folder, once again, type:
 
@@ -215,7 +215,7 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-v0.3.5-beta.zip`
+`cd loki-linux-x64-v0.3.5-beta`
 
 Then to launch the wallet run the command:
 
