@@ -215,7 +215,7 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-0.3.5-beta`
+`cd loki-linux-x64-v0.3.5-beta.zip`
 
 Then to launch the wallet run the command:
 
