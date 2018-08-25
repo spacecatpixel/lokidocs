@@ -146,7 +146,7 @@ To get to the binaries, we need to unzip them. Download and install unzip by run
 
 To unzip the downloaded zip file run the following command:
 
-`unzip loki-linux-x64-0.3.5-beta.zip`
+`unzip loki-linux-x64-v0.3.5-beta.zip`
 
 You should see 8 files unzipped:
 
@@ -172,7 +172,7 @@ Check they are unzipped by running:
 
 If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.5-beta`, so to get into it we can type:
 
-`cd loki-linux-x64-0.3.5-beta`
+`cd loki-linux-x64-v0.3.5-beta.zip`
 
 To check that they are in that folder, once again, type:
 
