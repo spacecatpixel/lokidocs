@@ -134,7 +134,7 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget https://github.com/loki-project/loki/releases/download/v0.3.8a-beta/loki-linux-x64-v0.3.8a-beta.zip`
+`wget https://github.com/loki-project/loki/releases/download/v1.0.0-rc/loki-linux-x64-1.0.0-rc.zip`
 
 If `wget` is not installed you may need to run `sudo apt-get install wget`
 
@@ -146,7 +146,7 @@ To get to the binaries, we need to unzip them. Download and install unzip by run
 
 To unzip the downloaded zip file run the following command:
 
-`unzip loki-linux-x64-v0.3.8a-beta.zip`
+`unzip loki-linux-x64-1.0.0-rc.zip`
 
 You should see 8 files unzipped:
 
@@ -170,9 +170,9 @@ Check they are unzipped by running:
 
 `ls`
 
-If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-0.3.8a-beta`, so to get into it we can type:
+If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-1.0.0-rc`, so to get into it we can type:
 
-`cd loki-linux-x64-v0.3.8a-beta`
+`cd loki-linux-x64-1.0.0-rc`
 
 To check that they are in that folder, once again, type:
 
@@ -215,7 +215,7 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-v0.3.8a-beta`
+`cd loki-linux-x64-1.0.0-rc`
 
 Then to launch the wallet run the command:
 
