@@ -37,6 +37,8 @@ Righto! Let’s get started. Choosing where to set up a Service Node is the bigg
 -   A stable, relatively fast connection to be able to respond to ping requests to avoid being booted off the network
     
 -   We recommend 2GB of RAM to cope with running the software reliably (*Note: This requirement may be much greater once services are live*). 1GB is fine for testing.
+
+-   At Least a 20GB SSD or Hard disk drive, this will be used to store the blockchain (*Note: to future proof yourself against blockchain growth and message storage we recommend a 30 - 40 GB drive*)
     
 -   A stable power supply. If your server goes down during the staking period, you may get kicked off the network, and not receive rewards while your funds are still locked for the remainder of the staking period.
 
