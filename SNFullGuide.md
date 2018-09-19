@@ -1,5 +1,7 @@
 # Full Guide on Service Nodes
 
+**PLEASE DO NOT REGISTER YOUR SERVICE NODE BEFORE BLOCK 101250**
+
 This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble.
 
 You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
@@ -293,6 +295,8 @@ register_service_node 4294967292 T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz
 ```
 Copy the whole line of text and paste it into your notepad as we will need to run this command in our `loki-wallet-cli`.
 
+**PLEASE DO NOT REGISTER YOUR SERVICE NODE BEFORE BLOCK 101250**
+
 You have 2 weeks from the moment of registering the Service Node to run the `register_service_node` command, however it is advised to do it as soon as possible.
 
 We do not require our daemon terminal anymore, however we do need to daemon to be running. Hold CTRL and type `ad` to detach the screen.
@@ -385,6 +389,8 @@ register_service_node 214748364 T6UCEoWvJHCJq5biK3LMQZ4CRXAaqiPda2kCRRYYYEMFfxYo
 ```
 > *NOTE: You must run the command outputed in **your** daemon and not the command shown above.*
 
+**PLEASE DO NOT REGISTER YOUR SERVICE NODE BEFORE BLOCK 101250**
+
 Copy the whole line of text in your daemon and paste it into your notepad as we will need to run this command in our `loki-wallet-cli`.
 
 You have 2 weeks from the moment of registering the Service Node to run the `register_service_node` command, however it is advised to do it as soon as possible.
@@ -413,6 +419,8 @@ The pool contributor must first receive the Service Node Pubkey and the requirem
 The pool contributor must have downloaded the necessary binaries, is running a daemon or is connected to a remote node, has generated a wallet through the `loki-wallet-cli`, and has enough Loki to stake. They can then run the following command in their `loki-wallet-cli` .
 
 `stake <Service Node Pubkey> <address> <contribution amount>`
+
+**PLEASE DO NOT REGISTER YOUR SERVICE NODE BEFORE BLOCK 101250**
 
 Where the `<Service Node Pubkey>` is the Pubkey provided from the Service Node operator, the `<address>` the service node operator will likely reserve an address for which they want you to stake for, this will usually be the same address as the wallet you are planning to stake from, in the case of an open pool this will always be the address you will you stake from and you will also receive rewards here too. `<contribution amount>` is the amount of Loki they are going to stake which they agreed to with the Service Node Operator.
 
