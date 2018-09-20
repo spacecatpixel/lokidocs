@@ -138,7 +138,7 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget https://github.com/loki-project/loki/releases/download/v1.0.0/loki-linux-x64-1.0.0.zip`
+`wget https://github.com/loki-project/loki/releases/download/v1.0.1/loki-linux-x64-1.0.1.zip`
 
 **NOTE: If this link no longer works, or you need Windows or Mac versions, check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest) to find links to the latest releases.**
 
@@ -150,7 +150,7 @@ To get to the binaries, we need to unzip them. Download and install unzip by run
 
 To unzip the downloaded zip file run the following command:
 
-`unzip loki-linux-x64-1.0.0.zip`
+`unzip loki-linux-x64-1.0.1.zip`
 
 You should see 8 files unzipped:
 
@@ -176,7 +176,7 @@ Check they are unzipped by running:
 
 If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-1.0.0`, so to get into it we can type:
 
-`cd loki-linux-x64-1.0.0`
+`cd loki-linux-x64-1.0.1`
 
 To check that they are in that folder, once again, type:
 
@@ -219,7 +219,7 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-1.0.0`
+`cd loki-linux-x64-1.0.1`
 
 Then to launch the wallet run the command:
 
