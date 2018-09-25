@@ -1,6 +1,6 @@
 # Full Guide on Service Nodes
 
-This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble.
+This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. Also available is a video guide, which provides a more simplified version of the written guide, it can be viewed [here](https://youtu.be/6uiRD1847UY) 
 
 You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
 
@@ -48,14 +48,14 @@ Typically, the easiest and cheapest way to host a server outside of your home is
 
 |Hosting Provider| Product Name | Cost Per Month $USD | Bandwidth Provided | Exit Friendliness Rating |
 |--------------------|-----------------|----------------------------|--------------------|-------|
-|OVH|VPS SSD 2|7.61|10 - 15 MiB’s|10 / 10|
+|Netcup|VPS 1000 G8|10.50|30 - 35 MiB’s|5 / 10
 |Online.net|Start-2-S-SSD|13.99|15 - 17 MiB’s|9 / 10|
 |Scaleway|START1-M|9.33|20 - 25 MiB’s|7 / 10
-|Netcup|VPS 1000 G8|10.50|30 - 35 MiB’s|5 / 10
-|Leaseweb|Virtual Server XL|34.45|30 - 35 MiB’s|7 / 10
+|OVH|VPS SSD 2|7.61|10 - 15 MiB’s|9 / 10|
+|Leaseweb|Virtual Server XL|34.45|30 - 35 MiB’s|5 / 10
 |Digital Ocean|2 GB, 2 vCPUs|15|9 - 11 MiB’s|8 / 10
 |Feral Hosting|Neon Capability|19.68|9 - 11 MiB’s|9 / 10
-|Trabia|VDS-8G|38.54|9 - 11 MiB’s|9 / 10
+|Trabia|VDS-8G|38.54|9 - 11 MiB’s|8 / 10
 |Hetzner|EX41-SSD (30 TB)|39.71|80 - 40 MiB’s|4 / 10
 
 Try not to pick the first one off the list. Do some digging and see which one looks the best to you, what your budget is, and what the latency is like for you based on the server location that you choose.
@@ -146,6 +146,8 @@ To get to the binaries, we need to unzip them. Download and install unzip by run
 
 `sudo apt-get install unzip`
 
+If `unzip` is not installed you may need to run `sudo apt-get install unzip`
+
 To unzip the downloaded zip file run the following command:
 
 `unzip loki-linux-x64-1.0.1.zip`
@@ -213,7 +215,7 @@ For now, we can just leave the session open to see the daemon messages while we 
 
 While we wait for the daemon to sync, we can now get a wallet going. It’ll probably save us time to open a second PuTTY session. You can do this by right clicking the window of the current PuTTY session and clicking “Duplicate Session.”
 
-You could run the CLI wallet (Command Line Interface wallet) on your home computer to avoid leaving your wallet on the server, but for the purposes of this guide, we’re going to keep everything contained on the one machine.
+You can run the CLI wallet (Command Line Interface wallet) on your home computer to avoid leaving your wallet on the server, but for the purposes of this guide, we’re going to keep everything contained on the one machine.
 
 Log in to your non-root user that we set up before, in our case snode, and once in we should open a new screen by typing `screen` and hitting return twice.
 
@@ -245,7 +247,7 @@ The CLI will generate and spit out several lines of text. The first two lines of
 
 Line 13 to 17 show your 25-word mnemonic (“new-monic”) seed. The seed is used to easily backup and restore your wallet without needing any other information. At this stage, grab a pen and paper, and write down your 25 words in order. Store the piece of paper in a safe and secure place, if your words are stored in a text file on your computer or stored online, you increase your risk of someone else getting control of your wallet.
 
-It is at this point that we should get some Loki in the wallet. The amount of Loki required to run a node is derived from the function shown in Lokis [Cryptoeconomic paper](https://loki.network/wp-content/uploads/2018/07/Loki_Cryptoeconomics-1.pdf). Don't worry if you cant work out the formula, the daemon will display the amount of Loki required to run the node. If you do not have enough you will have the option to join in or run your own Service Node pool.
+It is at this point that we should get some Loki in the wallet. The amount of Loki required to run a node is derived from the function shown in Lokis [Cryptoeconomic paper](https://loki.network/wp-content/uploads/2018/07/Loki_Cryptoeconomics-1.pdf). Don't worry if you cant work out the formula, you can use this community created [tool](https://jagerman.com/sn/) or, the daemon will display the amount of Loki required to run the node. If you do not have enough you will have the option to join in or run your own Service Node pool.
 
 > If you are running a Service Node on the testnet you will only ever require 100 testnet Loki to run the Node. You can ask someone in the Loki Discord Community for some testnet Loki, or alternatively you can run the command `start_mining` in your wallet. This may take an hour or two to get enough Loki.
 
@@ -260,7 +262,6 @@ Highlight the string of characters that were outputted and save this in a notepa
 > *NOTE: Do not use CTRL + C to copy your address, it will close the wallet down. Simply highlight the address and this will automatically save the portion you highlighted into your clipboard.*
 
 Once you have enough Loki in this wallet, just leave it open, we’ll come back to it in a minute.
-
 
 
 ## Step 6 - Service Node Registration
