@@ -213,9 +213,23 @@ For now, we can just leave the session open to see the daemon messages while we 
 
 ## Step 5 - Get/Open A Wallet
 
-While we wait for the daemon to sync, we can now get a wallet going. It’ll probably save us time to open a second PuTTY session. You can do this by right clicking the window of the current PuTTY session and clicking “Duplicate Session.”
+While we wait for the daemon to sync, we can now get a wallet going. 
 
-You can run the CLI wallet (Command Line Interface wallet) on your home computer to avoid leaving your wallet on the server, but for the purposes of this guide, we’re going to keep everything contained on the one machine.
+### You do not have to run this wallet on the server and you should not! Download the software and run it from elsewhere for security reasons! ### 
+
+You can run the CLI wallet (Command Line Interface wallet) on any other computer, including your home computer to avoid leaving your wallet on the server.
+
+However, if you do want to run the CLI wallet on another computer, you will either need to run another daemon on that local machine or by using a remote node (uk.loki.cash:22020, for example), or alternatively if your Service Node is synced up, you could actually use the address of that daemon. When you run 'loki-wallet-cli' locally and wish to use a remote daemon, use the syntax:
+
+`./loki-wallet-cli --daemon-address <insert address here>`
+    
+Or on windows:
+
+`loki-wallet-cli.exe --daemon-address <insert address here>`
+    
+If you are made of money and are willing to take the small risk of losing all of your funds, you can continue running the wallet inside the Service Node VPS. So we don't have to talk about a myriad of other operating systems or potential user cases, the rest of this guide will assume you are running the wallet in the same VPS.
+
+As such, it’ll probably save us time to open a second PuTTY session. You can do this by right clicking the window of the current PuTTY session and clicking “Duplicate Session.”
 
 Log in to your non-root user that we set up before, in our case snode, and once in we should open a new screen by typing `screen` and hitting return twice.
 
