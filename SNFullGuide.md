@@ -136,7 +136,7 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget https://github.com/loki-project/loki/releases/download/v1.0.1/loki-linux-x64-1.0.1.zip`
+`wget https://github.com/loki-project/loki/releases/download/1.0.2/loki-linux-x64-1.0.2.zip`
 
 **NOTE: If this link no longer works, or you need Windows or Mac versions, check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest) to find links to the latest releases.**
 
@@ -150,7 +150,7 @@ If `unzip` is not installed you may need to run `sudo apt-get install unzip`
 
 To unzip the downloaded zip file run the following command:
 
-`unzip loki-linux-x64-1.0.1.zip`
+`unzip loki-linux-x64-1.0.2.zip`
 
 You should see 8 files unzipped:
 
@@ -174,9 +174,9 @@ Check they are unzipped by running:
 
 `ls`
 
-If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-1.0.0`, so to get into it we can type:
+If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-1.0.2`, so to get into it we can type:
 
-`cd loki-linux-x64-1.0.1`
+`cd loki-linux-x64-1.0.2`
 
 To check that they are in that folder, once again, type:
 
@@ -219,7 +219,7 @@ While we wait for the daemon to sync, we can now get a wallet going.
 
 You can run the CLI wallet (Command Line Interface wallet) on any other computer, including your home computer to avoid leaving your wallet on the server.
 
-However, if you do want to run the CLI wallet on another computer, you will either need to run another daemon on that local machine or by using a remote node (uk.loki.cash:22020, for example), or alternatively if your Service Node is synced up, you could actually use the address of that daemon. When you run 'loki-wallet-cli' locally and wish to use a remote daemon, use the syntax:
+However, if you do want to run the CLI wallet on another computer, you will either need to run another daemon on that local machine or use a remote node (uk.loki.cash:22020, for example). There is also a list of trusted remote nodes in the Loki Project Discord channel under #links-and-resources. Alternatively if your Service Node is synced up, you could actually use the address of that daemon. When you run 'loki-wallet-cli' locally and wish to use a remote daemon, use the syntax:
 
 `./loki-wallet-cli --daemon-address <insert address here>`
     
@@ -235,7 +235,7 @@ Log in to your non-root user that we set up before, in our case snode, and once 
 
 Change directory to where our binaries are saved:
 
-`cd loki-linux-x64-1.0.1`
+`cd loki-linux-x64-1.0.2`
 
 Then to launch the wallet run the command:
 
