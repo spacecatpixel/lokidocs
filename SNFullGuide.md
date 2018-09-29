@@ -265,6 +265,8 @@ It is at this point that we should get some Loki in the wallet. The amount of Lo
 
 > If you are running a Service Node on the testnet you will only ever require 100 testnet Loki to run the Node. You can ask someone in the Loki Discord Community for some testnet Loki, or alternatively you can run the command `start_mining` in your wallet. This may take an hour or two to get enough Loki.
 
+**If you staking please do not use Subaddresses. They are currently unsupported by the Loki wallet** 
+
 We will need our address to register our Service Node later, to get your primary address type the following command:
 
 `address`
@@ -431,6 +433,8 @@ At this point the we will need to wait until all contributors have staked before
 #### 6.2.2 - Pool Contributor
 
 The pool contributor must first receive the Service Node Pubkey and the requirements (amount of loki to send) from the Service Node Operator.
+
+**If you staking please do not use Subaddresses. They are currently unsupported by the Loki wallet** 
 
 The pool contributor must have downloaded the necessary binaries, is running a daemon or is connected to a remote node, has generated a wallet through the `loki-wallet-cli`, and has enough Loki to stake. They can then run the following command in their `loki-wallet-cli` .
 
