@@ -4,7 +4,7 @@ This document will tell you exactly how to set up and operate a Service Node for
 
 If you feel confident around servers and the CLI, then skip to the [Express Setup Guide](#express-setup-guide)
 
->You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
+You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
 
 ### Summary of Loki Service Node Requirements
 
@@ -12,7 +12,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 
 |Spec|Note|
 |---|---|
-|Latest Binary|[loki-linux-x64-1.0.2](https://github.com/loki-project/loki/releases/latest)|
+|Latest Binary|[loki-linux-x64-1.0.3](https://github.com/loki-project/loki/releases/latest)|
 |Software| Ubuntu 16.04|
 |Memory | 30-50gb|
 |Ram | 2-4 gb|
@@ -21,13 +21,13 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 ## Table of Contents
 - [Overview of Service Nodes](#Overview)
 - [New User Guide](#new-user-guide)
-    - Step 1 Server
-    - Step 2 Server Prep
-    - Step 3 Download Binaries
-    - Step 4 Run the Loki Daemon
-    - Step 5 Open a Loki Wallet
-    - Step 6 Register Node
-    - Step 7 Check Registration
+    - Step 1 [Server](#step-1-get-a-server)
+    - Step 2 [Server Prep](#step-2-prepare-your-server)
+    - Step 3 [Download Binaries](#step-3-download-the-loki-binaries)
+    - Step 4 [Run the Loki Daemon](#step-4-run-the-service-node-daemon)
+    - Step 5 [Open a Loki Wallet](#step-5-getopen-a-wallet)
+    - Step 6 [Register Node](#step-6-service-node-registration)
+    - Step 7 [Check Registration](#step-7-service-node-check)
 - [Express Setup Guide](#express-setup-guide)
 - [Additional Functions](#additional-functions)
 
@@ -533,21 +533,16 @@ Running this command if you have already staked will not stake over the top of a
 
 ## Express Setup Guide
 
-This section is for power users who are more familiar with servers and the CLI interface. 
+This section is for power users who are more familiar with servers and the CLI interface. There's a couple of things your going to want to do before you commence.
 
->Run the Daemon on a server from a non-root user account, then stake from a local wallet (or a wallet on a separate server).
-
-Swap `<#VERSION>` with the [latest version](https://github.com/loki-project/loki/releases/latest), example `1.0.2`
-
-
-**Get a Server that meets requirements**
-
-Terminal - Daemon Tab
-
-//ssh in to your server
+ **1. Get a Server that meets requirements**
+ **2. Run the Daemon on a server from a non-root user account, then stake from a local wallet (or a wallet on a separate server).**
 
 
-//add new user
+> where `<VERSION>` is mentioned replace with the [latest version](https://github.com/loki-project/loki/releases/latest), example `1.0.3`
+
+**3. Connect via SSH to your server**
+**4. add new user**
 
 `sudo adduser snode`
 
@@ -558,74 +553,69 @@ Terminal - Daemon Tab
 `exit`
 
 
-//ssh in to user `snode@<ipaddress>`
+**5. login to your new user account via SSH** 
 
+`snode@<ipaddress>`
 
-//update stuff
+**6. Update necessary security patches and system utilities**
 
 `sudo apt-get update`
 
 `sudo apt-get upgrade`
 
-Confirm Space: `Y`
 
+**7. Download & unzip Loki**
 
-//download & unzip loki
-
-`wget https://github.com/loki-project/loki/releases/download/v1.0.1/loki-linux-x64-<#VERSION>.zip`
+`wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip`
 
 `sudo apt-get install unzip`
 
-`unzip loki-linux-x64-<#VERSION>.zip`
+`unzip loki-linux-x64-<VERSION>.zip`
 
 
-//detach and re-enter screen
+**8. Run Loki in a screen and Detach**
 
 `Screen  <enter>`
 
-`Screen -ls`
-
-`Screen -x <process>`
-
-
-//start daemon
-
-`cd loki-linux-x64-<#VERSION>`
+`cd loki-linux-x64-<VERSION>`
 
 `./lokid --service-node`
 
-Wait for it to sync the blockchain (30 mins)
+`Ctrl +AD`
 
-**From a Local Wallet, assuming Loki Binaries are downloaded**
+Wait for the Loki Daemon sync the blockchain (1 - 8 Hours depending on internet speed)
 
-//start wallet
+**9. Open a Wallet**
 
-`cd loki-linux-x64-<#VERSION>`
+This wallet can be in a screen on the Service Node machine, or a wallet on your local computer (assuming you have downloaded the binaries).
 
-`./loki-wallet-cli`
+`cd loki-linux-x64-<VERSION>`
+
+Linux/MAC - `./loki-wallet-cli`
+Windows - `loki-wallet-cli`
 
 Enter Name: Name your wallet
 
-Enter password *2
+Enter password 
 
 Language: `1` (for English)
 
 Securely store:
 1. Address
-2. View Key
+2. Seed Phrase 
 3. Pass-phrase
 
-//fund wallet
--> send in enough Loki to fund a node
-Wait for Balance to be unlocked (20 mins)
+Send enough Loki to fund a node, wait for Balance to be unlocked (20 mins, 10 confirmations)
 
-**From the Daemon Tab/Screen on Server**
+**10. Register your Service Node**
 
-//register service node
+On your Service Node reattach to the screen which has the Service Node running.  
+
+`screen -r`
 
 `prepare_registration`
 
-Contribute entire Stake: `Y`
+Contribute entire Stake: `Y/N`
 
 Enter Loki Address
 
@@ -633,31 +623,33 @@ Enable Restaking: `Y/N`
 
 Confirm: `Y`
 
--> Copy registration message
+Copy green registration message
 
-**Back to Wallet**
+`Ctrl +AD`
+
+**11. Reattach to Service Node or local wallet**
 
 Paste in registration message `<enter>`
 
-**Back to Daemon**
+**12 Attach Back to Service Node Daemon**
+
+`screen -r`
 
 `print_sn_key`
 
-//Copy service node key, and search for it on:
+Copy service node key, and search for it on:
 https://lokiblocks.com/service_nodes
 
-`CTRL A-D`
-//ctrl-a-d detaches screen and runs process in background !critical!
+`CTRL +AD`
 
-//finish
-```
+ctrl +ad detaches screen and runs your Loki Service Node  in background this is critical
 
 
 ## Conclusion
 
 Well done! You will receive a block reward when your Service Node has been active for some time and the network chooses you within the list.
 
-**Bonus** Add the cummunity-run telegram bot `@lokiSNBot` to receive on-the-fly updates about your service node. Props to @jagerman42 for building this. 
+**Bonus** Add the community-run telegram bot `@lokiSNBot` to receive on-the-fly updates about your service node. Props to @jagerman42 for building this. 
 
 **Bonus 2** View jagerman.com/sn/ for more details on Loki Service Node staking requirements. 
 
