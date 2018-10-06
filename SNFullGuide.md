@@ -29,6 +29,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
     - Step 6 [Register Node](#step-6-service-node-registration)
     - Step 7 [Check Registration](#step-7-service-node-check)
 - [Express Setup Guide](#express-setup-guide)
+- [Updating Loki](#updating-loki)
 - [Additional Functions](#additional-functions)
 
 
@@ -643,6 +644,36 @@ https://lokiblocks.com/service_nodes
 `CTRL +AD`
 
 ctrl +ad detaches screen and runs your Loki Service Node  in background this is critical
+
+## Updating Loki
+
+To update your Loki node the process is:
+
+1) Find the latest update binary [latest version](https://github.com/loki-project/loki/releases/latest), example `1.0.3`
+2) Connect to your server using SSH
+3) Attach to the screen running the Loki Daemon 
+    `screen -ls` to view current screens
+    `screen -x <process>` to attach to the screen running the Daemon
+4) Exit the Daemon, and return to home directory
+    `exit`
+    `cd`
+5) Run an update on your machine
+    `sudo apt-get update`
+    `sudo apt-get upgrade`
+    Confirm Space: `Y`
+ 6) Download and unzip the latest Binary
+    `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip`
+    `unzip loki-linux-x64-<VERSION>.zip`
+ 7) Start the new Daemon
+    `cd loki-linux-x64-<VERSION>`
+    Linux/MAC - `./lokid --service-node`
+    Windows - `lokid --service-node`
+ 8) Find and search for Loki Public Address
+    `print_sn_key`
+    Search: https://lokiblocks.com/service_nodes
+ 9) Detach screen and logout
+    `CTRL AD`
+    `exit`
 
 
 ## Conclusion
