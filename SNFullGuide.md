@@ -650,17 +650,16 @@ ctrl +ad detaches screen and runs your Loki Service Node  in background this is 
 To update your Loki node the process is:
 
 1) Find the latest update binary [latest version](https://github.com/loki-project/loki/releases/latest), example `1.0.3`
-2) Connect to your server using SSH
+2) Connect to your server via SSH
 3) Attach to the screen running the Loki Daemon 
     `screen -ls` to view current screens
     `screen -x <process>` to attach to the screen running the Daemon
 4) Exit the Daemon, and return to home directory
     `exit`
-    `cd`
-5) Run an update on your machine
+    `cd ..`
+5) Run an update on your machine (Linux based systems)
     `sudo apt-get update`
     `sudo apt-get upgrade`
-    Confirm Space: `Y`
  6) Download and unzip the latest Binary
     `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip`
     `unzip loki-linux-x64-<VERSION>.zip`
@@ -672,7 +671,7 @@ To update your Loki node the process is:
     `print_sn_key`
     Search: https://lokiblocks.com/service_nodes
  9) Detach screen and logout
-    `CTRL AD`
+    `CTRL +AD`
     `exit`
 
 
