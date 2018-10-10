@@ -1,0 +1,2012 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/Wallets/CliWallet/CompilingGuide/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../Loki_favicon32x32.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Compiling Loki from source - Loki Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Regular:300,400,400i,700|Roboto">
+        <style>body,input{font-family:"Roboto Regular","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../../#compiling-loki-from-source" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Loki Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../../../Loki_favicon32x32.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Loki Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Compiling Loki from source
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/loki-project/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      LokiDocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Loki Docs" class="md-nav__button md-logo">
+      
+        <img src="../../../Loki_favicon32x32.png" width="48" height="48">
+      
+    </a>
+    Loki Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/loki-project/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      LokiDocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Introduction/Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Introduction/BeginnersGuide.md" title="Where to begin?" class="md-nav__link">
+      Where to begin?
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WalletsOverview.md" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WhatWalletToUse.md" title="What wallet to use?" class="md-nav__link">
+      What wallet to use?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Web Wallet (LokiLocker)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Web Wallet (LokiLocker)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WebWallet/WebWalletOverview.md" title="WW Overview" class="md-nav__link">
+      WW Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WebWallet/Guides.md" title="Guides" class="md-nav__link">
+      Guides
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Graphical User interface (GUI) Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Graphical User interface (GUI) Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GuiWallet/GUIOverview.md" title="GUI Overview" class="md-nav__link">
+      GUI Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GuiWallet/Guides.md" title="Guides" class="md-nav__link">
+      Guides
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Mobile Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Mobile Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MobileWalletOverview.md" title="Mobile Wallet Overview" class="md-nav__link">
+      Mobile Wallet Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MobileWallet/Guides.md" title="Android Wallet Guide" class="md-nav__link">
+      Android Wallet Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Command Line Integrated (CLI) Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        Command Line Integrated (CLI) Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CLIOverview" title="CLI Overview" class="md-nav__link">
+      CLI Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lokid.md" title="lokid" class="md-nav__link">
+      lokid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SNFullGuide/" title="Service Node Full Guide" class="md-nav__link">
+      Service Node Full Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Compiling Loki from source
+      </label>
+    
+    <a href="./" title="Compiling Loki from source" class="md-nav__link md-nav__link--active">
+      Compiling Loki from source
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-the-repository" title="Cloning the repository" class="md-nav__link">
+    Cloning the repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-instructions" title="Build instructions" class="md-nav__link">
+    Build instructions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-linux-and-os-x" title="On Linux and OS X" class="md-nav__link">
+    On Linux and OS X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-the-raspberry-pi" title="On the Raspberry Pi" class="md-nav__link">
+    On the Raspberry Pi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-for-raspbian-jessie-users" title="Note for Raspbian Jessie users:" class="md-nav__link">
+    Note for Raspbian Jessie users:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-windows" title="On Windows:" class="md-nav__link">
+    On Windows:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-freebsd" title="On FreeBSD:" class="md-nav__link">
+    On FreeBSD:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-openbsd" title="On OpenBSD:" class="md-nav__link">
+    On OpenBSD:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openbsd-62" title="OpenBSD &lt; 6.2" class="md-nav__link">
+    OpenBSD &lt; 6.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openbsd-62_1" title="OpenBSD &gt;= 6.2" class="md-nav__link">
+    OpenBSD &gt;= 6.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-solaris" title="On Solaris:" class="md-nav__link">
+    On Solaris:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-linux-for-android-using-docker" title="On Linux for Android (using docker):" class="md-nav__link">
+    On Linux for Android (using docker):
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-portable-statically-linked-binaries" title="Building portable statically linked binaries" class="md-nav__link">
+    Building portable statically linked binaries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-lokid" title="Running lokid" class="md-nav__link">
+    Running lokid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internationalization" title="Internationalization" class="md-nav__link">
+    Internationalization
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UsingTor/" title="Using Tor" class="md-nav__link">
+      Using Tor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Debugging/" title="Debugging" class="md-nav__link">
+      Debugging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-7" type="checkbox" id="nav-3-6-7">
+    
+    <label class="md-nav__link" for="nav-3-6-7">
+      Multisig
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-7">
+        Multisig
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2of2Multisig/" title="2/2 Multisig" class="md-nav__link">
+      2/2 Multisig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2of3Multisig/" title="2/3 Multisig" class="md-nav__link">
+      2/3 Multisig
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      RPC Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        RPC Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RPC Guides/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Mining/ProofOfWork.md" title="Proof Of Work" class="md-nav__link">
+      Proof Of Work
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Service Nodes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Service Nodes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Service Nodes/SNOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Service Nodes/StakingRequirement.md" title="Staking Requirement" class="md-nav__link">
+      Staking Requirement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cli Wallet/SNFullGuide.md" title="Service Node Full Guide" class="md-nav__link">
+      Service Node Full Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RPC Guides/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      LokiNet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        LokiNet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/LokiNetOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/LLARP.md" title="LLARP" class="md-nav__link">
+      LLARP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/SNapps.md" title="SNapps" class="md-nav__link">
+      SNapps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/SNapps/Messenger.md" title="Messenger" class="md-nav__link">
+      Messenger
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/TechnicalSpecs.md" title="Technical Specs" class="md-nav__link">
+      Technical Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/EmissionCurve/" title="Emission Curve" class="md-nav__link">
+      Emission Curve
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/Overview.md" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/SybilResistance/" title="Sybil Resistance" class="md-nav__link">
+      Sybil Resistance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/EmissionCurve/" title="Emission Curve" class="md-nav__link">
+      Emission Curve
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/Github" title="Using Github" class="md-nav__link">
+      Using Github
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../About/Etc.md" title="E.T.C" class="md-nav__link">
+      E.T.C
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" title="Dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-the-repository" title="Cloning the repository" class="md-nav__link">
+    Cloning the repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-instructions" title="Build instructions" class="md-nav__link">
+    Build instructions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-linux-and-os-x" title="On Linux and OS X" class="md-nav__link">
+    On Linux and OS X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-the-raspberry-pi" title="On the Raspberry Pi" class="md-nav__link">
+    On the Raspberry Pi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-for-raspbian-jessie-users" title="Note for Raspbian Jessie users:" class="md-nav__link">
+    Note for Raspbian Jessie users:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-windows" title="On Windows:" class="md-nav__link">
+    On Windows:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-freebsd" title="On FreeBSD:" class="md-nav__link">
+    On FreeBSD:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-openbsd" title="On OpenBSD:" class="md-nav__link">
+    On OpenBSD:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openbsd-62" title="OpenBSD &lt; 6.2" class="md-nav__link">
+    OpenBSD &lt; 6.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openbsd-62_1" title="OpenBSD &gt;= 6.2" class="md-nav__link">
+    OpenBSD &gt;= 6.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-solaris" title="On Solaris:" class="md-nav__link">
+    On Solaris:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-linux-for-android-using-docker" title="On Linux for Android (using docker):" class="md-nav__link">
+    On Linux for Android (using docker):
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-portable-statically-linked-binaries" title="Building portable statically linked binaries" class="md-nav__link">
+    Building portable statically linked binaries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-lokid" title="Running lokid" class="md-nav__link">
+    Running lokid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internationalization" title="Internationalization" class="md-nav__link">
+    Internationalization
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/loki-project/edit/master/docs/Wallets/CliWallet/CompilingGuide.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="compiling-loki-from-source">Compiling Loki from source<a class="headerlink" href="#compiling-loki-from-source" title="Permanent link">&para;</a></h1>
+<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
+<p>The following table summarizes the tools and libraries required to build. A
+few of the libraries are also included in this repository (marked as
+"Vendored"). By default, the build uses the library installed on the system,
+and ignores the vendored sources. However, if no library is found installed on
+the system, then the vendored source will be built and used. The vendored
+sources are also used for statically-linked builds because distribution
+packages often include only shared library binaries (<code>.so</code>) but not static
+library archives (<code>.a</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Dep</th>
+<th>Min. version</th>
+<th>Vendored</th>
+<th>Debian/Ubuntu pkg</th>
+<th>Arch pkg</th>
+<th>Optional</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GCC</td>
+<td>4.7.3</td>
+<td>NO</td>
+<td><code>build-essential</code></td>
+<td><code>base-devel</code></td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>CMake</td>
+<td>3.0.0</td>
+<td>NO</td>
+<td><code>cmake</code></td>
+<td><code>cmake</code></td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>pkg-config</td>
+<td>any</td>
+<td>NO</td>
+<td><code>pkg-config</code></td>
+<td><code>base-devel</code></td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>Boost</td>
+<td>1.58</td>
+<td>NO</td>
+<td><code>libboost-all-dev</code></td>
+<td><code>boost</code></td>
+<td>NO</td>
+<td>C++ libraries</td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>basically any</td>
+<td>NO</td>
+<td><code>libssl-dev</code></td>
+<td><code>openssl</code></td>
+<td>NO</td>
+<td>sha256 sum</td>
+</tr>
+<tr>
+<td>libzmq</td>
+<td>3.0.0</td>
+<td>NO</td>
+<td><code>libzmq3-dev</code></td>
+<td><code>zeromq</code></td>
+<td>NO</td>
+<td>ZeroMQ library</td>
+</tr>
+<tr>
+<td>libunbound</td>
+<td>1.4.16</td>
+<td>YES</td>
+<td><code>libunbound-dev</code></td>
+<td><code>unbound</code></td>
+<td>NO</td>
+<td>DNS resolver</td>
+</tr>
+<tr>
+<td>libsodium</td>
+<td>?</td>
+<td>NO</td>
+<td><code>libsodium-dev</code></td>
+<td>?</td>
+<td>NO</td>
+<td>libsodium</td>
+</tr>
+<tr>
+<td>libminiupnpc</td>
+<td>2.0</td>
+<td>YES</td>
+<td><code>libminiupnpc-dev</code></td>
+<td><code>miniupnpc</code></td>
+<td>YES</td>
+<td>NAT punching</td>
+</tr>
+<tr>
+<td>libunwind</td>
+<td>any</td>
+<td>NO</td>
+<td><code>libunwind8-dev</code></td>
+<td><code>libunwind</code></td>
+<td>YES</td>
+<td>Stack traces</td>
+</tr>
+<tr>
+<td>liblzma</td>
+<td>any</td>
+<td>NO</td>
+<td><code>liblzma-dev</code></td>
+<td><code>xz</code></td>
+<td>YES</td>
+<td>For libunwind</td>
+</tr>
+<tr>
+<td>libreadline</td>
+<td>6.3.0</td>
+<td>NO</td>
+<td><code>libreadline6-dev</code></td>
+<td><code>readline</code></td>
+<td>YES</td>
+<td>Input editing</td>
+</tr>
+<tr>
+<td>ldns</td>
+<td>1.6.17</td>
+<td>NO</td>
+<td><code>libldns-dev</code></td>
+<td><code>ldns</code></td>
+<td>YES</td>
+<td>SSL toolkit</td>
+</tr>
+<tr>
+<td>expat</td>
+<td>1.1</td>
+<td>NO</td>
+<td><code>libexpat1-dev</code></td>
+<td><code>expat</code></td>
+<td>YES</td>
+<td>XML parsing</td>
+</tr>
+<tr>
+<td>GTest</td>
+<td>1.5</td>
+<td>YES</td>
+<td><code>libgtest-dev</code>^</td>
+<td><code>gtest</code></td>
+<td>YES</td>
+<td>Test suite</td>
+</tr>
+<tr>
+<td>Doxygen</td>
+<td>any</td>
+<td>NO</td>
+<td><code>doxygen</code></td>
+<td><code>doxygen</code></td>
+<td>YES</td>
+<td>Documentation</td>
+</tr>
+<tr>
+<td>Graphviz</td>
+<td>any</td>
+<td>NO</td>
+<td><code>graphviz</code></td>
+<td><code>graphviz</code></td>
+<td>YES</td>
+<td>Documentation</td>
+</tr>
+</tbody>
+</table>
+<p>[^] On Debian/Ubuntu <code>libgtest-dev</code> only includes sources and headers. You must
+build the library binary manually. This can be done with the following command <code>sudo apt-get install libgtest-dev &amp;&amp; cd /usr/src/gtest &amp;&amp; sudo cmake . &amp;&amp; sudo make &amp;&amp; sudo mv libg* /usr/lib/</code></p>
+<h3 id="cloning-the-repository">Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permanent link">&para;</a></h3>
+<p>Clone recursively to pull-in needed submodule(s):</p>
+<p><code>$ git clone --recursive https://github.com/loki-project/loki</code></p>
+<p>If you already have a repo cloned, initialize and update:</p>
+<p><code>$ cd loki &amp;&amp; git submodule init &amp;&amp; git submodule update</code></p>
+<h3 id="build-instructions">Build instructions<a class="headerlink" href="#build-instructions" title="Permanent link">&para;</a></h3>
+<p>Loki uses the CMake build system and a top-level <a href="Makefile">Makefile</a> that
+invokes cmake commands as needed.</p>
+<h4 id="on-linux-and-os-x">On Linux and OS X<a class="headerlink" href="#on-linux-and-os-x" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Install the dependencies</li>
+<li>
+<p>Change to the root of the source code directory and build:</p>
+<div class="codehilite"><pre><span></span>cd loki
+make
+</pre></div>
+
+
+<p><em>Optional</em>: If your machine has several cores and enough memory, enable
+parallel build by running <code>make -j&lt;number of threads&gt;</code> instead of <code>make</code>. For
+this to be worthwhile, the machine should have one core and about 2GB of RAM
+available per thread.</p>
+<p><em>Note</em>: If cmake can not find zmq.hpp file on OS X, installing <code>zmq.hpp</code> from
+https://github.com/zeromq/cppzmq to <code>/usr/local/include</code> should fix that error.</p>
+</li>
+<li>
+<p>The resulting executables can be found in <code>build/release/bin</code></p>
+</li>
+<li>
+<p>Add <code>PATH="$PATH:$HOME/loki/build/release/bin"</code> to <code>.profile</code></p>
+</li>
+<li>
+<p>Run Loki with <code>lokid --detach</code></p>
+</li>
+<li>
+<p><strong>Optional</strong>: build and run the test suite to verify the binaries:</p>
+<div class="codehilite"><pre><span></span>make release-test
+</pre></div>
+
+
+<p><em>NOTE</em>: <code>core_tests</code> test may take a few hours to complete.</p>
+</li>
+<li>
+<p><strong>Optional</strong>: to build binaries suitable for debugging:</p>
+<div class="codehilite"><pre><span></span> make debug
+</pre></div>
+
+
+</li>
+<li>
+<p><strong>Optional</strong>: to build statically-linked binaries:</p>
+<div class="codehilite"><pre><span></span> make release-static
+</pre></div>
+
+
+</li>
+</ul>
+<p>Dependencies need to be built with -fPIC. Static libraries usually aren't, so you may have to build them yourself with -fPIC. Refer to their documentation for how to build them.</p>
+<ul>
+<li><strong>Optional</strong>: build documentation in <code>doc/html</code> (omit <code>HAVE_DOT=YES</code> if <code>graphviz</code> is not installed):<div class="codehilite"><pre><span></span>HAVE_DOT=YES doxygen Doxyfile
+</pre></div>
+
+
+</li>
+</ul>
+<h4 id="on-the-raspberry-pi">On the Raspberry Pi<a class="headerlink" href="#on-the-raspberry-pi" title="Permanent link">&para;</a></h4>
+<p>Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (2017-09-07 or later) from https://www.raspberrypi.org/downloads/raspbian/. If you are using Raspian Jessie, <a href="#note-for-raspbian-jessie-users">please see note in the following section</a>. </p>
+<ul>
+<li>
+<p><code>apt-get update &amp;&amp; apt-get upgrade</code> to install all of the latest software</p>
+</li>
+<li>
+<p>Install the dependencies for Loki from the 'Debian' column in the table above.</p>
+</li>
+<li>
+<p>Increase the system swap size:</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    sudo /etc/init.d/dphys-swapfile stop  
+    sudo nano /etc/dphys-swapfile  
+    CONF_SWAPSIZE=1024  
+    sudo /etc/init.d/dphys-swapfile start  
+</pre></div>
+
+
+<ul>
+<li>Clone loki and checkout most recent release version:</li>
+</ul>
+<div class="codehilite"><pre><span></span>        git clone https://github.com/loki-project/loki.git
+    cd loki
+    git checkout tags/v0.11.0.0
+</pre></div>
+
+
+<ul>
+<li>Build:</li>
+</ul>
+<div class="codehilite"><pre><span></span>        make release
+</pre></div>
+
+
+<ul>
+<li>
+<p>Wait 4-6 hours</p>
+</li>
+<li>
+<p>The resulting executables can be found in <code>build/release/bin</code></p>
+</li>
+<li>
+<p>Add <code>PATH="$PATH:$HOME/loki/build/release/bin"</code> to <code>.profile</code></p>
+</li>
+<li>
+<p>Run Loki with <code>lokid --detach</code></p>
+</li>
+<li>
+<p>You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory</p>
+</li>
+</ul>
+<h4 id="note-for-raspbian-jessie-users"><em>Note for Raspbian Jessie users:</em><a class="headerlink" href="#note-for-raspbian-jessie-users" title="Permanent link">&para;</a></h4>
+<p>If you are using the older Raspbian Jessie image, compiling Loki is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Loki, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.</p>
+<ul>
+<li>As before, <code>apt-get update &amp;&amp; apt-get upgrade</code> to install all of the latest software, and increase the system swap size</li>
+</ul>
+<div class="codehilite"><pre><span></span>    sudo /etc/init.d/dphys-swapfile stop  
+    sudo nano /etc/dphys-swapfile  
+    CONF_SWAPSIZE=1024  
+    sudo /etc/init.d/dphys-swapfile start  
+</pre></div>
+
+
+<ul>
+<li>
+<p>Then, install the dependencies for Loki except <code>libunwind</code> and <code>libboost-all-dev</code></p>
+</li>
+<li>
+<p>Install the latest version of boost (this may first require invoking <code>apt-get remove --purge libboost*</code> to remove a previous version if you're not using a clean install):</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    cd  
+    wget https://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2  
+    tar xvfo boost_1_64_0.tar.bz2  
+    cd boost_1_64_0  
+    ./bootstrap.sh  
+    sudo ./b2  
+</pre></div>
+
+
+<ul>
+<li>Wait ~8 hours</li>
+</ul>
+<div class="codehilite"><pre><span></span>    sudo ./bjam install
+</pre></div>
+
+
+<ul>
+<li>
+<p>Wait ~4 hours</p>
+</li>
+<li>
+<p>From here, follow the <a href="#on-the-raspberry-pi">general Raspberry Pi instructions</a> from the "Clone loki and checkout most recent release version" step.</p>
+</li>
+</ul>
+<h4 id="on-windows">On Windows:<a class="headerlink" href="#on-windows" title="Permanent link">&para;</a></h4>
+<p>Binaries for Windows are built on Windows using the MinGW toolchain within
+<a href="http://msys2.github.io">MSYS2 environment</a>. The MSYS2 environment emulates a
+POSIX system. The toolchain runs within the environment and <em>cross-compiles</em>
+binaries that can run outside of the environment as a regular Windows
+application.</p>
+<p><strong>Preparing the build environment</strong></p>
+<ul>
+<li>Download and install the <a href="http://msys2.github.io">MSYS2 installer</a>, either the 64-bit or the 32-bit package, depending on your system.</li>
+<li>Open the MSYS shell via the <code>MSYS2 Shell</code> shortcut</li>
+<li>
+<p>Update packages using pacman:  </p>
+<div class="codehilite"><pre><span></span>pacman -Syuu
+</pre></div>
+
+
+</li>
+<li>
+<p>Exit the MSYS shell using Alt+F4  </p>
+</li>
+<li>Edit the properties for the <code>MSYS2 Shell</code> shortcut changing "msys2_shell.bat" to "msys2_shell.cmd -mingw64" for 64-bit builds or "msys2_shell.cmd -mingw32" for 32-bit builds</li>
+<li>
+<p>Restart MSYS shell via modified shortcut and update packages again using pacman:  </p>
+<div class="codehilite"><pre><span></span>pacman -Syuu
+</pre></div>
+
+
+</li>
+<li>
+<p>Install dependencies:</p>
+<p>To build for 64-bit Windows:</p>
+<div class="codehilite"><pre><span></span>pacman -S mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake mingw-w64-x86_64-boost mingw-w64-x86_64-openssl mingw-w64-x86_64-zeromq mingw-w64-x86_64-libsodium
+</pre></div>
+
+
+<p>To build for 32-bit Windows:</p>
+<div class="codehilite"><pre><span></span>pacman -S mingw-w64-i686-toolchain make mingw-w64-i686-cmake mingw-w64-i686-boost mingw-w64-i686-openssl mingw-w64-i686-zeromq mingw-w64-i686-libsodium
+</pre></div>
+
+
+</li>
+<li>
+<p>Open the MingW shell via <code>MinGW-w64-Win64 Shell</code> shortcut on 64-bit Windows
+  or <code>MinGW-w64-Win64 Shell</code> shortcut on 32-bit Windows. Note that if you are
+  running 64-bit Windows, you will have both 64-bit and 32-bit MinGW shells.</p>
+</li>
+</ul>
+<p><strong>Building</strong></p>
+<ul>
+<li>
+<p>If you are on a 64-bit system, run:</p>
+<div class="codehilite"><pre><span></span>make release-static-win64
+</pre></div>
+
+
+</li>
+<li>
+<p>If you are on a 32-bit system, run:</p>
+<div class="codehilite"><pre><span></span>make release-static-win32
+</pre></div>
+
+
+</li>
+<li>
+<p>The resulting executables can be found in <code>build/release/bin</code></p>
+</li>
+</ul>
+<h3 id="on-freebsd">On FreeBSD:<a class="headerlink" href="#on-freebsd" title="Permanent link">&para;</a></h3>
+<p>The project can be built from scratch by following instructions for Linux above. If you are running loki in a jail you need to add the flag: <code>allow.sysvipc=1</code> to your jail configuration, otherwise lmdb will throw the error message: <code>Failed to open lmdb environment: Function not implemented</code>.</p>
+<h3 id="on-openbsd">On OpenBSD:<a class="headerlink" href="#on-openbsd" title="Permanent link">&para;</a></h3>
+<h4 id="openbsd-62">OpenBSD &lt; 6.2<a class="headerlink" href="#openbsd-62" title="Permanent link">&para;</a></h4>
+<p>This has been tested on OpenBSD 5.8.</p>
+<p>You will need to add a few packages to your system. <code>pkg_add db cmake gcc gcc-libs g++ miniupnpc gtest</code>.</p>
+<p>The doxygen and graphviz packages are optional and require the xbase set.</p>
+<p>The Boost package has a bug that will prevent librpc.a from building correctly. In order to fix this, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
+https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md</p>
+<p>You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Loki.</p>
+<p>To build: <code>env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64</code></p>
+<h4 id="openbsd-62_1">OpenBSD &gt;= 6.2<a class="headerlink" href="#openbsd-62_1" title="Permanent link">&para;</a></h4>
+<p>You will need to add a few packages to your system. <code>pkg_add cmake miniupnpc zeromq libiconv</code>.</p>
+<p>The doxygen and graphviz packages are optional and require the xbase set.</p>
+<p>Build the Boost library using clang. This guide is derived from: https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md</p>
+<p>We assume you are compiling with a non-root user and you have <code>doas</code> enabled.</p>
+<p>Note: do not use the boost package provided by OpenBSD, as we are installing boost to <code>/usr/local</code>.</p>
+<div class="codehilite"><pre><span></span># Create boost building directory
+mkdir ~/boost
+cd ~/boost
+
+# Fetch boost source
+ftp -o boost_1_64_0.tar.bz2 https://netcologne.dl.sourceforge.net/project/boost/boost/1.64.0/boost_1_64_0.tar.bz2 
+
+# MUST output: (SHA256) boost_1_64_0.tar.bz2: OK
+echo &quot;7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332 boost_1_64_0.tar.bz2&quot; | sha256 -c
+tar xfj boost_1_64_0.tar.bz2
+
+# Fetch and apply boost patches, required for OpenBSD
+ftp -o boost_test_impl_execution_monitor_ipp.patch https://raw.githubusercontent.com/openbsd/ports/bee9e6df517077a7269ff0dfd57995f5c6a10379/devel/boost/patches/patch-boost_test_impl_execution_monitor_ipp
+ftp -o boost_config_platform_bsd_hpp.patch https://raw.githubusercontent.com/openbsd/ports/90658284fb786f5a60dd9d6e8d14500c167bdaa0/devel/boost/patches/patch-boost_config_platform_bsd_hpp
+
+# MUST output: (SHA256) boost_config_platform_bsd_hpp.patch: OK
+echo &quot;1f5e59d1154f16ee1e0cc169395f30d5e7d22a5bd9f86358f738b0ccaea5e51d boost_config_platform_bsd_hpp.patch&quot; | sha256 -c
+# MUST output: (SHA256) boost_test_impl_execution_monitor_ipp.patch: OK
+echo &quot;30cec182a1437d40c3e0bd9a866ab5ddc1400a56185b7e671bb3782634ed0206 boost_test_impl_execution_monitor_ipp.patch&quot; | sha256 -c
+
+cd boost_1_64_0
+patch -p0 &lt; ../boost_test_impl_execution_monitor_ipp.patch
+patch -p0 &lt; ../boost_config_platform_bsd_hpp.patch
+
+# Start building boost
+echo &#39;using clang : : c++ : &lt;cxxflags&gt;&quot;-fvisibility=hidden -fPIC&quot; &lt;linkflags&gt;&quot;&quot; &lt;archiver&gt;&quot;ar&quot; &lt;striper&gt;&quot;strip&quot;  &lt;ranlib&gt;&quot;ranlib&quot; &lt;rc&gt;&quot;&quot; : ;&#39; &gt; user-config.jam
+./bootstrap.sh --without-icu --with-libraries=chrono,filesystem,program_options,system,thread,test,date_time,regex,serialization,locale --with-toolset=clang
+./b2 toolset=clang cxxflags=&quot;-stdlib=libc++&quot; linkflags=&quot;-stdlib=libc++&quot; -sICONV_PATH=/usr/local
+doas ./b2 -d0 runtime-link=shared threadapi=pthread threading=multi link=static variant=release --layout=tagged --build-type=complete --user-config=user-config.jam -sNO_BZIP2=1 -sICONV_PATH=/usr/local --prefix=/usr/local install
+</pre></div>
+
+
+<p>Build cppzmq</p>
+<p>Build the cppzmq bindings.</p>
+<p>We assume you are compiling with a non-root user and you have <code>doas</code> enabled.</p>
+<div class="codehilite"><pre><span></span># Create cppzmq building directory
+mkdir ~/cppzmq
+cd ~/cppzmq
+
+# Fetch cppzmq source
+ftp -o cppzmq-4.2.3.tar.gz https://github.com/zeromq/cppzmq/archive/v4.2.3.tar.gz
+
+# MUST output: (SHA256) cppzmq-4.2.3.tar.gz: OK
+echo &quot;3e6b57bf49115f4ae893b1ff7848ead7267013087dc7be1ab27636a97144d373 cppzmq-4.2.3.tar.gz&quot; | sha256 -c
+tar xfz cppzmq-4.2.3.tar.gz
+
+# Start building cppzmq
+cd cppzmq-4.2.3
+mkdir build
+cd build
+cmake ..
+doas make install
+</pre></div>
+
+
+<p>Build loki: <code>env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static</code></p>
+<h3 id="on-solaris">On Solaris:<a class="headerlink" href="#on-solaris" title="Permanent link">&para;</a></h3>
+<p>The default Solaris linker can't be used, you have to install GNU ld, then run cmake manually with the path to your copy of GNU ld:</p>
+<div class="codehilite"><pre><span></span>    mkdir -p build/release
+    cd build/release
+    cmake -DCMAKE_LINKER=/path/to/ld -D CMAKE_BUILD_TYPE=Release ../..
+    cd ../..
+</pre></div>
+
+
+<p>Then you can run make as usual.</p>
+<h3 id="on-linux-for-android-using-docker">On Linux for Android (using docker):<a class="headerlink" href="#on-linux-for-android-using-docker" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>    # Build image (select android64.Dockerfile for aarch64)
+    cd utils/build_scripts/ &amp;amp;&amp;amp; docker build -f android32.Dockerfile -t loki-android .
+    # Create container
+    docker create -it --name loki-android loki-android bash
+    # Get binaries
+    docker cp loki-android:/opt/android/loki/build/release/bin .
+</pre></div>
+
+
+<h3 id="building-portable-statically-linked-binaries">Building portable statically linked binaries<a class="headerlink" href="#building-portable-statically-linked-binaries" title="Permanent link">&para;</a></h3>
+<p>By default, in either dynamically or statically linked builds, binaries target the specific host processor on which the build happens and are not portable to other processors. Portable binaries can be built using the following targets:</p>
+<ul>
+<li><code>make release-static-linux-x86_64</code> builds binaries on Linux on x86_64 portable across POSIX systems on x86_64 processors</li>
+<li><code>make release-static-linux-i686</code> builds binaries on Linux on x86_64 or i686 portable across POSIX systems on i686 processors</li>
+<li><code>make release-static-linux-armv8</code> builds binaries on Linux portable across POSIX systems on armv8 processors</li>
+<li><code>make release-static-linux-armv7</code> builds binaries on Linux portable across POSIX systems on armv7 processors</li>
+<li><code>make release-static-linux-armv6</code> builds binaries on Linux portable across POSIX systems on armv6 processors</li>
+<li><code>make release-static-win64</code> builds binaries on 64-bit Windows portable across 64-bit Windows systems</li>
+<li><code>make release-static-win32</code> builds binaries on 64-bit or 32-bit Windows portable across 32-bit Windows systems</li>
+</ul>
+<h2 id="running-lokid">Running lokid<a class="headerlink" href="#running-lokid" title="Permanent link">&para;</a></h2>
+<p>The build places the binary in <code>bin/</code> sub-directory within the build directory
+from which cmake was invoked (repository root by default). To run in
+foreground:</p>
+<div class="codehilite"><pre><span></span>./bin/lokid
+</pre></div>
+
+
+<p>To list all available options, run <code>./bin/lokid --help</code>.  Options can be
+specified either on the command line or in a configuration file passed by the
+<code>--config-file</code> argument.  To specify an option in the configuration file, add
+a line with the syntax <code>argumentname=value</code>, where <code>argumentname</code> is the name
+of the argument without the leading dashes, for example <code>log-level=1</code>.</p>
+<p>To run in background:</p>
+<div class="codehilite"><pre><span></span>./bin/lokid --log-file lokid.log --detach
+</pre></div>
+
+
+<h2 id="internationalization">Internationalization<a class="headerlink" href="#internationalization" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://github.com/loki-project/loki/blob/master/README.i18n.md">Internationalization</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../SNFullGuide/" title="Service Node Full Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Service Node Full Guide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../UsingTor/" title="Using Tor" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Using Tor
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2017 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/loki-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

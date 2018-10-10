@@ -1,0 +1,104 @@
+# Project information
+site_name: 'Loki Docs'
+site_description: 'A Material Design theme for MkDocs'
+site_author: 'Martin Donath'
+site_url: 'https://squidfunk.github.io/mkdocs-material/'
+
+# Repository
+repo_name: 'LokiDocs'
+repo_url: 'https://github.com/loki-project'
+
+# Copyright
+copyright: 'Copyright &copy; 2016 - 2017 Martin Donath'
+
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'green'
+    accent: 'green'
+  font:
+    title: 'Proxima Nova'
+    text: 'Roboto Regular'
+    code: 'Roboto'
+  favicon: 'Loki_favicon32x32.png'
+  logo: 'Loki_favicon32x32.png'
+
+nav:
+- 'Home': 'index.md'
+- Introduction:
+  - 'Overview': 'Introduction/Overview.md'
+  - 'Where to begin?': 'Introduction/BeginnersGuide.md'
+- Wallets: 
+  - 'Overview' : 'Wallets/WalletsOverview.md'
+  - 'What wallet to use?' : 'Wallets/WhatWalletToUse.md'
+  - Web Wallet (LokiLocker): 
+      - 'WW Overview' : 'Wallets/WebWallet/WebWalletOverview.md'
+      - 'Guides': 'Wallets/WebWallet/Guides.md'
+  - Graphical User interface (GUI) Wallet:
+      - 'GUI Overview' : 'Wallets/GuiWallet/GUIOverview.md'
+      - 'Guides': 'Wallets/GuiWallet/Guides.md'
+  - Mobile Wallet:
+      - 'Mobile Wallet Overview' : 'Wallets/MobileWalletOverview.md'
+      - 'Android Wallet Guide' : 'Wallets/MobileWallet/Guides.md'
+  - Command Line Integrated (CLI) Wallet:
+    - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview'
+    - 'lokid' : 'Wallets/CliWallet/lokid.md'
+    - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
+    - 'Compiling Loki from source': 'Wallets/CliWallet/CompilingGuide.md'
+    - 'Using Tor': 'Wallets/CliWallet/UsingTor.md'
+    - 'Debugging': 'Wallets/CliWallet/Debugging.md'
+    - Multisig:
+      - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
+      - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
+  - RPC Guides:
+      - 'Service Node RPC Guide': 'Wallets/RPC Guides/SNRPCGuide.md'
+- Mining:
+   - 'Proof Of Work' : 'Mining/ProofOfWork.md'
+- Service Nodes:
+    - 'Overview': 'Service Nodes/SNOverview.md'
+    - 'Staking Requirement' : 'Service Nodes/StakingRequirement.md'
+    - Guides:
+      - 'Service Node Full Guide': 'Wallets/Cli Wallet/SNFullGuide.md'
+      - 'Service Node RPC Guide': 'Wallets/RPC Guides/SNRPCGuide.md'
+- LokiNet:
+    - 'Overview': 'LokiNet/LokiNetOverview.md'
+    - 'LLARP': 'LokiNet/LLARP.md'
+    - 'SNapps': 'LokiNet/SNapps.md'
+    - 'Messenger' : 'LokiNet/SNapps/Messenger.md'
+- Advanced:
+   - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
+   - 'Emission Curve' : 'Advanced/EmissionCurve.md'
+   - 'Overview' : 'Advanced/Overview.md'
+   - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
+- FAQ:
+   - 'Emission Curve' : 'Advanced/EmissionCurve.md'
+- Contributing:
+   - 'Using Github' : 'Contributing/Github'
+- About:
+   - 'E.T.C' : 'About/Etc.md' 
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/loki-project'
+    - type: 'twitter'
+      link: 'https://twitter.com/squidfunk'
+    - type: 'linkedin'
+      link: 'https://linkedin.com/in/squidfunk'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true

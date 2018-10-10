@@ -1,0 +1,1768 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/Wallets/CliWallet/2of3Multisig/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../Loki_favicon32x32.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>2/3 Multisig - Loki Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Regular:300,400,400i,700|Roboto">
+        <style>body,input{font-family:"Roboto Regular","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../../#loki-23-multisig" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Loki Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../../../Loki_favicon32x32.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Loki Docs
+              </span>
+              <span class="md-header-nav__topic">
+                2/3 Multisig
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/loki-project/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      LokiDocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Loki Docs" class="md-nav__button md-logo">
+      
+        <img src="../../../Loki_favicon32x32.png" width="48" height="48">
+      
+    </a>
+    Loki Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/loki-project/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      LokiDocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Introduction/Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Introduction/BeginnersGuide.md" title="Where to begin?" class="md-nav__link">
+      Where to begin?
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WalletsOverview.md" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WhatWalletToUse.md" title="What wallet to use?" class="md-nav__link">
+      What wallet to use?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Web Wallet (LokiLocker)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Web Wallet (LokiLocker)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WebWallet/WebWalletOverview.md" title="WW Overview" class="md-nav__link">
+      WW Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../WebWallet/Guides.md" title="Guides" class="md-nav__link">
+      Guides
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Graphical User interface (GUI) Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Graphical User interface (GUI) Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GuiWallet/GUIOverview.md" title="GUI Overview" class="md-nav__link">
+      GUI Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GuiWallet/Guides.md" title="Guides" class="md-nav__link">
+      Guides
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Mobile Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Mobile Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MobileWalletOverview.md" title="Mobile Wallet Overview" class="md-nav__link">
+      Mobile Wallet Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MobileWallet/Guides.md" title="Android Wallet Guide" class="md-nav__link">
+      Android Wallet Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Command Line Integrated (CLI) Wallet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        Command Line Integrated (CLI) Wallet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CLIOverview" title="CLI Overview" class="md-nav__link">
+      CLI Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lokid.md" title="lokid" class="md-nav__link">
+      lokid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SNFullGuide/" title="Service Node Full Guide" class="md-nav__link">
+      Service Node Full Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CompilingGuide/" title="Compiling Loki from source" class="md-nav__link">
+      Compiling Loki from source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UsingTor/" title="Using Tor" class="md-nav__link">
+      Using Tor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Debugging/" title="Debugging" class="md-nav__link">
+      Debugging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-7" type="checkbox" id="nav-3-6-7" checked>
+    
+    <label class="md-nav__link" for="nav-3-6-7">
+      Multisig
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-7">
+        Multisig
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2of2Multisig/" title="2/2 Multisig" class="md-nav__link">
+      2/2 Multisig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2/3 Multisig
+      </label>
+    
+    <a href="./" title="2/3 Multisig" class="md-nav__link md-nav__link--active">
+      2/3 Multisig
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet-creation" title="Wallet Creation" class="md-nav__link">
+    Wallet Creation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-prepare-multisig" title="Step 1 - Prepare Multisig" class="md-nav__link">
+    Step 1 - Prepare Multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-make-multisig" title="Step 2 - Make Multisig" class="md-nav__link">
+    Step 2 - Make Multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-finalize-multisig" title="Step 3 - Finalize Multisig" class="md-nav__link">
+    Step 3 - Finalize Multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiving" title="Receiving" class="md-nav__link">
+    Receiving
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-fund-the-multisig-account" title="Step 1 Fund The Multisig Account" class="md-nav__link">
+    Step 1 Fund The Multisig Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-check-multisig-account-balance" title="Step 2 Check Multisig Account Balance" class="md-nav__link">
+    Step 2 Check Multisig Account Balance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-for-spending" title="Preparation for Spending" class="md-nav__link">
+    Preparation for Spending
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-export-multisig" title="Step 1 - Export Multisig" class="md-nav__link">
+    Step 1 - Export Multisig
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-step-12-sending-multisig-info-file-with-terminal-transfersh" title="Optional: Step 1.2 Sending Multisig Info File with terminal - transfer.sh" class="md-nav__link">
+    Optional: Step 1.2 Sending Multisig Info File with terminal - transfer.sh
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-multisig-info-file" title="Uploading Multisig Info file" class="md-nav__link">
+    Uploading Multisig Info file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-multisig-info-file" title="Downloading Multisig Info file" class="md-nav__link">
+    Downloading Multisig Info file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-import-multisig" title="Step 2 - Import Multisig" class="md-nav__link">
+    Step 2 - Import Multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spending" title="Spending" class="md-nav__link">
+    Spending
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-transfer-preparing-unsigned-transaction" title="Step 1 - Transfer (Preparing Unsigned Transaction)" class="md-nav__link">
+    Step 1 - Transfer (Preparing Unsigned Transaction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-sign-multisig" title="Step 2 - Sign Multisig" class="md-nav__link">
+    Step 2 - Sign Multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-submit-multisig" title="Step 3 - Submit Multisig" class="md-nav__link">
+    Step 3 - Submit Multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      RPC Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        RPC Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RPC Guides/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Mining/ProofOfWork.md" title="Proof Of Work" class="md-nav__link">
+      Proof Of Work
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Service Nodes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Service Nodes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Service Nodes/SNOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Service Nodes/StakingRequirement.md" title="Staking Requirement" class="md-nav__link">
+      Staking Requirement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cli Wallet/SNFullGuide.md" title="Service Node Full Guide" class="md-nav__link">
+      Service Node Full Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RPC Guides/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      LokiNet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        LokiNet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/LokiNetOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/LLARP.md" title="LLARP" class="md-nav__link">
+      LLARP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/SNapps.md" title="SNapps" class="md-nav__link">
+      SNapps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiNet/SNapps/Messenger.md" title="Messenger" class="md-nav__link">
+      Messenger
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/TechnicalSpecs.md" title="Technical Specs" class="md-nav__link">
+      Technical Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/EmissionCurve/" title="Emission Curve" class="md-nav__link">
+      Emission Curve
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/Overview.md" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/SybilResistance/" title="Sybil Resistance" class="md-nav__link">
+      Sybil Resistance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/EmissionCurve/" title="Emission Curve" class="md-nav__link">
+      Emission Curve
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/Github" title="Using Github" class="md-nav__link">
+      Using Github
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../About/Etc.md" title="E.T.C" class="md-nav__link">
+      E.T.C
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet-creation" title="Wallet Creation" class="md-nav__link">
+    Wallet Creation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-prepare-multisig" title="Step 1 - Prepare Multisig" class="md-nav__link">
+    Step 1 - Prepare Multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-make-multisig" title="Step 2 - Make Multisig" class="md-nav__link">
+    Step 2 - Make Multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-finalize-multisig" title="Step 3 - Finalize Multisig" class="md-nav__link">
+    Step 3 - Finalize Multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiving" title="Receiving" class="md-nav__link">
+    Receiving
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-fund-the-multisig-account" title="Step 1 Fund The Multisig Account" class="md-nav__link">
+    Step 1 Fund The Multisig Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-check-multisig-account-balance" title="Step 2 Check Multisig Account Balance" class="md-nav__link">
+    Step 2 Check Multisig Account Balance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-for-spending" title="Preparation for Spending" class="md-nav__link">
+    Preparation for Spending
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-export-multisig" title="Step 1 - Export Multisig" class="md-nav__link">
+    Step 1 - Export Multisig
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-step-12-sending-multisig-info-file-with-terminal-transfersh" title="Optional: Step 1.2 Sending Multisig Info File with terminal - transfer.sh" class="md-nav__link">
+    Optional: Step 1.2 Sending Multisig Info File with terminal - transfer.sh
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-multisig-info-file" title="Uploading Multisig Info file" class="md-nav__link">
+    Uploading Multisig Info file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloading-multisig-info-file" title="Downloading Multisig Info file" class="md-nav__link">
+    Downloading Multisig Info file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-import-multisig" title="Step 2 - Import Multisig" class="md-nav__link">
+    Step 2 - Import Multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spending" title="Spending" class="md-nav__link">
+    Spending
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-transfer-preparing-unsigned-transaction" title="Step 1 - Transfer (Preparing Unsigned Transaction)" class="md-nav__link">
+    Step 1 - Transfer (Preparing Unsigned Transaction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-sign-multisig" title="Step 2 - Sign Multisig" class="md-nav__link">
+    Step 2 - Sign Multisig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-submit-multisig" title="Step 3 - Submit Multisig" class="md-nav__link">
+    Step 3 - Submit Multisig
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/loki-project/edit/master/docs/Wallets/CliWallet/2of3Multisig.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="loki-23-multisig">Loki 2/3 Multisig<a class="headerlink" href="#loki-23-multisig" title="Permanent link">&para;</a></h1>
+<p>First, the wallet to be converted to multisig must be empty. It is best to use a brand-new wallet for the purpose, although not required. It is strongly advised to make a copy of the wallet files first, just in case something goes wrong.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>In short, the process is:</p>
+<p><strong>Wallet Creation</strong></p>
+<ol>
+<li>
+<p>All parties command <code>prepare_multisig</code> and send data to ALL other parties</p>
+</li>
+<li>
+<p>All parties command <code>make_multisig &lt;threshold&gt; &lt;data1&gt; &lt;data2&gt;</code> and send 2nd batch of data to ALL other parties</p>
+</li>
+<li>
+<p>All parties command <code>finalize_multisig &lt;data1&gt; &lt;data2&gt;</code> with the data from ALL other parties.</p>
+</li>
+</ol>
+<p><strong>Receiving</strong></p>
+<ol>
+<li>All parties can type address to see the created multisig wallet address. The address will, of course, be the same for all parties since they're all watching the same wallet.</li>
+</ol>
+<p><strong>Preparation for Sending</strong></p>
+<ol>
+<li>
+<p>To prepare for sending all parties command <code>export_multisig_info &lt;filename&gt;</code> and send the file to all other parties</p>
+</li>
+<li>
+<p>To complete preparation, all parties command <code>import_multisig_info &lt;filename1&gt; &lt;filename2&gt;</code> and import files from other parties</p>
+</li>
+</ol>
+<p><strong>Sending</strong></p>
+<ol>
+<li>
+<p>To send, any party can use the usual transfer command, but the result will be a file named <code>multisig_loki_tx</code> which must be sent to any 1 other signer</p>
+</li>
+<li>
+<p>The other party commands <code>sign_multisig multisig_loki_tx</code> and the file is updated with the signature.</p>
+</li>
+<li>
+<p>The completely signed file is pushed to the network with use of <code>submit_multisig multisig_loki_tx</code>.</p>
+</li>
+</ol>
+<p>Below is a step-by-step walkthrough.</p>
+<h2 id="wallet-creation">Wallet Creation<a class="headerlink" href="#wallet-creation" title="Permanent link">&para;</a></h2>
+<p>Requirements:</p>
+<ul>
+<li>
+<p>3 empty <code>loki-wallet-cli</code> wallets</p>
+</li>
+<li>
+<p>All parties wallets connected to a <code>lokid</code></p>
+</li>
+<li>
+<p>Private communication channel</p>
+</li>
+</ul>
+<h3 id="step-1-prepare-multisig">Step 1 - Prepare Multisig<a class="headerlink" href="#step-1-prepare-multisig" title="Permanent link">&para;</a></h3>
+<p>Here some data will be shown to the user, which has to be exchanged with ALL other parties.</p>
+<p><strong>Person 1, 2</strong> and <strong>3</strong> commands:</p>
+<p><code>prepare_multisig</code></p>
+<p>The output will be something like:</p>
+<div class="codehilite"><pre><span></span>MultisigV1cR7X7ZAfa5ncRmQv1hpt4P1DmmnhinhokhDMqsmuWXmHFrb6xUr3FtBGygCfMScxnKJvXK1vvPNahXNWfYWVquieBErr98sFtgs24c2YuYrQT78uxV8oYx1A9bKeHSUfYzCniN5kMznEfvKCw3FiomjLvw364gg98ZWp16zA7pUVozid  
+Send this multisig info to all other participants, then use make_multisig &lt;threshold&gt; &lt;info1&gt; [&lt;info2&gt;...] with others&#39; multisig info  
+This includes the PRIVATE view key, so needs to be disclosed only to that multisig wallet&#39;s participants
+</pre></div>
+
+
+<p>Copy the entire line <code>Multisig…...Vozid</code> and be sure to capture the whole thing when copying.</p>
+<p><strong>Person 1</strong> to send the <code>Multsig...arg</code> to Person 2 and 3, <strong>Person 2</strong> to send their output to Person 1 and 3 and <strong>Person 3</strong> to send their output to Person 1 and 2.</p>
+<h3 id="step-2-make-multisig">Step 2 - Make Multisig<a class="headerlink" href="#step-2-make-multisig" title="Permanent link">&para;</a></h3>
+<p>All 3 persons now have the <code>Multisig...arg</code> text from the other 2. With that, each of them can create their part of the multisig wallet. Before you proceed, note that the wallet will lose access to the underlying wallet when converted to multisig. This is not really a problem, since we started with an empty wallet, and if all goes OK with this step, you won't ever need it unless you want to go through the process again for whatever reason (like HDD died, but you have the seed mnemonic of the underlying wallet and want to reconstruct the multisig wallet).</p>
+<p><strong>Person 1</strong> commands:</p>
+<p><code>make_multisig &lt;threshold&gt; &lt;data person 2&gt; &lt;data person 3&gt;</code></p>
+<p>Where <code>&lt;threshold&gt;</code> is the number of signers required out of the 3 people, <code>&lt;data person 2&gt;</code> is the output provided by Person 2, and <code>&lt;data person 3&gt;</code>is the output provided by Person 3.</p>
+<p>This should look similar to:</p>
+<div class="codehilite"><pre><span></span>make_multisig 2 MultisigV12EHtuvxFyAYDNcDsbDqWHDfkRr4JZchSdf8eZQSFwiMKDk15CYEJeQyEwtSnqUZdRr2BsEaT9z2biUdDTEQM4T3N625owvKMDoyhbRj3bwkBtceLKimap8DBAiUmSABpdf62HnPYiRtLW4JdVFmfqjndhWjYBypx1duvpi3qwfSrBY9a MultisigV1TqQ8Gt5Sb3GYtVJa1fQrK7e7hPm59XbooNvLxPSBR4856bW9jtD1hEyWy4yULKrX7reZZ6vrKdBCdSdk4nfApCGYJAA2WP4pKNwHDyKTuLEeuoDhqno8keEVeEF9AZsWXvng1avUTRREmy11h8wu8pdjopC4AguQKiHCJCN7aT9W6b8C  
+</pre></div>
+
+
+<p>Notice how there are 2 strings starting with <code>Multisig....arg</code>. One is from person 2 and other from person 3. The number at the beginning is the minimum required number of signatures. Since it's a 2/3 scheme - it's 2.</p>
+<p>The output from the <code>make_multisig</code> command will be similar to:</p>
+<div class="codehilite"><pre><span></span>Another step is needed  
+MultisigxV1PKCwmVrucV8bXi18VnHFqRXcnAq4osFL3ahzPHCiN48zhs28u6jmEhy7ktZbUEGfRtTuFjjKzJYb61fnFwnysBBnNXsUtCgFMXPa7FyNKVy2AnUg3ePEnKqWkgKVvA81axTS8r9EX1DmVPXgFKkFzw4Yj4ZtMcJVo77b5ayuMzjFtsaijko9X2bjd9AVfFVGBFMCSLa4xXhNVNz19CTUJx5gpoPG  
+Send this multisig info to all other participants, then use finalize_multisig &lt;info1&gt; [&lt;info2&gt;...] with others&#39; multisig info
+</pre></div>
+
+
+<p>With 2/3 there's an additional step to be done here. The new <code>Multisig...arg</code> info must be passed to ALL other participants (persons 2 &amp; 3).</p>
+<p>Persons 2 &amp; 3 do the same as above and send the info to other 2 parties.</p>
+<h3 id="step-3-finalize-multisig">Step 3 - Finalize Multisig<a class="headerlink" href="#step-3-finalize-multisig" title="Permanent link">&para;</a></h3>
+<p>Here we do one last command to make the wallet ready for receiving. It requires the 2nd batch of <code>Multisig…....arg</code> strings received from other parties.</p>
+<p><strong>Person 1</strong> will run the command:</p>
+<div class="codehilite"><pre><span></span>finalize_multisig MultisigxV1Vg1tsRLurvAc5aSA9Hd9God3MQhijCFoE1rPDFzx7ufwhs28u6jmEhy7ktZbUEGfRtTuFjjKzJYb61fnFwnysBBnfYm4xJWcJ4qM4khSb2KkyAKDuT39pTvdmemhojNjeYCmgSQ1NZLyBj48R1tVpiGNxa7TDnGbSgLuKBq35AX6jfu5PECAcDDn22CFQbJZip7xnBbn89Szzh27xeozfxcLiqqm MultisigxV14xDZBGACz3iUh2aVKGE5q5VzcvJdg2qCvZECgUWCdy5QNXsUtCgFMXPa7FyNKVy2AnUg3ePEnKqWkgKVvA81axTSfYm4xJWcJ4qM4khSb2KkyAKDuT39pTvdmemhojNjeYCmCNaRSsDEcemLLL8wCvzsy5R6hhkhWLYkD9vhZwprSFFKMZ7tfRko2VfMBoKQhB7PKXbf1npk2xceVKu2y7kExywb
+</pre></div>
+
+
+<p>Unfortunately the wallet will not display an output at this point. There's no indication that the process was successfully completed (for now). All 3 persons do the same, and all 3 wallets will show the same address after this step.</p>
+<p>Now each person run the command:</p>
+<p><code>address</code></p>
+<p>And each 3 parties of the multisig wallet should be shown the same address in their wallet.</p>
+<h2 id="receiving">Receiving<a class="headerlink" href="#receiving" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-fund-the-multisig-account">Step 1 Fund The Multisig Account<a class="headerlink" href="#step-1-fund-the-multisig-account" title="Permanent link">&para;</a></h3>
+<p>This is simple. Just send to the shared address. You can send multiple times, just like a normal wallet. You can use payment ID’s as well, or generate an integrated address to receive funds.</p>
+<p>Best part, whomever is sending the funds won't be able to tell that the address belongs to a multisig wallet since it looks like any other Loki address.</p>
+<h3 id="step-2-check-multisig-account-balance">Step 2 Check Multisig Account Balance<a class="headerlink" href="#step-2-check-multisig-account-balance" title="Permanent link">&para;</a></h3>
+<p>Just open the wallet and run the refresh command . Once completed, all persons can verify that the funds arrived.</p>
+<p><strong>Person 1, 2</strong>  &amp; <strong>3</strong> can run the  command:</p>
+<p><code>show_transfers</code></p>
+<p>To see incoming transfers or the following command to see the balance of the wallet:</p>
+<p><code>balance</code></p>
+<h2 id="preparation-for-spending">Preparation for Spending<a class="headerlink" href="#preparation-for-spending" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-export-multisig">Step 1 - Export Multisig<a class="headerlink" href="#step-1-export-multisig" title="Permanent link">&para;</a></h3>
+<p>Without this step, it will not be possible to create a transaction that spends Loki. As a minimum, the sender needs to get a partial key image from the same person who will sign the transaction with him later. He could get from both parties immediately and then later decide with whom to sign.</p>
+<p><strong>Person 1</strong> commands:</p>
+<p><code>export_multisig_info mi1</code></p>
+<p>Where <code>mi1</code> can be any filename. The output will be:</p>
+<p><code>Multisig info exported to mi1</code></p>
+<p>The file <code>mi1</code> will be located in the shell working folder*</p>
+<p><strong>Person 1</strong> sends that file to other persons. Persons 2 &amp; 3 do the same.</p>
+<h4 id="optional-step-12-sending-multisig-info-file-with-terminal-transfersh">Optional: Step 1.2 Sending Multisig Info File with terminal - transfer.sh<a class="headerlink" href="#optional-step-12-sending-multisig-info-file-with-terminal-transfersh" title="Permanent link">&para;</a></h4>
+<p>It is optional to use the terminal to send each person the multisig info files.</p>
+<h5 id="uploading-multisig-info-file">Uploading Multisig Info file<a class="headerlink" href="#uploading-multisig-info-file" title="Permanent link">&para;</a></h5>
+<p><strong>Person 1</strong> will open up a new terminal and change to the directory <code>mi1</code> has been saved.*</p>
+<p><strong>Person 1</strong> will run the following command:</p>
+<p><code>curl --upload-file ./mi1 https://transfer.sh/mi1</code></p>
+<p><strong>Person 1</strong> will receive the link to the file as an output, looking similar to:</p>
+<p><code>https://transfer.sh/Ehl5q/mi1</code></p>
+<p><strong>Person 1</strong> will need to send this link to Person 2 and Person 3. <strong>Person 2</strong> will need to do the same and send the link to Person 1 and 3. <strong>Person 3</strong> will need to do the same and send the link to Person 1 and 2.</p>
+<h5 id="downloading-multisig-info-file">Downloading Multisig Info file<a class="headerlink" href="#downloading-multisig-info-file" title="Permanent link">&para;</a></h5>
+<p><strong>Person 1</strong> should change to the directory of their <code>loki-wallet-cli</code> and use Person 2 and 3’s download link to run the commands:</p>
+<p><code>curl &lt;link&gt; -o &lt;filename&gt;</code></p>
+<p>Replacing <code>&lt;link&gt;</code> with the link Person 2 and 3 shared with Person 1 and <code>&lt;filename&gt;</code> with the filename of the Multisig info file that Person 2 or 3 generated, for example Person 1 will run the command:</p>
+<p><code>curl https://transfer.sh/Iedv9/mi2 -o mi2</code></p>
+<p>And the command:</p>
+<p><code>curl https://transfer.sh/dfvr3/mi3 -o mi3</code></p>
+<p>Likewise, Person 2 and 3 should do the same, changing directories to their <code>loki-wallet-cli</code> and downloading with the alternative Persons download link, and filename.</p>
+<p><code>curl https://transfer.sh/Ehl5q/mi1 -o mi1</code></p>
+<h3 id="step-2-import-multisig">Step 2 - Import Multisig<a class="headerlink" href="#step-2-import-multisig" title="Permanent link">&para;</a></h3>
+<p>Now, they must all import each other's file so they can be ready to make a TX later.</p>
+<p>For example, <strong>Person 2</strong> commands:</p>
+<p><code>import_multisig_info mi1</code></p>
+<p>The wallet will look for files in the shell working folder* and if the files are found the output will look like:</p>
+<div class="codehilite"><pre><span></span>2 outputs found in mi1  
+Height 1357156, transaction &lt;88ba687dc79a0b39e6de6d0763eda8363d33d9f58ec9a096171bd9a7f1dae873&gt;, received 0.100000000000  
+Height 1357161, transaction &lt;d6ac845b9400759525519cdc5d514eb8f5b1d265b24d1c016e75b20ed3b4b7da&gt;, received 0.100000000000
+</pre></div>
+
+
+<p><strong>Persons 1</strong> &amp; <strong>3</strong> do the same.</p>
+<h2 id="spending">Spending<a class="headerlink" href="#spending" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-transfer-preparing-unsigned-transaction">Step 1 - Transfer (Preparing Unsigned Transaction)<a class="headerlink" href="#step-1-transfer-preparing-unsigned-transaction" title="Permanent link">&para;</a></h3>
+<p>Any of the 3 persons can start a transaction, it doesn't matter. To avoid weird things from happening only do it for 1 transaction at a time. If anything weird happens, do the step 1 &amp; 2 again to fix.</p>
+<p>For example, let's say that Person 3 will make the TX.</p>
+<p>Person 3 performs the usual transfer command:</p>
+<div class="codehilite"><pre><span></span>transfer T6TmZX8EzZVjS9zNg7zAsrEQFDgcVC2qV2ZMyoWsbyK4SNB2SwMHZtMhPSsFyTmRBQUaGVF5k3qy5CMFM6Lvj7gi3AeszDag7 50
+</pre></div>
+
+
+<p>The output will look like:</p>
+<div class="codehilite"><pre><span></span>Unsigned transaction(s) successfully written to file: multisig_loki_tx
+</pre></div>
+
+
+<p>Check in the folder where you started <code>loki-wallet-cli</code> from*. There should be a file named <code>multisig_loki_tx</code>.</p>
+<p>Send the file <code>multisig_loki_tx</code> to either person 1 or 2.</p>
+<p><strong>Person 3</strong> will send the file <code>multisig_loki_tx</code> to the Person 1 or 2. <strong>Person 3</strong> can send this file through email or alternatively use the transfer.sh commands outside of the wallet:</p>
+<div class="codehilite"><pre><span></span>curl --upload-file ./multisig_loki_tx https://transfer.sh/multisig_loki_tx
+</pre></div>
+
+
+<p>If Person 3 chooses to use transfer.sh command to send the file to Person 1 or 2 they will receive a <code>&lt;link&gt;</code>.</p>
+<p><strong>Person 1</strong> or <strong>2</strong> must finish the signature. Person 1 or 2 copies/downloads the file to the same folder from where he started (or will start) <code>loki-wallet-cli</code>*.</p>
+<p><strong>Person 1</strong> or <strong>2</strong> can run the command to download the file to the <code>loki-wallet-cli</code> directory.</p>
+<div class="codehilite"><pre><span></span>curl https://transfer.sh/CJqnM/multisig_loki_tx -o multisig_loki_tx
+</pre></div>
+
+
+<p>Replacing <code>https://transfer.sh/CJqnM/multisig_loki_tx</code> with the link provided by Person 3.</p>
+<h3 id="step-2-sign-multisig">Step 2 - Sign Multisig<a class="headerlink" href="#step-2-sign-multisig" title="Permanent link">&para;</a></h3>
+<p>Let's say Person 2 was picked as the partner. He must finish the signature. Person 2 copies the file to the same folder from where he started (or will start) <code>loki-wallet-cli</code>*.</p>
+<p>Then, <strong>Person 2</strong> commands:</p>
+<p><code>sign_multisig multisig_loki_tx</code></p>
+<p>and he/she will be prompted to check it first:</p>
+<div class="codehilite"><pre><span></span>Loaded 1 transactions, for 108.082287779, fee 0.061108880, sending 50.000000000 to T6TmZX8EzZVjS9zNg7zAsrEQFDgcVC2qV2ZMyoWsbyK4SNB2SwMHZtMhPSsFyTmRBQUaGVF5k3qy5CMFM6Lvj7gi3AeszDag7, 58.021178899 change to T6ScXhWpAG2aUHmFemwvn4HddHA5GQ4u6MvYsW2hVteJSwLJXCEhk2aVp4XzyqGmvyUqc3w8fwWwg6szGEytUSx51C6WQ3er8, with min ring size 10, no payment ID.
+
+Is this okay? (Y/Yes/N/No):
+</pre></div>
+
+
+<p>If ok, answer <code>Y</code>, and the output will look like:
+<code>Transaction successfully submitted, transaction &lt;3b03b16c79eaa5564171ae88242c4cdb1f9e0b41fc3de949c6524c5026a3f3bb&gt;</code></p>
+<h3 id="step-3-submit-multisig">Step 3 - Submit Multisig<a class="headerlink" href="#step-3-submit-multisig" title="Permanent link">&para;</a></h3>
+<p>Finally, person with the signed file submits the transaction to the network by commanding:</p>
+<p><code>submit_multisig multisig_loki_tx</code></p>
+<p>There will be a confirmation prompt:</p>
+<div class="codehilite"><pre><span></span>Loaded 1 transactions, for 108.082287779, fee 0.061108880, sending 50.000000000 to T6TmZX8EzZVjS9zNg7zAsrEQFDgcVC2qV2ZMyoWsbyK4SNB2SwMHZtMhPSsFyTmRBQUaGVF5k3qy5CMFM6Lvj7gi3AeszDag7, 58.021178899 change to T6ScXhWpAG2aUHmFemwvn4HddHA5GQ4u6MvYsW2hVteJSwLJXCEhk2aVp4XzyqGmvyUqc3w8fwWwg6szGEytUSx51C6WQ3er8, with min ring size 10, no payment ID.
+
+Is this okay? (Y/Yes/N/No):
+</pre></div>
+
+
+<p>If ok, answer <code>Y</code>, and the transaction will be sent. The output will look like:
+<code>Transaction successfully submitted, transaction &lt;3b03b16c79eaa5564171ae88242c4cdb1f9e0b41fc3de949c6524c5026a3f3bb&gt;</code></p>
+<p>You can check its status by using the <code>show_transfers</code> command.</p>
+<p>The person 2 could also send the signed TX to person 3, who could then submit it to the network himself.</p>
+<p>If you want to make another one, you have to go back to preparation for spending step (sync the key images again).</p>
+<p>*Note on folders and file locations, as it could create some confusions. The wallet will look for the files and export them to the folder from where it was started, ie where your command prompt / shell was when you called <code>loki-wallet-cli</code>. It may or may not be the same folder as your actual wallet files or <code>loki-wallet-cli</code>, depending on how you go about it.</p>
+<p>For example, your wallet could be on some USB drive like <code>f:\temp\</code>, and your wallet software on <code>c:\loki\</code> and your shell working folder could be <code>c:\</code>.</p>
+<p>If you remain in <code>c:\</code> with the shell, you could start the wallet by its full path and specify the wallet file location: <code>c:\loki\loki-wallet-cli.exe --wallet-file f:\temp\mywallet</code>. In this case, all the import/export stuff would be read/written to <code>c:\</code> because that's still your shell's working folder.</p>
+<p>It would be probably feel more natural to <code>cd</code> into the wallet folder. Do <code>f:</code> to change drive and then <code>cd f:\temp\</code>. Then, simply start the wallet from that location by its full path again: <code>c:\loki\loki-wallet-cli.exe --wallet-file mywallet</code>. Notice how you don't have to write the full wallet path now as you're already there with your shell. In this case, all the files mentioned above would be written or read from the same folder as the wallet files.</p>
+<p>Source:</p>
+<p><a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">Monero Stack Exchange: how to use monero multisigniture wallets</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2of2Multisig/" title="2/2 Multisig" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                2/2 Multisig
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../RPC Guides/SNRPCGuide/" title="Service Node RPC Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Service Node RPC Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2017 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/loki-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
