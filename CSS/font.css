@@ -22,7 +22,6 @@ pre, code {
     color         : #1a1a1a;
     font-size     : 26px;
     text-transform: none;
-    font-weight   : bold;
 }
 
 .md-typeset h3 {
@@ -48,7 +47,6 @@ pre, code {
     color         : #1a1a1a;
     font-size     : 16px;
     text-transform: none;
-    font-weight   : bold;
 }
 
 .md-typeset p,
