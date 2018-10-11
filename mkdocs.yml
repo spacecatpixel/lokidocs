@@ -64,7 +64,12 @@ nav:
       - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
 - LokiNET:
     - 'Overview': 'LokiNET/LokiNetOverview.md'
+    - 'Guides':
+        - 'Test Network Relay': 'LokiNET/Guides/TestNetRelay.md'
+        - 'Hidden Services': 'LokiNET/Guides/HiddenService.md'
+        - 'Exit Nodes': 'LokiNET/Guides/ExitNode.md'
     - 'LLARP': 'LokiNET/LLARP.md'
+    - 'Developers': 'LokiNET/DeveloperInfo.md'
     - 'SNapps': 'LokiNET/SNapps.md'
     - 'Messenger' : 'LokiNET/Messenger.md'
 - Advanced:
@@ -108,3 +113,4 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+
