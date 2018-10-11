@@ -1,15 +1,13 @@
 # Project information
 site_name: 'Loki Docs'
-site_description: 'A Material Design theme for MkDocs'
-site_author: 'Martin Donath'
-site_url: 'https://squidfunk.github.io/mkdocs-material/'
+site_url: 'https://sonofotis.github.io/lokidocs/'
 
 # Repository
-repo_name: 'LokiDocs'
-repo_url: 'https://github.com/loki-project'
+repo_name: 'lokidocs'
+repo_url: 'https://github.com/Sonofotis/lokidocs'
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2017 Martin Donath'
+copyright: 'Add Copyright'
 
 
 # Configuration
@@ -17,8 +15,8 @@ theme:
   name: 'material'
   language: 'en'
   palette:
-    primary: 'green'
-    accent: 'green'
+     accent: 'green'
+
   font:
     title: 'Proxima Nova'
     text: 'Roboto Regular'
@@ -80,14 +78,22 @@ nav:
    - 'To be added' : 'About/loki.md' 
 
 # Customization
+extra_css:
+  - /CSS/style.css
+  - /CSS/font.css
+
 extra:
   social:
     - type: 'github'
       link: 'https://github.com/loki-project'
     - type: 'twitter'
-      link: 'https://twitter.com/squidfunk'
-    - type: 'linkedin'
-      link: 'https://linkedin.com/in/squidfunk'
+      link: 'https://twitter.com/loki_project'
+    - type: 'telegram'
+      link: 'https://t.me/LokiCommunity'
+    - type: 'reddit'
+      link: 'https://www.reddit.com/r/LokiProject'
+    - type: 'youtube'
+      link: 'https://www.youtube.com/lokinetwork'
 
 # Google Analytics
 google_analytics:

@@ -10,7 +10,9 @@
 
 **LLARP DNS**: A library that listens on UDP 53 on localhost for DNS queries and relays to a real DNS server UNLESS it's asled about `.loki` TLD (top level domain)
 
-**[Service Node](/LokiNet/Service Nodes/SNOverview)**: Full nodes on the Loki Network
+**[Service Node](/LokiNet/ServiceNodes/SNOverview)**: Full nodes on the Loki Network
+
+Service Node
 
 **Hidden Service**: a daemon bound to an ip & port on the tunnel device.
 

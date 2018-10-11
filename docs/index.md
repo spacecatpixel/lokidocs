@@ -1,10 +1,5 @@
 #Loki Network
 
-<p align="center">
-    <a href="https://github.com/loki-project/loki/commits/dev"><img alt="pipeline status" src="https://gitlab.com/lokiproject/loki/badges/dev/pipeline.svg" /></a>
-</p>
-
-
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Lykh-NqkKys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 ## Information
 Privacy is having the agency to decide when you reveal personal information. It is a particularly valuable quality today, when the collection and storage of personal data is taking place at unprecedented levels in history.

@@ -1,7 +1,7 @@
 
 # Overview
 
-## **Wallets**
+## Wallets
 The Loki wallet is a gateway to private decentralised 
 transactions and communications. It allows you to hold and secure Loki, mine and trade peer-to-peer. Download the official Loki wallet today and start taking back control of your online privacy.
 ### Web Wallet
@@ -15,9 +15,9 @@ The quickest way to access a Loki Wallet is through a web based wallet, [Loki Lo
 ### Command Line Interface Wallet (CLI)
 The [Cli Wallet](https://github.com/loki-project/loki/releases) is for more advanced users and offers the most tools when interacting with the Loki Blockchain... and feels the most badass.
 
-## **Mining**
+## Mining
 
-## **Service Nodes**
+## Service Nodes
 The Loki cryptocurrency creates a network of Service Nodes who are paid to propagate the blockchain, process transactions, and route traffic and messages on Lokinet.
 
 Lokinet is a new type of mixnet that uses market-based Sybil attack resistance and onion routing to create a new private tunnel to the internet. Users of Lokinet will be able to access normal websites and SNApps without revealing their IP address.
@@ -33,12 +33,12 @@ The following are useful guides or resources for Service Nodes:
 - [Service Node Reward Calculator Windows](https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_Windows-V1-1.xlsm)
 - [Service Node Staking Requirement Calculator WEB](https://jagerman.com/sn/)
 
-## **LokiNet**
+## LokiNet
 
-## **Advanced**
+## Advanced
 
-## **FAQ**
+## FAQ
 
-## **Contributing**
+## Contributing
 
-## **About**
+## About
