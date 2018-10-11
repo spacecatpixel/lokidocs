@@ -61,11 +61,11 @@ nav:
     - Guides:
       - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
       - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
-- LokiNet:
-    - 'Overview': 'LokiNet/LokiNetOverview.md'
-    - 'LLARP': 'LokiNet/LLARP.md'
-    - 'SNapps': 'LokiNet/SNapps.md'
-    - 'Messenger' : 'LokiNet/Messenger.md'
+- Lokinet:
+    - 'Overview': 'Lokinet/LokinetOverview.md'
+    - 'LLARP': 'Lokinet/LLARP.md'
+    - 'SNapps': 'Lokinet/SNapps.md'
+    - 'Messenger' : 'Lokinet/Messenger.md'
 - Advanced:
    - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
