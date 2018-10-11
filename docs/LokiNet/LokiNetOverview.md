@@ -1,4 +1,4 @@
-#LokiNet Overview
+#Lokinet Overview
 
 ## Terms
 
