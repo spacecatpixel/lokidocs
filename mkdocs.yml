@@ -41,10 +41,10 @@ nav:
       - 'GUI Overview' : 'Wallets/GuiWallet/GUIOverview.md'
       - 'Guides': 'Wallets/GuiWallet/Guides.md'
   - Mobile Wallet:
-      - 'Mobile Wallet Overview' : 'Wallets/MobileWalletOverview.md'
+      - 'Mobile Wallet Overview' : 'Wallets/MobileWallet/MobileWalletOverview.md'
       - 'Android Wallet Guide' : 'Wallets/MobileWallet/Guides.md'
   - Command Line Integrated (CLI) Wallet:
-    - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview'
+    - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview.md'
     - 'lokid' : 'Wallets/CliWallet/lokid.md'
     - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
     - 'Compiling Loki from source': 'Wallets/CliWallet/CompilingGuide.md'
@@ -54,31 +54,30 @@ nav:
       - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
       - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
   - RPC Guides:
-      - 'Service Node RPC Guide': 'Wallets/RPC Guides/SNRPCGuide.md'
+      - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
 - Mining:
    - 'Proof Of Work' : 'Mining/ProofOfWork.md'
 - Service Nodes:
-    - 'Overview': 'Service Nodes/SNOverview.md'
-    - 'Staking Requirement' : 'Service Nodes/StakingRequirement.md'
+    - 'Overview': 'ServiceNodes/SNOverview.md'
+    - 'Staking Requirement' : 'ServiceNodes/StakingRequirement.md'
     - Guides:
-      - 'Service Node Full Guide': 'Wallets/Cli Wallet/SNFullGuide.md'
-      - 'Service Node RPC Guide': 'Wallets/RPC Guides/SNRPCGuide.md'
+      - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
+      - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
 - LokiNet:
     - 'Overview': 'LokiNet/LokiNetOverview.md'
     - 'LLARP': 'LokiNet/LLARP.md'
     - 'SNapps': 'LokiNet/SNapps.md'
-    - 'Messenger' : 'LokiNet/SNapps/Messenger.md'
+    - 'Messenger' : 'LokiNet/Messenger.md'
 - Advanced:
    - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
-   - 'Overview' : 'Advanced/Overview.md'
    - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
 - FAQ:
    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
 - Contributing:
-   - 'Using Github' : 'Contributing/Github'
+   - 'Using Github' : 'Contributing/Github.md'
 - About:
-   - 'E.T.C' : 'About/Etc.md' 
+   - 'To be added' : 'About/loki.md' 
 
 # Customization
 extra:
