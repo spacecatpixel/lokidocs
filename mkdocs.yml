@@ -79,8 +79,8 @@ nav:
 
 # Customization
 extra_css:
-  - /CSS/style.css
-  - /CSS/font.css
+  - CSS/style.css
+  - CSS/font.css
 
 extra:
   social:
