@@ -1,7 +1,8 @@
 # vars
-VENV ?= v
-PY ?= python3
-PORT ?= 2000
+VENV ?=v
+PY ?=python3
+PORT ?=2000
+OPTS ?=--livereload
 
 # commands
 MKDOCS = $(VENV)/bin/mkdocs
@@ -16,7 +17,7 @@ build: $(VENV)
 	$(MKDOCS) build
 
 serve: $(VENV)
-	$(MKDOCS) serve -a 127.0.0.1:$(PORT)
+	$(MKDOCS) serve -a 127.0.0.1:$(PORT) $(OPTS)
 
 $(VENV):
 	$(PY) -m venv $(VENV)
