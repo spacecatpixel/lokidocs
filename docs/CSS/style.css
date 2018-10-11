@@ -1,11 +1,8 @@
-/* Override header and footer with decred dark blue*/
+/* Override header and footer */
 .md-footer-nav,
-.md-footer-meta {
-    background-color: #1a1a1a
-}
-
+.md-footer-meta, 
 .md-header {
-	background-color: #1a1a1a
+    background-color: #1a1a1a
 }
 
 /* Highlight current page in nav menu */
