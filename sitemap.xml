@@ -11,58 +11,58 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Introduction/BeginnersGuide/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/WalletsOverview/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/WhatWalletToUse/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/WebWallet/WebWalletOverview/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/WebWallet/Guides/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/GuiWallet/GUIOverview/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/GuiWallet/Guides/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/MobileWallet/MobileWalletOverview/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/MobileWallet/Guides/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/CliWallet/CLIOverview/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/CliWallet/lokid/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -96,32 +96,32 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/RPC Guides/SNRPCGuide/</loc>
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/RPCGuides/SNRPCGuide/</loc>
      <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://squidfunk.github.io/mkdocs-material/Service Nodes/SNOverview/</loc>
+     <loc>https://squidfunk.github.io/mkdocs-material/Mining/ProofOfWork/</loc>
      <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/ServiceNodes/SNOverview/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/ServiceNodes/StakingRequirement/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/RPC Guides/SNRPCGuide/</loc>
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/CliWallet/SNFullGuide/</loc>
+     <lastmod>2018-10-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://squidfunk.github.io/mkdocs-material/Wallets/RPCGuides/SNRPCGuide/</loc>
      <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -131,33 +131,28 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/LokiNet/LLARP/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/LokiNet/SNapps/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/LokiNet/Messenger/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Advanced/TechnicalSpecs/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://squidfunk.github.io/mkdocs-material/Advanced/EmissionCurve/</loc>
      <lastmod>2018-10-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc></loc>
-     
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -171,13 +166,13 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/Contributing/Github/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://squidfunk.github.io/mkdocs-material/About/loki/</loc>
+     <lastmod>2018-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
