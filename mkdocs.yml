@@ -46,6 +46,7 @@ nav:
     - 'lokid' : 'Wallets/CliWallet/lokid.md'
     - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
     - 'Compiling Loki from source': 'Wallets/CliWallet/CompilingGuide.md'
+    - 'Using LokiNET': 'Wallets/CliWallet/UsingLokiNET.md'
     - 'Using Tor': 'Wallets/CliWallet/UsingTor.md'
     - 'Debugging': 'Wallets/CliWallet/Debugging.md'
     - Multisig:
@@ -61,11 +62,24 @@ nav:
     - Guides:
       - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
       - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
+<<<<<<< HEAD
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
     - 'LLARP': 'Lokinet/LLARP.md'
     - 'SNapps': 'Lokinet/SNapps.md'
     - 'Messenger' : 'Lokinet/Messenger.md'
+=======
+- LokiNET:
+    - 'Overview': 'LokiNET/LokiNetOverview.md'
+    - 'Guides':
+        - 'Test Network Relay': 'LokiNET/Guides/TestNetRelay.md'
+        - 'Hidden Services': 'LokiNET/Guides/HiddenService.md'
+        - 'Exit Nodes': 'LokiNET/Guides/ExitNode.md'
+    - 'LLARP': 'LokiNET/LLARP.md'
+    - 'Developers': 'LokiNET/DeveloperInfo.md'
+    - 'SNapps': 'LokiNET/SNapps.md'
+    - 'Messenger' : 'LokiNET/Messenger.md'
+>>>>>>> jeff/master
 - Advanced:
    - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
@@ -107,3 +121,4 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+

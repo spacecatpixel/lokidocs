@@ -1,5 +1,5 @@
 
-## Overview
+# Service Nodes Overview
 
 To understand what a Service Node is, you can refer to the [whitepaper](https://loki.network/whitepaper) to get an in depth understanding. For now, all you need to know is that:
 
@@ -24,5 +24,3 @@ It is also worth noting that Service Nodes are quite basic at the moment, and op
 -   Act as remote nodes for users
 
 Once these features come out, Service Node operation will require better servers, particularly when it comes to bandwidth. For the purposes of this guide, however, we will only consider the current requirements.
-
-[test](../Wallets/CliWallet/SNFullGuide.md)
