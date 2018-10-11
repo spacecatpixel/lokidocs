@@ -13,37 +13,42 @@ pre, code {
 }
 
 .md-typeset h1 {
+    font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
     font-size     : 34px;
     text-transform: none;
 }
 
 .md-typeset h2 {
+    font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
     font-size     : 26px;
     text-transform: none;
 }
 
 .md-typeset h3 {
+    font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
     font-size     : 23px;
     text-transform: none;
 }
 
 .md-typeset h4 {
+    font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
     font-size     : 20px;
     text-transform: none;
-    font-weight   : bold;
 }
 
 .md-typeset h5 {
+    font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
     font-size     : 18px;
     text-transform: none;
 }
 
 .md-typeset h6 {
+    font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
     font-size     : 16px;
     text-transform: none;
