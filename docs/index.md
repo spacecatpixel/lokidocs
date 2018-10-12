@@ -8,7 +8,7 @@ Loki provides the means to transact and communicate privately and anonymously, u
 
 Loki is a private cryptocurrency based on Monero. Over the course of the coming months, the Loki project aims to offer an incenvised full node layer with a secondary p2p network that offers a private communications layer based on the Tor protocol.
 
-More information on the project can be found on the [website](www.loki.network) and in the [whitepaper](https://loki.network/wp-content/uploads/2018/10/EnglishV3Whitepaper.pdf).
+More information on the project can be found on the [website](https://www.loki.network) and in the [whitepaper](https://loki.network/wp-content/uploads/2018/10/EnglishV3Whitepaper.pdf).
 
 Loki is an open source project, and we encourage contributions from anyone with something to offer. For more information on contributing, please contact team@loki.network
 
