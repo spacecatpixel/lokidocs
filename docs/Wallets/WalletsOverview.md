@@ -11,3 +11,4 @@ The quickest way to access a Loki Wallet is through a web based wallet, [Loki Lo
 
 ## Command Line Interface Wallet (CLI)
 The [Cli Wallet](https://github.com/loki-project/loki/releases) is for more advanced users and offers the most tools when interacting with the Loki Blockchain... and feels the most badass.
+
