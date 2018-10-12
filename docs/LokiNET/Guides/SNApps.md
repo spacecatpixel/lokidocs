@@ -1,4 +1,4 @@
-#LokiNET Hidden Service Setup Guide
+#LokiNET SNApps/Hidden Service Setup Guide
 
 // TODO: overview goes here
 
