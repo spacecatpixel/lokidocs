@@ -55,6 +55,7 @@ nav:
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
   - RPC Guides:
       - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
+  - 'Multsigniture': 'Wallets/Multisigniture.md'
 - Mining:
    - 'Proof Of Work' : 'Mining/ProofOfWork.md'
 - Service Nodes:
