@@ -1,10 +1,10 @@
 # Project information
 site_name: 'Loki Docs'
-site_url: 'https://loki-project.github.io/lokidocs/'
+site_url: 'https://loki-project.github.io/loki-docs/'
 
 # Repository
 repo_name: 'lokidocs'
-repo_url: 'https://github.com/loki-project/lokidocs'
+repo_url: 'https://github.com/loki-project/loki-docs'
 
 # Copyright
 copyright: 'Add Copyright'
