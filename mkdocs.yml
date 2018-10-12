@@ -42,16 +42,17 @@ nav:
       - 'Mobile Wallet Overview' : 'Wallets/MobileWallet/MobileWalletOverview.md'
       - 'Android Wallet Guide' : 'Wallets/MobileWallet/Guides.md'
   - Command Line Integrated (CLI) Wallet:
-    - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview.md'
-    - 'lokid' : 'Wallets/CliWallet/lokid.md'
-    - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
-    - 'Compiling Loki from source': 'Wallets/CliWallet/CompilingGuide.md'
-    - 'Using LokiNET': 'Wallets/CliWallet/UsingLokiNET.md'
-    - 'Using Tor': 'Wallets/CliWallet/UsingTor.md'
-    - 'Debugging': 'Wallets/CliWallet/Debugging.md'
-    - Multisig:
-      - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
-      - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
+      - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview.md'
+      - Guides:
+        - 'lokid' : 'Wallets/CliWallet/lokid.md'
+        - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
+        - 'Compiling Loki from source': 'Wallets/CliWallet/CompilingGuide.md'
+        - 'Using LokiNET': 'Wallets/CliWallet/UsingLokiNET.md'
+        - 'Using Tor': 'Wallets/CliWallet/UsingTor.md'
+        - 'Debugging': 'Wallets/CliWallet/Debugging.md'
+        - Multisig:
+           - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
+           - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
   - RPC Guides:
       - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
 - Mining:
@@ -62,16 +63,9 @@ nav:
     - Guides:
       - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
       - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
-<<<<<<< HEAD
-- Lokinet:
-    - 'Overview': 'Lokinet/LokinetOverview.md'
-    - 'LLARP': 'Lokinet/LLARP.md'
-    - 'SNapps': 'Lokinet/SNapps.md'
-    - 'Messenger' : 'Lokinet/Messenger.md'
-=======
 - LokiNET:
     - 'Overview': 'LokiNET/LokiNetOverview.md'
-    - 'Guides':
+    - Guides:
         - 'Test Network Relay': 'LokiNET/Guides/TestNetRelay.md'
         - 'Hidden Services': 'LokiNET/Guides/HiddenService.md'
         - 'Exit Nodes': 'LokiNET/Guides/ExitNode.md'
@@ -79,7 +73,6 @@ nav:
     - 'Developers': 'LokiNET/DeveloperInfo.md'
     - 'SNapps': 'LokiNET/SNapps.md'
     - 'Messenger' : 'LokiNET/Messenger.md'
->>>>>>> jeff/master
 - Advanced:
    - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
