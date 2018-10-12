@@ -15,21 +15,22 @@ pre, code {
 .md-typeset h1 {
     font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
-    font-size     : 34px;
+    font-size     : 36px;
     text-transform: none;
 }
 
 .md-typeset h2 {
     font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
-    font-size     : 26px;
+    font-size     : 28px;
+    font-weight    : bold;
     text-transform: none;
 }
 
 .md-typeset h3 {
     font-family: proxima-nova, sans-serif;
     color         : #1a1a1a;
-    font-size     : 23px;
+    font-size     : 22px;
     text-transform: none;
 }
 
