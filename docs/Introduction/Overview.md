@@ -12,7 +12,7 @@ transactions and communications. It allows you to hold and secure Loki, mine and
 - [Command Line Interface Wallet (CLI)](../Wallets/CliWallet/CLIOverview.md): The [Cli Wallet](https://github.com/loki-project/loki/releases) is for more advanced users and offers the most tools when interacting with the Loki Blockchain... and feels the most badass.
 
 ## Mining
-
+>> TO DO
 ## Service Nodes
 The Loki cryptocurrency creates a network of [Service Nodes](../ServiceNodes/SNOverview.md) who are paid to propagate the blockchain, process transactions, and route traffic and messages on [LokiNET](../LokiNET/LokiNetOverview.md).
 
@@ -42,8 +42,16 @@ The following are useful guides or resources for [LokiNET](../LokiNET/LokiNetOve
 
 ## Advanced
 
+>> TO DO
+
 ## FAQ
+
+>> TO DO
 
 ## Contributing
 
+>> TO DO
+
 ## About
+
+>> TO DO

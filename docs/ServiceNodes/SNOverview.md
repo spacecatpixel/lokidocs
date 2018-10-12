@@ -5,7 +5,7 @@ To understand what a Service Node is, you can refer to the [whitepaper](https://
 
 -   Service Nodes are full nodes on the Loki network
     
--   Full nodes become Service Nodes when the owner locks the required amount of Loki for 30 days (2 days on testnet) and submits a registration transaction
+-   Full nodes become Service Nodes when the owner [locks the required amount of Loki](StakingRequirement.md) for 30 days (2 days on testnet) and submits a registration transaction
     
 -   Once accepted by the network, the Service Node is eligible to win block rewards
     

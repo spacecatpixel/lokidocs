@@ -25,3 +25,8 @@ In Loki, only N-of-N and (N-1)-of-N multisignature schemes are supported. This c
 
 After multisig wallet setup every participant ends up knowing the public address and private view key. This is necessary for participants to recognize and decipher transactions they are supposed to co-sign.
 
+## Guides
+
+- [2-of-2 Multisigniture Wallet Setup](../Wallets/CliWallet/2of2Multisig.md) - Setup Guide for a 2 of 2 Multsig Wallet.
+
+- [2-of-3 Multisigniture Wallet Setup](../Wallets/CliWallet/2of3Multisig.md) - Setup Guide for a 2 of 3 Multsig Wallet.
