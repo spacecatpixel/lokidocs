@@ -2,177 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://sonofotis.github.io/lokidocs/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Introduction/Overview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Introduction/BeginnersGuide/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/WalletsOverview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/WhatWalletToUse/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/WebWallet/WebWalletOverview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/WebWallet/Guides/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/GuiWallet/GUIOverview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/GuiWallet/Guides/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/MobileWallet/MobileWalletOverview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/MobileWallet/Guides/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/CLIOverview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/lokid/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/SNFullGuide/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/CompilingGuide/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/UsingLokiNET/</loc>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/UsingTor/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/Debugging/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/2of2Multisig/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/2of3Multisig/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/RPCGuides/SNRPCGuide/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Mining/ProofOfWork/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/ServiceNodes/SNOverview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/ServiceNodes/StakingRequirement/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/CliWallet/SNFullGuide/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Wallets/RPCGuides/SNRPCGuide/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sonofotis.github.io/lokidocs/Lokinet/LokinetOverview/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <loc>https://sonofotis.github.io/lokidocs/LokiNET/LokiNetOverview/</loc>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sonofotis.github.io/lokidocs/Lokinet/LLARP/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <loc>https://sonofotis.github.io/lokidocs/LokiNET/Guides/TestNetRelay/</loc>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sonofotis.github.io/lokidocs/Lokinet/SNapps/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <loc></loc>
+     
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sonofotis.github.io/lokidocs/Lokinet/Messenger/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <loc>https://sonofotis.github.io/lokidocs/LokiNET/Guides/ExitNode/</loc>
+     <lastmod>2018-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sonofotis.github.io/lokidocs/LokiNET/LLARP/</loc>
+     <lastmod>2018-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sonofotis.github.io/lokidocs/LokiNET/DeveloperInfo/</loc>
+     <lastmod>2018-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sonofotis.github.io/lokidocs/LokiNET/SNapps/</loc>
+     <lastmod>2018-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://sonofotis.github.io/lokidocs/LokiNET/Messenger/</loc>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Advanced/TechnicalSpecs/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Advanced/EmissionCurve/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Advanced/SybilResistance/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Advanced/EmissionCurve/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/Contributing/Github/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://sonofotis.github.io/lokidocs/About/loki/</loc>
-     <lastmod>2018-10-11</lastmod>
+     <lastmod>2018-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
