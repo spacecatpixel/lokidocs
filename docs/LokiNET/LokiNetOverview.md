@@ -2,21 +2,21 @@
 
 ## Terms
 
-**[Service Node](/LokiNET/ServiceNodes/SNOverview)**: Full nodes on the Loki Network.
+**[Service Node](../ServiceNodes/SNOverview.md)**: Full nodes on the Loki Network.
 
-**[Hidden Service](/LokiNET/HiddenService/HSOverview)**: an anonymized IP endpoint.
+**[SNApps/Hidden Services](../LokiNET/SNApps/SNAppsOverview.md)**: An anonymized IP endpoint.
 
 ## Guides
 
-**[Setting Up A Hidden Service](/LokiNET/Guides/HiddenService)**: How to host a hidden service the right way.
+**[Setting Up A SNApp](../LokiNET/Guides/SNApps.md)**: How to host a hidden service the right way.
 
-**[Setting Up A TestNet Relay](/LokiNET/Guides/TestNetRelay)**: How to host a relay on the test network.
+**[Setting Up A TestNet Relay](../LokiNET/Guides/TestNetRelay.md)**: How to host a relay on the test network.
 
-**[Developer Info](/LokiNET/DeveloperInfo)**: Protocol Specifications.
+**[Developer Info](../LokiNET/DeveloperInfo.md)**: Protocol Specifications.
 
 ## Concepts
 
-**[Path](/LokiNET/Concepts/OnionRouting)**: Bidirection Onion Routing Construct, (I2P tunnel / Tor circuit equiv.)
+**[Path](../LokiNET/Concepts/OnionRouting.md)**: Bidirection Onion Routing Construct, (I2P tunnel / Tor circuit equiv.)
 
 
 
