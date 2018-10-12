@@ -2,19 +2,14 @@
 # Overview
 
 ## Wallets
-The Loki wallet is a gateway to private decentralised 
+The [Loki wallets](../Wallets/WalletsOverview.md) offer a gateway to private decentralised 
 transactions and communications. It allows you to hold and secure Loki, mine and trade peer-to-peer. [Download the official Loki wallet](https://loki.network/getting-started/) today and start taking back control of your online privacy.
 
-### Web Wallet
-The quickest way to access a Loki Wallet is through a web based wallet, [Loki Locker](https://lokilocker.com/).
+- [Web Wallet](../Wallets/WebWallet/WebWalletOverview.md): The quickest way to access a Loki Wallet is through a web based wallet, [Loki Locker](https://lokilocker.com/).
 
-### Graphical User Interface Wallet (GUI)
-[Graphical User Interface Wallet](https://github.com/loki-project/loki-gui/releases): The Gui Wallet is just as easy to use however requires you to download the latest release from [Loki Projects Github](https://github.com/loki-project/loki-gui/releases).  
+- [Graphical User Interface Wallet (GUI)](../Wallets/GuiWallet/GUIOverview.md): The Gui Wallet is just as easy to use however requires you to download the latest release from [Loki Projects Github](https://github.com/loki-project/loki-gui/releases).  
 
-- For installation help you can check out the following guide: [Gui-Guide-Windows](https://loki.network/wp-content/uploads/2018/05/GUI-GUIDE-WINDOWS-PDF.pdf)
-
-### Command Line Interface Wallet (CLI)
-The [Cli Wallet](https://github.com/loki-project/loki/releases) is for more advanced users and offers the most tools when interacting with the Loki Blockchain... and feels the most badass.
+- [Command Line Interface Wallet (CLI)](../Wallets/CliWallet/CLIOverview.md): The [Cli Wallet](https://github.com/loki-project/loki/releases) is for more advanced users and offers the most tools when interacting with the Loki Blockchain... and feels the most badass.
 
 ## Mining
 
@@ -34,7 +29,7 @@ The following are useful guides or resources for [Service Nodes](../ServiceNodes
 
 [LokiNET](../LokiNET/LokiNetOverview.md) is a new type of mixnet that uses market-based Sybil attack resistance and onion routing to create a new private tunnel to the internet. Users of Lokinet will be able to access normal websites and SNApps without revealing their IP address.
 
-[SNApps](../SNApps/SNAppsOverview.md) are traditional web applications that sit inside [LokiNET](../LokiNET/LokiNetOverview.md). As the host’s IP is never revealed, this provides great protection for the development of censorship resistant social media, marketplaces, information sharing sites, and other apps that depend on user and server anonymity.
+[SNApps](../LokiNET/SNApps/SNAppsOverview.md) are traditional web applications that sit inside [LokiNET](../LokiNET/LokiNetOverview.md). As the host’s IP is never revealed, this provides great protection for the development of censorship resistant social media, marketplaces, information sharing sites, and other apps that depend on user and server anonymity.
 
 The following are useful guides or resources for [LokiNET](../LokiNET/LokiNetOverview.md):
 
