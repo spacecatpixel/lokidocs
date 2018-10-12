@@ -23,7 +23,7 @@ This guide details the process of  managing the Loki daemon as a regular system 
 
 ## Configuring the Loki daemon as a service for the first time
 
-Copy & paste the following commands:
+Connect to your server via SSH (as is explained at [Full Guide on Service Nodes - Step 2 - Prepare your Server](https://github.com/loki-project/Meta/blob/master/SNFullGuide.md#step-2---prepare-your-server)) and copy & paste the following commands on the terminal window:
 
 1. Create the lokid.service file: `sudo touch /etc/systemd/system/lokid.service`
 
@@ -89,16 +89,18 @@ Your Loki daemon should start as a service on every reboot.
 
 ## How to update Loki binaries when running daemon as a service
 
-To update your Loki node, a process like the one found at [Full Guide on Service Nodes - Updating loki](https://github.com/loki-project/Meta/blob/master/SNFullGuide.md#updating-loki) can be followed. The main inconvenient of this method is that lokid.service file has to be edited on every update as the Loki daemon file path is changed. Then, we are forced to run several additional steps that are unnecessary otherwise. Because of this, two Loki daemon updating methods are described:
+To update your Loki node, a process like the one found at [Full Guide on Service Nodes - Updating loki](https://github.com/loki-project/Meta/blob/master/SNFullGuide.md#updating-loki) can be followed. The main inconvenient of this method is that lokid.service file has to be edited on every update as the Loki daemon file path is changed. Then, we are forced to run several additional steps that are  otherwise unnecessary. Because of this, two Loki daemon updating methods are described:
 - ["Full Guide on Service Nodes - Updating loki" section like method](RunServiceNodeAsService.md#full-guide-on-service-nodes-updating-loki-section-like-method)
-- [Updating Loki binaries without editing lokid.service file method](RunServiceNodeAsService.md#updating-loki-binaries-without-editing-lokid-service-file-method)
+- [Updating Loki binaries without editing lokid.service file method](RunServiceNodeAsService.md#updating-loki-binaries-without-editing-lokidservice-file-method)
 
 
-### "Full Guide on Service Nodes - Updating loki section" like method  ###
+### "Full Guide on Service Nodes - Updating loki" section like method  ###
+
+Connect to your server via SSH and:
 
 1. Find the latest binary version, for example `1.0.4`. Check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest).
 
-2. Stop the Loki daemon service: `sudo systemctl stop lokid.service`
+2. Stop the Loki daemon service: `sudo systemctl stop lokid.service` (see [NOTE](RunServiceNodeAsService.md#note))
 
 3. Run an update on your machine (Linux based systems): `sudo apt-get update && sudo apt-get upgrade`
 
@@ -120,9 +122,9 @@ The following commands should let us know if everything went fine:
 
 ### Updating Loki binaries without editing lokid.service file method ###
 
-If you do not want to edit your lokid.service file on every update, follow these alternate steps:
+If you do not want to edit your lokid.service file on every update, connect to your server via SSH and follow these alternative steps:
 
-1. Stop the Loki daemon service: `sudo systemctl stop lokid.service`
+1. Stop the Loki daemon service: `sudo systemctl stop lokid.service` (see [NOTE](RunServiceNodeAsService.md#note))
 
 2. Run an update on your machine (Linux based systems): `sudo apt-get update && sudo apt-get upgrade`
 
@@ -150,18 +152,18 @@ The following commands should let us know if everything went fine:
 `~/loki/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
 >     For Testnet,  append the --testnet flag at the end of the command.
 
-- Test 3. To check what Loki daemon version is running now that this information is not in its folder's name: `~/loki/./lokid version`.
+- Test 3. Check what Loki daemon version is running now that this information is not in its folder's name: `~/loki/./lokid version`.
 >     For Testnet,  append the --testnet flag at the end of the command. 
 
 
-For further updates, skip step 3.
+Skip step 3 in future updates.
 
 
 
 ## How to access Loki daemon in interactive mode when running daemon as a service
 
 Whenever you want to access lokid in interactive mode, for example to run Service Node registration command,
-you have to: 
+you have to connect to your server via SSH and:
 
 1. Stop the Loki daemon service: `sudo systemctl stop lokid.service` (see [NOTE](RunServiceNodeAsService.md#note))
 
