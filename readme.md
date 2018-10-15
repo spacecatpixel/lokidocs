@@ -1,6 +1,7 @@
 # Loki Docs
+To view documentation please visit https://loki-project.github.io/loki-docs/
 
-Repo for documentation
+Any changes made to this repository will be auto-propagated to the Loki-docs website.
 
 
 ## Building from source
