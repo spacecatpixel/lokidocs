@@ -19,7 +19,7 @@ The Loki cryptocurrency creates a network of [Service Nodes](../ServiceNodes/SNO
 The following are useful guides or resources for [Service Nodes](../ServiceNodes/SNOverview.md):
 
 - [Service Node Portal](https://loki.network/service-nodes-portal/): Loki's official Service Node Portal.
-- [Full Guide](../Wallets/CliWallet/SNFullGuide.md): How to setup a Service Node using the CLI Wallet.
+- [Full Guide](../ServiceNodes/SNFullGuide.md): How to setup a Service Node using the CLI Wallet.
 - [Setup Video Guide](https://www.youtube.com/watch?v=6uiRD1847UY): Video Guide on how to setup a Service Node using the CLI Wallet.
 - [Reward Calculator OSX](https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_OSX-V1.xlsm): Service Node reward calculator for OSX.
 - [Reward Calculator Windows](https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_Windows-V1-1.xlsm): Service Node reward calculator for Windows.

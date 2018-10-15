@@ -44,18 +44,12 @@ nav:
   - Command Line Integrated (CLI) Wallet:
       - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview.md'
       - Guides:
-        - 'lokid' : 'Wallets/CliWallet/lokid.md'
-        - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
-        - 'Compiling Loki from source': 'Wallets/CliWallet/CompilingGuide.md'
-        - 'Using LokiNET': 'Wallets/CliWallet/UsingLokiNET.md'
-        - 'Using Tor': 'Wallets/CliWallet/UsingTor.md'
-        - 'Debugging': 'Wallets/CliWallet/Debugging.md'
         - 'CLI Mac Setup': 'Wallets/CliWallet/loki-wallet-cliMacSetup.md'
+        - 'CLI Wallet Commands': 'Wallets/CliWallet/WalletCommands.md'
         - Multisig:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
-  - RPC Guides:
-      - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
+
   - 'Multsigniture': 'Wallets/Multisigniture.md'
 - Mining:
    - 'Proof Of Work' : 'Mining/ProofOfWork.md'
@@ -63,8 +57,8 @@ nav:
     - 'Overview': 'ServiceNodes/SNOverview.md'
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
     - Guides:
-      - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
-      - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
+      - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
+      - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
 - LokiNET:
     - 'Overview': 'LokiNET/LokiNetOverview.md'
@@ -77,11 +71,17 @@ nav:
     - 'SNapps': 'LokiNET/SNapps.md'
     - 'Messenger' : 'LokiNET/Messenger.md'
 - Advanced:
-   - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
-   - 'Emission Curve' : 'Advanced/EmissionCurve.md'
-   - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
-- FAQ:
-   - 'Emission Curve' : 'Advanced/EmissionCurve.md'
+    - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
+    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
+    - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
+    - Guides:
+        - 'lokid' : 'Advanced/lokid.md'
+        - 'Compiling Loki from source': 'Advanced/CompilingGuide.md'
+        - 'Using LokiNET': 'Advanced/UsingLokiNET.md'
+        - 'Using Tor': 'Advanced/UsingTor.md'
+        - 'Debugging': 'Advanced/Debugging.md'  
+        - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      
+- 'FAQ': 'FAQ.md'
 - Contributing:
    - 'Using Github' : 'Contributing/Github.md'
    - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
