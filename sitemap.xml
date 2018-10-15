@@ -61,37 +61,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/lokid/</loc>
-     <lastmod>2018-10-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/SNFullGuide/</loc>
-     <lastmod>2018-10-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/CompilingGuide/</loc>
-     <lastmod>2018-10-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/UsingLokiNET/</loc>
-     <lastmod>2018-10-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/UsingTor/</loc>
-     <lastmod>2018-10-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/Debugging/</loc>
-     <lastmod>2018-10-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/loki-wallet-cliMacSetup/</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/WalletCommands/</loc>
      <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -102,11 +77,6 @@
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/2of3Multisig/</loc>
-     <lastmod>2018-10-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/RPCGuides/SNRPCGuide/</loc>
      <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -131,12 +101,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/SNFullGuide/</loc>
+     <loc>https://loki-project.github.io/loki-docs/ServiceNodes/SNFullGuide/</loc>
      <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/RPCGuides/SNRPCGuide/</loc>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/SNRPCGuide/</loc>
      <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -201,7 +171,37 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Advanced/EmissionCurve/</loc>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/lokid/</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/CompilingGuide/</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/UsingLokiNET/</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/UsingTor/</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/Debugging/</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/SNRPCGuide/</loc>
+     <lastmod>2018-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/FAQ/</loc>
      <lastmod>2018-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
