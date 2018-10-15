@@ -11,7 +11,7 @@ This guide details the process of  managing the Loki daemon as a regular system 
 
 - This guide has been tested on Ubuntu Server 18.04
 - Read the guide carefully. You must change file path of your Loki daemon and username wherever needed.
-- It is also recommended that you avoid running your Service Node as root user. Follow [Full Guide on Service Nodes - Set up Non-root User](https://github.com/loki-project/Meta/blob/master/SNFullGuide.md#optional---set-up-non-root-user) for directions on how to create a new user for this purpose.
+- It is also recommended that you avoid running your Service Node as root user. Follow [Full Guide on Service Nodes - Set up Non-root User](https://github.com/loki-project/Meta/blob/master/SNFullGuide.md#optional---set-up-non-root-user) for directions on how to create a new user for this purpose. Be careful if your server is already running as you will have to move your Loki binaries folder and .loki hidden folder, where your Service Node public key is stored, from root's home path to your new user's home path.
 - You can read [Jagerman's guide](https://jagerman.com/loki-systemd.txt) if you need a more in depth approach. 
 
 ## Table of Contents
@@ -74,7 +74,7 @@ CTRL+X -> Y -> ENTER
 `sudo systemctl enable lokid.service`
 
 
-Now, everything should be working. We wont have a Loki daemon interactive screen but we can use RPC to communicate with the service. The following commands should let us know if everything went fine:
+Now, everything should be working. We won't have a Loki daemon interactive screen but we can use RPC to communicate with the service. The following commands should let us know if everything went fine:
 
 - Test 1. Check lokid.service status:
 `systemctl status lokid.service`
@@ -88,11 +88,11 @@ Your Loki daemon should start as a service on every reboot.
 ## How to update Loki binaries when running daemon as a service
 
 To update your Loki node, a process like the one found at [Full Guide on Service Nodes - Updating loki](https://github.com/loki-project/Meta/blob/master/SNFullGuide.md#updating-loki) can be followed. The main inconvenience of this method is that lokid.service file has to be edited on every update as the Loki daemon file path is changed. So we are forced to run several additional steps that are  otherwise unnecessary. Because of this, two Loki daemon updating methods are described below:
-- ["Full Guide on Service Nodes - Updating loki" section like method](RunServiceNodeAsService.md#full-guide-on-service-nodes-updating-loki-section-like-method)
+- [Method based on "Full Guide on Service Nodes - Updating loki"](RunServiceNodeAsService.md#method-based-on-full-guide-on-service-nodes-updating-loki)
 - [Updating Loki binaries without editing lokid.service file method](RunServiceNodeAsService.md#updating-loki-binaries-without-editing-lokidservice-file-method)
 
 
-### "Full Guide on Service Nodes - Updating loki"###
+### Method based on "Full Guide on Service Nodes - Updating loki" ###
 
 Connect to your server via SSH and:
 
@@ -127,15 +127,15 @@ If you do not want to edit your lokid.service file on every update, connect to y
 2. Run an update on your machine (Linux based systems): `sudo apt-get update && sudo apt-get upgrade`
 
 3. If your Loki binaries' folder name still looks like `loki-linux-x64-<VERSION>` then:
-    - Rename it to `loki` to prevent the need of creating a new folder on every update: `mv ~/loki-linux-x64-<VERSION> ~/loki` (remember to replace `<VERSION>` with your Loki binaries' folder name).
+    - Rename it to `loki` to prevent the need of creating a new folder on every update: `mv ~/loki-linux-x64-<VERSION> ~/loki` (remember to replace `loki-linux-x64-<VERSION>` with your Loki binaries' folder name).
     - Re-run steps 3 and 5 described in the [previous section](RunServiceNodeAsService.md#configuring-the-loki-daemon-as-a-service-for-the-first-time) in order to change YOUR_LOKI_FILES_FOLDER to `loki`.
     - Re-run steps 6 and 7 described in the [previous section](RunServiceNodeAsService.md#configuring-the-loki-daemon-as-a-service-for-the-first-time).
     
 4. Find the latest binary version, for example `1.0.4`. Check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest).
 
-5. Download the latest binary: `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip` (replace `<VERSION>` with the one found on step 5, `1.0.4` in our example).
+5. Download the latest binary: `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip` (replace `<VERSION>` with the one found on step 4, `1.0.4` in our example).
 
-6. Unzip the latest binary in `~/loki` folder (replace `<VERSION>` with the one found on step 5, `1.0.4` in our example):
+6. Unzip the latest binary in `~/loki` folder (replace `<VERSION>` with the one found on step 4, `1.0.4` in our example):
     - If you want to be asked for confirmation everytime a file is going to be overwritten: `unzip loki-linux-x64-<VERSION>.zip -d ~/loki`
     - If you do not want to be asked, force overwriting: `unzip -o loki-linux-x64-<VERSION>.zip -d ~/loki`
     
