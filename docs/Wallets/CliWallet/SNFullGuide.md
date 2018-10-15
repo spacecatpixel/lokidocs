@@ -1,6 +1,8 @@
 ﻿# Full Guide on Service Nodes
 
-This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. Also available is a video guide, which provides a more simplified version of the written guide, it can be viewed [here](https://youtu.be/6uiRD1847UY) 
+This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. Also available is a video guide, which provides a more simplified version of the written guide, it can be viewed [here](https://youtu.be/6uiRD1847UY).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6uiRD1847UY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 If you feel confident around servers and the CLI, then skip to the [Express Setup Guide](#express-setup-guide)
 
@@ -8,7 +10,7 @@ You can of course run the Loki software on any operating system that you can get
 
 ### Summary of Loki Service Node Requirements
 
-Full summary of Loki Service Node Requirements. This may change depending on Service Node functionality, so you should check here regularly, or follow our telegram/discord announcements channel. 
+Full summary of Loki Service Node Requirements. This may change depending on Service Node functionality, so you should check here regularly, or follow our [telegram](https://t.me/LokiCommunity)/[discord](https://discord.gg/DN72VN) announcements channel. 
 
 |Spec|Note|
 |---|---|
@@ -39,7 +41,7 @@ To understand what a Service Node is, you can refer to the [whitepaper](https://
 
 -   Service Nodes are full nodes on the Loki network
     
--   Full nodes become Service Nodes when the owner locks the required amount of Loki for 30 days (2 days on testnet) and submits a registration transaction
+-   Full nodes become Service Nodes when the owner [locks the required amount of Loki](StakingRequirement.md) for 30 days (2 days on testnet) and submits a registration transaction
     
 -   Once accepted by the network, the Service Node is eligible to win block rewards
     
