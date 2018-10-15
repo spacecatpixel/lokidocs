@@ -1,5 +1,5 @@
 # CLI Overview
-The [Cli Wallet](../Wallets/CliWallet/CLIOverview.md) is for more advanced users and offers the most tools when interacting with the Loki Blockchain. You can download the latest release of the Loki CLI Wallet from [Loki Projects Github](https://github.com/loki-project/loki/releases).
+The [Cli Wallet](../CliWallet/CLIOverview.md) is for more advanced users and offers the most tools when interacting with the Loki Blockchain. You can download the latest release of the Loki CLI Wallet from [Loki Projects Github](https://github.com/loki-project/loki/releases).
 
 
 ## Guides & Resources
