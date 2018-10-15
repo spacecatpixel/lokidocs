@@ -18,5 +18,5 @@
 
 // TODO: exit node oper overview goes here
 
-For More information see the **[Exit Node Guide](../LokiNET/Guides/ExitNodeGuide.md)**.
+For More information see the **[Exit Node Guide](ExitNode.md)**.
 
