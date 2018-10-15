@@ -7,7 +7,7 @@
 This guide will help you set up the Loki daemon (lokid) as a service. 
 By doing this, the Loki daemon will automatically start after a crash or reboot, which helps your Service Node keep running without undesired interruptions.
 
-This guide details the process of  managing the Loki daemon as a regular system process rather than in a *screen* session.
+This guide details the process of managing the Loki daemon as a regular system process rather than in a *screen* session.
 
 - This guide has been tested on Ubuntu Server 18.04
 - Read the guide carefully. You must change file path of your Loki daemon and username wherever needed.

@@ -4,8 +4,8 @@ Loki is a Blockchain network oriented toward the provision of privacy-preserving
 
 To solve this problem the Loki Project team commissioned two Economic papers:
 
-1. [Cryptoeconomics of the Loki Network](https://loki.network/wp-content/uploads/2018/08/CryptoEconomicsOfTheLokiNetworkHistoric.pdf)
-2. [Loki Cryptoeconomics](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf)
+1. [Cryptoeconomics of the Loki Network](https://loki.network/wp-content/uploads/2018/08/CryptoEconomicsOfTheLokiNetworkHistoric.pdf): This Economic Report was commissioned to characterise the game theory behind incentivising Service Node operators. 
+2. [Loki Cryptoeconomics](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf): This Report was commissioned to apply the game theory specific to the Loki Networks economics.
 
 ## Block Reward
 

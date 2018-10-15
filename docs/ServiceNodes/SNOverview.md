@@ -27,14 +27,18 @@ Once these features come out, Service Node operation will require better servers
 
 ## Terms
 
-**[Service Node](../ServiceNodes/SNOverview.md)**: Full nodes on the Loki Network.
+- **[Service Node](../ServiceNodes/SNOverview.md)**: Full nodes on the Loki Network.
 
-**[Staking Requirement](../ServiceNodes/StakingRequirement.md)**: Collateral requirement to run a Service Node.
+- **[Staking Requirement](../ServiceNodes/StakingRequirement.md)**: Collateral requirement to run a Service Node.
 
-## Guides
+## Guides & Resources
 
-**[Setting up Service Node](../Wallets/CliWallet/SNFullGuide.md)**: How to host and maintain a Service Node using the [CLI wallet](../Wallets/CliWallet/CLIOverview.md).
+- **[Setting up Service Node](../Wallets/CliWallet/SNFullGuide.md)**: How to host and maintain a Service Node using the [CLI wallet](../Wallets/CliWallet/CLIOverview.md).
 
-**[Service Node RPC](../Wallets/RPCGuides/SNRPCGuide.md)**: How to use JSON 2.0 RPC Calls with Service Nodes.
+- **[Service Node as Service](../ServiceNodes/SNOverview.md)**: How to run the daemon to automatically start after a crash or reboot, which helps your Service Node keep running without undesired interruptions.
+
+- **[Service Node RPC](../Wallets/RPCGuides/SNRPCGuide.md)**: How to use JSON 2.0 RPC Calls with Service Nodes.
+
+- **[Active Service Node List](https://www.lokiblocks.com)**: Loki Block explorer showing the current Service Node Pubkeys.
 
 ## Concepts
