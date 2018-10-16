@@ -157,7 +157,7 @@ The following commands should let us know if everything went fine:
 
 - Test 1. Check lokid.service status: `systemctl status lokid.service`. The output should show you that lokid.service is loaded and active.
 
-- Test 2. Check the Service Node status (remember to replace YOUR_LOKI_FILES_FOLDER with your own):
+- Test 2. Check the Service Node status:
 `~/loki/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
 >     For Testnet,  append the --testnet flag at the end of the command.
 
@@ -190,8 +190,8 @@ The following commands let us check that Loki daemon service is active again:
 - Test 1. Check lokid.service status: `systemctl status lokid.service`. The output should show you that lokid.service is loaded and active.
 
 - Test 2. Check the Service Node status (remember to replace YOUR_LOKI_FILES_FOLDER with your own):
-`~/loki/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
->     For Testnet,  append the --testnet flag at the end of the command.
+`~/YOUR_LOKI_FILES_FOLDER/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
+>     For Testnet,  append the --testnet flag at the end of the command. 
 
 
 
