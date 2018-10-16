@@ -1,11 +1,20 @@
 
 # Service Nodes Overview
 
-To understand what a Service Node is, you can refer to the [whitepaper](https://loki.network/whitepaper) to get an in depth understanding. For now, all you need to know is that:
+Although Loki implements novel changes on top of the CryptoNote protocol (see 7), much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator [time-locks a significant amount of Loki](../ServiceNodes/StakingRequirement.md) and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.
+
+The resulting network provides [market-based resistance to Sybil attacks](../Advanced/SybilResistance.md), addressing a range of problems with existing mixnets and privacy-centric services. This resistance is based on supply and demand interactions which help prevent single actors from having a large enough stake in Loki to have a significant negative impact on the second-layer privacy services Loki provides. [DASH](https://github.com/dashpay/dash/wiki/Whitepaper) first theorised that Sybil attack resistant networks can be derived from cryptoeconomics. As an attacker accumulates Loki, the  circulating supply decreases, in turn applying demand-side pressure, driving the price of Loki up. As this continues, it
+becomes increasingly costly for additional Loki to be purchased, making the attack prohibitively expensive.
+
+To achieve this economic protection, Loki encourages the active suppression of the circulating supply. In particular, the [emissions curve](../Advanced/EmissionCurve.md) and [collateral requirements](../ServiceNodes/StakingRequirement.md) must be designed to ensure enough circulating supply is locked and reasonable returns are provided for operators to ensure Sybil attack resistance.
+
+## Service Node Activities
+
+Right now Service Nodes can:
 
 -   Service Nodes are full nodes on the Loki network
     
--   Full nodes become Service Nodes when the owner [locks the required amount of Loki](StakingRequirement.md) for 30 days (2 days on testnet) and submits a registration transaction
+-   Full nodes become Service Nodes when the owner [locks the required amount of Loki](../ServiceNodes/StakingRequirement.md) for 30 days (2 days on testnet) and submits a registration transaction
     
 -   Once accepted by the network, the Service Node is eligible to win block rewards
     
@@ -30,6 +39,8 @@ Once these features come out, Service Node operation will require better servers
 - **[Service Node](../ServiceNodes/SNOverview.md)**: Full nodes on the Loki Network.
 
 - **[Staking Requirement](../ServiceNodes/StakingRequirement.md)**: Collateral requirement to run a Service Node.
+
+- **[Sybil Resistance](../Advanced/SybilResistance.md)**: >> **Add information**
 
 ## Guides & Resources
 

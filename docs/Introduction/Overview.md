@@ -13,6 +13,7 @@ transactions and communications. It allows you to hold and secure Loki, mine and
 
 ## Mining
 >> TO DO
+
 ## Service Nodes
 The Loki cryptocurrency creates a network of [Service Nodes](../ServiceNodes/SNOverview.md) who are paid to propagate the blockchain, process transactions, and route traffic and messages on [LokiNET](../LokiNET/LokiNetOverview.md).
 
@@ -29,7 +30,7 @@ The following are useful guides or resources for [Service Nodes](../ServiceNodes
 
 [LokiNET](../LokiNET/LokiNetOverview.md) is a new type of mixnet that uses market-based Sybil attack resistance and onion routing to create a new private tunnel to the internet. Users of Lokinet will be able to access normal websites and SNApps without revealing their IP address.
 
-[SNApps](../LokiNET/SNApps/SNAppsOverview.md) are traditional web applications that sit inside [LokiNET](../LokiNET/LokiNetOverview.md). As the host’s IP is never revealed, this provides great protection for the development of censorship resistant social media, marketplaces, information sharing sites, and other apps that depend on user and server anonymity.
+[SNApps](../LokiNET/SNapps.md) are traditional web applications that sit inside [LokiNET](../LokiNET/LokiNetOverview.md). As the host’s IP is never revealed, this provides great protection for the development of censorship resistant social media, marketplaces, information sharing sites, and other apps that depend on user and server anonymity.
 
 The following are useful guides or resources for [LokiNET](../LokiNET/LokiNetOverview.md):
 

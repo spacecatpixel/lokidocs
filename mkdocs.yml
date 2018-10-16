@@ -52,7 +52,8 @@ nav:
 
   - 'Multsigniture': 'Wallets/Multisigniture.md'
 - Mining:
-   - 'Proof Of Work' : 'Mining/ProofOfWork.md'
+   - 'Proof Of Work': 'Mining/ProofOfWork.md'
+   - 'ASIC Resistance': 'Mining/ASICResistance.md'
 - Service Nodes:
     - 'Overview': 'ServiceNodes/SNOverview.md'
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
@@ -74,6 +75,12 @@ nav:
     - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
     - 'Emission Curve' : 'Advanced/EmissionCurve.md'
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
+    - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
+    - 'Ring Signature': 'Advanced/RingSignature.md'
+    - Attack Prevention:
+        - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
+        - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
+        - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
     - Guides:
         - 'lokid' : 'Advanced/lokid.md'
         - 'Compiling Loki from source': 'Advanced/CompilingGuide.md'
@@ -83,10 +90,12 @@ nav:
         - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      
 - 'FAQ': 'FAQ.md'
 - Contributing:
-   - 'Using Github' : 'Contributing/Github.md'
+   - 'Using Github': 'Contributing/Github.md'
    - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
 - About:
-   - 'To be added' : 'About/loki.md' 
+   - 'Governance': 'About/Governance.md'
+   - 'The Loki Foundation': 'About/TheLokiFoundation.md'
+   - 'Loki Funding System': 'About/LokiFundingSystem.md'
 
 # Customization
 extra_css:

@@ -664,6 +664,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Mining/ASICResistance/" title="ASIC Resistance" class="md-nav__link">
+      ASIC Resistance
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1035,15 +1047,99 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../Advanced/DynamicBlockSize/" title="Dynamic Block Size" class="md-nav__link">
+      Dynamic Block Size
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/RingSignature/" title="Ring Signature" class="md-nav__link">
+      Ring Signature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-7-4">
+    <label class="md-nav__link" for="nav-7-6">
+      Attack Prevention
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Attack Prevention
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7">
+    
+    <label class="md-nav__link" for="nav-7-7">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-4">
+      <label class="md-nav__title" for="nav-7-7">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1216,8 +1312,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../About/loki/" title="To be added" class="md-nav__link">
-      To be added
+    <a href="../../About/Governance/" title="Governance" class="md-nav__link">
+      Governance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../About/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../About/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
     </a>
   </li>
 
@@ -1288,15 +1408,19 @@
                 
                 
                 <h1 id="lokinet-overview">LokiNET Overview<a class="headerlink" href="#lokinet-overview" title="Permanent link">&para;</a></h1>
+<p>Onion routing protocols allow for users to form tunnels or paths through a distributed network, using multiple nodes as hops to obfuscate the destination and origin of data packets. <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> on the Loki network will operate a low latency onion routing protocol, forming a fully decentralised overlay network, called Lokinet.  The network does not rely on trusted authorities and its state is fully derived from the blockchain.  Users can connect to individual <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> and create bidirectional paths for packets to be routed through.  The network can be used to access internally hosted services called <a href="../SNapps/">SNApps</a>. Users can utilise
+<a href="../../ServiceNodes/SNOverview/">Service Nodes</a> exit functionality to browse the external internet without their IP address
+being exposed.</p>
 <h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">&para;</a></h2>
 <p><strong><a href="../../ServiceNodes/SNOverview/">Service Node</a></strong>: Full nodes on the Loki Network.</p>
-<p><strong><a href="../SNApps/SNAppsOverview/">SNApps/Hidden Services</a></strong>: An anonymized IP endpoint.</p>
+<p><strong><a href="../SNapps/">SNApps/Hidden Services</a></strong>: An anonymized IP endpoint.</p>
+<p><strong><a href="../LLARP/">LLARP</a></strong>: Low Latency Anonymous Routing Protocol.</p>
 <h2 id="guides">Guides<a class="headerlink" href="#guides" title="Permanent link">&para;</a></h2>
 <p><strong><a href="../Guides/SNApps/">Setting Up A SNApp</a></strong>: How to host a hidden service the right way.</p>
 <p><strong><a href="../Guides/TestNetRelay/">Setting Up A TestNet Relay</a></strong>: How to host a relay on the test network.</p>
 <p><strong><a href="../DeveloperInfo/">Developer Info</a></strong>: Protocol Specifications.</p>
 <h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
-<p><strong><a href="../LokiNET/Concepts/OnionRouting.md">Path</a></strong>: Bidirection Onion Routing Construct, (I2P tunnel / Tor circuit equiv.)</p>
+<p><strong><a href="../LLARP/">Path</a></strong>: Bidirection Onion Routing Construct, (I2P tunnel / Tor circuit equiv.)</p>
                 
                   
                 
