@@ -9,7 +9,7 @@ This guide will help you set up the Loki daemon (lokid) as a systemd service so 
 - Given commands have been tested on Ubuntu Server 18.04 LTS.
 - This guide assumes you have already downloaded and unzipped Loki binaries on your server. If you haven't, please read the [Full Guide On Service Nodes](https://loki-project.github.io/loki-docs/ServiceNodes/SNFullGuide/) before proceed.
 - Read the guide carefully. You must change file path of your Loki daemon and username wherever needed.
-- It is also recommended that you avoid running your Service Node as root user. Follow [Full Guide on Service Nodes - Set up Non-root User](https://loki-project.github.io/loki-docs/ServiceNodes/SNFullGuide/#optional-set-up-non-root-user) for directions on how to create a new user for this purpose. Be careful if your server is already running as you will have to move your Loki binaries folder and .loki hidden folder, where your Service Node public key is stored, from root's home path to your new user's home path.
+- It is also recommended that you avoid running your Service Node as root user. Follow [Full Guide on Service Nodes - Set up Non-root User](https://loki-project.github.io/loki-docs/ServiceNodes/SNFullGuide/#optional-set-up-non-root-user) for directions on how to create a new user for this purpose. Be careful if your server is already running as you will have to move your Loki binaries folder and .loki hidden folder, where your Service Node key is stored, from root's home path to your new user's home path.
 - You can read [Jagerman's guide](https://jagerman.com/loki-systemd.txt) if you need a more in depth approach. 
 
 ## Table of Contents
