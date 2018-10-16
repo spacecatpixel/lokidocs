@@ -54,7 +54,7 @@ You must change YOUR_USERNAME on two different places and YOUR_LOKI_FILES_FOLDER
 If you are running your Service Node as root, `/home` must be removed from ExecStart path: `ExecStart=/root/YOUR_LOKI_FILES_FOLDER/lokid --non-interactive --service-node`
 >     For Testnet, append the --testnet flag at the end of your modified ExecStart line. 
 
-6. Once completed save and quit nano:
+6. Once completed, save the file and quit nano:
 CTRL+X -> Y -> ENTER
 
 7. Reload systemd manager configuration:
