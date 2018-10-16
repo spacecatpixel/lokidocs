@@ -30,10 +30,9 @@ Connect to your server via SSH (as is explained at [Full Guide on Service Nodes 
 3. Start editing the created empty file: 
 `sudo nano /etc/systemd/system/lokid.service`
 
-4. Copy the text between the #s below and paste it into your empty file.
+4. Copy the text below and paste it into your empty file.
 
 ```
-###########################################################################################
 [Unit]
 Description=lokid service
 After=network-online.target
@@ -47,10 +46,9 @@ RestartSec=30s
 
 [Install]
 WantedBy=multi-user.target
-###########################################################################################
 ```
 
-5. Modify YOUR_USERNAME and YOUR_LOKI_FILES_FOLDER in the text that is between #s.
+5. Modify YOUR_USERNAME and YOUR_LOKI_FILES_FOLDER in the pasted text.
 You must change YOUR_USERNAME on two different places and YOUR_LOKI_FILES_FOLDER in one. 
 If you are running your Service Node as root, `/home` must be removed from ExecStart path: `ExecStart=/root/YOUR_LOKI_FILES_FOLDER/lokid --non-interactive --service-node`
 >     For Testnet, append the --testnet flag at the end of your modified ExecStart line. 
