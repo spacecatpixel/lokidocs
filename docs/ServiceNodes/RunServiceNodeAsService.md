@@ -136,8 +136,8 @@ If you do not want to edit your lokid.service file on every update, connect to y
 5. Download the latest binary: `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip` (replace `<VERSION>` with the one found on step 4, `1.0.4` in our example).
 
 6. Unzip the latest binary in `~/loki` folder (replace `<VERSION>` with the one found on step 4, `1.0.4` in our example):
-    - If you want to be asked for confirmation everytime a file is going to be overwritten: `unzip loki-linux-x64-<VERSION>.zip -d ~/loki`
-    - If you do not want to be asked, force overwriting: `unzip -o loki-linux-x64-<VERSION>.zip -d ~/loki`
+    - If you want to be asked for confirmation everytime a file is going to be overwritten: `unzip -j loki-linux-x64-<VERSION>.zip 'loki-linux-x64-<VERSION>/*' -d ~/loki`
+    - If you do not want to be asked, force overwriting: `unzip -j -o loki-linux-x64-<VERSION>.zip 'loki-linux-x64-<VERSION>/*' -d ~/loki`
     
 7. Start lokid.service: `sudo systemctl start lokid.service`
 
