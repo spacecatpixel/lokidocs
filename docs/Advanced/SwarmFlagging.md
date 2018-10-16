@@ -6,13 +6,13 @@ For Loki, such distributed flagging faces major implementation issues. Fundament
 
 Swarm flagging works by using existing swarms to choose members that will participate in each testing round. Each Service Node holds a copy of the blockchain, and each block created by a miner will deterministically select a number of test swarms. Every block, 1% of the networks swarms are selected for participation in a testing swarm. To calculate participating swarms, the hash of the five previous blocks is used to seed a Mersenne Twister function which then selects swarms by order of their position in the deterministic list.
 
-![Testing Swarm](/assets/Swarm.PNG)
+![Testing Swarm](../assets/Swarm.PNG)
 
 When a swarm has been selected to participate, each node in that swarm is expected to conduct a number of tests on every other node in the swarm. These are not active tests; rather each node stores historical information about its interactions with every other nodenwithin its swarm. Information about bandwidth, message storage, blockchain requests, andn exit node functionality are collected and retained over time. New swarm entrants that have yet to gather this information can query [Service Nodes](../ServiceNodes/SNOverview.md) outside of their immediate swarm so as to gather data on each of the Service Nodes they test.
 
 Each [Service Nodes](../ServiceNodes/SNOverview.md) decides how to vote on each of the other swarm members. Once it has made its decision based on the aforementioned tests, it collects and broadcasts its votes to the swarm. Each node in the swarm can now check the votes for all members. If any single node in the swarm has over 50% of the nodes voting against  it, any swarm member has the required information to construct a deregistration transaction. Once this transaction is validated and included in a block, all Service Nodes update their DHT, purging any nodes that were voted off.
 
-![Dishonest Node](/assets/Swarm2.PNG)
+![Dishonest Node](../assets/Swarm2.PNG)
 
 ## Testing Suite
 
