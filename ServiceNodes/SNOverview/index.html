@@ -664,6 +664,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Mining/ASICResistance/" title="ASIC Resistance" class="md-nav__link">
+      ASIC Resistance
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -721,6 +733,13 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#service-node-activities" title="Service Node Activities" class="md-nav__link">
+    Service Node Activities
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#terms" title="Terms" class="md-nav__link">
@@ -1028,15 +1047,99 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../Advanced/DynamicBlockSize/" title="Dynamic Block Size" class="md-nav__link">
+      Dynamic Block Size
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/RingSignature/" title="Ring Signature" class="md-nav__link">
+      Ring Signature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-7-4">
+    <label class="md-nav__link" for="nav-7-6">
+      Attack Prevention
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Attack Prevention
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7">
+    
+    <label class="md-nav__link" for="nav-7-7">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-4">
+      <label class="md-nav__title" for="nav-7-7">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1209,8 +1312,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../About/loki/" title="To be added" class="md-nav__link">
-      To be added
+    <a href="../../About/Governance/" title="Governance" class="md-nav__link">
+      Governance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../About/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../About/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
     </a>
   </li>
 
@@ -1239,6 +1366,13 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#service-node-activities" title="Service Node Activities" class="md-nav__link">
+    Service Node Activities
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#terms" title="Terms" class="md-nav__link">
@@ -1274,7 +1408,12 @@
                 
                 
                 <h1 id="service-nodes-overview">Service Nodes Overview<a class="headerlink" href="#service-nodes-overview" title="Permanent link">&para;</a></h1>
-<p>To understand what a Service Node is, you can refer to the <a href="https://loki.network/whitepaper">whitepaper</a> to get an in depth understanding. For now, all you need to know is that:</p>
+<p>Although Loki implements novel changes on top of the CryptoNote protocol (see 7), much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator <a href="../StakingRequirement/">time-locks a significant amount of Loki</a> and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.</p>
+<p>The resulting network provides <a href="../../Advanced/SybilResistance/">market-based resistance to Sybil attacks</a>, addressing a range of problems with existing mixnets and privacy-centric services. This resistance is based on supply and demand interactions which help prevent single actors from having a large enough stake in Loki to have a significant negative impact on the second-layer privacy services Loki provides. <a href="https://github.com/dashpay/dash/wiki/Whitepaper">DASH</a> first theorised that Sybil attack resistant networks can be derived from cryptoeconomics. As an attacker accumulates Loki, the  circulating supply decreases, in turn applying demand-side pressure, driving the price of Loki up. As this continues, it
+becomes increasingly costly for additional Loki to be purchased, making the attack prohibitively expensive.</p>
+<p>To achieve this economic protection, Loki encourages the active suppression of the circulating supply. In particular, the <a href="../../Advanced/EmissionCurve/">emissions curve</a> and <a href="../StakingRequirement/">collateral requirements</a> must be designed to ensure enough circulating supply is locked and reasonable returns are provided for operators to ensure Sybil attack resistance.</p>
+<h2 id="service-node-activities">Service Node Activities<a class="headerlink" href="#service-node-activities" title="Permanent link">&para;</a></h2>
+<p>Right now Service Nodes can:</p>
 <ul>
 <li>
 <p>Service Nodes are full nodes on the Loki network</p>
@@ -1316,6 +1455,9 @@
 <li>
 <p><strong><a href="../StakingRequirement/">Staking Requirement</a></strong>: Collateral requirement to run a Service Node.</p>
 </li>
+<li>
+<p><strong><a href="../../Advanced/SybilResistance/">Sybil Resistance</a></strong>: &gt;&gt; <strong>Add information</strong></p>
+</li>
 </ul>
 <h2 id="guides-resources">Guides &amp; Resources<a class="headerlink" href="#guides-resources" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1352,7 +1494,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../Mining/ProofOfWork/" title="Proof Of Work" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../Mining/ASICResistance/" title="ASIC Resistance" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1361,7 +1503,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Proof Of Work
+                ASIC Resistance
               </span>
             </div>
           </a>

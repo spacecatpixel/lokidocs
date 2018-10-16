@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://loki-project.github.io/loki-docs/Advanced/Debugging/">
+        <link rel="canonical" href="https://loki-project.github.io/loki-docs/Advanced/DynamicBlockSize/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Debugging - Loki Docs</title>
+        <title>Dynamic Block Size - Loki Docs</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#debugging" tabindex="1" class="md-skip">
+      <a href="../../#dynamic-block-size" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 Loki Docs
               </span>
               <span class="md-header-nav__topic">
-                Debugging
+                Dynamic Block Size
               </span>
             
           
@@ -994,11 +994,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../DynamicBlockSize/" title="Dynamic Block Size" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Dynamic Block Size" class="md-nav__link md-nav__link--active">
       Dynamic Block Size
     </a>
+    
   </li>
 
         
@@ -1078,12 +1087,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7">
     
     <label class="md-nav__link" for="nav-7-7">
       Guides
@@ -1147,63 +1154,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Debugging
-      </label>
-    
-    <a href="./" title="Debugging" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Debugging/" title="Debugging" class="md-nav__link">
       Debugging
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#obtaining-stack-traces-and-core-dumps-on-unix-systems" title="Obtaining stack traces and core dumps on Unix systems" class="md-nav__link">
-    Obtaining stack traces and core dumps on Unix systems
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#analysing-memory-corruption" title="Analysing memory corruption" class="md-nav__link">
-    Analysing memory corruption
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lmdb" title="LMDB" class="md-nav__link">
-    LMDB
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1366,36 +1321,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#obtaining-stack-traces-and-core-dumps-on-unix-systems" title="Obtaining stack traces and core dumps on Unix systems" class="md-nav__link">
-    Obtaining stack traces and core dumps on Unix systems
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#analysing-memory-corruption" title="Analysing memory corruption" class="md-nav__link">
-    Analysing memory corruption
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lmdb" title="LMDB" class="md-nav__link">
-    LMDB
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1406,49 +1331,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/loki-project/loki-docs/edit/master/docs/Advanced/Debugging.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/loki-project/loki-docs/edit/master/docs/Advanced/DynamicBlockSize.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h1>
-<p>This section contains general instructions for debugging failed installs or problems encountered with Loki. First ensure you are running the latest version built from the Github repo.</p>
-<h3 id="obtaining-stack-traces-and-core-dumps-on-unix-systems">Obtaining stack traces and core dumps on Unix systems<a class="headerlink" href="#obtaining-stack-traces-and-core-dumps-on-unix-systems" title="Permanent link">&para;</a></h3>
-<p>We generally use the tool <code>gdb</code> (GNU debugger) to provide stack trace functionality, and <code>ulimit</code> to provide core dumps in builds which crash or segfault.</p>
-<ul>
-<li>To use gdb in order to obtain a stack trace for a build that has stalled:</li>
-</ul>
-<p>Run the build.</p>
-<p>Once it stalls, enter the following command:</p>
-<div class="codehilite"><pre><span></span>gdb /path/to/lokid `pidof lokid` 
-</pre></div>
-
-
-<p>Type <code>thread apply all bt</code> within gdb in order to obtain the stack trace</p>
-<ul>
-<li>If however the core dumps or segfaults:</li>
-</ul>
-<p>Enter <code>ulimit -c unlimited</code> on the command line to enable unlimited filesizes for core dumps</p>
-<p>Enter <code>echo core | sudo tee /proc/sys/kernel/core_pattern</code> to stop cores from being hijacked by other tools</p>
-<p>Run the build.</p>
-<p>When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as lokid. It may be named just <code>core</code>, or <code>core.xxxx</code> with numbers appended.</p>
-<p>You can now analyse this core dump with <code>gdb</code> as follows:</p>
-<p><code>gdb /path/to/lokid /path/to/dumpfile</code></p>
-<p>Print the stack trace with <code>bt</code></p>
-<ul>
-<li>To run loki within gdb:</li>
-</ul>
-<p>Type <code>gdb /path/to/lokid</code></p>
-<p>Pass command-line options with <code>--args</code> followed by the relevant arguments</p>
-<p>Type <code>run</code> to run lokid</p>
-<h3 id="analysing-memory-corruption">Analysing memory corruption<a class="headerlink" href="#analysing-memory-corruption" title="Permanent link">&para;</a></h3>
-<p>We use the tool <code>valgrind</code> for this.</p>
-<p>Run with <code>valgrind /path/to/lokid</code>. It will be slow.</p>
-<h3 id="lmdb">LMDB<a class="headerlink" href="#lmdb" title="Permanent link">&para;</a></h3>
-<p>Instructions for debugging suspected blockchain corruption as per @HYC</p>
-<p>There is an <code>mdb_stat</code> command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:</p>
-<p><code>cd ~/loki/external/db_drivers/liblmdb &amp;&amp; make</code></p>
-<p>The output of <code>mdb_stat -ea &lt;path to blockchain dir&gt;</code> will indicate inconsistencies in the blocks, block_heights and block_info table.</p>
-<p>The output of <code>mdb_dump -s blocks &lt;path to blockchain dir&gt;</code> and <code>mdb_dump -s block_info &lt;path to blockchain dir&gt;</code> is useful for indicating whether blocks and block_info contain the same keys.</p>
-<p>These records are dumped as hex data, where the first line is the key and the second line is the data.</p>
+                <h1 id="dynamic-block-size">Dynamic Block Size<a class="headerlink" href="#dynamic-block-size" title="Permanent link">&para;</a></h1>
+<p>Like other CryptoNote coins, Loki does not have a fixed block size. Instead, the block size changes over time, growing to include more transactions as the network reaches higher transaction throughput. The Loki block size scales by observing the median block size over the last 100 blocks and slowly retargets the maximum size of any new blocks accordingly.</p>
+<p>The long-term concern in other cryptocurrencies is that large block sizes burden the nodes that store and verify  transactions. As block sizes grow, nodes that run on lower grade hardware are unable to process and propagate new blocks, leading to centralisation of the node network among those with a commercial interest in maintaining nodes. This can be concerning because distributing the blockchain across many nodes allows for the state of the chain to be confirmed among many different parties, adding to its validity and censorship resistance.</p>
+<p>In Loki, a portion of the <a href="../EmissionCurve/">block reward</a> is given to <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> that process and propagate blocks as full nodes. Because Service Nodes with insufficient bandwidth and performance are dropped from the Service Node network, the reward pool self-enforces a minimum performance requirement.   This incentive structure not only ensures that the  node  count remains high, but that the said nodes are of a sufficient performance level to successfully share blockchain data across the network, irrespective of how large the blockchain grows or how demanding the bandwidth requirements are. Even so, transaction size optimisations are still required to ensure that the network scales efficiently so as to keep the Service Node operating costs down so that a high node count can be sustained in the long term.</p>
                 
                   
                 
@@ -1469,7 +1358,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../UsingTor/" title="Using Tor" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../SybilResistance/" title="Sybil Resistance" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1478,19 +1367,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Using Tor
+                Sybil Resistance
               </span>
             </div>
           </a>
         
         
-          <a href="../SNRPCGuide/" title="Service Node RPC Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../RingSignature/" title="Ring Signature" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Service Node RPC Guide
+                Ring Signature
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
