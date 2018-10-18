@@ -61,7 +61,7 @@ nav:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
       - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
-- LokiNET:
+- Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
     - Loki Services:
        - 'SNApps': 'Lokinet/SNapps.md'
