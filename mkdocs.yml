@@ -44,49 +44,62 @@ nav:
   - Command Line Integrated (CLI) Wallet:
       - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview.md'
       - Guides:
-        - 'lokid' : 'Wallets/CliWallet/lokid.md'
-        - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
-        - 'Compiling Loki from source': 'Wallets/CliWallet/CompilingGuide.md'
-        - 'Using LokiNET': 'Wallets/CliWallet/UsingLokiNET.md'
-        - 'Using Tor': 'Wallets/CliWallet/UsingTor.md'
-        - 'Debugging': 'Wallets/CliWallet/Debugging.md'
         - 'CLI Mac Setup': 'Wallets/CliWallet/loki-wallet-cliMacSetup.md'
+        - 'CLI Wallet Commands': 'Wallets/CliWallet/WalletCommands.md'
         - Multisig:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
-  - RPC Guides:
-      - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
+
   - 'Multsigniture': 'Wallets/Multisigniture.md'
 - Mining:
-   - 'Proof Of Work' : 'Mining/ProofOfWork.md'
+   - 'Proof Of Work': 'Mining/ProofOfWork.md'
+   - 'ASIC Resistance': 'Mining/ASICResistance.md'
 - Service Nodes:
     - 'Overview': 'ServiceNodes/SNOverview.md'
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
     - Guides:
-      - 'Service Node Full Guide': 'Wallets/CliWallet/SNFullGuide.md'
-      - 'Service Node RPC Guide': 'Wallets/RPCGuides/SNRPCGuide.md'
+      - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
+      - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
-- LokiNET:
-    - 'Overview': 'LokiNET/LokiNetOverview.md'
+- Lokinet:
+    - 'Overview': 'Lokinet/LokinetOverview.md'
+    - Loki Services:
+       - 'SNApps': 'Lokinet/SNapps.md'
+       - 'Messenger' : 'Lokinet/Messenger.md'
+       - 'Exit Nodes': 'Lokinet/ExitNodes.md'
+       - 'Remote Nodes': 'Lokinet/RemoteNodes.md'
+       - 'Blink': 'Lokinet/Blink.md'
+    - 'LLARP': 'Lokinet/LLARP.md'
+    - 'Developers': 'Lokinet/DeveloperInfo.md'
     - Guides:
-        - 'Test Network Relay': 'LokiNET/Guides/TestNetRelay.md'
-        - 'SNApps': 'LokiNET/Guides/SNApps.md'
-        - 'Exit Nodes': 'LokiNET/Guides/ExitNode.md'
-    - 'LLARP': 'LokiNET/LLARP.md'
-    - 'Developers': 'LokiNET/DeveloperInfo.md'
-    - 'SNapps': 'LokiNET/SNapps.md'
-    - 'Messenger' : 'LokiNET/Messenger.md'
+        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
+        - 'SNApps': 'Lokinet/Guides/SNApps.md'
+        - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 - Advanced:
-   - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
-   - 'Emission Curve' : 'Advanced/EmissionCurve.md'
-   - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
-- FAQ:
-   - 'Emission Curve' : 'Advanced/EmissionCurve.md'
+    - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
+    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
+    - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
+    - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
+    - 'CryptoNote Elements': 'Advanced/CryptoNoteElements.md'
+    - Attack Prevention:
+        - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
+        - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
+        - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
+    - Guides:
+        - 'lokid' : 'Advanced/lokid.md'
+        - 'Compiling Loki from source': 'Advanced/CompilingGuide.md'
+        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
+        - 'Using Tor': 'Advanced/UsingTor.md'
+        - 'Debugging': 'Advanced/Debugging.md'  
+        - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      
+- 'FAQ': 'FAQ.md'
 - Contributing:
-   - 'Using Github' : 'Contributing/Github.md'
+   - 'Using Github': 'Contributing/Github.md'
    - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
 - About:
-   - 'To be added' : 'About/loki.md' 
+   - 'Governance': 'About/Governance.md'
+   - 'The Loki Foundation': 'About/TheLokiFoundation.md'
+   - 'Loki Funding System': 'About/LokiFundingSystem.md'
 
 # Customization
 extra_css:

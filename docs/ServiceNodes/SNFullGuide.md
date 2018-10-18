@@ -1,6 +1,8 @@
-# Full Guide on Service Nodes
+﻿# Full Guide on Service Nodes
 
-This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. Also available is a video guide, which provides a more simplified version of the written guide, it can be viewed [here](https://youtu.be/6uiRD1847UY) 
+This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. Also available is a video guide, which provides a more simplified version of the written guide, it can be viewed [here](https://youtu.be/6uiRD1847UY).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6uiRD1847UY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 If you feel confident around servers and the CLI, then skip to the [Express Setup Guide](#express-setup-guide)
 
@@ -8,7 +10,7 @@ You can of course run the Loki software on any operating system that you can get
 
 ### Summary of Loki Service Node Requirements
 
-Full summary of Loki Service Node Requirements. This may change depending on Service Node functionality, so you should check here regularly, or follow our telegram/discord announcements channel. 
+Full summary of Loki Service Node Requirements. This may change depending on Service Node functionality, so you should check here regularly, or follow our [telegram](https://t.me/LokiCommunity)/[discord](https://discord.gg/DN72VN) announcements channel. 
 
 |Spec|Note|
 |---|---|
@@ -29,7 +31,6 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
     - Step 6 [Register Node](#step-6-service-node-registration)
     - Step 7 [Check Registration](#step-7-service-node-check)
 - [Express Setup Guide](#express-setup-guide)
-- [Updating Loki](#updating-loki)
 - [Additional Functions](#additional-functions)
 
 
@@ -39,8 +40,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 To understand what a Service Node is, you can refer to the [whitepaper](https://loki.network/whitepaper) to get an in depth understanding. For now, all you need to know is that:
 
 -   Service Nodes are full nodes on the Loki network
-    
--   Full nodes become Service Nodes when the owner locks the required amount of Loki for 30 days (2 days on testnet) and submits a registration transaction
+-   Full nodes become Service Nodes when the owner [locks the required amount of Loki](StakingRequirement.md) for 30 days (2 days on testnet) and submits a registration transaction
     
 -   Once accepted by the network, the Service Node is eligible to win block rewards
     
@@ -54,7 +54,7 @@ It is also worth noting that Service Nodes are quite basic at the moment, and op
     
 -   Monitor other Service Nodes and vote on their performance
     
--   Be called into quorums which give them authority over instant transactions (Blink)
+-   Be called into quorums which give them authority over instant transactions ([Blink](../Lokinet/Blink.md))
     
 -   Act as remote nodes for users
 
@@ -169,9 +169,13 @@ Alright, good to go. Our server is now set up, up to date, and is not running in
 
 First download the Linux binaries by running the following command:
 
-`wget https://github.com/loki-project/loki/releases/download/1.0.3/loki-linux-x64-1.0.3.zip`
+`wget <link>`
 
-**NOTE: If this link no longer works, or you need Windows or Mac versions, check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest) to find links to the latest releases.**
+Where `<link>` is the download link of the latest linux release. To find the link go to [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest), right click the latest linux release and click `Copy Link Location`.
+
+Your command should look something like:
+
+`wget https://github.com/loki-project/loki/releases/download/1.0.3/loki-linux-x64-1.0.3.zip`
 
 If `wget` is not installed you may need to run `sudo apt-get install wget`
 
@@ -313,13 +317,13 @@ Highlight the string of characters that were outputted and save this in a notepa
 Once you have enough Loki in this wallet, just leave it open, we’ll come back to it in a minute.
 
 
-## Step 6 - Service Node Registration
+### Step 6 - Service Node Registration
 The next part of the guide will split into two sections: 
 * If you are an individual staker and do not require any other contributors to run your Service Node jump into **6.1 - individual Staking**.
 * If you want to run a pooled Service Node or contribute towards a pool jump into **6.2 - Pool Staking**
 
 ---
-### 6.1 - Individual Staking
+#### 6.1 - Individual Staking
 If you want to run the Service Node as an individual you will require the following things.
 
 * A Loki daemon running with `--service-node` flag (see step 4).
@@ -366,7 +370,7 @@ The wallet will prompt us to confirm our password, then the amount of Loki to st
 
 ---
 
-### 6.2 - Pool Staking
+#### 6.2 - Pool Staking
 Service Nodes can be split between multiple parties. At a minimum, the operator must stake at least 25% of the total required amount. The operator can also reserve contribution slots for specific addresses to prevent random users from adding to the pool.
 
 In any given pool, there will be at most 4 contributors including the operator. After the operator, each new participant must also contribute 25% of the minimum, except the last one. So for example, valid splits might be:
@@ -385,7 +389,7 @@ Depending on the individual and their circumstance they will need to:
 >*NOTE: It is advised to read both sections of ***"6.2 - Pool Staking"*** to have a better understanding of the process.*
 
 ---
-#### 6.2.1 - Operator
+##### 6.2.1 - Operator
 The Operator is the individual who will be hosting the pool and running the Service Node daemon, thus incurring the operating expenses encompassed by running a node.
 
 The Operator will need to have:
@@ -414,7 +418,7 @@ The terminal will now display the minimum reserve the operator can contribute an
 Once we have set the operators desired stake amount we have the option to either leave the pool open for anyone to contribute or lock a reserve for individuals that have agreed with us to stake within our Service Node. 
 
 ---
-#### Reserved Pool
+##### Reserved Pool
 If the operator wishes to have their pool closed they should type `y` and click continue. 
 
 The terminal will now prompt the operator for the number of additional contributors they have organised to be apart of this Service Node. They must type in the number of contributors, not including themselves, and click return.
@@ -429,7 +433,7 @@ You will now be asked to confirm the information above is correct.
 
 ---
 
-#### Open Pool
+##### Open Pool
 
 If the operator wishes to leave their pool open they should type `n` and click continue. The terminal will prompt the operator to input their address. Once the address has been inputted the terminal will display the remaining portion that needs to be contributed by others. If you agree click `y` and hit return.
 
@@ -463,7 +467,7 @@ We must now send the `<Service Node Public Key>` to our contributors with the am
 At this point the we will need to wait until all contributors have staked before rewards will be received.
 
 ---
-#### 6.2.2 - Pool Contributor
+##### 6.2.2 - Pool Contributor
 
 The pool contributor must first receive the Service Node Pubkey and the requirements (amount of loki to send) from the Service Node Operator.
 
@@ -487,7 +491,7 @@ At this stage you will need to wait for the other contributors to provide their 
 
 Congratulations, you are now staking.
 
-## Step 7 - Service Node Check
+### Step 7 - Service Node Check
 
 After we have locked your collateral we will need to check if our Service Node Pubkey is sitting in the list with the other Service Node’s on the network. This will prove our Service Node is running, recognised and will receive a reward if it keeps running.
 
@@ -646,35 +650,6 @@ https://lokiblocks.com/service_nodes
 `CTRL +AD`
 
 ctrl +ad detaches screen and runs your Loki Service Node  in background this is critical
-
-## Updating Loki
-
-To update your Loki node the process is:
-
-1) Find the latest update binary [latest version](https://github.com/loki-project/loki/releases/latest), example `1.0.3`
-2) Connect to your server via SSH
-3) Attach to the screen running the Loki Daemon 
-    `screen -ls` to view current screens
-    `screen -x <process>` to attach to the screen running the Daemon
-4) Exit the Daemon, and return to home directory
-    `exit`
-    `cd ..`
-5) Run an update on your machine (Linux based systems)
-    `sudo apt-get update`
-    `sudo apt-get upgrade`
- 6) Download and unzip the latest Binary
-    `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip`
-    `unzip loki-linux-x64-<VERSION>.zip`
- 7) Start the new Daemon
-    `cd loki-linux-x64-<VERSION>`
-    Linux/MAC - `./lokid --service-node`
-    Windows - `lokid --service-node`
- 8) Find and search for Loki Public Address
-    `print_sn_key`
-    Search: https://lokiblocks.com/service_nodes
- 9) Detach screen and logout
-    `CTRL +AD`
-    `exit`
 
 
 ## Conclusion
