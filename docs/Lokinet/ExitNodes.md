@@ -1,0 +1,9 @@
+# Exit Nodes
+
+Exit nodes allow users to make requests to the wider internet and return those requests through a [mixnet](../Lokinet/LLARP.md). If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
+
+Although the operation of exit nodes is essential to Loki’s extended utility, forcing all [Service Node](../ServiceNodes/SNOverview.md) operators to act as exit nodes could be detrimental. Acting as an exit node may expose the operator to legal risks, as users of the exit node may perform malicious activity whilst using it as a proxy. As exit nodes simply relay traffic from the internet to the end user, exit nodes often receive Digital Millennium Copyright Act (DMCA) requests or are often assumed to be the source of hacking attempts. Although in most jurisdictions safe harboring laws may protect exit node operators, internet service providers that carry Service Node traffic on their servers may fear legal risks and often cut off service to the exit node.
+
+Upon startup, a Service Node is assigned a relay flag and is restricted to routing packetswithin Lokinet, but never makes requests to the wider internet. An operator must opt-in if they wish to become an exit node, in doing so they demonstrate an understanding of the additional risks while also submitting to additional [Swarm tests](../Advanced/SwarmFlagging.md).
+
+Opting-in as an exit node affords an operator double the reward of a normal relay when selected for a [block reward](../Advanced/EmissionCurve.md). This incentive is provided to ensure that exit node operators have sufficient financial  incentives to operate exit nodes, helping to protect against [Sybil attacks](../Advanced/SybilResistance.md) specifically  targeted to take over the exit node network. This is a vulnerability which Tor suffers from due to its low ratio of exit nodes to relays.

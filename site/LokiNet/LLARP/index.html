@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://loki-project.github.io/loki-docs/LokiNET/LLARP/">
+        <link rel="canonical" href="https://loki-project.github.io/loki-docs/Lokinet/LLARP/">
       
       
       
@@ -816,7 +816,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../LokiNetOverview/" title="Overview" class="md-nav__link">
+    <a href="../LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -832,11 +832,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
     <label class="md-nav__link" for="nav-6-2">
-      Guides
+      Loki Services
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-2">
-        Guides
+        Loki Services
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -847,19 +847,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Guides/SNApps/" title="SNApps" class="md-nav__link">
+    <a href="../SNapps/" title="SNApps" class="md-nav__link">
       SNApps
     </a>
   </li>
@@ -871,8 +859,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+    <a href="../Messenger/" title="Messenger" class="md-nav__link">
+      Messenger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ExitNodes/" title="Exit Nodes" class="md-nav__link">
       Exit Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RemoteNodes/" title="Remote Nodes" class="md-nav__link">
+      Remote Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Blink/" title="Blink" class="md-nav__link">
+      Blink
     </a>
   </li>
 
@@ -956,9 +980,28 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../SNapps/" title="SNapps" class="md-nav__link">
-      SNapps
+    <a href="../Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
+      Test Network Relay
     </a>
   </li>
 
@@ -969,9 +1012,26 @@
 
 
   <li class="md-nav__item">
-    <a href="../Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
+    <a href="../Guides/SNApps/" title="SNApps" class="md-nav__link">
+      SNApps
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+      Exit Nodes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1053,8 +1113,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/RingSignature/" title="Ring Signature" class="md-nav__link">
-      Ring Signature
+    <a href="../../Advanced/CryptoNoteElements/" title="CryptoNote Elements" class="md-nav__link">
+      CryptoNote Elements
     </a>
   </li>
 
@@ -1168,8 +1228,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/UsingLokiNET/" title="Using LokiNET" class="md-nav__link">
-      Using LokiNET
+    <a href="../../Advanced/UsingLokinet/" title="Using Lokinet" class="md-nav__link">
+      Using Lokinet
     </a>
   </li>
 
@@ -1390,12 +1450,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/loki-project/loki-docs/edit/master/docs/LokiNET/LLARP.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/loki-project/loki-docs/edit/master/docs/Lokinet/LLARP.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="low-latency-anonymous-routing-protocol-llarp">Low Latency Anonymous Routing Protocol (LLARP)<a class="headerlink" href="#low-latency-anonymous-routing-protocol-llarp" title="Permanent link">&para;</a></h1>
 <p>Underlying all applications for <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> is an anonymous routing protocol, which defines the way each Service Node communicates with its peers.  Loki proposes a new routing protocol called <a href="https://github.com/loki-project/loki-network">LLARP</a> which is designed as a hybrid between Tor and I2P to provide additional desirable properties versus any existing routing protocol.  LLARP is built specifically to run on top of the Loki Service Nodes network and all LLARP optimisations consider this architecture. To understand the goals of LLARP, it is best to conduct an analysis of existing routing protocols and consider how LLARP improves upon them.</p>
-<p>LLARP operates without the need to make use of directory authorities and, instead, relies on a DHT built from blockchain  staking  transactions, which allows <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> to act as routers in the network.  Bandwidth is not monitored or recorded in the DHT. Instead, bandwidth measurement and triage result from <a href="../Messenger/">swarms</a> that assess each node and make a judgement on the nodes ability to provide appropriate bandwidth to the network.</p>
+<p>LLARP operates without the need to make use of directory authorities and, instead, relies on a DHT built from blockchain  staking  transactions, which allows <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> to act as routers in the network.  Bandwidth is not monitored or recorded in the DHT. Instead, bandwidth measurement and triage result from <a href="../../Advanced/SwarmFlagging/">swarms</a> that assess each node and make a judgement on the nodes ability to provide appropriate bandwidth to the network.</p>
 <p>In the Open Systems Interconnection model (OSI model), LLARP only attempts to provide an anonymous network layer. This means that it supports a larger range of internet protocols and it also minimises the overhead for storing file descriptors should exit nodes pass through <a href="https://en.wikipedia.org/wiki/OSI_model">User Datagram Protocol (UDP)</a> traffic.  Additionally, LLARP opts for packet-switched based routing instead of tunnel-based routing, allowing for better load balancing and redundancy across the network.</p>
 <p>End users of Lokinet are not expected (or even allowed) to route packets, this means that Lokinet exposes itself to a much lower attack surface for a Sybil attack due to the significant capital outlay required to begin <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> operation.</p>
 <h2 id="the-onion-router-tor">The Onion Router (Tor)<a class="headerlink" href="#the-onion-router-tor" title="Permanent link">&para;</a></h2>
@@ -1428,7 +1488,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Guides/ExitNode/" title="Exit Nodes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Blink/" title="Blink" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1437,7 +1497,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Exit Nodes
+                Blink
               </span>
             </div>
           </a>

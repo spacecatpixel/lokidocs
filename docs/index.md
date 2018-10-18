@@ -12,10 +12,7 @@ More information on the project can be found on the [website](https://www.loki.n
 
 Loki is an open source project, and we encourage contributions from anyone with something to offer. For more information on contributing, please contact team@loki.network
 
-Copyright (c) 2018 The Loki Project.   
-Portions Copyright (c) 2014-2018 The Monero Project.   
-Portions Copyright (c) 2012-2013 The Cryptonote developers.
-
+To begin browsing Loki Docs [click here](Introduction/Overview.md).
 ## Development resources
 
 - Web: [loki.network](https://loki.network)
@@ -28,3 +25,8 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 - Check out our [Vulnerability Response Process](Contributing/VULNERABILITY_RESPONSE_LOKI.md), encourages prompt disclosure of any Vulnerabilities
 
+## Copyright
+
+Copyright (c) 2018 The Loki Project.   
+Portions Copyright (c) 2014-2018 The Monero Project.   
+Portions Copyright (c) 2012-2013 The Cryptonote developers.

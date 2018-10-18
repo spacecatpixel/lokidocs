@@ -62,21 +62,25 @@ nav:
       - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
 - LokiNET:
-    - 'Overview': 'LokiNET/LokiNetOverview.md'
+    - 'Overview': 'Lokinet/LokinetOverview.md'
+    - Loki Services:
+       - 'SNApps': 'Lokinet/SNapps.md'
+       - 'Messenger' : 'Lokinet/Messenger.md'
+       - 'Exit Nodes': 'Lokinet/ExitNodes.md'
+       - 'Remote Nodes': 'Lokinet/RemoteNodes.md'
+       - 'Blink': 'Lokinet/Blink.md'
+    - 'LLARP': 'Lokinet/LLARP.md'
+    - 'Developers': 'Lokinet/DeveloperInfo.md'
     - Guides:
-        - 'Test Network Relay': 'LokiNET/Guides/TestNetRelay.md'
-        - 'SNApps': 'LokiNET/Guides/SNApps.md'
-        - 'Exit Nodes': 'LokiNET/Guides/ExitNode.md'
-    - 'LLARP': 'LokiNET/LLARP.md'
-    - 'Developers': 'LokiNET/DeveloperInfo.md'
-    - 'SNapps': 'LokiNET/SNapps.md'
-    - 'Messenger' : 'LokiNET/Messenger.md'
+        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
+        - 'SNApps': 'Lokinet/Guides/SNApps.md'
+        - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 - Advanced:
     - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
     - 'Emission Curve' : 'Advanced/EmissionCurve.md'
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
     - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
-    - 'Ring Signature': 'Advanced/RingSignature.md'
+    - 'CryptoNote Elements': 'Advanced/CryptoNoteElements.md'
     - Attack Prevention:
         - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
         - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
@@ -84,7 +88,7 @@ nav:
     - Guides:
         - 'lokid' : 'Advanced/lokid.md'
         - 'Compiling Loki from source': 'Advanced/CompilingGuide.md'
-        - 'Using LokiNET': 'Advanced/UsingLokiNET.md'
+        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
         - 'Debugging': 'Advanced/Debugging.md'  
         - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      

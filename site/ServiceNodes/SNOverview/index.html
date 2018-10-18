@@ -868,7 +868,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/LokiNetOverview/" title="Overview" class="md-nav__link">
+    <a href="../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -884,11 +884,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
     <label class="md-nav__link" for="nav-6-2">
-      Guides
+      Loki Services
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-2">
-        Guides
+        Loki Services
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -899,19 +899,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/SNApps/" title="SNApps" class="md-nav__link">
+    <a href="../../Lokinet/SNapps/" title="SNApps" class="md-nav__link">
       SNApps
     </a>
   </li>
@@ -923,8 +911,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+    <a href="../../Lokinet/Messenger/" title="Messenger" class="md-nav__link">
+      Messenger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/ExitNodes/" title="Exit Nodes" class="md-nav__link">
       Exit Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/RemoteNodes/" title="Remote Nodes" class="md-nav__link">
+      Remote Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Blink/" title="Blink" class="md-nav__link">
+      Blink
     </a>
   </li>
 
@@ -940,7 +964,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/LLARP/" title="LLARP" class="md-nav__link">
+    <a href="../../Lokinet/LLARP/" title="LLARP" class="md-nav__link">
       LLARP
     </a>
   </li>
@@ -952,7 +976,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/DeveloperInfo/" title="Developers" class="md-nav__link">
+    <a href="../../Lokinet/DeveloperInfo/" title="Developers" class="md-nav__link">
       Developers
     </a>
   </li>
@@ -963,9 +987,28 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../LokiNET/SNapps/" title="SNapps" class="md-nav__link">
-      SNapps
+    <a href="../../Lokinet/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
+      Test Network Relay
     </a>
   </li>
 
@@ -976,9 +1019,26 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
+    <a href="../../Lokinet/Guides/SNApps/" title="SNApps" class="md-nav__link">
+      SNApps
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+      Exit Nodes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1060,8 +1120,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/RingSignature/" title="Ring Signature" class="md-nav__link">
-      Ring Signature
+    <a href="../../Advanced/CryptoNoteElements/" title="CryptoNote Elements" class="md-nav__link">
+      CryptoNote Elements
     </a>
   </li>
 
@@ -1175,8 +1235,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/UsingLokiNET/" title="Using LokiNET" class="md-nav__link">
-      Using LokiNET
+    <a href="../../Advanced/UsingLokinet/" title="Using Lokinet" class="md-nav__link">
+      Using Lokinet
     </a>
   </li>
 
@@ -1408,42 +1468,28 @@
                 
                 
                 <h1 id="service-nodes-overview">Service Nodes Overview<a class="headerlink" href="#service-nodes-overview" title="Permanent link">&para;</a></h1>
-<p>Although Loki implements novel changes on top of the CryptoNote protocol (see 7), much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator <a href="../StakingRequirement/">time-locks a significant amount of Loki</a> and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.</p>
+<p>Although Loki implements novel changes on top of the <a href="../../Advanced/CryptoNoteElements/">CryptoNote protocol</a> (<a href="../../Mining/ASICResistance/">ASIC Resistance</a>, <a href="../../Advanced/DynamicBlockSize/">Dynamic Block Size</a> &amp; <a href="/Advanced/CryptoNoteElements/#ring-signatures">Static Ring Signatures</a>), much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator <a href="../StakingRequirement/">time-locks a significant amount of Loki</a> and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.</p>
 <p>The resulting network provides <a href="../../Advanced/SybilResistance/">market-based resistance to Sybil attacks</a>, addressing a range of problems with existing mixnets and privacy-centric services. This resistance is based on supply and demand interactions which help prevent single actors from having a large enough stake in Loki to have a significant negative impact on the second-layer privacy services Loki provides. <a href="https://github.com/dashpay/dash/wiki/Whitepaper">DASH</a> first theorised that Sybil attack resistant networks can be derived from cryptoeconomics. As an attacker accumulates Loki, the  circulating supply decreases, in turn applying demand-side pressure, driving the price of Loki up. As this continues, it
 becomes increasingly costly for additional Loki to be purchased, making the attack prohibitively expensive.</p>
-<p>To achieve this economic protection, Loki encourages the active suppression of the circulating supply. In particular, the <a href="../../Advanced/EmissionCurve/">emissions curve</a> and <a href="../StakingRequirement/">collateral requirements</a> must be designed to ensure enough circulating supply is locked and reasonable returns are provided for operators to ensure Sybil attack resistance.</p>
+<p>To achieve this economic protection, Loki encourages the active suppression of the circulating supply. In particular, the <a href="../../Advanced/EmissionCurve/">emissions curve</a> and <a href="../StakingRequirement/">collateral requirements</a> must be designed to ensure enough circulating supply is locked and reasonable returns are provided for operators to ensure <a href="../../Advanced/SybilResistance/">Sybil attack resistance</a>.</p>
 <h2 id="service-node-activities">Service Node Activities<a class="headerlink" href="#service-node-activities" title="Permanent link">&para;</a></h2>
-<p>Right now Service Nodes can:</p>
+<p>Right now Service Nodes are full nodes on the Loki network. Full nodes become Service Nodes when the owner <a href="../StakingRequirement/">locks the required amount of Loki</a> for 30 days (2 days on testnet) and submits a registration transaction. Once accepted by the network, the Service Node is eligible to win <a href="../../Advanced/EmissionCurve/">block rewards</a>. Multiple participants can be involved in one Service Node and can have the reward automatically distributed.</p>
+<p>It is also worth noting that Service Nodes are quite basic at the moment, and operators will need to stay up to date with new updates to keep in line with software and hardware requirements. Once all of the updates are out, Service Nodes will also offer the following <a href="/Lokinet/LokinetOverview/#loki-services">Loki Services</a>:</p>
 <ul>
 <li>
-<p>Service Nodes are full nodes on the Loki network</p>
+<p>Route end user’s internet traffic, either as an <a href="../../Lokinet/ExitNodes/">exit node</a> or relay in a novel mixnet</p>
 </li>
 <li>
-<p>Full nodes become Service Nodes when the owner <a href="../StakingRequirement/">locks the required amount of Loki</a> for 30 days (2 days on testnet) and submits a registration transaction</p>
+<p>Receive, store and forward <a href="../../Lokinet/Messenger/">encrypted user messages</a></p>
 </li>
 <li>
-<p>Once accepted by the network, the Service Node is eligible to win block rewards</p>
+<p>Monitor other Service Nodes and <a href="../../Advanced/SwarmFlagging/">vote on their performance</a></p>
 </li>
 <li>
-<p>Multiple participants can be involved in one Service Node and can have the reward automatically distributed</p>
-</li>
-</ul>
-<p>It is also worth noting that Service Nodes are quite basic at the moment, and operators will need to stay up to date with new updates to keep in line with software and hardware requirements. Once all of the updates are out, Service Nodes will also:</p>
-<ul>
-<li>
-<p>Route end user’s internet traffic, either as an exit node or relay in a novel mixnet</p>
+<p>Be called into quorums which give them authority over instant transactions (<a href="../../Lokinet/Blink/">Blink</a>)</p>
 </li>
 <li>
-<p>Receive, store and forward encrypted user messages</p>
-</li>
-<li>
-<p>Monitor other Service Nodes and vote on their performance</p>
-</li>
-<li>
-<p>Be called into quorums which give them authority over instant transactions (Blink)</p>
-</li>
-<li>
-<p>Act as remote nodes for users</p>
+<p>Act as <a href="../../Lokinet/RemoteNodes/">remote nodes</a> for users</p>
 </li>
 </ul>
 <p>Once these features come out, Service Node operation will require better servers, particularly when it comes to bandwidth.</p>
@@ -1457,6 +1503,9 @@ becomes increasingly costly for additional Loki to be purchased, making the atta
 </li>
 <li>
 <p><strong><a href="../../Advanced/SybilResistance/">Sybil Resistance</a></strong>: &gt;&gt; <strong>Add information</strong></p>
+</li>
+<li>
+<p><strong><a href="../../Lokinet/SNapps/">Service Node Applications</a></strong>: An anonymized IP endpoint.</p>
 </li>
 </ul>
 <h2 id="guides-resources">Guides &amp; Resources<a class="headerlink" href="#guides-resources" title="Permanent link">&para;</a></h2>
@@ -1472,6 +1521,21 @@ becomes increasingly costly for additional Loki to be purchased, making the atta
 </li>
 <li>
 <p><strong><a href="https://www.lokiblocks.com">Active Service Node List</a></strong>: Loki Block explorer showing the current Service Node Pubkeys.</p>
+</li>
+<li>
+<p><strong><a href="https://loki.network/service-nodes-portal/">Service Node Portal</a></strong>: Loki's official Service Node Portal.</p>
+</li>
+<li>
+<p><strong><a href="https://www.youtube.com/watch?v=6uiRD1847UY">Setup Video Guide</a></strong>: Video Guide on how to setup a Service Node using the CLI Wallet.</p>
+</li>
+<li>
+<p><strong><a href="https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_OSX-V1.xlsm">Reward Calculator OSX</a></strong>: Service Node reward calculator for OSX.</p>
+</li>
+<li>
+<p><strong><a href="https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_Windows-V1-1.xlsm">Reward Calculator Windows</a></strong>: Service Node reward calculator for Windows.</p>
+</li>
+<li>
+<p><strong><a href="https://jagerman.com/sn/">Staking Requirement Calculator WEB</a></strong>: Webpage showing Staking Requirement at current Block Height.</p>
 </li>
 </ul>
                 

@@ -54,7 +54,7 @@ It is also worth noting that Service Nodes are quite basic at the moment, and op
     
 -   Monitor other Service Nodes and vote on their performance
     
--   Be called into quorums which give them authority over instant transactions (Blink)
+-   Be called into quorums which give them authority over instant transactions ([Blink](../Lokinet/Blink.md))
     
 -   Act as remote nodes for users
 
