@@ -814,7 +814,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/LokiNetOverview/" title="Overview" class="md-nav__link">
+    <a href="../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -830,11 +830,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
     <label class="md-nav__link" for="nav-6-2">
-      Guides
+      Loki Services
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-2">
-        Guides
+        Loki Services
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -845,19 +845,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/SNApps/" title="SNApps" class="md-nav__link">
+    <a href="../../Lokinet/SNapps/" title="SNApps" class="md-nav__link">
       SNApps
     </a>
   </li>
@@ -869,8 +857,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+    <a href="../../Lokinet/Messenger/" title="Messenger" class="md-nav__link">
+      Messenger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/ExitNodes/" title="Exit Nodes" class="md-nav__link">
       Exit Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/RemoteNodes/" title="Remote Nodes" class="md-nav__link">
+      Remote Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Blink/" title="Blink" class="md-nav__link">
+      Blink
     </a>
   </li>
 
@@ -886,7 +910,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/LLARP/" title="LLARP" class="md-nav__link">
+    <a href="../../Lokinet/LLARP/" title="LLARP" class="md-nav__link">
       LLARP
     </a>
   </li>
@@ -898,7 +922,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/DeveloperInfo/" title="Developers" class="md-nav__link">
+    <a href="../../Lokinet/DeveloperInfo/" title="Developers" class="md-nav__link">
       Developers
     </a>
   </li>
@@ -909,9 +933,28 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../LokiNET/SNapps/" title="SNapps" class="md-nav__link">
-      SNapps
+    <a href="../../Lokinet/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
+      Test Network Relay
     </a>
   </li>
 
@@ -922,9 +965,26 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
+    <a href="../../Lokinet/Guides/SNApps/" title="SNApps" class="md-nav__link">
+      SNApps
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+      Exit Nodes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1017,8 +1077,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../RingSignature/" title="Ring Signature" class="md-nav__link">
-      Ring Signature
+    <a href="../CryptoNoteElements/" title="CryptoNote Elements" class="md-nav__link">
+      CryptoNote Elements
     </a>
   </li>
 
@@ -1132,8 +1192,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../UsingLokiNET/" title="Using LokiNET" class="md-nav__link">
-      Using LokiNET
+    <a href="../UsingLokinet/" title="Using Lokinet" class="md-nav__link">
+      Using Lokinet
     </a>
   </li>
 
@@ -1337,7 +1397,7 @@
                 <h1 id="dynamic-block-size">Dynamic Block Size<a class="headerlink" href="#dynamic-block-size" title="Permanent link">&para;</a></h1>
 <p>Like other CryptoNote coins, Loki does not have a fixed block size. Instead, the block size changes over time, growing to include more transactions as the network reaches higher transaction throughput. The Loki block size scales by observing the median block size over the last 100 blocks and slowly retargets the maximum size of any new blocks accordingly.</p>
 <p>The long-term concern in other cryptocurrencies is that large block sizes burden the nodes that store and verify  transactions. As block sizes grow, nodes that run on lower grade hardware are unable to process and propagate new blocks, leading to centralisation of the node network among those with a commercial interest in maintaining nodes. This can be concerning because distributing the blockchain across many nodes allows for the state of the chain to be confirmed among many different parties, adding to its validity and censorship resistance.</p>
-<p>In Loki, a portion of the <a href="../EmissionCurve/">block reward</a> is given to <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> that process and propagate blocks as full nodes. Because Service Nodes with insufficient bandwidth and performance are dropped from the Service Node network, the reward pool self-enforces a minimum performance requirement.   This incentive structure not only ensures that the  node  count remains high, but that the said nodes are of a sufficient performance level to successfully share blockchain data across the network, irrespective of how large the blockchain grows or how demanding the bandwidth requirements are. Even so, transaction size optimisations are still required to ensure that the network scales efficiently so as to keep the Service Node operating costs down so that a high node count can be sustained in the long term.</p>
+<p>In Loki, a portion of the <a href="../EmissionCurve/">block reward</a> is given to <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> that process and propagate blocks as full nodes. Because Service Nodes with insufficient bandwidth and performance are dropped from the Service Node network, the reward pool self-enforces a minimum performance requirement.   This incentive structure not only ensures that the <a href="/Advanced/SybilResistance/#high-lockup-ratio">node count remains high</a>, but that the said nodes are of a sufficient performance level to successfully share blockchain data across the network, irrespective of how large the blockchain grows or how demanding the bandwidth requirements are. Even so, transaction size optimisations are still required to ensure that the network scales efficiently so as to keep the Service Node <a href="/Advanced/SybilResistance/#operating-expenses-oe">operating costs</a> down so that a high node count can be sustained in the long term.</p>
                 
                   
                 
@@ -1373,13 +1433,13 @@
           </a>
         
         
-          <a href="../RingSignature/" title="Ring Signature" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../CryptoNoteElements/" title="CryptoNote Elements" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Ring Signature
+                CryptoNote Elements
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

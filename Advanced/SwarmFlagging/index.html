@@ -814,7 +814,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/LokiNetOverview/" title="Overview" class="md-nav__link">
+    <a href="../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -830,11 +830,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
     <label class="md-nav__link" for="nav-6-2">
-      Guides
+      Loki Services
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-6-2">
-        Guides
+        Loki Services
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -845,19 +845,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/SNApps/" title="SNApps" class="md-nav__link">
+    <a href="../../Lokinet/SNapps/" title="SNApps" class="md-nav__link">
       SNApps
     </a>
   </li>
@@ -869,8 +857,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+    <a href="../../Lokinet/Messenger/" title="Messenger" class="md-nav__link">
+      Messenger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/ExitNodes/" title="Exit Nodes" class="md-nav__link">
       Exit Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/RemoteNodes/" title="Remote Nodes" class="md-nav__link">
+      Remote Nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Blink/" title="Blink" class="md-nav__link">
+      Blink
     </a>
   </li>
 
@@ -886,7 +910,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/LLARP/" title="LLARP" class="md-nav__link">
+    <a href="../../Lokinet/LLARP/" title="LLARP" class="md-nav__link">
       LLARP
     </a>
   </li>
@@ -898,7 +922,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/DeveloperInfo/" title="Developers" class="md-nav__link">
+    <a href="../../Lokinet/DeveloperInfo/" title="Developers" class="md-nav__link">
       Developers
     </a>
   </li>
@@ -909,9 +933,28 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../LokiNET/SNapps/" title="SNapps" class="md-nav__link">
-      SNapps
+    <a href="../../Lokinet/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
+      Test Network Relay
     </a>
   </li>
 
@@ -922,9 +965,26 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiNET/Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
+    <a href="../../Lokinet/Guides/SNApps/" title="SNApps" class="md-nav__link">
+      SNApps
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+      Exit Nodes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1008,8 +1068,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../RingSignature/" title="Ring Signature" class="md-nav__link">
-      Ring Signature
+    <a href="../CryptoNoteElements/" title="CryptoNote Elements" class="md-nav__link">
+      CryptoNote Elements
     </a>
   </li>
 
@@ -1200,8 +1260,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../UsingLokiNET/" title="Using LokiNET" class="md-nav__link">
-      Using LokiNET
+    <a href="../UsingLokinet/" title="Using Lokinet" class="md-nav__link">
+      Using Lokinet
     </a>
   </li>
 
@@ -1460,11 +1520,11 @@
                   <h1>Swarm Flagging</h1>
                 
                 <h2 id="swarm-flagging">Swarm Flagging<a class="headerlink" href="#swarm-flagging" title="Permanent link">&para;</a></h2>
-<p>When nodes operate in a trustless environment without a centralised leader enforcing over arching rules, maintaining proper node behaviour on the network becomes difficult. Although <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> in Loki must hold the correct <a href="../../ServiceNodes/StakingRequirement/">collateral requirement</a>, they may choose to not <a href="../../LokiNET/LLARP/">route traffic</a> or <a href="../../LokiNET/Messenger/">store data</a> in their memory pools.  Because this option is financially beneficial (using less bandwidth/CPU cycles/storage), a system of distributed flagging must be proposed to remove underperforming nodes.</p>
+<p>When nodes operate in a trustless environment without a centralised leader enforcing over arching rules, maintaining proper node behaviour on the network becomes difficult. Although <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> in Loki must hold the correct <a href="../../ServiceNodes/StakingRequirement/">collateral requirement</a>, they may choose to not <a href="../../Lokinet/LLARP/">route traffic</a> or <a href="../../Lokinet/Messenger/">store data</a> in their memory pools.  Because this option is financially beneficial (using less bandwidth/CPU cycles/storage), a system of distributed flagging must be proposed to remove underperforming nodes.</p>
 <p>For Loki, such distributed flagging faces major implementation issues. Fundamentally, every <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> is financially incentivised to flag every other Service Node as a bad actor. This is because when a Service Node is flagged it will face removal from the staking pool and thereby increase the flaggers chance at winning a reward. One potential method of  distributed flagging is one in which evidence is provided when a flagging event occurs, however, this solution falls prey to nodes fabricating evidence in their favour.  Conversely, flagging without restrictions allows either single nodes or groups of collaborating nodes to intentionally flag honest nodes in order to improve their chances of winning <a href="../EmissionCurve/">block  rewards</a>. To circumvent these issues, Loki proposes swarm flagging.</p>
 <p>Swarm flagging works by using existing swarms to choose members that will participate in each testing round. Each Service Node holds a copy of the blockchain, and each block created by a miner will deterministically select a number of test swarms. Every block, 1% of the networks swarms are selected for participation in a testing swarm. To calculate participating swarms, the hash of the five previous blocks is used to seed a Mersenne Twister function which then selects swarms by order of their position in the deterministic list.</p>
 <p><img alt="Testing Swarm" src="../../assets/Swarm.PNG" /></p>
-<p>When a swarm has been selected to participate, each node in that swarm is expected to conduct a number of tests on every other node in the swarm. These are not active tests; rather each node stores historical information about its interactions with every other nodenwithin its swarm. Information about bandwidth, message storage, blockchain requests, andn exit node functionality are collected and retained over time. New swarm entrants that have yet to gather this information can query <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> outside of their immediate swarm so as to gather data on each of the Service Nodes they test.</p>
+<p>When a swarm has been selected to participate, each node in that swarm is expected to conduct a number of tests on every other node in the swarm. These are not active tests; rather each node stores historical information about its interactions with every other nodenwithin its swarm. Information about bandwidth, <a href="../../Lokinet/Messenger/">message storage</a>, blockchain requests, and <a href="../../Lokinet/ExitNodes/">exit node</a> functionality are collected and retained over time. New swarm entrants that have yet to gather this information can query <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> outside of their immediate swarm so as to gather data on each of the Service Nodes they test.</p>
 <p>Each <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> decides how to vote on each of the other swarm members. Once it has made its decision based on the aforementioned tests, it collects and broadcasts its votes to the swarm. Each node in the swarm can now check the votes for all members. If any single node in the swarm has over 50% of the nodes voting against  it, any swarm member has the required information to construct a deregistration transaction. Once this transaction is validated and included in a block, all Service Nodes update their DHT, purging any nodes that were voted off.</p>
 <p><img alt="Dishonest Node" src="../../assets/Swarm2.PNG" /></p>
 <h2 id="testing-suite">Testing Suite<a class="headerlink" href="#testing-suite" title="Permanent link">&para;</a></h2>
@@ -1472,17 +1532,17 @@
 <p>When an operator first runs the <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> software, an empty file with a predetermined size is allocated on disk to ensure that space is present for tasks that require storage. Next, a simple bandwidth test is conducted between the Service Node and a geographically distributed set of testing servers run by the <a href="../../About/TheLokiFoundation/">Loki Foundation</a>. These checks are optional, and Service Nodes are allowed to skip, ignore or fail them, and join the pool of untrusted Service Nodes.  However, running and passing these tests provides a good indicator to any would-be Service Node operator as to whether they should risk <a href="../../ServiceNodes/StakingRequirement/">locking collateral</a> in a node that may not meet minimum requirements. Once a Service Node joins the untrusted Service Node pool, their collateral is locked and they are tested by the next chosen swarm. Swarm tests are enforced via consensus and new entrants to the Service Node network cannot evade these tests. If a node passes all swarm tests, they are awarded the trusted node flag and can begin routing packets. Failing this, they are removed from the network and their collateral remains locked for 30 days.</p>
 <h3 id="bandwidth-test">Bandwidth Test<a class="headerlink" href="#bandwidth-test" title="Permanent link">&para;</a></h3>
 <p>The bandwidth test forms the backbone of the Loki network test suite. If a node passes this test then it is assumed to be honestly routing packets above the minimum threshold.</p>
-<p>Each time a node interacts with another Service Node, it will make and retain a record of the incoming bandwidth provided.  Over time, nodes will be included in thousands of paths and route millions of <a href="../../LokiNET/Messenger/">messages</a>. These interactions will form the basis of each nodes bandwidth tables. From this table, a node can respond to bandwidth tests about Service Nodes inside its swarm.</p>
+<p>Each time a node interacts with another Service Node, it will make and retain a record of the incoming bandwidth provided.  Over time, nodes will be included in thousands of paths and route millions of <a href="../../Lokinet/Messenger/">messages</a>. These interactions will form the basis of each nodes bandwidth tables. From this table, a node can respond to bandwidth tests about Service Nodes inside its swarm.</p>
 <p>All nodes are also expected to respond to queries of their own bandwidth tables from other nodes. This means that even  nodes who have recently joined the network can query the wider network for information about any specific node in their swarm.</p>
 <h3 id="message-storage-test">Message Storage Test<a class="headerlink" href="#message-storage-test" title="Permanent link">&para;</a></h3>
-<p>Message storage is essential for offline messaging functionality for users of <a href="../../LokiNET/Messenger/">Loki Messenger</a>. <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> must be tested for their ability to cache messages and serve them to users over the course of the message’s Time-to-live (TTL).</p>
+<p>Message storage is essential for offline messaging functionality for users of <a href="../../Lokinet/Messenger/">Loki Messenger</a>. <a href="../../ServiceNodes/SNOverview/">Service Nodes</a> must be tested for their ability to cache messages and serve them to users over the course of the message’s Time-to-live (TTL).</p>
 <p>Users sending offline messages randomly select a Service Node within the destination users swarm. This node must distribute a copy of the message amongst the rest of the swarm. Depending on the proof-of-work attached to the header of the message, Service Nodes that receive a copy will store the data for the TTL. As the TTL on the original message reaches finality, the distributing node sends a nonce to all other members of the swarm. The swarm uses the nonce adding it to the message then  hashing  the result  and  then finally  sending it back to the distributing node. This test ensures that Service Nodes hold messages until TTL finality, and face eviction if they are unable to produce the correct message digest. As the sampling of the distributing node is random, over time each Service Node will be able to collect performance data on their swarm peers.</p>
 <h3 id="blockchain-storage-test">Blockchain Storage Test<a class="headerlink" href="#blockchain-storage-test" title="Permanent link">&para;</a></h3>
-<p><a href="../../ServiceNodes/SNOverview/">Service Nodes</a> are expected to hold a full copy of the Loki blockchain. By holding a full copy of the blockchain, Service Nodes can perform a number of tasks that are essential to users of the network including acting as a remote node, validating transactions, and locking transactions in Blink.</p>
+<p><a href="../../ServiceNodes/SNOverview/">Service Nodes</a> are expected to hold a full copy of the Loki blockchain. By holding a full copy of the blockchain, Service Nodes can perform a number of tasks that are essential to users of the network including acting as a <a href="../../Lokinet/RemoteNodes/">remote node</a>, validating transactions, and locking transactions in <a href="../../Lokinet/Blink/">Blink</a>.</p>
 <p>As honest nodes also hold a copy of the blockchain, a dishonest node could avoid holding a full copy by simply requesting  blocks from an honest node when tested. To avoid this outcome, the blockchain storage test is designed so that honest nodes that hold a copy of the blockchain can pass this test, while dishonest nodes cannot.</p>
-<p>To achieve this, the testing node requests each tested node to make a selection of <strong><em>K</em></strong> random transactions within the history of the blockchain which are then concatenated and hashed. This hash is then be returned to the testing node. By measuring the latency of this request, the testing node can compare the latency with the expected return time <strong><em>T</em></strong>. The exact value for <strong><em>T</em></strong> will be set to accurately differentiate expected latency between loading from disk and downloading blocks from the network. For any attacker, it should be infeasible to download and hash <strong><em>K</em></strong> blocks within <strong><em>T</em></strong>, and thus piggybacking attacks become difficult. </p>
+<p>To achieve this, the testing node requests each tested node to make a selection of <strong><em>K</em></strong> random transactions within the history of the blockchain which are then concatenated and hashed. This hash is then returned to the testing node. By measuring the latency of this request, the testing node can compare the latency with the expected return time <strong><em>T</em></strong>. The exact value for <strong><em>T</em></strong> will be set to accurately differentiate expected latency between loading from disk and downloading blocks from the network. For any attacker, it should be infeasible to download and hash <strong><em>K</em></strong> blocks within <strong><em>T</em></strong>, and thus piggybacking attacks become difficult. </p>
 <h3 id="exit-node-test">Exit Node Test<a class="headerlink" href="#exit-node-test" title="Permanent link">&para;</a></h3>
-<p><a href="../../ServiceNodes/SNOverview/">Service Nodes</a> that opt to act as exit nodes receive additional rewards, and so functional tests are required to ensure this extra reward is not abused.</p>
+<p><a href="../../ServiceNodes/SNOverview/">Service Nodes</a> that opt to act as <a href="../../Lokinet/ExitNodes/">exit nodes</a> receive additional rewards, and so functional tests are required to ensure this extra reward is not abused.</p>
 <p>For functional exit testing to occur, a Service Node must be able to emulate the natural search behaviour of a human. If a Service Node can detect that it is being tested, it can respond only to tests and discard legitimate user requests. Emulating natural page request behaviour is difficult, however, exit tests can be designed in such a way so as to make the overhead of sorting between legitimate requests and tests sufficiently difficult so that the difference in bandwidth cost between running a legitimate node and a malicious node is negligible.</p>
 <p>Service Nodes use a list of search engines, held locally, combined with a dictionary so as to construct pseudorandom natural search terms. The search terms are then fed into the search engines and web pages are randomly chosen from the results. The Service node can now build a path with random nodes acting as relays and the node being tested as the exit node. From this exit, the Service Node requests the webpage result generated from its pseudorandom search. If the result returned by the exit node matches the result as generated by the Service Node, then the exit node is deemed to have passed the test.</p>
                 
