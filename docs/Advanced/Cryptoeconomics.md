@@ -11,7 +11,7 @@ These 2 papers analysed the [Block Reward](#block-reward), [Block Reward Split](
 
 ## Block Rewards
 
-A block reward is the reward created after a new block has been generated. The reward is then distributed to the peers in the network that helped facilitate the generation of the block. In most cases, the [miners](../Mining/MiningOverview.md) are the individuals who receive this reward as they collect and write transactions into blocks. 
+A block reward is the reward created when a new block has been generated. The reward is distributed to the peers in the network that helped facilitate the generation of the block. In most cases, the [miners](../Mining/MiningOverview.md) are the individuals who receive this reward as they collect and write transactions into blocks. 
 
 [Proof-of-work](/Mining/MiningOverview/#proof-of-work) is used to ensure only 1 miner wins the right to embed transactions on the blockchain and thus only 1 miner will receive the reward.
 
