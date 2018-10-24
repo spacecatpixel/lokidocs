@@ -1,7 +1,5 @@
 # Denial of Service Attacks
 
->> TO do: What is denial of Service Attacks
-
 Users of decentralised blockchains are not required to provide digital or physical identifiers. This can be beneficial to users who lack identity or are being persecuted because of it. However, systems that do not require identification render themselves vulnerable to [Sybil attacks](SybilResistance.md), where a malicious actor produces numerous false identities (in Loki’s case, numerous public-private key pairs) and uses these identities to spam the network with requests. 
 
 Many cryptocurrencies have struggled with this problem, and are forced to implement either a fee-for-service model or a proof-of-work model. In [fee-for-service](https://sia.tech/whitepaper.pdf) models such as Siacoin, users pay for the services that they use. In Siacoins case,  the cost is determined per TB of storage per month. Fee-for-service models  are  effective at reducing Sybil attacks, however, they drive many users away from the system especially when similar services are available for free (such as Google Drive and Onedrive in the case of Siacoin).  Proof-of-work systems such as those used in [Hashcash](http://www.hashcash.org/papers/hashcash.pdf) and Nano require users to calculate a small proof-of-work before sending a message or transaction. These small proof-of-work systems are arguably more egalitarian than the fee-for-service model but can fall prey to attackers who possess large amounts of computing power.
