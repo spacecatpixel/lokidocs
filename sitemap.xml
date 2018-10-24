@@ -2,277 +2,277 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://loki-project.github.io/loki-docs/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Introduction/Overview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Introduction/LokiNetwork/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Introduction/BeginnersGuide/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/WalletsOverview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/WhatWalletToUse/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/WebWallet/WebWalletOverview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/WebWallet/TroubleshootWebWallet/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/WebWallet/Guides/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/WebWallet/placeholder/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/GuiWallet/GUIOverview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/GuiWallet/TroubleshootGui/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/GuiWallet/Guides/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/GuiWallet/placeholder/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/MobileWallet/MobileWalletOverview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/MobileWallet/TroubleshootMobileWallet/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/MobileWallet/Guides/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/MobileWallet/placeholder/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/CLIOverview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/TroubleshootCli/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/loki-wallet-cliMacSetup/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/WalletCommands/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/2of2Multisig/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/CliWallet/2of3Multisig/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Wallets/Multisigniture/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Mining/ProofOfWork/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Mining/MiningOverview/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Mining/ASICResistance/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/ServiceNodes/SNOverview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/ServiceNodes/ServiceNodeFunctions/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/ServiceNodes/StakingRequirement/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/ServiceNodes/SNFullGuide/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/SNRPCGuide/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/ServiceNodes/RunServiceNodeAsService/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Lokinet/LokinetOverview/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Lokinet/SNapps/</loc>
-     <lastmod>2018-10-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Lokinet/Messenger/</loc>
-     <lastmod>2018-10-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Lokinet/ExitNodes/</loc>
-     <lastmod>2018-10-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Lokinet/RemoteNodes/</loc>
-     <lastmod>2018-10-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://loki-project.github.io/loki-docs/Lokinet/Blink/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Lokinet/SNApps/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Lokinet/LLARP/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Lokinet/DeveloperInfo/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Lokinet/Guides/TestNetRelay/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Lokinet/Guides/SNApps/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Lokinet/Guides/ExitNode/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/LokiServices/LokiServicesOverview/</loc>
+     <lastmod>2018-10-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/LokiServices/Messenger/</loc>
+     <lastmod>2018-10-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://loki-project.github.io/loki-docs/LokiServices/Blink/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/TechnicalSpecs/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/Advanced/EmissionCurve/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Advanced/Cryptoeconomics/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/SybilResistance/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/DynamicBlockSize/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/CryptoNoteElements/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/DenialofServiceAttacks/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/IPandPacketBlocking/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/SwarmFlagging/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/lokid/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/CompilingGuide/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://loki-project.github.io/loki-docs/Advanced/UsingLokinet/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/UsingTor/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/Debugging/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Advanced/SNRPCGuide/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/FAQ/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Contributing/Github/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://loki-project.github.io/loki-docs/Contributing/VULNERABILITY_RESPONSE_LOKI/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/About/Governance/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Governance/Governance/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/About/TheLokiFoundation/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Governance/TheLokiFoundation/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://loki-project.github.io/loki-docs/About/LokiFundingSystem/</loc>
-     <lastmod>2018-10-18</lastmod>
+     <loc>https://loki-project.github.io/loki-docs/Governance/LokiFundingSystem/</loc>
+     <lastmod>2018-10-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
