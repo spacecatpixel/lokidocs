@@ -24,7 +24,7 @@ This block reward formula is a result of [Loki's Cryptoeconomic study](https://l
 
 ### Block Reward Split
 
-As Service Node's went live on 20th of September, 2018, at block 101250, the addition of a Block Reward split was required to financially incentivise the [Service Node](../ServiceNodes/SNOverview.md) Operators to maintain and run a Service Node. During the fork on the 30th of July, 2018, the Block Reward was hard coded to split the reward as follows:
+As Service Node's went live on 20th of September, 2018, at block 101250, the addition of a Block Reward split was required to financially incentivise [Service Node](../ServiceNodes/SNOverview.md) Operators to maintain and run Service Nodes. During the fork on the 30th of July, 2018, the Block Reward was hard coded to split the reward as follows:
 
 
 |Party|Percent of Reward|
