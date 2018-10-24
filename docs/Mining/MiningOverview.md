@@ -1,7 +1,3 @@
-# Mining
-
-Traditional mining is the process of extracting valuable minerals and metals from the earth. These mined minerals are scarce which creates an intrinsic value due to the resources required, the work conducted, and the time it takes to extract. 
-
 ## What is Cryptocurrency Mining?
 Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain. 
 
