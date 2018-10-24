@@ -1,15 +1,14 @@
 # CryptoNote Elements
 
-Although a full-node incentives scheme could be implemented on top of any cryptocurrency, Loki uses the Monero source code because of the high level of privacy it affords to transactions. Monero is an evolution on the [CryptoNote protocol](https://cryptonote.org/whitepaper.pdf), which uses [ring signatures](#ring-signatures), [stealth addresses](#stealth-addresses), and [RingCT](#ringct), giving users the ability to sign transactions and obfuscate amounts while maintaining plausible deniability.
+CryptoNote is an [abstraction layer](https://en.wikipedia.org/wiki/Abstraction_layer) that specifies the shared communications protocols and interface methods used by nodes in a communications network. The CryptoNote protocol powers several decentralised privacy focused digital currencies.
 
-For the Loki ecosystem to maintain privacy, it is important to not only provide a medium of exchange that underpins the internal economy but to also minimise the risk of temporal analysis when interactions occur across Loki’s independent layers. For example, when engaging in layer-one transactional services, users should never lose the privacy guarantees they receive from the second-layer and vice versa.
+Loki uses the Monero source code because of the high level of privacy it affords to transactions. Monero is an evolution on the [CryptoNote protocol](https://cryptonote.org/whitepaper.pdf), which uses [ring signatures](#ring-signatures), [stealth addresses](#stealth-addresses), and [RingCT](#ringct), giving users the ability to sign transactions and obfuscate amounts while maintaining plausible deniability.
 
 ## Ring Signatures
 Ring signatures work by constructing a ring of possible signers to a transaction where only one of the signers is the actual sender. Loki makes use of ring signatures to obfuscate the true history of transaction outputs. Ring signatures will be mandatory for all Loki transactions (excluding block reward transactions), and uniquely, a fixed ring-size of ten is enforced on the Loki blockchain.  This means that each input will spend from one of ten possible outputs, including the true output.
 
 
 ### Ring Signature Size
-
 The size of a ring signature refers to how many mixins are used to construct the ring. Monero currently has an enforced  minimum ring signature size of seven, with six mixins used alongside the real unspent output in a transaction.
 
 The effect of larger ring-sizes has been sparsely studied, however, in [paper 0001](https://lab.getmonero.org/pubs/MRL-0001.pdf) (published by the Monero Research Lab), the effect of differing ring-sizes was analysed versus an attacker who owned a large number of outputs on the blockchain . It was found that higher ring-sizes reduce the timeframe in which a malicious attacker who owned a large number of unspent outputs would be able to perform effective analysis of transactions. Mandating larger ring-sizes also protects against a theoretical attack known as an [EABE/Knacc attack](https://github.com/monero-project/monero/issues/1673#issuecomment-312968452), where a third-party (i.e. an exchange) can perform limited temporal analysis on transactions between two users.

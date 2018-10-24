@@ -27,22 +27,25 @@ theme:
 nav:
 - 'Home': 'index.md'
 - Introduction:
-  - 'Overview': 'Introduction/Overview.md'
+  - 'Loki Network': 'Introduction/LokiNetwork.md'
   - 'Where to begin?': 'Introduction/BeginnersGuide.md'
 - Wallets: 
   - 'Overview' : 'Wallets/WalletsOverview.md'
   - 'What wallet to use?' : 'Wallets/WhatWalletToUse.md'
   - Web Wallet (LokiLocker): 
-      - 'WW Overview' : 'Wallets/WebWallet/WebWalletOverview.md'
-      - 'Guides': 'Wallets/WebWallet/Guides.md'
+      - 'Troubleshooting Web Wallet' : 'Wallets/WebWallet/TroubleshootWebWallet.md'
+      - Guides:
+        - 'to be added': 'Wallets/WebWallet/placeholder.md'
   - Graphical User interface (GUI) Wallet:
-      - 'GUI Overview' : 'Wallets/GuiWallet/GUIOverview.md'
-      - 'Guides': 'Wallets/GuiWallet/Guides.md'
+      - 'Troubleshooting GUI Wallet' : 'Wallets/GuiWallet/TroubleshootGui.md'
+      - Guides: 
+        - 'to be added': 'Wallets/GuiWallet/placeholder.md'
   - Mobile Wallet:
-      - 'Mobile Wallet Overview' : 'Wallets/MobileWallet/MobileWalletOverview.md'
-      - 'Android Wallet Guide' : 'Wallets/MobileWallet/Guides.md'
+      - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
+      - Guides :
+        - 'to be added': 'Wallets/MobileWallet/placeholder.md'
   - Command Line Integrated (CLI) Wallet:
-      - 'CLI Overview' : 'Wallets/CliWallet/CLIOverview.md'
+      - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
       - Guides:
         - 'CLI Mac Setup': 'Wallets/CliWallet/loki-wallet-cliMacSetup.md'
         - 'CLI Wallet Commands': 'Wallets/CliWallet/WalletCommands.md'
@@ -52,10 +55,11 @@ nav:
 
   - 'Multsigniture': 'Wallets/Multisigniture.md'
 - Mining:
-   - 'Proof Of Work': 'Mining/ProofOfWork.md'
-   - 'ASIC Resistance': 'Mining/ASICResistance.md'
+    - 'Overview': 'Mining/MiningOverview.md'
+    - 'ASIC Resistance': 'Mining/ASICResistance.md'
 - Service Nodes:
     - 'Overview': 'ServiceNodes/SNOverview.md'
+    - 'Service Node Functions': 'ServiceNodes/ServiceNodeFunctions.md'
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
     - Guides:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
@@ -63,21 +67,20 @@ nav:
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
-    - Loki Services:
-       - 'SNApps': 'Lokinet/SNapps.md'
-       - 'Messenger' : 'Lokinet/Messenger.md'
-       - 'Exit Nodes': 'Lokinet/ExitNodes.md'
-       - 'Remote Nodes': 'Lokinet/RemoteNodes.md'
-       - 'Blink': 'Lokinet/Blink.md'
+    - 'SNApps': 'Lokinet/SNApps.md'
     - 'LLARP': 'Lokinet/LLARP.md'
     - 'Developers': 'Lokinet/DeveloperInfo.md'
     - Guides:
         - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'SNApps': 'Lokinet/Guides/SNApps.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
+- Loki Services:
+    - 'Overview': 'LokiServices/LokiServicesOverview.md'
+    - 'Messenger' : 'LokiServices/Messenger.md'
+    - 'Blink': 'LokiServices/Blink.md'
 - Advanced:
     - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
-    - 'Emission Curve' : 'Advanced/EmissionCurve.md'
+    - 'Cryptoeconomics' : 'Advanced/Cryptoeconomics.md'
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
     - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
     - 'CryptoNote Elements': 'Advanced/CryptoNoteElements.md'
@@ -94,12 +97,12 @@ nav:
         - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      
 - 'FAQ': 'FAQ.md'
 - Contributing:
-   - 'Using Github': 'Contributing/Github.md'
+   - 'How to Contribute to LokiDocs': 'Contributing/Github.md'
    - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
-- About:
-   - 'Governance': 'About/Governance.md'
-   - 'The Loki Foundation': 'About/TheLokiFoundation.md'
-   - 'Loki Funding System': 'About/LokiFundingSystem.md'
+- Governance:
+   - 'Overview': 'Governance/Governance.md'
+   - 'The Loki Foundation': 'Governance/TheLokiFoundation.md'
+   - 'Loki Funding System': 'Governance/LokiFundingSystem.md'
 
 # Customization
 extra_css:

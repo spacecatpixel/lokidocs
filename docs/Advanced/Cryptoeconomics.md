@@ -1,21 +1,48 @@
-#Emission Curve
+#Cryptoeconomics
 
-Loki is a Blockchain network oriented toward the provision of privacy-preserving services over a network of Service Nodes. The salient cryptoeconomic problem is how to incentivise actors in the Loki network to operate Service Nodes in a manner compatible with the objectives of the Loki network, in particular decentralisation and privacy.
+Loki is a Blockchain network oriented toward the provision of privacy-preserving services over a network of [Service Nodes](../ServiceNodes/SNOverview.md). The salient cryptoeconomic problem is how to incentivise actors in the Loki network to operate Service Nodes in a manner compatible with the objectives of the Loki network, in particular decentralisation and privacy.
 
 To solve this problem the Loki Project team commissioned two Economic papers:
 
 1. [Cryptoeconomics of the Loki Network](https://loki.network/wp-content/uploads/2018/08/CryptoEconomicsOfTheLokiNetworkHistoric.pdf): This Economic Report was commissioned to characterise the game theory behind incentivising Service Node operators. 
 2. [Loki Cryptoeconomics](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf): This Report was commissioned to apply the game theory specific to the Loki Networks economics.
 
-## Block Reward
+These 2 papers analysed the [Block Reward](#block-reward), [Block Reward Split](#block-reward-split), [Inflation](#inflation), [Circulating Supply](#circulating-supply) and the amount of potential Service Nodes on the network to develop a cryptoeconomic solution to incentivise Service Node Operators.
 
-Distribution of block rewards in Loki is conducted through [proof-of-work](../Mining/ProofOfWork.md), a robust and well studied system for the creation of blocks and the ordering of transactions.  Miners collect
-and write transactions into blocks and collect fees for doing so.  As a consensus rule in Loki,
-each block contains multiple reward outputs of which only one goes to the miner.
+## Block Rewards
 
-As a result of this study, on the 30th of July, 2018, at block 64324, the Loki block reward went from being calculated in terms of the circulating supply with an emission speed factor of 20(link to Monero stuff), to be derived from the block height. The formula used to calculate the block reward `BR` where `h` is the block height is:
+A block reward is the reward created after a new block has been generated. The reward is then distributed to the peers in the network that helped facilitate the generation of the block. In most cases, the [miners](../Mining/MiningOverview.md) are the individuals who receive this reward as they collect and write transactions into blocks. 
+
+[Proof-of-work](/Mining/MiningOverview/#proof-of-work) is used to ensure only 1 miner wins the right to embed transactions on the blockchain and thus only 1 miner will receive the reward.
+
+### Loki Block Reward
+The Loki Block Reward is generated in a similar manner to most proof-of-work cryptocurrencies. Miners use proof-of-work to generate a block and then a reward is released to the network. The reward is then distributed not only distributed to the Miner but to a Service Node Operator and the Governance pool.
+
+The amount of Loki rewarded `BR` to the network at each block height `h` follows the following equation:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;BR = 28 + \frac{100}{2^{(\frac{h}{64800})}}" title="\Large BR = 28 + \frac{100}{2^{\frac{*h*}{64800}}}" />
+
+This block reward formula is a result of [Loki's Cryptoeconomic study](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf), on the 30th of July, 2018, at block 64324, the Loki block reward went from being calculated in terms of the circulating supply with an emission speed factor of 20, to be derived from the block height.
+
+### Block Reward Split
+
+As Service Node's went live on 20th of September, 2018, at block 101250, the addition of a Block Reward split was required to financially incentive the [Service Node](../ServiceNodes/SNOverview.md) Operators to maintain and run a Service Node. During the fork on the 30th of July, 2018, the Block Reward was hard coded to split the reward as follows:
+
+
+|Party|Percent of Reward|
+|------|-------|
+|Service Nodes|50%|
+|Miners|45%|
+|Governance|5%|
+
+#### Mining Reward
+As well as collecting transactions fees, 45% of the block reward is awarded to the miner that constructs the block.
+
+#### Service Node Reward
+The second output in each block (50% of total reward) goes to a [Service Node](../ServiceNodes/SNOverview.md), or two Service Nodes if a relay is selected. Service Nodes are rewarded based on the time since they last received a reward (or time since they registered), with a preference for nodes that have been waiting longer. Each time a Service Node registers with the network it assumes the last position in the queue. If the Service Node maintains good service and is not ejected from the queue by a [swarm flag](../Advanced/SwarmFlagging.md), it slowly migrates to the higher positions in the queue. Nodes at or near the front of the queue are eligible for a reward, and once awarded, the node again drops to the last position in the queue and begins slowly working its way back up.
+
+#### Governance Reward
+The final 5% portion of the block reward is distributed towards [governance operations](../Governance/Governance.md);  3.75% is sent to the Loki Foundations address which is derived deterministically each block and the remaining 1.25% is reserved for the outputs of a [funding block](../Governance/LokiFundingSystem.md).
 
 ## Inflation
 <details>
@@ -40,30 +67,8 @@ As a result of this study, on the 30th of July, 2018, at block 64324, the Loki b
 | 14   | 3679200 | 136073538.5        | 5.41%     |
 | 15   | 3942000 | 143431938.5        | 5.13%     |
 
-
 </details>
 
-## Block Reward Split
-
-As Service Node's went live on 20th of September, 2018, at block 101250, the addition of a Block Reward split was required to financially incentive the [Service Node](../ServiceNodes/SNOverview.md) Operators to maintain and run a Service Node. During the fork on the 30th of July, 2018, the Block Reward was hard coded to split the reward as follows:
-
-
-|Party|Percent of Reward|
-|------|-------|
-|Service Nodes|50%|
-|Miners|45%|
-|Governance|5%|
-
-
-
-### Mining Reward
-As well as collecting transactions fees, 45% of the block reward is awarded to the miner that constructs the block.
-
-### Service Node Reward
-The second output in each block (50% of total reward) goes to a [Service Node](../ServiceNodes/SNOverview.md), or two Service Nodes if a relay is selected. Service Nodes are rewarded based on the time since they last received a reward (or time since they registered), with a preference for nodes that have been waiting longer. Each time a Service Node registers with the network it assumes the last position in the queue. If the Service Node maintains good service and is not ejected from the queue by a [swarm flag](../Advanced/SwarmFlagging.md), it slowly migrates to the higher positions in the queue. Nodes at or near the front of the queue are eligible for a reward, and once awarded, the node again drops to the last position in the queue and begins slowly working its way back up.
-
-### Governance Reward
-The final 5% portion of the block reward is distributed towards [governance operations](../About/Governance.md);  3.75% is sent to the Loki Foundations address which is derived deterministically each block and the remaining 1.25% is reserved for the outputs of a [funding block](../About/LokiFundingSystem.md).
 
 ## Circulating Supply
 The Circulating Supply is the total amount of $Loki in circulation. The below table "Circulating Supply Distribution" shows the predicted circulating supply and the overall amount of Loki the Premine, Governance, Miners and Service Nodes have received.
