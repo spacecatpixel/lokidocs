@@ -2,7 +2,7 @@
 # Loki Network
 
 ## Wallets
-Wallets offer a gateway to private decentralised transactions and communications. They allow you to hold and secure Loki, [mine](../Mining/MiningOverview.md) and trade peer-to-peer. [Download an official Loki wallet](https://loki.network/getting-started/) today and start taking back control of your online privacy.
+Wallets offer a gateway to private decentralised transactions and communications. They allow you to hold, secure and trade Loki with peers. [Download an official Loki wallet](https://loki.network/getting-started/) today and start taking back control of your online privacy.
 
 To learn more about wallets [click here](../Wallets/WalletsOverview.md).
 
