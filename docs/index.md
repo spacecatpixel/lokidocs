@@ -6,7 +6,7 @@ Privacy is having the agency to decide when you reveal personal information. It 
 
 Loki provides the means to transact and communicate privately and anonymously, using the decentralised nature of blockchain technology to create new methods of interacting with the internet.
 
-Loki is a private cryptocurrency based on Monero. Over the course of the coming months, the Loki project aims to offer an incenvised full node layer with a secondary peer-to-peer network that offers a private communications layer based on the Tor protocol.
+Loki is a privacy cryptocurrency based on Monero. Loki currently offers an incentivised full node layer and over the coming months we look to support a secondary p2p network that offers private communications based on the Signal protocol.
 
 More information on the project can be found on the [website](https://www.loki.network) and in the [whitepaper](https://loki.network/wp-content/uploads/2018/10/EnglishV3Whitepaper.pdf).
 
