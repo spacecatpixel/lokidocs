@@ -1,7 +1,7 @@
 ## What is Cryptocurrency Mining?
 Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain. 
 
-Miners use computers to work on computational puzzles that change their difficulty depending on the number of miners on the network. The difficulty changes to enforce that the blocks are mined at similar time intervals, also known as the Block Generation Time. At each block generated a predetermined amount of cryptocurrency is released to the individual or party who found the solution to the puzzle. This reward is commonly known as the [Block Reward](../Advanced/Cryptoeconomics.md) and is coded to reduce its emission over time.
+Miners use computers to work on computational puzzles that change their difficulty depending on the number of miners on the network. The difficulty changes to enforce that the blocks are mined at similar time intervals, also known as the Block Generation Time. Each block generated produces a predetermined amount of cryptocurrency to the individual or party who found the solution to the puzzle. This reward is commonly known as the [Block Reward](../Advanced/Cryptoeconomics.md) and is coded to reduce its emission over time.
 
 ## Proof-Of-Work
 >> Add information about proof of work.
