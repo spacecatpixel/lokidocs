@@ -40,7 +40,7 @@ As well as collecting transactions fees, 45% of the block reward is awarded to t
 The second output in each block (50% of total reward) goes to a [Service Node](../ServiceNodes/SNOverview.md), or two Service Nodes if a relay is selected. Service Nodes are rewarded based on the time since they last received a reward (or time since they registered), with a preference for nodes that have been waiting longer. Each time a Service Node registers with the network it assumes the last position in the queue. If the Service Node maintains good service and is not ejected from the queue by a [swarm flag](../Advanced/SwarmFlagging.md), it slowly migrates to the higher positions in the queue. Nodes at or near the front of the queue are eligible for a reward, and once awarded, the node again drops to the last position in the queue and begins slowly working its way back up.
 
 #### Governance Reward
-The final 5% portion of the block reward is distributed towards [governance operations](../Governance/Governance.md);  3.75% is sent to the Loki Foundations address which is derived deterministically each block and the remaining 1.25% is reserved for the outputs of a [funding block](../Governance/LokiFundingSystem.md).
+The final 5% portion of the block reward is distributed towards [governance operations](../Governance/Governance.md);
 
 ## Inflation
 <details>
