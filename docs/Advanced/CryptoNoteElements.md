@@ -1,7 +1,5 @@
 # CryptoNote Elements
 
-CryptoNote is an [abstraction layer](https://en.wikipedia.org/wiki/Abstraction_layer) that specifies the shared communications protocols and interface methods used by nodes in a communications network. The CryptoNote protocol powers several decentralised privacy focused digital currencies.
-
 Loki uses the Monero source code because of the high level of privacy it affords to transactions. Monero is an evolution on the [CryptoNote protocol](https://cryptonote.org/whitepaper.pdf), which uses [ring signatures](#ring-signatures), [stealth addresses](#stealth-addresses), and [RingCT](#ringct), giving users the ability to sign transactions and obfuscate amounts while maintaining plausible deniability.
 
 ## Ring Signatures
