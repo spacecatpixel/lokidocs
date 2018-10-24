@@ -9,7 +9,7 @@ To learn more about wallets [click here](../Wallets/WalletsOverview.md).
 ## Mining
 Mining on the Loki Network is the process of solving a difficult computational puzzle through a Proof-of-Work(PoW) protocol and compiling newly created transactions into a block. Miners do this in order to earn money from the [Block Reward](/Advanced/Cryptoeconomics/#block-reward) and the fees associated from the transactions they include in each block. 
 
-The Loki cryptocurrency can be mined through the CryptoNight Heavy hashing algorithm, which is innately [ASIC Resistant](../Mining/ASICResistance.md). 
+The Loki cryptocurrency can be mined using the CryptoNight Heavy hashing algorithm, which is designed to be [ASIC Resistant](../Mining/ASICResistance.md). 
 
 To learn more about mining [click here](../Mining/MiningOverview.md).
 
