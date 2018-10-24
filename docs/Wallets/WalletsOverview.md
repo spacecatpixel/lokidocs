@@ -5,7 +5,9 @@ The Loki wallet is a gateway to private decentralised transactions and communica
 >> TO DO: What do Wallets do?
 
 ## Web Wallet (Loki Locker)
-The quickest way to access a Loki Wallet is through a web based wallet, [Loki Locker](https://lokilocker.com/). The Web Wallet is the easiest to use and doesn't require any downloaded files.
+
+>> Loki Web Wallet is in maintenance.
+>> TO DO: Add Loki details once 
 
 - [Access Loki Locker](https://lokilocker.com/)
 - [Github link](https://github.com/loki-project/loki-locker)
