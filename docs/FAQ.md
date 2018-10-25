@@ -113,8 +113,7 @@ Loki operates on an incentives structure provided by the network. Peer-to-peer c
 Loki plans to push back any useful changes to Monero, such as optimizations, bug fixes, and feature adds.
 
 ###**What's the difference from Monero?**
-[Fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), Mixin distribution changes, and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward).
-These are baselayer changes that will differentiate us between Monero, however the main change that is being implemented is the second layer of incentivised [Service Nodes](/ServiceNodes/SNOverview).
+[Fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward). These are baselayer changes that will differentiate us between Monero, however the main change that is being implemented is the second layer of incentivised [Service Nodes](/ServiceNodes/SNOverview), [Loki Services](/LokiServices/LokiServicesOverview), and [Lokinet](/Lokinet/LokinetOverview).
 
 ###**What are the privacy improvements over Monero?**
 We are statically fixing ringsizes and upping the minimum [ring size to 10](../Advanced/CryptoNoteElements/#ring-signature-size) which should make users safer against some edge case analysis, and it will improve the effectiveness of churning. were also making some slight changes to the way mixins are chosen.
