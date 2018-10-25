@@ -50,8 +50,6 @@
 
 * [Where will SNApps and all of its data be hosted?](#where-will-snapps-and-all-of-its-data-be-hosted)
 
-* [How will Loki Network incentivise SNApp development and the secondary services layer?](#how-will-loki-network-incentivise-snapp-development-and-the-secondary-services-layer)
-
 * [Are there plans to support Loki on the Ledger Nano S hardware wallet?](#are-there-plans-to-support-loki-on-the-ledger-nano-s-hardware-wallet)
 
 ###**What is Loki?**
@@ -157,11 +155,6 @@ You will need a new VPS server per [Service Node](../ServiceNodes/SNOverview).
 
 ###**Where will SNApps and all of its data be hosted?**
 [SNApps](../LokiServices/SNApps) are similar to hidden services in Tor; they are hosted on servers by users.
-
-###**How will Loki Network incentivise SNApp development and the secondary services layer?**
-To open-source developers [Service Nodes](../ServiceNodes/SNOverview) and the protocol layer that operates on top of them presents an architecture that is rare in the wild, we imagine developers will have a keen interest in getting their hands on this new decentralised network. Beyond that, there must be a way to make money by running third party SNApps. We have theorised a few ways that this is possible but nothing is set in stone and we will come to more of a conclusion as the Service node layer is deployed.
-
-The basic way this works is that the developer of the [SNApp](../LokiServices/SNApps) provides a financial reward to each of the nodes paid in Loki, providing a financial reason for the nodes to run the SNApp, users then register their rune each month with the developer/smart contract by paying an amount in Loki which allows authorises them to use the third party SNApp.
 
 ###**Are there plans to support Loki on the Ledger Nano S hardware wallet?**
 Yes, it is in the works.
