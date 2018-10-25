@@ -32,8 +32,6 @@
 
 * [What's the difference from Monero?](#whats-the-difference-from-monero)
 
-* [What is the difference between Loki Messenger and Mainframe messengers?](#what-is-the-difference-between-loki-messenger-and-mainframe-messengers)
-
 * [Does Loki have smart contracts?](#does-loki-have-smart-contracts)
 
 * [Can I see details about the premine?](#can-i-see-details-about-the-premine)
@@ -112,13 +110,6 @@ Loki plans to push back any useful changes to Monero, such as optimizations, bug
 
 ###**What's the difference from Monero?**
 [Fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward). These are baselayer changes that will differentiate us between Monero, however the main change that is being implemented is the second layer of incentivised [Service Nodes](/ServiceNodes/SNOverview), [Loki Services](/LokiServices/LokiServicesOverview), and [Lokinet](/Lokinet/LokinetOverview).
-
-###**What is the difference between Loki Messenger and Mainframe messengers?**
-The main difference is that the mainframe uses an ERC 20 token to power its network and it has a pay by service model meaning you have to pay to send messages.
-
-So the main point of difference between Status, Mainframe Enigma and other 'blockchain' messaging services is they nearly all run or rely on the ETH blockchain. Now we've already seen what happens when the ETH blockchain comes under significant stress it can break the implementation of other applications that run on top of it. The other thing about Ethereum is the blockchain is fundamentally public meaning that no matter how efficient your encryption scheme and how advanced your routing protocols are as soon as you touch the Ethereum blockchain you update a public record on an immutable blockchain that everyone can see. Now I know that Ethereum is working towards zk-SNARKs however the architecture of zk-SNARKs on Ethereum is problematic since you still need to rely on some trusted setup to ensure your ZKPs can't be fabricated. It's already extraordinary hard to do multiparty trusted setup ceremonies off chain. In terms of privacy, nothing at the moment can beat the combo of ring signatures, ring CT and stealth addresses.
-
-TLDR; Most messaging apps use Ethereum and will suffer scale and privacy issues because of it.
 
 ###**Does Loki have smart contracts?**
 [SNApps](../LokiServices/SNApps) run off chain so they don't have a smart contract element. In general, the platform is capable to do smart contracts in the future,  but it's hard to speculate on SNApps before the protocol layer is built.
