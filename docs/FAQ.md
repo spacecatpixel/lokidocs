@@ -32,8 +32,6 @@
 
 * [What's the difference from Monero?](#whats-the-difference-from-monero)
 
-* [Does Loki have smart contracts?](#does-loki-have-smart-contracts)
-
 * [Can I see details about the premine?](#can-i-see-details-about-the-premine)
 
 * [Why is there a 5% governance reward?](#why-is-there-a-5-governance-reward)
@@ -111,9 +109,6 @@ Loki plans to push back any useful changes to Monero, such as optimizations, bug
 ###**What's the difference from Monero?**
 [Fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward). These are baselayer changes that will differentiate us between Monero, however the main change that is being implemented is the second layer of incentivised [Service Nodes](/ServiceNodes/SNOverview), [Loki Services](/LokiServices/LokiServicesOverview), and [Lokinet](/Lokinet/LokinetOverview).
 
-###**Does Loki have smart contracts?**
-[SNApps](../LokiServices/SNApps) run off chain so they don't have a smart contract element. In general, the platform is capable to do smart contracts in the future,  but it's hard to speculate on SNApps before the protocol layer is built.
-
 ###**Can I see details about the premine?**
 Yes, see the [premine report](https://loki.network/loki-premine-report/).
 
@@ -127,7 +122,7 @@ We wanted to keep the amount significantly less than Zcash and DASH but want to 
 In the future, the community may decide that this reward is unnecessary or of too high or too low a proportion, in which case, a hard fork event may change the nature of this block reward split.
 
 ###**What is the block reward for mining?**
-50% of the block reward goes to service nodes, 45% to miners, 5% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
+The exact block reward can be found at [www.lokiblocks.com](www.lokiblocks.com), this block reward is split where 50% of the block reward goes to service nodes, 45% to miners, 5% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
 
 ###**What is the block generation time?**
 About 120 seconds.
