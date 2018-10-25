@@ -110,7 +110,7 @@ Loki is the Norse god of trickery. This is fitting as we use a lot of digital 't
 Loki operates on an incentives structure provided by the network. Peer-to-peer communications only occurs through the [Service Node](/ServiceNodes/SNOverview) layer which is already incentivised to run so there is less of an incentive to provide any additional businesses models. The business model post-launch for the Loki foundation is to continue to build both core [Loki Services](/LokiServices/LokiServicesOverview) and aid in the development of 3rd party SNApps which Service nodes can optionally operate.
 
 ###**Will you guys commit back to the monero source code?**
-Yeah, we're planning to push back any useful changes to Monero, such as optimizations, bug fixes, and feature adds, probably an overhauled networking system as well.
+Loki plans to push back any useful changes to Monero, such as optimizations, bug fixes, and feature adds.
 
 ###**What's the difference from Monero?**
 [Fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), Mixin distribution changes, and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward).
