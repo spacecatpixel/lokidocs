@@ -107,7 +107,7 @@ Check out the collateral calculator [here](https://jagerman.com/sn/) for the cur
 Loki is the Norse god of trickery. This is fitting as we use a lot of digital 'tricks' to obfuscate transaction. Also, it is a play on words as transactions and communications on the network are very 'Low-Key'.
 
 ###**What is the business model behind this peer-to-peer network?**
-Loki operates on an incentives structure provided by the network. Service nodes are rewarded to operate via Proof of Service. Peer-to-peer communications only occur through the [Service Node](/ServiceNodes/SNOverview) layer which is already incentivised to run so there is a weak case for providing any additional businesses models. The business model post-launch for the Loki foundation is to continue to build both core [SNApps](/Lokinet/SNApps/) and aid in the development of 3rd party SNApps which Service nodes can optionally operate.
+Loki operates on an incentives structure provided by the network. Service nodes are rewarded to operate via Proof of Service. Peer-to-peer communications only occur through the [Service Node](/ServiceNodes/SNOverview) layer which is already incentivised to run so there is a weak case for providing any additional businesses models. The business model post-launch for the Loki foundation is to continue to build both core [Loki Services](/LokiServices/LokiServicesOverview) and aid in the development of 3rd party SNApps which Service nodes can optionally operate.
 
 ###**What are business use cases for the project?**
 Use cases are high since Loki is building a protocol layer on top of incentivised nodes, SNApps can range from Deadman drops to Oracles and even cooler uses cases that we haven't yet thought of but open-source developers will.
