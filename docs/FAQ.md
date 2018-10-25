@@ -128,7 +128,7 @@ The exact block reward can be found at [www.lokiblocks.com](www.lokiblocks.com),
 About 120 seconds.
 
 ###**Can you run multiple service nodes in a single VPS server?**
-You will need a new VPS server per [Service Node](../ServiceNodes/SNOverview).
+It is recomended that you run different instances per [Service Node](../ServiceNodes/SNOverview) however it is not required..
 
 ###**Where will SNApps and all of its data be hosted?**
 [SNApps](../LokiServices/SNApps) are similar to hidden services in Tor; they are hosted on servers by users.
