@@ -6,24 +6,22 @@ Privacy is having the agency to decide when you reveal personal information. It 
 
 Loki provides the means to transact and communicate privately and anonymously, using the decentralised nature of blockchain technology to create new methods of interacting with the internet.
 
-Loki is a private cryptocurrency based on Monero. Over the course of the coming months, the Loki project aims to offer an incenvised full node layer with a secondary p2p network that offers a private communications layer based on the Tor protocol.
+Loki is a privacy cryptocurrency based on Monero. Loki currently offers an incentivised full node layer and over the coming months we look to support a secondary p2p network that offers private communications based on the Signal protocol.
 
 More information on the project can be found on the [website](https://www.loki.network) and in the [whitepaper](https://loki.network/wp-content/uploads/2018/10/EnglishV3Whitepaper.pdf).
 
 Loki is an open source project, and we encourage contributions from anyone with something to offer. For more information on contributing, please contact team@loki.network
 
-To begin browsing Loki Docs [click here](Introduction/Overview.md).
-## Development resources
+To begin browsing Loki Docs [click here](Introduction/LokiNetwork.md).
+## Community Channels
 
-- Web: [loki.network](https://loki.network)
 - Telegram: [t.me/LokiCommunity](https://t.me/LokiCommunity)
-- Mail: [team@loki.network](mailto:team@loki.network)
 - GitHub: [https://github.com/loki-project/loki](https://github.com/loki-project/loki)
 - Discord: [https://discord.gg/67GXfD6](https://discord.gg/67GXfD6)
-
-## Vulnerability disclosure
-
-- Check out our [Vulnerability Response Process](Contributing/VULNERABILITY_RESPONSE_LOKI.md), encourages prompt disclosure of any Vulnerabilities
+- Twitter: [https://twitter.com/loki_project](https://twitter.com/loki_project)
+- Youtube: [https://www.youtube.com/lokinetwork](https://www.youtube.com/lokinetwork)
+- Reddit: [https://www.reddit.com/r/LokiProject/](https://www.reddit.com/r/LokiProject/)
+- Mail: [team@loki.network](mailto:team@loki.network)
 
 ## Copyright
 

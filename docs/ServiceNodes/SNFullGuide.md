@@ -33,8 +33,6 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 - [Express Setup Guide](#express-setup-guide)
 - [Additional Functions](#additional-functions)
 
-
-
 ## Overview
 
 To understand what a Service Node is, you can refer to the [whitepaper](https://loki.network/whitepaper) to get an in depth understanding. For now, all you need to know is that:
@@ -54,7 +52,7 @@ It is also worth noting that Service Nodes are quite basic at the moment, and op
     
 -   Monitor other Service Nodes and vote on their performance
     
--   Be called into quorums which give them authority over instant transactions ([Blink](../Lokinet/Blink.md))
+-   Be called into quorums which give them authority over instant transactions ([Blink](../LokiServices/Blink.md))
     
 -   Act as remote nodes for users
 

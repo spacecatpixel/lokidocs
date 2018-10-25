@@ -1,5 +1,7 @@
 # Blink
 
+>> To do:  what is blink?
+
 In a typical blockchain system, the confirmation time for any given transaction is the time it takes for a transaction to be included in a block. Because of competing miners, withheld blocks, and Finney attacks, recipients usually require a number of additional blocks to be created on top of the block which holds a transaction before it is considered to be complete. Depending on a multitude of factors specific to each blockchain, this process can often take 10-60 minutes, which is inconvenient for merchants and customers who must wait for confirmations before they release goods or commence services.
 
 Because of Loki’s Service Node architecture, near instant transactions are possible. Blink enables the same transactions that would occur on the Loki mainchain to be confirmed before being included in a block, assuring both the sender and the receiver of the validity of the transaction and protecting the receiver against a double spend.
