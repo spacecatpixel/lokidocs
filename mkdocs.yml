@@ -97,7 +97,7 @@ nav:
         - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      
 - 'FAQ': 'FAQ.md'
 - Contributing:
-   - 'How to Contribute to LokiDocs': 'Contributing/Github.md'
+   - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
    - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
 - Governance:
    - 'Overview': 'Governance/Governance.md'
