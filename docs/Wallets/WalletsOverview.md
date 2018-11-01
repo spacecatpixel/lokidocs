@@ -1,24 +1,12 @@
 # Wallets
-The Loki wallet is a gateway to private decentralised transactions and communications. It allows you to hold and secure Loki, mine and trade peer-to-peer. 
+The Loki wallets are a gateway into private decentralised transactions and communications. It allows you to hold private keys, secure or mine Loki, and trade peer-to-peer. 
 
+Loki Wallets store a collection of public and private keys which can be used to receive, view, or spend Loki. 
 
->> TO DO: What do Wallets do?
-
-## Web Wallet (Loki Locker)
-
->> Loki Web Wallet is in maintenance.
->> TO DO: Add Loki details once 
-
-- [Access Loki Locker](https://lokilocker.com/)
-- [Github link](https://github.com/loki-project/loki-locker)
-
-### Web Wallet Troubleshooting & Guides
-
->> Add guides
-
+The wallet uses the private keys through a daemon which synchronizes with the Loki Network to scan for incoming transactions and to send outgoing transactions.
 
 ## Graphical User Interface Wallet (GUI)
-The Gui Wallet is just as easy to use as the Web Wallet however requires you to [download](https://github.com/loki-project/loki-gui/releases) the latest release.
+The Gui Wallet is currently the easiest wallet to use, it has a graphical user friendly interface which is perfect for beginners. You can download the Loki GUI Wallet [here](https://github.com/loki-project/loki-gui/releases).
 
 - [Download Loki GUI Wallet](https://github.com/loki-project/loki-gui/releases)
 - [Github Link](https://github.com/loki-project/loki-gui/)
