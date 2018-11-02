@@ -1,17 +1,24 @@
 # How to Contribute to Loki-Docs
 There is two ways to contribute to the Loki-Docs repository. 
+
 * Editing the files on Github.
+
 * Building the website and editing the content locally.
 
-This guide will teach you how to build the website locally.
+This guide will teach you how to build the website and edit it on your local machine.
 ## Requirements: 
 You will need the following software packages:
+
 -   Python
+
 -   Pip
+
 -   Mkdocs
+
 -   github
 
-# Step 1: Installing Python and Pip
+## Step 1: Installing Python and Pip
+
 If you have and use a package manager (such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto), [dnf](http://dnf.readthedocs.io/en/latest/index.html), [homebrew](https://brew.sh/), [yum](http://yum.baseurl.org/), [chocolatey](https://chocolatey.org/), etc.) to install packages on your system, then you may want to search for a "MkDocs" package and, if a recent version is available, install it with your package manager (check your system's documentation for details). That's it, you're done!
 
 If your package manager does not have a recent "MkDocs" package, you can still use your package manager to install "Python" and "pip". Then you can use pip to [install MkDocs](https://www.mkdocs.org/#installing-mkdocs).
@@ -79,7 +86,7 @@ mkdocs, version 0.15.3
 
 For a more permanent solution, you may need to edit your PATH environment variable to include the Scripts directory of your Python installation. Recent versions of Python include a script to do this for you. Navigate to your Python installation directory (for example C:\Python34\), open the Tools, then Scripts folder, and run the win_add2path.py file by double clicking on it. Alternatively, you can [download](https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py) the script and run it (python win_add2path.py).
 
-## Step 3: Github and mkdocs
+## Step 3: Download the loki-docs files
 
 Now that we have mkdocs, python and pip we can download the repository to our local machine and start working on making changes.
 
@@ -115,7 +122,7 @@ From here you can edit the file using markdown syntax. Any changes you make will
 
   
 
-If you have the Github gui for windows you will first need to identify the the local repo.
+If you have the Github gui for windows you will first need to add the local repository folder.
 
   
 
@@ -123,7 +130,7 @@ If you have the Github gui for windows you will first need to identify the the l
 
   
 
-And now if we make any changes the changes will show up within our gui to create a commit and pull request.
+And now if we make any changes the Github gui will know straight away the changes we have made.
 
   
 
@@ -135,7 +142,7 @@ Once you’ve made all your changes click commit to master.
 
 ## Step 5: Local testing
 
-Once the files are downloaded change your directory to loki-docs.
+Change directories to your loki-docs local repository.
 
   
 
@@ -151,7 +158,7 @@ From here we can type in the terminal:
 
   
 
-Mkdocs will serve our files locally.
+This will run Mkdocs built in development server.
 
   
 
@@ -159,17 +166,16 @@ Mkdocs will serve our files locally.
 
   
 
-During your edit’s this mkdocs serve command will work in the background. So any saves you make will show up live at the IP and port it outputs.
+When the `mkdocs serve` command is running any changes saved to your local repository files will be updated onto your built site.
 
-Any issues such as links to websites or documentation that is not there or not working will show up when serving.
+Any issues such as links to websites or documentation that is not there or not working will show as a error when serving.
 
-  
 
-Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in a chrome or firefox browser to view the changes you’ve made prior to committing them to the lokidocs github.
+Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in web browser to view the changes you’ve made prior to committing them to the Loki-docs Github.
 
-## Additional: Changing the filepaths on lokidocs.
+## Additional: Changing the filepaths on Loki-docs.
 
-The file in our loki-docs folder called mkdocs.yml is where we edit the left sidebar on the lokidocs website.
+The file in our loki-docs folder called mkdocs.yml is where we edit the left sidebar on the Loki-docs website.
 
 ![](https://lh3.googleusercontent.com/-r1EexqvKe9TgiUnAy-xGx0ltRmDR9qDGMKOgdTKlPsvW-uYbofbSz4x-nypUHhK6edq7b8Ru2_1CbFj6p9HrFE2Jej1wRTNAp81Ev4H7v9Q98NyXyu9HasTSK2xzeJ43L6hIwKh)
 
