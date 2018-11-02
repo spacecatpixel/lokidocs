@@ -1,5 +1,7 @@
 # Commands:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e6NwsJbm5wY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Displaying commands
 
 The `loki-wallet-cli` has multiple commands to conduct different operations on the Loki Blockchain. By typing `help` and clicking enter after loading your wallet will bring up the commands that can be used.
@@ -408,7 +410,7 @@ Good signature -- total: 1014.862440831, spent: 0.000000000, unspent: 1014.86244
 
 You may note that it shows a reserve proof which is greater than 1000, this is because the command is adding up all the transactions into the address specified until it is greater than the reserve proof set.
 
-## 6 Spend Proof:
+## 6 Spend Proof
 
 Spend Proofs are used to generate a signature proving that you generated a TXID, with the option to sign the spend proof with a key.
 
@@ -514,7 +516,7 @@ If you receive a `Good signature` message that should be a good proof that the t
 
   
 
-## 7 TX Proof:
+## 7 TX Proof
 
 TX Proofs are used to generate a signature file proving that you generated a TXID, with the option to sign the spend proof with a key. TX proofs work similar to Reserve Proof’s and Spend Proofs however they show more detailed information.
 
@@ -618,7 +620,7 @@ This transaction has 1 confirmations
 
 If you receive a `Good signature` message that should be a good proof that the txid you are checking was generated from the sender. Keep in mind however that this can potentially not always be the case, considering someone could get access to someone else's computer thus having access to this file.
 
-## 8 TX key:
+## 8 TX key
 
 A TX key is a private key associated with a TXid. Only the wallet that has sent the transaction can generate a TX key from the TXID that both parties can see. A TX key can be used to validate a transaction on a case by case basis. In essence, you can provide the tx key, txid and the receiver address to someone to prove you had generate that transaction.
 
