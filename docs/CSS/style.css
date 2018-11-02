@@ -2,7 +2,7 @@
 .md-footer-nav,
 .md-footer-meta, 
 .md-header {
-    background-color: #1a1a1a
+    background-color: #000000
 }
 
 /* Highlight current page in nav menu */
@@ -18,7 +18,7 @@
 
 @media only screen and (max-width: 76.1875em){
     html .md-nav--primary .md-nav__title--site {
-    	background-color: #1a1a1a;
+    	background-color: #000000;
     }
     .md-nav__source {
     	background-color: #008522;

@@ -4,10 +4,11 @@
 Get the quorum state which is the list of public keys of the nodes who are voting, and the list of public keys of the nodes who are being tested.
 
 #### Testnet Example
+```
     curl -X POST http://127.0.0.1:38157/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_quorum_state", "params": {"height": 200}}' -H 'Content-Type: application/json'
-
-
+```
 #### Result
+```
     {
       "id": "0",
       "jsonrpc": "2.0",
@@ -24,6 +25,7 @@ Get the quorum state which is the list of public keys of the nodes who are votin
         "untrusted": false
       }
     }
+```
 Nodes have been omitted with “...” for brevity in nodes\_to\_test and quorum\_nodes.
 
 #### Inputs
@@ -45,10 +47,12 @@ height.
 Get the required amount of Loki to become a Service Node at the queried height. For stagenet and testnet values, ensure the daemon is started with the --stagenet or --testnet flags respectively.
 
 #### Testnet Example
+```
     curl -X POST http://127.0.0.1:38157/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_staking_requirement", "params": {“height”: 111111}}' -H 'Content-Type: application/json'  
 
-
+```
 #### Result
+```
     {
       "id": "0",
       "jsonrpc": "2.0",
@@ -57,7 +61,7 @@ Get the required amount of Loki to become a Service Node at the queried height. 
         "status": "OK"
       }
     }
-
+```
 #### Inputs
 * Int height
 
@@ -72,10 +76,12 @@ Get the required amount of Loki to become a Service Node at the queried height. 
 Get the service node public key of the queried daemon. The daemon must be started in --service-node mode otherwise this RPC command will fail.
 
 #### Testnet Example
+```
     curl -X POST http://127.0.0.1:38157/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_service_node_key"}' -H 'Content-Type: application/json'  
 
-
+```
 #### Result
+```
     {
       "id": "0",
       "jsonrpc": "2.0",
@@ -84,7 +90,7 @@ Get the service node public key of the queried daemon. The daemon must be starte
         "status": "OK"
       }
     }
-
+```
 #### Inputs
 * N/A
 
@@ -97,10 +103,12 @@ Get the service node public key of the queried daemon. The daemon must be starte
 Get the metadata currently associated with the queried service node public keys such as, registration height and contributors, etc. If no public key is specified, this returns all the metadata for every service node the queried daemon currently knows about.
 
 #### Testnet Example
+```
     curl -X POST http://127.0.0.1:38157/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_service_nodes", “params”: “service_node_pubkeys”: []}' -H 'Content-Type: application/json'
-
+```
 
 #### Result
+```
     {
       "id": "0",
       "jsonrpc": "2.0",
@@ -125,7 +133,7 @@ Get the metadata currently associated with the queried service node public keys 
         "status": "OK"
       }
     }
-
+```
 #### Inputs
 * String[] service\_node\_pubkeys
 

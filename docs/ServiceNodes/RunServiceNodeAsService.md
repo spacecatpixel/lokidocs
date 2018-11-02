@@ -23,18 +23,13 @@ This guide will help you set up the Loki daemon (lokid) as a systemd service so 
 
 Connect to your server via SSH (as is explained at [Full Guide on Service Nodes - Step 2 - Prepare your Server](https://loki-project.github.io/loki-docs/ServiceNodes/SNFullGuide/#step-2-prepare-your-server)) and copy & paste the following commands into the terminal window:
 
-1. Create the lokid.service file: `sudo touch /etc/systemd/system/lokid.service`
-
-2. Change the file permissions:
-`sudo chmod 664 /etc/systemd/system/lokid.service`
-
-3. Start editing the created empty file: 
-`sudo nano /etc/systemd/system/lokid.service`
-
-4. Copy the text below and paste it into your empty file.
-
-```
-[Unit]
+<ol>
+<li>Create the lokid.service file: <code>sudo touch /etc/systemd/system/lokid.service</code></li>
+<li>Change the file permissions: <code>sudo chmod 664 /etc/systemd/system/lokid.service</code></li>
+<li>Start editing the created empty file: <code>sudo nano /etc/systemd/system/lokid.service</code></li>
+<li>Copy the text below and paste it into your empty file.</li>
+</ol>
+<pre><code>[Unit]
 Description=lokid service
 After=network-online.target
 
@@ -47,27 +42,38 @@ RestartSec=30s
 
 [Install]
 WantedBy=multi-user.target
-```
-
-5. Modify YOUR_USERNAME and YOUR_LOKI_FILES_FOLDER in the pasted text.
-You must change YOUR_USERNAME on two different places and YOUR_LOKI_FILES_FOLDER in one. 
-If you are running your Service Node as root, `/home` must be removed from ExecStart path: `ExecStart=/root/YOUR_LOKI_FILES_FOLDER/lokid --non-interactive --service-node`
->     For Testnet, append the --testnet flag at the end of your modified ExecStart line. 
-
-6. Once completed, save the file and quit nano:
-CTRL+X -> Y -> ENTER
-
-7. Reload systemd manager configuration:
-`sudo systemctl daemon-reload`
-
-8. Stop the Loki daemon if it's running (see [NOTE](#note)). Here you have to go into the *screen* session where you are running lokid and type:
-`exit` + ENTER
-
-9. Start lokid.service:
-`sudo systemctl start lokid.service`
-
-10. Enable lokid.service so that it starts automatically upon boot:
-`sudo systemctl enable lokid.service`
+</code></pre>
+<ol start="5">
+<li>Modify YOUR_USERNAME and YOUR_LOKI_FILES_FOLDER in the pasted text.</li>
+</ol>
+<p>You must change YOUR_USERNAME on two different places and YOUR_LOKI_FILES_FOLDER in one.
+If you are running your Service Node as root, <code>/home</code> must be removed from ExecStart path: <code>ExecStart=/root/YOUR_LOKI_FILES_FOLDER/lokid --non-interactive --service-node</code></p>
+<blockquote>
+<pre><code>For Testnet, append the --testnet flag at the end of your modified ExecStart line. 
+</code></pre>
+</blockquote>
+<ol start="6">
+<li>
+<p>Once completed, save the file and quit nano:
+CTRL+X -&gt; Y -&gt; ENTER</p>
+</li>
+<li>
+<p>Reload systemd manager configuration:
+<code>sudo systemctl daemon-reload</code></p>
+</li>
+<li>
+<p>Stop the Loki daemon if it's running (see <a href="#note">NOTE</a>). Here you have to go into the <em>screen</em> session where you are running lokid and type:
+<code>exit</code> + ENTER</p>
+</li>
+<li>
+<p>Start lokid.service:
+<code>sudo systemctl start lokid.service</code></p>
+</li>
+<li>
+<p>Enable lokid.service so that it starts automatically upon boot:
+<code>sudo systemctl enable lokid.service</code></p>
+</li>
+</ol>
 
 
 Now, everything should be working and your Loki daemon should start as a service on every reboot. We won't have a Loki daemon interactive screen but we can use RPC to communicate with the service. The following commands should let us know if everything went fine:
@@ -198,4 +204,3 @@ The following commands let us check that Loki daemon service is active again:
 
 ### NOTE: 
 If you have not updated your Loki binary files to the latest version yet you are encouraged to, since 1.0.0 or 1.0.1 users can run into timing issues that lead to deregistration with multiple consecutive daemon restarts.
-
