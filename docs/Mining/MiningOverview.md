@@ -3,12 +3,9 @@ Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing
 
 Miners use computers to work on computational puzzles that change their difficulty depending on the number of miners on the network. The difficulty changes to enforce that the blocks are mined at similar time intervals, also known as the Block Generation Time. Each block generated produces a predetermined amount of cryptocurrency to the individual or party who found the solution to the puzzle. This reward is commonly known as the [Block Reward](../Advanced/Cryptoeconomics.md) and is coded to reduce its emission over time.
 
-## Proof-Of-Work
->> Add information about proof of work.
-
 ## Mining Loki
 
-The Loki cryptocurrency can be mined through the CryptoNight Heavy hashing algorithm, which is innately [ASIC Resistant](../Mining/ASICResistance.md). 
+The Loki cryptocurrency can be mined through the CryptoNight Heavy hashing algorithm, which is designed to be [ASIC Resistant](../Mining/ASICResistance.md). 
 
 ### Mining Pools
 
