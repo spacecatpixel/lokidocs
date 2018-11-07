@@ -3,18 +3,18 @@
 A stake involves holding a specific cryptocoin in a wallet for a particular period of time. A staking requirement is the minimum amount of said cryptocoin that is required to stake.
 
 ## Service Node Staking Requirement
-To register as a [Service Node](../ServiceNodes/SNOverview.md), an operator creates a time-locked output of the required amount which unlocks after a minimum of 21,600 blocks have elapsed (approximately 30 days). In the extra field of the transaction, the Service Node operator includes the Loki address which may receive Service Node rewards. This address will also be used as the public key for Service Node operations such as [swarm](../Advanced/SwarmFlagging.md) voting.
+A Loki staking Requirement is the collateral requirement an operator stakes through a time-locked output which unlocks after a minimum of 21,600 blocks have elapsed (approximately 30 days). In the extra field of the transaction, the Service Node operator includes the Loki address which may receive Service Node rewards. This address will also be used as the public key for Service Node operations such as [swarm](../Advanced/SwarmFlagging.md) voting.
 
 Before each node joins the Service Node network, other nodes must individually validate that the said nodes collateral outlay matches the required amount, as per the decreasing collateralisation requirement. Although collateral transactions  expire after 30 days, the wallet will have an opt-in automatic re-collateralisation feature.
 
 The staking requirement started at 45,000 during Service Node launch (block height 101250), descends non-linearly to ~10,000 by year 4 (block height 1036800), and increases linearly to 15,000 by year 14 (block height 3628800), according to the equation:
-
 ![LSR](../assets/LSRformula.JPG)
+Where *LSR* is the Loki Staking Requirement, *max* is the maximum value of two formulas, *min* is the minimum of two formulas, and *h* is the block height.
+![Staking Requirement](../assets/StakingRequirement.JPG)
+
 ### LSR at Specific Dates
 <details>
-  <summary>Click to expand data</summary>
-
-
+  <summary>Click to expand data </summary>
 | Date (MM/YYYY)| Block Height|Staking Requirement (Loki)|
 |:---------:|:---------:|:---------------:|
 | 09/2018 | 101250  | 45000               |
