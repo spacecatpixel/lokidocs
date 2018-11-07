@@ -1,7 +1,5 @@
 
 # Service Nodes Overview
->> What are service Nodes
-
 
 Although Loki implements novel changes on top of the [CryptoNote protocol](../Advanced/CryptoNoteElements.md) ([ASIC Resistance](../Mining/ASICResistance.md), [Dynamic Block Size](../Advanced/DynamicBlockSize.md) & [Static Ring Signatures](/Advanced/CryptoNoteElements/#ring-signatures)), much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator [time-locks a significant amount of Loki](../ServiceNodes/StakingRequirement.md) and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.
 
