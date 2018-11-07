@@ -43,7 +43,7 @@ nav:
   - Mobile Wallet:
       - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
       - Guides :
-        - 'to be added': 'Wallets/MobileWallet/placeholder.md'
+        - 'Restore Mobile Wallet': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
   - Command Line Integrated (CLI) Wallet:
       - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
       - Guides:
