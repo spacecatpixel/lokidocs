@@ -71,6 +71,7 @@ nav:
     - 'LLARP': 'Lokinet/LLARP.md'
     - 'Developers': 'Lokinet/DeveloperInfo.md'
     - Guides:
+        - 'Installation': 'Lokinet/Guides/Install.md'
         - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'SNApps': 'Lokinet/Guides/SNApps.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
