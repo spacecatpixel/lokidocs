@@ -46,8 +46,8 @@ If you don't know a specific blockchain height, press [Enter] for scanning from 
 
 ## Step 7: Wait for the refresh process to finish
 
-For refresh process to start, you need to have your daemon running. Another option would be to use a remote node. For that, use the following command:
+For refresh process to start, you need to have your daemon running. Another option would be to use a remote node. For that, use the following command, replacing <host> and <port> with the host and port number of the remote node you are connecting to:
 
-`./loki-wallet-cli --daemon-address host:port`
+`./loki-wallet-cli --daemon-address <host>:<port>`
 
 Once refresh is done, you can use your full functioning restored wallet. Your public wallet address will remain the same.
