@@ -35,7 +35,7 @@ Loki Services are back-end user-facing applications, such as the [Loki Messenger
 To learn more about Loki Services [click here](../LokiServices/LokiServicesOverview.md).
 
 ## Advanced
-Consider learning more about Loki by browsing through the Advanced section. Topics that are covered are [Technical Specs](../Advanced/TechnicalSpecs.md), [Loki's Cryptoeconomics](../Advanced/Cryptoeconomics.md), [Sybil Resistance](../Advanced/SybilResistance.md), [Dynamic Block Size](../Advanced/DynamicBlokSize.md) and Loki's [CryptoNote Elements](../Advanced/CryptoNoteElements.md) used.
+Consider learning more about Loki by browsing through the Advanced section. Topics that are covered are [Technical Specs](../Advanced/TechnicalSpecs.md), [Loki's Cryptoeconomics](../Advanced/Cryptoeconomics.md), [Sybil Resistance](../Advanced/SybilResistance.md), [Dynamic Block Size](../Advanced/DynamicBlockSize.md) and Loki's [CryptoNote Elements](../Advanced/CryptoNoteElements.md) used.
 
 Additionally you can find information on how Loki is going to mitigate [Denial of Service Attacks](../Advanced/DenialofServiceAttacks.md), [IP and Packet Blocking](../Advanced/IPandPacketBlocking.md), and nodes who are underperforming through [Swarm Flagging](../Advanced/SwarmFlagging.md).
 
