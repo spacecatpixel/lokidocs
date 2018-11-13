@@ -51,6 +51,7 @@ nav:
         - 'CLI Wallet Commands': 'Wallets/CliWallet/WalletCommands.md'
         - 'Restoring Wallet from Seed': 'Wallets/CliWallet/WalletRestoreSeed.md'
         - 'Restoring Wallet from Keys': 'Wallets/CliWallet/WalletRestoreKeys.md'
+        - 'Service Node Full Guide and Setup': 'ServiceNodes/SNFullGuide.md'
         - Multisig:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'

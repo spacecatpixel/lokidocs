@@ -20,7 +20,9 @@ The Gui Wallet is currently the easiest wallet to use, it has a graphical user f
 The Cli Wallet is for more advanced users and offers the most tools when interacting with the Loki Blockchain.
 
 - [Download Loki CLI Wallet](https://github.com/loki-project/loki/releases)
+
 - [Github Link](https://github.com/loki-project/loki/)
+
 - For installation help you can check out the following guide: [Cli-Guide-MAC](../Wallets/CliWallet/loki-wallet-cliMacSetup.md)
 
 
@@ -31,6 +33,10 @@ The Cli Wallet is for more advanced users and offers the most tools when interac
 - [CLI Commands](../Wallets/CliWallet/WalletCommands.md): Details on different commands within the `loki-wallet-cli`.
 
 - [CLI Setup - Mac](../Wallets/CliWallet/loki-wallet-cliMacSetup.md): How to setup the `loki-wallet-cli` for the first time on Mac OS.
+
+- [Restore CLI Wallet from Keys](../Wallets/CliWallet/WalletRestoreKeys.md): How to restore your wallet with spend and view Keys.
+
+- [Restore CLI Wallet from Seed](../Wallets/CliWallet/WalletRestoreSeed.md): How to restore your wallet with a seed phrase (25 word mnemonic seed).
 
 - [2 of 2 - Multisignature Setup](../Wallets/CliWallet/2of2Multisig.md): [Multisig](../Wallets/Multisigniture.md) feature allows you to sign a transaction with more than one private key. Funds protected with multisig can only be spent by signing with 2-of-2 keys.
 
