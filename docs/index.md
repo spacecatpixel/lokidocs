@@ -12,7 +12,7 @@ More information on the project can be found on the [website](https://www.loki.n
 
 Loki is an open source project, and we encourage contributions from anyone with something to offer. For more information on contributing, please contact team@loki.network
 
-If you are unsure where to start check out our "Getting Started" page by [clicking here](../Introduction/GettingStarted.md)
+If you are unsure where to start check out our "Getting Started" page by [clicking here](Introduction/GettingStarted.md)
 
 Otherwise to begin browsing Loki Docs [click here](Introduction/LokiNetwork.md).
 ## Community Channels
