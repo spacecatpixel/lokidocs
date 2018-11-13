@@ -1,4 +1,4 @@
-#Loki Network
+# Loki Network
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Lykh-NqkKys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 ## Information is Important
@@ -12,7 +12,9 @@ More information on the project can be found on the [website](https://www.loki.n
 
 Loki is an open source project, and we encourage contributions from anyone with something to offer. For more information on contributing, please contact team@loki.network
 
-To begin browsing Loki Docs [click here](Introduction/LokiNetwork.md).
+If you are unsure where to start check out our "Getting Started" page by [clicking here](../Introduction/GettingStarted.md)
+
+Otherwise to begin browsing Loki Docs [click here](Introduction/LokiNetwork.md).
 ## Community Channels
 
 - Telegram: [t.me/LokiCommunity](https://t.me/LokiCommunity)

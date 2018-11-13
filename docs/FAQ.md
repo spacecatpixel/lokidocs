@@ -122,7 +122,7 @@ We wanted to keep the amount significantly less than Zcash and DASH but want to 
 In the future, the community may decide that this reward is unnecessary or of too high or too low a proportion, in which case, a hard fork event may change the nature of this block reward split.
 
 ###**What is the block reward for mining?**
-The exact block reward can be found at [www.lokiblocks.com](www.lokiblocks.com), this block reward is split where 50% of the block reward goes to service nodes, 45% to miners, 5% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
+The exact block reward can be found at [www.lokiblocks.com](https://www.lokiblocks.com), this block reward is split where 50% of the block reward goes to service nodes, 45% to miners, 5% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
 
 ###**What is the block generation time?**
 About 120 seconds.

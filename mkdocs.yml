@@ -28,7 +28,7 @@ nav:
 - 'Home': 'index.md'
 - Introduction:
   - 'Loki Network': 'Introduction/LokiNetwork.md'
-  - 'Where to begin?': 'Introduction/BeginnersGuide.md'
+  - 'Getting Started': 'Introduction/GettingStarted.md'
 - Wallets: 
   - 'Overview' : 'Wallets/WalletsOverview.md'
   - 'What wallet to use?' : 'Wallets/WhatWalletToUse.md'
