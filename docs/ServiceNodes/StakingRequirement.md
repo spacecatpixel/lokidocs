@@ -15,6 +15,7 @@ Where *LSR* is the Loki Staking Requirement, *max* is the maximum value of two f
 ### LSR at Specific Dates
 <details>
   <summary>Click to expand data </summary>
+  
 | Date (MM/YYYY)| Block Height|Staking Requirement (Loki)|
 |:---------:|:---------:|:---------------:|
 | 09/2018 | 101250  | 45000               |
