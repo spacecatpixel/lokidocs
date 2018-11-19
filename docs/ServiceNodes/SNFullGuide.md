@@ -89,6 +89,8 @@ Typically, the easiest and cheapest way to host a server outside of your home is
 |Trabia|VDS-8G|38.54|9 - 11 MiB’s|8 / 10
 |Hetzner|EX41-SSD (30 TB)|39.71|80 - 40 MiB’s|4 / 10
 
+*Note: We do not officially endorse any of these providers, this list is simply illustrative of some of the options currently available*
+
 Try not to pick the first one off the list. Do some digging and see which one looks the best to you, what your budget is, and what the latency is like for you based on the server location that you choose.
 
 When selecting your VPS’ operating system, choose Ubuntu 16.04 64 bit or Ubuntu 18.04 64 bit if you want to follow this guide. If you feel more confident or wish to run your server on another distribution or operating system, the Loki commands in this guide will still apply.
