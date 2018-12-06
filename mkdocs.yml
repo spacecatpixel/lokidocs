@@ -66,7 +66,7 @@ nav:
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
     - Guides:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
-      - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'
+      - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
@@ -82,6 +82,9 @@ nav:
     - 'Overview': 'LokiServices/LokiServicesOverview.md'
     - 'Messenger' : 'LokiServices/Messenger.md'
     - 'Blink': 'LokiServices/Blink.md'
+- Developer:
+    - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
+    - 'FAQ': 'Developer/FAQ.md'
 - Advanced:
     - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
     - 'Cryptoeconomics' : 'Advanced/Cryptoeconomics.md'
@@ -94,11 +97,9 @@ nav:
         - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
     - Guides:
         - 'lokid' : 'Advanced/lokid.md'
-        - 'Compiling Loki from source': 'Advanced/CompilingGuide.md'
         - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
-        - 'Debugging': 'Advanced/Debugging.md'  
-        - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      
+        - 'Debugging': 'Advanced/Debugging.md'      
 - 'FAQ': 'FAQ.md'
 - Contributing:
    - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'

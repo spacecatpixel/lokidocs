@@ -32,7 +32,7 @@ Once these features come out, Service Node operation will require better servers
 
 - **[Staking Requirement](../ServiceNodes/StakingRequirement.md)**: Collateral requirement to run a Service Node.
 
-- **[Sybil Resistance](../Advanced/SybilResistance.md)**: >> **Add information**
+- **[Sybil Resistance](../Advanced/SybilResistance.md)**: Resistant to [Sybil Attack](https://en.wikipedia.org/wiki/Sybil_attack).
 
 - **[Service Node Applications](../Lokinet/SNApps.md)**: An anonymized IP endpoint.
 
@@ -42,7 +42,7 @@ Once these features come out, Service Node operation will require better servers
 
 - **[Service Node as Service](../ServiceNodes/SNOverview.md)**: How to run the daemon to automatically start after a crash or reboot, which helps your Service Node keep running without undesired interruptions.
 
-- **[Service Node RPC](../Advanced/SNRPCGuide.md)**: How to use JSON 2.0 RPC Calls with Service Nodes.
+- **[Service Node RPC](../Developer/SNRPCGuide.md)**: How to use JSON 2.0 RPC Calls with Service Nodes.
 
 - **[Active Service Node List](https://www.lokiblocks.com)**: Loki Block explorer showing the current Service Node Pubkeys.
 
