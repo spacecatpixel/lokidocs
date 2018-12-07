@@ -543,12 +543,14 @@ Running this command if you have already staked will not stake over the top of a
 This section is for power users who are more familiar with servers and the CLI interface. There's a couple of things your going to want to do before you commence.
 
  **1. Get a Server that meets requirements**
+
  **2. Run the Daemon on a server from a non-root user account, then stake from a local wallet (or a wallet on a separate server).**
 
 
 > where `<VERSION>` is mentioned replace with the [latest version](https://github.com/loki-project/loki/releases/latest), example `1.0.3`
 
 **3. Connect via SSH to your server**
+
 **4. add new user**
 
 `sudo adduser snode`
