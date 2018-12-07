@@ -1,6 +1,6 @@
 # LokiNET Exit Node Guide
 
-// TODO: exit node overview goes here
+Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
 
 ## Prequesites
 
