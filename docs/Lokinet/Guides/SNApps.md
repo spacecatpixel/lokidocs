@@ -37,7 +37,7 @@ This step is required for resolving the `.loki` tld.
 
 ## Test services
 
-You can join the lokinet irc network at `i4irznec3pkdh7gay6xsmkyyqag4q8643kut739by17cuiwdnxqo.loki` plaintext port `6667` with your irc client
+You can join the lokinet irc network at `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki` plaintext port `6667` with your irc client
 
 Active channels:
 

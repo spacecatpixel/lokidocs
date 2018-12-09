@@ -4,4 +4,12 @@ The function of SNApps is similar to so-called hidden services in Tor which have
 
 SNApp operators use the traditional server-client model with the key difference being that [Service Nodes](../ServiceNodes/SNOverview.md) will be intermediaries in a users connection through Lokinet.  When a SNApp wishes to register on the network, it must update the DHT with its descriptor.  This descriptor contains various introducers, which are specific Service Nodes that users can contact to form a path to the SNApp.  When these paths are set up, users can connect to the SNApp without either party knowing where the other is located in the network.
 
+## Lokinet configuration
+
+If you haven't already, generate initial configs:
+
+    $ lokinet -g
+
+To make a persistant SNApp add `keyfile=~/.lokinet/snapp.private` to the `[network]` section of `~/.lokinet/lokinet.ini`
+
 >> Needs additional work
