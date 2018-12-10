@@ -14,8 +14,17 @@ To install lokinet, see the install guide [here](../../Lokinet/Guides/Install.md
 
 For the first time setup, you need to generate a config and obtain bootstrap information.
 
-    $ lokinet -g 
-    $ lokinet-bootstrap
+Run the following command in directory `~/loki-network/build`:
+
+`$ ./lokinet -g `
+
+Change directory to `~/loki-network`
+
+`$ cd ~/loki-network`
+
+Run the following command:
+
+`$ ./lokinet-bootstrap`
 
 The default configuration for lokinet is `lokinet.ini` located at `~/.lokinet/lokinet.ini` (`%APPDATA%\.lokinet\lokinet.ini` on windows).
 
@@ -25,13 +34,13 @@ Please note that currently node long term SNApps are not currently recommended o
 
 Then run lokinet:
 
-    $ lokinet
+`$ ./lokinet`
 
 ## DNS
 
-Make sure your dns resolver is set to `127.0.0.1`, this conflicts with `systemd-resolved`, the current solution is to `systemctl stop systemd-resolved`
+Make sure your dns resolver is set to `127.3.2.1`, this conflicts with `systemd-resolved`, the current solution is to `systemctl stop systemd-resolved`
 
-Back up `/etc/resolv.conf` and put `nameserver 127.0.0.1` as the first line of that file.
+Back up `/etc/resolv.conf` and put `nameserver 127.3.2.1` as the first line of that file.
 
 This step is required for resolving the `.loki` tld.
 
