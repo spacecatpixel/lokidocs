@@ -39,7 +39,7 @@ nav:
   - Graphical User interface (GUI) Wallet:
       - 'Troubleshooting GUI Wallet' : 'Wallets/GuiWallet/TroubleshootGui.md'
       - Guides: 
-        - 'to be added': 'Wallets/GuiWallet/placeholder.md'
+        - 'Loki Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
   - Mobile Wallet:
       - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
       - Guides :
