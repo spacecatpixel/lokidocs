@@ -1,16 +1,132 @@
 # FAQ
 ## Hardfork Version 10: Bulletproofs
+### `get_block_template` Updates
+Due to batching of Governance rewards the calculation of rewards has been updated in Loki. As a side effect of this, in the `get_block_template` json response, `expected_reward` now returns only the miner reward instead of the entire block reward.
+
+For example, pre-hardfork 9, if the block reward was 100, `expected_reward` returned 100, even though ~50% of the reward was sent to the service node. Post Bulletproofs hardfork, `expected_reward` now returns 50, which is the exact amount the miner would receive.
+
+A real example of this is on the testnet, for block 63056.
+
+Calling `get_block_template` on block 63056
+```
+curl -X POST http://127.0.0.1:38157/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_block_template","params":{"wallet_address":"T6TBLkrPd7KQubsczrfHCEi5T4prNEH5Sax9phVicLp9H5s2xAvnJaYWs26xL2s2wy838FXdmgds2TDX5f75wnLt1Zxmiq3rm","reserve_size":60}' -H 'Content-Type: application/json'
+{
+  "id": "0",
+  "jsonrpc": "2.0",
+  "result": {
+    "blockhashing_blob": "0a0ad9e3c6e0050e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd00000000add4d0b6d74e9d17d4e65a64e2f6f47959a3fa60cd92af0f9ac0a771a31920ec01",
+    "blocktemplate_blob": "0a0ad9e3c6e0050e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd000000000302eeec03eeec0300eeec0301ffd0ec0302fea381ab840102eea98077132617bdf7c78c211674e704a73a82b5e6fb2361e9f08c20403b301dd2d28f85930102cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e90500835651a101019a58d937a55a6a7b6df6c42aba6d6790be8f5b1b2bfecdb8658ba0836e285912023c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101dda172e3c0d0da4381557e1d65319d0cfb0da9f6d83b716de5b8e127ddd7f572fcb147715be4f8f3cd5d25aae839e217bda00bb7bb02c21b00cdd5a18cd38aba0000",
+    "difficulty": 11367,
+    "expected_reward": 35523678718,
+    "height": 63056,
+    "prev_hash": "0e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd",
+    "reserved_offset": 176,
+    "status": "OK",
+    "untrusted": false
+  }
+}
+```
+
+Calling `get_block` on block 63056
+```
+{
+  "id": "0",
+  "jsonrpc": "2.0",
+  "result": {
+    "blob": "0a0ae7e3c6e0050e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708ddd43bd8000302eeec03eeec0300eeec0301ffd0ec0302fea381ab840102ee55cf39cb6f15d22454101cccf6b7d41f1fdb5588e463404eca4b56cbd5bbc3d2d28f85930102cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e9050083565163014e8a0d6c156a927b0f10a790d4cacede2cb2cd3b6f3fc3ed98664c303c08b97b0101dda172e3c0d0da4381557e1d65319d0cfb0da9f6d83b716de5b8e127ddd7f572fcb147715be4f8f3cd5d25aae839e217bda00bb7bb02c21b00cdd5a18cd38aba0000",
+    "block_header": {
+      "block_size": 197,
+      "block_weight": 197,
+      "cumulative_difficulty": 607871777,
+      "depth": 1,
+      "difficulty": 11367,
+      "hash": "737da055d2fb78f07200a7f3ee0acbf9b00ec3536ab27920a656dd75a253fab6",
+      "height": 63056,
+      "major_version": 10,
+      "minor_version": 10,
+      "nonce": 14171092,
+      "num_txes": 0,
+      "orphan_status": false,
+      "pow_hash": "",
+      "prev_hash": "0e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd",
+      "reward": 74994432848,
+      "timestamp": 1544663527
+    },
+    "json": {
+      "major_version": 10,
+      "minor_version": 10,
+      "timestamp": 1544663527,
+      "prev_id": "0e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd",
+      "nonce": 14171092,
+      "miner_tx": {
+        "version": 3,
+        "output_unlock_times": [ 63086, 63086 ],
+        "is_deregister": "00",
+        "unlock_time": 63086,
+        "vin": [ { "gen": { "height": 63056 } } ],
+        "vout": [
+          {
+            "amount": 35523678718,
+            "target": { "key": "ee55cf39cb6f15d22454101cccf6b7d41f1fdb5588e463404eca4b56cbd5bbc3" }
+          },
+          {
+            "amount": 39470754130,
+            "target": { "key": "cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e90500835651" }
+          }
+        ],
+        "extra": [ 1, 78, 138, 13, 108, 21, 106, 146, 123, 15, 16, 167, 144, 212, 202, 206, 222, 44,
+          178, 205, 59, 111, 63, 195, 237, 152, 102, 76, 48, 60, 8, 185, 123, 1, 1, 221, 161, 114,
+          227, 192, 208, 218, 67, 129, 85, 126, 29, 101, 49, 157, 12, 251, 13, 169, 246, 216, 59,
+          113, 109, 229, 184, 225, 39, 221, 215, 245, 114, 252, 177, 71, 113, 91, 228, 248, 243,
+          205, 93, 37, 170, 232, 57, 226, 23, 189, 160, 11, 183, 187, 2, 194, 27, 0, 205, 213, 161,
+          140, 211, 138, 186 ],
+        "rct_signatures": { "type": 0 }
+      },
+      "tx_hashes": []
+    },
+    "miner_tx_hash": "6993f786d3bcf50a2ae242d245b4de519c38903c062d59f8a30ed2af1f80934b",
+    "status": "OK",
+    "untrusted": false
+  }
+}
+```
+
+Of importance, from `get_block_template`
+```
+  ...
+  "expected_reward": 35523678718,
+  ...
+```
+
+And `get_block`
+```
+  ...
+  "vout": [
+    {
+      "amount": 35523678718,
+      "target": { "key": "ee55cf39cb6f15d22454101cccf6b7d41f1fdb5588e463404eca4b56cbd5bbc3" }
+    },
+    {
+      "amount": 39470754130,
+      "target": { "key": "cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e90500835651" }
+    }
+  ],
+  ...
+```
+
+The `expected_reward` is the same amount as the 1st vout amount in `get_block` which is the miner output (the 2nd being the Service Node Output). In summary, the `expected_reward` returned by `get_block_template` is exactly the reward the miner will receive.
+
 ### Extracting Reward Amounts from Block Outputs
 In the Bulletproofs hardfork, batching of Governance rewards was introduced and removes the governance output from most miner transactions. This means, for most blocks the outputs will only include the Miner reward and the Service Node reward.
 
-The Governance reward is paid out every `GOVERNANCE_REWARD_INTERVAL` number of blocks, in code this is checked as `(block\_height % GOVERNANCE_REWARD_INTERVAL == 0)`.
+The Governance reward is paid out every `GOVERNANCE_REWARD_INTERVAL` number of blocks, in code this is checked as `(block_height % GOVERNANCE_REWARD_INTERVAL == 0)`.
 
 ```
 Block Outputs
 [  0] Miner Reward
 [ ..] Service Node Reward
 [  N]
-[N+1] Governance Reward (Appears every N block intervals)
+[N+1] Governance Reward (Appears every GOVERNANCE_REWARD_INTERVAL blocks)
 ```
 
 An example miner transaction JSON output with the Governance reward
