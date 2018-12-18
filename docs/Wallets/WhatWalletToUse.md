@@ -20,13 +20,13 @@ Before deciding which wallet you want to use you must first know what you want t
 
 All Loki wallets can receive and send Loki however someone are much easier to use for this specific purpose.
 
-For the easiest Wallets to use for sending and receiving Loki you will want to use the:
+The easiest Wallets to use for sending and receiving Loki are:
 
 - Graphical user interface wallet (GUI) or, 
 
 - Mobile wallet
 
-The GUI wallet can be downloaded [here](https://github.com/loki-project/loki-gui/releases) while the mobile wallet can be downloaded from the Google play store.
+The GUI wallet can be downloaded [here](https://github.com/loki-project/loki-gui/releases), while the mobile wallet can be downloaded from the Google play store.
 
 ### Hosting a Service Node as an Operator
 
