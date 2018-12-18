@@ -1,7 +1,7 @@
 #Setup Guide on the Loki GUI Wallet
 
 This document will tell you exactly how to set up and operate the Loki GUI wallet.
-The latest version of the wallet can be downloaded (here)[https://github.com/loki-project/loki-gui/releases].
+The latest version of the wallet can be downloaded [here](https://github.com/loki-project/loki-gui/releases).
 
 **Windows users:** (**Mac and Linux users skip to step 6**)
 
