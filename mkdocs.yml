@@ -74,9 +74,11 @@ nav:
     - 'LLARP': 'Lokinet/LLARP.md'
     - 'Developers': 'Lokinet/DeveloperInfo.md'
     - Guides:
+        - 'Lokinet Public Testing': 'Lokinet/Guides/PublicTestingGuide.md'
         - 'Installation': 'Lokinet/Guides/Install.md'
         - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
-        - 'SNApps': 'Lokinet/Guides/SNApps.md'
+        - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
+        - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 - Loki Services:
     - 'Overview': 'LokiServices/LokiServicesOverview.md'

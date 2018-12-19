@@ -16,33 +16,47 @@ For the first time setup, you need to generate a config and obtain bootstrap inf
 
 Run the following command in directory `~/loki-network/build`:
 
-`$ ./lokinet -g `
 
-Change directory to `~/loki-network`
+`sudo ./lokinet -r`
 
-`$ cd ~/loki-network`
+Change directory to ~/loki-network
+
+`cd ~/loki-network`
 
 Run the following command:
+`sudo ./lokinet-bootstrap`
 
-`$ ./lokinet-bootstrap`
-
-The default configuration for lokinet is `lokinet.ini` located at `~/.lokinet/lokinet.ini` (`%APPDATA%\.lokinet\lokinet.ini` on windows).
-
-To enable a SNApps with a long term address, uncomment the line in the `[services]` section in `lokinet.ini` that starts with `example-snapp=`.
+>The default configuration for lokinet is `lokinet.ini` located at `~/.lokinet/lokinet.ini` (`%APPDATA%\.lokinet\lokinet.ini` on windows).
+>
+>To enable a SNApps with a long term address, uncomment the line in the `[services]` section in `lokinet.ini` that starts with `example-snapp=`.
 
 Please note that currently node long term SNApps are not currently recommended or supported on windows at this time.
 
 Then run lokinet:
 
-`$ ./lokinet`
+`sudo ./lokinet`
 
-## DNS
+Now that you have `.lokinet` running you can access any SNApps being hosted on the network.
 
-Make sure your dns resolver is set to `127.3.2.1`, this conflicts with `systemd-resolved`, the current solution is to `systemctl stop systemd-resolved`
+For future reference, if you want to browse lokinet in the future you just need to run `.lokinet` and start browsing.
 
-Back up `/etc/resolv.conf` and put `nameserver 127.3.2.1` as the first line of that file.
+##DNS
+Next we need to edit our resolv.conf files and add our dns resolver.
 
-This step is required for resolving the `.loki` tld.
+Run the following command: 
+
+`sudo nano /etc/resolvconf/resolv.conf.d/head`
+
+Add the following at the bottom of this file:
+
+`nameserver 127.3.2.1`
+
+Once that line is added hold CTRL and click x. 
+Click enter to confirm the file changes.
+
+Next we need to update our /etc/resolv.conf file by running the command:
+
+`sudo resolvconf -u`
 
 ## Test services
 
