@@ -1,6 +1,6 @@
 # LokiNET install guide - Linux
 
-To Compile Lokinet from the [lastest release](https://github.com/loki-project/loki-network/releases) for your platform.
+To Compile, download the [lastest release](https://github.com/loki-project/loki-network/releases) of Lokinet for your platform.
 
 There are no portable binary releases at this time.
 
@@ -10,15 +10,17 @@ If you encounter a compiler error, report it [here](https://github.com/loki-proj
 
 ###1. Set up Non-root User
 
-Best practice when running a public server is to not run your software as the root user. We will create a non-root user to our VPS by running the following command.
+Best practice when running a public server is to not run your software as the root user. We will create a non-root user to our server by running the following command.
 
 `sudo adduser <username>`
 
-Replacing `<username>` with a name you will log-in with. For this user-guide we will use snode as our username.
+Replacing `<username>` with a name you will log-in with. For this user-guide we will use `lokitestnet` as our username.
+
+If you use the same username the command will look like:
 
 `sudo adduser lokitestnet`
 
-The terminal will prompt you for a new password for our newly created user. Use a different password to the root password.
+Once ran the terminal will prompt you for a new password for your newly created user. Use a different password to the root password.
 
 Once the password has been set, the terminal will prompt for a few details about the individual running the user. You can hit enter through each of the inputs as the details are not important for the purposes of accessing Lokinet.
 
@@ -45,23 +47,24 @@ You will be prompted to authorise the use of disk space, type `y` and enter to a
 > Note: If you are prompted at any time that a version of any file is available then click the up and down arrows until you are hovering over install the package maintainer’s version and click enter.
 
 ###3.  Dependencies
-You will need to install some build dependencies:
+You will need to install some build dependencies, run the following command to install all the build dependencies required for Lokinet:
 
 `sudo apt install build-essential cmake rapidjson-dev libcap-dev wget git resolvconf`
 
 
-Once you’ve installed the dependencies we will now clone the loki-network github:
+Once you’ve installed the dependencies we will now clone the loki-network repository:
 ```
 git clone https://github.com/loki-project/loki-network
 cd loki-network
 ```
 ###4. Build for normal operation
-Compile as such for initialisation.
+Run the following two commands to build for operation:
 
 ```
 sudo make
 sudo make install
 ```
+---
 
 ### Optional: Building a debian package
 
@@ -72,8 +75,10 @@ If you want a debian package install the debian maintainer packages needed
 ...and then build one like so:
 
     $ debuild -us -b
+---
+### Finish
 
-
+Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#1-lokinet-installation).
 
 
 

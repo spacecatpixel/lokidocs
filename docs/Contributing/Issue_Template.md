@@ -1,6 +1,6 @@
 # Issue templates
 
-If you have found a bug or issue with a Loki repository initially you should confirm with the moderators on Loki's [Discord]() or [Telegram]() to see if a fix has already been made.
+If you have found a bug or issue with a Loki repository initially you should confirm with the moderators on Loki's [Discord](https://discord.gg/67GXfD6) or [Telegram](https://t.me/LokiCommunity) to see if a fix has already been made.
 
 Additionally someone may have already found this issue and have notified the team through the issues section of Github. Double check the repositories issues to make sure you are not doubling up on any reporting.
 
