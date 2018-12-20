@@ -4,7 +4,7 @@ Thanks for your interest in the public testing phase of the Lokinet alpha. It’
 
 This guide will help you get Lokinet running on your machine, and give you some example tasks on things you can do to help put the software through its paces and help us find places where it needs to be fixed or can be improved. The more machines we get this running on, and the more traffic (and types of traffic) we can push through this alpha network, the better.
 
-You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running Lokinet on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run the Lokinet from.
+You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running Lokinet on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run Lokinet from.
 
 ### Summary of Lokinet Requirements
 
@@ -31,7 +31,7 @@ This may change depending on new updates, so you should check here regularly, or
 
 ## Getting Help and Reporting Bugs Guidelines
 
-The entire purpose of doing a public testing phase is to collect as much feedback as possible. To make this easier for both our testers and the Lokinet team, we ask that our testers stick to the following guidelines.
+The purpose of doing a public testing phase is to collect as much feedback as possible. To make this easier for both our testers and the Lokinet team, we ask that our testers stick to the following guidelines.
 
 ### Getting Help
 
@@ -80,7 +80,7 @@ This guide will help you gain access to SNApps, to access the guide [click here]
 
 The guide will cover:
 
-- Adding our DNS resolver.
+- Adding the Lokinet DNS resolver.
 
 - Initialising Lokinet for the first time.
 
