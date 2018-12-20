@@ -4,7 +4,7 @@ To Compile Lokinet from the [lastest release](https://github.com/loki-project/lo
 
 There are no portable binary releases at this time.
 
-If you encounter a compiler error, report it [here](https://github.com/loki-project/loki-network/issues).
+If you encounter a compiler error, report it [here](https://github.com/loki-project/loki-network/issues) using the following template found [here](../../../Contributing/Issue_template/)
 
 ##Initial Setup for Linux
 

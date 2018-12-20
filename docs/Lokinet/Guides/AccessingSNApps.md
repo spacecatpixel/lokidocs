@@ -8,6 +8,24 @@ SNApp operators use the traditional server-client model with the key difference 
 
 To install lokinet, see the install guide [here](../../Lokinet/Guides/Install.md).
 
+## DNS
+Next we need to edit our resolv.conf files and add our dns resolver.
+
+Run the following command: 
+
+`sudo nano /etc/resolvconf/resolv.conf.d/head`
+
+Add the following at the bottom of this file:
+
+`nameserver 127.3.2.1`
+
+Once that line is added hold CTRL and click x. 
+Click enter to confirm the file changes.
+
+Next we need to update our /etc/resolv.conf file by running the command:
+
+`sudo resolvconf -u`
+
 ## Setup
 
 **DO NOT RUN LOKINET AS ROOT**
@@ -19,7 +37,7 @@ Run the following command in directory `~/loki-network/build`:
 
 `sudo ./lokinet -r`
 
-Change directory to ~/loki-network
+Change directory to `~/loki-network`
 
 `cd ~/loki-network`
 
@@ -40,25 +58,9 @@ Now that you have `.lokinet` running you can access any SNApps being hosted on t
 
 For future reference, if you want to browse lokinet in the future you just need to run `.lokinet` and start browsing.
 
-##DNS
-Next we need to edit our resolv.conf files and add our dns resolver.
-
-Run the following command: 
-
-`sudo nano /etc/resolvconf/resolv.conf.d/head`
-
-Add the following at the bottom of this file:
-
-`nameserver 127.3.2.1`
-
-Once that line is added hold CTRL and click x. 
-Click enter to confirm the file changes.
-
-Next we need to update our /etc/resolv.conf file by running the command:
-
-`sudo resolvconf -u`
 
 ## Test services
+Jump onto a browser such as google chrome or firefox and try and go to the url `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki`. If you see a youtube video you are in luck, congratulations, you now have access to the Lokinet.
 
 You can join the lokinet irc network at `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki` plaintext port `6667` with your irc client
 

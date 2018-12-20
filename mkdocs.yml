@@ -106,6 +106,7 @@ nav:
 - Contributing:
    - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
    - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
+   - 'Github Issue Template Example': 'Contributing/Issue_Template.md'
 - Governance:
    - 'Overview': 'Governance/Governance.md'
    - 'The Loki Foundation': 'Governance/TheLokiFoundation.md'
