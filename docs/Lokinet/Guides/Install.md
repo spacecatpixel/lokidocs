@@ -61,7 +61,7 @@ cd loki-network
 Run the following two commands to build for operation:
 
 ```
-sudo make
+make
 sudo make install
 ```
 ---
