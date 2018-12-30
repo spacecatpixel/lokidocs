@@ -1,6 +1,6 @@
 # Hosting a SNApp
 ## Preparing your lokinet address
-When you run the `./lokinet -r` your terminal will show a bunch of outputs. 
+When you run `./lokinet` your terminal will show a bunch of outputs. 
 
 You are looking for the line with `lokitun0` in it. The line should look like the following:
 
@@ -8,7 +8,7 @@ You are looking for the line with `lokitun0` in it. The line should look like th
 [NFO] unnamed (868) Mon Dec 17 15:30:09 2018 AEDT llarp/handlers/tun.cpp:419    default:gtwemaxbfogy5absnjizmoafdngadknpagnoteoir7743ys4xbyo.loki set lokitun0 to have address 172.16.10.1:0
 `
 
-This loki address shown within this output will be the url to your SNApp. You can share this to individuals who you want to access your SNApp.
+This loki address shown within this output will be the url to your SNApp and the local address to bind SNApps on. You can share the `.loki` address to individuals who you want to access your SNApp.
 
 ## Creating your SNApp
 Create a new directory within your home folder by running the following command in a terminal:
@@ -38,7 +38,7 @@ Then type `:q` and click enter to quit editing the file, this will take you back
 ##Serving your SNApp
 Now we will serve our index.html file to the lokinet by running the following command within our snapp folder.
 
-`sudo python3 -m http.server --bind 0.0.0.0 80`
+`sudo python3 -m http.server --bind 172.16.10.1 80`
 
 Now if you go to the .loki address you saved before your message “hello lokinet” will be displayed. 
 
