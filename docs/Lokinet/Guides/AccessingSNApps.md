@@ -32,31 +32,17 @@ Next we need to update our /etc/resolv.conf file by running the command:
 
 For the first time setup, you need to generate a config and obtain bootstrap information.
 
-Run the following command in directory `~/loki-network/build`:
-
-
-`sudo ./lokinet -r`
-
-Change directory to `~/loki-network`
-
-`cd ~/loki-network`
-
-Run the following command:
-`sudo ./lokinet-bootstrap`
+`lokinet -g && lokinet-bootstrap`
 
 >The default configuration for lokinet is `lokinet.ini` located at `~/.lokinet/lokinet.ini` (`%APPDATA%\.lokinet\lokinet.ini` on windows).
 >
->To enable a SNApps with a long term address, uncomment the line in the `[services]` section in `lokinet.ini` that starts with `example-snapp=`.
+>To enable a SNApps with a long term address, add `keyfile=/path/to/keyfile.private` to `[network]` section in `lokinet.ini` .
 
-Please note that currently node long term SNApps are not currently recommended or supported on windows at this time.
+Then run lokinet in foreground:
 
-Then run lokinet:
+`lokinet`
 
-`sudo ./lokinet`
-
-Now that you have `.lokinet` running you can access any SNApps being hosted on the network.
-
-For future reference, if you want to browse lokinet in the future you just need to run `.lokinet` and start browsing.
+For future reference, after generating initial configuration you just need to run `lokinet` and start browsing.
 
 
 ## Test services
