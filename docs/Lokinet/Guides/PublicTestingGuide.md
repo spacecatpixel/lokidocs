@@ -26,7 +26,7 @@ This may change depending on new updates, so you should check here regularly, or
 - [User Guide](#user-guide)
 	- Step 1 [Lokinet Installion](#1-lokinet-installion)
 	- Step 2 [Accessing SNApps](#2-accessing-snapps)
-	- Step 3 [Joining the lokinet IRC Chat](#3-joining-the-lokinet-irc-chat)
+	- Step 3 [Joining the lokinet IRC Chat](#3-joining-a-lokinet-irc-chat)
 	- Step 4 [Hosting a SNApp](#4-hosting-a-snapp)
 
 ## Getting Help and Reporting Bugs Guidelines
@@ -54,7 +54,7 @@ We suggest going through each guide in the following order:
 
 2. [Accessing SNApps](../../Lokinet/Guides/AccessingSNApps.md) - Setting up your computer to access SNApps.
 
-3. [Joining a lokinet IRC chat anonymously](../../../Lokinet/Guides/AccessingSNApps/#test-services) - Start chatting with the community on Lokinet.
+3. [Joining a lokinet IRC chat anonymously](../Guides/LokinetIRC.md) - Start chatting with the community on Lokinet.
 
 4. [Hosting a SNApp](../../Lokinet/Guides/HostingSNApps.md) - How to host a SNApp on Lokinet.
 
@@ -90,11 +90,8 @@ The guide will cover:
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report your issues to the [Loki-network](https://github.com/loki-project/loki-network/issues) repository if you find them, especially if you solved the issue.
 
-### 3. Joining the Lokinet IRC Chat
-
-Once you can access a SNApp with a `.loki` suffix you can then join any IRC chat hosted on the Lokinet.
-
-We suggest reading through the [#test-services](../../../Lokinet/Guides/AccessingSNApps/#test-services) section of the previous guide.
+### 3. Joining a Lokinet IRC Chat
+This guide will help you gain access to lokinet IRC channels, to access the guide [click here](../Guides/LokinetIRC.md).
 
 Alternatively, all you need to do is download your favourite IRC client, have `./lokinet` running and connect to a server with the following address `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki` with port `6667` and join channel `#lokinet`. 
 
