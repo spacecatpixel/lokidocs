@@ -43,3 +43,7 @@ Now we will serve our index.html file to the lokinet by running the following co
 Now if you go to the .loki address you saved before your message “hello lokinet” will be displayed. 
 
 Jump onto the lokinet irc and see if others can access your SNApp.
+
+### Finish
+
+Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#1-lokinet-installation).
