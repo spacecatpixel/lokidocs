@@ -14,7 +14,7 @@ After the above guide is finished you should be able to run `lokinet` and be abl
 
 ## 3. Route Configuration
 
-To use an exit node as a client, add the following option to the `[network]` section in `~/.lokinet/lokinet.ini` 
+To use an exit node as a client, you need to change the `[network]` section in `~/.lokinet/lokinet.ini` 
 
 Use the following command to access your `lokinet.ini` file.
 
