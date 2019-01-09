@@ -1,5 +1,5 @@
 # Hosting a SNApp
-## Downloading an IRC client
+## 1. Downloading an IRC client
 
 For this guide we will be downloading and using the `konversation` IRC client.
 
@@ -14,7 +14,7 @@ Once Konversation has been downloaded and installed you can then launch the soft
 > **Note:** You must be running `lokinet` to be able to access any IRC chats hosted on the Lokinet.
 > If you do not have `lokinet` running, check out the installion guide [here](AccessingSNApps.md).
 
-## Connecting to a Lokinet IRC
+## 2. Connecting to a Lokinet IRC
 
 On first startup of Konversation a window will pop up with the heading `Server List`.
 
@@ -22,7 +22,7 @@ From this window we will click the `New...` button.
 
 Next to `Network name:` add the text `Lokinet Chat`.
 
-#### Server details
+#### 2.1 Server details
 In this window, underneith the `Servers:` section click the `Add...` button.
 
 Copy and paste the following loki address into servers: `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki`
@@ -33,7 +33,7 @@ This window should look similar to the below before clicking the `OK` button.
 
 <center>![konversation2](../../assets/konversation2.JPG)</center>
 
-#### Channel details
+#### 2.2 Channel details
 Next we will add the details of the lokinet channel to automatically join the chat when accessing the server.
 
 Click the `Add...` button underneith the `Auto Join Channels:` section.
@@ -56,6 +56,6 @@ Congratulations, at this point you should be connected and have joined a channel
 
 <center>![konversation5](../../assets/konversation5.JPG)</center>
 
-### Finish
+## Finish
 
-Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#1-lokinet-installation).
+Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#4-hosting-a-snapp).

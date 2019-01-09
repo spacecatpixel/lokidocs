@@ -78,7 +78,7 @@ If you want a debian package install the debian maintainer packages needed
 ---
 ### Finish
 
-Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#1-lokinet-installation).
+Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#2-accessing-snapps).
 
 
 

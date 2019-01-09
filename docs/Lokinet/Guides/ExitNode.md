@@ -16,13 +16,13 @@ To use an exit node as a client, add the following option to the `[network]` sec
 This sets to use an exit node by its public identity key and sets a strict first hop by its public identity key.
 We set a strict first hope so that we can easily set up the routing table.
      
-toynet exit public key list by region:
+##### Toynet exit public key list by region:
 
 Romania:
 
 * `b61df944b8547af56201c6c7528ed86289566dcf73358c5ef8e3b4e628671399`
     
-toynet first hop public key list with IP
+##### Toynet first hop public key list with IP
 
 * `8df8ca1cc9d39d381f0efafdf58e2569457675a1e543189bea8279522aee6461` `167.114.185.46`
 
@@ -43,7 +43,7 @@ In this example your first hop is at `162.243.164.223` and your network's defaul
 
 #### Linux
 
-set the route that routes everything over lokinet do the following as root:
+Set the route that routes everything over lokinet do the following as root:
 
     # ip route add 162.243.164.223 via 192.168.0.1
     # ip route del default

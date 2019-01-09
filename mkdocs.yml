@@ -70,15 +70,16 @@ nav:
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
+    - 'Public Testing Overview': 'Lokinet/Guides/PublicTestingGuide.md'
     - 'SNApps': 'Lokinet/SNApps.md'
     - 'LLARP': 'Lokinet/LLARP.md'
     - 'Developers': 'Lokinet/DeveloperInfo.md'
     - Guides:
-        - 'Lokinet Public Testing': 'Lokinet/Guides/PublicTestingGuide.md'
         - 'Installation': 'Lokinet/Guides/Install.md'
         - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
         - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
         - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
+        - 'Route through Exit Node': 'Lokinet/Guides/RouteThroughExitNode.md'
         - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 - Loki Services:

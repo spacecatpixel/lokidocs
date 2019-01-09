@@ -4,11 +4,11 @@ The function of [SNApps](../SNApps.md) is similar to so-called hidden services i
 
 SNApp operators use the traditional server-client model with the key difference being that [Service Nodes](../../ServiceNodes/SNOverview.md) will be intermediaries in a users connection through Lokinet. When a SNApp wishes to register on the network, it must update the DHT with its descriptor. This descriptor contains various introducers, which are specific Service Nodes that users can contact to form a path to the SNApp. When these paths are set up, users can connect to the SNApp without either party knowing where the other is located in the network.
 
-## Installing
+## 1. Installing
 
 To install lokinet, see the install guide [here](../../Lokinet/Guides/Install.md).
 
-## DNS
+## 2. Setting your DNS
 Next we need to edit our resolv.conf files and add our dns resolver.
 
 Run the following command: 
@@ -26,7 +26,7 @@ Next we need to update our /etc/resolv.conf file by running the command:
 
 `sudo resolvconf -u`
 
-## Setup
+## 3. Setup
 
 **DO NOT RUN LOKINET AS ROOT**
 
@@ -45,12 +45,12 @@ Then run lokinet in foreground:
 For future reference, after generating initial configuration you just need to run `lokinet` and start browsing.
 
 
-## Test services
+## 4. Test services
 Jump onto a browser such as google chrome or firefox and try and go to the url `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki`. If you see a youtube video you are in luck, congratulations, you now have access to the Lokinet.
 
 ## Finish
 
-Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#1-lokinet-installation).
+Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#3-joining-a-lokinet-irc-chat).
 
 
 ## Best Practices

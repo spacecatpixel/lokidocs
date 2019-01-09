@@ -28,6 +28,7 @@ This may change depending on new updates, so you should check here regularly, or
 	- Step 2 [Accessing SNApps](#2-accessing-snapps)
 	- Step 3 [Joining the lokinet IRC Chat](#3-joining-a-lokinet-irc-chat)
 	- Step 4 [Hosting a SNApp](#4-hosting-a-snapp)
+	- Step 5 [Route through an Exit Node](#5-route-through-an-exit-node)
 
 ## Getting Help and Reporting Bugs Guidelines
 
@@ -57,6 +58,8 @@ We suggest going through each guide in the following order:
 3. [Joining a lokinet IRC chat anonymously](../Guides/LokinetIRC.md) - Start chatting with the community on Lokinet.
 
 4. [Hosting a SNApp](../../Lokinet/Guides/HostingSNApps.md) - How to host a SNApp on Lokinet.
+
+5. [Route through an Exit Node](../../Lokinet/Guides/RouteThroughExitNode.md) - How to route your traffic data through a Lokinet Exit Node.
 
 ### 1. Lokinet Installation
 
@@ -111,3 +114,16 @@ The guide will cover:
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report your issues to the [Loki-network](https://github.com/loki-project/loki-network/issues) repository if you find them, especially if you solved the issue.
 
+### 5. Route through an Exit Node
+
+This guide will help you route your internet data through a Lokinet Exit Node, to access the guide [click here](../Guides/RouteThroughExitNode.md).
+
+The guide will cover:
+
+- Configuring your `lokinet.ini` file.
+
+- Finding your default gateway.
+
+- Setting up your route.
+
+Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report your issues to the [Loki-network](https://github.com/loki-project/loki-network/issues) repository if you find them, especially if you solved the issue.
