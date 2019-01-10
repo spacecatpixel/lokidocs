@@ -24,7 +24,7 @@ This may change depending on new updates, so you should check here regularly, or
 	- [Getting Help](#getting-help)
 	- [Reporting Bugs](#reporting-bugs)
 - [User Guide](#user-guide)
-	- Step 1 [Lokinet Installion](#1-lokinet-installion)
+	- Step 1 [Lokinet Installation](#1-lokinet-installation)
 	- Step 2 [Accessing SNApps](#2-accessing-snapps)
 	- Step 3 [Joining the lokinet IRC Chat](#3-joining-a-lokinet-irc-chat)
 	- Step 4 [Hosting a SNApp](#4-hosting-a-snapp)
