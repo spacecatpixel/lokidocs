@@ -67,3 +67,10 @@ pre, code {
     font-family:Roboto, sans-serif;
 }
 
+@media only screen and (max-width: 76.1875em){
+    .md-header-nav__topic a {
+    font-size:11px;
+    padding:2px;
+    font-family:Roboto, sans-serif;
+}
+}
