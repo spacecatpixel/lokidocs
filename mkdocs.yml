@@ -17,12 +17,13 @@ theme:
   palette:
      accent: 'green'
 
+
   font:
     title: 'Proxima Nova'
     text: 'Roboto Regular'
     code: 'Roboto'
   favicon: 'Loki_favicon32x32.png'
-  logo: 'Loki_favicon32x32.png'
+  logo: 'logo.svg'
 
 nav:
 - 'Home': 'index.md'
@@ -118,6 +119,9 @@ nav:
 extra_css:
   - CSS/style.css
   - CSS/font.css
+
+extra_javascript:
+  - JAVASCRIPT/links.js
 
 extra:
   social:

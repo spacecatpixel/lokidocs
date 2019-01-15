@@ -60,3 +60,10 @@ pre, code {
 .md-typeset a:visited {
     color: #0006ff;
 }
+
+.md-header-nav__topic a {
+    font-size:14px;
+    padding:10px;
+    font-family:Roboto, sans-serif;
+}
+

@@ -24,3 +24,13 @@
     	background-color: #008522;
     }
 }
+/* Changes menu bar link's colour on hover. */
+.md-header-nav__topic a:hover {
+color:#008522;
+}
+
+/*Sizing for Loki logo in menu bar */
+#Home img{
+    width: 150px;
+    min-height: 30px;
+}
