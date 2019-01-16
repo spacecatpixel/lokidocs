@@ -7,7 +7,7 @@
 
 /* Highlight current page in nav menu */
 .md-nav__link--active {
-    color      : #008522;
+    color      : #78be20;
     font-weight: bold;
 }
 
@@ -23,19 +23,19 @@
     .md-nav__source {
     	background-color: #008522;
     }
-    .md-header-nav__topic a {
-    font-size:100px;
-    padding:1px;
-    font-family:Roboto, sans-serif;
 }
-}
+
 /* Changes menu bar link's colour on hover. */
 .md-header-nav__topic a:hover {
-color:#008522;
+color:#78be20;
 }
 
 /*Sizing for Loki logo in menu bar */
 #Home img{
     width: 150px;
     min-height: 30px;
+}
+
+.md-main{
+    background-color:#1a1a1a;
 }

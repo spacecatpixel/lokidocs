@@ -9,41 +9,43 @@ pre, code {
     font-style: normal;
     font-size     : 18px;
     font-weight: 200;
+    color:white!important;
+    background-color:#808080!important;
 }
 
 .md-typeset h1 {
-    color         : #000000;
+    color         : white;
     font-size     : 36px;
     text-transform: none;
 }
 
 .md-typeset h2 {
-    color         : #000000;
+    color         : white;
     font-size     : 28px;
     font-weight    : bold;
     text-transform: none;
 }
 
 .md-typeset h3 {
-    color         : #000000;
+    color         : #ddd;
     font-size     : 22px;
     text-transform: none;
 }
 
 .md-typeset h4 {
-    color         : #000000;
+    color         : #ddd;
     font-size     : 20px;
     text-transform: none;
 }
 
 .md-typeset h5 {
-    color         : #000000;
+    color         : #ddd;
     font-size     : 18px;
     text-transform: none;
 }
 
 .md-typeset h6 {
-    color         : #000000;
+    color         : #ddd;
     font-size     : 16px;
     text-transform: none;
 }
@@ -52,13 +54,23 @@ pre, code {
 .md-typeset ul,
 .md-typeset ol,
 .md-typeset table {
-    color    : #000000;
+    color    : #ddd;
     font-size: 16px;
+}
+
+.md-nav__link[data-md-state="blur"] {
+    color: #78be20;
 }
 
 .md-typeset a:link,
 .md-typeset a:visited {
-    color: #0006ff;
+    color: #78be20;
+}
+
+.md-nav__item, 
+.md-nav__title,
+.md-nav__link li {
+    color    : #ddd;
 }
 
 .md-header-nav__topic a {
@@ -67,10 +79,10 @@ pre, code {
     font-family:Roboto, sans-serif;
 }
 
-@media only screen and (max-width: 76.1875em){
+@media only screen and (max-width: 76.1875em) {
     .md-header-nav__topic a {
     font-size:11px;
     padding:2px;
     font-family:Roboto, sans-serif;
-}
+    }
 }

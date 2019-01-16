@@ -8,7 +8,6 @@ var faviconlink = document.getElementById('Home');
 faviconlink.href = 'https://www.loki.network';
 
 /* Removes Loki Docs Title text and replaces with Menu Bar*/
-
 var headers = document.getElementsByClassName("md-header-nav__topic");
 for (var i = headers.length - 1; i >= 0; i--) {
 	if (headers[i].innerText === 'Loki Docs') {

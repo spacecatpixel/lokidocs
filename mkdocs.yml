@@ -135,6 +135,8 @@ extra:
       link: 'https://www.reddit.com/r/LokiProject'
     - type: 'youtube'
       link: 'https://www.youtube.com/lokinetwork'
+    - type: 'facebook'
+      link: 'https://www.facebook.com/LokiNetwork/'
 
 # Google Analytics
 google_analytics:
