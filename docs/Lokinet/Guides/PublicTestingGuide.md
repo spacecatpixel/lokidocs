@@ -106,6 +106,8 @@ The guide will cover:
 
 - Finding your Lokinet pubkey.
 
+- Editing our `lokinet.ini` file to enable persistent SNApps.
+
 - Creating a directory for your SNApp's code.
 
 - Creating an `index.html` file with `Hello Lokinet` to display to the network.
