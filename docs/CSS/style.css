@@ -60,3 +60,26 @@
     color:#78be20!important;
 }
 
+.md-search-result__meta{
+background-color:#ddd ;
+color:black;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input{
+    background-color:#1a1a1a!important;
+}
+
+.md-search__scrollwrap{
+    background-color:#ddd;
+}
+
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input + .md-search__icon, 
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input::placeholder, 
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input {
+    color:white;
+}
+
+.md-search__input ~ .md-search__icon, .md-search__input::placeholder{
+    color:#78be20;
+}
