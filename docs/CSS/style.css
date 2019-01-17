@@ -27,7 +27,7 @@
 
 /* Changes menu bar link's colour on hover. */
 .md-header-nav__topic a:hover {
-color:#78be20;
+    color:#78be20;
 }
 
 /*Sizing for Loki logo in menu bar */
@@ -44,3 +44,19 @@ color:#78be20;
 {
     color:#78be20!important;
 }
+
+.md-clipboard::before{
+    color: #ddd;
+}
+
+.pre:hover .md-clipboard::before, 
+.codehilite:hover .md-clipboard::before, 
+.md-typeset .highlight:hover .md-clipboard::before{
+    color:black;
+}
+
+[data-md-color-accent="green"] .md-typeset .md-clipboard:hover::before, 
+[data-md-color-accent="green"] .md-typeset .md-clipboard:active::before{
+    color:#78be20!important;
+}
+
