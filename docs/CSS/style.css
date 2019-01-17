@@ -32,7 +32,7 @@
 
 /*Sizing for Loki logo in menu bar */
 #Home img{
-    width: 150px;
+    width     : 150px;
     min-height: 30px;
 }
 
@@ -61,8 +61,8 @@
 }
 
 .md-search-result__meta{
-background-color:#ddd ;
-color:black;
+    background-color:#ddd ;
+    color           :black;
 }
 
 [data-md-toggle="search"]:checked ~ .md-header .md-search__input{
@@ -82,4 +82,8 @@ color:black;
 
 .md-search__input ~ .md-search__icon, .md-search__input::placeholder{
     color:#78be20;
+}
+
+.md-typeset code{
+    box-shadow: 0.4em 0 0 #D3D3D3, -0.4em 0 0 #D3D3D3;
 }

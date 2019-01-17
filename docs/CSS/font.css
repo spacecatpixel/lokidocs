@@ -1,16 +1,16 @@
 html, body {
     font-family: Arial, sans-serif;
-    font-style: normal;
+    font-style : normal;
 }
 
 pre, code {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-    font-style: normal;
-    font-size     : 18px;
-    font-weight: 200;
-    color:white!important;
-    background-color:#808080!important;
+    font-style      : normal;
+    font-size       : 18px;
+    font-weight     : 200;
+    color           : #1a1a1a!important;
+    background-color: #ddd!important;
 }
 
 .md-typeset h1 {
@@ -22,7 +22,7 @@ pre, code {
 .md-typeset h2 {
     color         : white;
     font-size     : 28px;
-    font-weight    : bold;
+    font-weight   : bold;
     text-transform: none;
 }
 
@@ -70,19 +70,19 @@ pre, code {
 .md-nav__item, 
 .md-nav__title,
 .md-nav__link li {
-    color    : #ddd;
+    color: #ddd;
 }
 
 .md-header-nav__topic a {
-    font-size:14px;
-    padding:10px;
+    font-size  :14px;
+    padding    :10px;
     font-family:Roboto, sans-serif;
 }
 
 @media only screen and (max-width: 76.1875em) {
     .md-header-nav__topic a {
-    font-size:11px;
-    padding:2px;
+    font-size  :11px;
+    padding    :2px;
     font-family:Roboto, sans-serif;
     }
 }
