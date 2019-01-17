@@ -62,6 +62,9 @@ pre, code {
     color: #78be20;
 }
 
+.md-nav__link:hover {
+    color:#78be20!important;
+}
 .md-typeset a:link,
 .md-typeset a:visited {
     color: #78be20;

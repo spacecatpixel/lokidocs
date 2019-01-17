@@ -39,3 +39,8 @@ color:#78be20;
 .md-main{
     background-color:#1a1a1a;
 }
+
+.md-nav__link:hover
+{
+    color:#78be20!important;
+}
