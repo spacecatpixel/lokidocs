@@ -3,7 +3,7 @@
 
 Depending on your desired outcome you may want to only run a one time SNApp or a SNApp that continues to persistently use the same .loki pubkey.
 
-To create a temporary SNApp continue to [1.1 Temporary SNApp](#1.1-temporary-snapp), else if you want to run a persistent SNApp coninue to [1.2 Persistent SNApp](#1.2-persistent-snapp)
+To create a temporary SNApp continue to [1.1 Temporary SNApp](#11-temporary-snapp), else if you want to run a persistent SNApp coninue to [1.2 Persistent SNApp](#12-persistent-snapp).
 
 ### 1.1 Temporary SNApp
 When you run `./lokinet` your terminal will show a bunch of outputs. 
@@ -16,7 +16,7 @@ You are looking for the line with `lokitun0` in it. The line should look like th
 
 This loki address shown within this output will be the url to your SNApp and the local address to bind SNApps on. You can share the `.loki` address to individuals who you want to access your SNApp.
 
-You can proceed to [2. Creating your SNApp](#2-creating-your-snapp)
+You can proceed to [2. Creating your SNApp](#2-creating-your-snapp).
 
 ### 1.2 Persistent SNApp
 Open up your `lokinet.ini` file and add a path to where your SNApp key files will be stored.
