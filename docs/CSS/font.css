@@ -9,10 +9,9 @@ pre, code
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
     font-style      : normal;
-    font-size       : 18px;
-    font-weight     : 200;
-    color           : #1a1a1a!important;
-    background-color: #ddd!important;
+    color           : #78be20!important;
+    background-color: #272727!important;
+
 }
 
 .md-typeset h1 

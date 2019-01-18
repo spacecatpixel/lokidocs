@@ -99,7 +99,7 @@
 
 .md-typeset code
 {
-    box-shadow: 0.4em 0 0 #D3D3D3, -0.4em 0 0 #D3D3D3;
+    box-shadow: 0.0em 0 0 #272727, -0.0em 0 0 #272727;
 }
 
 .md-typeset .admonition > .admonition-title::before, .md-typeset details > .admonition-title::before, 
