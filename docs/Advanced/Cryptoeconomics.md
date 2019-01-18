@@ -4,8 +4,8 @@ Loki is a Blockchain network oriented toward the provision of privacy-preserving
 
 To solve this problem the Loki Project team commissioned two Economic papers:
 
-1. [Cryptoeconomics of the Loki Network](https://loki.network/wp-content/uploads/2018/08/CryptoEconomicsOfTheLokiNetworkHistoric.pdf): This Economic Report was commissioned to characterise the game theory behind incentivising Service Node operators. 
-2. [Loki Cryptoeconomics](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf): This Report was commissioned to apply the game theory specific to the Loki Networks economics.
+1. [Cryptoeconomics of the Loki Network](https://loki.network/cryptoeconomics): This Economic Report was commissioned to characterise the game theory behind incentivising Service Node operators. 
+2. [Loki Cryptoeconomics](https://loki.network/proposal): This Report was commissioned to apply the game theory specific to the Loki Networks economics.
 
 These 2 papers analysed the [Block Reward](#block-reward), [Block Reward Split](#block-reward-split), [Inflation](#inflation), [Circulating Supply](#circulating-supply) and the amount of potential Service Nodes on the network to develop a cryptoeconomic solution to incentivise Service Node Operators.
 
@@ -18,9 +18,9 @@ The Loki Block Reward is generated in a similar manner to most proof-of-work cry
 
 The amount of Loki rewarded `BR` to the network at each block height `h` follows the following equation:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;BR = 28 + \frac{100}{2^{(\frac{h}{64800})}}" title="\Large BR = 28 + \frac{100}{2^{\frac{*h*}{64800}}}" />
+<center>![Block Reward Formula](../../assets/blockreward.svg)</center>
 
-This block reward formula is a result of [Loki's Cryptoeconomic study](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf), on the 30th of July, 2018, at block 64324, the Loki block reward went from being calculated in terms of the circulating supply with an emission speed factor of 20, to be derived from the block height.
+This block reward formula is a result of [Loki's Cryptoeconomic study](https://loki.network/proposal), on the 30th of July, 2018, at block 64324, the Loki block reward went from being calculated in terms of the circulating supply with an emission speed factor of 20, to be derived from the block height.
 
 ### Block Reward Split
 
