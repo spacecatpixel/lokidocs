@@ -104,8 +104,10 @@ Now, everything should be working and your Loki daemon should start as a service
 ## How to update Loki binaries when running daemon as a service
 
 To update your Loki node, a process like the one found at [Full Guide on Service Nodes - Updating loki](https://github.com/loki-project/Meta/blob/master/SNFullGuide.md#updating-loki) can be followed. The main inconvenience of this method is that lokid.service file has to be edited on every update as the Loki daemon file path is changed. So we are forced to run several additional steps that are  otherwise unnecessary. Because of this, two Loki daemon updating methods are described below:
-- [Method based on "Full Guide on Service Nodes - Updating loki"](#method-based-on-full-guide-on-service-nodes-updating-loki)
-- [Updating Loki binaries without editing lokid.service file method](#updating-loki-binaries-without-editing-lokidservice-file-method)
+
+- [Method based on "Full Guide on Service Nodes - Updating loki"](#method-based-on-full-guide-on-service-nodes-updating-loki).
+
+- [Updating Loki binaries without editing lokid.service file method](#updating-loki-binaries-without-editing-lokidservice-file-method).
 
 
 ### Method based on "Full Guide on Service Nodes - Updating loki" ###
@@ -131,7 +133,7 @@ The following commands should let us know if everything went fine:
 
 - Test 2. Check the Service Node status:
 `~/loki-linux-x64-<VERSION>/./lokid print_sn_status` (replace `<VERSION>` with the one found on step 1, `1.0.4` in our example).
->     For Testnet,  append the --testnet flag at the end of the command.
+> For Testnet,  append the --testnet flag at the end of the command.
 
 
 ### Updating Loki binaries without editing lokid.service file method ###
@@ -164,10 +166,10 @@ The following commands should let us know if everything went fine:
 
 - Test 2. Check the Service Node status:
 `~/loki/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
->     For Testnet,  append the --testnet flag at the end of the command.
+> For Testnet,  append the --testnet flag at the end of the command.
 
 - Test 3. Check what Loki daemon version is running now that this information is not in its folder's name: `~/loki/./lokid version`.
->     For Testnet,  append the --testnet flag at the end of the command. 
+> For Testnet,  append the --testnet flag at the end of the command. 
 
 
 Skip step 3 in future updates.
@@ -182,7 +184,7 @@ you have to connect to your server via SSH and:
 1. Stop the Loki daemon service: `sudo systemctl stop lokid.service` (see [NOTE](#note)).
 
 2. Start lokid from shell: `~/YOUR_LOKI_FILES_FOLDER/./lokid` (`~` character replaces user's home directory full path, do not skip it!).
->     For Testnet,  append the --testnet flag at the end of the command.
+> For Testnet,  append the --testnet flag at the end of the command.
 
 3. Run the commands you need. For instance: `prepare_registration` if you are registering your Service Node.
 
@@ -196,11 +198,9 @@ The following commands let us check that Loki daemon service is active again:
 
 - Test 2. Check the Service Node status (remember to replace YOUR_LOKI_FILES_FOLDER with your own):
 `~/YOUR_LOKI_FILES_FOLDER/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
->     For Testnet,  append the --testnet flag at the end of the command. 
-
-
+> For Testnet,  append the --testnet flag at the end of the command. 
 
 ---------------------------------------------------------------
 
-### NOTE: 
-If you have not updated your Loki binary files to the latest version yet you are encouraged to, since 1.0.0 or 1.0.1 users can run into timing issues that lead to deregistration with multiple consecutive daemon restarts.
+>NOTE: 
+>If you have not updated your Loki binary files to the latest version yet you are encouraged to, since 1.0.0 or 1.0.1 users can run into timing issues that lead to deregistration with multiple consecutive daemon restarts.

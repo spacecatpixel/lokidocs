@@ -110,4 +110,5 @@ If you want to unset the route everything over lokinet route do the following as
 Now when you browse the internet your IP address will be obfuscated. Go to a "where is my location" website to see if your IP appears to be in Romania.
 
 ## Finish
+
 Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#1-lokinet-installation).

@@ -1,42 +1,51 @@
 /* Override header and footer */
 .md-footer-nav,
 .md-footer-meta, 
-.md-header {
+.md-header
+{
     background-color: #000000
 }
 
 /* Highlight current page in nav menu */
-.md-nav__link--active {
+.md-nav__link--active
+{
     color      : #78be20;
     font-weight: bold;
 }
 
 /* Increase size of social media links in page footer */
-.md-footer-social {
+.md-footer-social
+{
     font-size: 20px;
 }
 
-@media only screen and (max-width: 76.1875em){
-    html .md-nav--primary .md-nav__title--site {
+@media only screen and (max-width: 76.1875em)
+{
+    html .md-nav--primary .md-nav__title--site 
+    {
     	background-color: #000000;
     }
-    .md-nav__source {
+    .md-nav__source
+    {
     	background-color: #008522;
     }
 }
 
 /* Changes menu bar link's colour on hover. */
-.md-header-nav__topic a:hover {
+.md-header-nav__topic a:hover
+{
     color:#78be20;
 }
 
 /*Sizing for Loki logo in menu bar */
-#Home img{
+#Home img
+{
     width     : 150px;
     min-height: 30px;
 }
 
-.md-main{
+.md-main
+{
     background-color:#1a1a1a;
 }
 
@@ -45,18 +54,21 @@
     color:#78be20!important;
 }
 
-.md-clipboard::before{
+.md-clipboard::before
+{
     color: #ddd;
 }
 
 .pre:hover .md-clipboard::before, 
 .codehilite:hover .md-clipboard::before, 
-.md-typeset .highlight:hover .md-clipboard::before{
+.md-typeset .highlight:hover .md-clipboard::before
+{
     color:black;
 }
 
 [data-md-color-accent="green"] .md-typeset .md-clipboard:hover::before, 
-[data-md-color-accent="green"] .md-typeset .md-clipboard:active::before{
+[data-md-color-accent="green"] .md-typeset .md-clipboard:active::before
+{
     color:#78be20!important;
 }
 
@@ -69,14 +81,15 @@
     background-color:#1a1a1a!important;
 }
 
-.md-search__scrollwrap{
+.md-search__scrollwrap
+{
     background-color:#ddd;
 }
 
-
 [data-md-toggle="search"]:checked ~ .md-header .md-search__input + .md-search__icon, 
 [data-md-toggle="search"]:checked ~ .md-header .md-search__input::placeholder, 
-[data-md-toggle="search"]:checked ~ .md-header .md-search__input {
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input 
+{
     color:white;
 }
 
@@ -84,13 +97,15 @@
     color:#78be20;
 }
 
-.md-typeset code{
+.md-typeset code
+{
     box-shadow: 0.4em 0 0 #D3D3D3, -0.4em 0 0 #D3D3D3;
 }
 
 .md-typeset .admonition > .admonition-title::before, .md-typeset details > .admonition-title::before, 
 .md-typeset .admonition > summary::before, 
-.md-typeset details > summary::before{
+.md-typeset details > summary::before
+{
     color: #78be20;
 }
 
@@ -104,11 +119,22 @@
     color: #78be20;
 }
 
-.md-typeset table:not([class]) th{
+.md-typeset table:not([class]) th
+{
     background-color:#78be20;
 }
 
 .md-typeset table:not([class]) td
 {
     border-top:0.2rem solid #78be20;
+}
+
+.md-typeset blockquote
+{
+    border-left: 0.4rem solid #78be20;
+}
+
+.md-typeset hr 
+{
+    border-bottom: 0.1rem dotted #78be20;
 }

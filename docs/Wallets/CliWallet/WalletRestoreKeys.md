@@ -11,16 +11,17 @@ If you have a Mnemonic Seed Phrase, restoring your wallet from it would probably
 - Download the latest release of wallet CLI software for your desired operating system: https://github.com/loki-project/loki/releases
 - Unzip  `loki-[operating-system]-[platform]-[version].zip` file
 
-![Wallet-Cli-Folder](http://u.cubeupload.com/cryptolokimax/cliwalletfolder.png)
+<center>![Wallet-Cli-Folder](../../assets/cliwalletfolder.png)</center>
 
 ## Step 2: Run wallet in restore mode
 
 - Open a [Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe) (Windows) or [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator) (Linux / OSX) and navigate to the wallet folder
+
 - Run wallet with `--generate-from-keys`  argument: 
 
-  `./loki-wallet-cli --generate-from-keys [New Wallet Name]`
+`./loki-wallet-cli --generate-from-keys [New Wallet Name]`
 
-  where `[New Wallet Name]` is a new wallet name. You can enter any name here, use something rememberable and meaningful. 
+Where `[New Wallet Name]` is a new wallet name. You can enter any name here, use something rememberable and meaningful. 
 
 ## Step 3: Enter wallet address, view and spend keys
 
@@ -30,16 +31,13 @@ On the next step, specify all 3 wallet keys, one by one:
 - Enter **Secret spend key** and press [Enter]
 - Enter **Secret view key** and press [Enter]
 
-![Wallet-Restore-From-Keys](http://u.cubeupload.com/cryptolokimax/cliwalletrestorekeys.png)
-
-
+<center>![Wallet-Restore-From-Keys](../../assets/cliwalletrestorekeys.png)</center>
 
 ## Step 4: Enter wallet password
 
 - You will be prompted for a password. Enter a new password that follows the [Password Policy](https://en.wikipedia.org/wiki/Password_policy) and press [Enter].
+
 - Confirm password and press [Enter].
-
-
 
 ## Step 5: Specify a blockchain height
 
@@ -47,13 +45,12 @@ If you know the block height at which wallet was created or a first transaction 
 
 If you don't know a specific blockchain height, press [Enter] for scanning from block height 0.
 
-
-
 ## Step 6: Wait for the refresh process to finish
 
 For refresh process to start, you need to have your daemon running. Another option would be to use a remote node. For that, use the following command, replacing <host> and <port> with the host and port number of the remote node you are connecting to:
 
-`./loki-wallet-cli --daemon-address <host>:<port>`
+```
+./loki-wallet-cli --daemon-address <host>:<port>
+```
 
 Once refresh is done, you can use your full functioning restored wallet. Your public wallet address will remain the same.
-
