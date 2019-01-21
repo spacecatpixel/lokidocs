@@ -8,7 +8,7 @@ You can of course run the Loki software on any operating system that you can get
 
 ### Summary of Lokinet Requirements
 
-This may change depending on new updates, so you should check here regularly, or follow our [telegram](https://t.me/LokiCommunity)/[discord](https://discord.gg/DN72VN) announcements channel. 
+This may change depending on new updates, so you should check here regularly, or follow our [telegram](https://t.me/LokiCommunity)/[discord](https://discord.gg/67GXfD6) announcements channel. 
 
 |Spec|Note|
 |---|---|
