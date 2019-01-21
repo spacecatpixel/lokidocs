@@ -120,6 +120,7 @@ extra_css:
 
 extra_javascript:
   - JAVASCRIPT/links.js
+  - JAVASCRIPT/style.js
 
 extra:
   social:

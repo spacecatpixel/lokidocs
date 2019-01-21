@@ -14,4 +14,3 @@ for (var i = headers.length - 1; i >= 0; i--) {
 		headers[i].innerHTML = '<a href="https://www.loki.network">Home </a><a href="https://loki-project.github.io/loki-docs/">Documentation </a><a href="https://loki.network/#team-section">Team </a><a href="https://loki.network/#papers">Papers </a> <a href="https://loki.network/blog/"">Blog</a>';
 	}
 }
-
