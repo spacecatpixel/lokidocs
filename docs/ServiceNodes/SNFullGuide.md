@@ -192,7 +192,7 @@ Where `<link>` is the download link of the latest linux release. To find the lin
 Your command should look something like:
 
 ```
-wget https://github.com/loki-project/loki/releases/download/v2.0.3/loki-linux-x64-v2.0.3.zip`
+wget https://github.com/loki-project/loki/releases/download/v2.0.3/loki-linux-x64-v2.0.3.zip
 ```
 
 If `wget` is not installed you will need to run `sudo apt-get install wget`.
@@ -200,7 +200,7 @@ If `wget` is not installed you will need to run `sudo apt-get install wget`.
 To get to the binaries, we need to unzip them. Download and install unzip by running the following command.
 
 ```
-sudo apt-get install unzip`
+sudo apt-get install unzip
 ```
 
 If `unzip` is not installed you will need to run `sudo apt-get install unzip`.
@@ -238,7 +238,7 @@ ls
 If not, sometimes unzip will dump the binaries in a folder. In our case the folder would be called `loki-linux-x64-1.0.3`, so to get into it we can type:
 
 ```
-cd loki-linux-x64-1.0.3`
+cd loki-linux-x64-1.0.3
 ```
 
 To check that they are in that folder, once again, type:
