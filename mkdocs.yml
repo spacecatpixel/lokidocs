@@ -103,6 +103,7 @@ nav:
         - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
         - 'Debugging': 'Advanced/Debugging.md'      
+        - 'Accepting Loki for Merchants and Exchanges': 'Advanced/AcceptingLoki.md'
 - 'FAQ': 'FAQ.md'
 - Contributing:
    - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
