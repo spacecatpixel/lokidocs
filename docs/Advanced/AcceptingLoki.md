@@ -39,9 +39,9 @@ If you need to check for payments programmatically, then follow the next [sectio
 
 - Generate a random 64 character hexadecimal string for the payment
 
-- Communicate the payment ID and Monero address to the individual who is making payment
+- Communicate the payment ID and Loki address to the individual who is making payment
 
-- Check for the payment using the "payments" command in monero-wallet-cli
+- Check for the payment using the "payments" command in loki-wallet-cli
 
 ## Checking for a Payment Programmatically
 
