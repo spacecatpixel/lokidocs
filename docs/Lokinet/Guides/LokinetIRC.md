@@ -1,7 +1,7 @@
 # Hosting a SNApp
 ## 1. Downloading an IRC client
 
-For this guide we will be downloading and using the `konversation` IRC client.
+For this guide, we will be downloading and using the `konversation` IRC client.
 
 Go into `Ubuntu Software` application and search for `konversation`.
 
@@ -12,18 +12,18 @@ Once found click the `install` button.
 Once Konversation has been downloaded and installed you can then launch the software.
 
 > **Note:** You must be running `lokinet` to be able to access any IRC chats hosted on the Lokinet.
-> If you do not have `lokinet` running, check out the installion guide [here](AccessingSNApps.md).
+> If you do not have `lokinet` running, check out the installation guide [here](AccessingSNApps.md).
 
 ## 2. Connecting to a Lokinet IRC
 
 On first startup of Konversation a window will pop up with the heading `Server List`.
 
-From this window we will click the `New...` button.
+From this window, we will click the `New...` button.
 
 Next to `Network name:` add the text `Lokinet Chat`.
 
 #### 2.1 Server details
-In this window, underneith the `Servers:` section click the `Add...` button.
+In this window, underneath the `Servers:` section click the `Add...` button.
 
 Copy and paste the following loki address into servers: `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki`
 
