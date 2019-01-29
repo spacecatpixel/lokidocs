@@ -78,7 +78,7 @@ Now we will serve our index.html file to the lokinet by running the following co
 sudo python3 -m http.server --bind <ip> <port>
 ```
 
-For this example our pubkey is set to `lokitun0` which has address `172.16.10.1`. The <port> number can be whatever we define it. Therefor the command we would run for this example would be:
+For this example our pubkey is set to `lokitun0` which has address `172.16.10.1`. The `<port>` number can be whatever we define it. Therefor the command we would run for this example would be:
 ```
 sudo python3 -m http.server --bind 172.16.10.1 80
 ``` 
