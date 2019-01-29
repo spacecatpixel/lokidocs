@@ -10,11 +10,11 @@ You can of course run the Loki software on any operating system that you can get
 
 ### Summary of Loki Service Node Requirements
 
-Full summary of Loki Service Node Requirements. This may change depending on Service Node functionality, so you should check here regularly, or follow our [telegram](https://t.me/LokiCommunity)/[discord](https://discord.gg/DN72VN) announcements channel. 
+Full summary of Loki Service Node Requirements. This may change depending on Service Node functionality, so you should check here regularly, or follow our [Telegram](https://t.me/LokiCommunity)/[Discord](https://discord.gg/DN72VN) announcements channel.
 
 |Spec|Note|
 |---|---|
-|Latest Binary|[loki-linux-x64-1.0.3](https://github.com/loki-project/loki/releases/latest)|
+|Latest Binary|[Loki Festive Freya](https://github.com/loki-project/loki/releases/latest)|
 |Software| Ubuntu 16.04|
 |Storage | 30-50gb|
 |Ram | 2-4 gb|
