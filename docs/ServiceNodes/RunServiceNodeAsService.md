@@ -62,7 +62,7 @@ CTRL+X -&gt; Y -&gt; ENTER</p>
 <code>sudo systemctl daemon-reload</code></p>
 </li>
 <li>
-<p>Stop the Loki daemon if it's running (see <a href="#note">NOTE</a>). Here you have to go into the <em>screen</em> session where you are running lokid and type:
+<p>Stop the Loki daemon if it's running. Here you have to go into the <em>screen</em> session where you are running lokid and type:
 <code>exit</code> + ENTER</p>
 </li>
 <li>
@@ -82,22 +82,16 @@ Now, everything should be working and your Loki daemon should start as a service
 
 ```
 ● lokid.service - lokid service
-
    Loaded: loaded (/etc/systemd/system/lokid.service; enabled; vendor preset: enabled)
-   
    Active: active (running) since Mon 2018-10-15 16:07:35 UTC; 15h ago
-   
  Main PID: 1669 (lokid)
- 
     Tasks: 22 (limit: 4648)
-    
    CGroup: /system.slice/lokid.service
-   
            └─1669 /home/snode/loki/lokid --non-interactive --service-node
 ```
 
 - Test 2. Check the Service Node status (remember to replace YOUR_LOKI_FILES_FOLDER with your own):
-`~/YOUR_LOKI_FILES_FOLDER/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
+`~/YOUR_LOKI_FILES_FOLDER/lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
 >     For Testnet,  append the --testnet flag at the end of the command. 
 
 
@@ -114,15 +108,15 @@ To update your Loki node, a process like the one found at [Full Guide on Service
 
 Connect to your server via SSH and:
 
-1. Find the latest binary version, for example `1.0.4`. Check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest)
+1. Find the latest binary version, for example `2.0.3`. Check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest)
 
-2. Stop the Loki daemon service: `sudo systemctl stop lokid.service` (see [NOTE](RunServiceNodeAsService.md#note)).
+2. Stop the Loki daemon service: `sudo systemctl stop lokid.service`
 
 3. Run an update on your machine (Linux based systems): `sudo apt-get update && sudo apt-get upgrade`
 
-4. Download and unzip the latest binary: `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip` and `unzip loki-linux-x64-<VERSION>.zip` (replace `<VERSION>` with the one found on step 1, `1.0.4` in our example).
+4. Download and unzip the latest binary: `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip` and `unzip loki-linux-x64-<VERSION>.zip` (replace `<VERSION>` with the one found on step 1, `2.0.3` in our example).
 
-5. Re-run steps 3 and 5 described in the [previous section](RunServiceNodeAsService.md#configuring-the-loki-daemon-as-a-service-for-the-first-time) in order to change YOUR_LOKI_FILES_FOLDER to `loki-linux-x64-<VERSION>`(replace `<VERSION>` with the one found on step 1, `1.0.4` in our example).
+5. Re-run steps 3 and 5 described in the [previous section](RunServiceNodeAsService.md#configuring-the-loki-daemon-as-a-service-for-the-first-time) in order to change YOUR_LOKI_FILES_FOLDER to `loki-linux-x64-<VERSION>`(replace `<VERSION>` with the one found on step 1, `2.0.3` in our example).
 
 6. Re-run steps from 6 to 9 described in the [previous section](RunServiceNodeAsService.md#configuring-the-loki-daemon-as-a-service-for-the-first-time). You can skip step 8 as your Loki daemon should not be running at this point.
 
@@ -132,7 +126,7 @@ The following commands should let us know if everything went fine:
 - Test 1. Check lokid.service status: `systemctl status lokid.service`. The output should show you that lokid.service is loaded and active.
 
 - Test 2. Check the Service Node status:
-`~/loki-linux-x64-<VERSION>/./lokid print_sn_status` (replace `<VERSION>` with the one found on step 1, `1.0.4` in our example).
+`~/loki-linux-x64-<VERSION>/lokid print_sn_status` (replace `<VERSION>` with the one found on step 1, `2.0.3` in our example).
 > For Testnet,  append the --testnet flag at the end of the command.
 
 
@@ -140,7 +134,7 @@ The following commands should let us know if everything went fine:
 
 If you do not want to edit your lokid.service file on every update, connect to your server via SSH and follow these alternative steps:
 
-1. Stop the Loki daemon service: `sudo systemctl stop lokid.service` (see [NOTE](#note)).
+1. Stop the Loki daemon service: `sudo systemctl stop lokid.service`
 
 2. Run an update on your machine (Linux based systems): `sudo apt-get update && sudo apt-get upgrade`
 
@@ -149,14 +143,14 @@ If you do not want to edit your lokid.service file on every update, connect to y
     - Re-run steps 3 and 5 described in the [previous section](#configuring-the-loki-daemon-as-a-service-for-the-first-time) in order to change YOUR_LOKI_FILES_FOLDER to `loki`.
     - Re-run steps 6 and 7 described in the [previous section](#configuring-the-loki-daemon-as-a-service-for-the-first-time).
     
-4. Find the latest binary version, for example `1.0.4`. Check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest)
+4. Find the latest binary version, for example `2.0.3`. Check [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest)
 
-5. Download the latest binary: `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip` (replace `<VERSION>` with the one found on step 4, `1.0.4` in our example).
+5. Download the latest binary: `wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip` (replace `<VERSION>` with the one found on step 4, `2.0.3` in our example).
 
-6. Unzip the latest binary in `~/loki` folder (replace `<VERSION>` with the one found on step 4, `1.0.4` in our example):
+6. Unzip the latest binary in `~/loki` folder (replace `<VERSION>` with the one found on step 4, `2.0.3` in our example):
     - If you want to be asked for confirmation everytime a file is going to be overwritten: `unzip -j loki-linux-x64-<VERSION>.zip 'loki-linux-x64-<VERSION>/*' -d ~/loki`
     - If you do not want to be asked, force overwriting: `unzip -j -o loki-linux-x64-<VERSION>.zip 'loki-linux-x64-<VERSION>/*' -d ~/loki`
-    
+
 7. Start lokid.service: `sudo systemctl start lokid.service`
 
 
@@ -165,10 +159,10 @@ The following commands should let us know if everything went fine:
 - Test 1. Check lokid.service status: `systemctl status lokid.service`. The output should show you that lokid.service is loaded and active.
 
 - Test 2. Check the Service Node status:
-`~/loki/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
+`~/loki/lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
 > For Testnet,  append the --testnet flag at the end of the command.
 
-- Test 3. Check what Loki daemon version is running now that this information is not in its folder's name: `~/loki/./lokid version`.
+- Test 3. Check what Loki daemon version is running now that this information is not in its folder's name: `~/loki/lokid version`.
 > For Testnet,  append the --testnet flag at the end of the command. 
 
 
@@ -176,31 +170,15 @@ Skip step 3 in future updates.
 
 
 
-## How to access Loki daemon in interactive mode when running daemon as a service
+## How to prepare a service node registration command when running daemon as a service
 
-Whenever you want to access lokid in interactive mode, for example to run Service Node registration command,
-you have to connect to your server via SSH and:
+When lokid runs as a service, you can interact with it by running a second `lokid CMD` to talk to
+the running loki daemon, such as the `~/loki/lokid print_sn_status` command given above.  As of loki
+2.0.3, this includes the `prepare_registration` command:
 
-1. Stop the Loki daemon service: `sudo systemctl stop lokid.service` (see [NOTE](#note)).
+`~/loki/lokid prepare_registration`
 
-2. Start lokid from shell: `~/YOUR_LOKI_FILES_FOLDER/./lokid` (`~` character replaces user's home directory full path, do not skip it!).
-> For Testnet,  append the --testnet flag at the end of the command.
-
-3. Run the commands you need. For instance: `prepare_registration` if you are registering your Service Node.
-
-4. Quit lokid by typing: `exit` + ENTER
-
-5. Start the service again: `sudo systemctl start lokid.service`
-
-The following commands let us check that Loki daemon service is active again:
-
-- Test 1. Check lokid.service status: `systemctl status lokid.service`. The output should show you that lokid.service is loaded and active.
-
-- Test 2. Check the Service Node status (remember to replace YOUR_LOKI_FILES_FOLDER with your own):
-`~/YOUR_LOKI_FILES_FOLDER/./lokid print_sn_status` (`~` character replaces user's home directory full path, do not skip it!).
-> For Testnet,  append the --testnet flag at the end of the command. 
-
----------------------------------------------------------------
-
->NOTE: 
->If you have not updated your Loki binary files to the latest version yet you are encouraged to, since 1.0.0 or 1.0.1 users can run into timing issues that lead to deregistration with multiple consecutive daemon restarts.
+which will ask you various questions (amount to stake, list of contributors, etc.) to generate a
+registration command to copy and paste into your command-line wallet to submit the service node
+registration.  It is not necessary to stop or restart the service node before or after using this
+command.
