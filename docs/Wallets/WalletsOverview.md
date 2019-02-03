@@ -1,12 +1,12 @@
 # Wallets
-The Loki wallets are a gateway into private decentralised transactions and communications. It allows you to hold private keys, secure or mine Loki, and trade peer-to-peer. 
+The Loki wallets are a gateway into private decentralised transactions and communications. They allow you to hold private keys, secure or mine Loki, and trade peer-to-peer. 
 
-Loki Wallets store a collection of public and private keys which can be used to receive, view, or spend Loki. 
+Loki wallets store a collection of public and private keys which can be used to receive, view, or spend Loki. 
 
-The wallet uses the private keys through a daemon which synchronizes with the Loki Network to scan for incoming transactions and to send outgoing transactions.
+The wallet uses the private keys through a daemon which synchronises with the Loki Network to scan for incoming transactions and to send outgoing transactions.
 
 ## Graphical User Interface Wallet (GUI)
-The Gui Wallet is currently the easiest wallet to use, it has a graphical user friendly interface which is perfect for beginners. You can download the Loki GUI Wallet [here](https://github.com/loki-project/loki-gui/releases).
+The Gui Wallet is currently the easiest wallet to use. It has a graphical user friendly interface which is perfect for beginners. You can download the Loki GUI Wallet [here](https://github.com/loki-project/loki-gui/releases).
 
 - [Download Loki GUI Wallet](https://github.com/loki-project/loki-gui/releases)
 - [Github Link](https://github.com/loki-project/loki-gui/)
@@ -34,7 +34,7 @@ The Cli Wallet is for more advanced users and offers the most tools when interac
 
 - [CLI Setup - Mac](../Wallets/CliWallet/loki-wallet-cliMacSetup.md): How to setup the `loki-wallet-cli` for the first time on Mac OS.
 
-- [Restore CLI Wallet from Keys](../Wallets/CliWallet/WalletRestoreKeys.md): How to restore your wallet with spend and view Keys.
+- [Restore CLI Wallet from Keys](../Wallets/CliWallet/WalletRestoreKeys.md): How to restore your wallet with spend and view keys.
 
 - [Restore CLI Wallet from Seed](../Wallets/CliWallet/WalletRestoreSeed.md): How to restore your wallet with a seed phrase (25 word mnemonic seed).
 
