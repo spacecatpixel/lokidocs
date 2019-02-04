@@ -7,46 +7,46 @@ The latest version of the wallet can be downloaded [here](https://github.com/lok
 
 1) Make sure Windows Defender (or other anti-virus software) is not flagging it. Add 'loki-gui-win...'  folder (or saved name of download) to exclusions in Windows Defender
 
-<center>![windows-defender-guide1](http://u.cubeupload.com/dabeatisgood/AV1.png)</center>
+<center>![windows-defender-guide1](../../assets/images/AV1.png)</center>
 
-<center>![windows-defender-guide2](http://u.cubeupload.com/dabeatisgood/AV2.png)</center>
+<center>![windows-defender-guide2](../../assets/images/AV2.png)</center>
 
-<center>![windows-defender-guide3](http://u.cubeupload.com/dabeatisgood/AV3.png)</center>
+<center>![windows-defender-guide3](../../assets/images/AV3.png)</center>
 
 2) After exclusion is added, check if `lokid.exe` is still in the folder. If it's not, unzip archive file once again and put files in the previously created folder
 
-<center>![lokid-exe](http://u.cubeupload.com/meditations1/lokid.png)</center>
+<center>![lokid-exe](../../assets/images/lokid.png)</center>
 
 
 3) Make sure that the path to your Loki folder doesn't contain non-latin characters.  
 
 4) Right click `loki-wallet-gui.exe` and select 'run as administrator'
 
-<center>![loki-wallet-gui](http://u.cubeupload.com/meditations1/lokiwalletgui.png)</center>
+<center>![loki-wallet-gui](../../assets/images/loki-wallet-gui.PNG)</center>
   
 5) If it crashes after steps above are performed, run file named `start-low-graphics-mode.bat` in the loki folder
 
-<center>![low-graphics-mode](http://u.cubeupload.com/meditations1/lowgraphicsmode.png)</center>
+<center>![low-graphics-mode](../../assets/images/low_graphics_mode.png)</center>
 
 6) Select your language.
 
-<center>![language-select](http://u.cubeupload.com/meditations1/languageselect.png)</center>
+<center>![language-select](../../assets/images/language-select.PNG)</center>
 
 7) Select 'create a new wallet'
 
-<center>![create-new-wallet](http://u.cubeupload.com/meditations1/createnewwallet.png)</center>
+<center>![create-new-wallet](../../assets/images/create-new-wallet.PNG)</center>
 
 8) **This step is important! Please be careful to write down and save your seed exactly as you see on the screen and store it in a safe location.**
 
-<center>![wallet-seed](http://u.cubeupload.com/meditations1/walletsetupseed.png)</center>
+<center>![wallet-seed](../../assets/images/wallet-setup-seed.PNG)</center>
 
 9) Enter a strong password.
 
-<center>![enter-pass](http://u.cubeupload.com/meditations1/enterpass.png)</center>
+<center>![enter-pass](../../assets/images/enter-pass.PNG)</center>
 
 
 10) If you have problems with syncing or connecting to the daemon, try to connect to a remote node (recommended):
 
 Go to settings > go to node > select a remote node and click 'load preset' > scroll down and click 'connect'
 
-<center>![remote-node-pic](http://u.cubeupload.com/dabeatisgood/remotenode.png)</center>
+<center>![remote-node-pic](../../assets/images/remote_node.PNG)</center>
