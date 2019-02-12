@@ -94,6 +94,10 @@ nav:
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
     - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
     - 'CryptoNote Elements': 'Advanced/CryptoNoteElements.md'
+    - Addresses:
+        - 'Main Address': 'Wallets/Addresses/MainAddress.md'
+        - 'Sub Address': 'Wallets/Addresses/SubAddress.md'
+        - 'Integrated Address': 'Wallets/Addresses/IntegratedAddress.md'
     - Attack Prevention:
         - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
         - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
