@@ -21,7 +21,7 @@ Multi-signing is a wallet-level feature. There is no way to learn from the block
 
 It is also worth noting in Loki there is no multisig addresses as such. The Address structure does not care how the underlying private spend key got created.
 
-In Loki, only N-of-N and (N-1)-of-N multisignature schemes are supported. This covers all common scenarios mentioned above but does not allow for arbitrary voting (like "3-of-5 board members").
+In Loki, multisignature is supported for M of N participants making any combination of signers possible.
 
 After multisig wallet setup every participant ends up knowing the public address and private view key. This is necessary for participants to recognize and decipher transactions they are supposed to co-sign.
 
@@ -30,3 +30,5 @@ After multisig wallet setup every participant ends up knowing the public address
 - [2-of-2 Multisigniture Wallet Setup](../Wallets/CliWallet/2of2Multisig.md) - Setup Guide for a 2 of 2 Multsig Wallet.
 
 - [2-of-3 Multisigniture Wallet Setup](../Wallets/CliWallet/2of3Multisig.md) - Setup Guide for a 2 of 3 Multsig Wallet.
+
+- M/N Multisig Setup Guide coming shortly.

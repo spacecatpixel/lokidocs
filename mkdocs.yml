@@ -55,7 +55,7 @@ nav:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
 
-  - 'Multsigniture': 'Wallets/Multisigniture.md'
+  - 'Multsignature': 'Wallets/Multisignature.md'
 - Mining:
     - 'Overview': 'Mining/MiningOverview.md'
     - 'ASIC Resistance': 'Mining/ASICResistance.md'
