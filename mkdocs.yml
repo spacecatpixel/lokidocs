@@ -86,6 +86,7 @@ nav:
     - 'Blink': 'LokiServices/Blink.md'
 - Developer:
     - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
+    - 'Daemon RPC Guide': 'Developer/DaemonRPCGuide.md'
     - 'Loki Wallet RPC Guide': 'Developer/WalletRPCGuide.md'
     - 'FAQ': 'Developer/FAQ.md'
 - Advanced:
