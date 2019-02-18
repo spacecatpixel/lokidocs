@@ -94,6 +94,7 @@ nav:
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
     - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
     - 'CryptoNote Elements': 'Advanced/CryptoNoteElements.md'
+    - 'lokid' : 'Advanced/lokid.md'
     - Addresses:
         - 'Main Address': 'Wallets/Addresses/MainAddress.md'
         - 'Sub Address': 'Wallets/Addresses/SubAddress.md'
@@ -103,7 +104,6 @@ nav:
         - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
         - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
     - Guides:
-        - 'lokid' : 'Advanced/lokid.md'
         - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
         - 'Debugging': 'Advanced/Debugging.md'      

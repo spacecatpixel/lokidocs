@@ -38,7 +38,7 @@ The Cli Wallet is for more advanced users and offers the most tools when interac
 
 - [Restore CLI Wallet from Seed](../Wallets/CliWallet/WalletRestoreSeed.md): How to restore your wallet with a seed phrase (25 word mnemonic seed).
 
-- [2 of 2 - Multisignature Setup](../Wallets/CliWallet/2of2Multisig.md): [Multisig](../Wallets/Multisigniture.md) feature allows you to sign a transaction with more than one private key. Funds protected with multisig can only be spent by signing with 2-of-2 keys.
+- [2 of 2 - Multisignature Setup](../Wallets/CliWallet/2of2Multisig.md): [Multisig](../Wallets/Multisignature.md) feature allows you to sign a transaction with more than one private key. Funds protected with multisig can only be spent by signing with 2-of-2 keys.
 
-- [2 of 3 - Multisignature Setup](../Wallets/CliWallet/2of3Multisig.md): [Multisig](../Wallets/Multisigniture.md) feature allows you to sign a transaction with more than one private key. Funds protected with multisig can only be spent by signing with 2-of-3 keys.
+- [2 of 3 - Multisignature Setup](../Wallets/CliWallet/2of3Multisig.md): [Multisig](../Wallets/Multisignature.md) feature allows you to sign a transaction with more than one private key. Funds protected with multisig can only be spent by signing with 2-of-3 keys.
 
