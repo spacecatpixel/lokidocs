@@ -54,7 +54,6 @@ nav:
         - Multisig:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
-
   - 'Multsignature': 'Wallets/Multisignature.md'
 - Mining:
     - 'Overview': 'Mining/MiningOverview.md'
@@ -87,6 +86,7 @@ nav:
     - 'Blink': 'LokiServices/Blink.md'
 - Developer:
     - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
+    - 'Loki Wallet RPC Guide': 'Developer/WalletRPCGuide.md'
     - 'FAQ': 'Developer/FAQ.md'
 - Advanced:
     - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
