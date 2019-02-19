@@ -48,6 +48,8 @@ For future reference, after generating initial configuration you just need to ru
 ## 4. Test services
 Jump onto a browser such as google chrome or firefox and try and go to the url `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki`. If you see a youtube video you are in luck, congratulations, you now have access to the Lokinet.
 
+// add link to snapp directory.
+
 ## Finish
 
 Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#3-joining-a-lokinet-irc-chat).
