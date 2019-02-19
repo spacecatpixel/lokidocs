@@ -8,7 +8,10 @@ SNApp operators use the traditional server-client model with the key difference 
 
 To install lokinet, see the install guide [here](../../Lokinet/Guides/Install.md).
 
-## 2. Setting your DNS
+## 2. Setting your DNS (Only for Linux)
+
+> Skip to [step 3](#3-setup) if you are running on Windows or Mac.
+
 Next we need to edit our resolv.conf files and add our dns resolver.
 
 Run the following command: 
