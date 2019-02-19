@@ -31,20 +31,20 @@ nav:
 - Wallets: 
   - 'Overview' : 'Wallets/WalletsOverview.md'
   - 'What wallet to use?' : 'Wallets/WhatWalletToUse.md'
-  - Web Wallet (LokiLocker): 
-      - 'Troubleshooting Web Wallet' : 'Wallets/WebWallet/TroubleshootWebWallet.md'
-      - Guides:
-        - 'to be added': 'Wallets/WebWallet/placeholder.md'
+#  - Web Wallet (LokiLocker): 
+#      - 'Troubleshooting Web Wallet' : 'Wallets/WebWallet/TroubleshootWebWallet.md'
+#      - Guides:
+#        - 'to be added': 'Wallets/WebWallet/placeholder.md'
   - Graphical User interface (GUI) Wallet:
-      - 'Troubleshooting GUI Wallet' : 'Wallets/GuiWallet/TroubleshootGui.md'
+#      - 'Troubleshooting GUI Wallet' : 'Wallets/GuiWallet/TroubleshootGui.md'
       - Guides: 
         - 'Loki Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
   - Mobile Wallet:
-      - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
+#      - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
       - Guides :
         - 'Restore Mobile Wallet': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
   - Command Line Integrated (CLI) Wallet:
-      - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
+#      - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
       - Guides:
         - 'CLI Mac Setup': 'Wallets/CliWallet/loki-wallet-cliMacSetup.md'
         - 'CLI Wallet Commands': 'Wallets/CliWallet/WalletCommands.md'
@@ -78,7 +78,7 @@ nav:
         - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
         - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
         - 'Route through Exit Node': 'Lokinet/Guides/RouteThroughExitNode.md'
-        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
+#        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 - Loki Services:
     - 'Overview': 'LokiServices/LokiServicesOverview.md'

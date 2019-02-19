@@ -7,15 +7,15 @@ The latest version of the wallet can be downloaded [here](https://github.com/lok
 
 1) Make sure Windows Defender (or other anti-virus software) is not flagging it. Add 'loki-gui-win...'  folder (or saved name of download) to exclusions in Windows Defender.
 
-<center>![windows-defender-guide1](../../assets/images/AV1.png)</center>
+<center>![windows-defender-guide1](../../assets/images/AV1.PNG)</center>
 
-<center>![windows-defender-guide2](../../assets/images/AV2.png)</center>
+<center>![windows-defender-guide2](../../assets/images/AV2.PNG)</center>
 
-<center>![windows-defender-guide3](../../assets/images/AV3.png)</center>
+<center>![windows-defender-guide3](../../assets/images/AV3.PNG)</center>
 
 2) After exclusion is added, check if `lokid.exe` is still in the folder. If it's not, unzip the archive file once again and put the files in the previously created folder.
 
-<center>![lokid-exe](../../assets/images/lokid.png)</center>
+<center>![lokid-exe](../../assets/images/lokid.PNG)</center>
 
 
 3) Make sure that the path to your Loki folder doesn't contain non-latin characters.  
