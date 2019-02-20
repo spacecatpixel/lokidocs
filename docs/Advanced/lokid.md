@@ -121,6 +121,7 @@ The node and peer words are used interchangeably.
 | `--offline`            | Do not listen for peers, nor connect to any. Useful for working with a local, archival blockchain.
 | `--allow-local-ip`     | Allow adding local IP to peer list. Useful mostly for debug purposes when you may want to have multiple nodes on a single machine.
 | `--service-node`       | Generate a Service Node pubkey that identifies your Node to the network. This flag allows the ability to stake Loki
+
 #### Node RPC API
 
 `lokid` node offers powerful API. It serves 3 purposes:
