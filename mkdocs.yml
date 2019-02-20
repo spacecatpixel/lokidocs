@@ -106,7 +106,7 @@ nav:
         - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
         - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
     - Guides:
-        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
+#        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
         - 'Debugging': 'Advanced/Debugging.md'      
         - 'Accepting Loki for Merchants and Exchanges': 'Advanced/AcceptingLoki.md'
