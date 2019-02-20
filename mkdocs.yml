@@ -78,7 +78,7 @@ nav:
         - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
         - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
         - 'Route through Exit Node': 'Lokinet/Guides/RouteThroughExitNode.md'
-        - 'Lokinet config file': 'Lokinet/Guides/LokinetConfig.md'
+        - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
 #        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 - Loki Services:
