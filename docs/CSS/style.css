@@ -119,6 +119,11 @@
     border-left:0.4rem solid #78be20;
 }
 
+.md-typeset details > summary
+{
+    background-color: rgba(120, 190, 32, 0.3);
+}
+
 .md-typeset summary::after
 {
     color: #78be20;
