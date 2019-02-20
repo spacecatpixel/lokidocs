@@ -31,7 +31,7 @@ curl \
 
 ```
 
-Note: "atomic units" refer to the smallest fraction of 1 LOKI according to the lokid implementation.  **1 LOKI = 1e12  atomic units.**
+Note: "atomic units" refer to the smallest fraction of 1 LOKI according to the lokid implementation.  **1 LOKI = 1e9  atomic units.**
 
 ### Index of JSON RPC Methods:
 
