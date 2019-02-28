@@ -18,7 +18,7 @@ Operators will still use the following commands when setting up a Service Node. 
 ### Contributors
 Contributors will still use the following command when contributing to a Service Node:
 
-- Stake `<service node key>` by contributors to contribute to the node. Auto staking is no longer an option.
+- `stake <service node key>` by contributors to contribute to the node. **Auto staking** is no longer an option.
  
 ### Operators & Contributors (When Service Node Active)
 Two new commands have been added to stop your Service Node from staking, both the contributor and operator can execute these commands:
@@ -70,21 +70,17 @@ Users are no longer allowed to stake on behalf of another participant in the Ser
 
 Updated/newly added fields:
 
-| Field                     | Description                                                                  |
-|---------------------------|------------------------------------------------------------------------------|
-| `requested_unlock_height` | The height at which the stakes will unlock and the Service Node will expire. |
-| `contributor`             | Shows the contributors.                                                      |
-| `locked_contributions`    | An array of each contribution from the contributor that is locked.           |
-| `key_image`               | A string representation of the locked key image (stake).                     |
-| `key_image_pub_key`       | A string representation of the public key component of a key image.          |
-| `amount`                  | The amount of Loki locked in this contribution.                              |
+- `requested_unlock_height` - The height at which the stakes will unlock and the Service Node will expire. 
+- `contributors`
+     - `locked_contributions` - An array of each contribution from the contributor that is locked.
+         - `key_image` - A string representation of the locked key image (stake).
+         - `key_image_pub_key` - A string representation of the public key component of a key image.
+         - `amount` - The amount of Loki locked in this contribution.
 
 ### get_service_node_blacklisted_key_images
 
 Retrieve a list of blacklisted transactions from deregistered Service Nodes on the network.
 
-| Field           | Description                                                               |
-|-----------------|---------------------------------------------------------------------------|
-| `key_image`     | A string representation of the locked key image (stake).                  |
-| `blacklist`     | An array of each blacklisted transaction from deregistered Service Nodes. |
-| `unlock_height` | The height at which the stake can be spent again.                         |
+- `blacklist` - An array of each blacklisted transaction from deregistered Service Nodes
+     - `key_image` - A string representation of the blacklisted key image (stake).
+     - `unlock_height` - The height at which the stake can be spent again.
