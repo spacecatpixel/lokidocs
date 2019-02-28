@@ -2,7 +2,7 @@
 
 ##Outline For Existing Service Node Participants and Operators
 
-Infinite Staking is an incremental upgrade on the existing staking process that is currently available on the Loki network (currently active in Hardfork 10: Bulletproofs, introduced in Hardfork 9: Service Nodes). With Infinite Staking, Service Nodes do not expire and funds remained locked infinitely until a contributor or operator explicitly requests the Service Node to unlock the funds.
+Infinite Staking is an incremental upgrade on the existing staking process that is currently available on the Loki network (currently active in Hardfork 10: Bulletproofs, introduced in Hardfork 9: Service Nodes). With Infinite Staking, Service Nodes do not expire and funds remain locked until a contributor or operator explicitly requests the Service Node to unlock the funds.
 
 Since Infinite Staking is an incremental upgrade, most of the steps necessary to register and participate in a Service Node remains the same. A quick overview for the new staking process is summarised for quick grokking.
 
@@ -30,9 +30,9 @@ Two new commands have been added to stop your Service Node from staking, both th
 
 ## Unlocking Stakes & Deregistration
 
-Service Nodes will continually receive block rewards infinitely until a stake is unlocked or the Service Node becomes deregistered. Unlocking is available via the `request_stake_unlock <service node key>` in the command line wallet. Once the unlock is requested, when the request is included in a block in the blockchain, the stake will be unlocked and the Service Node is scheduled to expire in 15 days (10800 blocks).
+Service Nodes will continually receive block rewards indefinitely until a stake is unlocked or the Service Node becomes deregistered. Unlocking is available via the `request_stake_unlock <service node key>` in the command line wallet. Once the unlock is requested and the request is included in a block in the blockchain, the Service Node will then expire in 15 days (10800 blocks) and the funds will become unlocked after expiry.
 
-In pooled nodes, any contributor that requests the stake to unlock will schedule the Service Node for expiration. All locked stakes in that Service Node will be unlocked in 15 days (10800 blocks). Once the unlock is requested, this process can not be undone or prolonged. Service Nodes participants will continue receiving rewards until expiration.
+In pooled nodes, any contributor that requests the stake to unlock will schedule the Service Node for expiration. All locked stakes in that Service Node will be unlocked in 15 days (10800 blocks). Once the unlock is requested, this process can not be undone or prolonged. Service Node participants will continue receiving rewards until expiration.
 
 Under the new system, deregistrations can continue to be issued at any point in the active lifecycle of the Service Node. This is inclusive of the time period during which the Service Node is scheduled for expiry. Getting deregistered removes your Service Node from the network and your stakes are placed into a list of blacklisted transactions. Blacklisted transactions are locked and unspendable for 30 days (21600 blocks) from the block that the Service Node was deregistered.
 
