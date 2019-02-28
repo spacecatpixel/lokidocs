@@ -43,6 +43,7 @@ nav:
 #      - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
       - Guides :
         - 'Restore Mobile Wallet': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
+        - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
   - Command Line Integrated (CLI) Wallet:
 #      - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
       - Guides:
@@ -67,6 +68,7 @@ nav:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
+      - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
     - 'Public Testing Overview': 'Lokinet/Guides/PublicTestingGuide.md'
