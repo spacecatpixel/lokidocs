@@ -39,11 +39,11 @@ nav:
 #      - 'Troubleshooting GUI Wallet' : 'Wallets/GuiWallet/TroubleshootGui.md'
       - Guides: 
         - 'Loki Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
+        - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
   - Mobile Wallet:
 #      - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
       - Guides :
         - 'Restore Mobile Wallet': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
-        - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
   - Command Line Integrated (CLI) Wallet:
 #      - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
       - Guides:

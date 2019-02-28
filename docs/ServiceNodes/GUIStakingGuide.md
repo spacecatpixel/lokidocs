@@ -9,19 +9,19 @@ Please keep in mind, one can **only stake via an open pool with the GUI wallet**
  Also, this best done with a primary wallet address that is **not receiving mining transactions**. A separate primary wallet for Staking is recommended.
 
 1) Open the wallet, enter your password, and let it fully sync to the latest blockheight.
-![Open-Wallet-Fully-sync](../../../assets/images/GUI_Stake_Step1.PNG)
+![Open-Wallet-Fully-sync](../assets/images/GUI_Stake_Step1.png)
 
 2) Click on the **advanced** and then on the **service node** tab.
 
-![Click-service-node-tab](../../../assets/images/GUI_Stake_Step2.PNG)
+![Click-service-node-tab](../assets/images/GUI_Stake_Step2.png)
 
 3) On this step you will need to enter the service node public key obtained from the node operator or [LokiBlocks](https://lokiblocks.com/service_nodes), your primary wallet address to receive awards, and the amount of Loki you are contributing to the node.
 
-![Loki-blocks-SN-List](../../../assets/images/Loki_blocks_SN_list.PNG)
+![Loki-blocks-SN-List](../assets/images/Loki_blocks_SN_list.png)
 
 4) Once that is filled out, simply hit the `stake` button.
 
-![Staking-step](../../../assets/images/GUI_Stake_Step3.PNG)
+![Staking-step](../assets/images/GUI_Stake_Step3.png)
 
 >(Please note, if you receive an error at this step, you will likely need to use the [Loki CLI](https://github.com/loki-project/loki/releases) to run `sweep_all(YOUR ADDRESS)` to fix this or simply use a separate GUI wallet primary address)
 

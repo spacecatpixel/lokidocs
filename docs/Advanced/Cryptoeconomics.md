@@ -18,7 +18,7 @@ The Loki Block Reward is generated in a similar manner to most proof-of-work cry
 
 The amount of Loki rewarded `BR` to the network at each block height `h` follows the following equation:
 
-<center>![Block Reward Formula](../../assets/blockreward.svg)</center>
+<center>![Block Reward Formula](../assets/blockreward.svg)</center>
 
 This block reward formula is a result of [Loki's Cryptoeconomic study](https://loki.network/proposal), on the 30th of July, 2018, at block 64324, the Loki block reward went from being calculated in terms of the circulating supply with an emission speed factor of 20, to be derived from the block height.
 

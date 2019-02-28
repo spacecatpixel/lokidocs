@@ -105,7 +105,7 @@ To access your server, you will need a SSH client for your operating system. Bec
 
 To connect to our VPS we will need to paste the IP address into the SSH client’s “Host Name (or IP address)” input box and click the “Open” button. The Port number can usually just be left as `22`.
 
-<center>![Putty window](../../assets/snode1.JPG)</center>
+<center>![Putty window](../assets/snode1.JPG)</center>
 
 A terminal window will now appear prompting for your log-in details, username(root) and password, which were provided by your VPS provider. When entering your password, nothing will visually appear in the terminal. This is normal. Hit enter when it’s typed or pasted, and you should be logged in to your VPS.
 
@@ -175,7 +175,7 @@ You will be prompted to authorise the use of disk space, type `y` and enter to a
 
 If you are prompted at any time that a version of any file is available then click the up and down arrows until you are hovering over `install the package maintainer’s version` and click enter.
 
-<center>![Terminal window](../../assets/snode2.JPG)</center>
+<center>![Terminal window](../assets/snode2.JPG)</center>
 
 Alright, good to go. Our server is now set up, up to date, and is not running in root. On to the fun part!
 

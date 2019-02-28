@@ -51,7 +51,7 @@ The introduction of the $OE presented a new problem. The cost of operating the [
 ### Max Node Count
 The relationship between [staking requirement](../ServiceNodes/StakingRequirement.md)(SR) and the [circulating supply](../Cryptoeconomics/#circulating-supply)(A) causes a hard limit on #N(Z). 
 
-<center>![Circulating Supply](../../assets/maxnodes.svg)</center>
+<center>![Circulating Supply](../assets/maxnodes.svg)</center>
 
 For example:
 If the circulating supply is 50,000,000 and the staking requirement is 50,000, only 1000 nodes can possibly operate. In reality, #N will be the circulating supply divided by the LR, which if we assume our target of 50%, would mean 500 nodes should operate in the right economic conditions.
