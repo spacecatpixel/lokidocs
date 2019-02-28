@@ -64,6 +64,7 @@ nav:
     - 'Overview': 'ServiceNodes/SNOverview.md'
     - 'Service Node Functions': 'ServiceNodes/ServiceNodeFunctions.md'
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
+    - 'Infinite Staking Primer': 'ServiceNodes/InfiniteStakingPrimer.md'
     - Guides:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
