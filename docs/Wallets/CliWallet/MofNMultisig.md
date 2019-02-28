@@ -1,4 +1,4 @@
-﻿# Loki 2/3 Multisig
+# Loki M/N Multisig
 
 First, the wallet to be converted to multisig must be empty. It is best to use a brand-new wallet for the purpose, although not required. It is strongly advised to make a copy of the wallet files first, just in case something goes wrong.
 
@@ -10,19 +10,19 @@ In short, the process is:
 
 1.  All parties command `prepare_multisig` and send data to ALL other parties
     
-2.  All parties command `make_multisig <threshold> <data1> <data2>` and send 2nd batch of data to ALL other parties
+2.  All parties command `make_multisig <threshold> <data1> <data2> .... <dataN>` and send 2nd batch of data to ALL other parties
     
-3.  All parties command `finalize_multisig <data1> <data2>` with the data from ALL other parties.
+3.  All parties command `finalize_multisig <data1> <data2> ...... <DataM>` with the data from ALL other parties.
 
 **Receiving**
 
-1.  All parties can type address to see the created multisig wallet address. The address will, of course, be the same for all parties since they're all watching the same wallet.
+1.  All parties can type address to see the created multisig wallet address. The address will, of course, be the same for all parties since they're all watching the same wallet.  
 
 **Preparation for Sending**
 
 1.  To prepare for sending all parties command `export_multisig_info <filename>` and send the file to all other parties
     
-2.  To complete preparation, all parties command `import_multisig_info <filename1> <filename2>` and import files from other parties
+2.  To complete preparation, all parties command `import_multisig_info <filename1> <filename2> ..... <filenameM>` and import files from other parties
 
 **Sending**
 
@@ -38,17 +38,17 @@ Below is a step-by-step walkthrough.
 
 Requirements:
 
--   3 empty `loki-wallet-cli` wallets
+-   `N` empty `loki-wallet-cli` wallets.
     
--   All parties wallets connected to a `lokid`
+-   All parties wallets connected to a `lokid`.
     
--   Private communication channel
-
+-   Private communication channel.
+    
 ### Step 1 - Prepare Multisig
 
-All 3 people should open up their `loki-wallet-cli` and generate a new wallet. Make sure you do not have any $loki within your wallet.
+All `N` people should open up their `loki-wallet-cli` and generate a new wallet. Make sure you do not have any $loki within your wallet.
 
-**Person 1, 2** and **3** runs the following command within their `loki-wallet-cli`:
+The **1st, 2nd, 3rd**, and so on, up to the `N`th person commands in their `loki-wallet-cli`:
 
 ```
 prepare_multisig
@@ -64,19 +64,21 @@ This includes the PRIVATE view key, so needs to be disclosed only to that multis
 
 Copy the entire line `Multisig…...Vozid` and be sure to capture the whole thing when copying.
 
-**Person 1** to send the `Multsig...arg` to Person 2 and 3, **Person 2** to send their output to Person 1 and 3 and **Person 3** to send their output to Person 1 and 2.
+Each person must send their `Multisig…...arg` to each other person, it is suggested to send this information through a private comunication channel.
 
 ### Step 2 - Make Multisig
 
-All 3 persons now have the `Multisig...arg` text from the other 2. With that, each of them can create their part of the multisig wallet. Before you proceed, note that the wallet will lose access to the underlying wallet when converted to multisig. This is not really a problem, since we started with an empty wallet, and if all goes OK with this step, you won't ever need it unless you want to go through the process again for whatever reason (like HDD died, but you have the seed mnemonic of the underlying wallet and want to reconstruct the multisig wallet).
+All `N` people now have the `Multisig...arg` text from the other `N-1` people. With that, each of them can create their part of the multisig wallet. Before you proceed, note that the wallet will lose access to the underlying wallet when converted to multisig. This is not really a problem, since we started with an empty wallet, and if all goes OK with this step, you won't ever need it unless you want to go through the process again for whatever reason (like HDD died, but you have the seed mnemonic of the underlying wallet and want to reconstruct the multisig wallet).
 
 **Person 1** commands:
 
 ```
-make_multisig <threshold> <data person 2> <data person 3>
+make_multisig <threshold> <data person 2> <data person 3> ..... <data person N>
 ```
 
-Where `<threshold>` is the number of signers required out of the 3 people, `<data person 2>` is the output provided by Person 2, and `<data person 3> `is the output provided by Person 3.
+Where `<threshold>` is the number of signers required out of the `N` people, `<data person 2>` is the output provided by Person 2, and `<data person 3>` is the output provided by Person 3, and `<data person N>` is the output provided by the `N`th person.
+
+This is the process for M of N multisig wallets, For the below example we will show a 2 of 3 multisig wallet.
 
 This should look similar to:
 
@@ -84,7 +86,9 @@ This should look similar to:
 make_multisig 2 MultisigV12EHtuvxFyAYDNcDsbDqWHDfkRr4JZchSdf8eZQSFwiMKDk15CYEJeQyEwtSnqUZdRr2BsEaT9z2biUdDTEQM4T3N625owvKMDoyhbRj3bwkBtceLKimap8DBAiUmSABpdf62HnPYiRtLW4JdVFmfqjndhWjYBypx1duvpi3qwfSrBY9a MultisigV1TqQ8Gt5Sb3GYtVJa1fQrK7e7hPm59XbooNvLxPSBR4856bW9jtD1hEyWy4yULKrX7reZZ6vrKdBCdSdk4nfApCGYJAA2WP4pKNwHDyKTuLEeuoDhqno8keEVeEF9AZsWXvng1avUTRREmy11h8wu8pdjopC4AguQKiHCJCN7aT9W6b8C  
 ```
 
-Notice how there are 2 strings starting with `Multisig....arg`. One is from person 2 and other from person 3. The number at the beginning is the minimum required number of signatures. Since it's a 2/3 scheme - it's 2.
+Notice how there are 2 strings starting with `Multisig....arg`. One is from person 2 and other from person 3, if their is 5 different people their would be 4 different strings of `Multisig....arg`. The number at the beginning is the minimum required number of signatures. Since it's a 2/3 scheme - it's 2. 
+
+To reiterate, for a 5/8 scheme which means there are 8 people who can sign and 5 people must sign to authorise a transaction out of the Multi signature wallet. In this circumstance, the command each person would run has a `<threshold>` that equals 5 and 7 strings of `multisig...arg`.
 
 The output from the `make_multisig` command will be similar to:
 
@@ -94,21 +98,21 @@ MultisigxV1PKCwmVrucV8bXi18VnHFqRXcnAq4osFL3ahzPHCiN48zhs28u6jmEhy7ktZbUEGfRtTuF
 Send this multisig info to all other participants, then use finalize_multisig <info1> [<info2>...] with others' multisig info
 ```
 
-With 2/3 there's an additional step to be done here. The new `Multisig...arg` info must be passed to ALL other participants (persons 2 & 3).
+With any M of N schemes there's an additional step to be done here. The new `Multisig...arg` info that was just outputted must be passed to ALL other participants (For person 1 they must send it to persons 2 & 3 ... all the way up to person N).
 
-Persons 2 & 3 do the same as above and send the info to other 2 parties.
+Persons N sends the new output to all other persons.
 
 ### Step 3 - Finalize Multisig
 
 Here we do one last command to make the wallet ready for receiving. It requires the 2nd batch of `Multisig…....arg` strings received from other parties.
 
-**Person 1** will run the command:
+**Person N** will run the command:
 
 ```
 finalize_multisig MultisigxV1Vg1tsRLurvAc5aSA9Hd9God3MQhijCFoE1rPDFzx7ufwhs28u6jmEhy7ktZbUEGfRtTuFjjKzJYb61fnFwnysBBnfYm4xJWcJ4qM4khSb2KkyAKDuT39pTvdmemhojNjeYCmgSQ1NZLyBj48R1tVpiGNxa7TDnGbSgLuKBq35AX6jfu5PECAcDDn22CFQbJZip7xnBbn89Szzh27xeozfxcLiqqm MultisigxV14xDZBGACz3iUh2aVKGE5q5VzcvJdg2qCvZECgUWCdy5QNXsUtCgFMXPa7FyNKVy2AnUg3ePEnKqWkgKVvA81axTSfYm4xJWcJ4qM4khSb2KkyAKDuT39pTvdmemhojNjeYCmCNaRSsDEcemLLL8wCvzsy5R6hhkhWLYkD9vhZwprSFFKMZ7tfRko2VfMBoKQhB7PKXbf1npk2xceVKu2y7kExywb
 ```
 
-Unfortunately the wallet will not display an output at this point. There's no indication that the process was successfully completed (for now). All 3 persons do the same, and all 3 wallets will show the same address after this step.
+Unfortunately the wallet will not display an output at this point. There's no indication that the process was successfully completed (for now). All N persons do the same, and all N wallets will show the same address after this step.
 
 Now each person run the command:
 
@@ -116,21 +120,21 @@ Now each person run the command:
 address
 ```
 
-And each 3 parties of the multisig wallet should be shown the same address in their wallet.
+And each N people of the multisig wallet should be shown the same address in their wallet.
 
 ## Receiving
 
 ### Step 1 Fund The Multisig Account
 
-This is simple. Just send to the shared address. You can send multiple times, just like a normal wallet. You can use payment ID’s as well, or generate an integrated address to receive funds.
+This is simple, just send to the shared address. You can send multiple times, just like a normal wallet. You can use payment ID’s as well, or generate an integrated address to receive funds.
 
 Best part, whomever is sending the funds won't be able to tell that the address belongs to a multisig wallet since it looks like any other Loki address.
 
 ### Step 2 Check Multisig Account Balance
 
-Just open the wallet and run the refresh command . Once completed, all persons can verify that the funds arrived.
+Just open the wallet and run the refresh command. Once completed, all persons can verify that the funds arrived.
 
-**Person 1, 2**  & **3** can run the  command:
+**Person 1, 2**, **3** up to **N** can run the command:
 
 ```
 show_transfers
@@ -146,23 +150,23 @@ balance
 
 ### Step 1 - Export Multisig
 
-Without this step, it will not be possible to create a transaction that spends Loki. As a minimum, the sender needs to get a partial key image from the same person who will sign the transaction with him later. He could get from both parties immediately and then later decide with whom to sign.
+Without this step, it will not be possible to create a transaction that spends Loki. As a minimum, the sender needs to get a partial key image from all the people who will sign the transaction with them later. They could get it from the parties immediately and then later decide with whom to sign.
 
-**Person 1** commands:
-
-```
-export_multisig_info mi1
-```
-
-Where `mi1` can be any filename. The output will be:
+**Person N** commands:
 
 ```
-Multisig info exported to mi1
+export_multisig_info miN
 ```
 
-The file `mi1` will be located in the shell working folder*
+Where `miN` can be any filename. The output will be:
 
-**Person 1** sends that file to other persons. Persons 2 & 3 do the same.
+```
+Multisig info exported to miN
+```
+
+The file `miN` will be located in the shell working folder*
+
+**Person N** sends that file to other people. Persons 2 & 3 up to N do the same.
 
 #### Optional: Step 1.2 Sending Multisig Info File with terminal - transfer.sh
 
@@ -184,17 +188,17 @@ curl --upload-file ./mi1 https://transfer.sh/mi1
 https://transfer.sh/Ehl5q/mi1
 ```
 
-**Person 1** will need to send this link to Person 2 and Person 3. **Person 2** will need to do the same and send the link to Person 1 and 3. **Person 3** will need to do the same and send the link to Person 1 and 2.
+**Person 1** will need to send this link to Person 2, Person 3, .... Person N. **Person 2** will need to do the same and send the link to Person 1, 3 ..... N. **Person 3** will need to do the same and send the link to Person 1, 2 ..... N. Person N will need to do the same and send the link to Person 1, 2, 3, 4, 5 ...... N-1.
 
-#####Downloading Multisig Info file
+##### Downloading Multisig Info file
 
-**Person 1** should change to the directory of their `loki-wallet-cli` and use Person 2 and 3’s download link to run the commands:
+**Person 1** should change to the directory of their `loki-wallet-cli` and use Person 2, 3, 4 ... N’s download link to run the commands:
 
 ```
 curl <link> -o <filename>
 ```
 
-Replacing `<link>` with the link Person 2 and 3 shared with Person 1 and `<filename>` with the filename of the Multisig info file that Person 2 or 3 generated, for example Person 1 will run the command:
+Replacing `<link>` with the link Person 2, 3 ... N shared with Person 1 and `<filename>` with the filename of the Multisig info file that Person 2, 3 or ... N generated, for example Person 1 will run the command:
 
 ```
 curl https://transfer.sh/Iedv9/mi2 -o mi2
@@ -206,7 +210,13 @@ And the command:
 curl https://transfer.sh/dfvr3/mi3 -o mi3
 ```
 
-Likewise, Person 2 and 3 should do the same, changing directories to their `loki-wallet-cli` and downloading with the alternative Persons download link, and filename.
+and all the way up to:
+
+```
+curl https://transfer.sh/dfvr3/mi3 -o miN
+```
+
+Likewise, Person 2, 3 .... and N should do the same, changing directories to their `loki-wallet-cli` and downloading with the alternative Persons download link, and filename.
 
 ```
 curl https://transfer.sh/Ehl5q/mi1 -o mi1
@@ -222,20 +232,28 @@ For example, **Person 2** commands:
 import_multisig_info mi1
 ```
 
-The wallet will look for files in the shell working folder and if the files are found the output will look like:
+```
+import_multisig_info mi3
+```
+
+```
+import_multisig_info miN
+```
+
+The wallet will look for files in the shell working folder* and if the files are found the output will look like:
+
 ```
 2 outputs found in mi1  
 Height 1357156, transaction <88ba687dc79a0b39e6de6d0763eda8363d33d9f58ec9a096171bd9a7f1dae873>, received 0.100000000000  
 Height 1357161, transaction <d6ac845b9400759525519cdc5d514eb8f5b1d265b24d1c016e75b20ed3b4b7da>, received 0.100000000000
 ```
-
-**Persons 1** & **3** do the same.
+**Persons 1**, **3 .... and N** do the same.
 
 ## Spending
 
 ### Step 1 - Transfer (Preparing Unsigned Transaction)
 
-Any of the 3 persons can start a transaction, it doesn't matter. To avoid weird things from happening only do it for 1 transaction at a time. If anything weird happens, do the step 1 & 2 again to fix.
+Any of the multisig wallets can start a transaction, it doesn't matter. To avoid weird things from happening only do it for 1 transaction at a time. If anything weird happens, do the step 1 & 2 again to fix.
 
 For example, let's say that Person 3 will make the TX.
 
@@ -250,11 +268,12 @@ The output will look like:
 ```
 Unsigned transaction(s) successfully written to file: multisig_loki_tx
 ```
+
 Check in the folder where you started `loki-wallet-cli` from. There should be a file named `multisig_loki_tx`.
 
-Send the file `multisig_loki_tx` to either person 1 or 2.
+Send the file `multisig_loki_tx` to one of the people who will sign the TX.
 
-**Person 3** will send the file `multisig_loki_tx` to the Person 1 or 2. **Person 3** can send this file through email or alternatively use the transfer.sh commands outside of the wallet:
+**Person 3** will send the file `multisig_loki_tx` to the Person 1, 2 or N. **Person 3** can send this file through email or alternatively use the transfer.sh commands outside of the wallet:
 
 ```
 curl --upload-file ./multisig_loki_tx https://transfer.sh/multisig_loki_tx
@@ -274,7 +293,7 @@ Replacing `https://transfer.sh/CJqnM/multisig_loki_tx` with the link provided by
 
 ### Step 2 - Sign Multisig
 
-Let's say Person 2 was picked as the partner. He must finish the signature. Person 2 copies the file to the same folder from where he started (or will start) `loki-wallet-cli`.
+Let's say Person 2 was picked as the partner. They must finish the signature. Person 2 copies the file to the same folder from where he started (or will start) `loki-wallet-cli`.
 
 Then, **Person 2** commands:
 
@@ -296,9 +315,11 @@ If ok, answer `Y`, and the output will look like:
 Transaction successfully submitted, transaction <3b03b16c79eaa5564171ae88242c4cdb1f9e0b41fc3de949c6524c5026a3f3bb>
 ```
 
+If the threshold is greater than 2 another `multisig_loki_tx` file will need to be signed by the amount of signers required.
+
 ### Step 3 - Submit Multisig
 
-Finally, person with the signed file submits the transaction to the network by commanding:
+Finally, person with the final signed file submits the transaction to the network by commanding:
 
 ```
 submit_multisig multisig_loki_tx

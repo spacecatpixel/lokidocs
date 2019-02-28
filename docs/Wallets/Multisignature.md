@@ -7,7 +7,7 @@ In cryptocurrencies, multisig feature allows you to sign a transaction with more
 - [Consensus account](../Wallets/CliWallet/2of2Multisig.md) (2-of-2; both husband and wife must agree to spend their funds)
 - [Threshold account](../Wallets/CliWallet/2of3Multisig.md) (2-of-3; an escrow service is involved as an independent 3rd party, to co-sign with either the seller, or with the buyer, if seller and buyer do not agree)
 - [Secure account](../Wallets/CliWallet/2of3Multisig.md) (2-of-3; a single owner controlls all 3 keys but secures them via a different means to diversify risks)
-- Arbitrary threshold account (M-of-N; some cryptocurrencies provide full flexibility on the number of signers)
+- [Arbitrary threshold account](../Wallets/CliWallet/MofNMultisig.md) (M-of-N; some cryptocurrencies provide full flexibility on the number of signers)
 
 ## Loki Multisignature
 
@@ -31,4 +31,4 @@ After multisig wallet setup every participant ends up knowing the public address
 
 - [2-of-3 Multisigniture Wallet Setup](../Wallets/CliWallet/2of3Multisig.md) - Setup Guide for a 2 of 3 Multsig Wallet.
 
-- M/N Multisig Setup Guide coming shortly.
+- [M/N Multisig Setup Guide](../Wallets/CliWallet/MofNMultisig.md) - Setup Guide for a M of N Multisig Wallet.
