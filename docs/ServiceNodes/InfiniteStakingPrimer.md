@@ -4,22 +4,22 @@
 
 Infinite Staking is an incremental upgrade on the existing staking process that is currently available on the Loki network (currently active in Hardfork 10: Bulletproofs, introduced in Hardfork 9: Service Nodes). With Infinite Staking, Service Nodes do not expire and funds remain locked until a contributor or operator explicitly requests the Service Node to unlock the funds.
 
-Since Infinite Staking is an incremental upgrade, most of the steps necessary to register and participate in a Service Node remains the same. A quick overview for the new staking process is summarised for quick grokking.
+Since Infinite Staking is an incremental upgrade, most of the steps necessary to register and participate in a Service Node remain the same. A quick overview for the new staking process is summarised for quick grokking.
 
 ## Updated Staking Process and Commands
 
 ### Operators
 Operators will still use the following commands when setting up a Service Node. The commands are as follows:
 
-- `prepare_registration` in the daemon that is running in `--service-node` mode
+- `prepare_registration` in the daemon that is running in `--service-node` mode.
     
 - `register_service_node` with the command returned by the daemon. **Auto staking** is no longer an option.
 
 ### Contributors
-Contributors will still use the following command when contributing to a Service Node:
+Two new commands have been added to stop your Service Node from staking, and both the contributor and operator can execute these commands:
 
-- `stake <service node key>` by contributors to contribute to the node. **Auto staking** is no longer an option.
- 
+- `stake <service node key>` to contribute to the node. **Auto staking** is no longer an option.
+
 ### Operators & Contributors (When Service Node Active)
 Two new commands have been added to stop your Service Node from staking, both the contributor and operator can execute these commands:
 
@@ -27,16 +27,15 @@ Two new commands have been added to stop your Service Node from staking, both th
     
 - `request_stake_unlock <service node key>` to request to unlock the stake in 15 days (10800 blocks).
 
-
 ## Unlocking Stakes & Deregistration
 
 Service Nodes will continually receive block rewards indefinitely until a stake is unlocked or the Service Node becomes deregistered. Unlocking is available via the `request_stake_unlock <service node key>` in the command line wallet. Once the unlock is requested and the request is included in a block in the blockchain, the Service Node will then expire in 15 days (10800 blocks) and the funds will become unlocked after expiry.
 
 In pooled nodes, any contributor that requests the stake to unlock will schedule the Service Node for expiration. All locked stakes in that Service Node will be unlocked in 15 days (10800 blocks). Once the unlock is requested, this process can not be undone or prolonged. Service Node participants will continue receiving rewards until expiration.
 
-Under the new system, deregistrations can continue to be issued at any point in the active lifecycle of the Service Node. This is inclusive of the time period during which the Service Node is scheduled for expiry. Getting deregistered removes your Service Node from the network and your stakes are placed into a list of blacklisted transactions. Blacklisted transactions are locked and unspendable for 30 days (21600 blocks) from the block that the Service Node was deregistered.
+Under the new system, deregistrations can be issued at any point during the active lifecycle of the Service Node. This is inclusive of the time period during which the Service Node is scheduled for expiry. Getting deregistered removes your Service Node from the network and your stakes are placed into a list of blacklisted transactions. Blacklisted transactions are locked and unspendable for 30 days (21600 blocks) from the block in which the Service Node was deregistered.
 
-Receiving a deregistration whilst participants have already requested the stake to unlock overrides the 15 day (10800 blocks) unlock time, and resets the unlock time to 30 days (21600 blocks).
+Receiving a deregistration after participants have already requested the stake to unlock overrides the 15 day (10800 blocks) unlock time, and resets the unlock time to 30 days (21600 blocks).
 
 ## Minimum Contribution Rules
 
@@ -46,17 +45,17 @@ Service Nodes accept at most 4 contributions, meaning the minimum contribution t
 
 <center>![Contribution](../assets/contribution.svg)</center>
 
-In a pooled Service Node with reserved spots, the minimum contribution must be the maximum of the 2 values, their reserved amount, or the minimum contribution,
+In a pooled Service Node with reserved spots, the Minimum Contribution must be either the Reserved Amount or the Contribution determined by the above equation, whichever is larger.
 
 <center>![Min Contribution](../assets/mincontribution.svg)</center>
 
 A simplistic example being, if the staking requirement is 24,000 Loki then if,
 
--   Operator contributes 50% of the requirement 12,000 Loki
+-   Operator contributes 50% of the requirement (12,000 Loki)
 
 -   The next contributor must contribute at least (⅓ * 12,000) Loki i.e. 4000 Loki to become a participant.
 
--   If this contributor had reserved a spot for more than 4000 Loki, their minimum contribution amount is that amount.
+-   If this contributor had reserved a spot for more than 4000 Loki, their Minimum Contribution would be that amount.
     
 There are rules in the client software in place to stop users from irreversibly funding a Service Node into an invalid state.
 
