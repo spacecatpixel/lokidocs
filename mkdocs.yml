@@ -14,7 +14,9 @@ theme:
   language: 'en'
   palette:
      accent: 'green'
-
+  direction: 'ltr'
+  feature:
+    tabs: true     
 
   font:
     title: 'Proxima Nova'
@@ -25,41 +27,49 @@ theme:
 
 nav:
 - 'Home': 'index.md'
-- Introduction:
-  - 'Loki Network': 'Introduction/LokiNetwork.md'
-  - 'Getting Started': 'Introduction/GettingStarted.md'
+- 'Introduction': 'Introduction/LokiNetwork.md'
+- 'Getting Started': 'Introduction/GettingStarted.md'
+- 'FAQ': 'FAQ.md'
+
 - Wallets: 
   - 'Overview' : 'Wallets/WalletsOverview.md'
   - 'What wallet to use?' : 'Wallets/WhatWalletToUse.md'
+
+  - Addresses:
+    - 'Main Address': 'Wallets/Addresses/MainAddress.md'
+    - 'Sub Address': 'Wallets/Addresses/SubAddress.md'
+    - 'Integrated Address': 'Wallets/Addresses/IntegratedAddress.md'
 #  - Web Wallet (LokiLocker): 
 #      - 'Troubleshooting Web Wallet' : 'Wallets/WebWallet/TroubleshootWebWallet.md'
 #      - Guides:
 #        - 'to be added': 'Wallets/WebWallet/placeholder.md'
-  - Graphical User interface (GUI) Wallet:
-#      - 'Troubleshooting GUI Wallet' : 'Wallets/GuiWallet/TroubleshootGui.md'
-      - Guides: 
-        - 'Loki Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
+  - 'Multsignature': 'Wallets/Multisignature.md'
+
+  - Guides: 
+        - 'Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
         - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
-  - Mobile Wallet:
-#      - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
-      - Guides :
-        - 'Restore Mobile Wallet': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
-  - Command Line Integrated (CLI) Wallet:
-#      - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
-      - Guides:
+        - 'Mobile Wallet Restore': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
         - 'CLI Mac Setup': 'Wallets/CliWallet/loki-wallet-cliMacSetup.md'
         - 'CLI Wallet Commands': 'Wallets/CliWallet/WalletCommands.md'
-        - 'Restoring Wallet from Seed': 'Wallets/CliWallet/WalletRestoreSeed.md'
-        - 'Restoring Wallet from Keys': 'Wallets/CliWallet/WalletRestoreKeys.md'
-        - 'Service Node Full Guide and Setup': 'ServiceNodes/SNFullGuide.md'
+        - 'CLI Restoring Wallet from Seed': 'Wallets/CliWallet/WalletRestoreSeed.md'
+        - 'CLI Restoring Wallet from Keys': 'Wallets/CliWallet/WalletRestoreKeys.md'
         - Multisig:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
            - 'M/N Multsig': 'Wallets/CliWallet/MofNMultisig.md'
-  - 'Multsignature': 'Wallets/Multisignature.md'
+
+
+
 - Mining:
     - 'Overview': 'Mining/MiningOverview.md'
     - 'ASIC Resistance': 'Mining/ASICResistance.md'
+#    - Guides:
+#      - 'XMR-Stak Mining': 'Mining/XMR-StakGuide.md'
+#      - 'XMR-Stak Linux Mining': 'Mining/XMR-Stak-Linux-Guide.md'
+#      - 'XMRig Mining': 'Mining/XMRig-Guide.md'
+#      - 'Mining With a SBC': 'Mining/Mining-With-SBC.md'
+
+
 - Service Nodes:
     - 'Overview': 'ServiceNodes/SNOverview.md'
     - 'Service Node Functions': 'ServiceNodes/ServiceNodeFunctions.md'
@@ -70,12 +80,14 @@ nav:
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
       - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
       - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
+
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
     - 'Public Testing Overview': 'Lokinet/Guides/PublicTestingGuide.md'
     - 'SNApps': 'Lokinet/SNApps.md'
     - 'LLARP': 'Lokinet/LLARP.md'
     - 'Developers': 'Lokinet/DeveloperInfo.md'
+
     - Guides:
         - 'Installation': 'Lokinet/Guides/Install.md'
         - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
@@ -85,44 +97,46 @@ nav:
         - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
 #        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
-- Loki Services:
-    - 'Overview': 'LokiServices/LokiServicesOverview.md'
-    - 'Messenger' : 'LokiServices/Messenger.md'
-    - 'Blink': 'LokiServices/Blink.md'
-- Developer:
-    - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
-    - 'Daemon RPC Guide': 'Developer/DaemonRPCGuide.md'
-    - 'Loki Wallet RPC Guide': 'Developer/WalletRPCGuide.md'
-    - 'FAQ': 'Developer/FAQ.md'
+
 - Advanced:
+    - Developer:
+       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
+       - 'Daemon RPC Guide': 'Developer/DaemonRPCGuide.md'
+       - 'Loki Wallet RPC Guide': 'Developer/WalletRPCGuide.md'
+       - 'Developer FAQ': 'Developer/FAQ.md'
+
+    - Loki Services:
+       - 'Overview': 'LokiServices/LokiServicesOverview.md'
+       - 'Messenger' : 'LokiServices/Messenger.md'
+       - 'Blink': 'LokiServices/Blink.md'
+
+    - Attack Prevention:
+       - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
+       - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
+       - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
+    
+    - Contributing:
+       - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
+       - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
+       - 'Github Issue Template Example': 'Contributing/Issue_Template.md'
+
+    - Governance:
+       - 'Overview': 'Governance/Governance.md'
+       - 'The Loki Foundation': 'Governance/TheLokiFoundation.md'
+       - 'Loki Funding System': 'Governance/LokiFundingSystem.md'
+
     - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
     - 'Cryptoeconomics' : 'Advanced/Cryptoeconomics.md'
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
     - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
     - 'CryptoNote Elements': 'Advanced/CryptoNoteElements.md'
     - 'lokid' : 'Advanced/lokid.md'
-    - Addresses:
-        - 'Main Address': 'Wallets/Addresses/MainAddress.md'
-        - 'Sub Address': 'Wallets/Addresses/SubAddress.md'
-        - 'Integrated Address': 'Wallets/Addresses/IntegratedAddress.md'
-    - Attack Prevention:
-        - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
-        - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
-        - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
+
     - Guides:
 #        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
         - 'Debugging': 'Advanced/Debugging.md'      
         - 'Accepting Loki for Merchants and Exchanges': 'Advanced/AcceptingLoki.md'
-- 'FAQ': 'FAQ.md'
-- Contributing:
-   - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
-   - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
-   - 'Github Issue Template Example': 'Contributing/Issue_Template.md'
-- Governance:
-   - 'Overview': 'Governance/Governance.md'
-   - 'The Loki Foundation': 'Governance/TheLokiFoundation.md'
-   - 'Loki Funding System': 'Governance/LokiFundingSystem.md'
 
 # Customization
 extra_css:

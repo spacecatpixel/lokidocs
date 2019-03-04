@@ -1,7 +1,17 @@
 # Loki Network
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Lykh-NqkKys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+## Quick Navigation
+
+|                              **About**                             	|                                                                                            **Wallets**                                                                                           	|                                           **Mining**                                           	|                                  **Service Nodes**                                 	|                                 **Lokinet**                                 	|
+|:------------------------------------------------------------------:	|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|:----------------------------------------------------------------------------------------------:	|:----------------------------------------------------------------------------------:	|:---------------------------------------------------------------------------:	|
+|                 ![Logo](assets/images/loki_sample.png)                	|                                                                            ![Wallets](assets/images/LokiInterface.png)                                                                           	|                             ![Mining](assets/images/LokiMining.png)                            	|                     ![ServiceNodes](assets/images/LokiBox.png)                     	|                   ![Lokinet](assets/images/LokiSecure.png)                  	|
+|               [About Loki](introduction/LokiNetwork)               	|                                                                      [What wallet should you use?](Wallets/WalletsOverview)                                                                      	|                              [Mining Loki](Mining/MiningOverview)                              	|                      [Service Nodes](ServiceNodes/SNOverview)                      	|                      [Lokinet](Lokinet/LokinetOverview)                     	|
+| See more information on the different aspects of the Loki Network. 	| Learn more about which wallet best suits you and see the guides to help you set one up. 	| You can mine Loki using your GPU or CPU.  Learn more about mining and see step by step guides. 	| Learn more about Service Nodes and see step by step guides to help you set one up. 	| Learn more about the Lokinet and follow step by step guides to gain access. 	|
+
 ## Information is Important
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Lykh-NqkKys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+
 Privacy is having the agency to decide when you reveal personal information. It is a particularly valuable quality today, when the collection and storage of personal data is taking place at unprecedented levels in history.
 
 Loki provides the means to transact and communicate privately and anonymously, using the decentralised nature of blockchain technology to create new methods of interacting with the internet.
@@ -15,6 +25,7 @@ Loki is an open source project, and we encourage contributions from anyone with 
 If you are unsure where to start check out our "Getting Started" page by [clicking here](Introduction/GettingStarted.md)
 
 Otherwise to begin browsing Loki Docs [click here](Introduction/LokiNetwork.md).
+
 ## Community Channels
 
 - Telegram: [t.me/LokiCommunity](https://t.me/LokiCommunity)

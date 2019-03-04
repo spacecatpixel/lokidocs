@@ -26,32 +26,15 @@ It is also worth noting that Service Nodes are quite basic at the moment, and op
 
 Once these features come out, Service Node operation will require better servers, particularly when it comes to bandwidth.
 
-## Terms
-
-- **[Service Node](../ServiceNodes/SNOverview.md)**: Full nodes on the Loki Network.
-
-- **[Staking Requirement](../ServiceNodes/StakingRequirement.md)**: Collateral requirement to run a Service Node.
-
-- **[Sybil Resistance](../Advanced/SybilResistance.md)**: Resistant to [Sybil Attack](https://en.wikipedia.org/wiki/Sybil_attack).
-
-- **[Service Node Applications](../Lokinet/SNApps.md)**: An anonymized IP endpoint.
-
 ## Guides & Resources
 
-- **[Setting up Service Node](../ServiceNodes/SNFullGuide.md)**: How to host and maintain a Service Node using the [CLI wallet](/Wallets/WalletsOverview/#command-line-interface-wallet-cli).
-
-- **[Service Node as Service](../ServiceNodes/SNOverview.md)**: How to run the daemon to automatically start after a crash or reboot, which helps your Service Node keep running without undesired interruptions.
-
-- **[Service Node RPC](../Developer/SNRPCGuide.md)**: How to use JSON 2.0 RPC Calls with Service Nodes.
-
-- **[Active Service Node List](https://www.lokiblocks.com)**: Loki Block explorer showing the current Service Node Pubkeys.
-
-- **[Service Node Portal](https://loki.network/service-nodes-portal/)**: Loki's official Service Node Portal.
-
-- **[Setup Video Guide](https://www.youtube.com/watch?v=6uiRD1847UY)**: Video Guide on how to setup a Service Node using the CLI Wallet.
-
-- **[Reward Calculator OSX](https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_OSX-V1.xlsm)**: Service Node reward calculator for OSX.
-
-- **[Reward Calculator Windows](https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_Windows-V1-1.xlsm)**: Service Node reward calculator for Windows.
-
-- **[Staking Requirement Calculator WEB](https://jagerman.com/sn/)**: Webpage showing Staking Requirement at current Block Height.
+| **Guide/Resource**                                                                                                       	| **Description**                                                                                                                                   	|
+|--------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------	|
+| **[Setting up Service Node](../ServiceNodes/SNFullGuide.md)**                                                            	| How to host and maintain a Service Node using the [CLI wallet](/Wallets/WalletsOverview/#command-line-interface-wallet-cli).                      	|
+| **[Service Node as Service](../ServiceNodes/SNOverview.md)**                                                             	| How to run the daemon to automatically start after a crash or reboot, which helps your Service Node keep running without undesired interruptions. 	|
+| **[Service Node RPC](../Developer/SNRPCGuide.md)**                                                                       	| How to use JSON 2.0 RPC Calls with Service Nodes.                                                                                                 	|
+| **[Active Service Node List](https://www.lokiblocks.com)**                                                               	| Loki Block explorer showing the current Service Node Pubkeys.                                                                                     	|
+| **[Setup Video Guide](https://www.youtube.com/watch?v=6uiRD1847UY)**                                                     	| Video Guide on how to setup a Service Node using the CLI Wallet.                                                                                  	|
+| **[Reward Calculator OSX](https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_OSX-V1.xlsm)**           	| Service Node reward calculator for OSX.                                                                                                           	|
+| **[Reward Calculator Windows](https://loki.network/wp-content/uploads/2018/09/Loki_Service_Node_ROI_Windows-V1-1.xlsm)** 	| Service Node reward calculator for Windows.                                                                                                       	|
+| **[Staking Requirement Calculator WEB](https://jagerman.com/sn/)**                                                       	| Webpage showing Staking Requirement at current Block Height.                                                                                      	|
