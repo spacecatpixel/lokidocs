@@ -148,3 +148,21 @@
 {
     border-bottom: 0.1rem dotted #78be20;
 }
+
+.md-tabs 
+{
+    background-color: #272727!important;
+    color: #78be20;
+}
+
+.md-tabs__link 
+{
+    color: white;
+    opacity:0.9;
+}
+
+.md-tabs__link--active
+{
+    color:#78be20;
+    font-weight: bold;
+}

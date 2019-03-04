@@ -10,7 +10,7 @@ pre, code
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
     font-style      : normal;
     color           : #78be20!important;
-    background-color: #272727!important;
+    background-color: #2e2e2e!important;
 
 }
 
@@ -70,6 +70,10 @@ pre, code
     color    : #ddd;
     font-size: 16px;
 }
+.md-typeset table
+{
+    background-color: #272727;
+}
 
 .md-nav__link[data-md-state="blur"] 
 {
@@ -87,6 +91,11 @@ pre, code
 .md-nav__link li 
 {
     color: #ddd;
+}
+
+.md-nav__title
+{
+    font-size:1.6rem;
 }
 
 .md-header-nav__topic a 
@@ -112,8 +121,13 @@ pre, code
     html .md-nav--primary .md-nav__title, 
     html .md-nav--primary .md-nav__title::before 
     {
-        background-color:black;
-        color:#78be20;
+        background-color: black;
+        color           : #78be20;
     }
 }
 
+.documentation
+{
+    color      : #78be20;
+    font-weight: bold;
+}
