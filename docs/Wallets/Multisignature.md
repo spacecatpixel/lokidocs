@@ -1,13 +1,13 @@
 # Multisignature
 In cryptocurrencies, multisig feature allows you to sign a transaction with more than one private key. Funds protected with multisig can only be spent by signing with M-of-N keys.
 
- Use cases:
-
-- Shared account (1-of-2; both husband and wife individually have full access to their funds)
-- [Consensus account](../Wallets/CliWallet/2of2Multisig.md) (2-of-2; both husband and wife must agree to spend their funds)
-- [Threshold account](../Wallets/CliWallet/2of3Multisig.md) (2-of-3; an escrow service is involved as an independent 3rd party, to co-sign with either the seller, or with the buyer, if seller and buyer do not agree)
-- [Secure account](../Wallets/CliWallet/2of3Multisig.md) (2-of-3; a single owner controlls all 3 keys but secures them via a different means to diversify risks)
-- [Arbitrary threshold account](../Wallets/CliWallet/MofNMultisig.md) (M-of-N; some cryptocurrencies provide full flexibility on the number of signers)
+| **Use Case**                                                           	| **Scheme**   	| **Example**                                                                                                                                            	|
+|---------------------------------------------------------------------	|----------	|----------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Shared Account                                                      	| (1-of-2) 	| Both husband and wife individually have full access to their funds.                                                                                	|
+| [Consensus Account](../Wallets/CliWallet/2of2Multisig.md)           	| (2-of-2) 	| Both husband and wife must agree to spend their funds.                                                                                             	|
+| [Threshold account](../Wallets/CliWallet/2of3Multisig.md)           	| (2-of-3) 	| An escrow service is involved as an independent 3rd party, to co-sign with either the seller, or with the buyer, if seller and buyer do not agree. 	|
+| [Secure account](../Wallets/CliWallet/2of3Multisig.md)              	| (2-of-3) 	| A single owner controls all 3 keys but secures them via a different means to diversify risks.                                                      	|
+| [Arbitrary threshold account](../Wallets/CliWallet/MofNMultisig.md) 	| (M-of-N) 	| Some cryptocurrencies provide full flexibility on the number of signers.                                                                           	|
 
 ## Loki Multisignature
 
@@ -27,8 +27,8 @@ After multisig wallet setup every participant ends up knowing the public address
 
 ## Guides
 
-- [2-of-2 Multisigniture Wallet Setup](../Wallets/CliWallet/2of2Multisig.md) - Setup Guide for a 2 of 2 Multsig Wallet.
-
-- [2-of-3 Multisigniture Wallet Setup](../Wallets/CliWallet/2of3Multisig.md) - Setup Guide for a 2 of 3 Multsig Wallet.
-
-- [M/N Multisig Setup Guide](../Wallets/CliWallet/MofNMultisig.md) - Setup Guide for a M of N Multisig Wallet.
+| Guide                                                                      	| Description                               	|
+|----------------------------------------------------------------------------	|-------------------------------------------	|
+| [2-of-2 Multisigniture Wallet Setup](../Wallets/CliWallet/2of2Multisig.md) 	| Setup Guide for a 2 of 2 Multsig Wallet.  	|
+| [2-of-3 Multisigniture Wallet Setup](../Wallets/CliWallet/2of3Multisig.md) 	| Setup Guide for a 2 of 3 Multsig Wallet.  	|
+| [M-of-N Multisig Setup Guide](../Wallets/CliWallet/MofNMultisig.md)        	| Setup Guide for a M of N Multisig Wallet. 	|
