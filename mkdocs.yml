@@ -78,7 +78,6 @@ nav:
     - Guides:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
-      - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
       - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
 
 - Lokinet:
