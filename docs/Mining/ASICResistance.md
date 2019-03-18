@@ -8,10 +8,4 @@ To combat the use of ASICs, Monero proposed a strategy of hard forking every 3-6
 
 A number of alternative proof-of-work algorithms have been proposed to combat the need to hard fork regularly, including provably memory-hard hashing algorithms like [Argon2](https://password-hashing.net/argon2-specs.pdf), [Balloon hash](https://eprint.iacr.org/2016/027.pdf), and polymorphic hashing algorithms like ProgPoW and [RandProg](https://github.com/hyc/randprog). The Loki team will be publishing additional research on the aforementioned algorithms to develop a long-term solution to ASIC resistance.
 
-While this work is undertaken, Loki will incorporate a version of CryptoNight called CryptoNight Heavy, which maintains ASIC resistance against CryptoNight ASIC miners. [CryptoNight Heavy](https://github.com/curie-kief/cryptonote-heavy-design) differs from CryptoNight V7 in a number of ways:  
-
-- it provides an increase in scratchpad size to 4mb
-
-- a change in the way implodes and explodes are handled
-
-These changes differentiate it from the largest target for ASIC miners which is Monero’s CryptoNight V7 and also provide more robust protection against ASIC development until a more permanent solution is proposed.
+While this work is undertaken, Loki will incorporate a version of CryptoNight called CryptoNight turtle, which maintains ASIC resistance against CryptoNight ASIC miners.
