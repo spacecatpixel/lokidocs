@@ -31,7 +31,6 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
     - Step 6 [Register Node](#step-6-service-node-registration)
     - Step 7 [Check Registration](#step-7-service-node-check)
 - [Express Setup Guide](#express-setup-guide)
-- [Additional Functions](#additional-functions)
 
 ## Overview
 
@@ -633,38 +632,6 @@ To check this information directly with the service node itself, first get the c
 Run the command `~/loki/lokid print_quorum_state <block height>` replacing `<block height>` with the number minus 1 that was outputted when running `status` command.
 
 If your `<Service Node Pubkey>` is sitting in the list you know you are now staking.
-
-## Additional Functions
-
-### Autostaking - Checking/stopping autostake command
-
-To check the processes running in the background, run the command:
-
-```
-top -u <username>
-```
-
-Under the `COMMAND` column we should see a process called `loki-wallet-cli`. If you do not see this process you are either looking at the wrong `<username>` or your autostake command is not running. 
-
-If you want to stop the autostake then run the following command while logged on to the specific `<username>` which has `loki-wallet-cli` running in the background:
-
-```
-pkill loki-wallet-cli
-```
-
-### Running Autostake on startup
- 
-If the host machine your VPS is running on shuts down or restarts unexpectedly then so to will your your autostaking wallet, you can use the following command to start the autostaking wallet again, you can also include these commands in your startup scripts, ensuring if your node goes down it automatically restarts the wallet process.
-
-```
-loki-wallet-cli --testnet --wallet-file <PATH TO WALLET FILE> --password <WALLET PASSWORD> set ask-password 0
-```
-
-```
-register_service_node auto ...
-```
-
-Running this command if you have already staked will not stake over the top of an already staked node 
 
 ## Express Setup Guide
 
