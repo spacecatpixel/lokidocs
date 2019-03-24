@@ -163,9 +163,7 @@ extra:
       link: 'https://www.facebook.com/LokiNetwork/'
 
 # Google Analytics
-google_analytics:
-  - 'UA-XXXXXXXX-X'
-  - 'auto'
+# nope
 
 # Extensions
 markdown_extensions:
