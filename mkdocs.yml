@@ -6,8 +6,6 @@ site_url: 'https://lokidocs.com'
 repo_name: 'lokidocs'
 repo_url: 'https://github.com/loki-project/loki-docs'
 
-
-
 # Configuration
 theme:
   name: 'material'
@@ -17,11 +15,7 @@ theme:
   direction: 'ltr'
   feature:
     tabs: true     
-
-  font:
-    title: 'Proxima Nova'
-    text: 'Roboto Regular'
-    code: 'Roboto'
+  font: false
   favicon: 'Loki_favicon32x32.png'
   logo: 'logo.svg'
 
@@ -57,8 +51,6 @@ nav:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
            - 'M/N Multsig': 'Wallets/CliWallet/MofNMultisig.md'
-
-
 
 - Mining:
     - 'Overview': 'Mining/MiningOverview.md'
