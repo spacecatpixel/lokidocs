@@ -106,7 +106,7 @@ The node and peer words are used interchangeably.
 | Option                 | Description
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------
 | `--p2p-bind-ip`        | Network interface to bind to for p2p network protocol. Default value `0.0.0.0` binds to all network interfaces. This is typically what you want. <br /><br />You must change this if you want to constrain binding, for example to configure connection through Tor via torsocks: <br />`DNS_PUBLIC=tcp://1.1.1.1 TORSOCKS_ALLOW_INBOUND=1 torsocks ./lokid --p2p-bind-ip 127.0.0.1 --no-igd --hide-my-port`
-| `--p2p-bind-port`      | TCP port to listen for p2p network connections. Defaults to `18080` for mainnet, `28080` for testnet, and `38080` for stagenet. You normally wouldn't change that. This is helpful to run several nodes on your machine to simulate private Loki p2p network (likely using private Testnet). Example: <br/>`./lokid --p2p-bind-port=48080`
+| `--p2p-bind-port`      | TCP port to listen for p2p network connections. Defaults to `22022` for mainnet, `38156` for testnet, and `38153` for stagenet. You normally wouldn't change that. This is helpful to run several nodes on your machine to simulate private Loki p2p network (likely using private Testnet). Example: <br/>`./lokid --p2p-bind-port=48080`
 | `--p2p-external-port`  | TCP port to listen for p2p network connections on your router. Relevant if you are behind a NAT and still want to accept incoming connections. You must then set this to relevant port on your router. This is to let `lokid` know what to advertise on the network. Default is `0`.
 | `--hide-my-port`       | `lokid` will still open and listen on the p2p port. However, it will not announce itself as a peer list candidate. Technically, it will return port `0` in a response to p2p handshake (`node_data.my_port = 0` in `get_local_node_data` function). In effect nodes you connect to won't spread your IP to other nodes. To sum up, it is not really hiding, it is more like "do not advertise".
 | `--seed-node`          | Connect to a node to retrieve other nodes' addresses, and disconnect. If not specified, `lokid` will use hardcoded seed nodes on the first run, and peers cached on disk on subsequent runs.  
@@ -137,7 +137,7 @@ The following options define how the API behaves.
 | Option                          | Description
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------
 | `--rpc-bind-ip`                 | IP to listen on. By default `127.0.0.1` because API gives full administrative capabilities over the node. Set it to `0.0.0.0` to listen on all interfaces - but only in connection with one of `*-restricted-*` options **and**  `--confirm-external-bind`.
-| `--rpc-bind-port`               | TCP port to listen on. By default `18081` (mainnet), `28081` (testnet), `38081` (stagenet).
+| `--rpc-bind-port`               | TCP port to listen on. By default `22023` (mainnet), `38157` (testnet), `38154` (stagenet).
 | `--rpc-restricted-bind-port`    | TCP port to listen on with the limited version of API. The limited API can be made public to create an Open Node. At the same time, you may firewall the full API port to still enjoy local querying and administration.
 | `--confirm-external-bind`       | Confirm you consciously set `--rpc-bind-ip` to non-localhost IP and you understand the consequences.
 | `--restricted-rpc`              | Restrict API to view only commands and do not return privacy sensitive data. Note this does not make sense with `--rpc-restricted-bind-port` because you would end up with two restricted APIs.
@@ -208,7 +208,7 @@ These options should no longer be necessary. They are still present in `lokid` f
 | `--no-fluffy-blocks`  | Relay classic full blocks. Classic block contains all transactions.
 | `--show-time-stats`   | Official docs say "Show time-stats when processing blocks/txs and disk synchronization" but it does not seem to produce any output during usual blockchain synchronization.
 | `--zmq-rpc-bind-ip`   | IP for ZMQ RPC server to listen on. By default `127.0.0.1`. This is not yet widely used as ZMQ interface currently does not provide meaningful advantage over classic JSON-RPC interface. Unfortunately, currently there is no way to disable the ZMQ server. 
-| `--zmq-rpc-bind-port` | Port for ZMQ RPC server to listen on. By default `18082` for mainnet, `38082` for stagenet, and `28082` for testnet. 
+| `--zmq-rpc-bind-port` | Port for ZMQ RPC server to listen on. By default `22024` for mainnet, `38154` for stagenet, and `38158` for testnet. 
 | `--db-type`           | Specify database type. The default and only available: `lmdb`.
 
 ## Commands
