@@ -107,6 +107,10 @@ The node and peer words are used interchangeably.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------
 | `--p2p-bind-ip`        | Network interface to bind to for p2p network protocol. Default value `0.0.0.0` binds to all network interfaces. This is typically what you want. <br /><br />You must change this if you want to constrain binding, for example to configure connection through Tor via torsocks: <br />`DNS_PUBLIC=tcp://1.1.1.1 TORSOCKS_ALLOW_INBOUND=1 torsocks ./lokid --p2p-bind-ip 127.0.0.1 --no-igd --hide-my-port`
 | `--p2p-bind-port`      | TCP port to listen for p2p network connections. Defaults to `22022` for mainnet, `38156` for testnet, and `38153` for stagenet. You normally wouldn't change that. This is helpful to run several nodes on your machine to simulate private Loki p2p network (likely using private Testnet). Example: <br/>`./lokid --p2p-bind-port=48080`
+| `--p2p-bind-port-ipv6` | TCP port to listen for p2p network connections. Defaults to `22022` for mainnet, `38156` for testnet, and `38153` for stagenet.|
+| `--p2p-bind-ipv6-address`|  Interface for p2p network protocol. |
+| `--p2p-use-ipv6` | Enable IPv6 for p2p. |
+|
 | `--p2p-external-port`  | TCP port to listen for p2p network connections on your router. Relevant if you are behind a NAT and still want to accept incoming connections. You must then set this to relevant port on your router. This is to let `lokid` know what to advertise on the network. Default is `0`.
 | `--hide-my-port`       | `lokid` will still open and listen on the p2p port. However, it will not announce itself as a peer list candidate. Technically, it will return port `0` in a response to p2p handshake (`node_data.my_port = 0` in `get_local_node_data` function). In effect nodes you connect to won't spread your IP to other nodes. To sum up, it is not really hiding, it is more like "do not advertise".
 | `--seed-node`          | Connect to a node to retrieve other nodes' addresses, and disconnect. If not specified, `lokid` will use hardcoded seed nodes on the first run, and peers cached on disk on subsequent runs.  
@@ -143,6 +147,8 @@ The following options define how the API behaves.
 | `--restricted-rpc`              | Restrict API to view only commands and do not return privacy sensitive data. Note this does not make sense with `--rpc-restricted-bind-port` because you would end up with two restricted APIs.
 | `--rpc-login`                   | Specify `username[:password]` required to connect to API. Practical usage seems limited because API communication is in plain text over HTTP.
 | `--rpc-access-control-origins`  | Specify a comma separated list of origins to allow cross origin resource sharing. This is useful if you want to use `lokid` API directly from a web browser via JavaScript (say in a pure-fronted web appp scenario). With this option `lokid` will put proper HTTP CORS headers to its responses. You will also need to set `--rpc-login` if you use this option. Normally though, the API is used by backend app and this option isn't necessary.
+| `--rpc-bind-ipv6-address` | Specify IPv6 address to bind RPC server |
+| `--rpc-use-ipv6`| Allow IPv6 for RPC |
 
 #### Accepting Loki
 
