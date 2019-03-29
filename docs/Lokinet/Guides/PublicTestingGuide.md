@@ -96,7 +96,7 @@ Follow the guide and report to the moderators with any issues on the #lokinet-he
 ### 3. Joining a Lokinet IRC Chat
 This guide will help you gain access to lokinet IRC channels, to access the guide [click here](../Guides/LokinetIRC.md).
 
-Alternatively, all you need to do is download your favourite IRC client, have `./lokinet` running and connect to a server with the following address `7okic5x5do3uh3usttnqz9ek3uuoemdrwzto1hciwim9f947or6y.loki` with port `6667` and join channel `#lokinet`. 
+Alternatively, all you need to do is download your favourite IRC client, have `./lokinet` running and connect to a server with the following address `icxqqcpd3sfkjbqifn53h7rmusqa1fyxwqyfrrcgkd37xcikwa7y.loki` with port `6667` and join channel `#lokinet`. 
 
 ### 4. Hosting a SNApp
 
