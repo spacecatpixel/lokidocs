@@ -104,7 +104,7 @@ Get the metadata currently associated with the queried service node public keys 
 
 #### Testnet Example
 ```
-    curl -X POST http://127.0.0.1:38157/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_service_nodes", “params”: “service_node_pubkeys”: []}' -H 'Content-Type: application/json'
+    curl -X POST http://127.0.0.1:38157/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_service_nodes", “params”: {“service_node_pubkeys”: []}}' -H 'Content-Type: application/json'
 ```
 
 #### Result
