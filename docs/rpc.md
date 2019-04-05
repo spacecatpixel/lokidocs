@@ -76,13 +76,24 @@ Note: "atomic units" refer to the smallest fraction of 1 LOKI according to the l
  - [COMMAND_RPC_GET_OUTPUT_BLACKLIST](#command_rpc_get_output_blacklist)
 
 
---- 
-
 ### COMMAND_RPC_GET_HEIGHT
-
 
 Get the node's current height.
 
+Endpoints: /get_height, /getheight
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_height -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "height": 123,
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -93,13 +104,32 @@ Get the node's current height.
  * `untrusted - bool`: If the result is obtained using bootstrap mode, and therefore not trusted `true`, or otherwise `false`.
 
 
---- 
-
 ### COMMAND_RPC_GET_BLOCKS_FAST
-
 
 Get all blocks info. Binary request.
 
+Endpoints: /get_blocks.bin, /getblocks.bin
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_blocks.bin -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "blocks": [, ...],
+  "start_height": 123,
+  "current_height": 123,
+  "status": "default string",
+  "output_indices": [{
+      "indices": [{
+          "indices": [123, ...]
+        }, ...]
+    }, ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `block_ids - string[64][]`: First 10 blocks id goes sequential, next goes in pow(2,n) offset, like 2, 4, 8, 16, 32, 64 and so on, and the last one is always genesis block
@@ -114,18 +144,30 @@ Get all blocks info. Binary request.
  * `current_height - uint64`: The current block height.
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `output_indices - block_output_indices[]`: Array of indices.
-     * `indices - tx_output_indices[]`: Array of TX output indices:
-         * `indices - uint64[]`: Array of unsigned int.
+   * `indices - tx_output_indices[]`: Array of TX output indices:
+     * `indices - uint64[]`: Array of unsigned int.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_BLOCKS_BY_HEIGHT
-
 
 Get blocks by height. Binary request.
 
+Endpoints: /get_blocks_by_height.bin, /getblocks_by_height.bin
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_blocks_by_height.bin -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "blocks": [, ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `heights - uint64[]`: List of block heights
@@ -137,13 +179,24 @@ Get blocks by height. Binary request.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_ALT_BLOCKS_HASHES
-
 
 Get the known blocks hashes which are not on the main chain.
 
+Endpoints: /get_alt_blocks_hashes
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_alt_blocks_hashes -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "blks_hashes": ["default string", ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -154,13 +207,27 @@ Get the known blocks hashes which are not on the main chain.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_HASHES_FAST
-
 
 Get hashes. Binary request.
 
+Endpoints: /get_hashes.bin, /gethashes.bin
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_hashes.bin -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "m_block_ids": ["bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70", ...],
+  "start_height": 123,
+  "current_height": 123,
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `block_ids - string[64][]`: First 10 blocks id goes sequential, next goes in pow(2,n) offset, like 2, 4, 8, 16, 32, 64 and so on, and the last one is always genesis block */
@@ -175,13 +242,40 @@ Get hashes. Binary request.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_TRANSACTIONS
-
 
 Look up one or more transactions by hash.
 
+Endpoints: /get_transactions, /gettransactions
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_transactions -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "txs_as_hex": ["default string", ...],
+  "txs_as_json": ["default string", ...],
+  "missed_tx": ["default string", ...],
+  "txs": [{
+      "tx_hash": "default string",
+      "as_hex": "default string",
+      "pruned_as_hex": "default string",
+      "prunable_as_hex": "default string",
+      "prunable_hash": "default string",
+      "as_json": "default string",
+      "in_pool": true,
+      "double_spend_seen": true,
+      "block_height": 123,
+      "block_timestamp": 123,
+      "output_indices": [123, ...]
+    }, ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `txs_hashes - string[]`: List of transaction hashes to look up.
@@ -195,28 +289,40 @@ Look up one or more transactions by hash.
  * `txs_as_json - string[]`: Transactions decoded as json (old compat)
  * `missed_tx - string[]`: (Optional - returned if not empty) Transaction hashes that could not be found.
  * `txs - entry[]`: Array of structure entry as follows:
-     * `tx_hash - string`: Transaction hash.
-     * `as_hex - string`: Full transaction information as a hex string.
-     * `pruned_as_hex - string`
-     * `prunable_as_hex - string`
-     * `prunable_hash - string`
-     * `as_json - string`: List of transaction info.
-     * `in_pool - bool`: States if the transaction is in pool (`true`) or included in a block (`false`).
-     * `double_spend_seen - bool`: States if the transaction is a double-spend (`true`) or not (`false`).
-     * `block_height - uint64`: Block height including the transaction.
-     * `block_timestamp - uint64`: Unix time at chich the block has been added to the blockchain.
-     * `output_indices - uint64[]`: List of transaction indexes.
+   * `tx_hash - string`: Transaction hash.
+   * `as_hex - string`: Full transaction information as a hex string.
+   * `pruned_as_hex - string`
+   * `prunable_as_hex - string`
+   * `prunable_hash - string`
+   * `as_json - string`: List of transaction info.
+   * `in_pool - bool`: States if the transaction is in pool (`true`) or included in a block (`false`).
+   * `double_spend_seen - bool`: States if the transaction is a double-spend (`true`) or not (`false`).
+   * `block_height - uint64`: Block height including the transaction.
+   * `block_timestamp - uint64`: Unix time at chich the block has been added to the blockchain.
+   * `output_indices - uint64[]`: List of transaction indexes.
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_IS_KEY_IMAGE_SPENT
-
 
 Check if outputs have been spent using the key image associated with the output.
 
+Endpoints: /is_key_image_spent
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/is_key_image_spent -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "spent_status": [, ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `key_images - string[]`: List of key image hex strings to check.
@@ -228,13 +334,25 @@ Check if outputs have been spent using the key image associated with the output.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_TX_GLOBAL_OUTPUTS_INDEXES
-
 
 Get global outputs of transactions. Binary request.
 
+Endpoints: /get_o_indexes.bin
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_o_indexes.bin -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "o_indexes": [123, ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `txid - string[64]`: Binary txid.
@@ -246,61 +364,111 @@ Get global outputs of transactions. Binary request.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_OUTPUTS_BIN
-
 
 Get outputs. Binary request.
 
+Endpoints: /get_outs.bin
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_outs.bin -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "outs": [{
+      "key": ,
+      "mask": ,
+      "unlocked": true,
+      "height": 123,
+      "txid": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70"
+    }, ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `outputs - get_outputs_out[]`: Array of structure `get_outputs_out`.
-     * `amount - uint64`: Amount of Loki in TXID.
-     * `index - uint64`
+   * `amount - uint64`: Amount of Loki in TXID.
+   * `index - uint64`
  * `get_txid - bool`: TXID
 
 **Outputs:**
 
  * `outs - outkey[]`: List of outkey information.
-     * `key - crypto::public_key`: The public key of the output.
-     * `mask - rct::key`
-     * `unlocked - bool`: States if output is locked (`false`) or not (`true`).
-     * `height - uint64`: Block height of the output.
-     * `txid - string[64]`: Transaction id.
+   * `key - crypto::public_key`: The public key of the output.
+   * `mask - rct::key`
+   * `unlocked - bool`: States if output is locked (`false`) or not (`true`).
+   * `height - uint64`: Block height of the output.
+   * `txid - string[64]`: Transaction id.
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_OUTPUTS
 
+Endpoints: /get_outs
+```
+Example Request
+curl -X POST http://127.0.0.1:22023/get_outs -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "outs": [{
+      "key": "default string",
+      "mask": "default string",
+      "unlocked": true,
+      "height": 123,
+      "txid": "default string"
+    }, ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `outputs - get_outputs_out[]`: Array of structure `get_outputs_out`.
-     * `amount - uint64`: Amount of Loki in TXID.
-     * `index - uint64`
+   * `amount - uint64`: Amount of Loki in TXID.
+   * `index - uint64`
 
 **Outputs:**
 
  * `outs - outkey[]`: List of outkey information.
-     * `key - string`: The public key of the output.
-     * `mask - string`
-     * `unlocked - bool`: States if output is locked (`false`) or not (`true`).
-     * `height - uint64`: Block height of the output.
-     * `txid - string`: Transaction id.
+   * `key - string`: The public key of the output.
+   * `mask - string`
+   * `unlocked - bool`: States if output is locked (`false`) or not (`true`).
+   * `height - uint64`: Block height of the output.
+   * `txid - string`: Transaction id.
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_SEND_RAW_TX
-
 
 Broadcast a raw transaction to the network.
 
+Endpoints: /send_raw_transaction, /sendrawtransaction
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/send_raw_transaction -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "reason": "default string",
+  "not_relayed": true,
+  "untrusted": true,
+  "tvc": 
+}
+
+```
 **Inputs:**
 
  * `tx_as_hex - string`: Full transaction information as hexidecimal string.
@@ -315,13 +483,23 @@ Broadcast a raw transaction to the network.
  * `tvc - tx_verification_context`
 
 
---- 
-
 ### COMMAND_RPC_START_MINING
-
 
 Start mining on the daemon.
 
+Endpoints: /start_mining
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/start_mining -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `miner_address - string`: Account address to mine to.
@@ -334,13 +512,54 @@ Start mining on the daemon.
  * `status - string`: General RPC error code. "OK" means everything looks good. Any other value means that something went wrong.
 
 
---- 
-
 ### COMMAND_RPC_GET_INFO
-
 
 Retrieve general information about the state of your node and the network.
 
+Endpoints: /get_info, /getinfo, get_info
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_info -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "height": 123,
+  "target_height": 123,
+  "difficulty": 123,
+  "target": 123,
+  "tx_count": 123,
+  "tx_pool_size": 123,
+  "alt_blocks_count": 123,
+  "outgoing_connections_count": 123,
+  "incoming_connections_count": 123,
+  "rpc_connections_count": 123,
+  "white_peerlist_size": 123,
+  "grey_peerlist_size": 123,
+  "mainnet": true,
+  "testnet": true,
+  "stagenet": true,
+  "nettype": "default string",
+  "top_block_hash": "default string",
+  "cumulative_difficulty": 123,
+  "block_size_limit": 123,
+  "block_weight_limit": 123,
+  "block_size_median": 123,
+  "block_weight_median": 123,
+  "start_time": 123,
+  "free_space": 123,
+  "offline": true,
+  "untrusted": true,
+  "bootstrap_daemon_address": "default string",
+  "height_without_bootstrap": 123,
+  "was_bootstrap_ever_used": true,
+  "database_size": 123,
+  "update_available": true,
+  "version": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -381,13 +600,28 @@ Retrieve general information about the state of your node and the network.
  * `version - string`: Current version of software running.
 
 
---- 
-
 ### COMMAND_RPC_GET_ALL_SERVICE_NODES_KEYS
-
 
 Retrieve all Service Node Keys.
 
+Endpoints: get_all_service_nodes_keys
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_all_service_nodes_keys",
+  "params": {
+    "fully_funded_nodes_only": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "keys": ["default string", ...]
+}
+
+```
 **Inputs:**
 
  * `fully_funded_nodes_only - bool`: Return keys for service nodes if they are funded and working on the network
@@ -397,13 +631,22 @@ Retrieve all Service Node Keys.
  * `keys - string[]`: Returns as base32z of the hex key, for Lokinet internal usage
 
 
---- 
-
 ### COMMAND_RPC_STOP_MINING
-
 
 Stop mining on the daemon.
 
+Endpoints: /stop_mining
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/stop_mining -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -412,13 +655,27 @@ Stop mining on the daemon.
  * `status - string`: General RPC error code. "OK" means everything looks good. Any other value means that something went wrong.
 
 
---- 
-
 ### COMMAND_RPC_MINING_STATUS
-
 
 Get the mining status of the daemon.
 
+Endpoints: /mining_status
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/mining_status -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "active": true,
+  "speed": 123,
+  "threads_count": 2130706433,
+  "address": "default string",
+  "is_background_mining_enabled": true
+}
+
+```
 **Inputs:**
 
 
@@ -432,14 +689,24 @@ Get the mining status of the daemon.
  * `is_background_mining_enabled - bool`: States if the mining is running in background (`true`) or foreground (`false`).
 
 
---- 
-
 ### COMMAND_RPC_SAVE_BC
 
-
 Save the blockchain. The blockchain does not need saving and is always saved when modified, 
+
 however it does a sync to flush the filesystem cache onto the disk for safety purposes against Operating System or Hardware crashes.
 
+Endpoints: /save_bc
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/save_bc -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -448,13 +715,29 @@ however it does a sync to flush the filesystem cache onto the disk for safety pu
  * `status - string`: General RPC error code. "OK" means everything looks good. Any other value means that something went wrong.
 
 
---- 
-
 ### COMMAND_RPC_GETBLOCKCOUNT
-
 
 Look up how many blocks are in the longest chain known to the node.
 
+Endpoints: get_block_count, getblockcount
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_block_count",
+  "params": {
+    "request": ["default string", ...]
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "count": 123,
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `request - string[]`
@@ -465,13 +748,28 @@ Look up how many blocks are in the longest chain known to the node.
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_GETBLOCKHASH
-
 
 Look up a block's hash by its height.
 
+Endpoints: on_get_block_hash, on_getblockhash
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"on_get_block_hash",
+  "params": {
+    "request": [123, ...]
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "response": "default string"
+}
+
+```
 **Inputs:**
 
  * `request - uint64[]`: Block height (int array of length 1).
@@ -481,13 +779,37 @@ Look up a block's hash by its height.
  * `response - string`: Block hash (string).
 
 
---- 
-
 ### COMMAND_RPC_GETBLOCKTEMPLATE
-
 
 Get a block template on which mining a new block.
 
+Endpoints: get_block_template, getblocktemplate
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_block_template",
+  "params": {
+    "reserve_size": 123,
+    "wallet_address": "L8KJf3nRQ53NTX1YLjtHryjegFRa3ZCEGLKmRxUfvkBWK19UteEacVpYqpYscSJ2q8WRuHPFdk7Q5W8pQB7Py5kvUs8vKSk"
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "difficulty": 123,
+  "height": 123,
+  "reserved_offset": 123,
+  "expected_reward": 123,
+  "prev_hash": "default string",
+  "blocktemplate_blob": sd2b5f838e8cc7774d92f5a6ce0d72cb9bd8db2ef28948087f8a50ff46d188dd9,
+  "blockhashing_blob": sd2b5f838e8cc7774d92f5a6ce0d72cb9bd8db2ef28948087f8a50ff46d188dd9,
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `reserve_size - uint64`: Max 255 bytes
@@ -506,13 +828,28 @@ Get a block template on which mining a new block.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_SUBMITBLOCK
-
 
 Submit a mined block to the network.
 
+Endpoints: submit_block, submitblock
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"submit_block",
+  "params": {
+    "request": ["default string", ...]
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `request - string[]`: Block blob data - array of strings; list of block blobs which have been mined. See get_block_template to get a blob on which to mine.
@@ -522,13 +859,30 @@ Submit a mined block to the network.
  * `status - string`: Block submit status.
 
 
---- 
-
 ### COMMAND_RPC_GENERATEBLOCKS
-
 
 Developer only.
 
+Endpoints: generateblocks
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"generateblocks",
+  "params": {
+    "amount_of_blocks": 123,
+    "wallet_address": "L8KJf3nRQ53NTX1YLjtHryjegFRa3ZCEGLKmRxUfvkBWK19UteEacVpYqpYscSJ2q8WRuHPFdk7Q5W8pQB7Py5kvUs8vKSk"
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "height": 123,
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `amount_of_blocks - uint64`
@@ -540,13 +894,49 @@ Developer only.
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_GET_LAST_BLOCK_HEADER
-
 
 Block header information for the most recent block is easily retrieved with this method. No inputs are needed.
 
+Endpoints: get_last_block_header, getlastblockheader
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_last_block_header",
+  "params": {
+    "fill_pow_hash": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "block_header": {
+    "major_version": 11,
+    "minor_version": 11,
+    "timestamp": 123,
+    "prev_hash": "default string",
+    "nonce": 2130706433,
+    "orphan_status": true,
+    "height": 123,
+    "depth": 123,
+    "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+    "difficulty": 25179406071,
+    "cumulative_difficulty": 25179406071,
+    "reward": 123,
+    "miner_reward": 123,
+    "block_size": 123,
+    "block_weight": 123,
+    "num_txes": 123,
+    "pow_hash": "default string",
+    "long_term_weight": 123
+  },
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `fill_pow_hash - bool`: Tell the daemon if it should fill out pow_hash field.
@@ -555,34 +945,71 @@ Block header information for the most recent block is easily retrieved with this
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `block_header - block_header_response`: A structure containing block header information.
-     * `major_version - uint8`: The major version of the loki protocol at this block height.
-     * `minor_version - uint8`: The minor version of the loki protocol at this block height.
-     * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
-     * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
-     * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
-     * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
-     * `height - uint64`: The number of blocks preceding this block on the blockchain.
-     * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-     * `hash - string`: The hash of this block.
-     * `difficulty - uint64`: The strength of the Loki network based on mining power.
-     * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
-     * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
-     * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
-     * `block_size - uint64`: The block size in bytes.
-     * `block_weight - uint64`: The block weight in bytes.
-     * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
-     * `pow_hash - string`: The hash of the block's proof of work.
-     * `long_term_weight - uint64`: Long term weight of the block.
+   * `major_version - uint8`: The major version of the loki protocol at this block height.
+   * `minor_version - uint8`: The minor version of the loki protocol at this block height.
+   * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
+   * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
+   * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
+   * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
+   * `height - uint64`: The number of blocks preceding this block on the blockchain.
+   * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
+   * `hash - string`: The hash of this block.
+   * `difficulty - uint64`: The strength of the Loki network based on mining power.
+   * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
+   * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
+   * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
+   * `block_size - uint64`: The block size in bytes.
+   * `block_weight - uint64`: The block weight in bytes.
+   * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
+   * `pow_hash - string`: The hash of the block's proof of work.
+   * `long_term_weight - uint64`: Long term weight of the block.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_BLOCK_HEADER_BY_HASH
-
 
 Block header information can be retrieved using either a block's hash or height. This method includes a block's hash as an input parameter to retrieve basic information about the block.
 
+Endpoints: get_block_header_by_hash, getblockheaderbyhash
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_block_header_by_hash",
+  "params": {
+    "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+    "fill_pow_hash": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "block_header": {
+    "major_version": 11,
+    "minor_version": 11,
+    "timestamp": 123,
+    "prev_hash": "default string",
+    "nonce": 2130706433,
+    "orphan_status": true,
+    "height": 123,
+    "depth": 123,
+    "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+    "difficulty": 25179406071,
+    "cumulative_difficulty": 25179406071,
+    "reward": 123,
+    "miner_reward": 123,
+    "block_size": 123,
+    "block_weight": 123,
+    "num_txes": 123,
+    "pow_hash": "default string",
+    "long_term_weight": 123
+  },
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `hash - string`: The block's SHA256 hash.
@@ -592,34 +1019,71 @@ Block header information can be retrieved using either a block's hash or height.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `block_header - block_header_response`: A structure containing block header information.
-     * `major_version - uint8`: The major version of the loki protocol at this block height.
-     * `minor_version - uint8`: The minor version of the loki protocol at this block height.
-     * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
-     * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
-     * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
-     * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
-     * `height - uint64`: The number of blocks preceding this block on the blockchain.
-     * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-     * `hash - string`: The hash of this block.
-     * `difficulty - uint64`: The strength of the Loki network based on mining power.
-     * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
-     * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
-     * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
-     * `block_size - uint64`: The block size in bytes.
-     * `block_weight - uint64`: The block weight in bytes.
-     * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
-     * `pow_hash - string`: The hash of the block's proof of work.
-     * `long_term_weight - uint64`: Long term weight of the block.
+   * `major_version - uint8`: The major version of the loki protocol at this block height.
+   * `minor_version - uint8`: The minor version of the loki protocol at this block height.
+   * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
+   * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
+   * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
+   * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
+   * `height - uint64`: The number of blocks preceding this block on the blockchain.
+   * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
+   * `hash - string`: The hash of this block.
+   * `difficulty - uint64`: The strength of the Loki network based on mining power.
+   * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
+   * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
+   * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
+   * `block_size - uint64`: The block size in bytes.
+   * `block_weight - uint64`: The block weight in bytes.
+   * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
+   * `pow_hash - string`: The hash of the block's proof of work.
+   * `long_term_weight - uint64`: Long term weight of the block.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_BLOCK_HEADER_BY_HEIGHT
-
 
 Similar to get_block_header_by_hash above, this method includes a block's height as an input parameter to retrieve basic information about the block.
 
+Endpoints: get_block_header_by_height, getblockheaderbyheight
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_block_header_by_height",
+  "params": {
+    "height": 123,
+    "fill_pow_hash": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "block_header": {
+    "major_version": 11,
+    "minor_version": 11,
+    "timestamp": 123,
+    "prev_hash": "default string",
+    "nonce": 2130706433,
+    "orphan_status": true,
+    "height": 123,
+    "depth": 123,
+    "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+    "difficulty": 25179406071,
+    "cumulative_difficulty": 25179406071,
+    "reward": 123,
+    "miner_reward": 123,
+    "block_size": 123,
+    "block_weight": 123,
+    "num_txes": 123,
+    "pow_hash": "default string",
+    "long_term_weight": 123
+  },
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `height - uint64`: The block's height.
@@ -629,35 +1093,78 @@ Similar to get_block_header_by_hash above, this method includes a block's height
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `block_header - block_header_response`: A structure containing block header information.
-     * `major_version - uint8`: The major version of the loki protocol at this block height.
-     * `minor_version - uint8`: The minor version of the loki protocol at this block height.
-     * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
-     * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
-     * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
-     * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
-     * `height - uint64`: The number of blocks preceding this block on the blockchain.
-     * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-     * `hash - string`: The hash of this block.
-     * `difficulty - uint64`: The strength of the Loki network based on mining power.
-     * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
-     * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
-     * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
-     * `block_size - uint64`: The block size in bytes.
-     * `block_weight - uint64`: The block weight in bytes.
-     * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
-     * `pow_hash - string`: The hash of the block's proof of work.
-     * `long_term_weight - uint64`: Long term weight of the block.
+   * `major_version - uint8`: The major version of the loki protocol at this block height.
+   * `minor_version - uint8`: The minor version of the loki protocol at this block height.
+   * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
+   * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
+   * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
+   * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
+   * `height - uint64`: The number of blocks preceding this block on the blockchain.
+   * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
+   * `hash - string`: The hash of this block.
+   * `difficulty - uint64`: The strength of the Loki network based on mining power.
+   * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
+   * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
+   * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
+   * `block_size - uint64`: The block size in bytes.
+   * `block_weight - uint64`: The block weight in bytes.
+   * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
+   * `pow_hash - string`: The hash of the block's proof of work.
+   * `long_term_weight - uint64`: Long term weight of the block.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_BLOCK
 
-
 Full block information can be retrieved by either block height or hash, like with the above block header calls. 
+
 For full block information, both lookups use the same method, but with different input parameters.
 
+Endpoints: get_block, getblock
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_block",
+  "params": {
+    "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+    "height": 123,
+    "fill_pow_hash": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "block_header": {
+    "major_version": 11,
+    "minor_version": 11,
+    "timestamp": 123,
+    "prev_hash": "default string",
+    "nonce": 2130706433,
+    "orphan_status": true,
+    "height": 123,
+    "depth": 123,
+    "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+    "difficulty": 25179406071,
+    "cumulative_difficulty": 25179406071,
+    "reward": 123,
+    "miner_reward": 123,
+    "block_size": 123,
+    "block_weight": 123,
+    "num_txes": 123,
+    "pow_hash": "default string",
+    "long_term_weight": 123
+  },
+  "miner_tx_hash": "default string",
+  "tx_hashes": ["default string", ...],
+  "blob": "default string",
+  "json": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `hash - string`: The block's hash.
@@ -668,24 +1175,24 @@ For full block information, both lookups use the same method, but with different
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `block_header - block_header_response`: A structure containing block header information. See get_last_block_header.
-     * `major_version - uint8`: The major version of the loki protocol at this block height.
-     * `minor_version - uint8`: The minor version of the loki protocol at this block height.
-     * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
-     * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
-     * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
-     * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
-     * `height - uint64`: The number of blocks preceding this block on the blockchain.
-     * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-     * `hash - string`: The hash of this block.
-     * `difficulty - uint64`: The strength of the Loki network based on mining power.
-     * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
-     * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
-     * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
-     * `block_size - uint64`: The block size in bytes.
-     * `block_weight - uint64`: The block weight in bytes.
-     * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
-     * `pow_hash - string`: The hash of the block's proof of work.
-     * `long_term_weight - uint64`: Long term weight of the block.
+   * `major_version - uint8`: The major version of the loki protocol at this block height.
+   * `minor_version - uint8`: The minor version of the loki protocol at this block height.
+   * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
+   * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
+   * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
+   * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
+   * `height - uint64`: The number of blocks preceding this block on the blockchain.
+   * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
+   * `hash - string`: The hash of this block.
+   * `difficulty - uint64`: The strength of the Loki network based on mining power.
+   * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
+   * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
+   * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
+   * `block_size - uint64`: The block size in bytes.
+   * `block_weight - uint64`: The block weight in bytes.
+   * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
+   * `pow_hash - string`: The hash of the block's proof of work.
+   * `long_term_weight - uint64`: Long term weight of the block.
  * `miner_tx_hash - string`: Miner transaction information
  * `tx_hashes - string[]`: List of hashes of non-coinbase transactions in the block. If there are no other transactions, this will be an empty list.
  * `blob - string`: Hexadecimal blob of block information.
@@ -693,13 +1200,23 @@ For full block information, both lookups use the same method, but with different
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_SET_LOG_HASH_RATE
-
 
 Set the log hash rate display mode.
 
+Endpoints: /set_log_hash_rate
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/set_log_hash_rate -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `visible - bool`: States if hash rate logs should be visible (true) or hidden (false)
@@ -709,13 +1226,23 @@ Set the log hash rate display mode.
  * `status - string`: General RPC error code. "OK" means everything looks good. Any other value means that something went wrong.
 
 
---- 
-
 ### COMMAND_RPC_SET_LOG_LEVEL
-
 
 Set the daemon log level. By default, log level is set to `0`.
 
+Endpoints: /set_log_level
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/set_log_level -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `level - int8_t`: Daemon log level to set from `0` (less verbose) to `4` (most verbose)
@@ -725,20 +1252,38 @@ Set the daemon log level. By default, log level is set to `0`.
  * `status - string`: General RPC error code. "OK" means everything looks good. Any other value means that something went wrong.
 
 
---- 
-
 ### COMMAND_RPC_SET_LOG_CATEGORIES
 
-
 Set the daemon log categories. Categories are represented as a comma separated list of `<Category>:<level>` (similarly to syslog standard `<Facility>:<Severity-level>`), where:
+
 Category is one of the following: * (all facilities), default, net, net.http, net.p2p, logging, net.trottle, blockchain.db, blockchain.db.lmdb, bcutil, checkpoints, net.dns, net.dl,
+
 i18n, perf,stacktrace, updates, account, cn ,difficulty, hardfork, miner, blockchain, txpool, cn.block_queue, net.cn, daemon, debugtools.deserialize, debugtools.objectsizes, device.ledger, 
+
 wallet.gen_multisig, multisig, bulletproofs, ringct, daemon.rpc, wallet.simplewallet, WalletAPI, wallet.ringdb, wallet.wallet2, wallet.rpc, tests.core.
+
 Level is one of the following: FATAL - higher level, ERROR, WARNING, INFO, DEBUG, TRACE.
+
 Lower level A level automatically includes higher level. By default, categories are set to:
+
 `*:WARNING,net:FATAL,net.p2p:FATAL,net.cn:FATAL,global:INFO,verify:FATAL,stacktrace:INFO,logging:INFO,msgwriter:INFO`
+
 Setting the categories to "" prevent any logs to be outputed.
 
+Endpoints: /set_log_categories
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/set_log_categories -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "categories": "default string"
+}
+
+```
 **Inputs:**
 
  * `categories - string`: Optional, daemon log categories to enable
@@ -749,14 +1294,47 @@ Setting the categories to "" prevent any logs to be outputed.
  * `categories - string`: Daemon log enabled categories
 
 
---- 
-
 ### COMMAND_RPC_GET_TRANSACTION_POOL
 
-
 Show information about valid transactions seen by the node but not yet mined into a block, 
+
 as well as spent key image information for the txpool in the node's memory.
 
+Endpoints: /get_transaction_pool
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_transaction_pool -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "transactions": [{
+      "id_hash": "default string",
+      "tx_json": "default string",
+      "blob_size": 123,
+      "weight": 123,
+      "fee": 123,
+      "max_used_block_id_hash": "default string",
+      "max_used_block_height": 123,
+      "kept_by_block": true,
+      "last_failed_height": 123,
+      "last_failed_id_hash": "default string",
+      "receive_time": 123,
+      "relayed": true,
+      "last_relayed_time": 123,
+      "do_not_relay": true,
+      "double_spend_seen": true,
+      "tx_blob": "default string"
+    }, ...],
+  "spent_key_images": [{
+      "id_hash": "default string",
+      "txs_hashes": ["default string", ...]
+    }, ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -764,35 +1342,46 @@ as well as spent key image information for the txpool in the node's memory.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `transactions - tx_info[]`: List of transactions in the mempool are not in a block on the main chain at the moment:
-     * `id_hash - string`: The transaction ID hash.
-     * `tx_json - string`: JSON structure of all information in the transaction
-     * `blob_size - uint64`: The size of the full transaction blob.
-     * `weight - uint64`: The weight of the transaction.
-     * `fee - uint64`: The amount of the mining fee included in the transaction, in atomic units.
-     * `max_used_block_id_hash - string`: Tells the hash of the most recent block with an output used in this transaction.
-     * `max_used_block_height - uint64`: Tells the height of the most recent block with an output used in this transaction.
-     * `kept_by_block - bool`: States if the tx was included in a block at least once (`true`) or not (`false`).
-     * `last_failed_height - uint64`: If the transaction validation has previously failed, this tells at what height that occured.
-     * `last_failed_id_hash - string`: Like the previous, this tells the previous transaction ID hash.
-     * `receive_time - uint64`: The Unix time that the transaction was first seen on the network by the node.
-     * `relayed - bool`: States if this transaction has been relayed
-     * `last_relayed_time - uint64`: Last unix time at which the transaction has been relayed.
-     * `do_not_relay - bool`: States if this transaction should not be relayed.
-     * `double_spend_seen - bool`: States if this transaction has been seen as double spend.
-     * `tx_blob - string`: Hexadecimal blob represnting the transaction.
+   * `id_hash - string`: The transaction ID hash.
+   * `tx_json - string`: JSON structure of all information in the transaction
+   * `blob_size - uint64`: The size of the full transaction blob.
+   * `weight - uint64`: The weight of the transaction.
+   * `fee - uint64`: The amount of the mining fee included in the transaction, in atomic units.
+   * `max_used_block_id_hash - string`: Tells the hash of the most recent block with an output used in this transaction.
+   * `max_used_block_height - uint64`: Tells the height of the most recent block with an output used in this transaction.
+   * `kept_by_block - bool`: States if the tx was included in a block at least once (`true`) or not (`false`).
+   * `last_failed_height - uint64`: If the transaction validation has previously failed, this tells at what height that occured.
+   * `last_failed_id_hash - string`: Like the previous, this tells the previous transaction ID hash.
+   * `receive_time - uint64`: The Unix time that the transaction was first seen on the network by the node.
+   * `relayed - bool`: States if this transaction has been relayed
+   * `last_relayed_time - uint64`: Last unix time at which the transaction has been relayed.
+   * `do_not_relay - bool`: States if this transaction should not be relayed.
+   * `double_spend_seen - bool`: States if this transaction has been seen as double spend.
+   * `tx_blob - string`: Hexadecimal blob represnting the transaction.
  * `spent_key_images - spent_key_image_info[]`: List of spent output key images:
-     * `id_hash - string`: Key image.
-     * `txs_hashes - string[]`: List of tx hashes of the txes (usually one) spending that key image.
+   * `id_hash - string`: Key image.
+   * `txs_hashes - string[]`: List of tx hashes of the txes (usually one) spending that key image.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_TRANSACTION_POOL_HASHES_BIN
-
 
 Get hashes from transaction pool. Binary request.
 
+Endpoints: /get_transaction_pool_hashes.bin
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_transaction_pool_hashes.bin -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "tx_hashes": ["bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70", ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -803,13 +1392,24 @@ Get hashes from transaction pool. Binary request.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_TRANSACTION_POOL_HASHES
-
 
 Get hashes from transaction pool.
 
+Endpoints: /get_transaction_pool_hashes
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_transaction_pool_hashes -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "tx_hashes": ["default string", ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -820,13 +1420,28 @@ Get hashes from transaction pool.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_TRANSACTION_POOL_BACKLOG
-
 
 Get all transaction pool backlog.
 
+Endpoints: get_txpool_backlog
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"get_txpool_backlog"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "backlog": [{
+      "weight": 123,
+      "fee": 123,
+      "time_in_pool": 123
+    }, ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -834,19 +1449,29 @@ Get all transaction pool backlog.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `backlog - tx_backlog_entry[]`: Array of structures tx_backlog_entry (in binary form):
-     * `weight - uint64`
-     * `fee - uint64`: Fee in Loki measured in atomic units.
-     * `time_in_pool - uint64`
+   * `weight - uint64`
+   * `fee - uint64`: Fee in Loki measured in atomic units.
+   * `time_in_pool - uint64`
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_CONNECTIONS
-
 
 Retrieve information about incoming and outgoing connections to your node.
 
+Endpoints: get_connections
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"get_connections"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "connections": [, ...]
+}
+
+```
 **Inputs:**
 
 
@@ -856,15 +1481,55 @@ Retrieve information about incoming and outgoing connections to your node.
  * `connections - connection_info[]`: List of all connections and their info:
 
 
---- 
-
 ### COMMAND_RPC_GET_BLOCK_HEADERS_RANGE
 
-
 Similar to get_block_header_by_height above, but for a range of blocks. 
+
 This method includes a starting block height and an ending block height as 
+
 parameters to retrieve basic information about the range of blocks.
 
+Endpoints: get_block_headers_range, getblockheadersrange
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_block_headers_range",
+  "params": {
+    "start_height": 123,
+    "end_height": 123,
+    "fill_pow_hash": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "headers": [{
+      "major_version": 11,
+      "minor_version": 11,
+      "timestamp": 123,
+      "prev_hash": "default string",
+      "nonce": 2130706433,
+      "orphan_status": true,
+      "height": 123,
+      "depth": 123,
+      "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+      "difficulty": 25179406071,
+      "cumulative_difficulty": 25179406071,
+      "reward": 123,
+      "miner_reward": 123,
+      "block_size": 123,
+      "block_weight": 123,
+      "num_txes": 123,
+      "pow_hash": "default string",
+      "long_term_weight": 123
+    }, ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `start_height - uint64`: The starting block's height.
@@ -875,34 +1540,43 @@ parameters to retrieve basic information about the range of blocks.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `headers - block_header_response[]`: Array of block_header (a structure containing block header information. See get_last_block_header).
-     * `major_version - uint8`: The major version of the loki protocol at this block height.
-     * `minor_version - uint8`: The minor version of the loki protocol at this block height.
-     * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
-     * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
-     * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
-     * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
-     * `height - uint64`: The number of blocks preceding this block on the blockchain.
-     * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-     * `hash - string`: The hash of this block.
-     * `difficulty - uint64`: The strength of the Loki network based on mining power.
-     * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
-     * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
-     * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
-     * `block_size - uint64`: The block size in bytes.
-     * `block_weight - uint64`: The block weight in bytes.
-     * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
-     * `pow_hash - string`: The hash of the block's proof of work.
-     * `long_term_weight - uint64`: Long term weight of the block.
+   * `major_version - uint8`: The major version of the loki protocol at this block height.
+   * `minor_version - uint8`: The minor version of the loki protocol at this block height.
+   * `timestamp - uint64`: The unix time at which the block was recorded into the blockchain.
+   * `prev_hash - string`: The hash of the block immediately preceding this block in the chain.
+   * `nonce - uint32`: A cryptographic random one-time number used in mining a Loki block.
+   * `orphan_status - bool`: Usually `false`. If `true`, this block is not part of the longest chain.
+   * `height - uint64`: The number of blocks preceding this block on the blockchain.
+   * `depth - uint64`: The number of blocks succeeding this block on the blockchain. A larger number means an older block.
+   * `hash - string`: The hash of this block.
+   * `difficulty - uint64`: The strength of the Loki network based on mining power.
+   * `cumulative_difficulty - uint64`: The cumulative strength of the Loki network based on mining power.
+   * `reward - uint64`: The amount of new generated in this block and rewarded to the miner, foundation and service Nodes. Note: 1 LOKI = 1e12 atomic units.
+   * `miner_reward - uint64`: The amount of new generated in this block and rewarded to the miner. Note: 1 LOKI = 1e12 atomic units. 
+   * `block_size - uint64`: The block size in bytes.
+   * `block_weight - uint64`: The block weight in bytes.
+   * `num_txes - uint64`: Number of transactions in the block, not counting the coinbase tx.
+   * `pow_hash - string`: The hash of the block's proof of work.
+   * `long_term_weight - uint64`: Long term weight of the block.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_STOP_DAEMON
-
 
 Send a command to the daemon to safely disconnect and shut down.
 
+Endpoints: /stop_daemon
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/stop_daemon -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -911,13 +1585,25 @@ Send a command to the daemon to safely disconnect and shut down.
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_GET_LIMIT
-
 
 Get daemon bandwidth limits.
 
+Endpoints: /get_limit
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_limit -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "limit_up": 123,
+  "limit_down": 123,
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -929,13 +1615,25 @@ Get daemon bandwidth limits.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_SET_LIMIT
-
 
 Set daemon bandwidth limits.
 
+Endpoints: /set_limit
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/set_limit -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "limit_up": ,
+  "limit_down": 
+}
+
+```
 **Inputs:**
 
  * `limit_down - int64`: Download limit in kBytes per second (-1 reset to default, 0 don't change the current limit)
@@ -948,13 +1646,23 @@ Set daemon bandwidth limits.
  * `limit_down - int64`: Download limit in kBytes per second.
 
 
---- 
-
 ### COMMAND_RPC_OUT_PEERS
-
 
 Limit number of Outgoing peers.
 
+Endpoints: /out_peers
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/out_peers -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `out_peers - uint64`: Max number of outgoing peers
@@ -964,13 +1672,23 @@ Limit number of Outgoing peers.
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_IN_PEERS
-
 
 Limit number of Incoming peers.
 
+Endpoints: /in_peers
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/in_peers -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `in_peers - uint64`
@@ -980,13 +1698,22 @@ Limit number of Incoming peers.
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_START_SAVE_GRAPH
-
 
 Obsolete. Conserved here for reference.
 
+Endpoints: /start_save_graph
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/start_save_graph -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -994,14 +1721,23 @@ Obsolete. Conserved here for reference.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
-
---- 
 
 ### COMMAND_RPC_STOP_SAVE_GRAPH
 
-
 Obsolete. Conserved here for reference.
 
+Endpoints: /stop_save_graph
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/stop_save_graph -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -1010,13 +1746,37 @@ Obsolete. Conserved here for reference.
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_HARD_FORK_INFO
-
 
 Look up information regarding hard fork voting and readiness.
 
+Endpoints: hard_fork_info
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"hard_fork_info",
+  "params": {
+    "version": 11
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "version": 11,
+  "enabled": true,
+  "window": 2130706433,
+  "votes": 2130706433,
+  "threshold": 2130706433,
+  "voting": 11,
+  "state": 2130706433,
+  "earliest_height": 123,
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `version - uint8`: The major block version for the fork.
@@ -1035,13 +1795,27 @@ Look up information regarding hard fork voting and readiness.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GETBANS
-
 
 Get list of banned IPs.
 
+Endpoints: get_bans
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"get_bans"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "bans": [{
+      "host": "127.0.0.1",
+      "ip": 2130706433,
+      "seconds": 2130706433
+    }, ...]
+}
+
+```
 **Inputs:**
 
 
@@ -1049,38 +1823,73 @@ Get list of banned IPs.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `bans - ban[]`: List of banned nodes:
-     * `host - string`: Banned host (IP in A.B.C.D form).
-     * `ip - uint32`: Banned IP address, in Int format.
-     * `seconds - uint32`: Local Unix time that IP is banned until.
+   * `host - string`: Banned host (IP in A.B.C.D form).
+   * `ip - uint32`: Banned IP address, in Int format.
+   * `seconds - uint32`: Local Unix time that IP is banned until.
 
-
---- 
 
 ### COMMAND_RPC_SETBANS
 
-
 Ban another node by IP.
 
+Endpoints: set_bans
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"set_bans",
+  "params": {
+    "bans": [{
+        "host": "127.0.0.1",
+        "ip": 2130706433,
+        "ban": true,
+        "seconds": 2130706433
+      }, ...]
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `bans - ban[]`: List of nodes to ban.
-     * `host - string`: Host to ban (IP in A.B.C.D form - will support I2P address in the future).
-     * `ip - uint32`: IP address to ban, in Int format.
-     * `ban - bool`: Set true to ban.
-     * `seconds - uint32`: Number of seconds to ban node.
+   * `host - string`: Host to ban (IP in A.B.C.D form - will support I2P address in the future).
+   * `ip - uint32`: IP address to ban, in Int format.
+   * `ban - bool`: Set true to ban.
+   * `seconds - uint32`: Number of seconds to ban node.
 
 **Outputs:**
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_FLUSH_TRANSACTION_POOL
-
 
 Flush tx ids from transaction pool..
 
+Endpoints: flush_txpool
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"flush_txpool",
+  "params": {
+    "txids": ["b605cab7e3b9fe1f6d322e3167cd26e1e61c764afa9d733233ef716787786123", ...]
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `txids - string[]`: Optional, list of transactions IDs to flush from pool (all tx ids flushed if empty).
@@ -1090,14 +1899,41 @@ Flush tx ids from transaction pool..
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_GET_OUTPUT_HISTOGRAM
 
-
 Get a histogram of output amounts. For all amounts (possibly filtered by parameters), 
+
 gives the number of outputs on the chain for that amount. RingCT outputs counts as 0 amount.
 
+Endpoints: get_output_histogram
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_output_histogram",
+  "params": {
+    "amounts": [123, ...],
+    "min_count": 123,
+    "max_count": 123,
+    "unlocked": true,
+    "recent_cutoff": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "histogram": [{
+      "amount": 123,
+      "total_instances": 123,
+      "unlocked_instances": 123,
+      "recent_instances": 123
+    }, ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `amounts - uint64[]`: list of amounts in Atomic Units.
@@ -1110,20 +1946,31 @@ gives the number of outputs on the chain for that amount. RingCT outputs counts 
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `histogram - entry[]`: List of histogram entries:
-     * `amount - uint64`: Output amount in atomic units.
-     * `total_instances - uint64`
-     * `unlocked_instances - uint64`
-     * `recent_instances - uint64`
+   * `amount - uint64`: Output amount in atomic units.
+   * `total_instances - uint64`
+   * `unlocked_instances - uint64`
+   * `recent_instances - uint64`
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_VERSION
-
 
 Get node current version.
 
+Endpoints: get_version
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"get_version"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "version": 2130706433,
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
@@ -1134,13 +1981,31 @@ Get node current version.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_COINBASE_TX_SUM
 
+Get the coinbase amount and the fees amount for n last blocks starting at particular height.
 
-Get the coinbase ammount and the fees ammount for n last blocks starting at particular height.
+Endpoints: get_coinbase_tx_sum
+```
 
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_coinbase_tx_sum",
+  "params": {
+    "height": 123,
+    "count": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "emission_amount": 123,
+  "fee_amount": 123
+}
+
+```
 **Inputs:**
 
  * `height - uint64`: Block height from which getting the amounts.
@@ -1153,13 +2018,31 @@ Get the coinbase ammount and the fees ammount for n last blocks starting at part
  * `fee_amount - uint64`: Amount of fees in atomic units.
 
 
---- 
-
 ### COMMAND_RPC_GET_BASE_FEE_ESTIMATE
-
 
 Gives an estimation on fees per kB.
 
+Endpoints: get_fee_estimate
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_fee_estimate",
+  "params": {
+    "grace_blocks": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "fee": 123,
+  "quantization_mask": 123,
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `grace_blocks - uint64`: Optional
@@ -1172,13 +2055,30 @@ Gives an estimation on fees per kB.
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_GET_ALTERNATE_CHAINS
-
 
 Display alternative chains seen by the node.
 
+Endpoints: get_alternate_chains
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"get_alternate_chains"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "chains": [{
+      "block_hash": "default string",
+      "height": 123,
+      "length": 123,
+      "difficulty": 123,
+      "block_hashes": ["default string", ...],
+      "main_chain_parent_block": "default string"
+    }, ...]
+}
+
+```
 **Inputs:**
 
 
@@ -1186,21 +2086,37 @@ Display alternative chains seen by the node.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `chains - chain_info[]`: Array of Chains.
-     * `block_hash - string`: The block hash of the first diverging block of this alternative chain.
-     * `height - uint64`: The block height of the first diverging block of this alternative chain.
-     * `length - uint64`: The length in blocks of this alternative chain, after divergence.
-     * `difficulty - uint64`: The cumulative difficulty of all blocks in the alternative chain.
-     * `block_hashes - string[]`
-     * `main_chain_parent_block - string`
+   * `block_hash - string`: The block hash of the first diverging block of this alternative chain.
+   * `height - uint64`: The block height of the first diverging block of this alternative chain.
+   * `length - uint64`: The length in blocks of this alternative chain, after divergence.
+   * `difficulty - uint64`: The cumulative difficulty of all blocks in the alternative chain.
+   * `block_hashes - string[]`
+   * `main_chain_parent_block - string`
 
-
---- 
 
 ### COMMAND_RPC_UPDATE
 
-
 Update daemon.
 
+Endpoints: /update
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/update -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "update": true,
+  "version": "default string",
+  "user_uri": "default string",
+  "auto_uri": "default string",
+  "hash": "bf430a3279f576ed8a814be25193e5a1ec61d3ee5729e64f47d8480ce5a2da70",
+  "path": "default string"
+}
+
+```
 **Inputs:**
 
  * `command - string`: Command to use, either check or download.
@@ -1217,13 +2133,28 @@ Update daemon.
  * `path - string`: Path to download the update.
 
 
---- 
-
 ### COMMAND_RPC_RELAY_TX
-
 
 Relay a list of transaction IDs.
 
+Endpoints: relay_tx
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"relay_tx",
+  "params": {
+    "txids": ["b605cab7e3b9fe1f6d322e3167cd26e1e61c764afa9d733233ef716787786123", ...]
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `txids - string[]`: Optional, list of transactions IDs to flush from pool (all tx ids flushed if empty).
@@ -1233,13 +2164,43 @@ Relay a list of transaction IDs.
  * `status - string`: General RPC error code. "OK" means everything looks good.
 
 
---- 
-
 ### COMMAND_RPC_SYNC_INFO
-
 
 Get synchronisation information.
 
+Endpoints: sync_info
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"sync_info"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "height": 123,
+  "target_height": 123,
+  "next_needed_pruning_seed": 2130706433,
+  "peers": [{
+      "id": 123,
+      "host": "127.0.0.1",
+      "ip": 2130706433,
+      "port": ,
+      "last_seen": 123,
+      "pruning_seed": 2130706433
+    }, ...],
+  "spans": [{
+      "start_block_height": 123,
+      "nblocks": 123,
+      "connection_id": "default string",
+      "rate": 2130706433,
+      "speed": 2130706433,
+      "size": 123,
+      "remote_address": "default string"
+    }, ...],
+  "overview": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -1250,27 +2211,45 @@ Get synchronisation information.
  * `target_height - uint64`: Target height the node is syncing from (optional, absent if node is fully synced).
  * `next_needed_pruning_seed - uint32`
  * `peers - peer[]`: Array of Peer structure
-     * `id - uint64`: Peer id.
-     * `host - string`: IP address in string format.
-     * `ip - uint32`: IP address in integer format.
-     * `port - uint16`: TCP port the peer is using to connect to loki network.
-     * `last_seen - uint64`: Unix time at which the peer has been seen for the last time
-     * `pruning_seed - uint32`
+   * `id - uint64`: Peer id.
+   * `host - string`: IP address in string format.
+   * `ip - uint32`: IP address in integer format.
+   * `port - uint16`: TCP port the peer is using to connect to loki network.
+   * `last_seen - uint64`: Unix time at which the peer has been seen for the last time
+   * `pruning_seed - uint32`
  * `spans - span[]`: Array of Span Structure.
-     * `start_block_height - uint64`: Block height of the first block in that span.
-     * `nblocks - uint64`: Number of blocks in that span.
-     * `connection_id - string`: Id of connection.
-     * `rate - uint32`: Connection rate.
-     * `speed - uint32`: Connection speed.
-     * `size - uint64`: Total number of bytes in that span's blocks (including txes).
-     * `remote_address - string`: Peer address the node is downloading (or has downloaded) than span from.
+   * `start_block_height - uint64`: Block height of the first block in that span.
+   * `nblocks - uint64`: Number of blocks in that span.
+   * `connection_id - string`: Id of connection.
+   * `rate - uint32`: Connection rate.
+   * `speed - uint32`: Connection speed.
+   * `size - uint64`: Total number of bytes in that span's blocks (including txes).
+   * `remote_address - string`: Peer address the node is downloading (or has downloaded) than span from.
  * `overview - string`
 
 
---- 
-
 ### COMMAND_RPC_GET_OUTPUT_DISTRIBUTION
 
+Endpoints: /get_output_distribution.bin, get_output_distribution
+```
+Example Request
+curl -X POST http://127.0.0.1:22023/get_output_distribution.bin -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "distributions": [{
+      "data": ,
+      "amount": 123,
+      "compressed_data": "default string",
+      "binary": true,
+      "compress": true
+    }, ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `amounts - uint64[]`: Amounts to look for in atomic units.
@@ -1284,18 +2263,29 @@ Get synchronisation information.
 
  * `status - string`: General RPC error code. "OK" means everything looks good.
  * `distributions - distribution[]`
-     * `data - rpc::output_distribution_data`
-     * `amount - uint64`
-     * `compressed_data - string`
-     * `binary - bool`
-     * `compress - bool`
+   * `data - rpc::output_distribution_data`
+   * `amount - uint64`
+   * `compressed_data - string`
+   * `binary - bool`
+   * `compress - bool`
  * `untrusted - bool`: States if the result is obtained using the bootstrap mode, and is therefore not trusted (`true`), or when the daemon is fully synced (`false`).
 
 
---- 
-
 ### COMMAND_RPC_POP_BLOCKS
 
+Endpoints: /pop_blocks
+```
+Example Request
+curl -X POST http://127.0.0.1:22023/pop_blocks -d '{
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "height": 123
+}
+
+```
 **Inputs:**
 
  * `nblocks - uint64`: Number of blocks in that span.
@@ -1306,10 +2296,26 @@ Get synchronisation information.
  * `height - uint64`
 
 
---- 
-
 ### COMMAND_RPC_PRUNE_BLOCKCHAIN
 
+Endpoints: prune_blockchain
+```
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"prune_blockchain",
+  "params": {
+    "check": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "pruning_seed": 2130706433,
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `check - bool`
@@ -1320,14 +2326,33 @@ Get synchronisation information.
  * `status - string`
 
 
---- 
-
 ### COMMAND_RPC_GET_QUORUM_STATE
 
-
 Get the quorum state which is the list of public keys of the nodes 
+
 who are voting, and the list of public keys of the nodes who are being tested.
 
+Endpoints: get_quorum_state
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_quorum_state",
+  "params": {
+    "height": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "quorum_nodes": ["default string", ...],
+  "nodes_to_test": ["default string", ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `height - uint64`: The height to query the quorum state for.
@@ -1340,14 +2365,37 @@ who are voting, and the list of public keys of the nodes who are being tested.
  * `untrusted - bool`: If the result is obtained using bootstrap mode, and therefore not trusted `true`, or otherwise `false`.
 
 
---- 
-
 ### COMMAND_RPC_GET_QUORUM_STATE_BATCHED
 
-
 Get the quorum state which is the list of public keys of the nodes 
+
 who are voting, and the list of public keys of the nodes who are being tested.
 
+Endpoints: get_quorum_state_batched
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_quorum_state_batched",
+  "params": {
+    "height_begin": 123,
+    "height_end": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "quorum_entries": [{
+      "height": 123,
+      "quorum_nodes": ["default string", ...],
+      "nodes_to_test": ["default string", ...]
+    }, ...],
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
  * `height_begin - uint64`: The starting height (inclusive) to query the quorum state for.
@@ -1357,16 +2405,34 @@ who are voting, and the list of public keys of the nodes who are being tested.
 
  * `status - string`: Generic RPC error code. "OK" is the success value.
  * `quorum_entries - response_entry[]`: Array of quorums that was requested.
-     * `height - uint64`: The height of this quorum state that was queried.
-     * `quorum_nodes - string[]`: Array of public keys identifying service nodes which are being tested for the queried height.
-     * `nodes_to_test - string[]`: Array of public keys identifying service nodes which are responsible for voting on the queried height.
+   * `height - uint64`: The height of this quorum state that was queried.
+   * `quorum_nodes - string[]`: Array of public keys identifying service nodes which are being tested for the queried height.
+   * `nodes_to_test - string[]`: Array of public keys identifying service nodes which are responsible for voting on the queried height.
  * `untrusted - bool`: If the result is obtained using bootstrap mode, and therefore not trusted `true`, or otherwise `false`.
 
 
---- 
-
 ### COMMAND_RPC_GET_SERVICE_NODE_REGISTRATION_CMD_RAW
 
+Endpoints: get_service_node_registration_cmd_raw
+```
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_service_node_registration_cmd_raw",
+  "params": {
+    "args": ["default string", ...],
+    "make_friendly": true,
+    "staking_requirement": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "registration_cmd": "default string"
+}
+
+```
 **Inputs:**
 
  * `args - string[]`: (Developer) The arguments used in raw registration, i.e. portions
@@ -1379,16 +2445,37 @@ who are voting, and the list of public keys of the nodes who are being tested.
  * `registration_cmd - string`: The command to execute in the wallet CLI to register the queried daemon as a Service Node.
 
 
---- 
-
 ### COMMAND_RPC_GET_SERVICE_NODE_REGISTRATION_CMD
 
+Endpoints: get_service_node_registration_cmd
+```
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_service_node_registration_cmd",
+  "params": {
+    "operator_cut": "1.1%",
+    "contributions": [{
+        "address": "default string",
+        "amount": 123
+      }, ...],
+    "staking_requirement": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "status": "default string",
+  "registration_cmd": "default string"
+}
+
+```
 **Inputs:**
 
  * `operator_cut - string`: The percentage of cut per reward the operator receives expressed as a string, i.e. "1.1%"
  * `contributions - contribution_t[]`: Array of contributors for this Service Node
-     * `address - string`: The wallet address for the contributor
-     * `amount - uint64`: The amount that the contributor will reserve in Loki atomic units towards the staking requirement
+   * `address - string`: The wallet address for the contributor
+   * `amount - uint64`: The amount that the contributor will reserve in Loki atomic units towards the staking requirement
  * `staking_requirement - uint64`: The staking requirement to become a Service Node the registration command will be generated upon
 
 **Outputs:**
@@ -1397,14 +2484,25 @@ who are voting, and the list of public keys of the nodes who are being tested.
  * `registration_cmd - string`: The command to execute in the wallet CLI to register the queried daemon as a Service Node.
 
 
---- 
-
 ### COMMAND_RPC_GET_SERVICE_NODE_KEY
 
-
 Get the service node public key of the queried daemon. 
+
 The daemon must be started in --service-node mode otherwise this RPC command will fail.
 
+Endpoints: get_service_node_key
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"get_service_node_key"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "service_node_pubkey": "default string",
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
 
@@ -1414,13 +2512,31 @@ The daemon must be started in --service-node mode otherwise this RPC command wil
  * `status - string`: Generic RPC error code. "OK" is the success value.
 
 
---- 
-
 ### COMMAND_RPC_GET_SERVICE_NODES
-
 
 Get information on Service Nodes.
 
+Endpoints: get_service_nodes, get_all_service_nodes
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_service_nodes",
+  "params": {
+    "service_node_pubkeys": ["default string", ...],
+    "include_json": true
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "service_node_states": [, ...],
+  "status": "default string",
+  "as_json": "default string"
+}
+
+```
 **Inputs:**
 
  * `service_node_pubkeys - string[]`: Array of public keys of active Service Nodes to get information about. Pass the empty array to query all Service Nodes.
@@ -1433,15 +2549,33 @@ Get information on Service Nodes.
  * `as_json - string`: If `include_json` is set in the request, this contains the json representation of the `entry` data structure
 
 
---- 
-
 ### COMMAND_RPC_GET_STAKING_REQUIREMENT
 
-
 Get the required amount of Loki to become a Service Node at the queried height. 
+
 For stagenet and testnet values, ensure the daemon is started with the 
+
 `--stagenet` or `--testnet` flags respectively.
 
+Endpoints: get_staking_requirement
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '
+{
+  "jsonrpc":"2.0", "id":"0", "method":"get_staking_requirement",
+  "params": {
+    "height": 123
+  }
+}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "staking_requirement": 123,
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
  * `height - uint64`: The height to query the staking requirement for.
@@ -1452,31 +2586,55 @@ For stagenet and testnet values, ensure the daemon is started with the
  * `status - string`: Generic RPC error code. "OK" is the success value.
 
 
---- 
-
 ### COMMAND_RPC_GET_SERVICE_NODE_BLACKLISTED_KEY_IMAGES
-
 
 Get information on blacklisted Service Node key images.
 
+Endpoints: get_service_node_blacklisted_key_images
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "method":"get_service_node_blacklisted_key_images"}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "blacklist": [{
+      "key_image": "default string",
+      "unlock_height": 123
+    }, ...],
+  "status": "default string"
+}
+
+```
 **Inputs:**
 
 
 **Outputs:**
 
  * `blacklist - entry[]`: Array of blacklisted key images, i.e. unspendable transactions
-     * `key_image - string`: The key image of the transaction that is blacklisted on the network.
-     * `unlock_height - uint64`: The height at which the key image is removed from the blacklist and becomes spendable.
+   * `key_image - string`: The key image of the transaction that is blacklisted on the network.
+   * `unlock_height - uint64`: The height at which the key image is removed from the blacklist and becomes spendable.
  * `status - string`: Generic RPC error code. "OK" is the success value.
 
 
---- 
-
 ### COMMAND_RPC_GET_OUTPUT_BLACKLIST
-
 
 Get information on output blacklist.
 
+Endpoints: /get_output_blacklist.bin
+```
+
+Example Request
+curl -X POST http://127.0.0.1:22023/get_output_blacklist.bin -d '{}' -H 'Content-Type: application/json'
+
+Example Response
+{
+  "blacklist": [123, ...],
+  "status": "default string",
+  "untrusted": true
+}
+
+```
 **Inputs:**
 
 
