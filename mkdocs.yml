@@ -93,8 +93,10 @@ nav:
 - Advanced:
     - Developer:
        - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
-       - 'Daemon RPC Guide': 'Developer/DaemonRPCGuide.md'
-       - 'Loki Wallet RPC Guide': 'Developer/WalletRPCGuide.md'
+       - 'Daemon RPC Guide - Old': 'Developer/DaemonRPCGuide.md'
+       - 'Daemon RPC Guide - Beta': 'Developer/DaemonRPCBeta.md'
+       - 'Wallet RPC Guide - Old': 'Developer/WalletRPCGuide.md'
+       - 'Wallet RPC Guide - Beta': 'Developer/WalletRPCBeta.md'
        - 'Developer FAQ': 'Developer/FAQ.md'
 
     - Loki Services:
