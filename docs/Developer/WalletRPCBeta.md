@@ -93,7 +93,9 @@ Note: "atomic units" refer to the smallest fraction of 1 LOKI which is 1e9 atomi
 
 ---
 
-### COMMAND\_RPC\_GET\_BALANCE
+### COMMAND_RPC_GET_BALANCE
+
+
 
 Return the wallet's balance.
 
@@ -151,7 +153,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_ADDRESS
+### COMMAND_RPC_GET_ADDRESS
+
+
 
 Return the wallet's addresses for an account. Optionally filter for specific set of subaddresses.
 
@@ -201,7 +205,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_ADDRESS\_INDEX
+### COMMAND_RPC_GET_ADDRESS_INDEX
+
+
 
 Get account and address indexes from a specific (sub)address.
 
@@ -238,7 +244,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CREATE\_ADDRESS
+### COMMAND_RPC_CREATE_ADDRESS
+
+
 
 Create a new address for an account. Optionally, label the new address.
 
@@ -279,7 +287,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_LABEL\_ADDRESS
+### COMMAND_RPC_LABEL_ADDRESS
+
+
 
 Label an address.
 
@@ -314,7 +324,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_ACCOUNTS
+### COMMAND_RPC_GET_ACCOUNTS
+
+
 
 Get all accounts for a wallet. Optionally filter accounts by tag.
 
@@ -368,7 +380,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CREATE\_ACCOUNT
+### COMMAND_RPC_CREATE_ACCOUNT
+
+
 
 Create a new account with an optional label.
 
@@ -407,7 +421,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_LABEL\_ACCOUNT
+### COMMAND_RPC_LABEL_ACCOUNT
+
+
 
 Label an account.
 
@@ -442,7 +458,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_ACCOUNT\_TAGS
+### COMMAND_RPC_GET_ACCOUNT_TAGS
+
+
 
 Get a list of user-defined account tags.
 
@@ -479,7 +497,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_TAG\_ACCOUNTS
+### COMMAND_RPC_TAG_ACCOUNTS
+
+
 
 Apply a filtering tag to a list of accounts.
 
@@ -514,7 +534,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_UNTAG\_ACCOUNTS
+### COMMAND_RPC_UNTAG_ACCOUNTS
+
+
 
 Remove filtering tag from a list of accounts.
 
@@ -547,7 +569,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SET\_ACCOUNT\_TAG\_DESCRIPTION
+### COMMAND_RPC_SET_ACCOUNT_TAG_DESCRIPTION
+
+
 
 Set description for an account tag.
 
@@ -582,7 +606,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_HEIGHT
+### COMMAND_RPC_GET_HEIGHT
+
+
 
 Returns the wallet's current block height.
 
@@ -612,7 +638,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_TRANSFER
+### COMMAND_RPC_TRANSFER
+
+
 
 Send loki to a number of recipients. To preview the transaction fee, set do_not_relay to true and get_tx_metadata to true. 
 
@@ -687,7 +715,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_TRANSFER\_SPLIT
+### COMMAND_RPC_TRANSFER_SPLIT
+
+
 
 Same as transfer, but can split into more than one tx if necessary.
 
@@ -760,7 +790,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_DESCRIBE\_TRANSFER
+### COMMAND_RPC_DESCRIBE_TRANSFER
+
+
 
 
 **Endpoints:**
@@ -822,7 +854,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SIGN\_TRANSFER
+### COMMAND_RPC_SIGN_TRANSFER
+
+
 
 Sign a transaction created on a read-only wallet (in cold-signing process).
 
@@ -869,7 +903,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SUBMIT\_TRANSFER
+### COMMAND_RPC_SUBMIT_TRANSFER
+
+
 
 Submit a previously signed transaction on a read-only wallet (in cold-signing process).
 
@@ -906,7 +942,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SWEEP\_DUST
+### COMMAND_RPC_SWEEP_DUST
+
+
 
 Send all dust outputs back to the wallet's, to make them easier to spend (and mix).
 
@@ -963,7 +1001,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SWEEP\_ALL
+### COMMAND_RPC_SWEEP_ALL
+
+
 
 Send all unlocked balance to an address.
 
@@ -1040,7 +1080,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SWEEP\_SINGLE
+### COMMAND_RPC_SWEEP_SINGLE
+
+
 
 Send all of a specific unlocked output to an address.
 
@@ -1113,7 +1155,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_RELAY\_TX
+### COMMAND_RPC_RELAY_TX
+
+
 
 Relay transaction metadata to the daemon 
 
@@ -1150,7 +1194,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_STORE
+### COMMAND_RPC_STORE
+
+
 
 Save the wallet file.
 
@@ -1176,7 +1222,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_GET\_PAYMENTS
+### COMMAND_RPC_GET_PAYMENTS
+
+
 
 Get a list of incoming payments using a given payment id.
 
@@ -1228,7 +1276,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_BULK\_PAYMENTS
+### COMMAND_RPC_GET_BULK_PAYMENTS
+
+
 
 Get a list of incoming payments using a given payment id, 
 
@@ -1290,7 +1340,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_INCOMING\_TRANSFERS
+### COMMAND_RPC_INCOMING_TRANSFERS
+
+
 
 Return a list of incoming transfers to the wallet.
 
@@ -1344,7 +1396,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_QUERY\_KEY
+### COMMAND_RPC_QUERY_KEY
+
+
 
 Return the spend or view private key.
 
@@ -1381,7 +1435,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_MAKE\_INTEGRATED\_ADDRESS
+### COMMAND_RPC_MAKE_INTEGRATED_ADDRESS
+
+
 
 Make an integrated address from the wallet address and a payment id.
 
@@ -1422,7 +1478,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SPLIT\_INTEGRATED\_ADDRESS
+### COMMAND_RPC_SPLIT_INTEGRATED_ADDRESS
+
+
 
 Retrieve the standard address and payment id corresponding to an integrated address.
 
@@ -1463,7 +1521,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_STOP\_WALLET
+### COMMAND_RPC_STOP_WALLET
+
+
 
 Stops the wallet, storing the current state.
 
@@ -1489,7 +1549,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_RESCAN\_BLOCKCHAIN
+### COMMAND_RPC_RESCAN_BLOCKCHAIN
+
+
 
 Rescan the blockchain from scratch, losing any information 
 
@@ -1528,7 +1590,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SET\_TX\_NOTES
+### COMMAND_RPC_SET_TX_NOTES
+
+
 
 Set arbitrary string notes for transactions.
 
@@ -1563,7 +1627,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_TX\_NOTES
+### COMMAND_RPC_GET_TX_NOTES
+
+
 
 Get string notes for transactions.
 
@@ -1600,7 +1666,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SET\_ATTRIBUTE
+### COMMAND_RPC_SET_ATTRIBUTE
+
+
 
 Set arbitrary attribute.
 
@@ -1635,7 +1703,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_ATTRIBUTE
+### COMMAND_RPC_GET_ATTRIBUTE
+
+
 
 Get attribute value by name.
 
@@ -1672,7 +1742,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_TX\_KEY
+### COMMAND_RPC_GET_TX_KEY
+
+
 
 Get transaction secret key from transaction id.
 
@@ -1709,7 +1781,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CHECK\_TX\_KEY
+### COMMAND_RPC_CHECK_TX_KEY
+
+
 
 Check a transaction in the blockchain with its secret key.
 
@@ -1754,7 +1828,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_TX\_PROOF
+### COMMAND_RPC_GET_TX_PROOF
+
+
 
 Get transaction signature to prove it.
 
@@ -1795,7 +1871,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CHECK\_TX\_PROOF
+### COMMAND_RPC_CHECK_TX_PROOF
+
+
 
 Prove a transaction by checking its signature.
 
@@ -1844,7 +1922,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_SPEND\_PROOF
+### COMMAND_RPC_GET_SPEND_PROOF
+
+
 
 Generate a signature to prove a spend. Unlike proving a transaction, it does not requires the destination public address.
 
@@ -1883,7 +1963,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CHECK\_SPEND\_PROOF
+### COMMAND_RPC_CHECK_SPEND_PROOF
+
+
 
 Prove a spend using a signature. Unlike proving a transaction, it does not requires the destination public address.
 
@@ -1924,7 +2006,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_RESERVE\_PROOF
+### COMMAND_RPC_GET_RESERVE_PROOF
+
+
 
 Generate a signature to prove of an available amount in a wallet.
 
@@ -1967,7 +2051,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CHECK\_RESERVE\_PROOF
+### COMMAND_RPC_CHECK_RESERVE_PROOF
+
+
 
 Proves a wallet has a disposable reserve using a signature.
 
@@ -2012,7 +2098,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_TRANSFERS
+### COMMAND_RPC_GET_TRANSFERS
+
+
 
 Returns a list of transfers.
 
@@ -2230,7 +2318,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_TRANSFER\_BY\_TXID
+### COMMAND_RPC_GET_TRANSFER_BY_TXID
+
+
 
 Show information about a transfer to/from this address.
 
@@ -2333,7 +2423,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SIGN
+### COMMAND_RPC_SIGN
+
+
 
 Sign a string.
 
@@ -2370,7 +2462,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_VERIFY
+### COMMAND_RPC_VERIFY
+
+
 
 Verify a signature on a string.
 
@@ -2411,7 +2505,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_EXPORT\_OUTPUTS
+### COMMAND_RPC_EXPORT_OUTPUTS
+
+
 
 Export all outputs in hex format.
 
@@ -2441,7 +2537,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_IMPORT\_OUTPUTS
+### COMMAND_RPC_IMPORT_OUTPUTS
+
+
 
 Import outputs in hex format.
 
@@ -2478,7 +2576,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_EXPORT\_KEY\_IMAGES
+### COMMAND_RPC_EXPORT_KEY_IMAGES
+
+
 
 Export a signed set of key images.
 
@@ -2522,7 +2622,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_IMPORT\_KEY\_IMAGES
+### COMMAND_RPC_IMPORT_KEY_IMAGES
+
+
 
 Import signed key images list and verify their spent status.
 
@@ -2570,7 +2672,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_MAKE\_URI
+### COMMAND_RPC_MAKE_URI
+
+
 
 Create a payment URI using the official URI spec.
 
@@ -2600,7 +2704,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_PARSE\_URI
+### COMMAND_RPC_PARSE_URI
+
+
 
 Parse a payment URI to get payment information.
 
@@ -2650,7 +2756,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_ADD\_ADDRESS\_BOOK\_ENTRY
+### COMMAND_RPC_ADD_ADDRESS_BOOK_ENTRY
+
+
 
 Add an entry to the address book.
 
@@ -2691,7 +2799,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_ADDRESS\_BOOK\_ENTRY
+### COMMAND_RPC_GET_ADDRESS_BOOK_ENTRY
+
+
 
 Retrieves entries from the address book.
 
@@ -2737,7 +2847,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_DELETE\_ADDRESS\_BOOK\_ENTRY
+### COMMAND_RPC_DELETE_ADDRESS_BOOK_ENTRY
+
+
 
 Delete an entry from the address book.
 
@@ -2770,7 +2882,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_RESCAN\_SPENT
+### COMMAND_RPC_RESCAN_SPENT
+
+
 
 Rescan the blockchain for spent outputs.
 
@@ -2796,7 +2910,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_REFRESH
+### COMMAND_RPC_REFRESH
+
+
 
 Refresh a wallet after openning.
 
@@ -2835,7 +2951,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_START\_MINING
+### COMMAND_RPC_START_MINING
+
+
 
 Start mining in the loki daemon.
 
@@ -2872,7 +2990,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_STOP\_MINING
+### COMMAND_RPC_STOP_MINING
+
+
 
 Stop mining in the loki daemon.
 
@@ -2898,7 +3018,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_GET\_LANGUAGES
+### COMMAND_RPC_GET_LANGUAGES
+
+
 
 Get a list of available languages for your wallet's seed.
 
@@ -2928,7 +3050,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_CREATE\_WALLET
+### COMMAND_RPC_CREATE_WALLET
+
+
 
 Create a new wallet. You need to have set the argument "'–wallet-dir" when launching loki-wallet-rpc to make this work.
 
@@ -2965,7 +3089,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_OPEN\_WALLET
+### COMMAND_RPC_OPEN_WALLET
+
+
 
 Open a wallet. You need to have set the argument "–-wallet-dir" when launching loki-wallet-rpc to make this work.
 
@@ -3004,7 +3130,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CLOSE\_WALLET
+### COMMAND_RPC_CLOSE_WALLET
+
+
 
 Close the currently opened wallet, after trying to save it.
 
@@ -3030,7 +3158,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_CHANGE\_WALLET\_PASSWORD
+### COMMAND_RPC_CHANGE_WALLET_PASSWORD
+
+
 
 Change a wallet password.
 
@@ -3065,7 +3195,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_RESTORE\_DETERMINISTIC\_WALLET
+### COMMAND_RPC_RESTORE_DETERMINISTIC_WALLET
+
+
 
 
 **Endpoints:**
@@ -3115,7 +3247,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_IS\_MULTISIG
+### COMMAND_RPC_IS_MULTISIG
+
+
 
 Check if a wallet is a multisig one.
 
@@ -3151,7 +3285,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_PREPARE\_MULTISIG
+### COMMAND_RPC_PREPARE_MULTISIG
+
+
 
 Prepare a wallet for multisig by generating a multisig string to share with peers.
 
@@ -3181,7 +3317,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_MAKE\_MULTISIG
+### COMMAND_RPC_MAKE_MULTISIG
+
+
 
 Make a wallet multisig by importing peers multisig string.
 
@@ -3224,7 +3362,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_EXPORT\_MULTISIG
+### COMMAND_RPC_EXPORT_MULTISIG
+
+
 
 Export multisig info for other participants.
 
@@ -3254,7 +3394,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_IMPORT\_MULTISIG
+### COMMAND_RPC_IMPORT_MULTISIG
+
+
 
 Import multisig info from other participants.
 
@@ -3291,7 +3433,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_FINALIZE\_MULTISIG
+### COMMAND_RPC_FINALIZE_MULTISIG
+
+
 
 Turn this wallet into a multisig wallet, extra step for N-1/N wallets.
 
@@ -3330,7 +3474,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_EXCHANGE\_MULTISIG\_KEYS
+### COMMAND_RPC_EXCHANGE_MULTISIG_KEYS
+
+
 
 
 **Endpoints:**
@@ -3368,7 +3514,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SIGN\_MULTISIG
+### COMMAND_RPC_SIGN_MULTISIG
+
+
 
 Sign a transaction in multisig.
 
@@ -3407,7 +3555,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_SUBMIT\_MULTISIG
+### COMMAND_RPC_SUBMIT_MULTISIG
+
+
 
 Submit a signed multisig transaction.
 
@@ -3444,7 +3594,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_GET\_VERSION
+### COMMAND_RPC_GET_VERSION
+
+
 
 Get RPC version Major & Minor integer-format, where Major is the first 16 bits and Minor the last 16 bits.
 
@@ -3474,7 +3626,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '{ "jsonrpc":"2.0", "id":"0", "m
 
 ---
 
-### COMMAND\_RPC\_STAKE
+### COMMAND_RPC_STAKE
+
+
 
 Stake for Service Node.
 
@@ -3541,7 +3695,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_REGISTER\_SERVICE\_NODE
+### COMMAND_RPC_REGISTER_SERVICE_NODE
+
+
 
 Register Service Node.
 
@@ -3600,7 +3756,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_REQUEST\_STAKE\_UNLOCK
+### COMMAND_RPC_REQUEST_STAKE_UNLOCK
+
+
 
 Request to unlock stake by deregistering Service Node.
 
@@ -3639,7 +3797,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_CAN\_REQUEST\_STAKE\_UNLOCK
+### COMMAND_RPC_CAN_REQUEST_STAKE_UNLOCK
+
+
 
 Check if Service Node can unlock it's stake.
 
@@ -3678,7 +3838,9 @@ curl -X POST http://127.0.0.1:22023/json_rpc -d '
 
 ---
 
-### COMMAND\_RPC\_VALIDATE\_ADDRESS
+### COMMAND_RPC_VALIDATE_ADDRESS
+
+
 
 Parse an address to validate if it's a valid Loki address.
 
