@@ -8,7 +8,7 @@ Open command prompt as an administrator (right click run as admin).
 
 `net user <username> <password> /add`
 
-![non-admin-user2](../../assets/OnlineMessaging.PNG)
+![non-admin-user2](../../assets/non-root-user2.PNG)
 
 Replacing <username> with a log-in name and <password> with a log-in password.
 

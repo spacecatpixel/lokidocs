@@ -51,19 +51,13 @@ We have laid out a set of guides which will take you through the installation of
 
 We suggest going through each guide in the following order:
 
-1. [Installation Guide](../../Lokinet/Guides/Install.md) - Initial setup for Linux.
-
-2. [Accessing SNApps](../../Lokinet/Guides/AccessingSNApps.md) - Setting up your computer to access SNApps.
-
-3. [Joining a lokinet IRC chat anonymously](../Guides/LokinetIRC.md) - Start chatting with the community on Lokinet.
-
-4. [Hosting a SNApp](../../Lokinet/Guides/HostingSNApps.md) - How to host a SNApp on Lokinet.
-
-5. [Route through an Exit Node](../../Lokinet/Guides/RouteThroughExitNode.md) - How to route your traffic data through a Lokinet Exit Node.
-
 ### 1. Lokinet Installation
 
-This guide will help prepare your computer to run Lokinet, to access the guide [click here](../Guides/Install.md).
+This guide will help prepare your computer to run Lokinet, depending on your system jump into the following guide:
+
+##### Linux Installation
+
+To access the guide [click here](../Guides/Install.md)
 
 The guide will cover:
 
@@ -74,6 +68,18 @@ The guide will cover:
 - Installing build dependencies.
 
 - Build the Lokinet software from the Github repository.
+
+##### Windows Installation
+
+To access the guide [click here](../Guides/lokinet-windows-guide.md).
+
+This guide will cover:
+
+- Setting up a non root user.
+
+- Downloading the latest windows installer.
+
+- Installing the Lokinet Launcher.
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report any build issues if you find them, especially if you solved the issue.
 
