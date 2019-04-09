@@ -89,6 +89,7 @@ nav:
         - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
 #        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
+        - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
 
 - Advanced:
     - Developer:
