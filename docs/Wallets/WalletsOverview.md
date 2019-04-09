@@ -6,11 +6,14 @@ Loki wallets store a collection of public and private keys which can be used to 
 The wallet uses the private keys through a daemon which synchronises with the Loki Network to scan for incoming transactions and to send outgoing transactions.
 
 ## Graphical User Interface Wallet (GUI)
-The Gui Wallet is currently the easiest wallet to use. It has a graphical user friendly interface which is perfect for beginners. You can download the Loki GUI Wallet [here](https://github.com/loki-project/loki-gui/releases).
+The Gui Wallets are the easiest wallets to use. It has a graphical user friendly interface which is perfect for beginners. 
 
-- [Download Loki GUI Wallet](https://github.com/loki-project/loki-gui/releases)
+Loki has two GUI wallets:
 
-- [Github Link](https://github.com/loki-project/loki-gui/)
+- The Loki Electron wallet: [Download here](https://github.com/loki-project/loki-electron-gui-wallet/releases).
+
+- The Loki GUI wallet: [Download here](https://github.com/loki-project/loki-gui/releases)
+
 
 ### GUI Guides
 | Guide                                                	| Description                                          	|

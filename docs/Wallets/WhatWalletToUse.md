@@ -26,7 +26,7 @@ The easiest wallets to use for sending and receiving Loki are:
 
 - Mobile wallet
 
-The GUI wallet can be downloaded [here](https://github.com/loki-project/loki-gui/releases), while the mobile wallet can be downloaded from the Google Play Store.
+The GUI wallet can be downloaded [here](https://github.com/loki-project/loki-electron-gui-wallet/releases), while the mobile wallet can be downloaded from the Google Play Store.
 
 ### Hosting a Service Node as an Operator
 
@@ -44,5 +44,5 @@ If so, you will want to either use the:
 
 - Command-line interface wallet (CLI)
 
-If you rarely use the terminal or command line, we would suggest to perform your stake through the GUI wallet which can be downloaded [here](https://github.com/loki-project/loki-gui/releases). Alternatively, if you would like to perform the stake on the CLI wallet, you can download it [here](https://github.com/loki-project/loki/releases).
+If you rarely use the terminal or command line, we would suggest to perform your stake through the GUI wallet which can be downloaded [here](https://github.com/loki-project/loki-electron-gui-wallet/releases). Alternatively, if you would like to perform the stake on the CLI wallet, you can download it [here](https://github.com/loki-project/loki/releases).
 
