@@ -38,9 +38,9 @@ To understand what a [Service Node](SNOverview.md) is, you can refer to the [whi
 
 -   Service Nodes are full nodes on the Loki network
 
--   Full nodes become Service Nodes when the owner [locks the required amount of Loki](StakingRequirement.md) for 30 days (2 days on testnet) and submits a registration transaction
+-   Full nodes become Service Nodes when the owner [locks the required amount of Loki](StakingRequirement.md) and submits a registration transaction.
 
--   Once accepted by the network, the Service Node is eligible to win block rewards
+-   Once accepted by the network, the Service Node is eligible to win block rewards.
 
 -   Multiple participants can be involved in one Service Node and can have the reward automatically distributed
 
@@ -381,7 +381,7 @@ It is at this point that we should get some Loki in the wallet. The amount of Lo
 
 > If you are running a Service Node on the testnet you will only ever require 100 testnet Loki to run the Node. You can ask the Telegram @LokiSNBot for some testnet loki or ask someone in the Loki Discord Community for some.
 
-**If you are staking please do not use Subaddresses. They are currently unsupported by the Loki wallet** 
+**If you are staking please do not use Subaddresses. They are currently unsupported by the Loki wallet.** 
 
 We will need our address to register our Service Node later, to get your primary address type the following command:
 
@@ -427,8 +427,6 @@ The daemon will output the current staking requirement and prompt you with an in
 
 The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your Loki Address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address. Double check the address matches the one of your wallet then click enter if it is the same.
 
-The daemon will now ask if you wish to enable automatic re-staking. Type `y` and click enter if you would like to have your Service Node re-stake automatically for you at the end of every 30 days. Type `n` if you would like to re-stake manually. 
-
 The daemon will now ask for a final confirmation, if you agree to the information provided type `y` and click enter.
 
 The daemon will output a command for us to run looking similar to:
@@ -446,21 +444,34 @@ You have 2 weeks from the moment of preparing the registration command on the Se
 
 Run through step 5 once more to open our Loki wallet (if you don't already have it open). Once we are in our wallet run the command the daemon outputted for us when we prepared our Service Node registration.
 
-> If you prepared a registration with automatic restaking the `register_service_node` command will contain an `auto` keyword.  Running this command will push the wallet process into the background. See additional information at the end of this guide to learn how to stop the auto command.
+The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter. 
 
-The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter. Well done! Let's continue to the next step **"Step 7 - Service Node Check"** to check if our Service Node is running.
+> Note: At this point you now have locked stakes! To unlock your stake run the following
+
+Well done! Let's continue to the next step **"Step 7 - Service Node Check"** to check if our Service Node is running.
 
 #### 6.2 - Pool Staking
-Service Nodes can be split between multiple parties. At a minimum, the operator must stake at least 25% of the total required amount. The operator can also reserve contribution slots for specific addresses to prevent random users from adding to the pool.
 
-In any given pool, there will be at most 4 contributors including the operator. Each participant, including the operator, must contribute 25% of the minimum, except the last one who completes the stake. So for example, valid splits might be:
+##### Minimum Contribution Rules
+Infinite Staking introduces new limitations on the number of transactions that can be contributed to a Service Node, changing the minimum contribution rules for participating in the Service Node. 
 
-|Operator| Contributor 1 | Contributor 2 | Contributor 3|
-|:-:|:-:|:-:|:-:|
-|25%|25%|40%|10%|
-|65%|25%|10%||
-|90%|10%|||
-|99%|1%|
+Service Nodes accept at most 4 contributions, meaning the minimum contribution to a Service Node becomes:
+
+<center>![Contribution](../assets/contribution.svg)</center>
+
+In a pooled Service Node with reserved spots, the Minimum Contribution must be either the Reserved Amount or the Contribution determined by the above equation, whichever is larger.
+
+<center>![Min Contribution](../assets/mincontribution.svg)</center>
+
+A simplistic example being, if the staking requirement is 24,000 Loki then if,
+
+-   Operator contributes 50% of the requirement (12,000 Loki)
+
+-   The next contributor must contribute at least (⅓ * 12,000) Loki i.e. 4000 Loki to become a participant.
+
+-   If this contributor had reserved a spot for more than 4000 Loki, their Minimum Contribution would be that amount.
+    
+There are rules in the client software in place to stop users from irreversibly funding a Service Node into an invalid state.
 
 Depending on the individual and their circumstance they will need to:
 
@@ -507,7 +518,7 @@ Once we have set the operators desired stake amount we have the option to either
 
 ---
 
-##### Reserved Pool
+###### Reserved Pool
 
 If the operator wishes to reserve spots for specific contributors they should type `y` and click return. 
 
@@ -519,13 +530,11 @@ Next the operator must input the amount of Loki each contributor will contribute
 
 >*NOTE: It is possible to reserve only some of the required stakes for specific contributors while leaving the remaining stake open.*
 
-The daemon will now ask if you wish to enable automatic re-staking. Type `y` and hit return if you would like to have your Service Node  re-stake automatically at the end of every 30 days. Type `n` if you would like to re-stake manually.
-
 You will now be asked to confirm the information above is correct.
 
 ---
 
-##### Open Pool
+###### Open Pool
 
 If the operator wishes to leave their pool complete open to contributions they should type `n` and click return. The terminal will prompt the operator to input their address. Once the address has been inputted the terminal will display the remaining portion that needs to be contributed by others. If you agree click `y` and hit return.
 
@@ -553,7 +562,6 @@ Before you disconnect from your VPS run the following command to get your `<Serv
 
 Run through step 5 once more to open our Loki wallet. Once we are in our wallet run the command the daemon outputted for us when we prepared our Service Node. The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter.
 
-> If you requested automatic restaking the registration command will cause the wallet to close pushing the process into the background. See additional information at the end of this guide to learn how to stop the auto command.
 
 Once this command completes your staking transaction will be sent to be included on the blockchain.
 It may take a few minutes for the transaction to be mined into a block; you can check the status
@@ -591,16 +599,6 @@ If using the desktop GUI wallet, the Stake command can be found under the Advanc
 menu.  Enter the service `<Service Node Pubkey>` and `<contribution amount>` and hit the Stake
 button.
 
-The Pool Contributor can also include the `auto` command in the CLI wallet, when staking this will create a wallet which runs as a background process and automatically signs a register transaction each 30 days, so the contributor need not sign a new transaction manually each registration period.
-
-```
-stake auto <Service Node Pubkey> <address> <contribution amount>
-```
-
-> If you run the `auto` command the wallet will close pushing the process into the background. See additional information at the end of this guide to learn how to stop autostaking.
-
-> The `auto` command does not work with a multsig wallet as there is a requirement for the party who is staking to have the transaction signed by another signer. Thus is it advised if you are using a multisig wallet to maintain the staking once a month when the funds are unlocked.
-
 At this stage you will need to wait for the other contributors to provide their collateral. Once everyone has staked you can refer to **“Step 7 - Service Node Check”** to see where your Service Node Operator’s node is in the list.
 
 Congratulations, you are now staking.
@@ -623,6 +621,7 @@ If you want more detailed Service Node status you can use the follow command:
 ~/loki/lokid print_sn_status
 ```
 
+
 You can jump onto [https://lokiblocks.com/](https://lokiblocks.com/) to see if your Service Node is in the list or we can continue in the terminal to output the same information.
 
 >If you are running your Service Node on testnet go to [https://lokitestnet.com/](https://lokitestnet.com/) instead.
@@ -632,6 +631,31 @@ To check this information directly with the service node itself, first get the c
 Run the command `~/loki/lokid print_quorum_state <block height>` replacing `<block height>` with the number minus 1 that was outputted when running `status` command.
 
 If your `<Service Node Pubkey>` is sitting in the list you know you are now staking.
+
+### Step 8 - Unlock Stake
+
+Service Nodes will continually receive block rewards indefinitely until a stake is unlocked or the Service Node becomes deregistered. Unlocking is available via the following command which needs to be run in the command line wallet:
+
+```
+request_stake_unlock <service node key>
+``` 
+
+Once the unlock is requested and the request is included in a block in the blockchain, the Service Node will then expire in 15 days (10800 blocks) and the funds will become unlocked after expiry.
+
+In pooled nodes, any contributor that requests the stake to unlock will schedule the Service Node for expiration. All locked stakes in that Service Node will be unlocked in 15 days (10800 blocks). Once the unlock is requested, this process can not be undone or prolonged. Service Node participants will continue receiving rewards until expiration.
+
+Deregistrations can be issued at any point during the active lifecycle of the Service Node. This is inclusive of the time period during which the Service Node is scheduled for expiry. Getting deregistered removes your Service Node from the network and your stakes are placed into a list of blacklisted transactions. Blacklisted transactions are locked and unspendable for 30 days (21600 blocks) from the block in which the Service Node was deregistered.
+
+Receiving a deregistration after participants have already requested the stake to unlock overrides the 15 day (10800 blocks) unlock time, and resets the unlock time to 30 days (21600 blocks).
+
+### Optional
+
+#### See Locked Stake Amount and Duration
+
+We can also view our locked stake by running the following command from our `loki-wallet-cli` we staked from:
+```
+print_locked_stakes
+```
 
 ## Express Setup Guide
 
