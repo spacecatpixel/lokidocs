@@ -90,7 +90,7 @@ nav:
 #        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
         - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
-        - 'Lokinet Mac Guide': 'Lokinet/Guides/lokinet-mac-guide'
+        - 'Lokinet Mac Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
 
 - Advanced:
     - Developer:
