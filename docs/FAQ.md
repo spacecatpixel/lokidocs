@@ -44,6 +44,8 @@
 
 * [Can you run multiple service nodes in a single VPS server?](#can-you-run-multiple-service-nodes-in-a-single-vps-server)
 
+* [Can a pool member request for the stake to be unlocked?](#can-a-pool-member-request-for-the-stake-to-be-unlocked)
+
 
 
 ---
@@ -157,6 +159,10 @@ Check out the collateral calculator [here](https://jagerman.com/sn/) for the cur
 ###**Can you run multiple service nodes in a single VPS server?**
 
 It is recomended that you run different instances per [Service Node](../ServiceNodes/SNOverview) however it is not required..
+
+###**Can a pool member request for the stake to be unlocked?**
+
+In pooled nodes, any contributor that requests the stake to unlock will schedule the Service Node for expiration. 
 
 ---
 
