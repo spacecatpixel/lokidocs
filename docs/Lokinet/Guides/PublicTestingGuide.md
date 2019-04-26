@@ -6,18 +6,6 @@ This guide will help you get Lokinet running on your machine, and give you some 
 
 You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running Lokinet on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run Lokinet from.
 
-### Summary of Lokinet Requirements
-
-This may change depending on new updates, so you should check here regularly, or follow our [telegram](https://t.me/LokiCommunity)/[discord](https://discord.gg/67GXfD6) announcements channel. 
-
-|Spec|Note|
-|---|---|
-|Latest Binary|[loki network](https://github.com/loki-project/loki-network/releases/latest)|
-|Software| Ubuntu 16.04|
-|Storage | 30-50gb|
-|Ram | 2-4 gb|
-
-
 ## Table of Contents
 - [Overview of Lokinet](#Overview)
 - [Getting Help and Reporting Bugs Guidelines](#getting-help-and-reporting-bugs-guidelines)
