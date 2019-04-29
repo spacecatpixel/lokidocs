@@ -81,7 +81,9 @@ nav:
     - 'Developers': 'Lokinet/DeveloperInfo.md'
 
     - Guides:
-        - 'Installation': 'Lokinet/Guides/Install.md'
+        - 'Lokinet Linux Guide': 'Lokinet/Guides/Install.md'
+        - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
+        - 'Lokinet Mac Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
         - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
         - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
         - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
@@ -89,8 +91,6 @@ nav:
         - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
 #        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
-        - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
-        - 'Lokinet Mac Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
 
 - Advanced:
     - Developer:
