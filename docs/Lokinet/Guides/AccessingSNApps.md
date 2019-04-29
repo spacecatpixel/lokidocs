@@ -51,9 +51,12 @@ For future reference, after generating initial configuration you just need to ru
 ## 4. Test services
 Jump onto a browser such as google chrome or firefox and try and go to one of the following urls:
 
-- `icxqqcpd3sfkjbqifn53h7rmusqa1fyxwqyfrrcgkd37xcikwa7y.loki`
+- http://icxqqcpd3sfkjbqifn53h7rmusqa1fyxwqyfrrcgkd37xcikwa7y.loki
 
-- `3xoafu6kuc6wd51iqcdca99jkqzcrh35qjjj9sfquqg4s3b8fb1y.loki` 
+- http://3xoafu6kuc6wd51iqcdca99jkqzcrh35qjjj9sfquqg4s3b8fb1y.loki
+
+- http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/
+
 
 Congratulations, you now have access to the Lokinet.
 

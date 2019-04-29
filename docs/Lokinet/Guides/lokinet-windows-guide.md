@@ -16,11 +16,11 @@ Now switch to your newly created account.
 
 #### 2. Download the latest Lokinet Windows Installer
 
-You can find the latest release of Lokinet on our Github [here.](https://github.com/loki-project/loki-network/releases)
+Head to [lokinet.org](https://lokinet.org/), download the latest Windows Lokinet. 
 
 #### 3. Run the installer
 
-Run Lokinet-win32.exe installe and allow permission as prompted. Please make note to set an exclusion or turn off Windows Defender/ Antivirus for this step.
+Run Lokinet-win32.exe installer and allow permission as prompted. Please make note to set an exclusion or turn off Windows Defender/ Antivirus for this step.
 
 ![lokinet-launcher-install](../../assets/Lokinet_launcher_install1.PNG)
 

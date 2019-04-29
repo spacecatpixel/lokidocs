@@ -4,7 +4,7 @@ Thanks for your interest in the public testing phase of the Lokinet alpha. It’
 
 This guide will help you get Lokinet running on your machine, and give you some example tasks on things you can do to help put the software through its paces and help us find places where it needs to be fixed or can be improved. The more machines we get this running on, and the more traffic (and types of traffic) we can push through this alpha network, the better.
 
-You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running Lokinet on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run Lokinet from.
+You can run the Loki software on any operating system. The binaries available for Linux (as .deb package), Windows 32 and 64-bit, OSX on [lokinet.org](https://lokinet.org/) website.
 
 ## Table of Contents
 - [Overview of Lokinet](#Overview)
@@ -71,13 +71,28 @@ This guide will cover:
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report any build issues if you find them, especially if you solved the issue.
 
+##### Mac OSX Installation
+
+To access the guide [click here](../Guides/lokinet-mac-guide.md).
+
+This guide will cover:
+
+- Downloading the latest Mac OSX installer.
+
+- Installing the Lokinet Launcher.
+
+- Configuring DNS server
+
+Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report any build issues if you find them, especially if you solved the issue.
+
+
 ### 2. Accessing SNApps
 
 This guide will help you gain access to SNApps, to access the guide [click here](../Guides/AccessingSNApps.md).
 
 The guide will cover:
 
-- Adding the Lokinet DNS resolver.
+- Adding the Lokinet DNS resolver (for Linux).
 
 - Initialising Lokinet for the first time.
 
