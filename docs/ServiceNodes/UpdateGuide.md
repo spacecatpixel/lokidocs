@@ -42,42 +42,42 @@ Where `<link>` is the download link of the latest linux release. To find the lin
 Your command should look something like:
 
 ```
-wget https://github.com/loki-project/loki/releases/download/v3.0.2/loki-linux-x64-v3.0.2.zip
+wget https://github.com/loki-project/loki/releases/download/v3.0.6/loki-linux-x64-v3.0.6.zip
 ```
 
-To unzip the downloaded zip file run the following command (changing 3.0.2 to whatever version you
+To unzip the downloaded zip file run the following command (changing 3.0.6 to whatever version you
 downloaded above):
 
 ```
-unzip loki-linux-x64-v3.0.2.zip
+unzip loki-linux-x64-v3.0.6.zip
 ```
 
 You will see something like this:
 
 ```
-Archive:  loki-linux-x64-v3.0.2.zip
-   creating: loki-linux-x64-v3.0.2/
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-ancestry  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-depth  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-export  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-import  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-mark-spent-outputs  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-stats  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-usage  
-  inflating: loki-linux-x64-v3.0.2/loki-gen-trusted-multisig  
-  inflating: loki-linux-x64-v3.0.2/loki-wallet-cli  
-  inflating: loki-linux-x64-v3.0.2/loki-wallet-rpc  
-  inflating: loki-linux-x64-v3.0.2/lokid  
+Archive:  loki-linux-x64-v3.0.6.zip
+   creating: loki-linux-x64-v3.0.6/
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-ancestry  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-depth  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-export  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-import  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-mark-spent-outputs  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-stats  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-usage  
+  inflating: loki-linux-x64-v3.0.6/loki-gen-trusted-multisig  
+  inflating: loki-linux-x64-v3.0.6/loki-wallet-cli  
+  inflating: loki-linux-x64-v3.0.6/loki-wallet-rpc  
+  inflating: loki-linux-x64-v3.0.6/lokid  
 ```
 
-Note that they are unzipped into the `loki-linux-x64-v3.0.2` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
+Note that they are unzipped into the `loki-linux-x64-v3.0.6` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
 
 ```
-cd loki-linux-x64-v3.0.2
+cd loki-linux-x64-v3.0.6
 ls
 ```
 
-We now want to replace our "symlink" to the new extracted `loki-linux-x64-v3.0.2` folder. If you are unfamiliar with what the "symlink" was doing previously have a look at the [Service Node Full Guide](../SNFullGuide/#step-3-download-the-loki-binaries) where you first set it up.
+We now want to replace our "symlink" to the new extracted `loki-linux-x64-v3.0.6` folder. If you are unfamiliar with what the "symlink" was doing previously have a look at the [Service Node Full Guide](../SNFullGuide/#step-3-download-the-loki-binaries) where you first set it up.
 
 Otherwise, run the following command.:
 
@@ -86,13 +86,13 @@ cd
 ln -snf <folder_name> loki
 ```
 
-Where `<folder_name>` is the new folder we created when unziping the release. In this case if we were to update to `v3.0.2` the commands we would use would be:
+Where `<folder_name>` is the new folder we created when unziping the release. In this case if we were to update to `v3.0.6` the commands we would use would be:
 ```
 cd
-ln -snf loki-linux-x64-v3.0.2 loki
+ln -snf loki-linux-x64-v3.0.6 loki
 ```
 
-This replaces our virtual `loki` folder that pointed to an old folder to the `loki-linux-x64-v3.0.2` folder we created.
+This replaces our virtual `loki` folder that pointed to an old folder to the `loki-linux-x64-v3.0.6` folder we created.
 
 At this point it is wise to restart your system with the following command:
 

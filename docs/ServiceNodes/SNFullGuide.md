@@ -14,7 +14,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 
 |Spec|Note|
 |---|---|
-|Latest Binary|[Loki Festive Freya](https://github.com/loki-project/loki/releases/latest)|
+|Latest Binary|[Summer Sign](https://github.com/loki-project/loki/releases/latest)|
 |Software| Ubuntu 16.04|
 |Storage | 30-50gb|
 |Ram | 2-4 gb|
@@ -201,52 +201,52 @@ Where `<link>` is the download link of the latest linux release. To find the lin
 Your command should look something like:
 
 ```
-wget https://github.com/loki-project/loki/releases/download/v3.0.2/loki-linux-x64-v3.0.2.zip
+wget https://github.com/loki-project/loki/releases/download/v3.0.6/loki-linux-x64-v3.0.6.zip
 ```
 
 To unzip the downloaded zip file run the following command (changing 2.0.4 to whatever version you
 downloaded above):
 
 ```
-unzip loki-linux-x64-v3.0.2.zip
+unzip loki-linux-x64-v3.0.6.zip
 ```
 
 You will see something like this:
 
 ```
-Archive:  loki-linux-x64-v3.0.2.zip
-   creating: loki-linux-x64-v3.0.2/
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-ancestry  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-depth  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-export  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-import  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-mark-spent-outputs  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-stats  
-  inflating: loki-linux-x64-v3.0.2/loki-blockchain-usage  
-  inflating: loki-linux-x64-v3.0.2/loki-gen-trusted-multisig  
-  inflating: loki-linux-x64-v3.0.2/loki-wallet-cli  
-  inflating: loki-linux-x64-v3.0.2/loki-wallet-rpc  
-  inflating: loki-linux-x64-v3.0.2/lokid  
+Archive:  loki-linux-x64-v3.0.6.zip
+   creating: loki-linux-x64-v3.0.6/
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-ancestry  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-depth  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-export  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-import  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-mark-spent-outputs  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-stats  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-usage  
+  inflating: loki-linux-x64-v3.0.6/loki-gen-trusted-multisig  
+  inflating: loki-linux-x64-v3.0.6/loki-wallet-cli  
+  inflating: loki-linux-x64-v3.0.6/loki-wallet-rpc  
+  inflating: loki-linux-x64-v3.0.6/lokid  
 ```
 
-Note that they are unzipped into the `loki-linux-x64-v3.0.2` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
+Note that they are unzipped into the `loki-linux-x64-v3.0.6` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
 
 ```
-cd loki-linux-x64-v3.0.2
+cd loki-linux-x64-v3.0.6
 ls
 ```
 
-We now want to create a "symlink" to the extracted `loki-linux-x64-v3.0.2` folder:
+We now want to create a "symlink" to the extracted `loki-linux-x64-v3.0.6` folder:
 
 ```
 cd
-ln -snf loki-linux-x64-v3.0.2 loki
+ln -snf loki-linux-x64-v3.0.6 loki
 ```
 
-This creates a virtual `loki` folder that points to the `loki-linux-x64-v3.0.2` folder.  This isn't
+This creates a virtual `loki` folder that points to the `loki-linux-x64-v3.0.6` folder.  This isn't
 strictly necessary, but will help with upgrades in the future: when you want to upgrade (for
-example, to a future 3.0.0 release) you can just repeat everything in this step again and the `loki`
-symlink will be updated to the new folder containing the 3.0.0 binaries.
+example, to a future 3.0.6 release) you can just repeat everything in this step again and the `loki`
+symlink will be updated to the new folder containing the 3.0.6 binaries.
 
 Excellent! We now have all of the necessary files to get this show on the road!
 
@@ -665,7 +665,7 @@ This section is for power users who are more familiar with servers and the CLI i
 
 **2. Run the Daemon on a server from a non-root user account, then stake from a local wallet (or a wallet on a separate server).**
 
-> Where `<VERSION>` is mentioned replace with the [latest version](https://github.com/loki-project/loki/releases/latest), example `v3.0.2`
+> Where `<VERSION>` is mentioned replace with the [latest version](https://github.com/loki-project/loki/releases/latest), example `v3.0.6`
 
 **3. Connect via SSH to your server**
 
