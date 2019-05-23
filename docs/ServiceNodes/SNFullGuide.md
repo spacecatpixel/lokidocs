@@ -204,7 +204,7 @@ Your command should look something like:
 wget https://github.com/loki-project/loki/releases/download/v3.0.6/loki-linux-x64-v3.0.6.zip
 ```
 
-To unzip the downloaded zip file run the following command (changing 2.0.4 to whatever version you
+To unzip the downloaded zip file run the following command (changing 3.0.6 to whatever version you
 downloaded above):
 
 ```
