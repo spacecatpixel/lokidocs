@@ -14,8 +14,8 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 
 |Spec|Note|
 |---|---|
-|Latest Binary|[Summer Sign](https://github.com/loki-project/loki/releases/latest)|
-|Software| Ubuntu 16.04|
+|Latest Binary|[Loki Summer Sigyn](https://github.com/loki-project/loki/releases/latest)|
+|Software| Ubuntu 16.04, Ubuntu 18.04|
 |Storage | 30-50gb|
 |Ram | 2-4 gb|
 
