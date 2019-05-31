@@ -12,7 +12,7 @@ Loki has two GUI wallets:
 
 - The Loki Electron wallet: [Download here](https://github.com/loki-project/loki-electron-gui-wallet/releases).
 
-- The Loki GUI wallet: [Download here](https://github.com/loki-project/loki-gui/releases)
+- The Loki GUI wallet: [Download here](https://github.com/loki-project/loki-gui/releases).
 
 
 ### GUI Guides
