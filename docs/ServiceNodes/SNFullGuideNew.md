@@ -22,11 +22,12 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 - [New User Guide](#new-user-guide)
     - Step 1 [Server](#step-1-get-a-server)
     - Step 2 [Server Prep](#step-2-prepare-your-server)
-    - Step 3 [Download Binaries](#step-3-download-the-loki-binaries)
-    - Step 4 [Run the Loki Daemon](#step-4-run-the-service-node-daemon)
+    - Step 3 [Loki Launcher](#step-3-loki-launcher)
+    - Step 4 [Service File](#step-4-loki-launcher-as-a-system-service)
     - Step 5 [Open a Loki Wallet](#step-5-getopen-a-wallet)
     - Step 6 [Register Node](#step-6-service-node-registration)
     - Step 7 [Check Registration](#step-7-service-node-check)
+    - Step 8 [Unlock Stake](#step-8-unlock-stake) (optional)
 - [Express Setup Guide](#express-setup-guide)
 
 ## Overview
