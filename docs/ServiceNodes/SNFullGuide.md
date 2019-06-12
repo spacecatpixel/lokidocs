@@ -1,8 +1,6 @@
 ﻿# Full Guide on Service Nodes
 
-This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. Also available is a video guide, which provides a more simplified version of the written guide, it can be viewed [here](https://youtu.be/6uiRD1847UY).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6uiRD1847UY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble.
 
 If you feel confident around servers and the CLI, then skip to the [Express Setup Guide](#express-setup-guide)
 
