@@ -3,7 +3,7 @@
 This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. 
 If you feel confident around servers and the CLI, then skip to the [Express Setup Guide](#express-setup-guide)
 
-You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
+You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 18.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
 
 ### Summary of Loki Service Node Requirements
 
@@ -12,8 +12,8 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 |Spec|Note|
 |---|---|
 |Latest Binary|[Loki Summer Sigyn](https://github.com/loki-project/loki/releases/latest)|
-|Software| Ubuntu 16.04, Ubuntu 18.04|
-|Storage | 30-50gb|
+|Software| Ubuntu 18.04, Ubuntu 19.04|
+|Storage | 18gb|
 |Ram | 2-4 gb|
 
 ## Table of Contents
@@ -92,7 +92,7 @@ Typically, the easiest and cheapest way to host a server outside of your home is
 
 Try not to pick the first one off the list. Do some digging and see which one looks the best to you, what your budget is, and what the latency is like for you based on the server location that you choose.
 
-When selecting your VPS’ operating system, choose Ubuntu 16.04 64 bit or Ubuntu 18.04 64 bit if you want to follow this guide. If you feel more confident or wish to run your server on another distribution or operating system, the Loki commands in this guide will still apply.
+When selecting your VPS’ operating system, choose Ubuntu 18.04 64 bit or Ubuntu 19.04 64 bit if you want to follow this guide. If you feel more confident or wish to run your server on another distribution or operating system, the Loki commands in this guide will still apply.
 
 ### Step 2 - Prepare your Server
 
