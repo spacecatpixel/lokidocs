@@ -1,24 +1,14 @@
-# Lokinet config files
+# Launcher config files
 
 This guide shows the different config files and their associated sections, keys and values.
 
 ##Table of contents:
 
 - [launcher.ini](#launcherini)
-     - [Example lokinet.ini files](#example-lokinetini-files)
-     - [[router]](#router)
-     - [[api]](#api)
-     - [[system]](#system)
-     - [[dns]](#dns)
-     - [[netdb]](#netdb)
-     - [[bootstrap]](#bootstrap)
+     - [[launcher]](#launcher)
+     - [[blockchain]](#blockchain)
      - [[network]](#network)
-     - [[bind]](#bind)
-     - [[services]](#services)
-
-- [service.ini](#ltfilenamegtini)
-	 - [Example service.ini files](#example-lokinetini-files_1)
-	 - [[`<any_string>`]](#ltany_stringgt)
+     - [[storage]](#storage)
 
 ## launcher.ini
 
