@@ -196,20 +196,8 @@ Next we need to install the launcher with the following command:
 ```
 sudo npm install -g loki-launcher
 ```
-#### 3.2 - Open port 22023
 
-We need to open port `22023` for the loki-launcher to work properly.
-
-Run the following command to open port `22023`.
-```
-sudo iptables -A INPUT -p tcp --dport 22023 -j ACCEPT & sudo iptables -A OUTPUT -p tcp --dport 22023 -j ACCEPT
-```
-Then run the following command to make this port remain open on reboot.
-```
-sudo apt-get install iptables-persistent
-```
-
-#### 3.3 - Setting up your loki-launcher for Service Node
+#### 3.2 - Setting up your loki-launcher for Service Node
 We now need to prequalify our server to be ready to run as a service node.
 
 To do so run the following command:
@@ -217,12 +205,12 @@ To do so run the following command:
 loki-launcher prequal
 ```
 
-#### 3.4 - Download Lokid binaries
+#### 3.3 - Download Lokid binaries
 We will download the Loki binaries by running the following command:
 ```
 sudo loki-launcher download-binaries
 ```
-#### 3.5 - Start the Loki Launcher
+#### 3.4 - Start the Loki Launcher
 To start the loki launcher run the following command:
 ```
 sudo loki-launcher start
