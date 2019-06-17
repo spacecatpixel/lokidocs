@@ -1,9 +1,10 @@
 ﻿# Full Guide on Service Nodes
 
-This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble. 
+This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble.
+
 If you feel confident around servers and the CLI, then skip to the [Express Setup Guide](#express-setup-guide)
 
-You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 18.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
+You can of course run the Loki software on any operating system that you can get it to build on, but for the purposes of this document, the instructions apply to running a Service Node on a remote Ubuntu 16.04 server. If that isn’t what you want to do, syntax and server set up will of course differ according to whatever OS you choose to run your Service Node from.
 
 ### Summary of Loki Service Node Requirements
 
@@ -12,8 +13,8 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 |Spec|Note|
 |---|---|
 |Latest Binary|[Loki Summer Sigyn](https://github.com/loki-project/loki/releases/latest)|
-|Software| Ubuntu 18.04, Ubuntu 19.04|
-|Storage | 18gb|
+|Software| Ubuntu 16.04, Ubuntu 18.04|
+|Storage | 30-50gb|
 |Ram | 2-4 gb|
 
 ## Table of Contents
@@ -22,12 +23,11 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 - [New User Guide](#new-user-guide)
     - Step 1 [Server](#step-1-get-a-server)
     - Step 2 [Server Prep](#step-2-prepare-your-server)
-    - Step 3 [Loki Launcher](#step-3-loki-launcher)
-    - Step 4 [Service File](#step-4-loki-launcher-as-a-system-service)
+    - Step 3 [Download Binaries](#step-3-download-the-loki-binaries)
+    - Step 4 [Run the Loki Daemon](#step-4-run-the-service-node-daemon)
     - Step 5 [Open a Loki Wallet](#step-5-getopen-a-wallet)
     - Step 6 [Register Node](#step-6-service-node-registration)
     - Step 7 [Check Registration](#step-7-service-node-check)
-    - Step 8 [Unlock Stake](#step-8-unlock-stake) (optional)
 - [Express Setup Guide](#express-setup-guide)
 
 ## Overview
@@ -62,7 +62,7 @@ This section of this guide is for new users to servers and the CLI interface.
 
 ### Step 1 - Get a Server
 
-Righto! Let’s get started. Choosing where to set up a Service Node is the biggest choice you will make when running a Service Node. There are a number of things to consider. Because you will be locking up funds indefinitly, you will want to ensure that your server has:
+Righto! Let’s get started. Choosing where to set up a Service Node is the biggest choice you will make when running a Service Node. There are a number of things to consider. Because you will be locking up funds for 30 days (2 days for testnet) at a time, you will want to ensure that your server has:
 
 -   A stable, relatively fast connection to be able to respond to ping requests to avoid being booted off the network.
 
@@ -92,7 +92,7 @@ Typically, the easiest and cheapest way to host a server outside of your home is
 
 Try not to pick the first one off the list. Do some digging and see which one looks the best to you, what your budget is, and what the latency is like for you based on the server location that you choose.
 
-When selecting your VPS’ operating system, choose Ubuntu 18.04 64 bit or Ubuntu 19.04 64 bit if you want to follow this guide. If you feel more confident or wish to run your server on another distribution or operating system, the Loki commands in this guide will still apply.
+When selecting your VPS’ operating system, choose Ubuntu 16.04 64 bit or Ubuntu 18.04 64 bit if you want to follow this guide. If you feel more confident or wish to run your server on another distribution or operating system, the Loki commands in this guide will still apply.
 
 ### Step 2 - Prepare your Server
 
@@ -106,7 +106,7 @@ To connect to our VPS we will need to paste the IP address into the SSH client�
 
 A terminal window will now appear prompting for your log-in details, username(root) and password, which were provided by your VPS provider. When entering your password, nothing will visually appear in the terminal. This is normal. Hit enter when it’s typed or pasted, and you should be logged in to your VPS.
 
-#### 2.1 Create a non-root User
+#### Create a non-root User
 
 Best practice when running a public server is to not run your software as the root user.  Although
 it is possible to do everything as root, it is strongly recommended that you create a non-root user
@@ -133,13 +133,13 @@ usermod -aG sudo snode
 ```
 
 ```
-sudo su - snode
+su - snode
 ```
 
 Before we proceed further, it is advised to close your terminal and reopen PuTTY to set up a saved session with our snode user. Your SSH client will have a load and save session function. For PuTTY we will need to type in our VPS IP address again, on the same screen type snode under “Saved Session”. Click on “Data” under the drop-down menu “Connection”, and type in snode (or your username defined before) into the input box “Auto-login username”. Go back to your session screen, where we entered the IP address, and click “Save”. You can load this session whenever you want to check on your Service Node.
 
 
-#### 2.2 Hot Tips for using the Console
+#### Hot Tips for using the Console
 
 Consoles don't work like the rest of your computer. Here are some basic tips for navigating your way around the command line!
 
@@ -157,7 +157,7 @@ Consoles don't work like the rest of your computer. Here are some basic tips for
 
 Once we have logged in correctly to the VPS for the first time, the VPS may be configured to prompt for a new password for the root account. The terminal will require you to enter the new password twice before we can start running commands.  If you aren't prompted for a new `root` password but want to change it anyway, type `sudo passwd`.  Choose something very secure!
 
-#### 2.3 Server Preparation Continued
+#### Server Preparation Continued
 
 We should update our package lists, the below command downloads the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
 
@@ -179,151 +179,179 @@ If you are prompted during the upgrade that a new version of any file is availab
 
 Alright, good to go. Our server is now set up, up to date, and is not running as root. On to the fun part!
 
-### Step 3 - Loki Launcher
-#### 3.1 - Install NodeJS and Loki Launcher
-In order to use the Loki Launcher we first need to install NodeJS.
+### Step 3 - Download the Loki Binaries
 
-Run the following command:
-```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-```
-then
-```
-sudo apt-get install -y nodejs
-```
-
-Next we need to install the launcher with the following command:
-```
-sudo npm install -g loki-launcher
-```
-
-#### 3.2 - Setting up your loki-launcher for Service Node
-We now need to prequalify our server to be ready to run as a service node.
-
-To do so run the following command:
-```
-loki-launcher prequal
-```
-
-#### 3.3 - Download Lokid binaries
-We will download the Loki binaries by running the following command:
-```
-sudo loki-launcher download-binaries
-```
-#### 3.4 - Start the Loki Launcher
-To start the loki launcher run the following command:
-```
-sudo loki-launcher start
-```
-At this moment your launcher will use lokid to download and sync with the Loki blockchain.
-
-Now the Loki launcher is running we can access the launcher by running the following command:
+In order to download and extract the Linux binaries, we need to make sure a couple tools are
+installed:
 
 ```
-sudo loki-launcher client
+sudo apt install wget unzip
 ```
 
-To exit out of the client click `CTRL + C`.
-
-> Note: Loki-launcher will run in the background now and continue to sync with the blockchain. The only problem is if the system reboots we will need to relaunch the loki-launcher software. We can fix this by configuring the Launcher as a system service which makes it automatically start up if the server reboots, and restarts it if the software crashes for some reason.
-
-### Step 4 - Loki-Launcher as a System Service
-#### 4.1 User permissions
-We are going to need to fix our user "snode"s permissions with the loki-launcher.
-
-> To do: Skip for people running as root
-
-To do this we need to swap back to root:
-```
-su - root
-```
-
-Next run the following command: 
-```
-loki-launcher fix-perms <USER>
-```
-Replacing `<USER>` with `snode` or the username that you created.
-
-The terminal should show the following:
-```
-setting permissions to snode
-user snode uid is 1000
-```
-Once the permissions have been set let's change back to our other user `snode` by running the following command:
-```
-su - snode
-```
-#### 4.2 Creating the Service File
-
-To create our lokid.service file run the following command:
-```
-sudo nano /etc/systemd/system/lokid.service
-```
-
-Next copy the text below and paste it into your new file.
-> To paste in putty you can right mouse click the terminal screen.
+Now download the Linux binaries by running the following command:
 
 ```
-[Unit]
-Description=lokilauncher
+wget <link>
+```
+
+Where `<link>` is the download link of the latest linux release. To find the link go to [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest), right click the latest linux release and click `Copy Link Location`.
+
+Your command should look something like:
+
+```
+wget https://github.com/loki-project/loki/releases/download/v3.0.6/loki-linux-x64-v3.0.6.zip
+```
+
+To unzip the downloaded zip file run the following command (changing 3.0.6 to whatever version you
+downloaded above):
+
+```
+unzip loki-linux-x64-v3.0.6.zip
+```
+
+You will see something like this:
+
+```
+Archive:  loki-linux-x64-v3.0.6.zip
+   creating: loki-linux-x64-v3.0.6/
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-ancestry  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-depth  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-export  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-import  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-mark-spent-outputs  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-stats  
+  inflating: loki-linux-x64-v3.0.6/loki-blockchain-usage  
+  inflating: loki-linux-x64-v3.0.6/loki-gen-trusted-multisig  
+  inflating: loki-linux-x64-v3.0.6/loki-wallet-cli  
+  inflating: loki-linux-x64-v3.0.6/loki-wallet-rpc  
+  inflating: loki-linux-x64-v3.0.6/lokid  
+```
+
+Note that they are unzipped into the `loki-linux-x64-v3.0.6` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
+
+```
+cd loki-linux-x64-v3.0.6
+ls
+```
+
+We now want to create a "symlink" to the extracted `loki-linux-x64-v3.0.6` folder:
+
+```
+cd
+ln -snf loki-linux-x64-v3.0.6 loki
+```
+
+This creates a virtual `loki` folder that points to the `loki-linux-x64-v3.0.6` folder.  This isn't
+strictly necessary, but will help with upgrades in the future: when you want to upgrade (for
+example, to a future 3.0.6 release) you can just repeat everything in this step again and the `loki`
+symlink will be updated to the new folder containing the 3.0.6 binaries.
+
+Excellent! We now have all of the necessary files to get this show on the road!
+
+> *NOTE: If you’re nervous about trusting the binaries or the download link, you should build it from source yourself. Instructions for that can be found in the README of [https://github.com/loki-project/loki](https://github.com/loki-project/loki)*
+
+### Step 4 - Run the Service Node Daemon
+
+At this point you can run the Loki daemon directly in your terminal, but this is not a viable
+approach to running it as a service node: when you close PuTTY the program running inside it will
+*also* shut down, which is no good for a service node.
+
+Instead we will configure the Loki daemon as a system service which makes it automatically start up
+if the server reboots, and restarts it automatically if it crashes for some reason.
+
+<ol>
+<li>Create the lokid.service file:
+<pre><code>sudo nano /etc/systemd/system/lokid.service</code></pre>
+</li>
+<li>Copy the text below and paste it into your new file:</li>
+</ol>
+<pre><code>[Unit]
+Description=lokid service node
 After=network-online.target
 
 [Service]
 Type=simple
 User=snode
-ExecStart=/usr/lib/node_modules/loki-launcher/index.js systemd-start
+ExecStart=/home/snode/loki/lokid --non-interactive --service-node
 Restart=always
 RestartSec=30s
 
 [Install]
 WantedBy=multi-user.target
-```
-If you chose a username other than snode then change snode in the User= line to the alternative username.
-#### 4.3 Enabling the Service File
-Reload systemd manager configuration (to make it re-read the new service file):
-```
-sudo systemctl daemon-reload
-```
-Enable lokid.service so that it starts automatically upon boot:
-```
-sudo systemctl enable lokid.service
-```
-Start lokid.service:
-```
-sudo systemctl start lokid.service
-```
-and reboot your system to check if the service file is working correctly.
-```
-sudo reboot
-```
-Log back into your server and run the following command:
-```
-loki-launcher status
-```
-The terminal should output something similar to:
-```
-launcher status: running on 818
-blockchain status: running on 891
-```
-Well done! You're loki-launcher is now setup. 
+</code></pre>
+
+<ol start="3">
+<li>If you chose a username other than <code>snode</code> then change <code>snode</code> in the <code>User=</code> and <code>ExecStart=</code> lines to the alternative username.</li>
+</ol>
+
+>(If you want to run a testnet service node, append ` --testnet` to the end of the ExecStart line.  Alternatively, if you want to be able to run both a testnet and mainnet service node simultaneously
+>you can use two service files: `lokid.service` and `lokid-testnet.service` and add ` --testnet` to the `ExecStart=` line in the latter.  You would then use `lokid-testnet.service` instead of
+>`lokid.service` in the commands below when you want to control the testnet service node.)
+
+<ol start="4">
+<li>
+<p>Once completed, save the file and quit nano:
+CTRL+X -&gt; Y -&gt; ENTER.</p>
+</li>
+
+<li>
+<p>Reload systemd manager configuration (to make it re-read the new service file):</p>
+<pre><code>sudo systemctl daemon-reload</code></pre>
+</li>
+
+<li><p>Enable lokid.service so that it starts automatically upon boot:</p>
+<pre><code>sudo systemctl enable lokid.service</code></pre>
+</li>
+
+<li>
+<p>Start lokid.service:
+<pre><code>sudo systemctl start lokid.service</code></pre></p>
+</li>
+</ol>
+
+The daemon will now start syncing. You won’t be able to do much if it hasn’t synced.
+
+To watch the progress at any time you can use the following command (hit Ctrl-C when
+you are done watching it).  You should see it syncing the blockchain:
 
 ```
-[blockchain]
-data_dir=/home/snode/.loki/
+sudo journalctl -u lokid.service -af
 ```
 
-### Step 5 - Wallet
+Alternatively you can ask the daemon to report its sync status using the following command:
+
+```
+~/loki/lokid status
+```
+
+### Step 5 - Get/Open A Wallet
 
 While we wait for the daemon to sync, we can now get a wallet going. 
 
 >*** You do not have to run this wallet on the server and you should not! Download the software and run it from elsewhere for security reasons! ***
 
-If you need help with installing the loki-wallet-cli on another machine check out our [Wallets Overview](https://lokidocs.com/Wallets/WalletsOverview/) section.
+You can run the CLI wallet (Command Line Interface wallet) on any other computer, including your home computer to avoid leaving your wallet on the server.
 
-#### 5.1 - Run Wallet
-To open our wallet we are going to change into the directory which we installed `loki-wallet-cli` and run the following command.
+However, if you do want to run the CLI wallet on another computer, you will either need to run another daemon on that local machine or use a remote node (uk.loki.cash:22020, for example). There is also a list of trusted remote nodes in the Loki Project Discord channel under #links-and-resources.
+
 ```
-./loki-wallet-cli
+./loki-wallet-cli --daemon-address <insert address here>
+```
+
+Or on windows:
+
+```
+loki-wallet-cli.exe --daemon-address <insert address here>
+```
+
+If you are made of money and are willing to take the small risk of losing all of your funds, you can continue running the wallet inside the Service Node VPS. So we don't have to talk about a myriad of other operating systems or potential user cases, the rest of this guide will assume you are running the wallet in the same VPS.
+
+As such, it’ll probably save us time to open a second PuTTY session. You can do this by right clicking the window of the current PuTTY session and clicking “Duplicate Session.”
+
+Log in as the non-root user that we set up before, in our case `snode`, and launch the wallet using:
+
+```
+~/loki/loki-wallet-cli
 ```
 
 > If you are on testnet run the command with the --testnet flag: `~/loki/loki-wallet-cli --testnet`
@@ -345,14 +373,12 @@ Once we have chosen our password for the wallet we must choose our language. For
 
 The CLI will generate and spit out several lines of text. The first two lines of text show your wallet public address. This address can be shared, will be used to receive Loki to your wallet, and will be used during the preparation and registration of our Service Node. All Mainnet Loki public addresses start with an L and are followed with a string of characters, Testnet Public addresses start with a T. The public address shown will be your primary address, however multiple public addresses can be generated from this primary address.
 
-#### 5.2 - Save Seed Phrase
 Line 13 to 17 show your 25-word mnemonic (“new-monic”) seed. The seed is used to easily backup and restore your wallet without needing any other information. At this stage, grab a pen and paper, and write down your 25 words in order. Store the piece of paper in a safe and secure place, if your words are stored in a text file on your computer or stored online, you increase your risk of someone else getting control of your wallet.
 
-#### 5.3 - Store enough $loki in your wallet for staking
 It is at this point that we should get some Loki in the wallet. The amount of Loki required to run a node is derived from the function shown in Lokis [Cryptoeconomic paper](https://loki.network/proposal). Don't worry if you cant work out the formula, you can use this community created [tool](https://imaginary.stream/sn/) or, the daemon will display the amount of Loki required to run the node. If you do not have enough you will have the option to join in or run your own Service Node pool.
 
 > If you are running a Service Node on the testnet you will only ever require 100 testnet Loki to run the Node. You can ask the Telegram @LokiSNBot for some testnet loki or ask someone in the Loki Discord Community for some.
-#### 5.4 - Information required for the Service Node
+
 **If you are staking please do not use Subaddresses. They are currently unsupported by the Loki wallet.** 
 
 We will need our address to register our Service Node later, to get your primary address type the following command:
@@ -383,22 +409,18 @@ The next part of the guide will split into two sections:
 #### 6.1 - Individual Staking
 If you want to run the Service Node as an individual you will require the following things.
 
-* A loki-launcher initialised with `loki-launcher prequal`. [See Step 3.3](#33-setting-up-your-loki-launcher-for-service-node)
-* A fully synchronized, up-to-date Loki daemon running through the loki-launcher.
-* A `loki-wallet-cli` primary address with enough Loki in your account to meet the Service Node Staking Requirement. [See Step 5](#step-5-wallet)
+* A fully synchronized, up-to-date Loki daemon running with the `--service-node` flag (see step 4).
+* A `loki-wallet-cli` primary address with enough Loki in your account to meet the Service Node Staking Requirement (see step 5).
 
-Now if we have the three above items we can proceed to our daemon to register our Service Node.
+Now if we have the two above items we can proceed to our daemon to register our Service Node.
 
-Log in (if not already connected) as the `snode` user on the VPS running the service node, then connect to the loki-launcher client:
+Log in (if not already connected) as the `snode` user on the VPS running the service node, then start
+the registration process by running the following interactive command:
 
 ```
-loki-launcher client
+~/loki/lokid prepare_registration
 ```
 
-Start the registration process by running the following interactive command:
-```
-prepare_registration
-```
 The daemon will output the current staking requirement and prompt you with an input to clarify whether you are an individual staker or you will be running a pool. Type `y` and click enter as we will be the sole staker.
 
 The daemon will now prompt us for the Loki address of the operator. If you followed step 5 you should have this address saved in a notepad, if not run through step 5 again to find your Loki Address. Once we have the Loki Address copied to our clipboard we can then right click the terminal screen to paste the address. Double check the address matches the one of your wallet then click enter if it is the same.
@@ -465,11 +487,9 @@ The Operator is the individual who will be hosting the pool and running the Serv
 
 The Operator will need to have:
 
-* A loki-launcher initialised with `loki-launcher prequal`. [See Step 3.3](#33-setting-up-your-loki-launcher-for-service-node)
+* A fully synchronized, up-to-date Loki daemon running with the `--service-node` flag (see step 4) at all times.
 
-* A fully synchronized, up-to-date Loki daemon running through the loki-launcher.
-
-* A `loki-wallet-cli` primary address with enough Loki in your account to meet the Service Node Staking Requirement. [See Step 5](#step-5-wallet)
+* A `loki-wallet-cli` primary address with enough Loki in their account to meet 25% of the Staking Requirement.
 
 * 1-3 other contributors who also have a wallet (`loki-wallet-cli` or the desktop GUI wallet) with enough Loki in their accounts to meet 25% of the staking requirement.
 
@@ -479,15 +499,11 @@ The Operator will need to have:
 
 Now if we have the three/four above items we can proceed to our daemon to register our Service Node.
 
-Log in (if not already connected) as the `snode` user on the VPS running the service node, then connect to the loki-launcher client:
+Log in (if not already connected) as the `snode` user on the VPS running the service node, then start
+the registration process by running the following interactive command:
 
 ```
-loki-launcher client
-```
-
-Start the registration process by running the following interactive command:
-```
-prepare_registration
+~/loki/lokid prepare_registration
 ```
 
 The terminal will prompt the operator to specify if they will contribute the entire stake, because we are running this as a pooled Service Node we will type `n` and click enter.
@@ -536,24 +552,21 @@ Copy the whole line of text in your daemon and paste it into your notepad as we 
 
 You have 2 weeks from the moment of registering the Service Node to run the `register_service_node` command, however it is advised to do it as soon as possible.
 
-Before you disconnect from your VPS connect to the `loki-launcher client`:
+Before you disconnect from your VPS run the following command to get your `<Service Node Public Key>` and save it in your notepad (your contributors will need it):
 
 ```
-loki-launcher client
-```
-and run the following command to get your `<Service Node Public Key>` and save it in your notepad (your contributors will need it):
-```
-print_sn_key
+~/loki/lokid print_sn_key
 ```
 
 Run through step 5 once more to open our Loki wallet. Once we are in our wallet run the command the daemon outputted for us when we prepared our Service Node. The wallet will prompt us to confirm our password, then the amount of Loki to stake. Confirm this by typing `y` and clicking enter.
 
+
 Once this command completes your staking transaction will be sent to be included on the blockchain.
 It may take a few minutes for the transaction to be mined into a block; you can check the status
-using the loki-launcher and running the command:
+using
 
 ```
-print_sn_status
+~/loki/lokid print_sn_status
 ```
 
 or by looking for your `<Service Node Public Key>` in the "Service Nodes Awaiting" section on [lokiblocks.com](https://lokiblocks.com) (or [lokitestnet.com](https://lokitestnet.com) for a testnet service node).
@@ -592,10 +605,10 @@ Congratulations, you are now staking.
 
 After we have locked our collateral we will need to check if our Service Node Pubkey is sitting in the list with the other Service Node’s on the network. This will prove our Service Node is running, recognised and will receive a reward if it keeps running.
 
-Connect to the VPS where the service node is running and run the following command in our `loki-launcher client` to see our Service Node Public Key:
+Connect to the VPS where the service node is running and run the following command to see our Service Node Public Key:
 
 ```
-print_sn_key
+~/loki/lokid print_sn_key
 ```
 
 The Service Node Public Key is used to identify our Service Node within the list of Service Nodes currently on the network.
@@ -603,20 +616,17 @@ The Service Node Public Key is used to identify our Service Node within the list
 If you want more detailed Service Node status you can use the follow command:
 
 ```
-print_sn_status
+~/loki/lokid print_sn_status
 ```
+
 
 You can jump onto [https://lokiblocks.com/](https://lokiblocks.com/) to see if your Service Node is in the list or we can continue in the terminal to output the same information.
 
 >If you are running your Service Node on testnet go to [https://lokitestnet.com/](https://lokitestnet.com/) instead.
 
-To check this information directly with the service node itself, first get the current block height by running `status` into the terminal with `loki-launcher client` launched.. Once we have the block height we can then check the current Service Nodes on the network at our specified block height.
+To check this information directly with the service node itself, first get the current block height by running `~/loki/lokid status` into the terminal: it will output this information. Once we have the block height we can then check the current Service Nodes on the network at our specified block height.
 
-Run the following command in the `loki-launcher`:
-```
-print_quorum_state <block height>
-``` 
-Replacing `<block height>` with the number minus 1 that was outputted when running `status` command.
+Run the command `~/loki/lokid print_quorum_state <block height>` replacing `<block height>` with the number minus 1 that was outputted when running `status` command.
 
 If your `<Service Node Pubkey>` is sitting in the list you know you are now staking.
 
@@ -644,6 +654,182 @@ We can also view our locked stake by running the following command from our `lok
 ```
 print_locked_stakes
 ```
+
+## Express Setup Guide
+
+This section is for power users who are more familiar with servers and the CLI interface. There's a couple of things your going to want to do before you commence.
+
+**1. Get a Server that meets requirements**
+
+**2. Run the Daemon on a server from a non-root user account, then stake from a local wallet (or a wallet on a separate server).**
+
+> Where `<VERSION>` is mentioned replace with the [latest version](https://github.com/loki-project/loki/releases/latest), example `v3.0.6`
+
+**3. Connect via SSH to your server**
+
+**4. add new user**
+```
+sudo adduser snode
+```
+
+```
+<enter>
+```
+
+```
+Y
+```
+
+```
+usermod -aG sudo snode
+```
+
+```
+exit
+```
+
+**5. login to your new user account via SSH** 
+
+```
+snode@<ipaddress>
+```
+
+**6. Update necessary security patches and system utilities**
+
+```
+sudo apt update
+```
+
+```
+sudo apt upgrade
+```
+
+**7. Download & unzip Loki**
+
+```
+sudo apt install wget unzip
+```
+
+```
+wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip
+```
+
+```
+unzip loki-linux-x64-<VERSION>.zip
+```
+
+```
+ln -snf loki-linux-x64-<VERSION> loki
+```
+
+**8. Set up Loki to run as a service**
+
+```
+sudo nano /etc/systemd/system/lokid.service
+```
+
+Paste the following:
+```
+Description=lokid service node
+After=network-online.target
+
+[Service]
+Type=simple
+User=snode
+ExecStart=/home/snode/loki/lokid --non-interactive --service-node
+Restart=always
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Save and exit:
+`CTRL+X -> Y -> ENTER`
+
+Enable and start the service:
+```
+sudo systemctl daemon-reload
+sudo systemctl enable lokid.service
+sudo systemctl start lokid.service
+```
+
+Wait for the Loki Daemon sync the blockchain (1 - 8 Hours depending on internet speed).  You can
+watch the progress using:
+
+```
+sudo journalctl -u lokid.service -af
+```
+
+Hit `Ctrl-C` when you are tired of watching.
+
+**9. Open a Wallet**
+
+This wallet can be in a `screen` session on the Service Node machine, or a wallet on your local computer (assuming you have downloaded the binaries locally).
+
+```
+cd loki-linux-x64-<VERSION>
+```
+
+Linux/MAC - `./loki-wallet-cli`
+Windows - `loki-wallet-cli`
+
+Enter Name: Name your wallet
+
+Enter password 
+
+Language: `1` (for English)
+
+Securely store:
+
+1. Address
+
+2. Seed Phrase 
+
+3. Pass-phrase
+
+Send enough Loki to fund a node, wait for Balance to be unlocked (20 mins, 10 confirmations)
+
+**10. Register your Service Node**
+
+Connect via SSH to your VPS with the Service Node running (`snode@<ipaddress>`).
+
+```
+~/loki/lokid prepare_registration
+```
+
+Contribute entire Stake: `Y/N`
+
+Enter Loki Address
+
+Enable Restaking: `Y/N`
+
+Confirm: `Y`
+
+Copy green registration message
+
+`Ctrl +AD`
+
+**11. Reattach to Service Node or local wallet**
+
+Paste in registration message `<enter>`
+
+**12 Connect back to Service Node VPS account**
+
+```
+~/loki/lokid print_sn_key
+```
+
+Copy service node key, and search for it on:
+
+[https://lokiblocks.com/service_nodes](https://lokiblocks.com/service_nodes).
+
+or check the detailed status using:
+
+```
+~/loki/lokid print_sn_key
+```
+
 ## Conclusion
 
 Well done! You will receive a block reward when your Service Node has been active for some time and the network chooses you within the list.

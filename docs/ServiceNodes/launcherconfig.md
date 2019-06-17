@@ -2,6 +2,8 @@
 
 This guide shows the different config files and their associated sections, keys and values.
 
+First we check if there's a launcher.ini in the same directory as the loki-launcher script called (for non-global installations) Then we check for /etc/loki-launcher/launcher.ini (for global installations)
+
 ##Table of contents:
 
 - [launcher.ini](#launcherini)

@@ -70,9 +70,12 @@ nav:
     - 'Infinite Staking Primer': 'ServiceNodes/InfiniteStakingPrimer.md'
     - Guides:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
-      - 'Service Node Update Guide': 'ServiceNodes/UpdateGuide.md'
+      - 'Luncher Update Guide': 'ServiceNodes/UpdateGuide.md'
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
       - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
+      - 'Launcher Config File': 'ServiceNodes/launcherconfig.md'
+    - Troubleshooting:
+      - 'Port 22023 Not Open': 'ServiceNodes/OpenPort22023.md'
 
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
