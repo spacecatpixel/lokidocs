@@ -50,7 +50,7 @@ You will be prompted to authorise the use of disk space, type `y` and enter to a
 ###3.  Dependencies
 You will need to install some build dependencies, run the following command to install all the build dependencies required for Lokinet:
 
-`sudo apt install build-essential cmake libcap-dev wget git resolvconf curl`
+`sudo apt install build-essential cmake libcap-dev wget git resolvconf curl libuv1-dev`
 
 
 Once you’ve installed the dependencies we will now clone the loki-network repository:
