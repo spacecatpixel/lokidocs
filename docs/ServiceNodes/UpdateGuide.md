@@ -72,14 +72,6 @@ Now let's change back to user snode.
 su - snode
 ```
 
-#### 3.4 - Setting up your loki-launcher for Service Node
-We now need to prequalify our server to be ready to run as a service node.
-
-To do so run the following command:
-```
-loki-launcher prequal
-```
-
 ## Step 4: lokid.service file
 Next we're going to have to stop our lokid.service file and update it to launch the launcher instead of lokid.
 
@@ -89,22 +81,31 @@ Stop your existing service node:
 ```
 sudo systemctl stop lokid.service
 ```
+#### 4.2 - Setting up your loki-launcher for Service Node
+We now need to prequalify our server to be ready to run as a service node.
 
-### 4.2: Check-systemd
+To do so run the following command:
+```
+loki-launcher prequal
+```
+
+In most cases this will let us know we are good to deploy our Service Node. Troubleshooting will be required at this point if an error message pops up.
+
+### 4.3: Check-systemd
 
 Run the check-systemd to make systemd now launch the launcher instead of lokid:
 ```
 sudo loki-launcher check-systemd
 ```
 
-### 4.3 Update Service file
+### 4.4 Update Service file
 
 Make sure the service is up to date:
 ```
 sudo systemctl daemon-reload
 ```
 
-### 4.4 Start the new lokid.service file
+### 4.5 Start the new lokid.service file
 
 ```
 sudo systemctl start lokid.service
