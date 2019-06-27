@@ -588,10 +588,10 @@ The pool contributor must first receive the Service Node Pubkey and the requirem
 The pool contributor must have downloaded the necessary binaries, is running a daemon or is connected to a remote node, has generated a wallet through either the `loki-wallet-cli` or the desktop GUI wallet, and has enough Loki to stake. They can then run the following command in their `loki-wallet-cli` .
 
 ```
-stake <Service Node Pubkey> <address> <contribution amount>
+stake <Service Node Pubkey> <contribution amount>
 ```
 
-Where the `<Service Node Pubkey>` is the Pubkey provided from the Service Node operator, the `<address>` the service node operator will likely reserve an address for which they want you to stake for, this will usually be the same address as the wallet you are planning to stake from, in the case of an open pool this will always be the address you will you stake from and you will also receive rewards here too. `<contribution amount>` is the amount of Loki they are going to stake which they agreed to with the Service Node Operator.
+Where the `<Service Node Pubkey>` is the Pubkey provided from the Service Node operator and `<contribution amount>` is the amount of Loki they are going to stake which they agreed to with the Service Node Operator.
 
 If using the desktop GUI wallet, the Stake command can be found under the Advanced - Service Node
 menu.  Enter the service `<Service Node Pubkey>` and `<contribution amount>` and hit the Stake
