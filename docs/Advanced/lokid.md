@@ -110,7 +110,6 @@ The node and peer words are used interchangeably.
 | `--p2p-bind-port-ipv6` | TCP port to listen for p2p network connections. Defaults to `22022` for mainnet, `38156` for testnet, and `38153` for stagenet.|
 | `--p2p-bind-ipv6-address`|  Interface for p2p network protocol. |
 | `--p2p-use-ipv6` | Enable IPv6 for p2p. |
-|
 | `--p2p-external-port`  | TCP port to listen for p2p network connections on your router. Relevant if you are behind a NAT and still want to accept incoming connections. You must then set this to relevant port on your router. This is to let `lokid` know what to advertise on the network. Default is `0`.
 | `--hide-my-port`       | `lokid` will still open and listen on the p2p port. However, it will not announce itself as a peer list candidate. Technically, it will return port `0` in a response to p2p handshake (`node_data.my_port = 0` in `get_local_node_data` function). In effect nodes you connect to won't spread your IP to other nodes. To sum up, it is not really hiding, it is more like "do not advertise".
 | `--seed-node`          | Connect to a node to retrieve other nodes' addresses, and disconnect. If not specified, `lokid` will use hardcoded seed nodes on the first run, and peers cached on disk on subsequent runs.  
