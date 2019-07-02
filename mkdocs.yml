@@ -70,6 +70,7 @@ nav:
     - 'Infinite Staking Primer': 'ServiceNodes/InfiniteStakingPrimer.md'
     - Guides:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
+      - 'Storage Server Node Guide - Testnet': 'ServiceNodes/StorageServerGuide-Testnet.md'
       - 'Launcher Update Guide': 'ServiceNodes/UpdateGuide.md'
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
       - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
