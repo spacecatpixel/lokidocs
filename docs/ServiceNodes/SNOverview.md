@@ -10,7 +10,7 @@ To achieve this economic protection, Loki encourages the active suppression of t
 
 ## Service Node Activities
 
-Right now Service Nodes are full nodes on the Loki network. Full nodes become Service Nodes when the owner [locks the required amount of Loki](../ServiceNodes/StakingRequirement.md) for 30 days (2 days on testnet) and submits a registration transaction. Once accepted by the network, the Service Node is eligible to win [block rewards](../Advanced/Cryptoeconomics.md). Multiple participants can be involved in one Service Node and can have the reward automatically distributed.
+Right now Service Nodes are full nodes on the Loki network. Full nodes become Service Nodes when the owner [locks the required amount of Loki](../ServiceNodes/StakingRequirement.md) and submits a registration transaction. Once accepted by the network, the Service Node is eligible to win [block rewards](../Advanced/Cryptoeconomics.md). Multiple participants can be involved in one Service Node and can have the reward automatically distributed.
 
 It is also worth noting that Service Nodes are quite basic at the moment, and operators will need to stay up to date with new updates to keep in line with software and hardware requirements. Once all of the updates are out, Service Nodes will also offer the following [Loki Services](../LokiServices/LokiServicesOverview.md):
 
