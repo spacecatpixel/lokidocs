@@ -648,8 +648,12 @@ print_locked_stakes
 
 ### Updating your Binaries
 
-
 When new binaries are out we need to log into our server as the <user> which we initially set up our loki-launcher on.
+
+Run the following command to update our loki-launcher:
+```
+sudo npm install -g loki-laucher
+```
 
 Run the following command to download the new binaries:
 ```
