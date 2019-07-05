@@ -648,9 +648,12 @@ print_locked_stakes
 
 ### Updating your Binaries
 
-When new binaries are out run the following command:
+
+When new binaries are out we need to log into our server as the <user> which we initially set up our loki-launcher on.
+
+Run the following command to download the new binaries:
 ```
-sudo loki-launcher download-binaries
+loki-launcher download-binaries
 ```
 
 If you are running loki-launcher as a service you can now reboot your computer and the new binaries will be used.
