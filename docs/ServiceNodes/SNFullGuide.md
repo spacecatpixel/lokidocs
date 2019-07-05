@@ -652,7 +652,7 @@ When new binaries are out we need to log into our server as the <user> which we 
 
 Run the following command to update our loki-launcher:
 ```
-sudo npm install -g loki-laucher
+sudo npm install -g loki-launcher
 ```
 
 Run the following command to download the new binaries:
