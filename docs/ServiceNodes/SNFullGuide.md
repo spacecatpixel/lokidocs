@@ -644,6 +644,18 @@ print_locked_stakes
 
 ## Additional Information
 
+### Updating your Binaries
+
+When new binaries are out run the following command:
+```
+sudo loki-launcher download-binaries
+```
+
+If you are running loki-launcher as a service you can now reboot your computer and the new binaries will be used.
+```
+sudo reboot
+```
+
 ### Default Directories for Loki Files
 
 |         Name         |            Directory            |
