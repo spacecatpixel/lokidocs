@@ -1,4 +1,4 @@
-#Cryptoeconomics
+# Cryptoeconomics
 
 Loki is a Blockchain network oriented toward the provision of privacy-preserving services over a network of [Service Nodes](../ServiceNodes/SNOverview.md). The salient cryptoeconomic problem is how to incentivise actors in the Loki network to operate Service Nodes in a manner compatible with the objectives of the Loki network, in particular decentralisation and privacy.
 
