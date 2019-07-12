@@ -75,7 +75,7 @@ nav:
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
       - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
       - 'Launcher Config File': 'ServiceNodes/launcherconfig.md'
-      - 'Service Node Legacy Guide': 'ServiceNodes/SNFullguideLegacy.md'
+      - 'Service Node Legacy Guide': 'ServiceNodes/SNFullGuideLegacy.md'
       - 'Service Node TESTNET Guide': 'ServiceNodes/StorageServerGuide-Testnet.md'
     - Troubleshooting:
       - 'Port 22023 Not Open': 'ServiceNodes/OpenPort22023.md'
