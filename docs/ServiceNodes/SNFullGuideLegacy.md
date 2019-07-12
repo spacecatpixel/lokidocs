@@ -12,7 +12,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 
 |Spec|Note|
 |---|---|
-|Latest Binary|[Loki Summer Sigyn](https://github.com/loki-project/loki/releases/latest)|
+|Latest Binary|[Hefty Heimdall](https://github.com/loki-project/loki/releases/latest)|
 |Software| Ubuntu 16.04, Ubuntu 18.04|
 |Storage | 30-50gb|
 |Ram | 2-4 gb|
@@ -181,8 +181,7 @@ Alright, good to go. Our server is now set up, up to date, and is not running as
 
 ### Step 3 - Download the Loki Binaries
 
-In order to download and extract the Linux binaries, we need to make sure a couple tools are
-installed:
+In order to download and extract the Linux binaries, we need to make sure a couple tools are installed:
 
 ```
 sudo apt install wget unzip
@@ -196,68 +195,64 @@ wget <link>
 
 Where `<link>` is the download link of the latest linux release. To find the link go to [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest), right click the latest linux release and click `Copy Link Location`.
 
-Your command should look something like:
+#### 3.1 - Lokid Binaries
+
+To download the loki binaries run the following command:
 
 ```
-wget https://github.com/loki-project/loki/releases/download/v3.0.6/loki-linux-x64-v3.0.6.zip
+wget https://github.com/loki-project/loki/releases/download/v4.0.2/loki-linux-x64-v4.0.2.tar.xz
 ```
+> Note the above binaries might not be the latest, please check out https://github.com/loki-project/loki/releases/latest for the latest binaries.
 
-To unzip the downloaded zip file run the following command (changing 3.0.6 to whatever version you
-downloaded above):
+#### 3.2 - Storage Server Binaries
 
-```
-unzip loki-linux-x64-v3.0.6.zip
-```
-
-You will see something like this:
+To download the loki binaries run the following command:
 
 ```
-Archive:  loki-linux-x64-v3.0.6.zip
-   creating: loki-linux-x64-v3.0.6/
-  inflating: loki-linux-x64-v3.0.6/loki-blockchain-ancestry  
-  inflating: loki-linux-x64-v3.0.6/loki-blockchain-depth  
-  inflating: loki-linux-x64-v3.0.6/loki-blockchain-export  
-  inflating: loki-linux-x64-v3.0.6/loki-blockchain-import  
-  inflating: loki-linux-x64-v3.0.6/loki-blockchain-mark-spent-outputs  
-  inflating: loki-linux-x64-v3.0.6/loki-blockchain-stats  
-  inflating: loki-linux-x64-v3.0.6/loki-blockchain-usage  
-  inflating: loki-linux-x64-v3.0.6/loki-gen-trusted-multisig  
-  inflating: loki-linux-x64-v3.0.6/loki-wallet-cli  
-  inflating: loki-linux-x64-v3.0.6/loki-wallet-rpc  
-  inflating: loki-linux-x64-v3.0.6/lokid  
+wget https://github.com/loki-project/loki-storage-server/releases/download/v1.0.1-release/loki-storage-linux-x64-v1.0.1.tar.xz
 ```
+> Note the above binaries might not be the latest, please check out https://github.com/loki-project/loki/releases/latest for the latest binaries.
 
-Note that they are unzipped into the `loki-linux-x64-v3.0.6` folder; you can check they are unzipped by running the following to change into the folder and then listing the files:
+#### 3.3 - Untar Binaries
+
+To untar the downloaded files run the following command:
 
 ```
-cd loki-linux-x64-v3.0.6
-ls
+tar -xvf <filename>
 ```
 
-We now want to create a "symlink" to the extracted `loki-linux-x64-v3.0.6` folder:
+Replacing `<filename>` with the the filename we downloaded. For this example we would run 2 commands:
 
 ```
-cd
-ln -snf loki-linux-x64-v3.0.6 loki
+tar -xvf loki-linux-x64-v4.0.2.tar.xz loki-linux-x64-v4.0.2
+tar -xvf loki-storage-linux-x64-v1.0.1.tar.xz
 ```
 
-This creates a virtual `loki` folder that points to the `loki-linux-x64-v3.0.6` folder.  This isn't
-strictly necessary, but will help with upgrades in the future: when you want to upgrade (for
-example, to a future 3.0.6 release) you can just repeat everything in this step again and the `loki`
-symlink will be updated to the new folder containing the 3.0.6 binaries.
+We now want to create a "symlink" to the extracted `loki-linux-x64-v4.0.2` folder:
+
+```
+ln -snf loki-linux-x64-v4.0.2 loki
+```
+
+and a "symlink" to the extracted `loki-storage-linux-x64-v1.0.1` folder:
+```
+ln -snf loki-storage-linux-x64-v1.0.1 loki-ss
+```
+
+This creates a virtual folder that points to the binary folders.  This isn't
+strictly necessary, but will help with upgrades in the future: when you want to upgrade you can just repeat everything in this step again with the new binaries.
 
 Excellent! We now have all of the necessary files to get this show on the road!
 
 > *NOTE: If you’re nervous about trusting the binaries or the download link, you should build it from source yourself. Instructions for that can be found in the README of [https://github.com/loki-project/loki](https://github.com/loki-project/loki)*
 
-### Step 4 - Run the Service Node Daemon
+### Step 4 - Service Node as a Service
 
-At this point you can run the Loki daemon directly in your terminal, but this is not a viable
-approach to running it as a service node: when you close PuTTY the program running inside it will
-*also* shut down, which is no good for a service node.
+At this point you can run the Loki binaries directly in your terminal, but this is not a viable approach to running it as a service node: when you close PuTTY the program running inside it will *also* shut down, which is no good for a service node.
 
-Instead we will configure the Loki daemon as a system service which makes it automatically start up
-if the server reboots, and restarts it automatically if it crashes for some reason.
+Instead we will configure the Loki daemons as a system service which makes it automatically start up if the server reboots, and restarts it automatically if it crashes for some reason.
+
+#### 4.1 lokid.service file
 
 <ol>
 <li>Create the lokid.service file:
@@ -272,13 +267,16 @@ After=network-online.target
 [Service]
 Type=simple
 User=snode
-ExecStart=/home/snode/loki/lokid --non-interactive --service-node
+ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 8042
 Restart=always
 RestartSec=30s
 
 [Install]
 WantedBy=multi-user.target
 </code></pre>
+>Replacing `SERVERIP` in the line `ExecStart=` with your servers IP.
+
+>To find your SERVERIP run the command `curl ifconfig.me`
 
 <ol start="3">
 <li>If you chose a username other than <code>snode</code> then change <code>snode</code> in the <code>User=</code> and <code>ExecStart=</code> lines to the alternative username.</li>
@@ -293,35 +291,75 @@ WantedBy=multi-user.target
 <p>Once completed, save the file and quit nano:
 CTRL+X -&gt; Y -&gt; ENTER.</p>
 </li>
+</ol>
 
+#### 4.2 loki-ss.service file
+
+<ol>
+<li>Create the loki-ss.service file:
+<pre><code>sudo nano /etc/systemd/system/loki-ss.service</code></pre>
+</li>
+<li>Copy the text below and paste it into your new file:</li>
+</ol>
+<pre><code>[Unit]
+Description=Loki storage server
+After=network-online.target
+Requires=lokid.service
+
+[Service]
+User=snode
+Type=simple
+WorkingDirectory=/home/snode
+Restart=always
+RestartSec=5s
+ExecStart=/home/snode/loki-storage 0.0.0.0 8042 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<ol start="3">
+<li>If you chose a username other than <code>snode</code> then change <code>snode</code> in the <code>User=</code> and <code>ExecStart=</code> lines to the alternative username.</li>
+</ol>
+
+<ol start="4">
+<li>
+<p>Once completed, save the file and quit nano:
+CTRL+X -&gt; Y -&gt; ENTER.</p>
+</li>
+</ol>
+
+#### 4.3 Enabling Service Files
+<ol>
 <li>
 <p>Reload systemd manager configuration (to make it re-read the new service file):</p>
 <pre><code>sudo systemctl daemon-reload</code></pre>
 </li>
 
 <li><p>Enable lokid.service so that it starts automatically upon boot:</p>
-<pre><code>sudo systemctl enable lokid.service</code></pre>
+<pre><code>sudo systemctl enable lokid.service loki-ss.service</code></pre>
 </li>
 
 <li>
 <p>Start lokid.service:
-<pre><code>sudo systemctl start lokid.service</code></pre></p>
+<pre><code>sudo systemctl start lokid.service loki-ss.service</code></pre></p>
 </li>
 </ol>
 
 The daemon will now start syncing. You won’t be able to do much if it hasn’t synced.
 
-To watch the progress at any time you can use the following command (hit Ctrl-C when
-you are done watching it).  You should see it syncing the blockchain:
+To see the progress of your lokid service file you can run the following command:
 
 ```
 sudo journalctl -u lokid.service -af
 ```
 
-Alternatively you can ask the daemon to report its sync status using the following command:
+You should see it syncing the blockchain.
+
+To see the progress of your loki-ss service file you can run the following command:
 
 ```
-~/loki/lokid status
+sudo journalctl -u loki-ss.service -af
 ```
 
 ### Step 5 - Get/Open A Wallet
