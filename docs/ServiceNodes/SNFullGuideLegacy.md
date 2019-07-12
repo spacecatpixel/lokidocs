@@ -24,7 +24,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
     - Step 1 [Server](#step-1-get-a-server)
     - Step 2 [Server Prep](#step-2-prepare-your-server)
     - Step 3 [Download Binaries](#step-3-download-the-loki-binaries)
-    - Step 4 [Run the Loki Daemon](#step-4-run-the-service-node-daemon)
+    - Step 4 [Service Node as a Service](/#step-4-service-node-as-a-service)
     - Step 5 [Open a Loki Wallet](#step-5-getopen-a-wallet)
     - Step 6 [Register Node](#step-6-service-node-registration)
     - Step 7 [Check Registration](#step-7-service-node-check)
@@ -200,7 +200,7 @@ Where `<link>` is the download link of the latest linux release. To find the lin
 To download the loki binaries run the following command:
 
 ```
-wget https://github.com/loki-project/loki/releases/download/v4.0.2/loki-linux-x64-v4.0.2.tar.xz
+wget https://github.com/loki-project/loki/releases/download/v4.0.3/loki-linux-x64-v4.0.3.tar.xz
 ```
 > Note the above binaries might not be the latest, please check out https://github.com/loki-project/loki/releases/latest for the latest binaries.
 
@@ -224,14 +224,14 @@ tar -xvf <filename>
 Replacing `<filename>` with the the filename we downloaded. For this example we would run 2 commands:
 
 ```
-tar -xvf loki-linux-x64-v4.0.2.tar.xz
+tar -xvf loki-linux-x64-v4.0.3.tar.xz
 tar -xvf loki-storage-linux-x64-v1.0.1.tar.xz
 ```
 
 We now want to create a "symlink" to the extracted `loki-linux-x64-v4.0.2` folder:
 
 ```
-ln -snf loki-linux-x64-v4.0.2 loki
+ln -snf loki-linux-x64-v4.0.3 loki
 ```
 
 and a "symlink" to the extracted `loki-storage-linux-x64-v1.0.1` folder:
