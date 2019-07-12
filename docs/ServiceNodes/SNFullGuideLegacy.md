@@ -224,7 +224,7 @@ tar -xvf <filename>
 Replacing `<filename>` with the the filename we downloaded. For this example we would run 2 commands:
 
 ```
-tar -xvf loki-linux-x64-v4.0.2.tar.xz loki-linux-x64-v4.0.2
+tar -xvf loki-linux-x64-v4.0.2.tar.xz
 tar -xvf loki-storage-linux-x64-v1.0.1.tar.xz
 ```
 
@@ -267,7 +267,7 @@ After=network-online.target
 [Service]
 Type=simple
 User=snode
-ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 8042
+ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 22023
 Restart=always
 RestartSec=30s
 
@@ -312,7 +312,7 @@ Type=simple
 WorkingDirectory=/home/snode
 Restart=always
 RestartSec=5s
-ExecStart=/home/snode/loki-storage 0.0.0.0 8042 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
+ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
 
 [Install]
 WantedBy=multi-user.target
@@ -711,19 +711,7 @@ sudo adduser snode
 ```
 
 ```
-<enter>
-```
-
-```
-Y
-```
-
-```
 usermod -aG sudo snode
-```
-
-```
-exit
 ```
 
 **5. login to your new user account via SSH** 
@@ -749,15 +737,21 @@ sudo apt install wget unzip
 ```
 
 ```
-wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-<VERSION>.zip
+wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linux-x64-v<VERSION>.zip
 ```
-
 ```
-unzip loki-linux-x64-<VERSION>.zip
+wget https://github.com/loki-project/loki-storage-server/releases/download/v<VERSION>-release/loki-storage-linux-x64-v<VERSION>.tar.xz
 ```
-
+```
+tar -xvf loki-linux-x64-v4.0.2.tar.xz
+tar -xvf loki-storage-linux-x64-v1.0.1.tar.xz
+```
 ```
 ln -snf loki-linux-x64-<VERSION> loki
+```
+
+```
+ln -snf loki-storage-linux-x64-v<VERSION> loki-ss
 ```
 
 **8. Set up Loki to run as a service**
@@ -768,13 +762,14 @@ sudo nano /etc/systemd/system/lokid.service
 
 Paste the following:
 ```
+[Unit]
 Description=lokid service node
 After=network-online.target
 
 [Service]
 Type=simple
 User=snode
-ExecStart=/home/snode/loki/lokid --non-interactive --service-node
+ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 22023
 Restart=always
 RestartSec=30s
 
@@ -782,14 +777,39 @@ RestartSec=30s
 WantedBy=multi-user.target
 ```
 
+Replacing `SERVERIP` in the line `ExecStart=` with your servers IP.
+
 Save and exit:
 `CTRL+X -> Y -> ENTER`
+
+```
+sudo nano /etc/systemd/system/loki-ss.service
+```
+
+Paste the following:
+```
+[Unit]
+Description=Loki storage server
+After=network-online.target
+Requires=lokid.service
+
+[Service]
+User=snode
+Type=simple
+WorkingDirectory=/home/snode
+Restart=always
+RestartSec=5s
+ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
+
+[Install]
+WantedBy=multi-user.target
+```
 
 Enable and start the service:
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable lokid.service
-sudo systemctl start lokid.service
+sudo systemctl enable lokid.service loki-ss.service
+sudo systemctl start lokid.service loki-ss.service
 ```
 
 Wait for the Loki Daemon sync the blockchain (1 - 8 Hours depending on internet speed).  You can
