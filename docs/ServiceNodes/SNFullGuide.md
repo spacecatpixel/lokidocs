@@ -11,7 +11,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 
 |Spec|Note|
 |---|---|
-|Latest Binary|[Loki Summer Sigyn](https://github.com/loki-project/loki/releases/latest)|
+|Latest Binary|[Hefty Heimdall](https://github.com/loki-project/loki/releases/latest)|
 |Software| Ubuntu 18.04, Ubuntu 19.04|
 |Storage | 18gb|
 |Ram | 2-4 gb|
@@ -40,19 +40,19 @@ To understand what a [Service Node](SNOverview.md) is, you can refer to the [whi
 
 -   Once accepted by the network, the Service Node is eligible to win block rewards.
 
--   Multiple participants can be involved in one Service Node and can have the reward automatically distributed
+-   Multiple participants can be involved in one Service Node and can have the reward automatically distributed.
+
+-   Receive, store and forward encrypted user messages.
+
+-   Act as remote nodes for users.
 
 It is also worth noting that Service Nodes are quite basic at the moment, and operators will need to stay up to date with new updates to keep in line with software and hardware requirements. Once all of the updates are out, Service Nodes will also:
 
 -   Route end user’s internet traffic, either as an exit node or relay in a novel mixnet.
 
--   Receive, store and forward encrypted user messages.
-
 -   Monitor other Service Nodes and vote on their performance.
 
 -   Be called into quorums which give them authority over instant transactions ([Blink](../LokiServices/Blink.md)).
-
--   Act as remote nodes for users.
 
 Once these features come out, Service Node operation will require better servers, particularly when it comes to bandwidth. For the purposes of this guide, however, we will only consider the current requirements.
 
@@ -184,15 +184,19 @@ Alright, good to go. Our server is now set up, up to date, and is not running as
 In order to use the Loki Launcher we first need to install NodeJS.
 
 Run the following command:
+
 ```
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 ```
-then
+
+Then run the command:
+
 ```
 sudo apt-get install -y nodejs
 ```
 
 Next we need to install the launcher with the following command:
+
 ```
 sudo npm install -g loki-launcher
 ```
@@ -201,8 +205,26 @@ sudo npm install -g loki-launcher
 We now need to prequalify our server to be ready to run as a service node.
 
 To do so run the following command:
+
 ```
 loki-launcher prequal
+```
+
+If all checks have passed you will receive an output similar to the following:
+
+```
+Starting open port check on configured blockchain p2p port: 22022
+OpenP2pPort: Success !
+Starting open port check on configured storage server port: 8080
+OpenStoragePort: Success !
+Starting disk space check on blockchain partition /home/snode/.loki
+Creating /home/snode/.loki/storage
+Starting disk space check on storage server partition /home/snode/.loki/storage
+DiskSpace_blockchain: Success !
+DiskSpace_storage: Success !
+
+Your node successfully passed all tests
+
 ```
 
 #### 3.3 - Download Lokid binaries
@@ -210,12 +232,25 @@ We will download the Loki binaries by running the following command:
 ```
 sudo loki-launcher download-binaries
 ```
+
 #### 3.4 - Start the Loki Launcher
 To start the loki launcher run the following command:
 ```
 sudo loki-launcher start
 ```
-At this moment your launcher will use lokid to download and sync with the Loki blockchain.
+
+At this moment the launcher will output a table showing if everything is working properly:
+
+```
+┌────────────────┬─────────────────────────────────────┐
+│    (index)     │               Values                │
+├────────────────┼─────────────────────────────────────┤
+│    launcher    │         'running as 26525'          │
+│   blockchain   │         'running as 26537'          │
+│     socket     │ 'running at /opt/loki-launcher/var' │
+│ blockchain_rpc │    'running on 127.0.0.1:22023'     │
+└────────────────┴─────────────────────────────────────┘
+```
 
 Now the Loki launcher is running we can access the launcher by running the following command:
 
@@ -231,28 +266,53 @@ To exit out of the client click `CTRL + C`.
 #### 4.1 User permissions
 We are going to need to fix our user "snode"s permissions with the loki-launcher.
 
-> To do: Skip for people running as root
-
 To do this we need to swap back to root:
+
 ```
 su - root
 ```
 
 Next run the following command: 
+
 ```
 loki-launcher fix-perms <USER>
 ```
+
 Replacing `<USER>` with `snode` or the username that you created.
 
 The terminal should show the following:
+
 ```
+3.x series blockchain binary detected, disabling storage server by default
+running fix-perms
+requesting launcher stop
 setting permissions to snode
-user snode uid is 1000
+user snode uid is 1000 homedir is /home/snode
+
+remember to restart your launcher
+fixing blockchain.data_dir file /home/snode/.loki/key
+fixing blockchain.data_dir file /home/snode/.loki/loki.log
+fixing blockchain.data_dir file /home/snode/.loki/p2pstate.bin
+fixing blockchain.data_dir file /home/snode/.loki/lmdb/data.mdb
+fixing blockchain.data_dir file /home/snode/.loki/lmdb/lock.mdb
+fixing blockchain.data_dir file /home/snode/.loki/lmdb
+fixing blockchain.data_dir file /home/snode/.loki/storage/storage.logs
+fixing blockchain.data_dir file /home/snode/.loki/storage
+fixing blockchain.data_dir file /home/snode/.loki
+
 ```
+
 Once the permissions have been set let's change back to our other user `snode` by running the following command:
+
 ```
 su - snode
 ```
+
+Now let's get the loki-launcher started again:
+```
+sudo loki-launcher start
+```
+
 #### 4.2 Creating the Service File
 
 To create our lokid.service file run the following command:
@@ -278,36 +338,47 @@ RestartSec=30s
 [Install]
 WantedBy=multi-user.target
 ```
-If you chose a username other than snode then change snode in the User= line to the alternative username.
+
+If you chose a username other than `snode` then change snode in the `User=` line to the alternative username.
+
+Once completed, save the file and quit nano: CTRL+X -> Y -> ENTER.
+
 #### 4.3 Enabling the Service File
 Reload systemd manager configuration (to make it re-read the new service file):
+
 ```
 sudo systemctl daemon-reload
 ```
+
 Enable lokid.service so that it starts automatically upon boot:
+
 ```
 sudo systemctl enable lokid.service
 ```
+
 Start lokid.service:
+
 ```
 sudo systemctl start lokid.service
 ```
+
 and reboot your system to check if the service file is working correctly.
+
 ```
 sudo reboot
 ```
+
 Log back into your server and run the following command:
 ```
 loki-launcher status
 ```
+
 The terminal should output something similar to:
 ```
 launcher status: running on 818
 blockchain status: running on 891
 ```
 Well done! You're loki-launcher is now setup. 
-
-
 
 ### Step 5 - Wallet
 
