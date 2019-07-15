@@ -725,10 +725,19 @@ Run the following command to update our loki-launcher:
 ```
 sudo npm install -g loki-launcher
 ```
+Stop our lokid.service file:
+```
+sudo systemctl stop lokid.service
+```
 
-Run the following command to download the new binaries:
+Then run the following command to download the new binaries:
 ```
 loki-launcher download-binaries
+```
+
+Start lokid.service again:
+```
+sudo systemctl start lokid.service
 ```
 
 If you are running loki-launcher as a service you can now reboot your computer and the new binaries will be used.
