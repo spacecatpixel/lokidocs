@@ -26,7 +26,7 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
     - Step 2 [Server Prep](#step-2-prepare-your-server)
     - Step 3 [Loki Launcher](#step-3-loki-launcher)
     - Step 4 [Service File](#step-4-loki-launcher-as-a-system-service)
-    - Step 5 [Open a Loki Wallet](#step-5-getopen-a-wallet)
+    - Step 5 [Open a Loki Wallet](#step-5-wallet)
     - Step 6 [Register Node](#step-6-service-node-registration)
     - Step 7 [Check Registration](#step-7-service-node-check)
     - Step 8 [Unlock Stake](#step-8-unlock-stake) (optional)
@@ -807,6 +807,155 @@ sudo reboot
 | Lokid Logs           | `/home/<user>/.loki/`             |
   
 ---
+
+### Express Setup Guide
+
+Step 1: Get a Server
+
+Step 2: Prepare your server
+
+```
+adduser snode
+```
+
+```
+usermod -aG sudo snode
+```
+
+```
+sudo su - snode
+```
+
+```
+sudo apt update
+```
+
+```
+sudo apt upgrade
+```
+
+Step 3: Loki-Launcher
+
+```
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+```
+
+```
+sudo apt-get install -y nodejs
+```
+
+```
+sudo npm install -g loki-launcher
+```
+
+```
+loki-launcher prequal
+```
+
+```
+sudo loki-launcher download-binaries
+```
+
+```
+sudo loki-launcher start
+```
+
+```
+sudo loki-launcher client
+```
+
+To exit out of the client click `CTRL + C`.
+
+Step 4: Loki-Launcher as a System Service
+
+```
+su - root
+```
+
+```
+loki-launcher fix-perms snode
+```
+
+```
+su - snode
+```
+
+```
+sudo loki-launcher start
+```
+
+```
+sudo nano /etc/systemd/system/lokid.service
+```
+
+Paste the following into your terminal:
+```
+[Unit]
+Description=lokilauncher
+After=network-online.target
+
+[Service]
+Type=simple
+User=snode
+ExecStart=/usr/lib/node_modules/loki-launcher/index.js systemd-start
+Restart=always
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Save and exit the file by typing `CTRL + X` -> `Y` -> `Enter`.
+
+```
+sudo systemctl daemon-reload
+```
+
+```
+sudo systemctl enable lokid.service
+```
+
+```
+sudo systemctl start lokid.service
+```
+
+```
+sudo reboot
+```
+
+Log back into your server and check your launcher:
+
+```
+loki-launcher status
+```
+
+Step 5: Wallet
+
+```
+./loki-wallet-cli
+```
+
+Save the address that comes from running:
+```
+address
+```
+
+Step 6: Service Node Registration
+
+```
+loki-launcher client
+```
+
+```
+prepare_registration
+```
+
+Run the register-service-node command in our `loki-wallet-cli`
+
+```
+register_service_node 4294967292 T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz7i5JDeqhFiHqu7ret56411ZJS7Thfeis718bVteBZ2UA6Y7G2d 4294967292 100.000000000 1535677391 ec3895ea70a4a91b5ec4b5e1df96a45e07046f1fb0123c754d98fb2d70f4529d 5bb35d7b8ab1acb943bc47913ada8f9d2e6d6e22264e57484a04c1bbfd461f0ee2e5435454cd9b7059b221eb506ce9ea4537ddd9faf1f1757e0ef611a41c0609
+```
+>NOTE: You must run the command outputed by your daemon and not the command shown above.
 
 ## Conclusion
 
