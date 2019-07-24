@@ -312,7 +312,7 @@ Type=simple
 WorkingDirectory=/home/snode
 Restart=always
 RestartSec=5s
-ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 23023 --lokid-key  /home/snode/.loki/key
+ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
 
 [Install]
 WantedBy=multi-user.target
