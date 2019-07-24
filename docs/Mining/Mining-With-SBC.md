@@ -1,3 +1,5 @@
+> Outdated Guide - To be rewritten for RandomX algo
+
 # How to Mine Loki with an SBC
 
 This guide will get you started mining Loki on a Raspberry Pi or similar SBC (single-board computer).

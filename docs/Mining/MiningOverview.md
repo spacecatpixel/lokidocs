@@ -43,15 +43,7 @@ Loki has a number of different mining pools to choose from:
 | [elasticpool.com](https://loki.elasticpool.com/) 	| 0.5%          	| 2                      	|
 
 Mining Loki in a mining pool requires the use of specific software such as XMR-STAK or XMRig. 
-
-## Guides
-
-The following are useful guides for mining Loki:
-
-- [How to mine Loki (CPU/GPU)](https://coinguides.org/loki-mining-wallet-setup-tutorial/)
-- [How to use XMR-STAK](https://coinguides.org/xmr-stak-cryptonight-miner-v7/): Guide on how to use XMR-STAK mining pool software.
-- [How to use XMRig](https://coinguides.org/xmrig-beginners-guide/): Guide on how to use XMRig mining pool software.
-- [Video Guide (CPU/GPU)](https://www.youtube.com/watch?v=KGbQmSgvgHI): 
+ 
 
 ## Resources
 

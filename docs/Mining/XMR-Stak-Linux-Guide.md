@@ -1,3 +1,5 @@
+> Outdated Guide - To be rewritten for RandomX algo
+
 # How to Set Up XMR-Stak on Linux
 
 Native binaries may be available for your distribution's package manager.

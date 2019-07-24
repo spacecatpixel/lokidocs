@@ -1,3 +1,5 @@
+> Outdated Guide - To be rewritten for RandomX algo
+
 # XMRig Guide for TurtleCoin 
 
 XMRig uses separate miners for CPU and GPU, you need to download a CPU and GPU miner separately and run two separate instances on your computer.

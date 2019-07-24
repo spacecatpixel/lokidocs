@@ -56,11 +56,11 @@ nav:
 - Mining:
     - 'Overview': 'Mining/MiningOverview.md'
     - 'ASIC Resistance': 'Mining/ASICResistance.md'
-    - Guides:
-      - 'XMR-Stak Mining': 'Mining/XMR-StakGuide.md'
-      - 'XMR-Stak Linux Mining': 'Mining/XMR-Stak-Linux-Guide.md'
-      - 'XMRig Mining': 'Mining/XMRig-Guide.md'
-      - 'Mining With a SBC': 'Mining/Mining-With-SBC.md'
+#    - Guides:
+#      - 'XMR-Stak Mining': 'Mining/XMR-StakGuide.md'
+#      - 'XMR-Stak Linux Mining': 'Mining/XMR-Stak-Linux-Guide.md'
+#      - 'XMRig Mining': 'Mining/XMRig-Guide.md'
+#      - 'Mining With a SBC': 'Mining/Mining-With-SBC.md'
 
 
 - Service Nodes:
