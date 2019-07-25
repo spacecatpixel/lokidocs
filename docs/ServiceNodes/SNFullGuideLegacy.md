@@ -197,21 +197,21 @@ Where `<link>` is the download link of the latest linux release. To find the lin
 
 #### 3.1 - Lokid Binaries
 
-To download the loki binaries run the following command:
+To download the lokid binaries run the following command:
 
 ```
-wget https://github.com/loki-project/loki/releases/download/v4.0.3/loki-linux-x64-v4.0.3.tar.xz
+wget https://github.com/loki-project/loki/releases/download/vX.X.X/loki-linux-x64-vX.X.X.tar.xz
 ```
-> Note the above binaries might not be the latest, please check out https://github.com/loki-project/loki/releases/latest for the latest binaries.
+> Replacing `X.X.X` with the latest binary version number from https://github.com/loki-project/loki/releases/latest.
 
 #### 3.2 - Storage Server Binaries
 
-To download the loki binaries run the following command:
-
+To download the loki storage server binaries run the following command:
+https://github.com/loki-project/loki-storage-server/releases
 ```
-wget https://github.com/loki-project/loki-storage-server/releases/download/v1.0.1-release/loki-storage-linux-x64-v1.0.1.tar.xz
+wget https://github.com/loki-project/loki-storage-server/releases/download/vX.X.X-release/loki-storage-linux-x64-vX.X.X.tar.xz
 ```
-> Note the above binaries might not be the latest, please check out https://github.com/loki-project/loki/releases/latest for the latest binaries.
+> Replacing `X.X.X` with the latest binary version number from https://github.com/loki-project/loki-storage-server/releases.
 
 #### 3.3 - Untar Binaries
 
@@ -224,23 +224,26 @@ tar -xvf <filename>
 Replacing `<filename>` with the the filename we downloaded. For this example we would run 2 commands:
 
 ```
-tar -xvf loki-linux-x64-v4.0.3.tar.xz
-tar -xvf loki-storage-linux-x64-v1.0.1.tar.xz
+tar -xvf loki-linux-x64-vX.X.X.tar.xz
+tar -xvf loki-storage-linux-x64-vX.X.X.tar.xz
+```
+#### 3.4 - Create Symlink 
+
+> Note you need to replace the `vX.X.X` with the version you downloaded previous otherwise the symlink will not work.
+
+We now want to create a "symlink" to the extracted `loki-linux-x64-vX.X.X` folder:
+
+```
+ln -snf loki-linux-x64-vX.X.X loki
 ```
 
-We now want to create a "symlink" to the extracted `loki-linux-x64-v4.0.2` folder:
+and a "symlink" to the extracted `loki-storage-linux-x64-vX.X.X` folder:
 
 ```
-ln -snf loki-linux-x64-v4.0.3 loki
+ln -snf loki-storage-linux-x64-vX.X.X loki-ss
 ```
 
-and a "symlink" to the extracted `loki-storage-linux-x64-v1.0.1` folder:
-```
-ln -snf loki-storage-linux-x64-v1.0.1 loki-ss
-```
-
-This creates a virtual folder that points to the binary folders.  This isn't
-strictly necessary, but will help with upgrades in the future: when you want to upgrade you can just repeat everything in this step again with the new binaries.
+This creates a virtual folder that points to the binary folders. This isn't strictly necessary, but will help with upgrades in the future: when you want to upgrade you can just repeat everything in this step again with the new binaries.
 
 Excellent! We now have all of the necessary files to get this show on the road!
 
@@ -701,7 +704,7 @@ This section is for power users who are more familiar with servers and the CLI i
 
 **2. Run the Daemon on a server from a non-root user account, then stake from a local wallet (or a wallet on a separate server).**
 
-> Where `<VERSION>` is mentioned replace with the [latest version](https://github.com/loki-project/loki/releases/latest), example `v3.0.6`
+> Where `<VERSION>` is mentioned replace with the latest version for [lokid](https://github.com/loki-project/loki/releases/latest) and [Storage Server](https://github.com/loki-project/loki-storage-server/releases/latest), example `v3.0.6`.
 
 **3. Connect via SSH to your server**
 
@@ -743,8 +746,8 @@ wget https://github.com/loki-project/loki/releases/download/v<VERSION>/loki-linu
 wget https://github.com/loki-project/loki-storage-server/releases/download/v<VERSION>-release/loki-storage-linux-x64-v<VERSION>.tar.xz
 ```
 ```
-tar -xvf loki-linux-x64-v4.0.2.tar.xz
-tar -xvf loki-storage-linux-x64-v1.0.1.tar.xz
+tar -xvf loki-linux-x64-v<VERSION>.tar.xz
+tar -xvf loki-storage-linux-x64-v<VERSION>.tar.xz
 ```
 ```
 ln -snf loki-linux-x64-<VERSION> loki
