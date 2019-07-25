@@ -202,16 +202,16 @@ To download the lokid binaries run the following command:
 ```
 wget https://github.com/loki-project/loki/releases/download/vX.X.X/loki-linux-x64-vX.X.X.tar.xz
 ```
-> Replacing `X.X.X` with the latest binary version number from https://github.com/loki-project/loki/releases/latest.
+> Replacing `X.X.X` with the latest binary version number from [https://github.com/loki-project/loki/releases/latest](https://github.com/loki-project/loki/releases/latest).
 
 #### 3.2 - Storage Server Binaries
 
 To download the loki storage server binaries run the following command:
-https://github.com/loki-project/loki-storage-server/releases
+
 ```
 wget https://github.com/loki-project/loki-storage-server/releases/download/vX.X.X-release/loki-storage-linux-x64-vX.X.X.tar.xz
 ```
-> Replacing `X.X.X` with the latest binary version number from https://github.com/loki-project/loki-storage-server/releases.
+> Replacing `X.X.X` with the latest binary version number from [https://github.com/loki-project/loki-storage-server/releases](https://github.com/loki-project/loki-storage-server/releases).
 
 #### 3.3 - Untar Binaries
 
