@@ -8,6 +8,16 @@ becomes increasingly costly for additional Loki to be purchased, making the atta
 
 To achieve this economic protection, Loki encourages the active suppression of the circulating supply. In particular, the [emissions curve](../Advanced/Cryptoeconomics.md) and [collateral requirements](../ServiceNodes/StakingRequirement.md) must be designed to ensure enough circulating supply is locked and reasonable returns are provided for operators to ensure [Sybil attack resistance](../Advanced/SybilResistance.md).
 
+## Methods to Setup a Service Node
+
+We support three different mechanisms of managing the loki service node suite:
+
+| Method                                                          | Description                                                                                                                                                      |
+|-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Loki Launcher](../ServiceNodes/SNFullGuide.md)                 | Using loki-launcher to download, start, monitor, and manage service node components.  Has built-in updating capabilities for new releases.  Requires nodejs.     |
+| [Legacy - Apt Repository](../ServiceNodes/SNFullGuideLegacy.md) | Installing debs via apt repository which installs and runs the components via systemd.  Updates via the system package manager(apt).  Requires Ubuntu or Debian. |
+| Installing and Configuring Manually                             | Installing and configuring manually.  This is more involved than the above, and requires manual configurating and updating of each component.                    |
+
 ## Service Node Activities
 
 Right now Service Nodes are full nodes on the Loki network. Full nodes become Service Nodes when the owner [locks the required amount of Loki](../ServiceNodes/StakingRequirement.md) and submits a registration transaction. Once accepted by the network, the Service Node is eligible to win [block rewards](../Advanced/Cryptoeconomics.md). Multiple participants can be involved in one Service Node and can have the reward automatically distributed.
