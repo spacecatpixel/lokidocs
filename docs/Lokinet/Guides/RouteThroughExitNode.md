@@ -14,7 +14,7 @@ After the above guide is finished you should be able to run `lokinet` and be abl
 
 ## 3. Route Configuration
 
-To use an exit node as a client, you need to change the `[network]` section in `~/.lokinet/lokinet.ini` 
+To use an exit node as a client, you need to change the `[network]` section in `~/.lokinet/lokinet.ini`
 
 Use the following command to access your `lokinet.ini` file.
 
@@ -23,7 +23,7 @@ nano ~/.lokinet/lokinet.ini
 ```
 Use your arrow keys to to scroll down to the network settings.
 ```
-# network settings 
+# network settings
 [network]
 profiles=/home/modeify/.lokinet/profiles.dat
 # uncomment next line to add router with pubkey to list of routers we connect directly to
@@ -49,7 +49,7 @@ Next replace `pubkey` next to `exit-node` with the following pubkey:
 Your network settings section should now look like the following:
 
 ```
-# network settings 
+# network settings
 [network]
 profiles=/home/modeify/.lokinet/profiles.dat
 # uncomment next line to add router with pubkey to list of routers we connect d$
@@ -70,29 +70,42 @@ On linux, run the following command:
 
 `ip route | grep default`
 
+On macOS, run the following command:
+
+`route get default | grep gateway`
+
 The IP address shown is your default gateway, for our example our IP is `10.0.2.2`.
 
 ## 5. Set up Routes
 
-In the following example the first hop is `162.243.164.223` which is connected to the pubkey `3dcb5a34d015a7bbb4636be83991e00cbeff13fe7834e0d5452ffe9a5af5a5be`. 
+In the following example the first hop is `162.243.164.223` which is connected to the pubkey `3dcb5a34d015a7bbb4636be83991e00cbeff13fe7834e0d5452ffe9a5af5a5be`.
 
 If you used a different pubkey as your first hop you must replace the IP address in the example with the one associated with it.
 
+### Linux
+
 To route everything through a Lokinet Exit Node run the following command. Replacing `<first hop>` with your first hop IP address and `<default gateway>` with your default gateway.
+
 ```
 sudo ip route add <first hop> via <default gateway>
 ```
+
 For this example the command is:
+
 ```
 sudo ip route add 162.243.164.223 via 10.0.2.2
 ```
+
 Next run the following command to remove your default:
+
 ```
 sudo ip route del default
 ```
+
 At this point make sure you are running `lokinet`, you should have `lokinet` running from [section 2](#2-lokinet-setup).
 
 While `lokinet` is running open up a new terminal and run the following command:
+
 ```
 sudo ip route add default dev lokitun0
 ```
@@ -106,6 +119,45 @@ If you want to unset the route everything over lokinet route do the following as
 `sudo ip route add default via <default gateway>`
 
 ---
+
+### macOS
+
+To route everything through a Lokinet Exit Node run the following command. Replacing `<first hop>` with your first hop IP address and `<default gateway>` with your default gateway.
+
+```
+sudo route add <first hop> <default gateway>
+```
+
+For this example the command is:
+
+```
+sudo route add 162.243.164.223 10.0.2.2
+```
+
+Next run the following command to remove your default:
+
+```
+sudo route delete default
+```
+
+At this point make sure you are running `lokinet`, you should have `lokinet` running from [section 2](#2-lokinet-setup).
+
+While `lokinet` is running open up a new terminal and run the following command:
+
+```
+sudo route add default -interface lokitun0
+```
+
+---
+
+If you want to unset the route everything over lokinet route do the following as root:
+
+```
+sudo route delete default
+sudo route add default <default gateway>
+```
+
+### Done
 
 Now when you browse the internet your IP address will be obfuscated. Go to a "where is my location" website to see if your IP appears to be in Romania.
 
