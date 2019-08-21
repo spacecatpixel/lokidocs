@@ -16,7 +16,7 @@
 
 * [Why the name Loki?](#why-the-name-loki)
 
-* [What are business use cases for the project?](#what-is-the-business-model-behind-this-peer-to-peer-network)
+* [What is the business model behind this peer-to-peer network?](#what-is-the-business-model-behind-this-peer-to-peer-network)
 
 * [Will you guys commit back to the Monero source code?](#will-you-guys-commit-back-to-the-monero-source-code)
 
