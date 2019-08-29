@@ -99,7 +99,8 @@ nav:
         - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
 #        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
-
+- Blink:
+    - 'Blink': 'LokiServices/Blink.md'
 - Advanced:
     - Developer:
        - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
