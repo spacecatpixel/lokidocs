@@ -12,11 +12,11 @@ To achieve this economic protection, Loki encourages the active suppression of t
 
 We support three different mechanisms of managing the loki service node suite:
 
-| Method                                                          | Description                                                                                                                                                      |
-|-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Loki Launcher](../ServiceNodes/SNFullGuide.md)                 | Using loki-launcher to download, start, monitor, and manage service node components.  Has built-in updating capabilities for new releases.  Requires nodejs.     |
-| [Legacy - Apt Repository](../ServiceNodes/SNFullGuideLegacy.md) | Installing debs via apt repository which installs and runs the components via systemd.  Updates via the system package manager(apt).  Requires Ubuntu or Debian. |
-| Installing and Configuring Manually                             | Installing and configuring manually.  This is more involved than the above, and requires manual configurating and updating of each component.                    |
+| Method                                                                      | Description                                                                                                                                                      |
+|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Loki Launcher](../ServiceNodes/SNFullGuide.md)                             | Using loki-launcher to download, start, monitor, and manage service node components.  Has built-in updating capabilities for new releases.  Requires nodejs.     |
+| [Apt Repository](../ServiceNodes/DebianPackageGuide.md)                     | Installing debs via apt repository which installs and runs the components via systemd.  Updates via the system package manager(apt).  Requires Ubuntu or Debian. |
+| [Installing and Configuring Manually](../ServiceNodes/SNFullGuideLegacy.md) | Installing and configuring manually.  This is more involved than the above, and requires manual configurating and updating of each component.                    |
 
 ## Service Node Activities
 
@@ -47,4 +47,4 @@ Once these features come out, Service Node operation will require better servers
 | **[Service Node RPC](../Developer/SNRPCGuide.md)**                                                                       	| How to use JSON 2.0 RPC Calls with Service Nodes.                                                                                                 	|
 | **[Active Service Node List](https://www.lokiblocks.com)**                                                               	| Loki Block explorer showing the current Service Node Pubkeys.                                                                                     	|
 | **[Setup Video Guide](https://www.youtube.com/watch?v=6uiRD1847UY)**                                                     	| Video Guide on how to setup a Service Node using the CLI Wallet.                                                                                  	|
-| **[Staking Requirement Calculator WEB](https://jagerman.com/sn/)**                                                       	| Webpage showing Staking Requirement at current Block Height.                                                                                      	|
+| **[Staking Requirement Calculator WEB](https://imaginary.stream/sn/)**                                                   	| Webpage showing Staking Requirement at current Block Height.                                                                                      	|
