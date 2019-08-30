@@ -209,7 +209,7 @@ wget https://github.com/loki-project/loki/releases/download/vX.X.X/loki-linux-x6
 To download the loki storage server binaries run the following command:
 
 ```
-wget https://github.com/loki-project/loki-storage-server/releases/download/vX.X.X-release/loki-storage-linux-x64-vX.X.X.tar.xz
+wget https://github.com/loki-project/loki-storage-server/releases/download/vX.X.X/loki-storage-linux-x64-vX.X.X.tar.xz
 ```
 > Replacing `X.X.X` with the latest binary version number from [https://github.com/loki-project/loki-storage-server/releases](https://github.com/loki-project/loki-storage-server/releases).
 
