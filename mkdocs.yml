@@ -89,9 +89,10 @@ nav:
     - 'Developers': 'Lokinet/DeveloperInfo.md'
 
     - Guides:
-        - 'Lokinet Linux Guide': 'Lokinet/Guides/Install.md'
+        - 'Lokinet Linux Guide': 'Lokinet/Guides/lokinet-linux-guide.md'
         - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
         - 'Lokinet Mac Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
+        - 'Linux - Build-It-Yourself': 'Lokinet/Guides/Install.md'
         - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
         - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
         - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'

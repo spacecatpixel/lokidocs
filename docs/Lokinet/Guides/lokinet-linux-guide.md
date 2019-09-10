@@ -1,11 +1,7 @@
 # LokiNET install guide - Linux
+Author: Jason (jagerman), Johnathan (SonOfOtis)
 
-This guide describes building linux binaries from source. To download built binaries, head to [lokinet.org](https://lokinet.org/) for release files. 
-
-To Compile, download the [lastest release](https://github.com/loki-project/loki-network/releases) of Lokinet for your platform.
-
-If you encounter a compiler error, report it [here](https://github.com/loki-project/loki-network/issues) using the following template found [here](../../../Contributing/Issue_template/)
-
+Source: [https://deb.imaginary.stream/](https://deb.imaginary.stream/)
 
 ##Initial Setup for Linux
 
@@ -13,17 +9,13 @@ If you encounter a compiler error, report it [here](https://github.com/loki-proj
 
 Best practice when running a public server is to not run your software as the root user. We will create a non-root user to our server by running the following command.
 
-```
-sudo adduser <username>
-```
+`sudo adduser <username>`
 
 Replacing `<username>` with a name you will log-in with. For this user-guide we will use `lokitestnet` as our username.
 
 If you use the same username the command will look like:
 
-```
-sudo adduser lokitestnet
-```
+`sudo adduser lokitestnet`
 
 Once ran the terminal will prompt you for a new password for your newly created user. Use a different password to the root password.
 
@@ -55,28 +47,31 @@ You will be prompted to authorise the use of disk space, type `y` and enter to a
 
 > Note: If you are prompted at any time that a version of any file is available then click the up and down arrows until you are hovering over install the package maintainer’s version and click enter.
 
-###3.  Dependencies
-You will need to install some build dependencies, run the following command to install all the build dependencies required for Lokinet:
+###3. Installation
+
+You only need to do this step the first time you want to set up the repository; when you've done it once, the repository will automatically update whenever you fetch new system updates.
+
+To add the `apt` repository run the following commands:
+
+The following command installed Jagermans public key used to sign the Binaries.
 
 ```
-sudo apt install build-essential cmake libcap-dev wget git resolvconf curl libuv1-dev
+curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+```
+The next command tells `apt` where to find the packages:
+```
+echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+```
+Then resync your package repositories with:
+```
+apt update
+```
+Now install lokinet:
+```
+apt install lokinet
 ```
 
-
-Once you’ve installed the dependencies we will now clone the loki-network repository:
-```
-git clone https://github.com/loki-project/loki-network
-cd loki-network
-```
-###4. Build for normal operation
-Run the following two commands to build for operation:
-
-```
-make
-sudo make install
-```
-
-###5. Setting your DNS 
+###4. Setting your DNS 
 
 Next we need to edit our resolv.conf files and add our dns resolver.
 
@@ -101,18 +96,17 @@ Next we need to update our /etc/resolv.conf file by running the command:
 sudo resolvconf -u
 ```
 
----
+### 5. Starting and Stopping lokinet.
 
-### Optional: Building a debian package
+To start lokinet manually run the following command:
+```
+sudo systemctl stop lokinet
+```
 
-If you want a debian package install the debian maintainer packages needed
-
-    $ sudo apt install debuild
-
-...and then build one like so:
-
-    $ debuild -us -b
----
+and to stop lokinet manually run the following command:
+```
+sudo systemctl stop lokinet
+```
 ### Finish
 
 Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#2-accessing-snapps).

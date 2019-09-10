@@ -8,69 +8,19 @@ SNApp operators use the traditional server-client model with the key difference 
 
 To install lokinet, see the install guide [here](../../Lokinet/Guides/Install.md).
 
-## 2. Setting your DNS (Only for Linux)
+## 2. Test services
+Jump onto a browser such as google chrome or firefox and try and go to one of the following SNApps:
 
-> Skip to [step 3](#3-setup) if you are running on Windows or Mac.
+- http://ybdrstzpucny6q7pxqs3ft7df5tiyxkay6i8jmkcj5imr1hied6y.loki/
 
-Next we need to edit our resolv.conf files and add our dns resolver.
+- http://icxqqcpd3sfkjbqifn53h7rmusqa1fyxwqyfrrcgkd37xcikwa7y.loki/
 
-Run the following command: 
-
-`sudo nano /etc/resolvconf/resolv.conf.d/head`
-
-Add the following at the bottom of this file:
-
-`nameserver 127.3.2.1`
-
-Once that line is added hold CTRL and click x. 
-Click enter to confirm the file changes.
-
-Next we need to update our /etc/resolv.conf file by running the command:
-
-`sudo resolvconf -u`
-
-## 3. Setup
-
-**DO NOT RUN LOKINET AS ROOT**
-
-For the first time setup, you need to generate a config and obtain bootstrap information.
-
-`lokinet -g && lokinet-bootstrap`
-
->The default configuration for lokinet is `lokinet.ini` located at `~/.lokinet/lokinet.ini` (`%APPDATA%\.lokinet\lokinet.ini` on windows).
->
->To enable a SNApps with a long term address, add `keyfile=/path/to/keyfile.private` to `[network]` section in `lokinet.ini` .
-
-Then run lokinet in foreground:
-
-`lokinet`
-
-For future reference, after generating initial configuration you just need to run `lokinet` and start browsing.
-
-
-## 4. Test services
-Jump onto a browser such as google chrome or firefox and try and go to one of the following urls:
-
-- http://icxqqcpd3sfkjbqifn53h7rmusqa1fyxwqyfrrcgkd37xcikwa7y.loki
-
-- http://3xoafu6kuc6wd51iqcdca99jkqzcrh35qjjj9sfquqg4s3b8fb1y.loki
+- http://3xoafu6kuc6wd51iqcdca99jkqzcrh35qjjj9sfquqg4s3b8fb1y.loki/
 
 - http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/
-
 
 Congratulations, you now have access to the Lokinet.
 
 ## Finish
 
 Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#3-joining-a-lokinet-irc-chat).
-
-
-## Best Practices
-
-// TODO: talk about binding to all interfaces being bad
-
-// TODO: talk about networking namespaces options for linux
-
-## Examples
-
-// TODO: insert secure example here
