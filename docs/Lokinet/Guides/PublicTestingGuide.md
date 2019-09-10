@@ -53,9 +53,7 @@ The guide will cover:
 
 - Updating your Package lists and installing required updates.
 
-- Installing build dependencies.
-
-- Build the Lokinet software from the Github repository.
+- Install Lokinet 
 
 ##### Windows Installation
 
@@ -69,6 +67,8 @@ This guide will cover:
 
 - Installing the Lokinet Launcher.
 
+- Configuring DNS server.
+
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report any build issues if you find them, especially if you solved the issue.
 
 ##### Mac OSX Installation
@@ -81,7 +81,7 @@ This guide will cover:
 
 - Installing the Lokinet Launcher.
 
-- Configuring DNS server
+- Configuring DNS server.
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report any build issues if you find them, especially if you solved the issue.
 
@@ -91,8 +91,6 @@ Follow the guide and report to the moderators with any issues on the #lokinet-he
 This guide will help you gain access to SNApps, to access the guide [click here](../Guides/AccessingSNApps.md).
 
 The guide will cover:
-
-- Adding the Lokinet DNS resolver (for Linux).
 
 - Initialising Lokinet for the first time.
 

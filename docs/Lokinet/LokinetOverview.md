@@ -10,8 +10,9 @@ The network does not rely on trusted authorities and its state is fully derived 
 | **Guide/Resource**                                                      	| **Description**                                                                             	|
 |-------------------------------------------------------------------------	|---------------------------------------------------------------------------------------------	|
 | [Lokinet Public Testing Guide](../Lokinet/Guides/PublicTestingGuide.md) 	| Full Lokinet public testing guide.                                                          	|
-| [Linux Setup Guide](../Lokinet/Guides/Install.md)                            	| Linux preperation for Lokinet.                                                           	|
+| [Linux Setup Guide](../Lokinet/Guides/lokinet-linux-guide.md)                            	| Linux preperation for Lokinet.                                                           	|
 | [Windows Setup Guide](../Lokinet/Guides/lokinet-windows-guide.md)| Windows preperation for Lokinet.|
+| [Linux - Build it yourself](../Lokinet/Guides/Install.md)| Windows preperation for Lokinet.|
 | [Accessing SNApps](../Lokinet/Guides/AccessingSNApps.md)                	| How to access SNApps.                                                                       	|
 | [Joining a Lokinet IRC](../Lokinet/Guides/LokinetIRC.md)                	| Connect to an IRC chat over Lokinet.                                                        	|
 | [Hosting SNApps](../Lokinet/Guides/HostingSNApps.md)                    	| Host your own SNApp/Hidden Service.                                                         	|
