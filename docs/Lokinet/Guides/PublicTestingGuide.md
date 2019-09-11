@@ -45,7 +45,7 @@ This guide will help prepare your computer to run Lokinet, depending on your sys
 
 ##### Linux Installation
 
-To access the guide [click here](../Guides/Install.md)
+To access the guide [click here](../Guides/lokinet-linux-guide.md)
 
 The guide will cover:
 
