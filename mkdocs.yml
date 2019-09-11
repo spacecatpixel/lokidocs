@@ -96,7 +96,7 @@ nav:
         - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
         - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
         - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
-        - 'Route through Exit Node': 'Lokinet/Guides/RouteThroughExitNode.md'
+#        - 'Route through Exit Node': 'Lokinet/Guides/RouteThroughExitNode.md'
         - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
 #        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'

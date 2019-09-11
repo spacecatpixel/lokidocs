@@ -88,4 +88,4 @@ Jump onto the lokinet irc and see if others can access your SNApp.
 
 ### Finish
 
-Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#5-route-through-an-exit-node).
+Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/).

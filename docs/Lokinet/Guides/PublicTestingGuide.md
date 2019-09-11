@@ -16,7 +16,6 @@ You can run the Loki software on any operating system. The binaries available fo
 	- Step 2 [Accessing SNApps](#2-accessing-snapps)
 	- Step 3 [Joining the lokinet IRC Chat](#3-joining-a-lokinet-irc-chat)
 	- Step 4 [Hosting a SNApp](#4-hosting-a-snapp)
-	- Step 5 [Route through an Exit Node](#5-route-through-an-exit-node)
 
 ## Getting Help and Reporting Bugs Guidelines
 
@@ -120,19 +119,5 @@ The guide will cover:
 - Creating an `index.html` file with `Hello Lokinet` to display to the network.
 
 - Serving your SNApp directory to the Lokinet and accessing it through your browser.
-
-Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report your issues to the [Loki-network](https://github.com/loki-project/loki-network/issues) repository if you find them, especially if you solved the issue.
-
-### 5. Route through an Exit Node
-
-This guide will help you route your internet data through a Lokinet Exit Node, to access the guide [click here](../Guides/RouteThroughExitNode.md).
-
-The guide will cover:
-
-- Configuring your `lokinet.ini` file.
-
-- Finding your default gateway.
-
-- Setting up your route.
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report your issues to the [Loki-network](https://github.com/loki-project/loki-network/issues) repository if you find them, especially if you solved the issue.
