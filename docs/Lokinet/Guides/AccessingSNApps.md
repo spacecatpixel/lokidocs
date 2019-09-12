@@ -17,7 +17,7 @@ Jump onto a browser such as google chrome or firefox and try and go to one of th
 
 - [http://zqkddypocxnu3r53ddy6hkogcdi1xz6kcitjjsh483jom336wo5y.loki/](http://zqkddypocxnu3r53ddy6hkogcdi1xz6kcitjjsh483jom336wo5y.loki/)
 
-- [http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/](http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/)
+- [http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/photos](http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/photos)
 
 Congratulations, you now have access to the Lokinet.
 
