@@ -1,7 +1,15 @@
+# Service Nodes
 
-# Service Nodes Overview
+## Quick Navigation
 
-Although Loki implements novel changes on top of the [CryptoNote protocol](../Advanced/CryptoNoteElements.md) ([ASIC Resistance](../Mining/ASICResistance.md), [Dynamic Block Size](../Advanced/DynamicBlockSize.md) & [Static Ring Signatures](/Advanced/CryptoNoteElements/#ring-signatures)), much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator [time-locks a significant amount of Loki](../ServiceNodes/StakingRequirement.md) and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.
+|                         **Service Node Setup**                        |                             **Service Node Setup**                             |                              **Staking to Open Pool Service Node**                             |                              **Updating your Service Node**                              |
+|:---------------------------------------------------------------------:|:------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|
+|     [Service Node Launcher Setup](../ServiceNodes/SNFullGuide.md)     |      [Service Node Apt Repo Setup](../ServiceNodes/DebianPackageGuide.md)      |                        [GUI Staking](../ServiceNodes/GUIStakingGuide.md)                       | [Update your Binaries and Launcher](../ServiceNodes/SNFullGuide/#updating-your-binaries) |
+| Set up a Service Node with the Loki Launcher by following this guide. | Set up a Service Node with debs via an apt repository by following this guide. | Want to stake without operating a Service Node, or want to stake to an open pool Service Node? |  Need to download the latest releases for your Service Node and run the Loki Launcher?   |
+
+## Service Nodes Overview
+
+Much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator [time-locks a significant amount of Loki](../ServiceNodes/StakingRequirement.md) and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.
 
 The resulting network provides [market-based resistance to Sybil attacks](../Advanced/SybilResistance.md), addressing a range of problems with existing mixnets and privacy-centric services. This resistance is based on supply and demand interactions which help prevent single actors from having a large enough stake in Loki to have a significant negative impact on the second-layer privacy services Loki provides. [DASH](https://github.com/dashpay/dash/wiki/Whitepaper) first theorised that Sybil attack resistant networks can be derived from cryptoeconomics. As an attacker accumulates Loki, the  circulating supply decreases, in turn applying demand-side pressure, driving the price of Loki up. As this continues, it
 becomes increasingly costly for additional Loki to be purchased, making the attack prohibitively expensive.
@@ -42,6 +50,7 @@ Once these features come out, Service Node operation will require better servers
 |--------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------	| 
 | **[Service Node Setup](../ServiceNodes/SNFullGuide.md)**                                                            	| How to host and maintain a Service Node using the Loki-Launcher and [CLI wallet](/Wallets/WalletsOverview/#command-line-interface-wallet-cli). |
 |**[Service Node Setup - Advanced](../ServiceNodes/SNFullGuideLegacy.md)** | How to host and maintain a Service Node using the [CLI wallet](/Wallets/WalletsOverview/#command-line-interface-wallet-cli). |
+| **[Staking to a Service Node as a Contributor](../ServiceNodes/GUIStakingGuide.md)** | How to Stake to a Service Node when you are not operating one but contributing. |
 | **[Updating your Service Node](../ServiceNodes/UpdateGuide.md)**                                                          | How to update your Service Node version.|
 |**[Loki Dashboard](https://lokidashboard.com/)**| See statistics, data, maps and other information on the Loki Service Nodes.|
 | **[Service Node RPC](../Developer/SNRPCGuide.md)**                                                                       	| How to use JSON 2.0 RPC Calls with Service Nodes.                                                                                                 	|
