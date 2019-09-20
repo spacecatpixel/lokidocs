@@ -5,7 +5,7 @@ Miners use computers to work on computational puzzles that change their difficul
 
 ## Mining Loki
 
-The Loki cryptocurrency can be mined through the CryptoNight turtle hashing algorithm.
+The Loki cryptocurrency can be mined through the RandomXL hashing algorithm.
 
 ## How to mine Loki.
 
