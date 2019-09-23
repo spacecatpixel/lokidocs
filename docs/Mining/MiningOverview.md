@@ -15,13 +15,7 @@ It is **likely** you will need to add exceptions and exclusions to your antiviru
 
 Unless you know what you are doing, please ***only*** download from the links below.
 
-There are currently a few different ways in which you can start mining Loki:
-
-1. [XMR-Stak](https://github.com/fireice-uk/xmr-stak)
-2. [XMRig](https://github.com/xmrig/xmrig)
-3. Cloud Mining
-4. SBC/Raspberry Pi Mining
-5. Mobile Mining
+You can currently use [XMR-Stak](https://github.com/fireice-uk/xmr-stak) to mine Loki.
 
 ## Pools
 
@@ -36,10 +30,9 @@ Loki has a number of different mining pools to choose from:
 | **Pool**                                         	| **Total Fee** 	| **Min. Payout (Loki)** 	|
 |--------------------------------------------------	|---------------	|------------------------	|
 | [miner.rocks](https://loki.miner.rocks/)         	| 0.9%          	| 0.5                    	|
-| [cryptoknight.cc](https://cryptoknight.cc/loki)  	| 0%            	| 2                      	|
 | [hashvault.pro](https://loki.hashvault.pro/)     	| 0.9%          	| 2                      	|
 | [fairpool.xyz](https://loki.fairpool.xyz/)       	| 1%            	| 1                      	|
-| [luxor.tech](http://mining.luxor.tech/)          	| 1%            	| N/A                    	|
+| [luxor.tech](https://mining.luxor.tech/setup?coinId=LOKI)| 1%            	| N/A                   |
 | [elasticpool.com](https://loki.elasticpool.com/) 	| 0.5%          	| 2                      	|
 
 Mining Loki in a mining pool requires the use of specific software such as XMR-STAK or XMRig. 
