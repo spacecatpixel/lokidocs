@@ -1,7 +1,5 @@
 # Lokinet install guide - MacOS 
 
-**Use this video guide [https://www.youtube.com/watch?v=_ILAISdswLg](https://www.youtube.com/watch?v=_ILAISdswLg) for installation instructions.**
-
 ## 1. Download the latest release
 
 Head to [lokinet.org](https://lokinet.org/), download the latest MacOS Lokinet release and run it. 
