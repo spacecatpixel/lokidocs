@@ -10,37 +10,17 @@ Head to [lokinet.org](https://lokinet.org/), download the latest MacOS Lokinet r
 
 ![MacOS-install-lokinet](../../assets/images/MacOS-install-lokinet.png)
 
-## 3. Open terminal
+## 2. Open the terminal and run the Lokinet MacOS Binary
 
-Open the terminal and change directory to `usr/local/bin`:
-
-```console
-cd /usr/local/bin
-```
-
-![Lokinet-MacOS-Guide1](../../assets/images/MacOS-Lokinet1.png)
-
-## 4. Generate configuration file
-
-Enter into the terminal to generate the configuration file:
+You now want to run lokinet in your terminal:
 
 ```console
-./lokinet -g
-```
-
-![Lokinet-MacOS-Guide3](../../assets/images/MacOS-Lokinet3.png)
-
-## 5. Run the Lokinet MacOS Binary
-
-Finally you're going to run Lokinet. To do that enter into the terminal:
-
-```console
-./lokinet
+sudo ./lokinet
 ```
 
 ![Lokinet-MacOS-Guide4](../../assets/images/MacOS-Lokinet4.png)
 
-## 6. Configure DNS
+## 3. Configure DNS
 
 If DNS is not configured automatically, you can do it manually. 
 Go to `System Preferences -> Network -> Advanced -> DNS`
@@ -48,7 +28,6 @@ Go to `System Preferences -> Network -> Advanced -> DNS`
 Click on `+` in DNS servers list. Enter `127.0.0.1` as a DNS address:
 
 ![MacOS-DNS](../../assets/images/MacOS-DNS.png)
-
 
 ## 7. Done!
 
