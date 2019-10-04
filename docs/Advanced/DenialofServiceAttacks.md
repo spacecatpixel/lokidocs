@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Denial of Service Attack | DoS
+description: Denial of Service (DoS) in Blockchains. How Loki mitigates DoS attacks with their private messenger software. How to prevent an attack using a Proof of work System. 
+
 # Denial of Service Attacks
 
 Users of decentralised blockchains are not required to provide digital or physical identifiers. This can be beneficial to users who lack identity or are being persecuted because of it. However, systems that do not require identification render themselves vulnerable to [Sybil attacks](SybilResistance.md), where a malicious actor produces numerous false identities (in Loki’s case, numerous public-private key pairs) and uses these identities to spam the network with requests. 

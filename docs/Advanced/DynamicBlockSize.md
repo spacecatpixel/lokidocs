@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Dynamnic Block Size
+description: Like other CryptoNote coins, Loki does not have a fixed block size, it has block sizes. The block size changes over time, growing to include more transactions as the network reaches higher transaction throughput. The Loki block size scales by observing the median block size over the last 100 blocks and slowly retargets the maximum size of any new blocks accordingly.
+
 # Dynamic Block Size
 
 Like other CryptoNote coins, Loki does not have a fixed block size. Instead, the block size changes over time, growing to include more transactions as the network reaches higher transaction throughput. The Loki block size scales by observing the median block size over the last 100 blocks and slowly retargets the maximum size of any new blocks accordingly.

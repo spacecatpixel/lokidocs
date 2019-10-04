@@ -1,4 +1,7 @@
-#Sybil Resistance
+title: Loki.network Documentation | Sybil Resistance | Sybil Attacks
+description: What is a Sybil attack for a network performing onion routing? What is the game theory behind sybil resistance and can cryptocurrency economics create built in market based sybil resistance? Loki uses game theory to mitigate it's network against sybil attacks.
+
+# Sybil Resistance
 
 One of the most important features of the Loki network is its built-in market-based Sybil resistance. We defined a successful [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack) as one where a single actor controls over 30% of the network’s nodes. At this level of dominance, an actor could conduct effective network wide temporal analysis. Forcing nodes to have a [stake](../ServiceNodes/StakingRequirement.md) in the network greatly increases the cost of performing a Sybil attack. ***Towler*** proved the effectiveness of this protection in his
 [game theory model](https://loki.network/cryptoeconomics). However, this protection is not guaranteed.

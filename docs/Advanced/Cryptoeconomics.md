@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Loki Cryptoeconomics
+description: This document explains the cryptocurrency economics of the Loki Coin. It goes into details about the Loki Block Reward, Mining Reward, Service Node reward and governance reward. The circulating supply for Loki cryptocurrency is available in raw data.
+
 # Cryptoeconomics
 
 Loki is a Blockchain network oriented toward the provision of privacy-preserving services over a network of [Service Nodes](../ServiceNodes/SNOverview.md). The salient cryptoeconomic problem is how to incentivise actors in the Loki network to operate Service Nodes in a manner compatible with the objectives of the Loki network, in particular decentralisation and privacy.

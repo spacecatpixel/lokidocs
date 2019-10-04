@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Accepting Loki
+description: This is a guide on how to accept Loki cryptocurrency on your exchange using payment id's. This can be used for accepting loki coin, a monero coin, in different services. This guide uses a cli wallet which was forked from xmr cli.
+
 # Accepting Loki 
 ## Instructions for the Command-Line Interface
 ### The Basics

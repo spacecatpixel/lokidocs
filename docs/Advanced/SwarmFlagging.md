@@ -1,6 +1,7 @@
-# Swarm Flagging
+title: Loki.network Documentation | Swarms | Swarm Flagging
+description: When nodes operate in a trustless environment without a centralised leader enforcing over arching rules, maintaining proper node behaviour on the network becomes difficult, a system of distributed flagging must be proposed to remove underperforming nodes. Swarm flagging works by using existing swarms to choose members that will participate in each testing round.
 
->> Define Swarm Flagging
+# Swarm Flagging
 
 When nodes operate in a trustless environment without a centralised leader enforcing over arching rules, maintaining proper node behaviour on the network becomes difficult. Although [Service Nodes](../ServiceNodes/SNOverview.md) in Loki must hold the correct [collateral requirement](../ServiceNodes/StakingRequirement.md), they may choose to not [route traffic](../Lokinet/LLARP.md) or [store data](../LokiServices/Messenger.md) in their memory pools.  Because this option is financially beneficial (using less bandwidth/CPU cycles/storage), a system of distributed flagging must be proposed to remove underperforming nodes.
 

@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Loki Daemon overview | lokid
+description: The Loki coin daemon, forked from monerod, keeps your computer synced up with the Loki network. It downloads and validates the blockchain from the p2p network. The daemon is also referenced as the nodes software.
+
 # `lokid` - Reference
 
 ## Overview

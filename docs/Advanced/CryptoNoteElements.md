@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Cryptonote Elements | Ring Signatures
+description: This document showcases the Cryptonote Wallet elements that were forked by Loki from Monero as well as the changes that were implemented. This explains in detail the Ring size Loki Coin has implemented and goes into further details about Ring Signatures and Stealth Addresses.
+
 # CryptoNote Elements
 
 Loki uses the Monero source code because of the high level of privacy it affords to transactions. Monero is an evolution on the [CryptoNote protocol](https://cryptonote.org/whitepaper.pdf), which uses [ring signatures](#ring-signatures), [stealth addresses](#stealth-addresses), and [RingCT](#ringct), giving users the ability to sign transactions and obfuscate amounts while maintaining plausible deniability.
