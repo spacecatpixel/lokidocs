@@ -1,3 +1,7 @@
+title: Loki Documentation | Loki Service Node Launcher Config Files
+description: This guide shows the different config files and their associated sections, keys and values for the Loki Launcher. 
+
+
 # Launcher config files
 
 This guide shows the different config files and their associated sections, keys and values.

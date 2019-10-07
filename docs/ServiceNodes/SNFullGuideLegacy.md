@@ -1,4 +1,7 @@
-﻿# Full Guide on Service Nodes
+﻿title: Loki Documentation | Loki Service Node Legacy Guide
+description: This document will tell you exactly how to set up and operate a Service Node for the Loki Project. Installing and configuring manually.  This is more involved than the above, and requires manual configurating Loki Privacy Software and updating of each component.
+
+# Full Guide on Service Nodes
 
 This document will tell you exactly how to set up and operate a Service Node for the Loki Project. This document was written with non-developers in mind, so people new to linux or command line operations should be able to follow along without any trouble.
 

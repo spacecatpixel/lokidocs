@@ -1,3 +1,6 @@
+title: Loki Documentation | Service Node Debian Package Guide
+description: This guide shows how to set up a Loki Service Node with Debian packages. The guide goes through how to setup the initial repository, installing the packeges for lokid and loki storage server. The guide is great for a technical person looking into setting up a Masternode or Service Node.
+
 # Debian Package Guide
 Author: Jason (jagerman) 
 

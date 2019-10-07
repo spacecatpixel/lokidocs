@@ -1,3 +1,6 @@
+title: Loki Documentation | Service Node Deregistration Rules | Loki Coin
+description: Loki deregistration rules are used to manage the network in a decentralised way by having Service Nodes enforce each other to perform adequately on the network. This document outlines the different Service Node states of the Loki Service Nodes and the quorum testing that they conduct.
+
 # Deregistration Rules
 Deregistration rules are used to manage the network in a decentralised way by having Service Nodes enforce each other to perform adequately on the network.
 

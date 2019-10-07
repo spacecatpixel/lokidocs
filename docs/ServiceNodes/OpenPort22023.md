@@ -1,3 +1,6 @@
+title: Loki Documentation | Open Port 22023 | Loki Service Node Troubleshooting
+description: Having error codes showing port 22023 is not open. Follow this guide to open your ports and start staking to a Loki Service Node.
+
 # Open port 22023
 
 We need to open port `22023` for the loki-launcher to work properly.

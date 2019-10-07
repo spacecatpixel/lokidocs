@@ -1,4 +1,7 @@
-# Service Nodes
+title: Loki Documentation | Loki Service Nodes Overview
+description: Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes. This document is your resource to find more information on Loki Service Nodes. The document has links to Service Node and Masternode setup guides, aswell as Service Node and Masternode calculators.
+
+# Loki Service Nodes
 
 ## Quick Navigation
 
@@ -16,7 +19,7 @@ becomes increasingly costly for additional Loki to be purchased, making the atta
 
 To achieve this economic protection, Loki encourages the active suppression of the circulating supply. In particular, the [emissions curve](../Advanced/Cryptoeconomics.md) and [collateral requirements](../ServiceNodes/StakingRequirement.md) must be designed to ensure enough circulating supply is locked and reasonable returns are provided for operators to ensure [Sybil attack resistance](../Advanced/SybilResistance.md).
 
-## Methods to Setup a Service Node
+## Methods to Setup a Loki Service Node
 
 We support three different mechanisms of managing the loki service node suite:
 

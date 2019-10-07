@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Service Node Staking Requirement 
+description: A cryptocurrency stake involves holding a specific cryptocoin in a wallet for a particular period of time. The Loki staking requirement is the minimum amount of Loki that is required to stake. Before each node joins the Service Node network, other nodes must individually validate that the said nodes collateral outlay matches the required amount, as per the decreasing collateralisation requirement.
+
 # Staking Requirement
 
 A stake involves holding a specific cryptocoin in a wallet for a particular period of time. A staking requirement is the minimum amount of said cryptocoin that is required to stake.

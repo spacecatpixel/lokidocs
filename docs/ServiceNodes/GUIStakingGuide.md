@@ -1,3 +1,6 @@
+title: Loki Documentation | Monero / Loki GUI staking Guide
+description: This document helps individuals stake to a Loki Service Node. Loki is a code fork of Monero and offers Service Nodes ontop of the Monero codebase. There are now a few Monero Masternode coins however the Loki Gui guide shows how easy it is to stake on the Loki Blockchain.
+
 # GUI-Pool-Staking-Guide
 
 This document will tell you exactly how to stake via the Loki GUI wallet.

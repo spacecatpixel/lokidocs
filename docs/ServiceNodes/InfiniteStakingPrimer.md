@@ -1,8 +1,11 @@
+title: Loki Documentation | Loki infinite Staking Primer
+description: With Infinite Staking, Service Nodes do not expire and Loki funds remain locked until a contributor or operator explicitly requests the Service Node to unlock the funds. Loki Service Nodes will continually receive block rewards indefinitely until a stake is unlocked or the Loki Service Node becomes deregistered.
+
 # Infinite Staking Primer
 
-##Outline For Existing Service Node Participants and Operators
+## Outline For Existing Service Node Participants and Operators
 
-Infinite Staking is an incremental upgrade on the existing staking process that is currently available on the Loki network (currently active in Hardfork 10: Bulletproofs, introduced in Hardfork 9: Service Nodes). With Infinite Staking, Service Nodes do not expire and funds remain locked until a contributor or operator explicitly requests the Service Node to unlock the funds.
+Infinite Staking is an incremental upgrade on the existing staking process that was previously available on the Loki network. With Infinite Staking, Service Nodes do not expire and funds remain locked until a contributor or operator explicitly requests the Service Node to unlock the funds.
 
 Since Infinite Staking is an incremental upgrade, most of the steps necessary to register and participate in a Service Node remain the same. A quick overview for the new staking process is summarised for quick grokking. (Yes, grokking is a word. Google it.)
 

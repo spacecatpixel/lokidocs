@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Service Node Functions.
+description: What do Loki Service Nodes do? Loki Service Nodes begin as a Remote Node, you might be familiar with the Monero Remote Nodes. Loki remote nodes help people send transactions on the private blockchain without having to download the entire ledger of Loki. Service Nodes also do Exit Node duties, similar to Tor or I2P. 
+
 # Service Node Functions
 
 ## Remote Nodes
