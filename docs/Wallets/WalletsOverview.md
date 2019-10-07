@@ -1,4 +1,7 @@
-# Wallets
+title: Loki Documentation | Loki Wallets Overview.
+description: The Loki wallets are a gateway into private decentralised transactions and communications. They allow you to hold private keys, secure or mine Loki, and trade peer-to-peer. 
+
+# Loki Wallets
 The Loki wallets are a gateway into private decentralised transactions and communications. They allow you to hold private keys, secure or mine Loki, and trade peer-to-peer. 
 
 Loki wallets store a collection of public and private keys which can be used to receive, view, or spend Loki. 

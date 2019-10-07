@@ -1,3 +1,6 @@
+title: Loki Documentation | Lokinet Overview | Onion Router
+description: Lokinet is a unique, blockchain enforced and incentivized onion router, where you can browse the internet anonymously, visit and host private websites all without exposing your identity or IP address.
+
 #Lokinet Overview
 
 [Service Nodes](../ServiceNodes/SNOverview.md) on the Loki network will operate a [low latency onion routing protocol](../Lokinet/LLARP.md), forming a fully decentralised overlay network, called Lokinet. Onion routing protocols allow for users to form tunnels or paths through a distributed network, using multiple nodes as hops to obfuscate the destination and origin of data packets.  

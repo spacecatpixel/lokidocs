@@ -1,3 +1,7 @@
+title: Loki Documentation | Loki's Cryptonote Mining Overview
+description: The Loki cryptocurrency can be mined through the RandomXL hashing algorithm. Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain. 
+
+
 # What is Cryptocurrency Mining?
 Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain. 
 

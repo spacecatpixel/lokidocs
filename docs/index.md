@@ -1,3 +1,6 @@
+title: Loki Documentation | The Loki Network Documentation Website
+description: Head to the Loki Documentation Website if you want to learn more about the privacy tools that Loki offer. Find out more information on the Loki Messenger, Loki Service Nodes, Loki Mining, Loki Onion Routing, Loki Staking Requirement and more.
+
 # Loki Network
 
 ## Quick Navigation
