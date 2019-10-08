@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Sub Address
+description: Loki and Monero use Sub Addresses. A subaddress should be the default address you share to someone to receive Loki, Monero or other cryptonote coins. By providing a unique subaddress for each anticipated payment you will know for what you are being paid.
+
 # Subaddress
 
 Subaddress is what you should be using by default to receive Loki.

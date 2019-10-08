@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Integrated Addresses 
+description: Loki and monero integrated addresses embed a payment ID. This allows you to identify what you are being paid for. Most cryptonote coins should now have integrated address, want to find out more information, please check out our Integrated address information.
+
 # Integrated Address
 
 Integrated addresses are ideal for accepting Loki in an automated fashion - like in online stores and exchanges.

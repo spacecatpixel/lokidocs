@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki, Monero and Cryptonote Multisignature Wallets
+description: This document will help with Loki, Monero and other Cryptonote cryptocurrency multisig wallets. Check out the guides on how to set a multi-sig wallet and how to process multi-sig transactions.
+
 # Multisignature
 In cryptocurrencies, multisig feature allows you to sign a transaction with more than one private key. Funds protected with multisig can only be spent by signing with M-of-N keys.
 

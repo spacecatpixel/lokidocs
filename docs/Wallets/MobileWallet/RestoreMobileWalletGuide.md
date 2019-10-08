@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Mobile Wallet Guide
+description: This document will tell you exactly how to set up and operate the Loki Mobile wallet. Step by step guide for mobile wallet setup.
+
 # Restoring Your Loki Mobile Wallet (Android)
 <<<<<<< HEAD
 <ol>

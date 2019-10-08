@@ -1,3 +1,6 @@
+title: Loki Documentation | Getting Started
+description: A quick overview to help you get started in the Loki Documentation Website. Start educating yourself, choosing your wallet, acquire Loki, and Stake and Earn Loki.
+
 # Getting Started
 
 ## 1. Educate Yourself

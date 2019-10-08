@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki CLI Mac Setup Guide
+description: The loki-wallet-cli is the “Command Line Interface” wallet software that is used to run Loki accounts through command prompt or terminal.
+
 # loki-wallet-cli Mac Setup
 
 The `loki-wallet-cli` is the “Command Line Interface” wallet software that is used to run Loki accounts through command prompt or terminal. The CLI wallet only uses text to do operations, where the `oki-wallet-gui` wallet offers a graphical user interface with buttons to do most of the operations the `loki-wallet-cli` does.

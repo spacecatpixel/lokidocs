@@ -1,3 +1,6 @@
+title: Loki Documentation | What wallet should I use?
+description: Do you need help with what wallet to use in the Loki Network? Maybe you want to stake to a Service Node or send a transaction to a friend. Loki has multiple wallets such as the Desktop GUI, Desktop CLI, Android and iOS wallets and browser wallets.
+
 # Which wallet to use?
 
 The Loki wallets are a gateway into private decentralised transactions and communications. They allow you to hold private keys and secure, mine, stake or trade Loki. Each wallet is designed specifically for different users depending on their goal and level of expertise.

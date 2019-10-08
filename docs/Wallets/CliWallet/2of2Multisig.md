@@ -1,3 +1,6 @@
+title: Loki Documentation | 2 of 2 Multisig Wallet Guide
+description: Do you need to setup a multisig wallet on the Loki or Monero Blockchain? Here is a guide provided by Loki Network to get you setup with a 2 of 2 Multisignature Wallet.
+
 # Loki 2/2 Multisig
 
 First, the wallet to be converted to multisig must be empty. It is best to use a brand-new wallet for the purpose, although not required. It is strongly advised to make a copy of the wallet files first, just in case something goes wrong.

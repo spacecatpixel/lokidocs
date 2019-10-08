@@ -1,3 +1,6 @@
+title: Loki Documentation | Setup a Loki Wallet on Desktop.
+description: This document will tell you exactly how to set up and operate the Loki GUI wallet. Step by step guide for Windows, Mac and Linux inside.
+
 # Setup Guide on the Loki GUI Wallet
 
 This document will tell you exactly how to set up and operate the Loki GUI wallet.

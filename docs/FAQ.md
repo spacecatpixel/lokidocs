@@ -1,3 +1,7 @@
+title: Loki Documentation | Frequently Asked Questions
+description: What is Loki? Does Loki have Masternodes? What is Loki Messenger? Loki FAQ page goes into the frequently asked questions the Loki project receive.
+
+
 # Frequently Asked Questions
 
 ## General

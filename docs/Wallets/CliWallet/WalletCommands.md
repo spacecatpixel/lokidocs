@@ -1,5 +1,5 @@
-title: Loki Documentation | Loki's Cryptonote Mining Overview
-description: The Loki cryptocurrency can be mined through the RandomXL hashing algorithm. Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain. 
+title: Loki Documentation | Loki and Monero CLI Command Guide
+description: The Loki CLI wallet is a wallet first developed by Monero. Loki has added additional commands ontop of the monero-wallet-cli and this document goes through all the Loki and Monero CLI commands available within the loki-wallet-cli.
 
 # Loki CLI Guide
 

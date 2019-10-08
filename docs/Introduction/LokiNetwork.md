@@ -1,3 +1,5 @@
+title: Loki Documentation | Loki Network Doc Overview
+description: Find out about Loki Wallets, Mining, Service Nodes, Lokinet, Advanced information, FAQ and Contributing.
 
 # Loki Network
 

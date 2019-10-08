@@ -1,3 +1,7 @@
+title: Loki Documentation | Loki and Monero CLI Restore Wallet from Keys
+description: If you have a Mnemonic Seed Phrase, restoring your wallet from it would probably be a good option. Otherwise, you can restore Loki or Monero your wallet from private keys. 
+
+
 # Restoring Your CLI Wallet from Keys
 
 If you have a Mnemonic Seed Phrase, restoring your wallet from it would probably be a good option. Otherwise, you can restore your wallet from private keys. You will need to have the following keys to proceed:

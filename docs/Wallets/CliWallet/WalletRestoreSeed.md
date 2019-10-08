@@ -1,3 +1,7 @@
+title: Loki Documentation | Loki and Monero CLI Restore Wallet from Seed
+description: To fully restore your Loki or Monero wallet and be able to view balance and make transactions, having your seed stored will be enough. You don't need your wallet password or other keys to restore the wallet once you have a seed phrase.
+
+
 # Restoring Your CLI Wallet from Seed
 
 To fully restore your wallet and be able to view balance and make transactions, having your seed stored will be enough. You don't need your wallet password or other keys to restore the wallet once you have a seed phrase.

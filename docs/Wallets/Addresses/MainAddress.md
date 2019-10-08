@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Main Addresses
+description: Loki and Monero use Main Addresses, these are public addresses you share to friends and businesses to receive Loki Payments. Main addresses are composed of a public spend key and a public view key.
+
 # Address
 
 A Loki public address is what you publish to get paid.
