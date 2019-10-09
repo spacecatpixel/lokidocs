@@ -102,6 +102,11 @@ nav:
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 - Blink:
     - 'Blink': 'LokiServices/Blink.md'
+- Checkpointing: 
+    - 'Advanced/CheckpointingLip3.md'
+- Pulse:
+    - 'Advanced/PulseLip5.md'
+
 - Advanced:
     - Developer:
        - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
