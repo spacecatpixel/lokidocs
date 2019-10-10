@@ -1,7 +1,6 @@
 title: Loki Documentation | How to contribute to Loki Docs.
 description: There is two ways to contribute to the Loki-Docs repository: Editing the files on Github and Building the website and editing the content locally.
 
-
 # How to Contribute to Loki-Docs
 There is two ways to contribute to the Loki-Docs repository. 
 

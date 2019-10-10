@@ -41,7 +41,7 @@ nav:
 
   - Guides: 
         - 'Electron Gui Setup': 'Wallets/GuiWallet/loki-electron-guide.md'
-        - 'Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
+#        - 'Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
         - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
         - 'Mobile Wallet Restore': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
         - 'CLI Mac Setup': 'Wallets/CliWallet/loki-wallet-cliMacSetup.md'
@@ -86,7 +86,7 @@ nav:
     - 'Public Testing Overview': 'Lokinet/Guides/PublicTestingGuide.md'
     - 'SNApps': 'Lokinet/SNApps.md'
     - 'LLARP': 'Lokinet/LLARP.md'
-    - 'Developers': 'Lokinet/DeveloperInfo.md'
+#    - 'Developers': 'Lokinet/DeveloperInfo.md'
 
     - Guides:
         - 'Lokinet Linux Guide': 'Lokinet/Guides/lokinet-linux-guide.md'

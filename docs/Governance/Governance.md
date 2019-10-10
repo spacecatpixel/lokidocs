@@ -1,4 +1,7 @@
-# Governance
+title: Loki Documentation | Loki Governance Overview
+description: Governance is an essential part of cryptocurrency design and should be supported at the protocol level. The risk of weak, informally defined governance has been studied extensively throughout the history of blockchain technology.
+
+# Loki Governance
 
 Governance is an essential part of cryptocurrency design and should be supported at the protocol level. The risk of weak, informally defined governance has been studied extensively throughout the history of blockchain technology.  Bitcoin and Ethereum experienced contentious hard forks that split the focus and efforts of their respective communities. Although hard forks can be used as a governance strategy, they should always be considered as a last resort rather than the solution to every contentious issue.  The Loki governance system is designed to resolve potential issues by providing a structured environment for discourse and representation, and also to source funding for the development of Loki without reliance on external influence or altruism.
 
