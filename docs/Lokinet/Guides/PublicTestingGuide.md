@@ -1,3 +1,6 @@
+title: Loki Documentation | Lokinet Public Testing Guide
+description: This guide will help you get Lokinet running on your machine, and give you some example tasks on things you can do to help put the software through its paces and help us find places where it needs to be fixed or can be improved.
+
 # Lokinet Public Testing Guide
 
 Thanks for your interest in the public testing phase of the Lokinet alpha. It’s taken many months to get to this point, but we’re grateful to everyone who wants to give this new type of mixnet a spin.
@@ -34,7 +37,7 @@ Please use the following Github Issue Template for any github issues created: [G
 
 ## User Guide
 
-We have laid out a set of guides which will take you through the installation of Lokinet to hosting your own SNApp.
+We have laid out a set of guides which will take you through the installation of Lokinet to hosting your own [SNApp](../../Lokinet/SNApps.md).
 
 We suggest going through each guide in the following order:
 

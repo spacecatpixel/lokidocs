@@ -1,3 +1,6 @@
+title: Loki Documentation | Lokinet Windows Install Guide | Onion Routing
+description: This guide walks you through the steps to get Lokinet, a new onion router with sybil resistance properties, working on Windows.
+
 # Lokinet install guide - Windows 10
 
 ## 1. Download the latest Lokinet Windows Installer

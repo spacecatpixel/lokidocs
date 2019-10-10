@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Network Services
+description: Loki Services are built upon the protocol level of the Loki network. Loki Services leverage the Service Node layer to allow for decentralised services.
+
 # Loki Services Overview
 
 Loki Services are built upon the protocol level of the Loki network. Loki Services leverage the Service Node layer to allow for decentralised services.

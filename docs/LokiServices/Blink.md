@@ -1,3 +1,6 @@
+title: Loki Documentation | Blink | Instant Cryptocurrency Payments
+description: Blink is Loki’s instant payment mechanism proposed in the original Loki whitepaper. Once completed, Blink will allow users to send payments instantly to each other and allow instantly resend of received Blink transactions without requiring blockchain confirmations.
+
 # Loki Blink Design
 
 ## Metadata

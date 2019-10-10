@@ -1,3 +1,6 @@
+title: Loki Documentation | Lokinet MacOS Install Guide | Onion Routing
+description: This guide walks you through the steps to get Lokinet, a new onion router with sybil resistance properties, working on MacOS.
+
 # Lokinet install guide - MacOS 
 
 ## 1. Download the latest release

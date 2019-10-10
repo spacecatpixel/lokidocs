@@ -1,3 +1,6 @@
+title: Loki Documentation | Lokinet Linux Install Guide
+description: This guide describes building linux binaries from source. To download built binaries, head to lokinet.org for release files. 
+
 # LokiNET install guide - Linux
 
 This guide describes building linux binaries from source. To download built binaries, head to [lokinet.org](https://lokinet.org/) for release files. 

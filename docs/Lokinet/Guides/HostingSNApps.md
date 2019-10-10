@@ -1,3 +1,6 @@
+title: Loki Documentation | Hosting a Hidden Service or SNApp on the Lokinet.
+description: The function of SNApps is similar to so-called hidden services in Tor which have flourished. They provide users with a way to interact fully within the lokinet providing an even higher-degree of anonymity than can be achieved when accessing externally hosted content.
+
 # Hosting a SNApp
 ## 1. Preparing your lokinet address
 

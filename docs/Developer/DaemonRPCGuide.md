@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki and Monero Daemon RPC Guide.
+description: This is a list of the lokid daemon RPC calls, their inputs and outputs, and examples of each. This RPC guide can be used by coins who share a codebase with Monero.
+
 # Loki Daemon RPC
 
 ## Introduction

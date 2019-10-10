@@ -1,3 +1,6 @@
+title: Loki Documentation | Service Node Applications | SNApps
+description: The function of SNApps is similar to so-called hidden services in Tor which have flourished. SNApp operators use the traditional server-client model with the key difference being that Service Nodes will be intermediaries in a users connection through Lokinet.
+
 # SNApps
 
 The function of SNApps is similar to so-called hidden services in Tor which have flourished. They provide users with a way to interact fully within the mixnet environment, providing an even higher-degree of anonymity than can be achieved when accessing externally hosted content.  SNApps allow for users to setup and host marketplaces, forums, whistle-blowing websites, social media, and most other internet applications on their own machines or servers while maintaining full-server and user-side anonymity.  This greatly expands the scope of the network and allows users to build meaningful communities within Lokinet.

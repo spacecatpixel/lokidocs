@@ -1,4 +1,7 @@
-#LokiNET SNApps/Hidden Service Setup Guide
+title: Loki Documentation | How to access hidden services or Lokinet SNApps.
+description: The function of SNApps is similar to so-called hidden services in Tor which have flourished. They provide users with a way to interact fully within the mixnet environment, providing an even higher-degree of anonymity than can be achieved when accessing externally hosted content.
+
+# LokiNET SNApps/ Hidden Service Setup Guide
 
 The function of [SNApps](../SNApps.md) is similar to so-called hidden services in Tor which have flourished. They provide users with a way to interact fully within the mixnet environment, providing an even higher-degree of anonymity than can be achieved when accessing externally hosted content. SNApps allow for users to setup and host marketplaces, forums, whistle-blowing websites, social media, and most other internet applications on their own machines or servers while maintaining full-server and user-side anonymity. This greatly expands the scope of the network and allows users to build meaningful communities within [Lokinet](../../LokinetOverview/).
 

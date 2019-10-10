@@ -1,3 +1,6 @@
+title: Loki Documentation | Lokinet Linux Install Guide | Onion Routing
+description: This guide walks you through the steps to get Lokinet, a new onion router with sybil resistance properties, working on Linux.
+
 # LokiNET install guide - Linux
 Author: Jason (jagerman), Johnathan (SonOfOtis)
 
