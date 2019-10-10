@@ -4,6 +4,11 @@ The first Loki service to be developed and deployed on the Loki network will be 
 
 End-to-end encrypted messaging applications that provide a platform for users to send messages without revealing their contents already exist, however they rely on centralised servers that can be targeted, blocked and shut down.  These  centralised  service  models present a high-risk for the anonymity of communicating parties, as they often require the user to register a phone number or other identifying information and connect directly via the IP address of the user. This information could be extracted from servers through data leaks or legal processes and used against the user. Leveraging the [Service Nodes](../ServiceNodes/SNOverview.md) architecture on the Loki network, we can deliver a service similar to popular centralised encrypted messaging apps, such as Signal, with a higher degree of privacy and censorship resistance.
 
+## Download Links
+
+Head over to the Loki Get Started Page to get your Loki Messenger download Links:<br>
+[Loki Get Started](https://loki.network/getstarted/)
+
 ## Messenger Routing
 
 Message routing on the Loki network changes depending on whether the receiving user is online or offline.  When both users are online, higher bandwidth communications can take place due to the fact that messages do not need to be stored on the [Service Nodes](../ServiceNodes/SNOverview.md).
