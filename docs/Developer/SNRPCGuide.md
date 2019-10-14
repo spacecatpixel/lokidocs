@@ -1,3 +1,6 @@
+title: Loki Documentation | Service Node RPC Guide.
+description: This is a list of the Loki Service Node RPC calls, their inputs and outputs, and examples of each. This RPC guide can be used by coins who share a codebase with Loki.
+
 # Service Nodes Guide
 ## JSON 2.0 RPC Calls
 ### get\_quorum\_state

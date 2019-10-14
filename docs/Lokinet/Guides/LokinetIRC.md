@@ -1,3 +1,6 @@
+title: Loki Documentation | Lokinet IRC Guide | Anonymous IRC
+description: This guide will walk you through how to connect anonymously to an IRC chat through the Lokinet. Run Lokinet > Download an IRC Client > Connect to a .loki address.
+
 # Hosting a SNApp
 ## 1. Downloading an IRC client
 

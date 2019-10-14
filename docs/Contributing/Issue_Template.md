@@ -1,3 +1,7 @@
+title: Loki Documentation | Loki Issue Template for Bug Reports
+description: Follow this template if your have found a new bug or issue. we recommend opening up a new issue ticket with the repository in question and use the below template to provide the relevant information to the developers.
+
+
 # Issue templates
 
 If you have found a bug or issue with a Loki repository initially you should confirm with the moderators on Loki's [Discord](https://discord.gg/67GXfD6) or [Telegram](https://t.me/LokiCommunity) to see if a fix has already been made.

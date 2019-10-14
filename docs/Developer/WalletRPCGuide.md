@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki and Monero Wallet RPC Guide.
+description: This is a list of the loki-wallet-rpc calls, their inputs and outputs, and examples of each. The program loki-wallet-rpc replaced the rpc interface that was in the Monero simplewallet and then loki-wallet-cli.
+
 # loki-wallet-rpc
 ## Introduction
 

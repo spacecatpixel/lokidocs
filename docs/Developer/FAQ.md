@@ -1,3 +1,6 @@
+title: Loki Documentation | Loki Developer FAQ
+description: See the FAQ questions and answers for Loki Hardforks and changes. See information on Bulletproofs, Service Nodes and Hardfork changes.
+
 # FAQ
 ## Hardfork Version 10: Bulletproofs
 ### `get_block_template` Updates
