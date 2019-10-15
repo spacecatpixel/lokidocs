@@ -2,7 +2,7 @@ title: Loki Documentation | Service Node Guide upgrade from Legacy to Launcher
 description: This document is for Service Node Operators who have used the previous Service Node Full Guide and wish to update to the Loki-launcher.
 
 # Update Guide
-This document is for Service Node Operators who have used the previous [Service Node Full Guide](../SNFullGuideOLD/) and wish to update to the Loki-launcher.
+This document is for Service Node Operators who have used the previous Service Node Full Guide and wish to update to the Loki-launcher.
 
 > Note: This Guide is to help update a running lokid 3.0.6 Service Node to the loki-launcher.
 
