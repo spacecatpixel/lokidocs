@@ -7,7 +7,7 @@ This document is for Service Node Operators who have used the previous [Service 
 
 ## Step 1: Load and Update your VPS.
 
-If you are updating your VPS you would by now have a good understanding of how to log in to your server. If you don't check out how you prepared your server in this guide [here](../SNFullguide/#step-2-prepare-your-server).
+If you are updating your VPS you would by now have a good understanding of how to log in to your server. If you don't check out how you prepared your server in this guide [here](../SNFullGuide/#step-2-prepare-your-server).
 
 Once we have logged in to our VPS we should update our package lists, the below command downloads the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
 

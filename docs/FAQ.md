@@ -103,7 +103,7 @@ Loki is the Norse god of trickery. This is fitting as we use a lot of digital 't
 
 ###**What is the business model behind this peer-to-peer network?**
 
-Loki operates on an incentives structure provided by the network. Peer-to-peer communications only occurs through the [Service Node](/ServiceNodes/SNOverview) layer which is already incentivised to run so there is less of an incentive to provide any additional businesses models. The business model post-launch for the Loki foundation is to continue to build both core [Loki Services](/LokiServices/LokiServicesOverview) and aid in the development of 3rd party SNApps which Service nodes can optionally operate.
+Loki operates on an incentives structure provided by the network. Peer-to-peer communications only occurs through the [Service Node](../ServiceNodes/SNOverview) layer which is already incentivised to run so there is less of an incentive to provide any additional businesses models. The business model post-launch for the Loki foundation is to continue to build both core [Loki Services](/LokiServices/LokiServicesOverview) and aid in the development of 3rd party SNApps which Service nodes can optionally operate.
 
 ###**Will you guys commit back to the monero source code?**
 
@@ -112,7 +112,7 @@ Loki plans to push back any useful changes to Monero, such as optimizations, bug
 
 ###**What's the difference from Monero?**
 
-[Fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward). These are baselayer changes that will differentiate us between Monero, however the main change that is being implemented is the second layer of incentivised [Service Nodes](/ServiceNodes/SNOverview), [Loki Services](/LokiServices/LokiServicesOverview), and [Lokinet](/Lokinet/LokinetOverview).
+[Fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward). These are baselayer changes that will differentiate us between Monero, however the main change that is being implemented is the second layer of incentivised [Service Nodes](../ServiceNodes/SNOverview), [Loki Services](/LokiServices/LokiServicesOverview), and [Lokinet](/Lokinet/LokinetOverview).
 
 ###**Can I see details about the premine?**
 
@@ -180,11 +180,11 @@ When accessing a [SNApp](../Lokinet/SNApps) your data is obfuscated by being rou
 
 ###**Are SNApps like DApps?**
 
-In the sense that their core function is 'decentralised,' yes. However, unlike most DApps, [SNApps](../Lokinet/SNApps) do not rely on on-chain execution or computation. All SNApps are computed client-side, and the networking is handled offchain by the [Service Node](../ServceNodes/SNOverview) network.
+In the sense that their core function is 'decentralised,' yes. However, unlike most DApps, [SNApps](../Lokinet/SNApps) do not rely on on-chain execution or computation. All SNApps are computed client-side, and the networking is handled offchain by the [Service Node](../ServiceNodes/SNOverview) network.
 
 ###**Where will SNApps and all of its data be hosted?**
 
-[SNApps](../LokiServices/SNApps) are similar to hidden services in Tor; they are hosted on servers by users.
+[SNApps](../Lokinet/SNApps) are similar to hidden services in Tor; they are hosted on servers by users.
 
 ---
 
