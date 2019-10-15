@@ -1,5 +1,5 @@
 title: Loki Documentation | Loki Service Nodes Overview
-description: Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes. This document is your resource to find more information on Loki Service Nodes. The document has links to Service Node and Masternode setup guides, aswell as Service Node and Masternode calculators.
+description: This document is your resource to find more information on Loki Service Nodes. The document has links to Service Node and Masternode setup guides, aswell as Service Node and Masternode calculators.
 
 # Loki Service Nodes
 

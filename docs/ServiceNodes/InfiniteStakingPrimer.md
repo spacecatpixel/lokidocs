@@ -1,5 +1,5 @@
 title: Loki Documentation | Loki infinite Staking Primer
-description: With Infinite Staking, Service Nodes do not expire and Loki funds remain locked until a contributor or operator explicitly requests the Service Node to unlock the funds. Loki Service Nodes will continually receive block rewards indefinitely until a stake is unlocked or the Loki Service Node becomes deregistered.
+description: With Infinite Staking, Service Nodes do not expire and Loki funds remain locked until a contributor or operator explicitly requests the Service Node to unlock the funds. 
 
 # Infinite Staking Primer
 

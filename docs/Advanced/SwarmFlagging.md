@@ -1,5 +1,5 @@
 title: Loki.network Documentation | Swarms | Swarm Flagging
-description: When nodes operate in a trustless environment without a centralised leader enforcing over arching rules, maintaining proper node behaviour on the network becomes difficult, a system of distributed flagging must be proposed to remove underperforming nodes. Swarm flagging works by using existing swarms to choose members that will participate in each testing round.
+description: When a swarm has been selected to participate, each node in that swarm is expected to conduct a number of tests on every other node in the swarm.
 
 # Swarm Flagging
 
