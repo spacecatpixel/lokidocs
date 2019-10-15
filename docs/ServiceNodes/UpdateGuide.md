@@ -1,4 +1,4 @@
-title: Loki Documentation | Service Node Guide upgrade from Legacy to Launcher
+title: Loki Documentation | Service Node upgrade from Legacy to Launcher
 description: This document is for Service Node Operators who have used the previous Service Node Full Guide and wish to update to the Loki-launcher.
 
 # Update Guide

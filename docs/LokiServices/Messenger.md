@@ -1,4 +1,4 @@
-title: Loki Documentation | Decentralised end-to-end encrypted Private Messenger
+title: Loki Docs | Decentralised end-to-end encrypted Private Messenger
 description: The first Loki service to has been developed and deployed on the Loki network is a decentralised, end-to-end encrypted private messaging application called Loki Messenger.
 
 # Loki Messenger

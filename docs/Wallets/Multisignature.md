@@ -1,4 +1,4 @@
-title: Loki Documentation | Loki, Monero and Cryptonote Multisignature Wallets
+title: Loki Documentation | Loki and Cryptonote Multisignature Wallets
 description: This document will help with Loki, Monero and other Cryptonote cryptocurrency multisig wallets. Check out the guides on how to set a multi-sig wallet and how to process multi-sig transactions.
 
 # Multisignature
