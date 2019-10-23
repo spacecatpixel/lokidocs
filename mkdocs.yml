@@ -105,8 +105,8 @@ nav:
 - Blink:
     - 'Blink': 'LokiServices/Blink.md'
 - Checkpointing: 
-    - 'Advanced/CheckpointingLip3.md'
-    - 'Advanced/CheckpointingUpdate.md'
+    - 'Checkpointing LIP': 'Advanced/CheckpointingLip3.md'
+    - 'Safely Receiving Loki': 'Advanced/CheckpointingUpdate.md'
 - Pulse:
     - 'Advanced/PulseLip5.md'
 
