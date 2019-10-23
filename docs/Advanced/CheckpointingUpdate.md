@@ -9,8 +9,6 @@ spent - once checkpointed.
 
 ## Changes
 
-### immutable_height
-
 For lokid in `get_info` we return a new field:
 - `immutable_height - uint64`: The latest height in the blockchain that can not
   be reorganized from (backed by atleast 2 Service Node, or 1 hardcoded
@@ -24,8 +22,6 @@ For lokid in `get_info` we return a new field:
   ...
 }
 ```
-
-### checkpointed - uint64
 
 For `loki-wallet-rpc` in `get_transfers` we return a new field:
 - `checkpointed - uint64`: If transfer is backed by atleast 2 Service Node
