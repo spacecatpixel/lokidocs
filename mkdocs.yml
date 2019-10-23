@@ -62,7 +62,6 @@ nav:
 #      - 'XMRig Mining': 'Mining/XMRig-Guide.md'
 #      - 'Mining With a SBC': 'Mining/Mining-With-SBC.md'
 
-
 - Service Nodes:
     - 'Overview': 'ServiceNodes/SNOverview.md'
     - 'Service Node Functions': 'ServiceNodes/ServiceNodeFunctions.md'
@@ -107,6 +106,7 @@ nav:
     - 'Blink': 'LokiServices/Blink.md'
 - Checkpointing: 
     - 'Advanced/CheckpointingLip3.md'
+    - 'Advanced/CheckpointingUpdate.md'
 - Pulse:
     - 'Advanced/PulseLip5.md'
 
