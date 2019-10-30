@@ -21,7 +21,7 @@ Now jump into your Security & Privacy Settings.
 
 ![SecuritySettings](../../assets/Security.png)
 
-Go down to the bottom of this window and allow the Lokinet Mac pkg to run.
+Go down to the bottom of this window and allow the Lokinet Mac pkg to run by clicking the `Open Anyway` button.
 
 ![Allow-Apps](../../assets/allowapps.png)
 
@@ -56,12 +56,12 @@ Enter `127.0.0.1` as a DNS address:
 
 ---
 
-## Troubleshooting
+## 5. Troubleshooting
 ### Can't access `<string>`.loki addresses. 
 
 This can be fixed by making sure your DNS is configured properly. See [step 4](#4-configure-dns).
 
-## 7. Done!
+## 6. Done!
 
 Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#2-accessing-snapps).
 
