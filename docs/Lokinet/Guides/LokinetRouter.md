@@ -103,6 +103,22 @@ sudo apt install lokinet-router
 
 Congratulations, your server is running as a relay in the Lokinet!
 
+## Starting and Stopping Lokinet router.
+
+To start lokinet router manually run the following command:
+
+```
+sudo systemctl start lokinet
+```
+
+and to stop lokinet manually run the following command:
+
+```
+sudo systemctl stop lokinet
+```
+
+---
+
 ## Express Setup Guide
 
 ```
