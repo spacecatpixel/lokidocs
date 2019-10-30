@@ -27,40 +27,59 @@ You will be prompted to authorise the use of disk space, type `y` and enter to a
 
 > Note: If you are prompted at any time that a version of any file is available then click the up and down arrows until you are hovering over install the package maintainer’s version and click enter.
 
+If you do not have curl installed on your computer then let's install it as we will use it later:
+
+```
+sudo apt install curl
+```
+
 ###2. Installation
 
 You only need to do this step the first time you want to set up the repository; when you've done it once, the repository will automatically update whenever you fetch new system updates.
 
-To add the `apt` repository run the following commands:
+To add the Loki `apt` repository run the following commands:
 
 The following command installed Jagermans public key used to sign the Binaries.
 
 ```
 curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
 ```
+
 The next command tells `apt` where to find the packages:
+
 ```
 echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
 ```
+
 Then resync your package repositories with:
+
 ```
-apt update
+sudo apt update
 ```
 Now install lokinet:
+
 ```
-apt install lokinet
+sudo apt install lokinet
 ```
+
+Congratulations, Lokinet is now installed and running in the background. 
+
+Head over to the accessing SNApps guide [here](../PublicTestingGuide/#2-accessing-snapps) to access a SNApp.
+
+Next steps will teach us how to stop and start lokinet manually.
 
 --- 
 
 ## Starting and Stopping lokinet.
 
 To start lokinet manually run the following command:
+
 ```
-sudo systemctl stop lokinet
+sudo systemctl start lokinet
 ```
 
 and to stop lokinet manually run the following command:
+
 ```
 sudo systemctl stop lokinet
 ```
@@ -68,10 +87,25 @@ sudo systemctl stop lokinet
 ---
 
 ## Troubleshooting
+
+###Failed to decode boostrap RC
+
+If you find your bootstrap has not configured properly run the following command:
+```
+sudo lokinet-bootstrap
+```
+
+and then restart your lokinet
+
+```
+sudo systemctl restart lokinet
+```
+
 ###Setting your DNS 
 
 If you are having issues with resolving .loki addresses then we need to edit your resolv.conf files and add your dns resolver.
-### Method 1:
+
+#### Method 1:
 
 Run the following command:
 ```
@@ -84,7 +118,7 @@ Then restart lokinet:
 systemctl restart lokinet
 ```
 
-### Method 2:
+#### Method 2:
 If Method 1 does not work we will need to add our nameserver manually.
 
 Run the following command: 
@@ -112,6 +146,14 @@ Then restart lokinet:
 
 ```
 systemctl restart lokinet
+```
+## Updating Lokinet
+
+
+To update lokinet run the following command:
+
+```
+sudo apt update && sudo apt install lokinet && sudo lokinet-bootstrap && sudo systemctl restart lokinet
 ```
 
 ### Finish
