@@ -14,12 +14,12 @@ The network does not rely on trusted authorities and its state is fully derived 
 |-------------------------------------------------------------------------	|---------------------------------------------------------------------------------------------	|
 | [Lokinet Public Testing Guide](../Lokinet/Guides/PublicTestingGuide.md) 	| Full Lokinet public testing guide.                                                          	|
 | [Linux Setup Guide](../Lokinet/Guides/lokinet-linux-guide.md)                            	| Linux preperation for accessing Lokinet.                                                           	|
-| [MAC Setup Guide](../Lokinet/Guides/lokinet-mac-guide.md)| Mac preperation for accessing Lokinet.|
+| [macOS Setup Guide](../Lokinet/Guides/lokinet-mac-guide.md)| Mac preperation for accessing Lokinet.|
 | [Windows Setup Guide](../Lokinet/Guides/lokinet-windows-guide.md)| Windows preperation for accessing Lokinet.|
-| [Linux - Build it yourself](../Lokinet/Guides/Install.md)| Windows preperation for accessing Lokinet.|
+| [Linux - Build it yourself](../Lokinet/Guides/Install.md)| How to build Lokinet from source.|
 | [Accessing SNApps](../Lokinet/Guides/AccessingSNApps.md)                	| How to access SNApps.                                                                       	|
 | [Joining a Lokinet IRC](../Lokinet/Guides/LokinetIRC.md)                	| Connect to an IRC chat over Lokinet.                                                        	|
 | [Hosting SNApps](../Lokinet/Guides/HostingSNApps.md)                    	| Host your own SNApp/Hidden Service.                                                         	|
 | [LLARP Github](https://github.com/loki-project/loki-network)            	| LLARP (low latency anonymous routing protocol), a layer 3 onion routing protocol.           	|
-| [Setting Up a Lokinet Router/Relay](../Lokinet/Guides/LokinetRouter.md)         	| How to host a relay on the test network.                                                    	|
+| [Setting up a Lokinet Router/Relay](../Lokinet/Guides/LokinetRouter.md)         	| How to host a relay on the test network.                                                    	|
 | [Lokinet config files](../Lokinet/Guides/LokinetConfig.md)              	| This guide shows the different config files and their associated sections, keys and values. 	|
