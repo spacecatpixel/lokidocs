@@ -105,7 +105,7 @@ sudo systemctl restart lokinet
 
 If you are having issues with resolving .loki addresses then we need to edit your resolv.conf files and add your dns resolver.
 
-#### Method 1:
+#### Method 1
 
 Run the following command:
 ```
@@ -118,7 +118,7 @@ Then restart lokinet:
 systemctl restart lokinet
 ```
 
-#### Method 2:
+#### Method 2
 If Method 1 does not work we will need to add our nameserver manually.
 
 Run the following command: 
@@ -147,6 +147,9 @@ Then restart lokinet:
 ```
 systemctl restart lokinet
 ```
+
+--- 
+
 ## Updating Lokinet
 
 
@@ -156,7 +159,9 @@ To update lokinet run the following command:
 sudo apt update && sudo apt install lokinet && sudo lokinet-bootstrap && sudo systemctl restart lokinet
 ```
 
-### Finish
+--- 
+
+## Finish
 
 Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#2-accessing-snapps).
 

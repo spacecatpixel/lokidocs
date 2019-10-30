@@ -97,7 +97,7 @@ nav:
         - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
 #        - 'Route through Exit Node': 'Lokinet/Guides/RouteThroughExitNode.md'
         - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
-        - 'Lokinet Router': 'Lokinet/Guides/LokinetRouter.md'
+        - 'Set up a Lokinet Router': 'Lokinet/Guides/LokinetRouter.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 
 - Messenger:

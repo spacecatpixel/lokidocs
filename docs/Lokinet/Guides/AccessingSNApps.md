@@ -9,7 +9,7 @@ SNApp operators use the traditional server-client model with the key difference 
 
 ## 1. Installing
 
-To install lokinet, see the install guide [here](../../Lokinet/Guides/Install.md).
+To install lokinet, see the install guide [here](../../Lokinet/Guides/lokinet-linux-guide.md).
 
 ## 2. Test services
 Jump onto a browser such as google chrome or firefox and try and go to one of the following SNApps:
