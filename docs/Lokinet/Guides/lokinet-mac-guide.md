@@ -50,14 +50,15 @@ Click on `+` in DNS servers list.
 
 Enter `127.0.0.1` as a DNS address:
 
-> Note: When adding our new DNS address make sure it is above your old one. 
+> Note: When adding the Lokinet DNS address make sure it sits above your default DNS server.
+> See below picture for reference.
 
 ![MacOS-DNS](../../assets/DNS.PNG)
 
 ---
 
 ## 5. Troubleshooting
-### Can't access `<string>`.loki addresses. 
+### Can't access .loki addresses. 
 
 This can be fixed by making sure your DNS is configured properly. See [step 4](#4-configure-dns).
 
