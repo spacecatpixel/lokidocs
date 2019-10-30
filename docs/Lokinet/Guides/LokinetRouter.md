@@ -108,13 +108,13 @@ Congratulations, your server is running as a relay in the Lokinet!
 To start lokinet router manually run the following command:
 
 ```
-sudo systemctl start lokinet
+sudo systemctl start lokinet-router
 ```
 
 and to stop lokinet manually run the following command:
 
 ```
-sudo systemctl stop lokinet
+sudo systemctl stop lokinet-router
 ```
 
 ---
