@@ -33,10 +33,10 @@ Loki has a number of different mining pools to choose from:
 
 | **Pool**                                         	| **Total Fee** 	| **Min. Payout (Loki)** 	|
 |--------------------------------------------------	|---------------	|------------------------	|
+| [aussie-pools.com](https://loki.aussie-pools.com/)| 0.5%            	| 1                   |
 | [miner.rocks](https://loki.miner.rocks/)         	| 0.9%          	| 0.5                    	|
 | [hashvault.pro](https://loki.hashvault.pro/)     	| 0.9%          	| 2                      	|
 | [fairpool.xyz](https://loki.fairpool.xyz/)       	| 1%            	| 1                      	|
-| [luxor.tech](https://mining.luxor.tech/setup?coinId=LOKI)| 1%            	| N/A                   |
 | [elasticpool.com](https://loki.elasticpool.com/) 	| 0.5%          	| 2                      	|
 
 Mining Loki in a mining pool requires the use of specific software such as XMR-STAK or XMRig. 
