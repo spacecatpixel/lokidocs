@@ -6,9 +6,9 @@ Author: Jason (jagerman), Johnathan (SonOfOtis)
 
 Source: [https://deb.imaginary.stream/](https://deb.imaginary.stream/)
 
-##Initial Setup for Linux
+## Initial Setup for Linux
 
-###1. Computer Preparation
+### 1. Computer Preparation
 We should update our package lists, the below command downloads the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
 
 Run the following command:
@@ -33,7 +33,7 @@ If you do not have curl installed on your computer then let's install it as we w
 sudo apt install curl
 ```
 
-###2. Installation
+### 2. Installation
 
 You only need to do this step the first time you want to set up the repository; when you've done it once, the repository will automatically update whenever you fetch new system updates.
 
@@ -50,6 +50,8 @@ The next command tells `apt` where to find the packages:
 ```
 echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
 ```
+
+> If you're deb is not recognised then check out [troubleshooting](#troubleshooting).
 
 Then resync your package repositories with:
 
@@ -88,7 +90,7 @@ sudo systemctl stop lokinet
 
 ## Troubleshooting
 
-###Failed to decode boostrap RC
+### Failed to decode boostrap RC
 
 If you find your bootstrap has not configured properly run the following command:
 ```
@@ -101,7 +103,16 @@ and then restart your lokinet
 sudo systemctl restart lokinet
 ```
 
-###Setting your DNS 
+
+### Linux Mint does not work with (lsb-release)
+
+It has been reported that Linux Mint users can use the following command instead of the second command in [2. Installation](#2-installation):
+
+```
+echo "deb https://deb.imaginary.stream bionic main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+```
+
+### Setting your DNS 
 
 If you are having issues with resolving .loki addresses then we need to edit your resolv.conf files and add your dns resolver.
 
@@ -159,7 +170,8 @@ To update lokinet run the following command:
 sudo apt update && sudo apt install lokinet && sudo lokinet-bootstrap && sudo systemctl restart lokinet
 ```
 
---- 
+---
+
 
 ## Finish
 
