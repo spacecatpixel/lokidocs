@@ -34,3 +34,19 @@ After reading through the dialogue boxes, hit install.
 You should now be connected. 
 
 ![Lokinet-launcher2](../../assets/lokinet-launcher2.PNG)
+
+---
+
+## Troubleshooting
+
+### Re-bootstrap
+
+If you are getting a bootstrap error code then go into `Settings` > `Bootstrap Client from Web...` > and then paste in the following url:
+
+```
+https://seed.lokinet.org/bootstrap.signed
+```
+
+![Bootstrap](../../assets/bootstrap.jpg)
+
+Click `OK` and then reconnect to Lokinet.
