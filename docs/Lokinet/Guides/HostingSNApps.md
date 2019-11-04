@@ -16,14 +16,19 @@ This SNapp will require no additional setup. You can continue to [step 2](#2-fin
 ### 1.2 Persistent SNApp
 Open up your `lokinet.ini` file and add a path to where your SNApp key files will be stored.
 
+If you have built Lokinet from the Deb packages you will find your lokinet.ini file with the following command:
 ```
-sudo nano ~/.lokinet/lokinet.ini
+sudo nano ~/etc/loki/lokinet.ini
+```
+Otherwise, if you have built Lokinet from source your `lokinet.ini` file will be in the following folder:
+```
+~/.lokinet/lokinet.ini
 ```
 
 Scroll down to your `[network]` section and add the following line:
 
 ```
-keyfile=/home/<user>/.lokinet/snappkey.private
+keyfile=/var/lib/lokinet/snappkey.private 
 ```
 
 Replacing `<user>` with your computer username, alternatively you can set the filepath to wherever you want your SNApp private key to be stored.
