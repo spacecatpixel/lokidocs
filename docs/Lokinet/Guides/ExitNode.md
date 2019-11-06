@@ -1,9 +1,9 @@
 title: Loki Documentation | Lokinet Exit Node Guide
-description: Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
+description: Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet or onion routing protocol. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
 
 # LokiNET Exit Node Guide
 
-Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
+Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet or onion router. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
 
 ## Client 
 
@@ -77,7 +77,7 @@ To unset the route everything over lokinet route do the following as root:
 
 ## Legal
 
-Running a Lokinet Exit node simply means that you are requesting and relaying packets of data on someone else's behalf, a vast majority of the traffic in mixnets comprised of legal and non malicious traffic. Statically over the course of running a [Service Node](../../ServiceNodes/SNOverview.md) you are likely to run into a few users who abuse their anonymity to send or receive information that may be explicitly malicious, therefor it is important that we discuss the legal implications of this malicious traffic.
+Running a Lokinet Exit node simply means that you are requesting and relaying packets of data on someone else's behalf, a vast majority of the traffic in mixnets and onion routers comprised of legal and non malicious traffic. Statically over the course of running a [Service Node](../../ServiceNodes/SNOverview.md) you are likely to run into a few users who abuse their anonymity to send or receive information that may be explicitly malicious, therefor it is important that we discuss the legal implications of this malicious traffic.
 
 In most countries Exit nodes are viewed in much the same way as ISP's are, that is that they are usually classed as data transmitters, which makes them exempt from criminal or civil liability based on the data they transmit. This means they are also covered by exceptions in the EUCD and DMCA laws which stipulate content regulation on the internet in the US and Europe respectively.
 

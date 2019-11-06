@@ -3,7 +3,7 @@ description: This guide will help you get Lokinet running on your machine, and g
 
 # Lokinet Public Testing Guide
 
-Thanks for your interest in the public testing phase of the Lokinet alpha. It’s taken many months to get to this point, but we’re grateful to everyone who wants to give this new type of mixnet a spin.
+Thanks for your interest in the public testing phase of the Lokinet alpha. It’s taken many months to get to this point, but we’re grateful to everyone who wants to give this new type of onion router a spin.
 
 This guide will help you get Lokinet running on your machine, and give you some example tasks on things you can do to help put the software through its paces and help us find places where it needs to be fixed or can be improved. The more machines we get this running on, and the more traffic (and types of traffic) we can push through this alpha network, the better.
 

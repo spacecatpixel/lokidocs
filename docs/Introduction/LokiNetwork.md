@@ -25,7 +25,7 @@ In addition, by rewarding the Service Nodes, the Service Nodes can be leveraged 
 To learn more about Service Nodes, [click here](../ServiceNodes/SNOverview.md).
 
 ## Lokinet
-Lokinet is a mixnet that uses market-based [Sybil attack resistance](../Advanced/SybilResistance.md) and [onion routing](../Lokinet/LLARP.md) to create a new way to privately access the [internet](https://www.youtube.com/watch?v=4KzH_eyX99A&t=2m48s). Users of Lokinet will be able to access normal websites and [SNApps](../Lokinet/SNApps.md) without revealing their IP address.
+Lokinet is network that uses market-based [Sybil attack resistance](../Advanced/SybilResistance.md) and [onion routing](../Lokinet/LLARP.md) to create a new way to privately access the [internet](https://www.youtube.com/watch?v=4KzH_eyX99A&t=2m48s). Users of Lokinet will be able to access normal websites and [SNApps](../Lokinet/SNApps.md) without revealing their IP address.
 
 SNApps are traditional web applications that sit inside Lokinet and are hidden from the rest of the internet. The host’s IP is never revealed, therefore SNApps provide great protection for the development of censorship resistant social media, marketplaces, information sharing sites, and other apps that depend on user and server anonymity.
 

@@ -75,7 +75,7 @@ General
 
 ###**What is Loki?**
 
-Loki provides users with tools to interact online in an anonymous, decentralised, secure and private way. By combining a private transaction network, the $LOKI cryptocurrency, economically incentivised [Service Nodes](../ServiceNodes/SNOverview), Loki is able to create a trustless quorum based mixnet called [Lokinet](../Lokinet/LokinetOverview). Built into Lokinet is [Loki Messenger](../LokiServices/Messenger) - a decentralised, anonymous and private messaging service. Front end applications, known as [Service Node Apps](../Lokinet/SNApps) (SNApps) operate on Lokinet, and will allow browser integration and contribution from our open-source community.
+Loki provides users with tools to interact online in an anonymous, decentralised, secure and private way. By combining a private transaction network, the $LOKI cryptocurrency, economically incentivised [Service Nodes](../ServiceNodes/SNOverview), Loki is able to create a trustless quorum based onion router called [Lokinet](../Lokinet/LokinetOverview). Built into Lokinet is [Loki Messenger](../LokiServices/Messenger) - a decentralised, anonymous and private messaging service. Front end applications, known as [Service Node Apps](../Lokinet/SNApps) (SNApps) operate on Lokinet, and will allow browser integration and contribution from our open-source community.
 
 ###**Is Loki Proof of Work (PoW) or Proof of Service (PoS)?**
 
@@ -146,7 +146,7 @@ Service Nodes
 
 ###**Why are Service Nodes required?**
 
-The [Service Nodes](../ServiceNodes/SNOverview) form a second layer network that allows for anonymous networking using a novel garlic routing technology. Service Nodes will route data being passed through our generalised mixnet, called [Lokinet](../Lokinet/LokinetOverview). [SNApps](../Lokinet/SNApps) are the front-end user-facing applications enabled by this network of Nodes. SNApps do not run on the blockchain, but rely on the consensus rules of the blockchain to enforce Service Node behaviours. This also means that SNApps do not impact blockchain scalabilty. Service Nodes don't mine blocks but do propagate and validate blocks like regular full nodes.
+The [Service Nodes](../ServiceNodes/SNOverview) form a second layer network that allows for anonymous networking using a novel garlic routing technology. Service Nodes will route data being passed through our onion router, called [Lokinet](../Lokinet/LokinetOverview). [SNApps](../Lokinet/SNApps) are the front-end user-facing applications enabled by this network of Nodes. SNApps do not run on the blockchain, but rely on the consensus rules of the blockchain to enforce Service Node behaviours. This also means that SNApps do not impact blockchain scalabilty. Service Nodes don't mine blocks but do propagate and validate blocks like regular full nodes.
 
 ###**Is there a concept of 'Masternodes' in Loki?**
 

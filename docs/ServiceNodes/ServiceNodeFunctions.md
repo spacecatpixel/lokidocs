@@ -17,7 +17,7 @@ Loki circumvents these issues by requiring each [Service Node](../ServiceNodes/S
 
 ### Exit Nodes
 
-Exit nodes allow users to make requests to the wider internet and return those requests through a [mixnet](../Lokinet/LLARP.md). If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
+Exit nodes allow users to make requests to the wider internet and return those requests through an [onion routing protocol](../Lokinet/LLARP.md). If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
 
 Although the operation of exit nodes is essential to Loki’s extended utility, forcing all [Service Node](../ServiceNodes/SNOverview.md) operators to act as exit nodes could be detrimental. Acting as an exit node may expose the operator to legal risks, as users of the exit node may perform malicious activity whilst using it as a proxy. As exit nodes simply relay traffic from the internet to the end user, exit nodes often receive Digital Millennium Copyright Act (DMCA) requests or are often assumed to be the source of hacking attempts. Although in most jurisdictions safe harboring laws may protect exit node operators, internet service providers that carry Service Node traffic on their servers may fear legal risks and often cut off service to the exit node.
 
