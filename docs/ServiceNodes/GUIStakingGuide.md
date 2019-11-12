@@ -5,7 +5,7 @@ description: This document helps individuals stake to a Loki Service Node. Loki 
 
 This document will tell you exactly how to stake via the Loki GUI wallet.
 
-The latest version of the wallet can be downloaded [here](https://github.com/loki-project/loki-gui/releases).
+The latest version of the wallet can be downloaded [here](https://github.com/loki-project/loki-electron-gui-wallet/releases).
 
 Please keep in mind, one can **only stake via an open pool with the GUI wallet**. If you would like to stake your own node or a create pool, please view the full guide on service nodes [here](../SNFullGuide).
 
