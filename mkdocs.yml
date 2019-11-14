@@ -14,7 +14,7 @@ theme:
      accent: 'green'
   direction: 'ltr'
   feature:
-    tabs: true     
+    tabs: true
   font: false
   favicon: 'Loki_favicon32x32.png'
   logo: 'logo.svg'
@@ -25,21 +25,21 @@ nav:
 - 'Getting Started': 'Introduction/GettingStarted.md'
 - 'FAQ': 'FAQ.md'
 
-- Wallets: 
+- Wallets:
   - 'Overview' : 'Wallets/WalletsOverview.md'
-  - 'What wallet to use?' : 'Wallets/WhatWalletToUse.md'
+  - 'Which wallet should I use?' : 'Wallets/WhatWalletToUse.md'
 
   - Addresses:
     - 'Main Address': 'Wallets/Addresses/MainAddress.md'
     - 'Sub Address': 'Wallets/Addresses/SubAddress.md'
     - 'Integrated Address': 'Wallets/Addresses/IntegratedAddress.md'
-#  - Web Wallet (LokiLocker): 
+#  - Web Wallet (LokiLocker):
 #      - 'Troubleshooting Web Wallet' : 'Wallets/WebWallet/TroubleshootWebWallet.md'
 #      - Guides:
 #        - 'to be added': 'Wallets/WebWallet/placeholder.md'
   - 'Multsignature': 'Wallets/Multisignature.md'
 
-  - Guides: 
+  - Guides:
         - 'Electron Gui Setup': 'Wallets/GuiWallet/loki-electron-guide.md'
 #        - 'Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
         - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
@@ -104,7 +104,7 @@ nav:
     - 'Messenger': 'LokiServices/Messenger.md'
 - Blink:
     - 'Blink': 'LokiServices/Blink.md'
-- Checkpointing: 
+- Checkpointing:
     - 'Checkpointing LIP': 'Advanced/CheckpointingLip3.md'
     - 'Safely Receiving Loki': 'Advanced/CheckpointingUpdate.md'
 - Pulse:
@@ -128,7 +128,7 @@ nav:
        - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
        - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
        - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
-    
+
     - Contributing:
        - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
        - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
@@ -149,7 +149,7 @@ nav:
     - Guides:
 #        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
-        - 'Debugging': 'Advanced/Debugging.md'      
+        - 'Debugging': 'Advanced/Debugging.md'
         - 'Accepting Loki for Merchants and Exchanges': 'Advanced/AcceptingLoki.md'
 
 # Customization
@@ -187,4 +187,3 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
-

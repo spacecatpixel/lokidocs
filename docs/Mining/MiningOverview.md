@@ -1,11 +1,11 @@
 title: Loki Documentation | Loki's Cryptonote Mining Overview
-description: The Loki cryptocurrency can be mined through the RandomXL hashing algorithm. Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain. 
+description: The Loki cryptocurrency can be mined through the RandomXL hashing algorithm. Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain.
 
 
 # What is Cryptocurrency Mining?
-Cryptocurrency Mining is the process of extracting Cryptocurrencies for securing and verifying transactions made on the blockchain. 
+Cryptocurrency Mining is the process of extracting Cryptocurrencies as a reward for securing and verifying transactions made on the blockchain.
 
-Miners use computers to work on computational puzzles that change their difficulty depending on the number of miners on the network. The difficulty changes to enforce that the blocks are mined at similar time intervals, also known as the Block Generation Time. Each block generated produces a predetermined amount of cryptocurrency to the individual or party who found the solution to the puzzle. This reward is commonly known as the [Block Reward](../Advanced/Cryptoeconomics.md) and is coded to reduce its emission over time.
+Miners use computers to work on computational puzzles that change in difficulty depending on the number of miners on the network. The difficulty changes in order to enforce that the blocks are mined at similar time intervals, also known as the Block Generation Time. Each generated block provides a reward in the form of a predetermined amount of cryptocurrency to the individual or party who found the solution to the puzzle. This reward is commonly known as the [Block Reward](../Advanced/Cryptoeconomics.md) and is coded to reduce its emission over time.
 
 ## Mining Loki
 
@@ -13,17 +13,13 @@ The Loki cryptocurrency can be mined through the RandomXL hashing algorithm.
 
 ## How to mine Loki.
 
-**Please note:** Unfortunately because of some bad people using mining software in malware, most antivirus software will detect the programs below as unsafe.
+**Please note:** Unfortunately (because of some bad people using mining software in malware), most antivirus software will detect the programs below as unsafe.
 
 It is **likely** you will need to add exceptions and exclusions to your antivirus software in order to make things work properly.
 
 Unless you know what you are doing, please ***only*** download from the links below.
 
 You can currently use [XMR-Stak](https://github.com/fireice-uk/xmr-stak) to mine Loki.
-
-## Pools
-
-You may view a comprehensive list of pools [here](#mining-pools).
 
 ### Mining Pools
 
@@ -39,12 +35,12 @@ Loki has a number of different mining pools to choose from:
 | [fairpool.xyz](https://loki.fairpool.xyz/)       	| 1%            	| 1                      	|
 | [elasticpool.com](https://loki.elasticpool.com/) 	| 0.5%          	| 2                      	|
 
-Mining Loki in a mining pool requires the use of specific software such as XMR-STAK or XMRig. 
- 
+Mining Loki in a mining pool requires the use of specific software such as XMR-STAK or XMRig.
+
 
 ## Resources
 
 The following are useful guides or resources for mining:
 
-- [List of Loki mining pools](https://miningpoolstats.stream/loki): Full list of all Loki mining pools.
-- [ASIC Resistance](../Mining/ASICResistance.md): How Loki is ASIC resistant.
+- [List of Loki mining pools](https://miningpoolstats.stream/loki): Comprehensive list of all Loki mining pools.
+- [ASIC Resistance](../Mining/ASICResistance.md): Information on Loki's ASIC resistance.
