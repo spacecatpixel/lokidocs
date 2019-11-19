@@ -101,7 +101,9 @@ nav:
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 
 - Messenger:
-    - 'Messenger': 'LokiServices/Messenger.md'
+    - 'Messenger': 'LokiServices/Messenger/Messenger.md'
+    - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
+
 - Blink:
     - 'Blink': 'LokiServices/Blink.md'
 - Checkpointing:
@@ -121,7 +123,6 @@ nav:
 
     - Loki Services:
        - 'Overview': 'LokiServices/LokiServicesOverview.md'
-       - 'Messenger' : 'LokiServices/Messenger.md'
        - 'Blink': 'LokiServices/Blink.md'
 
     - Attack Prevention:

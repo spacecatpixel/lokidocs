@@ -20,7 +20,7 @@ To learn more about mining, [click here](../Mining/MiningOverview.md).
 ## Service Nodes
 Loki utilises a network of [Service Nodes](../ServiceNodes/SNOverview.md) which are paid to propagate the blockchain and process transactions. Service Nodes require a [collateral](../ServiceNodes/SNOverview.md) of Loki to be active, and this gives the Loki network built-in market-based [Sybil resistance](../Advanced/SybilResistance.md) by forcing actors to incur a large cost in order to attempt any form of temporal analysis on the network.
 
-In addition, because Service Nodes are rewarded for staying active on the network, they can be leveraged to maintain the [Lokinet](../Lokinet/LokinetOverview.md) by [routing traffic](../Lokinet/LLARP.md). Service Nodes are also leveraged to maintain the [Loki Services](../LokiServices/LokiServicesOverview.md) by handling special off-chain activities, as seen in the case of [Loki Messenger](../LokiServices/Messenger.md).
+In addition, because Service Nodes are rewarded for staying active on the network, they can be leveraged to maintain the [Lokinet](../Lokinet/LokinetOverview.md) by [routing traffic](../Lokinet/LLARP.md). Service Nodes are also leveraged to maintain the [Loki Services](../LokiServices/LokiServicesOverview.md) by handling special off-chain activities, as seen in the case of [Loki Messenger](../LokiServices/Messenger/Messenger.md).
 
 To learn more about Service Nodes, [click here](../ServiceNodes/SNOverview.md).
 
