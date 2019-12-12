@@ -23,7 +23,7 @@ As a Service Node stays active they earn "credits" which are used during potenti
 |--------------------------|------------------------------------------------------------------------|
 | `INITIAL_CREDIT`         | 60 blocks (~2 hours) of decommission time.                             |
 | `CREDIT_PER_DAY`         | 24 blocks (~0.8 hours) of decommission time.                           |
-| `DECOMMISSION_MAX_CREDIT`| 720 blocks (~24 hours) of decommssion time.                            |
+| `DECOMMISSION_MAX_CREDIT`| 1440 blocks (~48 hours) of decommssion time.                            |
 | `MINIMUM`                | 60 blocks(~2 hours) of decomission time.|
 
 **Example**:
