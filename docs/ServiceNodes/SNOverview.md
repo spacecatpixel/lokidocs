@@ -25,8 +25,8 @@ We support three different mechanisms of managing the loki service node suite:
 
 | Method                                                                      | Description                                                                                                                                                      |
 |-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Loki Launcher](../ServiceNodes/SNFullGuide.md)                             | Using loki-launcher to download, start, monitor, and manage service node components.  Has built-in updating capabilities for new releases.  Requires nodejs.     |
 | [Apt Repository](../ServiceNodes/DebianPackageGuide.md)                     | Installing debs via apt repository which installs and runs the components via systemd.  Updates via the system package manager(apt).  Requires Ubuntu or Debian. |
+| [Loki Launcher](../ServiceNodes/SNFullGuide.md)                             | Using loki-launcher to download, start, monitor, and manage service node components.  Has built-in updating capabilities for new releases.  Requires nodejs.     |
 | [Installing and Configuring Manually](../ServiceNodes/SNFullGuideLegacy.md) | Installing and configuring manually.  This is more involved than the above, and requires manual configurating and updating of each component.                    |
 
 ## Service Node Activities
