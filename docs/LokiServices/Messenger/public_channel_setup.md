@@ -22,60 +22,139 @@ Use this guide for additional troubleshooting help:
 - [https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/](https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/)
 
 ### Remove any possibly previously installed docker installations
-`sudo apt-get remove docker docker-engine docker.io`
+
+```
+sudo apt-get remove docker docker-engine docker.io
+```
 
 ### Install official docker repo
-- `sudo apt-get update`
-- `sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common`
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+```
 
 #### For Debian
-- `curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -`
-- `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"`
+
+```
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+```
+
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+```
 
 #### For Ubuntu
-- `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
-- `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
+
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
 
 ### Install and test Docker
-- `apt-get update`
-- `sudo apt-get install docker-ce`
-- To check to make sure it's all working: `docker run hello-world`
+
+```
+apt-get update
+```
+
+```
+sudo apt-get install docker-ce
+```
+
+To check to make sure it's all working: 
+```
+docker run hello-world
+```
 
 ## 2. Install docker-compose
 
 ### Create docker-compose script
-`curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+
+```
+curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
 ### Make sure it's executable
-`chmod u+x /usr/local/bin/docker-compose`
+```
+chmod u+x /usr/local/bin/docker-compose
+```
 
 ## 3. Install LMPCS
-- `git clone https://github.com/neuroscr/loki-messenger-public-server.git`
+
+```
+git clone https://github.com/neuroscr/loki-messenger-public-server.git
+```
 
 ### Install LMPCS git submodules
-- `cd loki-messenger-public-server`
-- `git submodule init`
-- `git submodule update`
+
+```
+cd loki-messenger-public-server
+```
+
+```
+git submodule init
+```
+
+```
+git submodule update
+```
 
 ### Make sure permissions on acme.json is correct
-`chmod 600 docker/acme.json`
+
+```
+chmod 600 docker/acme.json
+```
 
 ### Set up config
-- `cp loki_template.ini loki.ini`
 
-### Get your PUBKEY
-- replace PUBKEY with your key and run `echo "PUBKEY=true" >> loki.ini`
+```
+cp loki_template.ini loki.ini
+```
+
+### Add first moderator
+
+To add the first moderator replace PUBKEY with the desired moderators Loki Messenger public key and run `echo "PUBKEY=true" >> loki.ini`.
+> This initial step is required however you can add additional moderators through Loki Messenger desktop interace.
 
 ### Start it
+
 Replace `your@email.tld` with your email address and `yourssl.domain.tld` with your public facing hostname. These are required for getting an SSL certification from LetsEncrypt which we will attempt to automatically do for you.
 
-`EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose up -d`
+```
+EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose up -d
+```
 
 ## Upgrade instruction
-- make sure you're in `loki-messenger-public-server`
-- `EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose down` to stop it from running
-- `git pull` to grab the latest source and configs
-- `EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose build` to update the local docker images
-- `EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose up -d` to restart the server.
+
+Make sure you're in `loki-messenger-public-server` folder.
+
+Run the following commands:
+
+To stop the software running:
+```
+EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose down
+``` 
+
+To grab the latest source and configs:
+```
+git pull
+```
+
+To update the local docker images:
+```
+EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose build
+```
+
+To restart the server:
+```
+EMAIL=your@email.tld DOMAIN=yourssl.domain.tld docker-compose up -d
+```
 
 ## Getting Help
 
