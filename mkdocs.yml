@@ -103,6 +103,7 @@ nav:
 - Messenger:
     - 'Messenger': 'LokiServices/Messenger/Messenger.md'
     - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
+    - 'Public Channel Setup': 'LokiServices/Messenger/public_channel_setup.md'
 
 - Blink:
     - 'Blink': 'LokiServices/Blink.md'
