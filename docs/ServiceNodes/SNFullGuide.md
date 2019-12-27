@@ -291,16 +291,10 @@ To exit out of the client click `CTRL + C`.
 
 We are going to need to fix our user "snode"s permissions with the loki-launcher.
 
-To do this we need to swap back to root:
-
-```
-su - root
-```
-
 Next run the following command to fix permissions: 
 
 ```
-loki-launcher fix-perms <USER>
+sudo loki-launcher fix-perms <USER>
 ```
 
 Replacing `<USER>` with `snode` or the username that you created.
@@ -324,18 +318,6 @@ fixing blockchain.data_dir file /home/snode/.loki/lmdb
 fixing blockchain.data_dir file /home/snode/.loki/storage/storage.logs
 fixing blockchain.data_dir file /home/snode/.loki/storage
 fixing blockchain.data_dir file /home/snode/.loki
-```
-
-Once the permissions have been set let's change back to our other user `snode` by running the following command:
-
-```
-su - snode
-```
-
-Now let's get the loki-launcher started again:
-
-```
-sudo loki-launcher start
 ```
 
 #### 4.2 - Creating the Service File
@@ -784,6 +766,12 @@ Then run the following command to download the new binaries:
 
 ```
 loki-launcher download-binaries
+```
+
+Fix permissions for Lokinet if you aren't running as root: 
+
+```
+sudo loki-launcher fix-perms <USER>
 ```
 
 Start lokid.service again:
