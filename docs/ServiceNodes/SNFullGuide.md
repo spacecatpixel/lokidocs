@@ -768,7 +768,8 @@ Then run the following command to download the new binaries:
 loki-launcher download-binaries
 ```
 
-Fix permissions for Lokinet if you aren't running as root: 
+Fix permissions for Lokinet if you aren't running as root, 
+`<USER>` should be replaced with the username your Service Node runs under - if you followed this guide it will be snode:
 
 ```
 sudo loki-launcher fix-perms <USER>
