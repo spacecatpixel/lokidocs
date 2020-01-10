@@ -62,7 +62,7 @@ You will be prompted to authorise the use of disk space, type `y` and enter to a
 You will need to install some build dependencies, run the following command to install all the build dependencies required for Lokinet:
 
 ```
-sudo apt install build-essential cmake libcap-dev wget git resolvconf curl libuv1-dev
+sudo apt install build-essential cmake libcap-dev wget git resolvconf curl libuv1-dev libsodium-dev libcurl4-openssl-dev
 ```
 
 
