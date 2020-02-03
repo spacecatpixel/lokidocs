@@ -20,7 +20,7 @@ To learn more about mining, [click here](../Mining/MiningOverview.md).
 ## Service Nodes
 Loki utilises a network of [Service Nodes](../ServiceNodes/SNOverview.md) which are paid to propagate the blockchain and process transactions. Service Nodes require a [collateral](../ServiceNodes/SNOverview.md) of Loki to be active, and this gives the Loki network built-in market-based [Sybil resistance](../Advanced/SybilResistance.md) by forcing actors to incur a large cost in order to attempt any form of temporal analysis on the network.
 
-In addition, because Service Nodes are rewarded for staying active on the network, they can be leveraged to maintain the [Lokinet](../Lokinet/LokinetOverview.md) by [routing traffic](../Lokinet/LLARP.md). Service Nodes are also leveraged to maintain the [Loki Services](../LokiServices/LokiServicesOverview.md) by handling special off-chain activities, as seen in the case of [Loki Messenger](../LokiServices/Messenger/Messenger.md).
+In addition, because Service Nodes are rewarded for staying active on the network, they can be leveraged to maintain the [Lokinet](../Lokinet/LokinetOverview.md) by [routing traffic](../Lokinet/LLARP.md). Service Nodes are also leveraged to maintain the [Loki Services](../LokiServices/LokiServicesOverview.md) by handling special off-chain activities, as seen in the case of [Session](../LokiServices/Messenger/Messenger.md).
 
 To learn more about Service Nodes, [click here](../ServiceNodes/SNOverview.md).
 
@@ -32,7 +32,7 @@ SNApps are traditional web applications that sit inside Lokinet and are hidden f
 To learn more about Lokinet, [click here](../Lokinet/LokinetOverview.md).
 
 ## Loki Services
-Loki Services are back-end user-facing applications, such as [Loki Messenger](../LokiServices/LokiServicesOverview.md) and [Blink](../LokiServices/Blink.md). Off-chain networking and/or storage activities for these services are handled by [swarms](../Advanced/SwarmFlagging.md), groups of [Service Nodes](../ServiceNodes/SNOverview.md) who query each other to enforce each other's honesty. This creates a trustless environment where no centralised leader can enforce censorship on any of the off-chain activities being conducted on the Loki Network.
+Loki Services are back-end user-facing applications, such as [Session](../LokiServices/LokiServicesOverview.md) and [Blink](../LokiServices/Blink.md). Off-chain networking and/or storage activities for these services are handled by [swarms](../Advanced/SwarmFlagging.md), groups of [Service Nodes](../ServiceNodes/SNOverview.md) who query each other to enforce each other's honesty. This creates a trustless environment where no centralised leader can enforce censorship on any of the off-chain activities being conducted on the Loki Network.
 
 To learn more about Loki Services, [click here](../LokiServices/LokiServicesOverview.md).
 

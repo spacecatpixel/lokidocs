@@ -1,8 +1,8 @@
-# Loki Messenger Public Channel Setup
+# Session Public Channel Setup
 
-An express REST API for serving persistence history public chat rooms for Loki Messenger. These channels are not limited in size as they are hosted by your own server. Please be aware these are PUBLIC channels and sensitive private information should not be shared in this group format.
+An express REST API for serving persistence history public chat rooms for Session. These channels are not limited in size as they are hosted by your own server. Please be aware these are PUBLIC channels and sensitive private information should not be shared in this group format.
 
-It's run by 2 daemons, the platform servers providing an ADN standard REST API and another with Loki Messenger specific behaviors (crypto-key registration and enhanced moderation functions).
+It's run by 2 daemons, the platform servers providing an ADN standard REST API and another with Session specific behaviors (crypto-key registration and enhanced moderation functions).
 
 ## Requirements:
 - VPS
@@ -119,8 +119,8 @@ cp loki_template.ini loki.ini
 
 ### Add first moderator
 
-To add the first moderator replace PUBKEY with the desired moderators Loki Messenger public key and run `echo "PUBKEY=true" >> loki.ini`.
-> This initial step is required however you can add additional moderators through Loki Messenger desktop interace.
+To add the first moderator replace PUBKEY with the desired moderators Session public key and run `echo "PUBKEY=true" >> loki.ini`.
+> This initial step is required however you can add additional moderators through Session desktop interace.
 
 ### Start it
 
@@ -162,6 +162,6 @@ If something in this guide isn’t making sense, or if you’re running into iss
 
 ## Reporting Bugs
 
-After you have sought out for help through our communication channels and have not come to any solutions we recommend opening up a issue ticket on the [Loki messenger public server](https://github.com/loki-project/loki-messenger-public-server/issues) repository.
+After you have sought out for help through our communication channels and have not come to any solutions we recommend opening up a issue ticket on the [Session public server](https://github.com/loki-project/loki-messenger-public-server/issues) repository.
 
 Please use the following Github Issue Template for any github issues created: [Github Issue Template Example](../../../Contributing/Issue_Template/).

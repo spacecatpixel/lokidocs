@@ -1,16 +1,18 @@
-title: Loki Docs | Decentralised end-to-end encrypted Private Messenger
-description: The first Loki service to has been developed and deployed on the Loki network is a decentralised, end-to-end encrypted private messaging application called Loki Messenger.
+title: Loki Docs | Session | Decentralised end-to-end encrypted Private Messenger 
+description: The first Loki service to has been developed and deployed on the Loki network is a decentralised, end-to-end encrypted private messaging application called Session.
 
-# Loki Messenger
+# Session
 
-The first Loki service to has been developed and deployed on the Loki network is a decentralised, end-to-end encrypted private messaging application called Loki Messenger.
+The first Loki service which has been developed and deployed on the Loki network is a decentralised, end-to-end encrypted private messaging application called [Session](https://getsession.org).
 
 End-to-end encrypted messaging applications that provide a platform for users to send messages without revealing their contents already exist, however they rely on centralised servers that can be targeted, blocked and shut down.  These  centralised  service  models present a high-risk for the anonymity of communicating parties, as they often require the user to register a phone number or other identifying information and connect directly via the IP address of the user. This information could be extracted from servers through data leaks or legal processes and used against the user. Leveraging the [Service Nodes](../../ServiceNodes/SNOverview.md) architecture on the Loki network, we can deliver a service similar to popular centralised encrypted messaging apps, such as Signal, with a higher degree of privacy and censorship resistance.
 
+![OnlineMessaging](../../assets/sessionmockup.png)
+
 ## Download Links
 
-Head over to the Loki Get Started Page to get your Loki Messenger download Links:<br>
-[Loki Get Started](https://loki.network/getstarted/)
+Head over to the Session website to get your Session download Links:<br>
+[Download](https://getsession.org)
 
 ## Messenger Routing
 
@@ -32,9 +34,9 @@ If Alice fails to receive a response from Bob, she can then initiate the offline
 
 ## Messenger Encryption and Authentication
 
-Once a message chain is established, Loki Messenger enforces Perfect Forward Secrecy (PFS) and Deniable Authentication (DA). PFS and DA are key concepts of the Off The Record (OTR)  messaging  protocol.  Centralised  services,  such  as Signal and WhatsApp, use off the existing Tox protocol, which is a distributed, peer-to-peer instant messaging protocol that uses the highly audited [NaCl library](https://nacl.cr.yp.to/). 
+Once a message chain is established, Session enforces Perfect Forward Secrecy (PFS) and Deniable Authentication (DA). PFS and DA are key concepts of the Off The Record (OTR)  messaging  protocol.  Centralised  services,  such  as Signal and WhatsApp, use off the existing Tox protocol, which is a distributed, peer-to-peer instant messaging protocol that uses the highly audited [NaCl library](https://nacl.cr.yp.to/). 
 
-PFS enables resistance from attacks where a long-term key is exposed.  A new shared encryption key is used for each session, so if a single session key is revealed, the whole message chain  is  not  compromised. If a third-party wanted  to  break  the  encryption  of  a  message chain they would need to obtain the keys for every individual session. PFS ensures that Loki Messenger is extremely difficult to compromise when compared to existing methods, such as
+PFS enables resistance from attacks where a long-term key is exposed.  A new shared encryption key is used for each session, so if a single session key is revealed, the whole message chain  is  not  compromised. If a third-party wanted  to  break  the  encryption  of  a  message chain they would need to obtain the keys for every individual session. PFS ensures that Session is extremely difficult to compromise when compared to existing methods, such as
 Pretty Good Privacy (PGP) encryption, where only one long-term key pair is required to compromise the whole message chain.
 
 DA refers to the ability for two parties to prove to each other that they are the sender of each new message. However, a third-party cannot ascertain who the true sender of any message is. When using DA, Message Authentication Codes (MACs) are published after each session, allowing third-parties to plausibly create messages that appear as if they originate from the senders public address. When correctly implemented, it is impossible for any third-party to prove that a sender of a specific message was the actual sender.
@@ -42,4 +44,4 @@ DA refers to the ability for two parties to prove to each other that they are th
 ### User Authentication
 Authentication of users is important to ensure protection against man-in-the-middle attacks. For example, if Bob is expecting a message from Alice but does not yet know what her public key is, then a third-party (Eve), could send a message to Bob pretending to be Alice. This is why users should authenticate each other before sharing personal information.
 
-Like Pidgin and other OTR messaging services, Loki Messenger uses Pre-Shared Key (PSK) authentication. Users have  multiple options for the establishment of a PSK. They can establish a key out-of-band, or alternatively, they can agree on a PSK over Loki Messenger by 9 asking the other a question which no third-party would know the answer. Loki will implement PSK  authentication based on a modified version of the [Pidgin encryption](http://pidgin-encrypt.sourceforge.net/) authentication plugin.
+Like Pidgin and other OTR messaging services, Session uses Pre-Shared Key (PSK) authentication. Users have  multiple options for the establishment of a PSK. They can establish a key out-of-band, or alternatively, they can agree on a PSK over Session by 9 asking the other a question which no third-party would know the answer. Loki will implement PSK  authentication based on a modified version of the [Pidgin encryption](http://pidgin-encrypt.sourceforge.net/) authentication plugin.

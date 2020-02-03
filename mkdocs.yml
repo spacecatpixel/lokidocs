@@ -100,8 +100,8 @@ nav:
         - 'Set up a Lokinet Router': 'Lokinet/Guides/LokinetRouter.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 
-- Messenger:
-    - 'Messenger': 'LokiServices/Messenger/Messenger.md'
+- Session:
+    - 'Session': 'LokiServices/Messenger/Messenger.md'
     - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
     - 'Public Channel Setup': 'LokiServices/Messenger/public_channel_setup.md'
 

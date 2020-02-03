@@ -33,7 +33,7 @@ All nodes are also expected to respond to queries of their own bandwidth tables 
 
 ### Message Storage Test
 
-Message storage is essential for offline messaging functionality for users of [Loki Messenger](../LokiServices/Messenger/Messenger.md). [Service Nodes](../ServiceNodes/SNOverview.md) must be tested for their ability to cache messages and serve them to users over the course of the message’s Time-to-live (TTL).
+Message storage is essential for offline messaging functionality for users of [Session](../LokiServices/Messenger/Messenger.md). [Service Nodes](../ServiceNodes/SNOverview.md) must be tested for their ability to cache messages and serve them to users over the course of the message’s Time-to-live (TTL).
 
 Users sending offline messages randomly select a Service Node within the destination users swarm. This node must distribute a copy of the message amongst the rest of the swarm. Depending on the proof-of-work attached to the header of the message, Service Nodes that receive a copy will store the data for the TTL. As the TTL on the original message reaches finality, the distributing node sends a nonce to all other members of the swarm. The swarm uses the nonce adding it to the message then  hashing  the result  and  then finally  sending it back to the distributing node. This test ensures that Service Nodes hold messages until TTL finality, and face eviction if they are unable to produce the correct message digest. As the sampling of the distributing node is random, over time each Service Node will be able to collect performance data on their swarm peers.
 
