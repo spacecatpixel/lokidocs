@@ -86,17 +86,18 @@ For most users, we assume that your home internet connection is relatively slow 
 
 Typically, the easiest and cheapest way to host a server outside of your home is to use a Virtual Private Server (VPS). There are thousands of options when it comes to VPS providers, but for now, just about any one will do. In the future, selection will be made more difficult because most providers will not allow exit node traffic, so we have compiled a list of exit node friendly providers to choose from if you want to stay with your provider for more than a few months.
 
-|Hosting Provider| Product Name | Cost Per Month $USD | Bandwidth Provided | Exit Friendliness Rating |
-|--------------------|-----------------|----------------------------|--------------------|-------|
-|Netcup|VPS 1000 G8|10.50|30 - 35 MiB’s|5 / 10
-|Online.net|Start-2-S-SSD|13.99|15 - 17 MiB’s|9 / 10|
-|Scaleway|START1-M|9.33|20 - 25 MiB’s|7 / 10
-|OVH|VPS SSD 2|7.61|9 - 1 MiB’s|9 / 10|
-|Leaseweb|Virtual Server XL|34.45|30 - 35 MiB’s|5 / 10
-|Digital Ocean|2 GB, 2 vCPUs|15|9 - 11 MiB’s|8 / 10
-|Feral Hosting|Neon Capability|19.68|9 - 11 MiB’s|9 / 10
-|Trabia|VDS-8G|38.54|9 - 11 MiB’s|8 / 10
-|Hetzner|EX41-SSD (30 TB)|39.71|40 - 80 MiB’s|4 / 10
+|Hosting Provider| Product Name | Cost Per Month $USD | Bandwidth Provided | Exit Friendliness Rating | Accepts Loki? |
+|--------------------|-----------------|----------------------------|--------------------|-------|----|
+|Netcup|VPS 1000 G8|10.50|30 - 35 MiB’s|5 / 10| |
+|Evolution Host| STARTER | 5.50 | 9 - 1 MiB’s | 9/10| YES |
+|Online.net|Start-2-S-SSD|13.99|15 - 17 MiB’s|9 / 10| |
+|Scaleway|START1-M|9.33|20 - 25 MiB’s|7 / 10| |
+|OVH|VPS SSD 2|7.61|9 - 1 MiB’s|9 / 10| |
+|Leaseweb|Virtual Server XL|34.45|30 - 35 MiB’s|5 / 10| |
+|Digital Ocean|2 GB, 2 vCPUs|15|9 - 11 MiB’s|8 / 10| |
+|Feral Hosting|Neon Capability|19.68|9 - 11 MiB’s|9 / 10| |
+|Trabia|VDS-8G|38.54|9 - 11 MiB’s|8 / 10| |
+|Hetzner|EX41-SSD (30 TB)|39.71|40 - 80 MiB’s|4 / 10| |
 
 >Note: We do not officially endorse any of these providers, this list is simply illustrative of some of the options currently available*
 
