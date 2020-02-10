@@ -206,7 +206,7 @@ Session
 
 ### What is Session?
 
-Session is a secure messaging app that protects your metadata, encrypts your communications and makes sure your messaging activities leave no digital trail behind.
+[Session](https://getsession.org) is a secure messaging app that protects your metadata, encrypts your communications and makes sure your messaging activities leave no digital trail behind.
 
 ### Why should I trust Session?
 
