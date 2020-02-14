@@ -102,8 +102,11 @@ nav:
 
 - Session:
     - 'Session': 'LokiServices/Messenger/Messenger.md'
-    - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
-    - 'Public Channel Setup': 'LokiServices/Messenger/public_channel_setup.md'
+    - Guides:
+        - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
+        - 'Public Channel Setup': 'LokiServices/Messenger/public_channel_setup.md'
+        - 'Join Open Group on Mobile': 'LokiServices/Messenger/JoinOpenGroupMobile.md'
+        - 'Join Open Group on Desktop': 'LokiServices/Messenger/JoinOpenGroupDesktop.md'
 
 - Blink:
     - 'Blink': 'LokiServices/Blink.md'
