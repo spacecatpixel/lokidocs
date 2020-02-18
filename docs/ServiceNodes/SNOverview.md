@@ -37,7 +37,7 @@ It is also worth noting that Service Nodes are quite basic at the moment, and op
 
 -   Route end user’s internet traffic, either as an [exit node](/ServiceNodes/ServiceNodeFunctions/#exit-nodes) or relay
     
--   Receive, store and forward [encrypted user messages](../LokiServices/Messenger/Messenger.md)
+-   Receive, store and forward [encrypted user messages](../LokiServices/Messenger/Session.md)
     
 -   Monitor other Service Nodes and [vote on their performance](../Advanced/SwarmFlagging.md)
     

@@ -106,7 +106,7 @@ General
 
 ###**What is Loki?**
 
-Loki provides users with tools to interact online in an anonymous, decentralised, secure and private way. By combining a private transaction network, the $LOKI cryptocurrency, and economically incentivised [Service Nodes](../ServiceNodes/SNOverview), Loki has created a trustless quorum-based onion router called [Lokinet](../Lokinet/LokinetOverview). Built into Lokinet is [Session](../LokiServices/Messenger) — a decentralised, anonymous and private messaging service. Front end applications, known as [Service Node Apps](../Lokinet/SNApps) (SNApps) operate on Lokinet, and will allow browser integration and contribution from our open-source community.
+Loki provides users with tools to interact online in an anonymous, decentralised, secure and private way. By combining a private transaction network, the $LOKI cryptocurrency, and economically incentivised [Service Nodes](../ServiceNodes/SNOverview), Loki has created a trustless quorum-based onion router called [Lokinet](../Lokinet/LokinetOverview). Built into Lokinet is [Session](../LokiServices/Session) — a decentralised, anonymous and private messaging service. Front end applications, known as [Service Node Apps](../Lokinet/SNApps) (SNApps) operate on Lokinet, and will allow browser integration and contribution from our open-source community.
 
 ###**Is Loki Proof of Work (PoW) or Proof of Service (PoS)?**
 
@@ -309,4 +309,4 @@ Loki Services
 
 ### **What is Session?**
 
-[Session](../LokiServices/Messenger) is a decentralised, end-to-end encrypted private messaging service. Many other encrypted private messengers rely on central servers to route traffic. Session leverages the power of public-private key cryptography and the [Loki Service Node](../ServiceNodes/SNOverview) architecture on the Loki network to create a service similar to the secure messaging application Signal, but with the added benefit of decentralisation and network anonymity.
+[Session](../LokiServices/Session) is a decentralised, end-to-end encrypted private messaging service. Many other encrypted private messengers rely on central servers to route traffic. Session leverages the power of public-private key cryptography and the [Loki Service Node](../ServiceNodes/SNOverview) architecture on the Loki network to create a service similar to the secure messaging application Signal, but with the added benefit of decentralisation and network anonymity.

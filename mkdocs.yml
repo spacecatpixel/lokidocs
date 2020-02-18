@@ -101,7 +101,7 @@ nav:
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 
 - Session:
-    - 'Session': 'LokiServices/Messenger/Messenger.md'
+    - 'Session': 'LokiServices/Messenger/Session.md'
     - Guides:
         - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
         - 'Public Channel Setup': 'LokiServices/Messenger/public_channel_setup.md'
