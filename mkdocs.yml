@@ -104,6 +104,7 @@ nav:
     - 'Session': 'LokiServices/Messenger/Session.md'
     - 'Threat Models': 'LokiServices/Messenger/threat_model.md'
     - 'Infrastructure': 'LokiServices/Messenger/infrastructure.md'
+    - 'Message Routing': 'LokiServices/Messenger/message_routing.md'
     - Guides:
         - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
         - 'Public Channel Setup': 'LokiServices/Messenger/opengroup_setup.md'
