@@ -36,6 +36,14 @@ Loki Services are back-end user-facing applications, such as [Session](../LokiSe
 
 To learn more about Loki Services, [click here](../LokiServices/LokiServicesOverview.md).
 
+## Session
+
+Session is an end-to-end encrypted messenger that removes sensitive metadata collection, and is designed for people who want privacy and freedom from any forms of surveillance.
+
+Session is one of the best private messengers to use as it does not require phone numbers or a central server. All the messages are routed through the service nodes which in turn offers a [sybil resistant](../Advanced/SybilResistance.md) and censor resistant messaging platform.
+
+To learn more about Session, [click here](../LokiServices/Messenger/Session.md).
+
 ## Advanced
 Learn more about Loki by browsing through the Advanced section. Topics that are covered include:
 

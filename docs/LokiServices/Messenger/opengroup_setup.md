@@ -1,4 +1,4 @@
-# Session Public Channel Setup
+# Session OpenGroup Setup
 
 An express REST API for serving persistence history public chat rooms for Session. These channels are not limited in size as they are hosted by your own server. Please be aware these are PUBLIC channels and sensitive private information should not be shared in this group format.
 
