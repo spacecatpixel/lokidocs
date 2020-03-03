@@ -101,10 +101,15 @@ nav:
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
 
 - Session:
-    - 'Session': 'LokiServices/Messenger/Session.md'
+    - 'Overview': 'LokiServices/Messenger/Session.md'
     - 'Threat Models': 'LokiServices/Messenger/threat_model.md'
     - 'Infrastructure': 'LokiServices/Messenger/infrastructure.md'
     - 'Message Routing': 'LokiServices/Messenger/message_routing.md'
+    - 'Group Chats': 'LokiServices/Messenger/group_chats.md'
+    - 'Testing': 'LokiServices/Messenger/testing.md'
+    - 'Multi-Device': 'LokiServices/Messenger/multidevice.md'
+    - 'Client Side Protection': 'LokiServices/Messenger/client_side_protection.md'
+    - 'Attachments': 'LokiServices/Messenger/attachments.md'
     - Guides:
         - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
         - 'Public Channel Setup': 'LokiServices/Messenger/opengroup_setup.md'
