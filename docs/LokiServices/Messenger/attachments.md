@@ -1,3 +1,6 @@
+title: Loki Docs | Session | Attachments Overview
+description: Although Service Nodes have the ability to store data on behalf of clients, this responsibility only extends so far. Requiring Service nodes to store attachments, which can easily be orders of magnitude larger than messages (and might need to be stored for longer periods of time) would place an undue burden on the Service Node network.
+
 # Attachments 
 
 Although [Service Nodes](../../../ServiceNodes/SNOverview/) have the ability to store data on behalf of clients, this responsibility only extends so far. Requiring Service nodes to store attachments, which can easily be orders of magnitude larger than messages (and might need to be stored for longer periods of time) would place an undue burden on the Service Node network.

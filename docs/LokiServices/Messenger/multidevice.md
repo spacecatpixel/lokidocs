@@ -16,7 +16,7 @@ Consider user A with two devices (A1, A2) who wants to start communicating with 
 
 ## Sending and Receiving Messages 
 
-After the initial friend request process, the clients can start communicating. When client A needs to send a message to a multi-device-enabled user B, they deliver the message to all of B's linked devices  using the established pairwise sessions. Note that secondary devices only poll the primary’s device swarm for establishing new sessions; regular data messages are associated with the device’s own keys, and thus arrive at the device’s own swarm. If user A also has multiple devices, they additionally send a copy of the message to all of their other devices, which appear in those device's message history as having been sent by them, ensuring that their message history is synced across devices.
+After the initial friend request process, the clients can start communicating. When client A needs to send a message to a multi-device-enabled user B, they deliver the message to all of B's linked devices  using the established pairwise sessions. Note that secondary devices only poll the primary’s device [swarm](../../../Advanced/SwarmFlagging/) for establishing new sessions; regular data messages are associated with the device’s own keys, and thus arrive at the device’s own swarm. If user A also has multiple devices, they additionally send a copy of the message to all of their other devices, which appear in those device's message history as having been sent by them, ensuring that their message history is synced across devices.
 
 <center>![multidevice2](../../assets/multidevice2.png)</center>
 

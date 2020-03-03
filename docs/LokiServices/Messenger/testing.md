@@ -1,3 +1,6 @@
+title: Loki Docs | Session | Service Node Testing
+description: Service Nodes are rewarded for providing services to the network in an honest and consistent manner. Consequently, dishonest Service Nodes must be prevented from refusing to store messages for the network while continuing to collect rewards.
+
 # Testing
 
 [Service Nodes](../../../ServiceNodes/SNOverview/) are rewarded for providing services to the network in an honest and consistent manner. Consequently, dishonest Service Nodes must be prevented from refusing to store messages for the network while continuing to collect [rewards](../../../Advanced/Cryptoeconomics/#block-rewards). This is accomplished through Service Node testing, a network-level system of peer policing.

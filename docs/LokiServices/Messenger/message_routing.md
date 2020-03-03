@@ -1,3 +1,6 @@
+title: Loki Docs | Session | Infrastructure
+description: Session follows one of two distinct cases for message routing, depending on the availability of participating clients, Asynchronous Routing and Synchronous Routing.
+
 # Message Routing
 
 Session follows one of two distinct cases for message routing, depending on the availability of participating clients:

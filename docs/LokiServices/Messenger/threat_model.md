@@ -1,3 +1,6 @@
+title: Loki Docs | Session | Threat Model
+description: It is useful to understand the protections Session provides to users, and the threat model which it is effective in defending against.
+
 # Threat Model 
 
 It is useful to understand the protections Session provides to users, and the threat model which it is effective in defending against.

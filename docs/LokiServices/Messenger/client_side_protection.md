@@ -1,3 +1,6 @@
+title: Loki Docs | Session | Client Side Protection
+description: Secure messaging applications have typically focused their development efforts towards providing  protections against network and server level adversaries, which has led to new advances in encryption and metadata protections.
+
 # Client-Side Protections 
 
 Secure messaging applications have typically focused their development efforts towards providing  protections against network and server level adversaries, which has led to new advances in encryption and metadata protections. However, when interviewing high risk individuals researchers, it has been found that client-side privacy and security protections are some of the most-requested features. High-risk individuals may not be focused on protecting themselves against global adversaries, but instead against a small nation state, or corporate entity. For these individuals, endpoint compromise, device seizure, and forced disclosures are described as the biggest risks. To better mitigate these risks, Session implements a number of client-side protections which allow users to better manage the security of the Session app on their device.

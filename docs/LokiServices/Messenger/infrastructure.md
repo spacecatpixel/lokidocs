@@ -1,3 +1,6 @@
+title: Loki Docs | Session | Infrastructure
+description: At its core, Session is built on the Loki Service Node network, so it is important to understand what this network is, how it functions, and what properties Session derives from it.
+
 # Infrastructure
 
 ## Foundations
