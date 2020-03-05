@@ -7,7 +7,7 @@ Secure messaging applications have typically focused their development efforts t
 
 ## Deletion
 
-Granular message and data deletion controls are important for users who are likely to have their devices physically sized. Session implements standard features like disappearing messages, which are deleted from sending and receiving clients after being viewed, and the ability to fully wipe all client side stored data. However, Session also features additional ways to manage client side security. 
+Granular message and data deletion controls are important for users who are likely to have their devices physically sized. Session implements standard features like disappearing messages, which are deleted from sending and receiving clients after being viewed, and the ability to fully wipe all client side stored data. However, [Session](https://getsession.org) also features additional ways to manage client side security. 
 
 ## Duress Codes 
 
