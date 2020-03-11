@@ -14,17 +14,7 @@ To install lokinet, see the install guide [here](../../Lokinet/Guides/lokinet-li
 ## 2. Test services
 Jump onto a browser such as google chrome or firefox and try and go to one of the following SNApps:
 
-<!--
-- Block Explorer: [http://fyb983qpni4bp6nrm98skn33kr1robe979jb8wncxrewfy1rrtzo.loki/](http://fyb983qpni4bp6nrm98skn33kr1robe979jb8wncxrewfy1rrtzo.loki/)
-
-- Lokinet Wiki: [http://icxqqcpd3sfkjbqifn53h7rmusqa1fyxwqyfrrcgkd37xcikwa7y.loki/wiki](http://icxqqcpd3sfkjbqifn53h7rmusqa1fyxwqyfrrcgkd37xcikwa7y.loki/wiki)
-
-- [http://zqkddypocxnu3r53ddy6hkogcdi1xz6kcitjjsh483jom336wo5y.loki/](http://zqkddypocxnu3r53ddy6hkogcdi1xz6kcitjjsh483jom336wo5y.loki/)
-
-- Test for Photos: [http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/photos](http://rxudcygaj7gzqgigyrtti97g4wwaftqe9rd3s6pmu3wby7gxwcbo.loki/photos)
--->
-
-- Lokinet Wiki [http://wikicymsw5cy1h367oo9wwxuhp7igcrxcugy6kn4h5kgdzmq8qho.loki/wiki/](http://wikicymsw5cy1h367oo9wwxuhp7igcrxcugy6kn4h5kgdzmq8qho.loki/wiki/)
+- Lokinet Wiki [http://dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki/wiki/](http://dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki/wiki/)
 
 Congratulations, you now have access to the Lokinet.
 

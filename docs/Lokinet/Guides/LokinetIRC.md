@@ -28,7 +28,7 @@ Next to `Network name:` add the text `Lokinet Chat`.
 #### 2.1 Server details
 In this window, underneath the `Servers:` section click the `Add...` button.
 
-Copy and paste the following loki address into servers: `wikicymsw5cy1h367oo9wwxuhp7igcrxcugy6kn4h5kgdzmq8qho.loki`
+Copy and paste the following loki address into servers: `irc.dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki`
 
 Leave `Port:` as `6667` and `Password:` blank.
 

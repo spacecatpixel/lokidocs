@@ -40,35 +40,18 @@ sudo systemctl restart lokinet
 
 ## 2. Finding your SNApps lokinet address.
 
-First we need to find the IP that our private tunnel adapter is connected to:
+You can find your current snapp address using a host lookup tool:
 
 ```
-nslookup localhost.loki
+nslookup -type=cname localhost.loki 127.0.0.1
 ```
 
-We should have an output similar to the below:
-```
-Server:		127.0.0.53
-Address:	127.0.0.53#53
-
-Non-authoritative answer:
-Name:	localhost.loki
-Address: 10.0.0.1
-```
-
-We want to use the IP Address that is shown under `Name: localhost.loki` in the next command:
+on linux you can use `dig`, the loki address to query is the same but the resolver uses the address `127.3.2.1` as to not conflict with other resolvers you may have installed.
 
 ```
-nslookup 10.0.0.1
+dig @127.3.2.1 -t cname localhost.loki
 ```
 
-Which will output our lokinet public key:
-
-```
-1.0.0.10.in-addr.arpa	name = jnzd4izeja5p7cf81bsy4t97szxpye5sewch88hontpwj6jdfqby.loki.
-```
-
-The public key is the url to your SNApp. Anyone running lokinet software will be able to access your hidden server using this public key.
 
 ## 3. Creating your SNApp
 Create a new directory within your home folder by running the following command in a terminal:
