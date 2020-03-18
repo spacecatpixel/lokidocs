@@ -777,6 +777,8 @@ Next we'll need to run check-systemd now to upgrade your nofile (file descriptor
 sudo loki-launcher check-systemd
 ```
 
+> This next command is optional, try it if you run into issues.
+
 Fix permissions for Lokinet if you aren't running as root, 
 `<USER>` should be replaced with the username your Service Node runs under - if you followed this guide it will be snode:
 
