@@ -18,8 +18,10 @@ One of:
 - Debian unstable ("sid")
 - Ubuntu 16.04 ("xenial")
 - Ubuntu 18.04 ("bionic")
-- Ubuntu 19.04 ("disco")
+- Ubuntu 19.10 ("eoan")
+- Ubuntu 20.04 ("focal")
 
+> Note: Debian 9 and Ubuntu 16.04 are not recommended for new installations as support for them is likely to be deprecated soon.
 
 ## Express Guide
 
@@ -35,7 +37,8 @@ apt update
 apt install loki-service-node
 ```
 
-The services will run via systemd as `loki-node.service` and `loki-storage-server.service`.
+The services will run via systemd as `loki-node.service`, `loki-storage-server.service`, and
+`lokinet-router.service`.
 
 ## Full Guide
 
@@ -63,7 +66,8 @@ Alternatively your `<Distro>` can be found by using the following list:
 - buster   (Debian 10)
 - xenial   (Ubuntu 16.04)
 - bionic   (Ubuntu 18.04)
-- disco    (Ubuntu 19.04)
+- eoan     (Ubuntu 19.10)
+- focal    (Ubuntu 20.04)
 
 ```
 echo "deb https://deb.imaginary.stream <DISTRO> main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
@@ -81,13 +85,15 @@ Now you can install one or more of the following packages as desired:
 | `loki-service-node`     | Metapackage that does everything you need for a running service node.                                  |
 | `lokid`                 | The loki daemon (automatically pulled in by `loki-service-node`).                                      |
 | `loki-storage-server`   | The loki storage server, required for a service node (automatically pulled in by `loki-service-node`). |
+| `lokinet-router`        | The lokinet package configured to run as a router (automatically pulled in by `loki-service-node`).    |
 | `loki-wallet-cli`       | The command-line wallet.                                                                               |
 | `loki-wallet-rpc`       | The rpc wallet (for script-based wallet interaction such as a pool would need).                        |
 | `loki-blockchain-tools` | the various loki-blockchain-* commands for advanced blockchain management.                             |
+| `lokinet-client`        | The lokinet package configured to run as a client to access lokinet. (Not for service nodes).          |
 
-
-There are also a couple of `libloki-core*` packages containing the shared library code, but these will
-be installed automatically as needed.  
+There are also a few library packages such as `libloki-core*` containing the shared library code, as
+well as some backports of updated software for the older distributions; these can typically be
+ignored and will be installed automatically as needed.
 
 There is also a `libloki-core-dev` package containing the loki
 headers, but it's highly unlikely that you will need that for common use.
@@ -121,24 +127,21 @@ This will detect your public IP (or allow you to enter it yourself) and automati
 
 #### **Manually**:  
 
-Install both `lokid` and `loki-storage-server` packages
+Install the `lokid`, `loki-storage-server`, and `lokinet-router` packages:
 
 ```
-sudo apt install lokid
+sudo apt install lokid loki-storage-server lokinet-router
 ```
 
-```
-sudo apt install loki-storage-server
-```
+Then edit the configuration as desired in `/etc/loki/loki.conf`, `/etc/loki/storage.conf`, and
+`/etc/loki/lokinet-router.ini`.  (See the next section for details).
 
-Then edit the configuration in `/etc/loki/loki.conf` and `/etc/loki/storage.conf`.  
-
-If you want to change some of the lokid settings you can add the settings to `/etc/loki/loki.conf`.
-
-Restart both after configuration updates using:
+Restart any of these after configuration updates using one or more of:
 
 ```
-systemctl restart loki-node loki-storage-server
+systemctl restart loki-node
+systemctl restart loki-storage-server
+systemctl restart lokinet-router
 ```
 
 ---
@@ -184,7 +187,8 @@ To see the outputs of your node you can run the following command:
 ```
 journalctl -u loki-node -af
 ```
-This is useful to see if your node is syncing with the blockchain.
+This is useful to see if your node is syncing with the blockchain.  (Press Ctrl-C to stop watching
+the log).
 
 For a full list of supported commands run:
 
@@ -198,6 +202,15 @@ For interacting with a running testnet node, add `--testnet` into the command, s
 lokid --testnet status
 lokid --testnet print_sn_status
 lokid --testnet prepare_registration
+```
+
+You can also get basic statistics (such as uptime proof and ping times) on the running daemons from
+the `systemctl status` commands:
+
+```
+systemctl status loki-node
+systemctl status loki-storage-server
+systemctl status lokinet-router
 ```
 
 ## Additional/Optional: 
@@ -223,8 +236,9 @@ During the upgrade, lokid (both mainnet and testnet) will be restarted if they a
 If for some reason you want to install *only* updated loki package upgrades but not other system packages then instead of the `sudo apt upgrade` you can use:
 
 ```
-sudo apt install loki-storage-server lokid loki-wallet-cli
+sudo apt install loki-storage-server lokid lokinet-router
 ```
+(and change the above to whatever packages you want to install updates for).
 
 ---
 
@@ -279,11 +293,10 @@ sudo systemctl enable --now loki-testnet-node
 This will start it and configure systemd to automatically start it when the system boots.
 
 The `loki-service-node` package also updates the testnet.conf file to run as a (testnet) service
-node; in order to actually run it you need to activate and start both the loki-testnet-node.service
-(as above) and also the loki-testnet-storage-server.service:
+node; in order to actually run it you need to activate and start the loki-testnet-node.service
+(as above) and also the testnet storage server and lokinet routers:
 
-    sudo systemctl enable --now loki-testnet-node
-    sudo systemctl enable --now loki-testnet-storage-server
+    sudo systemctl enable --now loki-testnet-node loki-testnet-storage-server lokinet-testnet-router
 
 ---
 
