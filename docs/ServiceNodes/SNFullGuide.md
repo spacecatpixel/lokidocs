@@ -756,6 +756,8 @@ print_locked_stakes
 
 #### Updating your Binaries
 
+> IMPORTANT: Please check the [important changes](#important-changes) section at the top of this page to see the changes before running your updates.
+
 When new binaries are out we need to log into our server as the <user> which we initially set up our loki-launcher on.
 
 Run the following command to update our loki-launcher:
@@ -799,7 +801,6 @@ If you are running loki-launcher as a service you can now reboot your computer a
 ```
 sudo reboot
 ```
-##### Updating for 1.0.12 (loki 7.x series)
 ---
 
 ### Default Directories for Loki Files
