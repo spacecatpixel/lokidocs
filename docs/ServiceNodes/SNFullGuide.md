@@ -362,12 +362,6 @@ Once completed, save the file and quit nano: `CTRL+X -> Y -> ENTER`.
 
 #### 4.3 - Enabling the Service File
 
-Reload systemd manager configuration (to make it re-read the new service file):
-
-```
-sudo systemctl daemon-reload
-```
-
 Enable lokid.service so that it starts automatically upon boot:
 
 ```
