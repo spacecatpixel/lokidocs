@@ -37,6 +37,13 @@ Full summary of Loki Service Node Requirements. This may change depending on Ser
 
 ---
 
+## Important Changes
+### 1.0.12(Loki 7.x series)
+
+- New port 22020 for loki-storage's new LMQ port
+
+- loki-storage 2.x won't start unless your file descriptors available are over 16k
+
 ## Overview
 
 To understand what a [Service Node](SNOverview.md) is, you can refer to the [whitepaper](https://loki.network/whitepaper) to get an in depth understanding. For now, all you need to know is that:
@@ -766,7 +773,12 @@ sudo systemctl stop lokid.service
 Then run the following command to download the new binaries:
 
 ```
-loki-launcher download-binaries
+sudo loki-launcher download-binaries
+```
+Next we'll need to run check-systemd now to upgrade your nofile (file descriptor limit):
+
+```
+check-systemd
 ```
 
 Fix permissions for Lokinet if you aren't running as root, 
@@ -787,7 +799,7 @@ If you are running loki-launcher as a service you can now reboot your computer a
 ```
 sudo reboot
 ```
-
+##### Updating for 1.0.12 (loki 7.x series)
 ---
 
 ### Default Directories for Loki Files
