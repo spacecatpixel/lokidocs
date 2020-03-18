@@ -780,7 +780,7 @@ sudo loki-launcher download-binaries
 Next we'll need to run check-systemd now to upgrade your nofile (file descriptor limit):
 
 ```
-check-systemd
+sudo loki-launcher check-systemd
 ```
 
 Fix permissions for Lokinet if you aren't running as root, 
