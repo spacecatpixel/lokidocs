@@ -10,6 +10,10 @@ description: The first Loki service to has been developed and deployed on the Lo
 Head over to the Session website to get your Session download Links:<br>
 [Download](https://getsession.org)
 
+## Register Session Name
+
+Head over to the [How to register Session/Wallet name guide](../HowToRegisterSessionNames/).
+
 ## Introduction
 
 Over the past 10 years, there has been a significant increase in the usage of instant messengers, with the most widely-used messengers each having amassed over 1 billion users. The potential privacy and security shortfalls of many popular messaging applications have been widely discussed. Most current methods of protecting user data privacy are focused on encrypting the contents of messages, an approach which has been relatively successful. 

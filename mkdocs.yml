@@ -102,6 +102,7 @@ nav:
 
 - Session:
     - 'Overview': 'LokiServices/Messenger/Session.md'
+    - 'Loki Name System': 'LokiServices/Messenger/LokiNameSystem.md'
     - 'Threat Models': 'LokiServices/Messenger/threat_model.md'
     - 'Infrastructure': 'LokiServices/Messenger/infrastructure.md'
     - 'Message Routing': 'LokiServices/Messenger/message_routing.md'
@@ -111,6 +112,7 @@ nav:
     - 'Client Side Protection': 'LokiServices/Messenger/client_side_protection.md'
     - 'Attachments': 'LokiServices/Messenger/attachments.md'
     - Guides:
+        - 'Register Session/Wallet names': 'LokiServices/Messenger/HowToRegisterSessionNames.md'
         - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
         - 'OpenGroup Setup': 'LokiServices/Messenger/opengroup_setup.md'
         - 'Join Open Group on Mobile': 'LokiServices/Messenger/JoinOpenGroupMobile.md'
