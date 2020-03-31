@@ -88,6 +88,7 @@ nav:
 #    - 'Developers': 'Lokinet/DeveloperInfo.md'
 
     - Guides:
+        - 'Lokinet GUI Guide': 'Lokinet/Guides/LokinetGuiGuide.md'
         - 'Lokinet Linux Guide': 'Lokinet/Guides/lokinet-linux-guide.md'
         - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
         - 'Lokinet Mac Guide': 'Lokinet/Guides/lokinet-mac-guide.md'

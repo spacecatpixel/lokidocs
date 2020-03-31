@@ -12,6 +12,7 @@ The network does not rely on trusted authorities and its state is fully derived 
 
 | **Guide/Resource**                                                      	| **Description**                                                                             	|
 |-------------------------------------------------------------------------	|---------------------------------------------------------------------------------------------	|
+| [Lokinet Gui Guide](../Lokinet/Guides/LokinetGuiGuide.md)| Easiest way to access Lokinet and SNApps.|
 | [Lokinet Public Testing Guide](../Lokinet/Guides/PublicTestingGuide.md) 	| Full Lokinet public testing guide.                                                          	|
 | [Linux Setup Guide](../Lokinet/Guides/lokinet-linux-guide.md)                            	| Linux preperation for accessing Lokinet.                                                           	|
 | [macOS Setup Guide](../Lokinet/Guides/lokinet-mac-guide.md)| macOS preperation for accessing Lokinet.|
