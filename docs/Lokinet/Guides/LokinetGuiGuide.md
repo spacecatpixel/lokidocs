@@ -6,6 +6,8 @@ Author: Jason (jagerman), Johnathan (SonOfOtis)
 
 Source: [https://deb.imaginary.stream/](https://deb.imaginary.stream/)
 
+To download Lokinet Gui on Windows or Mac just head over to [lokinet.org](https://lokinet.org) or [loki.network](https://loki.network) and click the download button. 
+
 ## Initial Setup for Linux
 
 ### 1. Computer Preparation
