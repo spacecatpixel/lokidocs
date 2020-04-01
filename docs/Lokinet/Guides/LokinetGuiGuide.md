@@ -1,37 +1,91 @@
-title: Loki Documentation | How to access hidden services or Lokinet SNApps using the GUI.
-description: The function of SNApps is similar to so-called hidden services in Tor which have flourished. They provide users with a way to interact fully within the onion router environment, providing an even higher-degree of anonymity than can be achieved when accessing externally hosted content.
+title: Loki Documentation | Lokinet Linux GUI Install Guide | Onion Routing
+description: This guide walks you through the steps to get Lokinet, a new onion router with sybil resistance properties, working on Linux.
 
-# Lokinet GUI guide
+# Lokinet GUI install guide - Linux
+Author: Jason (jagerman), Johnathan (SonOfOtis)
 
-The function of [SNApps](../SNApps.md) is similar to so-called hidden services in Tor which have flourished. They provide users with a way to interact fully within the onion router environment, providing an even higher-degree of anonymity than can be achieved when accessing externally hosted content. SNApps allow for users to setup and host marketplaces, forums, whistle-blowing websites, social media, and most other internet applications on their own machines or servers while maintaining full-server and user-side anonymity. This greatly expands the scope of the network and allows users to build meaningful communities within [Lokinet](../../LokinetOverview/).
+Source: [https://deb.imaginary.stream/](https://deb.imaginary.stream/)
 
-## 1. Installing
+## Initial Setup for Linux
 
-Got to the Lokinet github and download the latest release for your operating system:[https://github.com/loki-project/loki-network/releases](https://github.com/loki-project/loki-network/releases).
+### 1. Computer Preparation
+We should update our package lists, the below command downloads the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
 
-Alternatively you can download it through the below redirects:
+Run the following command:
 
-- [Windows](https://loki.network/lokinetWindows/)
-- [Linux](https://loki.network/lokinetLinux/)
+```
+sudo apt-get update
+```
 
-Once downloaded, run through the installation and launch Lokinet.
+You will notice a bunch of package lists were downloaded, once this is complete run the below command to fetch new versions of any packages we currently have installed on the system.
 
-## 2. Starting Lokinet Gui
-Once Lokinet has been installed you will need to turn the daemon on. 
+```
+sudo apt-get upgrade
+```
 
-We can do this by clicking the red power button on the application.
+You will be prompted to authorise the use of disk space, type `y` and enter to authorise.
 
-![Lokinet Gui 1](../../assets/lokinetGui.PNG)
+> Note: If you are prompted at any time that a version of any file is available then click the up and down arrows until you are hovering over install the package maintainer’s version and click enter.
 
-To confirm we are connected to Lokinet all we have to see is the green power button.
+If you do not have curl installed on your computer then let's install it as we will use it later:
 
-![Lokinet Gui 2](../../assets/lokinetGui2.PNG)
+```
+sudo apt install curl
+```
 
-## 3. Browse Lokinet - Stay Private
-Jump onto a browser such as brave or firefox and try and go to the following SNApp:
+### 2. Installation
+
+You only need to do this step the first time you want to set up the repository; when you've done it once, the repository will automatically update whenever you fetch new system updates.
+
+To add the Loki `apt` repository run the following commands:
+
+The following command installed Jagermans public key used to sign the Binaries.
+
+```
+curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+```
+
+The next command tells `apt` where to find the packages:
+
+```
+echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+```
+
+Then resync your package repositories with:
+
+```
+sudo apt update
+```
+
+Now install lokinet:
+
+```
+sudo apt install lokinet-gui
+```
+
+Congratulations, Lokinet is now installed and running in the background. 
+
+To access the GUI client all you need to do is open up the lokinet-gui application.
+
+## Turn Lokinet off and on
+
+Simply jump into the lokinet-gui client and click the power button.
+
+![lokinet-gui](../../../assets/LokinetGui.PNG)
+
+
+## Browse Lokinet - Stay Private
+Jump onto a browser and head over to the Lokinet wiki SNApp:
 
 - Lokinet Wiki [http://dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki/wiki/](http://dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki/wiki/)
 
-The Lokinet Wiki has a list of other SNApp links you can go to.
+Congratulations, you're browsing Lokinet.
 
-Congratulations, you now have access to the Lokinet.
+--- 
+
+## Finish
+
+Well done, you have finished the guide. Jump into the [Accessing SNApps guide](AccessingSNApps.md).
+
+
+
