@@ -51,7 +51,7 @@ The next command tells `apt` where to find the packages:
 echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
 ```
 
-> If you're deb is not recognised then check out [troubleshooting](#troubleshooting).
+> If your deb is not recognised then check out [troubleshooting](#troubleshooting).
 
 Then resync your package repositories with:
 
