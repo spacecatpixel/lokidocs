@@ -55,7 +55,7 @@ The following command installed Jagermans public key used to sign the Binaries.
 curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
 ```
 
-The second command tells `apt` where to find the packages and needs you to replace `<DISTRO>` with your your distro.
+The second command tells `apt` where to find the packages and needs you to replace `<DISTRO>` with your distro.
 
 To find your `<Distro>` run the following command: `lsb_release -sc`
 
