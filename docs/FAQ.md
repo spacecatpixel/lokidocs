@@ -84,7 +84,25 @@ description: What is Loki? Does Loki have Masternodes? What is Session? Loki FAQ
 * [Can I share attachments with my contacts? If so, does the app strip metadata from those attachments?](#can-i-share-attachments-with-my-contacts-if-so-does-the-app-strip-metadata-from-those-attachments)
 
 ---
+## Lokinet
 
+* [What is Lokinet?](#what-is-lokinet)
+
+* [How is Lokinet different from Tor?](#how-is-lokinet-different-from-tor)
+
+* [Is Lokinet more private than Tor?](#is-lokinet-more-private-than-tor)
+
+* [What protocol does Lokinet use?](#what-protocol-does-lokinet-use)
+
+* [What can I access using Lokinet?](#what-can-i-access-using-lokinet)
+
+* Is Lokinet enough to protect my privacy when I’m browsing the internet?(#is-lokinet-enough-to-protect-my-privacy-when-im-browsing-the-internet)
+
+* [How do I use Lokinet?](#how-do-i-use-lokinet)
+
+* [Who develops Lokinet?](#who-develops-lokinet)
+
+---
 ## SNApps
 
 * [Do SNApps run on Service Nodes only?](#do-snapps-run-on-service-nodes-only)
@@ -286,6 +304,63 @@ Additionally, the desktop and mobile versions of Session use onion routing and p
 
 ---
 
+Lokinet
+---
+
+### What is Lokinet?
+
+Lokinet is a decentralised onion router that uses Loki [Service Nodes](../ServiceNodes/SNOverview) as relays, giving Lokinet the same [market-based Sybil attack resistance](../Advanced/SybilResistance) as the Loki blockchain. Lokinet supports web browsing, onion-routed real-time voice communications, and other applications.
+
+### How is Lokinet different from Tor?
+
+While Tor and Lokinet are both onion routers, they are very different at both the protocol and infrastructure levels. Tor relies on a network of volunteer-operated relays and a set of central directory authorities, and this infrastructure introduces a number of weaknesses and limitations. Because Tor’s circuit moderation is bandwidth-weighted, you are much more likely to use high-bandwidth nodes than low-bandwidth ones, meaning that a large percentage of Tor’s 7000+ nodes go mostly unutilised due to having insufficient bandwidth. Additionally, Tor’s reliance on a limited set of directory authorities means that if these directory authorities were compromised, the stability of the entire Tor network would suffer. 
+
+Instead of relying on volunteers, Lokinet leverages the economically incentivised Loki Service Node network. Because Loki Service Node operators are required to provide high-quality nodes — and are actively incentivised to do so — Lokinet’s relay network is consistent and reliable. Lokinet also inherits the market-based Sybil attack resistance of the Loki blockchain, giving Lokinet a high level of security against such attacks. 
+
+Instead of Tor’s system of central directory authorities, Lokinet distributes address records over the network. This makes Lokinet significantly more decentralised than Tor.
+
+Lokinet is also significantly more versatile than Tor — while Tor operates on the transport layer and is only able to carry TCP traffic, Lokinet operates on the network layer, meaning it can onion-route any IP-based protocol: TCP, UDP, ICMP, etc. 
+
+### Is Lokinet more private than Tor?
+
+No — but it could be in the future. In its current experimental state, Lokinet has a more limited anonymity set due to having far fewer active users than Tor. However, Lokinet does have some important advantages over Tor, specifically in terms of Sybil attack resistance and decentralisation, which do make Lokinet more private in some circumstances. 
+
+#### Sybil attack resistance
+
+The Tor network relies on volunteer-operated relays, with very little barrier to entry for operating a relay. As a result, the network is vulnerable to something called a Sybil attack, where an attacker initialises a large number of malicious nodes, eventually controlling enough nodes to give them control of the guard and exit nodes for a given target’s circuit. This allows the attacker to conduct granular traffic analysis, de-anonymising the user and any other circuits in which the exit and guard are owned by the attacker.
+
+#### Decentralisation
+
+One of Tor’s most well-documented weaknesses is its reliance on a relatively small set of central directory authority servers that allow clients to find nodes in the Tor network. If these directory authorities are compromised, it would endanger the stability of the entire Tor network. 
+
+Instead of relying on central directory authorities, Lokinet uses the Loki blockchain as a form of decentralised directory authority, meaning that Lokinet isn’t reliant on any kind of central server — the network is fully decentralised.
+
+### What protocol does Lokinet use?
+
+Lokinet is the reference implementation of [LLARP](https://github.com/majestrate/llarp) (Low-Latency Anonymous Routing Protocol), a next-generation onion routing protocol that aims to address issues with Tor and I2P. You can read more about LLARP [here](https://github.com/majestrate/llarp).
+
+### What can I access using Lokinet?
+
+Currently, Lokinet enables access to [SNApps](#snapps) — applications hosted on Loki Service Nodes. SNApps are analogous to Tor’s hidden services, and typically appear in the form of internet addresses ending in ‘.loki’. When you access a SNApp through Lokinet, your connection is protected by Lokinet’s onion routing protocol.
+
+Exit node support, which is on the Lokinet road map, will enable users to access clearnet websites over Lokinet, helping to anonymise normal internet browsing as well as enabling access to SNApps.
+
+### Is Lokinet enough to protect my privacy when I’m browsing the internet?
+
+In its current form, Lokinet does not have full exit node support. This means that if you use the internet with Lokinet enabled, normal (clearnet) traffic — traffic to or from servers outside of Lokinet itself — will not be onion routed, and you will not have the same privacy protections as when accessing SNApps over Lokinet. Once Lokinet implements full exit node support, all internet traffic from your computer can be onion-routed over Lokinet. Full exit node support is on the Lokinet roadmap, but until it’s implemented, we recommend using Tor to browse the clearnet anonymously. 
+
+### How do I use Lokinet?
+
+You can use Lokinet on Windows, macOS, and Linux — and it’s easy to get up and running. Just go [here](https://github.com/loki-project/loki-network/releases), download the Lokinet client for your platform, and follow the easy steps to enable Lokinet. You can then start accessing SNApps securely, privately, and anonymously.
+
+If you prefer to build the Lokinet client from source directly, you can find the source code on the [Lokinet GitHub](https://github.com/loki-project/loki-network).
+
+### Who develops Lokinet?
+
+Lokinet is developed by the Loki Foundation, Australia’s first privacy tech not-for-profit organisation. Lokinet is part of the Loki Foundation’s suite of blockchain-based privacy tools that also includes the encrypted messaging app Session, and the Loki cryptocurrency itself.
+
+---
+
 SNapps
 ---
 
@@ -310,3 +385,5 @@ Loki Services
 ### **What is Session?**
 
 [Session](../LokiServices/Session) is a decentralised, end-to-end encrypted private messaging service. Many other encrypted private messengers rely on central servers to route traffic. Session leverages the power of public-private key cryptography and the [Loki Service Node](../ServiceNodes/SNOverview) architecture on the Loki network to create a service similar to the secure messaging application Signal, but with the added benefit of decentralisation and network anonymity.
+
+
