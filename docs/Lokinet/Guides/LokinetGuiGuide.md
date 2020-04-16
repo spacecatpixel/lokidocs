@@ -83,6 +83,56 @@ Jump onto a browser and head over to the Lokinet wiki SNApp:
 
 Congratulations, you're browsing Lokinet.
 
+---
+## Troubleshooting
+
+### Setting your DNS 
+
+If you are having issues with resolving .loki addresses then we need to edit your resolv.conf files and add your dns resolver.
+
+#### Method 1
+
+Run the following command:
+```
+apt install resolvconf
+```
+
+Then restart lokinet:
+
+```
+systemctl restart lokinet
+```
+
+#### Method 2
+If Method 1 does not work we will need to add our nameserver manually.
+
+Run the following command: 
+
+```
+sudo nano /etc/resolvconf/resolv.conf.d/head
+```
+
+Add the following at the bottom of this file:
+
+```
+nameserver 127.3.2.1
+```
+
+Once that line is added hold CTRL and click x. 
+Click enter to confirm the file changes.
+
+Next we need to update our /etc/resolv.conf file by running the command:
+
+```
+sudo resolvconf -u
+```
+
+Then restart lokinet:
+
+```
+systemctl restart lokinet
+```
+
 --- 
 
 ## Finish
