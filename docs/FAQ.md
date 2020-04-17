@@ -96,7 +96,7 @@ description: What is Loki? Does Loki have Masternodes? What is Session? Loki FAQ
 
 * [What can I access using Lokinet?](#what-can-i-access-using-lokinet)
 
-* Is Lokinet enough to protect my privacy when I’m browsing the internet?(#is-lokinet-enough-to-protect-my-privacy-when-im-browsing-the-internet)
+* [Is Lokinet enough to protect my privacy when I’m browsing the internet?](#is-lokinet-enough-to-protect-my-privacy-when-im-browsing-the-internet)
 
 * [How do I use Lokinet?](#how-do-i-use-lokinet)
 
