@@ -3,66 +3,27 @@ description: This guide walks you through the steps to get Lokinet, a new onion 
 
 # Lokinet install guide - MacOS 
 
-## 1. Download the latest release
+## Install
 
-Head to [lokinet.org](https://lokinet.org/), download the latest MacOS Lokinet release and run it. 
+1. Download the latest mac installer [here](https://github.com/loki-project/loki-network/releases/latest).
 
-## 2. Install lokinet software
+2. Run the .PKG file 
 
-### 2.1 Permissions
+3. After the installer is finished you should find the LokinetGUI application in your applications folder
 
-First, try and open the lokinet Mac software you just downloaded. It will most probably cause a security error.
+4. Run the Lokinet gui by double clicking on it 
 
-![unidentified-developer](../../assets/unidentified.png)
+5. Press the big green button to start or stop Lokinet 
 
-If this error occurs, go into your System preferences and search for Security.
+## Uninstalling 
 
-Now jump into your Security & Privacy Settings.
-
-![SecuritySettings](../../assets/Security.png)
-
-Go down to the bottom of this window and allow the Lokinet Mac pkg to run by clicking the `Open Anyway` button.
-
-![Allow-Apps](../../assets/allowapps.png)
-
-### 2.2 Install Lokinet
-Now continue as with the installation.
-
-![Install-Lokinet](../../assets/installlokinet.png)
-
-## 3. Open the terminal and run the Lokinet MacOS Binary
-
-You now want to run lokinet in your terminal:
+To uninstall Lokinet run the following command in the Mac terminal:
 
 ```
-sudo lokinet
+sudo /opt/lokinet/bin/lokinet_uninstall.sh
 ```
 
-![Lokinet-MacOS-Guide4](../../assets/images/MacOS-Lokinet4.png)
-
-## 4. Configure DNS
-
-If DNS is not configured automatically, you can do it manually. 
-
-Go to `System Preferences -> Network -> Advanced -> DNS`
-
-Click on `+` in DNS servers list. 
-
-Enter `127.0.0.1` as a DNS address:
-
-> Note: When adding the Lokinet DNS address make sure it sits above your default DNS server.
-> See below picture for reference.
-
-![MacOS-DNS](../../assets/DNS.PNG)
-
----
-
-## 5. Troubleshooting
-### Can't access .loki addresses. 
-
-This can be fixed by making sure your DNS is configured properly. See [step 4](#4-configure-dns).
-
-## 6. Done!
+## Done!
 
 Well done, you have finished the guide. Jump back into the [Lokinet Public Testing Guide here](../PublicTestingGuide/#2-accessing-snapps).
 

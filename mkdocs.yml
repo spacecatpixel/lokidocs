@@ -89,10 +89,10 @@ nav:
 
     - Guides:
         - 'Linux GUI Guide': 'Lokinet/Guides/LokinetGuiGuide.md'
-        - 'Anonymous Reverse SSH Guide': 'Lokinet/Guides/ReverseSSHGuide.md'
+        - 'macOS Gui Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
+        - 'Anonymous Reverse SSH Guide': 'Lokinet/Guides/ReverseSSH'
         - 'Linux Command-line Guide': 'Lokinet/Guides/lokinet-linux-guide.md'
 #        - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
-#        - 'Lokinet Mac Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
         - 'Linux - Build-It-Yourself': 'Lokinet/Guides/Install.md'
         - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
         - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
