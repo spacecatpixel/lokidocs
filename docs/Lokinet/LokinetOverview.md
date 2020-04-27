@@ -13,7 +13,7 @@ The network does not rely on trusted authorities and its state is fully derived 
 | **Guide/Resource**                                                      	| **Description**                                                                             	|
 |-------------------------------------------------------------------------	|---------------------------------------------------------------------------------------------	|
 | [Linux Gui Guide](../Lokinet/Guides/LokinetGuiGuide.md)                 | Easiest way to access Lokinet and SNApps on Linux.                                                     |
-| [macOS Gui Guide](../Lokinet/Guides/LokinetGuiGuide.md)                 | Easiest way to access Lokinet and SNApps on macOS.                                                     |
+| [macOS Gui Guide](../Lokinet/Guides/lokinet-mac-guide.md)                 | Easiest way to access Lokinet and SNApps on macOS.                                                     |
 | [Anonymous Reverse SSH Guide](../Lokinet/Guides/ReverseSSHGuide.md)       | Simple and easy way to SSH into a VPS through lokinet.                                        |
 | [Lokinet Public Testing Guide](../Lokinet/Guides/PublicTestingGuide.md) 	| Full Lokinet public testing guide.                                                          	|
 | [Linux Setup Guide](../Lokinet/Guides/lokinet-linux-guide.md)             | Linux preperation for accessing Lokinet.                                                      |
