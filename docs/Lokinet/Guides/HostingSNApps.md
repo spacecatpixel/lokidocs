@@ -18,7 +18,7 @@ Open up your `lokinet.ini` file and add a path to where your SNApp key files wil
 
 If you have built Lokinet from the Deb packages you will find your lokinet.ini file with the following command:
 ```
-sudo nano ~/etc/loki/lokinet.ini
+sudo nano /etc/loki/lokinet.ini
 ```
 Otherwise, if you have built Lokinet from source your `lokinet.ini` file will be in the following folder:
 ```
@@ -46,10 +46,10 @@ You can find your current snapp address using a host lookup tool:
 nslookup -type=cname localhost.loki 127.0.0.1
 ```
 
-on linux you can use `dig`, the loki address to query is the same but the resolver uses the address `127.3.2.1` as to not conflict with other resolvers you may have installed.
+on linux you can use `host`, the loki address to query is the same but the resolver uses the address `127.3.2.1` as to not conflict with other resolvers you may have installed.
 
 ```
-dig @127.3.2.1 -t cname localhost.loki
+host -t cname localhost.loki 127.3.2.1
 ```
 
 
