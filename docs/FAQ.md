@@ -24,8 +24,6 @@ description: What is Loki? Does Loki have Masternodes? What is Session? Loki FAQ
 
 * [Will you guys commit back to the Monero source code?](#will-you-guys-commit-back-to-the-monero-source-code)
 
-* [What's the difference from Monero?](#whats-the-difference-from-monero)
-
 * [Can I see details about the premine?](#can-i-see-details-about-the-premine)
 
 * [Why is there a 5% governance reward?](#why-is-there-a-5-governance-reward)
@@ -138,6 +136,8 @@ Like Monero, there is no total token supply. The current supply can be seen at [
 
 Aside from some minor changes in approach to the core currency, we implement a [Service Node](../ServiceNodes/SNOverview) network that performs a variety of functions, including an [anonymous networking layer](../Lokinet/LLARP), trustless quorum-based instant transactions (based on a system called "[Blink](../LokiServices/Blink)"), and a range of functions that leverage the networking layer for applications like secure [private messaging](../LokiServices/Messenger).
 
+Compared to Monero, Loki has a [fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with a minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward). These are base-layer changes that will differentiate us from Monero; however, the main change that is being implemented is the second layer of incentivised [Service Nodes](../ServiceNodes/SNOverview), [Loki Services](/LokiServices/LokiServicesOverview), and [Lokinet](/Lokinet/LokinetOverview).
+
 ###**Who would use Loki Network?**
 
 Loki provides both private transaction and private communication functionality, making the Loki Network important for users who want the highest level of privacy in their communication channels. As more [SNApps](../Lokinet/SNApps) are developed we imagine Loki will present it self as the network to run privacy-centric applications on top of.
@@ -158,18 +158,13 @@ Loki operates on an incentives structure provided by the network. Peer-to-peer c
 
 Loki plans to push back any useful changes to Monero, such as optimisations, bug fixes, and feature adds.
 
-
-###**What's the difference between Loki and Monero?**
-
-Compared to Monero, Loki has a [fixed ring size](/Advanced/CryptoNoteElements/#ring-signature-size) with a minimum mixin of 10, [governance block reward](/Advanced/Cryptoeconomics/#block-reward-split) of 5% which will [fund community projects and developments](/Governance/LokiFundingSystem), and [emission curve changes](/Advanced/Cryptoeconomics/#loki-block-reward). These are base-layer changes that will differentiate us from Monero; however, the main change that is being implemented is the second layer of incentivised [Service Nodes](../ServiceNodes/SNOverview), [Loki Services](/LokiServices/LokiServicesOverview), and [Lokinet](/Lokinet/LokinetOverview).
-
 ###**Can I see details about the premine?**
 
 Yes, see the [premine report](https://loki.network/loki-premine-report/).
 
-###**Why is there a 5% governance reward?**
+###**Why is there a 10% governance reward?**
 
-We intended to create a [self-funding system](../Governance/LokiFundingSystem) so that users can be certain that no external influences can drive the development funding of the network in an undesirable direction. The 5% block reward that is issued to the governance wallet is for this purpose.
+We intended to create a [self-funding system](../Governance/LokiFundingSystem) so that users can be certain that no external influences can drive the development funding of the network in an undesirable direction. The 10% block reward that is issued to the governance wallet is for this purpose.
 
 This is a similar approach to other projects, such as the Zcash Foundation, who for the first 4 years of the network’s operation will receive a 20% block reward, and the DASH project, who receive a 10% block reward from the network.
 
@@ -179,7 +174,7 @@ In the future, the community may decide that this reward is unnecessary, or of t
 
 ###**What is the block reward for mining?**
 
-The exact block reward can be found at [www.lokiblocks.com](https://www.lokiblocks.com). This block reward is split as follows: 50% of the block reward goes to service nodes, 45% to miners, and 5% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
+The exact block reward can be found at [www.lokiblocks.com](https://www.lokiblocks.com). This block reward is split as follows: 66% of the block reward goes to service nodes, 24% to miners, and 10% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
 
 ###**What is the block generation time?**
 
