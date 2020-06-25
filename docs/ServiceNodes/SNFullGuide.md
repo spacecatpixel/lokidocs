@@ -96,7 +96,7 @@ Typically, the easiest and cheapest way to host a server outside of your home is
 |Hosting Provider| Product Name | Cost Per Month $USD | Bandwidth Provided | Exit Friendliness Rating | Accepts Loki? |
 |--------------------|-----------------|----------------------------|--------------------|-------|----|
 |Netcup|VPS 1000 G8|10.50|30 - 35 MiB’s|5 / 10| |
-|Evolution Host| STARTER | 5.50 | 9 - 1 MiB’s | 9/10| YES |
+|Evolution Host| STARTER | 5.50 | 9 - 1 MiB’s | 9/10| [YES](https://evolution-host.com/vps-hosting.php?package=Loki) |
 |Online.net|Start-2-S-SSD|13.99|15 - 17 MiB’s|9 / 10| |
 |Scaleway|START1-M|9.33|20 - 25 MiB’s|7 / 10| |
 |OVH|VPS SSD 2|7.61|9 - 1 MiB’s|9 / 10| |
