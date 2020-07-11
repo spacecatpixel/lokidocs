@@ -1,14 +1,10 @@
 # Project information
 site_name: 'Loki Docs'
-site_url: 'https://loki-project.github.io/loki-docs/'
+site_url: 'https://docs.loki.network'
 
 # Repository
 repo_name: 'lokidocs'
 repo_url: 'https://github.com/loki-project/loki-docs'
-
-# Copyright
-copyright: 'Add Copyright'
-
 
 # Configuration
 theme:
@@ -16,98 +12,171 @@ theme:
   language: 'en'
   palette:
      accent: 'green'
-
-  font:
-    title: 'Proxima Nova'
-    text: 'Roboto Regular'
-    code: 'Roboto'
+  direction: 'ltr'
+  feature:
+    tabs: true
+  font: false
   favicon: 'Loki_favicon32x32.png'
-  logo: 'Loki_favicon32x32.png'
+  logo: 'logo.svg'
 
 nav:
 - 'Home': 'index.md'
-- Introduction:
-  - 'Loki Network': 'Introduction/LokiNetwork.md'
-  - 'Where to begin?': 'Introduction/BeginnersGuide.md'
-- Wallets: 
+- 'Introduction': 'Introduction/LokiNetwork.md'
+- 'Getting Started': 'Introduction/GettingStarted.md'
+- 'FAQ': 'FAQ.md'
+
+- Wallets:
   - 'Overview' : 'Wallets/WalletsOverview.md'
-  - 'What wallet to use?' : 'Wallets/WhatWalletToUse.md'
-  - Web Wallet (LokiLocker): 
-      - 'Troubleshooting Web Wallet' : 'Wallets/WebWallet/TroubleshootWebWallet.md'
-      - Guides:
-        - 'to be added': 'Wallets/WebWallet/placeholder.md'
-  - Graphical User interface (GUI) Wallet:
-      - 'Troubleshooting GUI Wallet' : 'Wallets/GuiWallet/TroubleshootGui.md'
-      - Guides: 
-        - 'to be added': 'Wallets/GuiWallet/placeholder.md'
-  - Mobile Wallet:
-      - 'Troubleshooting Mobile Wallet' : 'Wallets/MobileWallet/TroubleshootMobileWallet.md'
-      - Guides :
-        - 'to be added': 'Wallets/MobileWallet/placeholder.md'
-  - Command Line Integrated (CLI) Wallet:
-      - 'Troubleshooting CLI Wallet' : 'Wallets/CliWallet/TroubleshootCli.md'
-      - Guides:
+  - 'Which wallet should I use?' : 'Wallets/WhatWalletToUse.md'
+
+  - Addresses:
+    - 'Main Address': 'Wallets/Addresses/MainAddress.md'
+    - 'Sub Address': 'Wallets/Addresses/SubAddress.md'
+    - 'Integrated Address': 'Wallets/Addresses/IntegratedAddress.md'
+#  - Web Wallet (LokiLocker):
+#      - 'Troubleshooting Web Wallet' : 'Wallets/WebWallet/TroubleshootWebWallet.md'
+#      - Guides:
+#        - 'to be added': 'Wallets/WebWallet/placeholder.md'
+  - 'Multsignature': 'Wallets/Multisignature.md'
+
+  - Guides:
+        - 'Electron Gui Setup': 'Wallets/GuiWallet/loki-electron-guide.md'
+#        - 'Gui Setup': 'Wallets/GuiWallet/loki-gui-guide.md'
+        - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
+        - 'Mobile Wallet Restore': 'Wallets/MobileWallet/RestoreMobileWalletGuide.md'
         - 'CLI Mac Setup': 'Wallets/CliWallet/loki-wallet-cliMacSetup.md'
         - 'CLI Wallet Commands': 'Wallets/CliWallet/WalletCommands.md'
+        - 'CLI Restoring Wallet from Seed': 'Wallets/CliWallet/WalletRestoreSeed.md'
+        - 'CLI Restoring Wallet from Keys': 'Wallets/CliWallet/WalletRestoreKeys.md'
         - Multisig:
            - '2/2 Multisig': 'Wallets/CliWallet/2of2Multisig.md'
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
+           - 'M/N Multsig': 'Wallets/CliWallet/MofNMultisig.md'
 
-  - 'Multsigniture': 'Wallets/Multisigniture.md'
 - Mining:
     - 'Overview': 'Mining/MiningOverview.md'
     - 'ASIC Resistance': 'Mining/ASICResistance.md'
+#    - Guides:
+#      - 'XMR-Stak Mining': 'Mining/XMR-StakGuide.md'
+#      - 'XMR-Stak Linux Mining': 'Mining/XMR-Stak-Linux-Guide.md'
+#      - 'XMRig Mining': 'Mining/XMRig-Guide.md'
+#      - 'Mining With a SBC': 'Mining/Mining-With-SBC.md'
+
 - Service Nodes:
     - 'Overview': 'ServiceNodes/SNOverview.md'
     - 'Service Node Functions': 'ServiceNodes/ServiceNodeFunctions.md'
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
+    - 'Deregistration Rules': 'ServiceNodes/DeregistrationRules.md'
+    - 'Infinite Staking Primer': 'ServiceNodes/InfiniteStakingPrimer.md'
     - Guides:
       - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
-      - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'
-      - 'Service Node As Service Guide': 'ServiceNodes/RunServiceNodeAsService.md'
+      - 'Legacy to Launcher Update Guide': 'ServiceNodes/UpdateGuide.md'
+      - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
+      - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
+      - 'Launcher Config File': 'ServiceNodes/launcherconfig.md'
+      - 'Installing via Debian Package Guide': 'ServiceNodes/DebianPackageGuide.md'
+      - 'Service Node Legacy Guide': 'ServiceNodes/SNFullGuideLegacy.md'
+      - 'Service Node TESTNET Guide': 'ServiceNodes/StorageServerGuide-Testnet.md'
+    - Troubleshooting:
+      - 'Port 22023 Not Open': 'ServiceNodes/OpenPort22023.md'
+
 - Lokinet:
     - 'Overview': 'Lokinet/LokinetOverview.md'
+    - 'Public Testing Overview': 'Lokinet/Guides/PublicTestingGuide.md'
     - 'SNApps': 'Lokinet/SNApps.md'
     - 'LLARP': 'Lokinet/LLARP.md'
-    - 'Developers': 'Lokinet/DeveloperInfo.md'
+#    - 'Developers': 'Lokinet/DeveloperInfo.md'
+
     - Guides:
-        - 'Test Network Relay': 'Lokinet/Guides/TestNetRelay.md'
-        - 'SNApps': 'Lokinet/Guides/SNApps.md'
+        - 'Linux GUI Guide': 'Lokinet/Guides/LokinetGuiGuide.md'
+        - 'macOS Gui Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
+        - 'Anonymous Reverse SSH Guide': 'Lokinet/Guides/ReverseSSHGuide.md'
+        - 'Linux Command-line Guide': 'Lokinet/Guides/lokinet-linux-guide.md'
+#        - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
+        - 'Linux - Build-It-Yourself': 'Lokinet/Guides/Install.md'
+        - 'Accessing SNApps': 'Lokinet/Guides/AccessingSNApps.md'
+        - 'Joining a Lokinet IRC Chat': 'Lokinet/Guides/LokinetIRC.md'
+        - 'Hosting SNApps': 'Lokinet/Guides/HostingSNApps.md'
+#        - 'Route through Exit Node': 'Lokinet/Guides/RouteThroughExitNode.md'
+        - 'Lokinet config files': 'Lokinet/Guides/LokinetConfig.md'
+        - 'Set up a Lokinet Router': 'Lokinet/Guides/LokinetRouter.md'
         - 'Exit Nodes': 'Lokinet/Guides/ExitNode.md'
-- Loki Services:
-    - 'Overview': 'LokiServices/LokiServicesOverview.md'
-    - 'Messenger' : 'LokiServices/Messenger.md'
+
+- Session:
+    - 'Overview': 'LokiServices/Messenger/Session.md'
+    - 'Loki Name System': 'LokiServices/Messenger/LokiNameSystem.md'
+    - 'Threat Models': 'LokiServices/Messenger/threat_model.md'
+    - 'Infrastructure': 'LokiServices/Messenger/infrastructure.md'
+    - 'Message Routing': 'LokiServices/Messenger/message_routing.md'
+    - 'Group Chats': 'LokiServices/Messenger/group_chats.md'
+    - 'Testing': 'LokiServices/Messenger/testing.md'
+    - 'Multi-Device': 'LokiServices/Messenger/multidevice.md'
+    - 'Client Side Protection': 'LokiServices/Messenger/client_side_protection.md'
+    - 'Attachments': 'LokiServices/Messenger/attachments.md'
+    - Guides:
+        - 'Register Session/Wallet names': 'LokiServices/Messenger/HowToRegisterSessionNames.md'
+        - 'Multi-Device Setup': 'LokiServices/Messenger/multi_device_setup.md'
+        - 'OpenGroup Setup': 'LokiServices/Messenger/opengroup_setup.md'
+        - 'Join Open Group on Mobile': 'LokiServices/Messenger/JoinOpenGroupMobile.md'
+        - 'Join Open Group on Desktop': 'LokiServices/Messenger/JoinOpenGroupDesktop.md'
+
+- Blink:
     - 'Blink': 'LokiServices/Blink.md'
+- Checkpointing:
+    - 'Checkpointing LIP': 'Advanced/CheckpointingLip3.md'
+    - 'Safely Receiving Loki': 'Advanced/CheckpointingUpdate.md'
+- Pulse:
+    - 'Advanced/PulseLip5.md'
+
 - Advanced:
+    - Developer:
+       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
+       - 'Daemon RPC Guide - Old': 'Developer/DaemonRPCGuide.md'
+       - 'Daemon RPC Guide - Beta': 'Developer/DaemonRPCBeta.md'
+       - 'Wallet RPC Guide - Old': 'Developer/WalletRPCGuide.md'
+       - 'Wallet RPC Guide - Beta': 'Developer/WalletRPCBeta.md'
+       - 'Developer FAQ': 'Developer/FAQ.md'
+
+    - Loki Services:
+       - 'Overview': 'LokiServices/LokiServicesOverview.md'
+       - 'Blink': 'LokiServices/Blink.md'
+
+    - Attack Prevention:
+       - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
+       - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
+       - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
+
+    - Contributing:
+       - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
+       - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
+       - 'Github Issue Template Example': 'Contributing/Issue_Template.md'
+
+    - Governance:
+       - 'Overview': 'Governance/Governance.md'
+       - 'The Loki Foundation': 'Governance/TheLokiFoundation.md'
+       - 'Loki Funding System': 'Governance/LokiFundingSystem.md'
+
     - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
     - 'Cryptoeconomics' : 'Advanced/Cryptoeconomics.md'
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
     - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
     - 'CryptoNote Elements': 'Advanced/CryptoNoteElements.md'
-    - Attack Prevention:
-        - 'Denial of Service Attacks': 'Advanced/DenialofServiceAttacks.md'
-        - 'IP and Packet Blocking': 'Advanced/IPandPacketBlocking.md'
-        - 'Swarm Flagging': 'Advanced/SwarmFlagging.md'
+    - 'lokid' : 'Advanced/lokid.md'
+
     - Guides:
-        - 'lokid' : 'Advanced/lokid.md'
-        - 'Compiling Loki from source': 'Advanced/CompilingGuide.md'
-        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
+#        - 'Using Lokinet': 'Advanced/UsingLokinet.md'
         - 'Using Tor': 'Advanced/UsingTor.md'
-        - 'Debugging': 'Advanced/Debugging.md'  
-        - 'Service Node RPC Guide': 'Advanced/SNRPCGuide.md'      
-- 'FAQ': 'FAQ.md'
-- Contributing:
-   - 'How to Contribute to LokiDocs': 'Contributing/HowToContributeToLokiDocs.md'
-   - 'Vulnerability Response': 'Contributing/VULNERABILITY_RESPONSE_LOKI.md'
-- Governance:
-   - 'Overview': 'Governance/Governance.md'
-   - 'The Loki Foundation': 'Governance/TheLokiFoundation.md'
-   - 'Loki Funding System': 'Governance/LokiFundingSystem.md'
+        - 'Debugging': 'Advanced/Debugging.md'
+        - 'Accepting Loki for Merchants and Exchanges': 'Advanced/AcceptingLoki.md'
 
 # Customization
 extra_css:
   - CSS/style.css
   - CSS/font.css
+
+extra_javascript:
+  - JAVASCRIPT/links.js
+  - JAVASCRIPT/style.js
 
 extra:
   social:
@@ -121,17 +190,17 @@ extra:
       link: 'https://www.reddit.com/r/LokiProject'
     - type: 'youtube'
       link: 'https://www.youtube.com/lokinetwork'
+    - type: 'facebook'
+      link: 'https://www.facebook.com/LokiNetwork/'
 
 # Google Analytics
-google_analytics:
-  - 'UA-XXXXXXXX-X'
-  - 'auto'
+# nope
 
 # Extensions
 markdown_extensions:
   - admonition
+  - meta
   - codehilite:
       guess_lang: false
   - toc:
       permalink: true
-

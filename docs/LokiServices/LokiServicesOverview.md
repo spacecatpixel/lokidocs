@@ -1,6 +1,9 @@
+title: Loki Documentation | Loki Network Services
+description: Loki Services are built upon the protocol level of the Loki network. Loki Services leverage the Service Node layer to allow for decentralised services.
+
 # Loki Services Overview
 
->> To do What is loki services
+Loki Services are built upon the protocol level of the Loki network. Loki Services leverage the Service Node layer to allow for decentralised services.
 
 Similar to the investment that miners make into hardware, each Service Node operator freezes Loki coins when they begin to operate a Service Node. This frozen capital is called the [staking requirement](../ServiceNodes/StakingRequirement.md) and helps serve the two purposes for Loki Services:
 
@@ -17,6 +20,6 @@ If we take the above points to be true, and we can enforce aggressive punishment
 
 Example Loki Services:
 
-- [Loki Messenger](../LokiServices/Messenger.md)
+- [Session](../LokiServices/Messenger/Session.md)
 
 - [Blink Transactions](../LokiServices/Blink.md)

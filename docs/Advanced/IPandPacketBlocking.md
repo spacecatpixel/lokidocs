@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Ip and Packet Blocking
+description: Find out how Loki coin deals with IP and packet blocking. What is deep packet inspection and harvesting attacks.
+
 # IP and Packet Blocking
 
 Although the [Service Node](../ServiceNodes/SNOverview.md) network has no central points of failure, two significant censorship threats face the network; namely [harvesting attacks](https://geti2p.net/en/docs/how/threat-model#harvesting) and [deep packet inspection](http://tec.gov.in/pdf/Studypaper/White%20paper%20on%20DPI.pdf). Harvesting attacks would seek to gather the IP addresses of all operating Service Nodes on the network and use ISP level firewalls to block connections to those particular addresses. This type of censorship is regularly [performed on the Tor network in China](https://arxiv.org/abs/1204.0447). Deep packet inspection (DPI), aims to investigate the structuring of each individual packet that passes through a firewall, and selectively drop or block packets that appear to relate to a particular service. Again, DPI has been used extensively by state-level actors.

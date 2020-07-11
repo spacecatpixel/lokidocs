@@ -1,4 +1,7 @@
-#Sybil Resistance
+title: Loki.network Documentation | Sybil Resistance | Sybil Attacks
+description: What is a Sybil attack for a network performing onion routing? What is the game theory behind sybil resistance and can cryptocurrency economics create built in market based sybil resistance? Loki uses game theory to mitigate it's network against sybil attacks.
+
+# Sybil Resistance
 
 One of the most important features of the Loki network is its built-in market-based Sybil resistance. We defined a successful [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack) as one where a single actor controls over 30% of the network’s nodes. At this level of dominance, an actor could conduct effective network wide temporal analysis. Forcing nodes to have a [stake](../ServiceNodes/StakingRequirement.md) in the network greatly increases the cost of performing a Sybil attack. ***Towler*** proved the effectiveness of this protection in his
 [game theory model](https://loki.network/cryptoeconomics). However, this protection is not guaranteed.
@@ -51,7 +54,7 @@ The introduction of the $OE presented a new problem. The cost of operating the [
 ### Max Node Count
 The relationship between [staking requirement](../ServiceNodes/StakingRequirement.md)(SR) and the [circulating supply](../Cryptoeconomics/#circulating-supply)(A) causes a hard limit on #N(Z). 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;Z=\frac{A}{SR}" title="\Large Z=\frac{A}{SR}" />
+<center>![Circulating Supply](../assets/maxnodes.svg)</center>
 
 For example:
 If the circulating supply is 50,000,000 and the staking requirement is 50,000, only 1000 nodes can possibly operate. In reality, #N will be the circulating supply divided by the LR, which if we assume our target of 50%, would mean 500 nodes should operate in the right economic conditions.

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="676pt" height="387pt" viewBox="0.00 0.00 676.00 387.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 383)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-383 672,-383 672,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_quorum1</title>
+<polygon fill="none" stroke="#006400" points="8,-138 8,-213 330,-213 330,-138 8,-138"/>
+<text text-anchor="middle" x="169" y="-197.8" font-family="Times,serif" font-size="14.00" fill="#006400">Blink quorum Q for height h</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_quorum2</title>
+<polygon fill="none" stroke="#006400" points="338,-138 338,-213 660,-213 660,-138 338,-138"/>
+<text text-anchor="middle" x="499" y="-197.8" font-family="Times,serif" font-size="14.00" fill="#006400">Blink quorum Q' for height h</text>
+</g>
+
+<g id="node1" class="node">
+<title>lokid</title>
+<polygon fill="#d3d3d3" stroke="#000000" points="372.5,-292 295.5,-292 295.5,-254 372.5,-254 372.5,-292"/>
+<text text-anchor="middle" x="334" y="-276.8" font-family="Times,serif" font-size="14.00" fill="#000000">lokid</text>
+<text text-anchor="middle" x="334" y="-261.8" font-family="Times,serif" font-size="14.00" fill="#000000">@ height h</text>
+</g>
+
+<g id="node2" class="node">
+<title>SN_1</title>
+<polygon fill="#006400" stroke="#006400" points="322,-182 268,-182 268,-146 322,-146 322,-182"/>
+<text text-anchor="middle" x="295" y="-160.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">SN</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>lokid-&gt;SN_1</title>
+<path fill="none" stroke="#000000" d="M295.2408,-254.7947C288.3143,-249.7193 282.0293,-243.4916 278,-236 270.5854,-222.2142 274.0836,-205.236 279.7845,-191.2295"/>
+<polygon fill="#000000" stroke="#000000" points="282.9916,-192.6322 283.9761,-182.0832 276.628,-189.7158 282.9916,-192.6322"/>
+<text text-anchor="middle" x="285.5" y="-224.8" font-family="Times,serif" font-size="14.00" fill="#000000">②</text>
+</g>
+
+<g id="node5" class="node">
+<title>SN_21</title>
+<polygon fill="#006400" stroke="#006400" points="400,-182 346,-182 346,-146 400,-146 400,-182"/>
+<text text-anchor="middle" x="373" y="-160.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">SN</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>lokid-&gt;SN_21</title>
+<path fill="none" stroke="#000000" d="M340.8826,-253.7639C347.0277,-236.5892 356.1025,-211.2264 363.0397,-191.8376"/>
+<polygon fill="#000000" stroke="#000000" points="366.3723,-192.9127 366.4458,-182.3181 359.7815,-190.5544 366.3723,-192.9127"/>
+<text text-anchor="middle" x="359.5" y="-224.8" font-family="Times,serif" font-size="14.00" fill="#000000">②</text>
+</g>
+
+<g id="node8" class="node">
+<title>wallet</title>
+<polygon fill="none" stroke="#000000" points="361,-379 307,-379 307,-343 361,-343 361,-379"/>
+<text text-anchor="middle" x="334" y="-357.3" font-family="Times,serif" font-size="14.00" fill="#000000">wallet</text>
+</g>
+
+<g id="edge30" class="edge">
+<title>lokid-&gt;wallet</title>
+<path fill="none" stroke="#000000" d="M344.7412,-292.0466C348.9844,-301.7936 352.353,-313.9124 350,-325 349.401,-327.8226 348.5649,-330.6925 347.5862,-333.5175"/>
+<polygon fill="#000000" stroke="#000000" points="344.3309,-332.2317 343.846,-342.8154 350.8252,-334.8441 344.3309,-332.2317"/>
+<text text-anchor="middle" x="357.5" y="-313.8" font-family="Times,serif" font-size="14.00" fill="#000000">⑥</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>SN_1-&gt;lokid</title>
+<path fill="none" stroke="#000000" d="M301.5542,-182.3181C307.5923,-199.1939 316.6512,-224.5123 323.6637,-244.1112"/>
+<polygon fill="#000000" stroke="#000000" points="320.453,-245.5275 327.1174,-253.7639 327.0439,-243.1693 320.453,-245.5275"/>
+<text text-anchor="middle" x="327.5" y="-224.8" font-family="Times,serif" font-size="14.00" fill="#000000">⑤</text>
+</g>
+
+<g id="node3" class="node">
+<title>SN_2</title>
+<polygon fill="#006400" stroke="#006400" points="70,-182 16,-182 16,-146 70,-146 70,-182"/>
+<text text-anchor="middle" x="43" y="-160.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">SN</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>SN_1:s-&gt;SN_2</title>
+<path fill="none" stroke="#0000ff" d="M295,-146C295,-110.8573 175.9162,-96.7965 142,-106 117.4374,-112.6653 92.733,-127.1244 74.1465,-139.9376"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="71.9279,-137.2204 65.801,-145.864 75.9809,-142.9277 71.9279,-137.2204"/>
+<text text-anchor="middle" x="172.6213" y="-107.222" font-family="Times,serif" font-size="14.00" fill="#0000ff">③</text>
+</g>
+
+<g id="edge10" class="edge">
+<title>SN_1:n-&gt;SN_2:n</title>
+<path fill="none" stroke="#dc143c" d="M294.182,-192.0935C287.4706,-230.2503 240.602,-222.5927 196,-233.5 129.8441,-249.6782 51.4256,-253.3877 43.6318,-192.3586"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="297.6807,-192.2501 295,-182 290.7036,-191.6846 297.6807,-192.2501"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="47.1024,-191.7684 43,-182 40.1153,-192.1946 47.1024,-191.7684"/>
+<text text-anchor="middle" x="172.8097" y="-240.8385" font-family="Times,serif" font-size="14.00" fill="#dc143c">④</text>
+</g>
+
+<g id="node4" class="node">
+<title>SN_3</title>
+<polygon fill="#006400" stroke="#006400" points="196,-182 142,-182 142,-146 196,-146 196,-182"/>
+<text text-anchor="middle" x="169" y="-160.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">SN</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>SN_1:s-&gt;SN_3</title>
+<path fill="none" stroke="#0000ff" d="M295,-146C295,-109.4345 242.3542,-127.6612 205.1224,-145.1234"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="203.5141,-142.0133 196.0302,-149.5127 206.5573,-148.3171 203.5141,-142.0133"/>
+</g>
+
+<g id="edge12" class="edge">
+<title>SN_1-&gt;SN_3</title>
+<path fill="none" stroke="#dc143c" d="M267.5798,-164C249.5979,-164 225.8623,-164 206.1877,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="206.0302,-160.5001 196.0302,-164 206.0301,-167.5001 206.0302,-160.5001"/>
+</g>
+
+<g id="node9" class="node">
+<title>peers</title>
+<polygon fill="#d3d3d3" stroke="#000000" points="331.4102,-.0493 336.3164,-.1479 341.1718,-.2953 345.9567,-.4913 350.6516,-.7353 355.2378,-1.0266 359.6971,-1.3645 364.0122,-1.7479 368.1666,-2.1759 372.145,-2.6472 375.933,-3.1606 379.5175,-3.7147 382.8864,-4.308 386.0292,-4.9388 388.9365,-5.6054 391.6004,-6.3059 394.0142,-7.0385 396.1727,-7.8012 398.0722,-8.5918 399.7103,-9.4082 401.0859,-10.2481 402.1992,-11.1093 403.0518,-11.9894 403.6465,-12.886 403.9871,-13.7965 404.0788,-14.7186 403.9275,-15.6497 403.5401,-16.5873 402.9244,-17.5287 402.089,-18.4713 401.043,-19.4127 399.7961,-20.3503 398.3584,-21.2814 396.7404,-22.2035 394.9527,-23.114 393.0063,-24.0106 390.9121,-24.8907 388.6808,-25.7519 386.3231,-26.5918 383.8496,-27.4082 381.2705,-28.1988 378.5957,-28.9615 375.8345,-29.6941 372.996,-30.3946 370.0887,-31.0612 367.1206,-31.692 364.099,-32.2853 361.0309,-32.8394 357.9224,-33.3528 354.7794,-33.8241 351.6071,-34.2521 348.41,-34.6355 345.1923,-34.9734 341.9579,-35.2647 338.7099,-35.5087 335.4514,-35.7047 332.185,-35.8521 328.9131,-35.9507 325.6381,-36 322.3619,-36 319.0869,-35.9507 315.815,-35.8521 312.5486,-35.7047 309.2901,-35.5087 306.0421,-35.2647 302.8077,-34.9734 299.59,-34.6355 296.3929,-34.2521 293.2206,-33.8241 290.0776,-33.3528 286.9691,-32.8394 283.901,-32.2853 280.8794,-31.692 277.9113,-31.0612 275.004,-30.3946 272.1655,-29.6941 269.4043,-28.9615 266.7295,-28.1988 264.1504,-27.4082 261.6769,-26.5918 259.3192,-25.7519 257.0879,-24.8907 254.9937,-24.0106 253.0473,-23.114 251.2596,-22.2035 249.6416,-21.2814 248.2039,-20.3503 246.957,-19.4127 245.911,-18.4713 245.0756,-17.5287 244.4599,-16.5873 244.0725,-15.6497 243.9212,-14.7186 244.0129,-13.7965 244.3535,-12.886 244.9482,-11.9894 245.8008,-11.1093 246.9141,-10.2481 248.2897,-9.4082 249.9278,-8.5918 251.8273,-7.8012 253.9858,-7.0385 256.3996,-6.3059 259.0635,-5.6054 261.9708,-4.9388 265.1136,-4.308 268.4825,-3.7147 272.067,-3.1606 275.855,-2.6472 279.8334,-2.1759 283.9878,-1.7479 288.3029,-1.3645 292.7622,-1.0266 297.3484,-.7353 302.0433,-.4913 306.8282,-.2953 311.6836,-.1479 316.5898,-.0493 321.5265,0 326.4735,0 331.4102,-.0493"/>
+<text text-anchor="middle" x="324" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">lokid p2p network</text>
+</g>
+
+<g id="edge24" class="edge">
+<title>SN_1-&gt;peers</title>
+<path fill="none" stroke="#000000" d="M281.2594,-145.8524C268.938,-127.2208 254.3185,-97.5601 265,-73 270.3764,-60.638 280.0522,-49.796 290.0336,-41.0787"/>
+<polygon fill="#000000" stroke="#000000" points="292.4932,-43.5891 298.0278,-34.5548 288.0673,-38.1658 292.4932,-43.5891"/>
+<text text-anchor="middle" x="242.0158" y="-76.7638" font-family="Times,serif" font-size="14.00" fill="#000000">⑤       </text>
+</g>
+
+
+
+<g id="edge13" class="edge">
+<title>SN_2:e-&gt;SN_3:w</title>
+<path fill="none" stroke="#dc143c" d="M70,-164C98.375,-164 107.8795,-164 131.9792,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="132,-167.5001 142,-164 132,-160.5001 132,-167.5001"/>
+<text text-anchor="middle" x="98.4268" y="-167.8" font-family="Times,serif" font-size="14.00" fill="#dc143c">④</text>
+</g>
+
+<g id="edge25" class="edge">
+<title>SN_2-&gt;peers</title>
+<path fill="none" stroke="#000000" d="M70.2428,-149.0765C103.7002,-130.8276 162.2615,-99.1422 213,-73 235.8793,-61.2118 261.6243,-48.4259 282.5561,-38.1511"/>
+<polygon fill="#000000" stroke="#000000" points="284.3663,-41.1617 291.8071,-33.6195 281.287,-34.8754 284.3663,-41.1617"/>
+</g>
+
+<g id="edge11" class="edge">
+<title>SN_3:e-&gt;SN_1:w</title>
+<path fill="none" stroke="#dc143c" d="M196,-164C224.375,-164 233.8795,-164 257.9792,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="258,-167.5001 268,-164 258,-160.5001 258,-167.5001"/>
+<text text-anchor="middle" x="224.4268" y="-167.8" font-family="Times,serif" font-size="14.00" fill="#dc143c">④</text>
+</g>
+
+<g id="edge14" class="edge">
+<title>SN_3-&gt;SN_2</title>
+<path fill="none" stroke="#dc143c" d="M141.5798,-164C123.5979,-164 99.8623,-164 80.1877,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="80.0302,-160.5001 70.0302,-164 80.0301,-167.5001 80.0302,-160.5001"/>
+</g>
+
+<g id="edge26" class="edge">
+<title>SN_3-&gt;peers</title>
+<path fill="none" stroke="#000000" d="M183.9867,-145.7374C203.1457,-122.9474 237.93,-83.3967 272,-54 277.3621,-49.3734 283.3232,-44.7929 289.241,-40.5289"/>
+<polygon fill="#000000" stroke="#000000" points="291.6163,-43.1388 297.8056,-34.5397 287.6048,-37.4023 291.6163,-43.1388"/>
+</g>
+
+<g id="edge5" class="edge">
+<title>SN_21-&gt;lokid</title>
+<path fill="none" stroke="#000000" d="M375.3539,-182.2407C376.5215,-197.287 376.3767,-218.8668 369,-236 367.5139,-239.4516 365.5566,-242.777 363.3255,-245.9228"/>
+<polygon fill="#000000" stroke="#000000" points="360.5161,-243.83 356.9157,-253.7943 365.9441,-248.25 360.5161,-243.83"/>
+<text text-anchor="middle" x="380.5" y="-224.8" font-family="Times,serif" font-size="14.00" fill="#000000">⑤</text>
+</g>
+
+<g id="node6" class="node">
+<title>SN_22</title>
+<polygon fill="#006400" stroke="#006400" points="526,-182 472,-182 472,-146 526,-146 526,-182"/>
+<text text-anchor="middle" x="499" y="-160.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">SN</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>SN_21:s-&gt;SN_22</title>
+<path fill="none" stroke="#0000ff" d="M373,-146C373,-109.4345 425.6458,-127.6612 462.8776,-145.1234"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="461.4427,-148.3171 471.9698,-149.5127 464.4859,-142.0133 461.4427,-148.3171"/>
+<text text-anchor="middle" x="413.8968" y="-134.7759" font-family="Times,serif" font-size="14.00" fill="#0000ff">③   </text>
+</g>
+
+<g id="edge15" class="edge">
+<title>SN_21:e-&gt;SN_22:w</title>
+<path fill="none" stroke="#dc143c" d="M400,-164C428.375,-164 437.8795,-164 461.9792,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="462,-167.5001 472,-164 462,-160.5001 462,-167.5001"/>
+<text text-anchor="middle" x="428.4268" y="-167.8" font-family="Times,serif" font-size="14.00" fill="#dc143c">④</text>
+</g>
+
+<g id="node7" class="node">
+<title>SN_23</title>
+<polygon fill="#006400" stroke="#006400" points="652,-182 598,-182 598,-146 652,-146 652,-182"/>
+<text text-anchor="middle" x="625" y="-160.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">SN</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>SN_21:s-&gt;SN_23</title>
+<path fill="none" stroke="#0000ff" d="M373,-146C373,-110.8573 492.0838,-96.7965 526,-106 550.5626,-112.6653 575.267,-127.1244 593.8535,-139.9376"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="592.0191,-142.9277 602.199,-145.864 596.0721,-137.2204 592.0191,-142.9277"/>
+</g>
+
+<g id="edge17" class="edge">
+<title>SN_21:n-&gt;SN_23:n</title>
+<path fill="none" stroke="#dc143c" d="M373.6318,-192.3586C381.4256,-253.3877 459.8441,-249.6782 526,-233.5 570.602,-222.5927 617.4706,-230.2503 624.182,-192.0935"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="377.1024,-191.7684 373,-182 370.1153,-192.1946 377.1024,-191.7684"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="627.6807,-192.2501 625,-182 620.7036,-191.6846 627.6807,-192.2501"/>
+<text text-anchor="middle" x="518.5163" y="-237.296" font-family="Times,serif" font-size="14.00" fill="#dc143c">④</text>
+</g>
+
+<g id="edge27" class="edge">
+<title>SN_21-&gt;peers</title>
+<path fill="none" stroke="#000000" d="M380.2082,-145.7529C386.5367,-126.7808 393.2689,-96.6114 383,-73 377.6236,-60.638 367.9478,-49.796 357.9664,-41.0787"/>
+<polygon fill="#000000" stroke="#000000" points="359.9327,-38.1658 349.9722,-34.5548 355.5068,-43.5891 359.9327,-38.1658"/>
+</g>
+
+
+<g id="edge16" class="edge">
+<title>SN_22-&gt;SN_21</title>
+<path fill="none" stroke="#dc143c" d="M471.5798,-164C453.5979,-164 429.8623,-164 410.1877,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="410.0302,-160.5001 400.0302,-164 410.0301,-167.5001 410.0302,-160.5001"/>
+</g>
+
+<g id="edge18" class="edge">
+<title>SN_22:e-&gt;SN_23:w</title>
+<path fill="none" stroke="#dc143c" d="M526,-164C554.375,-164 563.8795,-164 587.9792,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="588,-167.5001 598,-164 588,-160.5001 588,-167.5001"/>
+</g>
+
+<g id="edge28" class="edge">
+<title>SN_22-&gt;peers</title>
+<path fill="none" stroke="#000000" d="M482.7619,-145.8937C461.6164,-122.9151 422.8677,-82.8081 385,-54 378.1767,-48.8092 370.5457,-43.7756 363.0529,-39.1986"/>
+<polygon fill="#000000" stroke="#000000" points="364.7637,-36.144 354.3772,-34.0533 361.1929,-42.1648 364.7637,-36.144"/>
+<text text-anchor="middle" x="414.8346" y="-89.1919" font-family="Times,serif" font-size="14.00" fill="#000000">⑤</text>
+</g>
+
+<g id="edge19" class="edge">
+<title>SN_23-&gt;SN_22</title>
+<path fill="none" stroke="#dc143c" d="M597.5798,-164C579.5979,-164 555.8623,-164 536.1877,-164"/>
+<polygon fill="#dc143c" stroke="#dc143c" points="536.0302,-160.5001 526.0302,-164 536.0301,-167.5001 536.0302,-160.5001"/>
+<text text-anchor="middle" x="554.5193" y="-167.8" font-family="Times,serif" font-size="14.00" fill="#dc143c">④</text>
+</g>
+
+<g id="edge29" class="edge">
+<title>SN_23-&gt;peers</title>
+<path fill="none" stroke="#000000" d="M597.9589,-150.417C562.1578,-132.4818 497.0141,-100.0137 441,-73 416.4115,-61.1418 388.7779,-48.1367 366.5427,-37.7511"/>
+<polygon fill="#000000" stroke="#000000" points="367.9105,-34.5272 357.3684,-33.4715 364.9513,-40.8709 367.9105,-34.5272"/>
+</g>
+
+<g id="edge1" class="edge">
+<title>wallet-&gt;lokid</title>
+<path fill="none" stroke="#000000" d="M334,-342.7663C334,-331.0875 334,-315.6692 334,-302.2978"/>
+<polygon fill="#000000" stroke="#000000" points="337.5001,-302.1235 334,-292.1235 330.5001,-302.1235 337.5001,-302.1235"/>
+<text text-anchor="middle" x="341.5" y="-313.8" font-family="Times,serif" font-size="14.00" fill="#000000">①</text>
+</g>
+
+
+</g>
+</svg>

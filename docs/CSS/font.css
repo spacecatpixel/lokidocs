@@ -1,62 +1,133 @@
-html, body {
+html, body 
+{
     font-family: Arial, sans-serif;
-    font-style: normal;
+    font-style : normal;
 }
 
-pre, code {
+pre, code 
+{
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-    font-style: normal;
-    font-size     : 18px;
-    font-weight: 200;
+    font-style      : normal;
+    color           : #78be20!important;
+    background-color: #2e2e2e!important;
+
 }
 
-.md-typeset h1 {
-    color         : #000000;
+.md-typeset h1 
+{
+    color         : white;
     font-size     : 36px;
     text-transform: none;
 }
 
-.md-typeset h2 {
-    color         : #000000;
+.md-typeset h2 
+{
+    color         : white;
     font-size     : 28px;
-    font-weight    : bold;
+    font-weight   : bold;
     text-transform: none;
 }
 
-.md-typeset h3 {
-    color         : #000000;
+.md-typeset h3 
+{
+    color         : white;
     font-size     : 22px;
     text-transform: none;
 }
 
-.md-typeset h4 {
-    color         : #000000;
+.md-typeset h4 
+{
+    color         : #ddd;
     font-size     : 20px;
     text-transform: none;
 }
 
-.md-typeset h5 {
-    color         : #000000;
+.md-typeset h5 
+{
+    color         : #ddd;
     font-size     : 18px;
     text-transform: none;
 }
 
-.md-typeset h6 {
-    color         : #000000;
+.md-typeset h6 
+{
+    color         : #ddd;
     font-size     : 16px;
     text-transform: none;
+}
+
+.md-typeset details
+{
+    color:white;
 }
 
 .md-typeset p,
 .md-typeset ul,
 .md-typeset ol,
-.md-typeset table {
-    color    : #000000;
+.md-typeset table 
+{
+    color    : #ddd;
     font-size: 16px;
+}
+.md-typeset table
+{
+    background-color: #272727;
+}
+
+.md-nav__link[data-md-state="blur"] 
+{
+    color: #78be20;
 }
 
 .md-typeset a:link,
-.md-typeset a:visited {
-    color: #0006ff;
+.md-typeset a:visited 
+{
+    color: #78be20;
+}
+
+.md-nav__item, 
+.md-nav__title,
+.md-nav__link li 
+{
+    color: #ddd;
+}
+
+.md-nav__title
+{
+    font-size:1.6rem;
+}
+
+.md-header-nav__topic a 
+{
+    font-size  :14px;
+    padding    :10px;
+    font-family:Roboto, sans-serif;
+}
+
+/* Styling for mobile view */
+@media only screen and (max-width: 76.1875em) 
+{
+    .md-header-nav__topic a 
+    {
+        font-size  :11px;
+        padding    :2px;
+        font-family:Roboto, sans-serif;
+    }
+    html .md-nav--primary .md-nav__title ~ .md-nav__list
+    {
+        background-color:#1a1a1a!important;
+    }
+    html .md-nav--primary .md-nav__title, 
+    html .md-nav--primary .md-nav__title::before 
+    {
+        background-color: black;
+        color           : #78be20;
+    }
+}
+
+.documentation
+{
+    color      : #78be20;
+    font-weight: bold;
 }
