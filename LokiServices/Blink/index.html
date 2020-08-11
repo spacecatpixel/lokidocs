@@ -10,8 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Blink is Loki’s instant payment mechanism proposed in the original Loki whitepaper. Once completed, Blink will allow users to send payments instantly to each other and allow instantly resend of received Blink transactions without requiring blockchain confirmations.">
       
-        <link rel="canonical" href="https://loki-project.github.io/loki-docs/LokiServices/Blink/">
+      
+        <link rel="canonical" href="https://docs.loki.network/LokiServices/Blink/">
       
       
       
@@ -38,7 +40,7 @@
     
     
       
-        <title>Blink - Loki Docs</title>
+        <title>Loki Documentation | Blink | Instant Cryptocurrency Payments</title>
       
     
     
@@ -52,10 +54,6 @@
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Regular:300,400,400i,700|Roboto">
-        <style>body,input{font-family:"Roboto Regular","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -100,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#blink" tabindex="1" class="md-skip">
+      <a href="../../#loki-blink-design" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,9 +107,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.loki.network" title="Loki Docs" class="md-header-nav__button md-logo">
           
-            <img src="../../Loki_favicon32x32.png" width="24" height="24">
+            <img src="../../logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -196,6 +194,157 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Wallets/WalletsOverview/" title="Wallets" class="md-tabs__link">
+          Wallets
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Mining/MiningOverview/" title="Mining" class="md-tabs__link">
+          Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ServiceNodes/SNOverview/" title="Service Nodes" class="md-tabs__link">
+          Service Nodes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Lokinet/LokinetOverview/" title="Lokinet" class="md-tabs__link">
+          Lokinet
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Messenger/Session/" title="Session" class="md-tabs__link">
+          Session
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Blink" class="md-tabs__link">
+          Blink
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Advanced/CheckpointingLip3/" title="Checkpointing" class="md-tabs__link">
+          Checkpointing
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Advanced/PulseLip5/" title="Pulse" class="md-tabs__link">
+          Pulse
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Developer/SNRPCGuide/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -205,9 +354,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-nav__button md-logo">
+    <a href="https://docs.loki.network" title="Loki Docs" class="md-nav__button md-logo">
       
-        <img src="../../Loki_favicon32x32.png" width="48" height="48">
+        <img src="../../logo.svg" width="48" height="48">
       
     </a>
     Loki Docs
@@ -254,46 +403,34 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
+  <li class="md-nav__item">
+    <a href="../../Introduction/LokiNetwork/" title="Introduction" class="md-nav__link">
       Introduction
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Introduction
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Introduction/LokiNetwork/" title="Loki Network" class="md-nav__link">
-      Loki Network
     </a>
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
-    <a href="../../Introduction/BeginnersGuide/" title="Where to begin?" class="md-nav__link">
-      Where to begin?
+    <a href="../../Introduction/GettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
   </li>
 
     
@@ -304,13 +441,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-5">
       Wallets
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-5">
         Wallets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -334,8 +471,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/WhatWalletToUse/" title="What wallet to use?" class="md-nav__link">
-      What wallet to use?
+    <a href="../../Wallets/WhatWalletToUse/" title="Which wallet should I use?" class="md-nav__link">
+      Which wallet should I use?
     </a>
   </li>
 
@@ -347,14 +484,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-3-3">
-      Web Wallet (LokiLocker)
+    <label class="md-nav__link" for="nav-5-3">
+      Addresses
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        Web Wallet (LokiLocker)
+      <label class="md-nav__title" for="nav-5-3">
+        Addresses
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -365,8 +502,49 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/WebWallet/TroubleshootWebWallet/" title="Troubleshooting Web Wallet" class="md-nav__link">
-      Troubleshooting Web Wallet
+    <a href="../../Wallets/Addresses/MainAddress/" title="Main Address" class="md-nav__link">
+      Main Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/SubAddress/" title="Sub Address" class="md-nav__link">
+      Sub Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/IntegratedAddress/" title="Integrated Address" class="md-nav__link">
+      Integrated Address
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Multisignature/" title="Multsignature" class="md-nav__link">
+      Multsignature
     </a>
   </li>
 
@@ -378,13 +556,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
     
-    <label class="md-nav__link" for="nav-3-3-2">
+    <label class="md-nav__link" for="nav-5-5">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-3-2">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -396,40 +574,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/WebWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
+    <a href="../../Wallets/GuiWallet/loki-electron-guide/" title="Electron Gui Setup" class="md-nav__link">
+      Electron Gui Setup
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      Graphical User interface (GUI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        Graphical User interface (GUI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -437,30 +586,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/GuiWallet/TroubleshootGui/" title="Troubleshooting GUI Wallet" class="md-nav__link">
-      Troubleshooting GUI Wallet
+    <a href="../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
     </a>
   </li>
 
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2">
-    
-    <label class="md-nav__link" for="nav-3-4-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -468,143 +598,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/GuiWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
+    <a href="../../Wallets/MobileWallet/RestoreMobileWalletGuide/" title="Mobile Wallet Restore" class="md-nav__link">
+      Mobile Wallet Restore
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
-    
-    <label class="md-nav__link" for="nav-3-5">
-      Mobile Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-5">
-        Mobile Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Wallets/MobileWallet/TroubleshootMobileWallet/" title="Troubleshooting Mobile Wallet" class="md-nav__link">
-      Troubleshooting Mobile Wallet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
-    
-    <label class="md-nav__link" for="nav-3-5-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-5-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Wallets/MobileWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
-    
-    <label class="md-nav__link" for="nav-3-6">
-      Command Line Integrated (CLI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-6">
-        Command Line Integrated (CLI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Wallets/CliWallet/TroubleshootCli/" title="Troubleshooting CLI Wallet" class="md-nav__link">
-      Troubleshooting CLI Wallet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2" type="checkbox" id="nav-3-6-2">
-    
-    <label class="md-nav__link" for="nav-3-6-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-6-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -635,15 +633,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreSeed/" title="CLI Restoring Wallet from Seed" class="md-nav__link">
+      CLI Restoring Wallet from Seed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreKeys/" title="CLI Restoring Wallet from Keys" class="md-nav__link">
+      CLI Restoring Wallet from Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2-3" type="checkbox" id="nav-3-6-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5-8" type="checkbox" id="nav-5-5-8">
     
-    <label class="md-nav__link" for="nav-3-6-2-3">
+    <label class="md-nav__link" for="nav-5-5-8">
       Multisig
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-6-2-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-5-8">
         Multisig
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -673,30 +695,25 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/Multisigniture/" title="Multsigniture" class="md-nav__link">
-      Multsigniture
+    <a href="../../Wallets/CliWallet/MofNMultisig/" title="M/N Multsig" class="md-nav__link">
+      M/N Multsig
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -712,13 +729,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-6">
       Mining
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-6">
         Mining
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -760,13 +777,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-7">
       Service Nodes
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-7">
         Service Nodes
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -790,18 +807,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ServiceNodes/ServiceNodeFunctions/" title="Service Node Functions" class="md-nav__link">
-      Service Node Functions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../ServiceNodes/StakingRequirement/" title="Staking Requirement" class="md-nav__link">
       Staking Requirement
     </a>
@@ -813,15 +818,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/DeregistrationRules/" title="Deregistration Rules" class="md-nav__link">
+      Deregistration Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/InfiniteStakingPrimer/" title="Infinite Staking Primer" class="md-nav__link">
+      Infinite Staking Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-7-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
+      <label class="md-nav__title" for="nav-7-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -833,8 +862,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ServiceNodes/SNFullGuide/" title="Service Node Full Guide" class="md-nav__link">
-      Service Node Full Guide
+    <a href="../../ServiceNodes/DebianPackageGuide/" title="Service Node Setup Guide" class="md-nav__link">
+      Service Node Setup Guide
     </a>
   </li>
 
@@ -845,7 +874,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
       Service Node RPC Guide
     </a>
   </li>
@@ -857,8 +886,80 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ServiceNodes/RunServiceNodeAsService/" title="Service Node As Service Guide" class="md-nav__link">
-      Service Node As Service Guide
+    <a href="../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/launcherconfig/" title="Launcher Config File" class="md-nav__link">
+      Launcher Config File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-nav__link">
+      Service Node Legacy Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/StorageServerGuide-Testnet/" title="Service Node TESTNET Guide" class="md-nav__link">
+      Service Node TESTNET Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/OpenPort22023/" title="Port 22023 Not Open" class="md-nav__link">
+      Port 22023 Not Open
     </a>
   </li>
 
@@ -880,13 +981,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-8">
       Lokinet
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-8">
         Lokinet
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -900,6 +1001,18 @@
   <li class="md-nav__item">
     <a href="../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/PublicTestingGuide/" title="Public Testing Overview" class="md-nav__link">
+      Public Testing Overview
     </a>
   </li>
 
@@ -933,27 +1046,15 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../Lokinet/DeveloperInfo/" title="Developers" class="md-nav__link">
-      Developers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
     
-    <label class="md-nav__link" for="nav-6-5">
+    <label class="md-nav__link" for="nav-8-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-5">
+      <label class="md-nav__title" for="nav-8-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -965,8 +1066,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Lokinet/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
+    <a href="../../Lokinet/Guides/LokinetGuiGuide/" title="Linux GUI Guide" class="md-nav__link">
+      Linux GUI Guide
     </a>
   </li>
 
@@ -977,8 +1078,104 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Lokinet/Guides/SNApps/" title="SNApps" class="md-nav__link">
-      SNApps
+    <a href="../../Lokinet/Guides/lokinet-mac-guide/" title="macOS Gui Guide" class="md-nav__link">
+      macOS Gui Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ReverseSSHGuide/" title="Anonymous Reverse SSH Guide" class="md-nav__link">
+      Anonymous Reverse SSH Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/lokinet-linux-guide/" title="Linux Command-line Guide" class="md-nav__link">
+      Linux Command-line Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/Install/" title="Linux - Build-It-Yourself" class="md-nav__link">
+      Linux - Build-It-Yourself
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/AccessingSNApps/" title="Accessing SNApps" class="md-nav__link">
+      Accessing SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetIRC/" title="Joining a Lokinet IRC Chat" class="md-nav__link">
+      Joining a Lokinet IRC Chat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/HostingSNApps/" title="Hosting SNApps" class="md-nav__link">
+      Hosting SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetConfig/" title="Lokinet config files" class="md-nav__link">
+      Lokinet config files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetRouter/" title="Set up a Lokinet Router" class="md-nav__link">
+      Set up a Lokinet Router
     </a>
   </li>
 
@@ -1009,18 +1206,821 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Session
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Session
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/Session/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/LokiNameSystem/" title="Loki Name System" class="md-nav__link">
+      Loki Name System
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/threat_model/" title="Threat Models" class="md-nav__link">
+      Threat Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/infrastructure/" title="Infrastructure" class="md-nav__link">
+      Infrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/message_routing/" title="Message Routing" class="md-nav__link">
+      Message Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/group_chats/" title="Group Chats" class="md-nav__link">
+      Group Chats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/testing/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/multidevice/" title="Multi-Device" class="md-nav__link">
+      Multi-Device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/client_side_protection/" title="Client Side Protection" class="md-nav__link">
+      Client Side Protection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/attachments/" title="Attachments" class="md-nav__link">
+      Attachments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/HowToRegisterSessionNames/" title="Register Session/Wallet names" class="md-nav__link">
+      Register Session/Wallet names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/multi_device_setup/" title="Multi-Device Setup" class="md-nav__link">
+      Multi-Device Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/opengroup_setup/" title="OpenGroup Setup" class="md-nav__link">
+      OpenGroup Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/JoinOpenGroupMobile/" title="Join Open Group on Mobile" class="md-nav__link">
+      Join Open Group on Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Messenger/JoinOpenGroupDesktop/" title="Join Open Group on Desktop" class="md-nav__link">
+      Join Open Group on Desktop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Blink
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Blink
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Blink
+      </label>
+    
+    <a href="./" title="Blink" class="md-nav__link md-nav__link--active">
+      Blink
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" title="Metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-history" title="Version history" class="md-nav__link">
+    Version history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-summary" title="1. Summary" class="md-nav__link">
+    1. Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abstract" title="2. Abstract" class="md-nav__link">
+    2. Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-blink-from-the-user-perspective" title="3. Blink from the user perspective" class="md-nav__link">
+    3. Blink from the user perspective
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-wallet-side" title="3.1. Wallet side" class="md-nav__link">
+    3.1. Wallet side
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-re-blinking" title="3.2. Re-blinking" class="md-nav__link">
+    3.2. Re-blinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-fees" title="3.3. Fees" class="md-nav__link">
+    3.3. Fees
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technical-design" title="4. Technical design" class="md-nav__link">
+    4. Technical design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-transaction-overview" title="4.1. Transaction overview" class="md-nav__link">
+    4.1. Transaction overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-quorum-selection" title="4.2. Quorum selection" class="md-nav__link">
+    4.2. Quorum selection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-overlapping-quorums-rationale" title="4.2.1. Overlapping quorums rationale" class="md-nav__link">
+    4.2.1. Overlapping quorums rationale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-quorum-selection-block-and-checkpointing-rationale" title="4.2.2. Quorum selection block and checkpointing rationale" class="md-nav__link">
+    4.2.2. Quorum selection block and checkpointing rationale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-quorum-validation" title="4.3. Quorum validation" class="md-nav__link">
+    4.3. Quorum validation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-tx-example-one" title="4.3.1. TX example one" class="md-nav__link">
+    4.3.1. TX example one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-tx-example-two" title="4.3.2. TX example two" class="md-nav__link">
+    4.3.2. TX example two
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-tx-example-three" title="4.3.3. TX example three" class="md-nav__link">
+    4.3.3. TX example three
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-repeated-signing-of-the-same-transaction" title="4.4. Repeated signing of the same transaction" class="md-nav__link">
+    4.4. Repeated signing of the same transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-signature-failure-key-images-may-stay-unblinkable-for-up-to-10-blocks" title="4.5. Signature failure: key images may stay unblinkable (for up to 10 blocks)." class="md-nav__link">
+    4.5. Signature failure: key images may stay unblinkable (for up to 10 blocks).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-blink-transactions-entering-the-mempool" title="4.6. Blink transactions entering the mempool" class="md-nav__link">
+    4.6. Blink transactions entering the mempool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-blink-transactions-entering-the-blockchain" title="4.7. Blink transactions entering the blockchain" class="md-nav__link">
+    4.7. Blink transactions entering the blockchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-re-blinking-implementation" title="4.8. Re-Blinking implementation" class="md-nav__link">
+    4.8. Re-Blinking implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-ring-signature-implications" title="4.9. Ring signature implications" class="md-nav__link">
+    4.9. Ring signature implications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-blink-and-checkpoints" title="4.10. Blink and checkpoints" class="md-nav__link">
+    4.10. Blink and checkpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-quorum-communication" title="4.11. Quorum communication" class="md-nav__link">
+    4.11. Quorum communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-service-node-deregistrations" title="4.12. Service node deregistrations" class="md-nav__link">
+    4.12. Service node deregistrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-potential-attacks" title="5. Potential attacks" class="md-nav__link">
+    5. Potential attacks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-double-spending-blink-tx-non-blink-tx" title="5.1. Double-spending Blink tx + non-Blink tx" class="md-nav__link">
+    5.1. Double-spending Blink tx + non-Blink tx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-double-spending-blink-blink" title="5.2. Double-spending Blink + Blink" class="md-nav__link">
+    5.2. Double-spending Blink + Blink
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-quorum-hopping" title="5.3. Quorum hopping" class="md-nav__link">
+    5.3. Quorum hopping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-signature-withholding" title="5.4. Signature withholding" class="md-nav__link">
+    5.4. Signature withholding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-51-attack-to-reorganize-the-blink-quorum" title="5.5. 51% attack to reorganize the Blink quorum" class="md-nav__link">
+    5.5. 51% attack to reorganize the Blink quorum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-future-ideas" title="6. Future ideas" class="md-nav__link">
+    6. Future ideas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-dynamic-fees" title="6.1. Dynamic fees" class="md-nav__link">
+    6.1. Dynamic fees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-merging-transactions" title="6.2. Merging transactions" class="md-nav__link">
+    6.2. Merging transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-allowing-different-blink-supermajority-levels" title="6.3. Allowing different Blink supermajority levels" class="md-nav__link">
+    6.3. Allowing different Blink supermajority levels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-quorum-communication-via-mesh-network" title="6.4. Quorum communication via mesh network" class="md-nav__link">
+    6.4. Quorum communication via mesh network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-carrying-traffic-over-lokinet" title="6.5. Carrying traffic over lokinet" class="md-nav__link">
+    6.5. Carrying traffic over lokinet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" title="Footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Checkpointing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Checkpointing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/CheckpointingLip3/" title="Checkpointing LIP" class="md-nav__link">
+      Checkpointing LIP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/CheckpointingUpdate/" title="Safely Receiving Loki" class="md-nav__link">
+      Safely Receiving Loki
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Pulse
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Pulse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/PulseLip5/" title="Loki Documentation | Loki Proof of Stake | Pulse" class="md-nav__link">
+      Loki Documentation | Loki Proof of Stake | Pulse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" checked>
     
-    <label class="md-nav__link" for="nav-7">
-      Loki Services
+    <label class="md-nav__link" for="nav-13">
+      Advanced
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-13">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-1" type="checkbox" id="nav-13-1">
+    
+    <label class="md-nav__link" for="nav-13-1">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-1">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/DaemonRPCGuide/" title="Daemon RPC Guide - Old" class="md-nav__link">
+      Daemon RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/DaemonRPCBeta/" title="Daemon RPC Guide - Beta" class="md-nav__link">
+      Daemon RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/WalletRPCGuide/" title="Wallet RPC Guide - Old" class="md-nav__link">
+      Wallet RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/WalletRPCBeta/" title="Wallet RPC Guide - Beta" class="md-nav__link">
+      Wallet RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/FAQ/" title="Developer FAQ" class="md-nav__link">
+      Developer FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2" checked>
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Loki Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
         Loki Services
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1042,18 +2042,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -1064,9 +2052,340 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Blink
+      </label>
+    
     <a href="./" title="Blink" class="md-nav__link md-nav__link--active">
       Blink
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" title="Metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-history" title="Version history" class="md-nav__link">
+    Version history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-summary" title="1. Summary" class="md-nav__link">
+    1. Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abstract" title="2. Abstract" class="md-nav__link">
+    2. Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-blink-from-the-user-perspective" title="3. Blink from the user perspective" class="md-nav__link">
+    3. Blink from the user perspective
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-wallet-side" title="3.1. Wallet side" class="md-nav__link">
+    3.1. Wallet side
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-re-blinking" title="3.2. Re-blinking" class="md-nav__link">
+    3.2. Re-blinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-fees" title="3.3. Fees" class="md-nav__link">
+    3.3. Fees
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technical-design" title="4. Technical design" class="md-nav__link">
+    4. Technical design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-transaction-overview" title="4.1. Transaction overview" class="md-nav__link">
+    4.1. Transaction overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-quorum-selection" title="4.2. Quorum selection" class="md-nav__link">
+    4.2. Quorum selection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-overlapping-quorums-rationale" title="4.2.1. Overlapping quorums rationale" class="md-nav__link">
+    4.2.1. Overlapping quorums rationale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-quorum-selection-block-and-checkpointing-rationale" title="4.2.2. Quorum selection block and checkpointing rationale" class="md-nav__link">
+    4.2.2. Quorum selection block and checkpointing rationale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-quorum-validation" title="4.3. Quorum validation" class="md-nav__link">
+    4.3. Quorum validation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-tx-example-one" title="4.3.1. TX example one" class="md-nav__link">
+    4.3.1. TX example one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-tx-example-two" title="4.3.2. TX example two" class="md-nav__link">
+    4.3.2. TX example two
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-tx-example-three" title="4.3.3. TX example three" class="md-nav__link">
+    4.3.3. TX example three
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-repeated-signing-of-the-same-transaction" title="4.4. Repeated signing of the same transaction" class="md-nav__link">
+    4.4. Repeated signing of the same transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-signature-failure-key-images-may-stay-unblinkable-for-up-to-10-blocks" title="4.5. Signature failure: key images may stay unblinkable (for up to 10 blocks)." class="md-nav__link">
+    4.5. Signature failure: key images may stay unblinkable (for up to 10 blocks).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-blink-transactions-entering-the-mempool" title="4.6. Blink transactions entering the mempool" class="md-nav__link">
+    4.6. Blink transactions entering the mempool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-blink-transactions-entering-the-blockchain" title="4.7. Blink transactions entering the blockchain" class="md-nav__link">
+    4.7. Blink transactions entering the blockchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-re-blinking-implementation" title="4.8. Re-Blinking implementation" class="md-nav__link">
+    4.8. Re-Blinking implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-ring-signature-implications" title="4.9. Ring signature implications" class="md-nav__link">
+    4.9. Ring signature implications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-blink-and-checkpoints" title="4.10. Blink and checkpoints" class="md-nav__link">
+    4.10. Blink and checkpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-quorum-communication" title="4.11. Quorum communication" class="md-nav__link">
+    4.11. Quorum communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-service-node-deregistrations" title="4.12. Service node deregistrations" class="md-nav__link">
+    4.12. Service node deregistrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-potential-attacks" title="5. Potential attacks" class="md-nav__link">
+    5. Potential attacks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-double-spending-blink-tx-non-blink-tx" title="5.1. Double-spending Blink tx + non-Blink tx" class="md-nav__link">
+    5.1. Double-spending Blink tx + non-Blink tx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-double-spending-blink-blink" title="5.2. Double-spending Blink + Blink" class="md-nav__link">
+    5.2. Double-spending Blink + Blink
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-quorum-hopping" title="5.3. Quorum hopping" class="md-nav__link">
+    5.3. Quorum hopping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-signature-withholding" title="5.4. Signature withholding" class="md-nav__link">
+    5.4. Signature withholding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-51-attack-to-reorganize-the-blink-quorum" title="5.5. 51% attack to reorganize the Blink quorum" class="md-nav__link">
+    5.5. 51% attack to reorganize the Blink quorum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-future-ideas" title="6. Future ideas" class="md-nav__link">
+    6. Future ideas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-dynamic-fees" title="6.1. Dynamic fees" class="md-nav__link">
+    6.1. Dynamic fees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-merging-transactions" title="6.2. Merging transactions" class="md-nav__link">
+    6.2. Merging transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-allowing-different-blink-supermajority-levels" title="6.3. Allowing different Blink supermajority levels" class="md-nav__link">
+    6.3. Allowing different Blink supermajority levels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-quorum-communication-via-mesh-network" title="6.4. Quorum communication via mesh network" class="md-nav__link">
+    6.4. Quorum communication via mesh network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-carrying-traffic-over-lokinet" title="6.5. Carrying traffic over lokinet" class="md-nav__link">
+    6.5. Carrying traffic over lokinet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" title="Footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1075,25 +2394,186 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
     
-    <label class="md-nav__link" for="nav-8">
-      Advanced
+    <label class="md-nav__link" for="nav-13-3">
+      Attack Prevention
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Advanced
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-3">
+        Attack Prevention
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-4" type="checkbox" id="nav-13-4">
+    
+    <label class="md-nav__link" for="nav-13-4">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-4">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/HowToContributeToLokiDocs/" title="How to Contribute to LokiDocs" class="md-nav__link">
+      How to Contribute to LokiDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
+      Vulnerability Response
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/Issue_Template/" title="Github Issue Template Example" class="md-nav__link">
+      Github Issue Template Example
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-5" type="checkbox" id="nav-13-5">
+    
+    <label class="md-nav__link" for="nav-13-5">
+      Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-5">
+        Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/Governance/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
         
           
           
@@ -1160,85 +2640,6 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-6" type="checkbox" id="nav-8-6">
-    
-    <label class="md-nav__link" for="nav-8-6">
-      Attack Prevention
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-6">
-        Attack Prevention
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
-      Denial of Service Attacks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
-      IP and Packet Blocking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
-      Swarm Flagging
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-7" type="checkbox" id="nav-8-7">
-    
-    <label class="md-nav__link" for="nav-8-7">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-7">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
     <a href="../../Advanced/lokid/" title="lokid" class="md-nav__link">
       lokid
@@ -1251,24 +2652,19 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../Advanced/CompilingGuide/" title="Compiling Loki from source" class="md-nav__link">
-      Compiling Loki from source
-    </a>
-  </li>
-
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-12" type="checkbox" id="nav-13-12">
+    
+    <label class="md-nav__link" for="nav-13-12">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-12">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/UsingLokinet/" title="Using Lokinet" class="md-nav__link">
-      Using Lokinet
-    </a>
-  </li>
-
         
           
           
@@ -1300,134 +2696,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
-      Service Node RPC Guide
+    <a href="../../Advanced/AcceptingLoki/" title="Accepting Loki for Merchants and Exchanges" class="md-nav__link">
+      Accepting Loki for Merchants and Exchanges
     </a>
   </li>
 
         
       </ul>
     </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Contributing
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Contributing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Contributing/Github/" title="How to Contribute to LokiDocs" class="md-nav__link">
-      How to Contribute to LokiDocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
-      Vulnerability Response
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      Governance
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Governance
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Governance/Governance/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
-      The Loki Foundation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
-      Loki Funding System
-    </a>
   </li>
 
         
@@ -1453,6 +2729,324 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" title="Metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-history" title="Version history" class="md-nav__link">
+    Version history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-summary" title="1. Summary" class="md-nav__link">
+    1. Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-abstract" title="2. Abstract" class="md-nav__link">
+    2. Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-blink-from-the-user-perspective" title="3. Blink from the user perspective" class="md-nav__link">
+    3. Blink from the user perspective
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-wallet-side" title="3.1. Wallet side" class="md-nav__link">
+    3.1. Wallet side
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-re-blinking" title="3.2. Re-blinking" class="md-nav__link">
+    3.2. Re-blinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-fees" title="3.3. Fees" class="md-nav__link">
+    3.3. Fees
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technical-design" title="4. Technical design" class="md-nav__link">
+    4. Technical design
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-transaction-overview" title="4.1. Transaction overview" class="md-nav__link">
+    4.1. Transaction overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-quorum-selection" title="4.2. Quorum selection" class="md-nav__link">
+    4.2. Quorum selection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-overlapping-quorums-rationale" title="4.2.1. Overlapping quorums rationale" class="md-nav__link">
+    4.2.1. Overlapping quorums rationale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-quorum-selection-block-and-checkpointing-rationale" title="4.2.2. Quorum selection block and checkpointing rationale" class="md-nav__link">
+    4.2.2. Quorum selection block and checkpointing rationale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-quorum-validation" title="4.3. Quorum validation" class="md-nav__link">
+    4.3. Quorum validation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-tx-example-one" title="4.3.1. TX example one" class="md-nav__link">
+    4.3.1. TX example one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-tx-example-two" title="4.3.2. TX example two" class="md-nav__link">
+    4.3.2. TX example two
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-tx-example-three" title="4.3.3. TX example three" class="md-nav__link">
+    4.3.3. TX example three
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-repeated-signing-of-the-same-transaction" title="4.4. Repeated signing of the same transaction" class="md-nav__link">
+    4.4. Repeated signing of the same transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-signature-failure-key-images-may-stay-unblinkable-for-up-to-10-blocks" title="4.5. Signature failure: key images may stay unblinkable (for up to 10 blocks)." class="md-nav__link">
+    4.5. Signature failure: key images may stay unblinkable (for up to 10 blocks).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-blink-transactions-entering-the-mempool" title="4.6. Blink transactions entering the mempool" class="md-nav__link">
+    4.6. Blink transactions entering the mempool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-blink-transactions-entering-the-blockchain" title="4.7. Blink transactions entering the blockchain" class="md-nav__link">
+    4.7. Blink transactions entering the blockchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-re-blinking-implementation" title="4.8. Re-Blinking implementation" class="md-nav__link">
+    4.8. Re-Blinking implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-ring-signature-implications" title="4.9. Ring signature implications" class="md-nav__link">
+    4.9. Ring signature implications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-blink-and-checkpoints" title="4.10. Blink and checkpoints" class="md-nav__link">
+    4.10. Blink and checkpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-quorum-communication" title="4.11. Quorum communication" class="md-nav__link">
+    4.11. Quorum communication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-service-node-deregistrations" title="4.12. Service node deregistrations" class="md-nav__link">
+    4.12. Service node deregistrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-potential-attacks" title="5. Potential attacks" class="md-nav__link">
+    5. Potential attacks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-double-spending-blink-tx-non-blink-tx" title="5.1. Double-spending Blink tx + non-Blink tx" class="md-nav__link">
+    5.1. Double-spending Blink tx + non-Blink tx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-double-spending-blink-blink" title="5.2. Double-spending Blink + Blink" class="md-nav__link">
+    5.2. Double-spending Blink + Blink
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-quorum-hopping" title="5.3. Quorum hopping" class="md-nav__link">
+    5.3. Quorum hopping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-signature-withholding" title="5.4. Signature withholding" class="md-nav__link">
+    5.4. Signature withholding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-51-attack-to-reorganize-the-blink-quorum" title="5.5. 51% attack to reorganize the Blink quorum" class="md-nav__link">
+    5.5. 51% attack to reorganize the Blink quorum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-future-ideas" title="6. Future ideas" class="md-nav__link">
+    6. Future ideas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-dynamic-fees" title="6.1. Dynamic fees" class="md-nav__link">
+    6.1. Dynamic fees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-merging-transactions" title="6.2. Merging transactions" class="md-nav__link">
+    6.2. Merging transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-allowing-different-blink-supermajority-levels" title="6.3. Allowing different Blink supermajority levels" class="md-nav__link">
+    6.3. Allowing different Blink supermajority levels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-quorum-communication-via-mesh-network" title="6.4. Quorum communication via mesh network" class="md-nav__link">
+    6.4. Quorum communication via mesh network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-carrying-traffic-over-lokinet" title="6.5. Carrying traffic over lokinet" class="md-nav__link">
+    6.5. Carrying traffic over lokinet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" title="Footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1466,16 +3060,981 @@
                   <a href="https://github.com/loki-project/loki-docs/edit/master/docs/LokiServices/Blink.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="blink">Blink<a class="headerlink" href="#blink" title="Permanent link">&para;</a></h1>
+                <h1 id="loki-blink-design">Loki Blink Design<a class="headerlink" href="#loki-blink-design" title="Permanent link">&para;</a></h1>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<p><strong>LIP Number</strong>: LIP-4</p>
+<p><strong>Title</strong>: Loki Blink [No Vote]</p>
+<p><strong>Author</strong>: Jason Rhinelander (@jagerman) <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#97;&#115;&#111;&#110;&#64;&#108;&#111;&#107;&#105;&#46;&#110;&#101;&#116;&#119;&#111;&#114;&#107;">&#106;&#97;&#115;&#111;&#110;&#64;&#108;&#111;&#107;&#105;&#46;&#110;&#101;&#116;&#119;&#111;&#114;&#107;</a></p>
+<p><strong>Status</strong>: Draft</p>
+<p><strong>Type</strong>: Core</p>
+<p><strong>Created</strong>: 2019-06-06</p>
+<p><strong>Requires</strong>: LIP-3 (checkpointing)</p>
+<p><strong>Source</strong>: <a href="https://github.com/loki-project/loki-improvement-proposals/blob/master/LIPS/LIP-4.md">LIP 4</a></p>
+<h2 id="version-history">Version history<a class="headerlink" href="#version-history" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>v0.9</em><ul>
+<li>Initial public draft.</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-summary">1. Summary<a class="headerlink" href="#1-summary" title="Permanent link">&para;</a></h2>
+<p>Blink is Loki’s instant payment mechanism proposed in the original Loki whitepaper. Once completed, Blink will allow users to send payments instantly to each other and allow instantly resend of received Blink transactions without requiring blockchain confirmations.</p>
+<p>This document is intended to serve as a whitepaper underlying the concrete design for the implementation of Loki Blink with an expectation of inclusion in the 5.0.0 release.</p>
+<h2 id="2-abstract">2. Abstract<a class="headerlink" href="#2-abstract" title="Permanent link">&para;</a></h2>
+<p>Blink takes advantage of Loki’s <a href="../../ServiceNodes/SNOverview/">service node</a> layer and <a href="https://github.com/loki-project/loki-improvement-proposals/blob/master/LIPS/LIP-3.md">checkpointing mechanism</a> to provide a strong assurance that a transaction will eventually reach the blockchain without risk of various adversarial attacks cancelling the transaction. It does this by using multiple quorums to validate a transfer and block conflicting transfers. This validation in combination with checkpointing and updated blockchain consensus rules help ensure that such validated transfers have a strong assurance of reaching the transaction memory pool and thus can be relied upon without requiring mining confirmations.</p>
+<h2 id="3-blink-from-the-user-perspective">3. Blink from the user perspective<a class="headerlink" href="#3-blink-from-the-user-perspective" title="Permanent link">&para;</a></h2>
+<h3 id="31-wallet-side">3.1. Wallet side<a class="headerlink" href="#31-wallet-side" title="Permanent link">&para;</a></h3>
+<p>From the user (wallet) side, initiating a Blink transfer is nearly
+identical to initiating a normal transfer, but with an extra flag
+(e.g. GUI checkbox, RPC parameter, CLI option) to say “Blink this
+transaction!”.</p>
+<p>The fees of the blink transaction are higher as it involves considerably
+more work for the network: service nodes must validate the transaction,
+and all nodes must perform extra validation steps and require some
+temporary extra storage to store recent Blink transaction details.</p>
+<p>For the user receiving a blink transaction, the wallet will see the
+received amount virtually instantly (that is, as soon as it is received
+by the lokid and the wallet refreshes with the daemon). Moreover these
+funds will be instantly spendable: unlike a regular transaction there
+will be no lock on the received funds before they can be spent again.
+The wallet user can immediately re-Blink the funds to someone else, or
+can send off a regular (non-Blink) transaction that spends the received
+Blink outputs instantly without needing to wait for the Blink
+transaction to be mined into a block.</p>
+<h3 id="32-re-blinking">3.2. Re-blinking<a class="headerlink" href="#32-re-blinking" title="Permanent link">&para;</a></h3>
+<p>One of the goals of Blink is the ability to “re-Blink”: That is, we want
+a Blink transaction to be instantly available to the recipient
+indistinguishable from a (confirmed) non-Blink transaction from a
+usability perspective. For example, when Ava blinks 10 LOKI to Betty
+then that transaction is initially still in the mempool, but we don’t
+want Betty to have to worry about this technical detail: instead Betty
+can instantly Blink it to someone else, send a regular transaction, or
+use it to stake a new service node without waiting for even a single
+confirmation.</p>
+<h3 id="33-fees">3.3. Fees<a class="headerlink" href="#33-fees" title="Permanent link">&para;</a></h3>
+<p>The precise fee schedule is yet to be determined, but will be an
+additional amount on top of the current transaction fee, most likely
+calculated as a multiple of the transaction fee. Additionally, Blink
+transactions will not have a choice in transaction priority: since they
+are instantly spendable and guaranteed by the network, there would be
+little point in a user ever choosing anything higher than the minimum.
+Thus, for now, we mandate that Blink fees must always be submitted with
+a “normal” priority transaction fee (but this is tentative and may be
+adjust this before final Blink release).</p>
+<p>The extra Blink fee doesn’t go to anyone: rather it gets permanently
+destroyed as part of the transaction. We considered two alternatives
+here:</p>
+<ol>
+<li>Collecting fees and redistributing to SN over time. This would
+    involve temporarily burning Blink fees, but keeping track of how
+    much had been burned and continually reemitting them over a period
+    of time as an extra rewards to Service Nodes. (For example: in every
+    block, reduce the current pool of burned fees by 0.1% and reemit it
+    to the service nodes that earn a reward in that block).</li>
+<li>Just burning fees.</li>
+</ol>
+<p>Ultimately we decided on the second approach because:</p>
+<ul>
+<li>It is much simpler.</li>
+<li>It is more predictable: SN rewards (for a stable number of service
+    nodes) are known precisely.</li>
+<li>In the end, the two approaches are effectively equivalent in terms
+    of total emission.</li>
+</ul>
+<p>By equivalent I am assuming that we have a specific net emission target.
+For simplicity, I’ll just talk about the long-term 28 LOKI/block
+emissions, and, for the sake of example, assume that it is divided up so
+that service nodes get 20 LOKI/block of that;<a href="#footnotes">[1]</a> the remaining 8 is
+foundation and miner coinbase rewards. What I mean by net emission is
+that if we have an average burning of 5 LOKI/block in Blink fees, then
+the net emission would 23 LOKI/block. But let’s suppose that 25
+LOKI/block is our actual desired long-run emission target.</p>
+<p>With method 1, we’re emitting 28 LOKI/block: burned Blink fees are
+reemitted over time and so, much like regular tx fees, there is no net
+gain or loss. To hit the 25 LOKI/block target we’d have to adjust the
+formula to reduce emissions to 25 LOKI/block.</p>
+<p>With method 2, where we are burning 5 LOKI/block in fees, we are
+generate net emissions of 23 LOKI/block; to hit the same 25 LOKI/block
+target, then, we would need to <em>increase</em> coinbase emissions by 2
+LOKI/block to hit our target.</p>
+<p>Either way we arrive at the same place: net emissions of 25 LOKI/block
+through adjustment of the emission schedule. This was just an example,
+of course; our actual target could be 20 or 28 or 12 or whatever else.
+But with method 2, service nodes always know exactly what they will
+earn, while with method 1 there is more variability: large, sustained
+differences in the volume of Blink transactions will affect SN
+profitability, while in method 2 such differences will affect the
+overall coin emission but <em>not</em> the amount earned by a service node.</p>
+<p>Thus, given the simpler approach and essential equivalence between the
+two approaches, we decided to pursue method 2. (Of course, like anything
+in Loki, we can always change the design later given compelling reasons
+to do so!)</p>
+<h2 id="4-technical-design">4. Technical design<a class="headerlink" href="#4-technical-design" title="Permanent link">&para;</a></h2>
+<h3 id="41-transaction-overview">4.1. Transaction overview<a class="headerlink" href="#41-transaction-overview" title="Permanent link">&para;</a></h3>
+<p>In a nutshell (with most of the details covered later in this document):
+The wallet builds a transaction and sends it to the lokid to be blinked.
+The lokid then looks up the Blink quorum, connects to a few nodes in
+this quorum, sending the transaction to them to be signed. The quorum
+distributes the transaction within itself, and once enough approval
+signatures are collected, broadcasts the transaction and signature data
+to the service node’s p2p peers to disseminate it across the network.
+The lokid talking to the quorum then receives a confirmation message
+(with signatures) to relay to the wallet.</p>
+<p>These steps are depicted in Figure 1. Note that the diagram has been
+significantly simplified for illustration to show only three service
+nodes per quorum rather than the actual ten.</p>
+<p><img alt="Figure 1: Blink transaction flow" src="../../assets/images/blink.svg" /></p>
+<p>In more detail:</p>
+<ol>
+<li>
+<p>The wallet constructs a transaction. This transaction is <em>almost</em>
+    like a regular transaction except that it leaves enough inputs
+    unspent to cover both the required mining transaction fee and the
+    Blink fee. This transaction gets send to the wallet’s lokid for
+    handling.</p>
+</li>
+<li>
+<p>lokid looks at the transaction, does some preliminary checks (as it
+    would with any transaction) and additional checks related to the
+    Blink transaction (such as having the correct transaction priority
+    and blink fee). These checks are not strictly required for network
+    security—they will also be done by the service nodes — but can give an
+    immediate failure response to the wallet if the node reasonably
+    believes the transaction will fail. Assuming the preliminary checks
+    pass, the node then uses the current blockchain height to determine
+    the transaction’s signing height, <em>h</em>. This <em>h</em> value then
+    determines two current Blink quorums, <em>Q</em> and <em>Q’</em> (more details on
+    quorum construction are in the <a href="#42-quorum-selection">Quorum selection</a>
+    section below). The lokid handling the transaction connects directly
+    to 2 nodes selected randomly from each quorum and sends the
+    transaction (plus other required details such as <em>h</em>) to be signed.</p>
+</li>
+<li>
+<p>The receiving quorum nodes directly contacted by the initiating
+    lokid forward the transaction details to the other quorum nodes for
+    verification.</p>
+</li>
+<li>
+<p>Each service node in the two quorums performs checks on the validity
+    of the transaction, such as ensuring that it isn’t already spent,
+    that it isn’t already in the mempool, that miner and Blink fees are
+    correctly specified, and that the requested signature height, <em>h</em>,
+    <em>h</em> is approximately current (within 2 blocks of what the service
+    node believes is the current height), and that the key images have
+    not been already locked out by a previous, different Blink
+    transaction signing. Assuming everything checks out, the service
+    node records the transaction’s key images locally (to lock them out
+    from being signed again by this service node), signs the transaction
+    hash with the service node private key, and sends the signature to
+    the other quorum members.</p>
+</li>
+<li>
+<p>As each of the quorum members receives a supermajority of valid
+    signatures (i.e. 7 in total) from <em>both</em> quorums it immediately
+    sends out the transaction and signature details to its blockchain
+    peers via its p2p network. If the quorum node in question is one of
+    the nodes that was directly contacted by lokid, it additionally
+    communicates the success back to the caller.</p>
+<p>These signed mempool transactions, however, are much stronger than a
+regular mempool transaction in that they can trigger a reorg or lead
+to rejected blocks: more details on this are covered below.</p>
+<p>In the case of detectable failure (for example, from a detected
+double-spend confirmed by a sufficient number of service nodes), a
+failure message is returned to the caller. If a failure is caused by
+too many quorum nodes timing out the caller is expected to itself
+timeout after an appropriate amount of time waiting for a response.</p>
+</li>
+<li>
+<p>The initiating lokid waits for success, failure, or timeout from the
+    quorum nodes it contacted, and once received (or timed out), sends
+    this information back to the wallet.</p>
+</li>
+</ol>
+<h3 id="42-quorum-selection">4.2. Quorum selection<a class="headerlink" href="#42-quorum-selection" title="Permanent link">&para;</a></h3>
+<p>Quorum selection works by using the requested signing height <em>h</em> to
+deterministically select the two relevant quorums, <em>Q</em> and <em>Q’</em>. A
+quorum <em>Q</em> is determined by the 5-block range within which <em>h</em> falls,
+and <em>Q’</em> is the quorum for the immediately subsequent 5-block range. For
+example, any <em>h</em> value in 1000–1004 will yield the same <em>Q</em> and <em>Q’</em>
+quorums, and this <em>Q’</em> will be exactly the same quorum as the <em>Q</em> quorum
+for an <em>h</em> value in the 1005–1009 signing height range. In other words,
+<em>Q’(h=1003)</em> and <em>Q(h=1006)</em> are the <strong>same quorum</strong>.</p>
+<p>All service nodes in <em>Q</em> and <em>Q’</em> refuse to sign a transaction with a
+requested signing height <em>h</em> that is more than 2 blocks behind or ahead
+of the service node’s current blockchain height: this is to allow some
+tolerance for Blink transactions to succeed even if new blocks are
+propagating through the network during the Blink transaction signing
+process. This ±2 tolerance is designed to make the user experience
+better: using a node that is slightly out of sync<a href="#footnotes">[2]</a> will still work
+fine rather than returning a Blink failure. It also avoids potential
+Blink failures on the part of quorum nodes: if a block happens to arrive
+during the actual signing process such that half of the quorum see the
+new block and half see the old block the quorum will still sign without
+issue. On the other hand the ±2 limit on the signing height also
+prevents abuse: the larger the allowed range, the more choices a
+malicious actor would have to pick and choose a “friendly” quorum.</p>
+<p>The quorum sample itself needs to be effectively immutable, and so we
+propose a deterministic random sampling using a MT19937-64 random number
+generator seeded with the block hash 35 blocks before the first valid
+quorum height, <em>h₀</em>. Thus quorum <em>Q</em> for height 1002 is determined by
+block 965 (35 blocks before the first signing height of the quorum,
+<em>h₀</em>=1000), and quorum <em>Q’</em> is determined by block 970 (35 blocks
+before the first height of the second quorum, <em>h’₀</em>=1005). Moreover the
+sampling algorithm excludes any service nodes that are scheduled to
+expire before block <em>h₀</em>+10.</p>
+<p>For validation of a Blink transaction we require a supermajority of
+signatures from <em>both</em> quorums. The point here of using the two quorums
+is to prevent a timing conflict where, if we had just one quorum per
+block (or range of blocks), then one Blink transaction could be signed
+by quorum <em>Q₁</em> and another transaction spending the same keys could be
+signed by quorum <em>Q₂</em> <strong>before</strong> the first transaction is broadcast to
+the network. By using two overlapping quorums we end up with the key
+images in question being locked both in the current quorum but also in
+the following quorum (which could come as early as the next block). Even
+if the next Blink transaction switches to a new quorum, the overlap
+ensures that it simply switching to a quorum that has already locked any
+key images of Blink transactions submitted in the last few blocks.</p>
+<h4 id="421-overlapping-quorums-rationale">4.2.1. Overlapping quorums rationale<a class="headerlink" href="#421-overlapping-quorums-rationale" title="Permanent link">&para;</a></h4>
+<p>There are three reasons for using these two overlapping quorums. First,
+we want the quorum signature process to “reach” a few blocks into the
+future (5–9 blocks ahead with 5-block quorums) to give enough time for
+the quorum signatures to disseminate across the network. While 5 blocks
+is more than would be typically required, there are some edge cases
+discussed in detail below that can lower this future block interval to
+just 2 blocks.</p>
+<p>Second, Blink processing is expected to require a substantial number of
+connections between service nodes; with 5-block quorums we can at least
+reduce the frequency with which connections need to be established as
+service nodes will keep their connections open for the duration of the
+quorum.</p>
+<p>Third, using two quorums offers considerable higher security than one
+quorum of twice the size for two reasons. First, each quorum is
+essentially a new random draw of service nodes; that means the more
+quorums you have over a given period of time the more random draws you
+do, and with more draws you get more “chances” to pick a compromised
+sample. Second, two <em>consecutive</em> supermajorities of quorums of half the
+size is considerably more secure than one supermajority of a quorum
+twice the size.</p>
+<p>Some numbers can help demonstrate this: suppose the network has 1000
+service nodes, and a single malicious actor is in control of 25% of
+those service nodes. Under alternative A, we require the majority of a
+single quorum of 20 service nodes, and require a 70% of the service
+nodes’ signatures. Under alternative B, we require two quorums of 10
+service nodes each, again requiring 70% signatures from each quorum.</p>
+<p>Under scenario A in any given quorum the actor has a probability of
+0.00000381 of having the required 70% majority. Under scenario B, the
+actor has a probability of 0.000000173: that is, under scenario A, the
+actor is about 22 times more likely to obtain control of any random
+quorum than any random quorum pair. Or to put it into context: in a one
+year span, there’s about an 18% chance that this bad actor would gain
+quorum control for at least a single quorum under scenario A, and about
+a 0.9% chance that he would under scenario B. As for quorum length, if
+quorums lasted for one block instead of five there would be a 4.4%
+chance of this 25% operator having a quorum supermajority at least once
+under the overlapping quorum design, and a 63% chance under the single
+quorum design.</p>
+<p>If this adversary actually controlled an incredible 50% of the service
+node network it would be quite difficult to avoid a compromise: he would
+have quorum supermajority votes about 2% of the time under the single
+quorum approach, and 0.3% of the time under the overlapping quorum
+approach. Such an adversary would have a 95% chance of quorum ownership
+at least once <em>per day</em> with a quorum of 20, and a 35% chance per day
+with overlapping quorums.</p>
+<p>It is worth pointing out, in passing, that these probabilities are
+countered by the economic design of Loki: even if such adversaries
+existed, they would have a strong financial incentive to ensure that the
+network is not compromised as such a compromise would likely have a
+significant negative impact on their own holdings, which are heavily
+invested and locked into service node stakes.</p>
+<p>There is, of course, some desirable statistical properties of making a
+quorum <em>longer</em>: if quorums changed on a 10 block cycle you’d cut the
+probability of compromise by nearly half (to 0.45% in the overlapping
+case). This gain isn’t huge, though; moreover the longer the quorum
+becomes the more complications can arise from service node
+deregistrations, and the more time you allow for coordination between
+service node operators looking to cheat the system.</p>
+<p>Instead, if we wanted to further increase the security of Blink
+transactions, a preferable approach would be to use a triple quorum. It
+could also be possible to enable an opt-in triple quorum, at a higher
+fee, to allow users to send with a paranoid level of assurance. (This is
+now, however, part of the current Blink plan.)</p>
+<h4 id="422-quorum-selection-block-and-checkpointing-rationale">4.2.2. Quorum selection block and checkpointing rationale<a class="headerlink" href="#422-quorum-selection-block-and-checkpointing-rationale" title="Permanent link">&para;</a></h4>
+<p>Using a lag of 30 blocks for quorum determination was chosen to interact
+with Loki checkpointing. Unlike checkpointing and deregistration
+quorums, a change in Blink quorums would be highly undesirable as the
+validity of the Blink signature would no longer hold. Thus we want to
+use a height from the blockchain that is sufficiently far back as to be
+highly likely to be made immutable via checkpointing. By basing the
+quorum on <em>h₀</em>-30 we give ample time for checkpointing even if 2-3
+checkpoints have been missed.</p>
+<p>For example, if blinking at height 1000 then <em>Q’</em> begins at 1005, which
+means the relevant block for determination of <em>Q’</em> is 975. Checkpointing
+normally occurs every 4 blocks with immutability occurring after 3
+checkpoints. Thus in typical times it can be up to 4 blocks since the
+last checkpoint quorum, which itself establishes a checkpoint on a block
+4 blocks earlier. Allowing up to 2 blocks for the quorum to vote and
+disseminate the checkpoint to the network this means the first
+checkpoint is usually between 4 and 10 blocks ago, the second is 8-14
+blocks ago, and the third, immutable checkpoint is 12-18 blocks ago. If
+one of these checkpoints were missed (for example because of a quorum
+failure) then the immutable checkpoint could be 16-22 blocks ago; and if
+three were missed, up to 30 blocks ago. Thus the <em>h₀</em>-35 rule
+establishes that both quorum selections are established by a block at
+least 30 blocks in the past, which allows Blink to tolerate up to 3
+missing checkpoints.</p>
+<p>To further secure Blink transactions we further require that the quorum
+seed heights are checkpoint-immutable: both the initiating lokid and the
+quorum service nodes will verify that the quorum seed height is in fact
+checkpointed, refusing to sign (and thus failing the Blink if enough
+fail to see the required checkpoints) if it is not. This ensures that
+Blink transactions are secure by preferring to fail a Blink signature
+rather than include one that has any chance of being invalidated by a
+block reorganization.</p>
+<h3 id="43-quorum-validation">4.3. Quorum validation<a class="headerlink" href="#43-quorum-validation" title="Permanent link">&para;</a></h3>
+<p>Some potential cases are depicted below:</p>
+<p><img alt="Figure 2: Transactions and quorums" src="../../assets/images/quorums.svg" /></p>
+<h4 id="431-tx-example-one">4.3.1. TX example one<a class="headerlink" href="#431-tx-example-one" title="Permanent link">&para;</a></h4>
+<p><em>TX₁</em> is depicting a transaction submitted to a daemon which sees the
+current height of the network at 1002. </p>
+<p>We can think about a few different cases:</p>
+<ul>
+<li>
+<p>Submitting the blink transaction normally at the known height
+    (1002). Thus we get <em>Q = Q₁</em> and <em>Q’ = Q₂</em> for the two quorums. The
+    initiating lokid contacts a random service node <em>q</em> from <em>Q₁</em>,
+    passes along the transaction, and waits for a reply from <em>q</em>. <em>q</em> in
+    turn communicates with its quorum peers and the subsequent quorum
+    (<em>Q₂</em>) to build the required set of signatures. Once the required
+    signatures are accumulated the transaction is released by the quorum
+    service nodes to their peers.</p>
+<p>The Blink TX is broadcast to the network. Because a majority of <em>Q₂</em>
+service nodes signed it and will not resign the same key images, the
+earliest possible Blink height to spend the same key images is 1010,
+which can be used by a cheating lokid at network block 1008 at the
+earliest.</p>
+</li>
+<li>
+<p>Submitting slightly behind the network (1000 or 1001). This could
+    happen, for instance, because there have been two recent blocks that
+    the local lokid has not synchronized yet. Generally everything here
+    works as above: the service nodes at height 1002 will still sign the
+    block (assuming the transaction itself is valid) because the
+    requested signature height is within 2 of their current height.</p>
+</li>
+<li>
+<p>Submitting slightly ahead of the network (1003 or 1004). This could
+    happen, for instance, if the local node is close to a very lucky
+    pool that has just discovered a couple blocks that haven’t
+    disseminated across the network yet. Again, this is handled just
+    like the above: even though the service nodes haven’t yet seen a
+    block newer than 1002 it still satisfies the within-2 rule and so
+    they will still sign (assuming the transaction is valid).</p>
+</li>
+<li>
+<p>Submitting well behind or well ahead of the network (999 or lower,
+    or 1005 or higher). In this case the quorum will not accumulate
+    enough signatures because the within-2 requirement is violated. In
+    this case a failure gets returned to the initiating lokid.<a href="#footnotes">[3]</a></p>
+</li>
+</ul>
+<p>The first three (accepted) cases above all result in the earliest block
+a cheater could submit to being 1008 (i.e. abusing the within-2 rule to
+submit a h=1010 block), giving a worst case of at least 4 blocks needing
+to be transmitted to the network before a duplicate Blink could be
+submitted; since Blink dissemination is high-priority this should result
+in a high level of assuredness that a Blink double-spend cannot be
+performed in this scenario.</p>
+<h4 id="432-tx-example-two">4.3.2. TX example two<a class="headerlink" href="#432-tx-example-two" title="Permanent link">&para;</a></h4>
+<p><em>TX₂</em> in Figure 2 shows a transaction that is sent via a lokid that sees
+the current <em>h=1006</em>, i.e. in the second block of quorum <em>Q₂</em>. I’ll just
+ignore the <em>h>1008</em> and <em>h\&lt;1004</em> cases (see above for why they are
+dead ends).</p>
+<ul>
+<li>
+<p>Case 1: Submitting <em>h</em>=1005, 1006, 1007, 1008. This case is largely
+    the same as <em>TX₁</em>, but now the two quorums are <em>Q₂</em> and <em>Q₃</em>. The
+    earlier a theoretical double-spending Blink could be submitted is
+    with <em>h</em>=1015 at actual height 1013: that is, a minimum of 5 network
+    blocks away.</p>
+</li>
+<li>
+<p>Case 2: Submitting <em>h</em>=1004 (either due to a lagging node, or a
+    malicious actor). This ends up using the same quorums as <em>TX₁</em> (that
+    is, <em>Q₁</em> and <em>Q₂</em>). As in <em>TX₁</em>, the earliest possible double spend
+    could be submitted at 1008.</p>
+</li>
+</ul>
+<p>Case 2 here represents the worst possible scenario: there are just two
+network blocks between the current height (1006) and the height at which
+a blink transaction could be submitted to a completely independent
+quorum pair. There is a potential issue here from an attacker, discussed
+in further detail below.</p>
+<h4 id="433-tx-example-three">4.3.3. TX example three<a class="headerlink" href="#433-tx-example-three" title="Permanent link">&para;</a></h4>
+<p><em>TX₃</em> is included for completeness to show that cheating <em>ahead</em> by a
+quorum has no advantage for a potential attacker. This depicts the
+sending transaction at <em>h</em>=1009. The attack essentially has two relevant
+choices: <em>h</em>=1007–1009, or <em>h</em>=1010,1011. In the first case, he gets
+quorums <em>Q₂</em> and <em>Q₃</em>, making his earlier possible Blink double-spend at
+<em>h</em>=1015 (submitted at <em>h</em>=1013), which is</p>
 <blockquote>
+<p>Stats geek note: the probability of being 3+ blocks behind the network
+with lag <em>L</em> seconds is the CDF value of a Poisson distribution with
+λ=<em>L</em>/120 at <em>k</em>=3.</p>
+</blockquote>
+<h3 id="44-repeated-signing-of-the-same-transaction">4.4. Repeated signing of the same transaction<a class="headerlink" href="#44-repeated-signing-of-the-same-transaction" title="Permanent link">&para;</a></h3>
+<p>One possible Blink failure mode is that the requested signature height,
+<em>h</em>, is seen as too old (or even too new) by some or all members of the
+service node quorum if it does not fit within their ±2 tolerance. This
+could be caused, for example, by the lokid the wallet is talking to
+being out of sync. In the case of such a failure, the calling lokid
+could check for new blocks and, if changed, resubmit the transaction for
+signing at an updated signing height <em>h</em>. We want this resubmission to
+succeed even if it goes to the same quorum, as it makes the Blink
+process more robust to network synchronization issues.</p>
+<p>This means, in particular, that service nodes will need to add an
+exception to the normal key image blacklisting if asked to re-sign the
+exact same transaction for which the key images were
+blacklisted.</p>
+<h3 id="45-signature-failure-key-images-may-stay-unblinkable-for-up-to-10-blocks">4.5. Signature failure: key images may stay unblinkable (for up to 10 blocks).<a class="headerlink" href="#45-signature-failure-key-images-may-stay-unblinkable-for-up-to-10-blocks" title="Permanent link">&para;</a></h3>
+<p>When a service node signs a transaction as part of a given quorum it
+will never sign a different transaction containing any of the same key
+images again as part of that quorum. Since failures are possible for
+multiple reasons, however, it does not block the key images of a
+transaction that it refused to sign.</p>
+<p>It is possible, however, for a transaction to fail to be signed by a
+supermajority while still being signed by a superminority (that is, by
+enough other nodes to prevent a supermajority). This case is expected to
+be rare: the criteria for service node disagreement is small:
+effectively you would need (roughly) half of the service nodes to see
+something wrong with the transaction. It is not impossible, however: if
+a regular transaction spending the same key images is mined and the
+block transmitted in the middle of signing the blink could fail.</p>
+<p>The user-facing problem that could arise here is that the transaction
+that gets signed includes multiple key images, only some of which are
+ineligible. The service nodes that signed the transaction, however, end
+up locking <em>all</em> of the key images for the duration of the quorum (
+i.e. the next 4–9 blocks), so even once the user wallet sees the
+updated chain a new transaction <em>might</em> end up trying to blink using an
+input that is temporarily non-blinkable (note that it <em>will</em> still be
+regularly minable since the Blink was not transmitted due to the quorum
+failure).</p>
+<p>This case seems rare: it would require a legitimate user spending
+regular transactions and blinking at the same time from different
+wallets. It’s possible, of course, but given the rarity and the
+relatively minor consequence (not being able to Blink those outputs for
+10–20 minutes) for now we will simple leave this as a known limitation.</p>
+<h3 id="46-blink-transactions-entering-the-mempool">4.6. Blink transactions entering the mempool<a class="headerlink" href="#46-blink-transactions-entering-the-mempool" title="Permanent link">&para;</a></h3>
+<p>Blink transactions themselves are perfectly ordinary transactions on the
+blockchain: the signatures applied by service nodes do <em>not</em> end up as
+part of the transaction that gets mined into the chain. Instead this
+metadata is shared and synchronized between nodes from the time when a
+Blink transaction enters the mempool until the transaction is mined
+<em>and</em> secured behind an immutable Loki checkpoint boundary.</p>
+<p>An incoming Blink transaction in the mempool will also be transmitted
+with the Blink height and the verifiable Blink signatures at which the
+transaction was signed. Based on this, a loki node receiving a blink
+transaction will perform multiple actions:</p>
+<ul>
+<li>Verify that the Blink signatures are the correct signers for the
+    given height, and that the signatures are valid (and if not reject
+    the Blink transaction).</li>
+<li>Check to see if any of the key images were spent in or before the
+    last irreversible checkpoint block: if so, reject the Blink
+    transaction.</li>
+<li>Check to see if the mempool already contains any Blink transactions
+    that have a higher priority (i.e. lower height) than the incoming
+    transactions, and if so, refuse the incoming transactions. (This
+    shouldn’t be possible, but is included as a safeguard to maintain
+    consensus).</li>
+<li>Check the current chain back to the last irreversible checkpoint: if
+    any blocks contain any transactions that spend any of the key images
+    in the new Blink transaction then roll back the chain as much as
+    needed to remove those transactions from the blockchain, re-adding
+    any rolled back transactions into the mempool (as occurs already
+    with any reorg).</li>
+<li>Reject any non-Blink transaction from the mempool that spend the
+    same key images as the new Blink transaction (if we just rolled back
+    then this means immediately rejecting the conflicting transactions).</li>
+<li>Reject any <em>Blink</em> transactions from the mempool that spend the same
+    key images but have a lower priority (i.e. higher height) than the
+    new Blink transaction. This should not be possible in general, but
+    needs to be specified anyway to avoid a consensus failure (as with
+    the mirrored check above). Note that this actual removal could
+    cascade if there are other transactions referencing the removed
+    Blink transaction.</li>
+</ul>
+<p>Another difference with Blink transactions is that they should not be
+subject to the existing 2-week mempool transaction timeout. We don’t
+want someone to be able to submit a low-priority Blink transaction while
+the network is flooded with higher priority transactions and be able to
+wait out the transaction until timeout. As long as Blink transactions
+stay in the mempool until mined all an attacker can do is delay the
+transaction from being mined, but cannot cause it to be dropped no
+matter how long he prevents mining. In the unlikely event of a bug that
+makes a Blink transaction inadmissible to the blockchain for some
+unforeseen reason, this approach will keep the transaction alive
+indefinitely until the bug can be addressed.<a href="#footnotes">[4]</a></p>
+<p>Second, Blink transactions need to be more actively propagated across
+the network than current transactions. Currently the mempool is not
+actively synchronized across nodes; instead new transactions are simply
+broadcast to all connected peers when received. A new node, a node that
+was temporarily down when the transaction propagated across the network,
+or a node that has had its mempool manually flushed does not receive
+existing mempool transactions from peers if it misses it the first time.
+This needs to change for Blink transactions: when a p2p connection is
+established we need each peer to send the other a list of any pending
+Blink transaction details it doesn’t already have. Effectively we need
+Blink transactions in the mempool to become first-class synchronization
+objects, just like blocks.</p>
+<p>Finally, synchronized Blink transactions may not be (and do not need to
+be) identical across the network in terms of attached quorum signatures:
+it is entirely possible for two nodes to receive a <em>different</em> set of 14
+signatures: so long as all are valid for the quorum</p>
+<h3 id="47-blink-transactions-entering-the-blockchain">4.7. Blink transactions entering the blockchain<a class="headerlink" href="#47-blink-transactions-entering-the-blockchain" title="Permanent link">&para;</a></h3>
+<p>A transaction entering the blockchain from the mempool requires two
+changes: first, the Blink transaction’s unspent amount now includes both
+the tx fee, as before, but now <em>also</em> the Blink fee. Second, because
+transactions can reference other Blink transactions currently in the
+mempool this puts an ordering on transactions: if A includes B in its
+ring signatures (whether as the actual key image or a decoy) then there
+is an implied ordering for mined block selection: A cannot be included
+in a block before the block in which B is included. This requires, of
+course, changes to the transaction selection algorithm used to construct
+block templates for miners.</p>
+<h3 id="48-re-blinking-implementation">4.8. Re-Blinking implementation<a class="headerlink" href="#48-re-blinking-implementation" title="Permanent link">&para;</a></h3>
+<p>As discussed in <a href="#32-re-blinking">Re-blinking</a> we need received Blink funds
+to be instantly spendable. That means that the recipient’s wallet needs
+to recognize that those received funds are immediately spendable,
+whether in a new non-Blink transaction or in a new Blink transaction. In
+either case this means the new transaction will spend outputs that
+aren’t yet on the chain, but are still in pending Blink transactions
+in the mempool. We need to update lokid and the wallet allow this.</p>
+<p>This does, however, raise another important issue, addressed in the next
+section.</p>
+<h3 id="49-ring-signature-implications">4.9. Ring signature implications<a class="headerlink" href="#49-ring-signature-implications" title="Permanent link">&para;</a></h3>
+<p>The anonymity in Loki depends on the actual and decoy outputs being
+included in the transaction ring signature being indistinguishable.
+Quick turn-around <a href="#48-re-blinking-implementation">re-blinking</a> breaks that
+with the current ring signature selection in two ways:</p>
+<p>First, a Blink transaction that enters the mempool that includes a
+mempool Blink transaction in its ring signature provides a perfect link
+between the transactions because currently only blockchain transactions
+but not mempool transactions are ever included in a ring signature.</p>
+<p>Even if you don’t have the mempool history you can still infer likely
+links between Blink transactions that are very close together
+(i.e. within a small number of blocks). As outputs in the same block
+(or within a couple blocks) are highly unlikely to occur naturally,
+seeing such transactions in the mempool give a high probability that the
+transactions are linked.<a href="#footnotes">[5]</a></p>
+<p>To get around this problem, we will need to update the ring signature
+construction to be able to select from both existing blockchain
+transactions <em>and</em> Blink transactions in the mempool for both Blink
+transactions <em>and regular transactions</em>. (This of course imposes
+additional mempool ordering constraints to those discussed in the
+<a href="#47-blink-transactions-entering-the-blockchain">blockchain</a> section as
+ordering also applies to non-Blink transactions using mempool decoys.)
+Further investigation will be needed to determine a good selection
+probability (and will likely need tweaking in future releases), but we
+will aim to be on the side of having too high a probability: using too
+<em>low</em> a probability is much worse as it would make Blink transactions
+still stand out (albeit imperfectly).</p>
+<p>Potentially including mempool Blink transactions in normal transaction
+ring signatures is important as well: because a Blink transaction is
+instantly spendable, a non-Blink transaction including a recent Blink
+transaction would similarly link the outputs together. Thus we
+potentially include Blink dummy transactions in <em>all</em> transactions
+(which has the separate advantage of simplifying the code: building a
+Blink transaction and building a regular transaction will be identical).</p>
+<h3 id="410-blink-and-checkpoints">4.10. Blink and checkpoints<a class="headerlink" href="#410-blink-and-checkpoints" title="Permanent link">&para;</a></h3>
+<p>Blink transaction metadata (i.e. quorum signatures, signing height) is
+meant to be temporary data that only needs to be kept until the
+transaction is unequivocally committed to the blockchain. Thus Blink is
+designed to work with Loki’s checkpointing feature: once the transaction
+has passed the point where it is not reversible—that is, once it has
+been signed by three checkpoint quorums—service nodes can discard the
+metadata.</p>
+<h3 id="411-quorum-communication">4.11. Quorum communication<a class="headerlink" href="#411-quorum-communication" title="Permanent link">&para;</a></h3>
+<p>Current quorum communication (e.g. for deregistration voting or for the
+upcoming checkpointing support) relies on a gossip protocol to carry
+messages over the loki p2p layer. While this is manageable for those
+applications it is not going to be sufficiently scalable for Blink
+quorum voting.</p>
+<p>Instead part of the Blink development will be to build a direct
+communication layer where service nodes connect directly to one another
+for quorum purposes. The initial plan is for quorum SNs to communicate
+directly with each (using the SN public IP being added in
+<a href="https://github.com/loki-project/loki/pull/622">#622</a>). This
+communication layer will also be designed to handle quorum traffic for
+service node deregistration and allow faster and more efficient
+communication in those scenarios as well.</p>
+<p>The specific implementation details will be developed further during the
+Blink implementation; the current plan is to create a relatively simple
+SN-to-SN protocol using ZMQ (which is already a loki core dependency)
+over which quorum members communicate, and over which the initiating
+lokid contacts quorum service nodes to begin the Blink signing process.
+The initial approach here is to use a fully-connected quorum: 9 open
+connections, roughly half inbound and half outbound, for each SN, held
+open (and reestablished upon disconnection) for the duration of the
+Blink quorum validity.</p>
+<p>As a simple fully connected approach, the following table shows
+node-to-node connections within a quorum:</p>
+<p><img alt="Figure 3: Node-to-node quorum connections" src="../../assets/images/blink-quorum-conns.svg" /></p>
+<p>where “o” indicates that the row node establishes an outgoing connection
+to the column node and “i” indicates that the row node receives an
+incoming connection from the column node. Additionally once the depicted
+quorum Q becomes the first quorum, nodes 6–10 establish outgoing
+connections to nodes 1–5 of following quorum, Q’. (Similarly, but not
+depicted, when Q is the second quorum there will be inbound connections
+to SN₁ through SN₅ from the previous quorum’s last 5 nodes): first node
+in the quorum will open connections to nodes 2–6, the second node will
+open to nodes 3–7, and so on. The sixth node will open connections to
+nodes 7–10, the seventh node to 8–10 and 1, and so on. Additionally,
+once a quorum becomes the first quorum, nodes 6–10 each establish a
+connection to nodes 1–5 in the second quorum.</p>
+<p>This is designed to be balanced: each service node establishes outgoing
+connections to exactly 5 other service nodes, and is connected to by a
+(different) 5 service nodes. Each of these</p>
+<p>Additionally, each quorum would have some nodes that establish a
+connection to some of the nodes in the following quorum over which
+messages will be passed when a quorum has acquired the required
+supermajority of signatures.</p>
+<h3 id="412-service-node-deregistrations">4.12. Service node deregistrations<a class="headerlink" href="#412-service-node-deregistrations" title="Permanent link">&para;</a></h3>
+<p>As discussed in the <a href="#42-quorum-selection">Quorum Selection</a> section, the
+service nodes that make up a quorum are chosen by excluding service
+nodes that have (or will) expire before the quorum completes its tasks.
+A related problem, however, is that there are unforseeable
+deregistrations that may occur (or may have already occurred) since the
+seed height.</p>
+<p>This is partially addressed by the quorum tolerance: since a quorum
+required only 7 of 10 votes, it can continue to function even if 3 nodes
+deregister. It is, however, possible (albeit extremely unlikely) that 4
+or more nodes have been deregistered from the network in either quorum,
+either before the quorum begins or during the quorum validity period. If
+this occurs, a quorum member must simply refuse to sign. This can also
+be checked by the initiating lokid: if it fails to build a quorum of at
+least 7 active nodes in each quorum it can immediately return an error
+to the initiating wallet that the Blink service is temporarily down.</p>
+<p>The reason that we cannot add “substitute” nodes in the event of
+deregistrations is that it would affect the validity of quorum
+signatures if a blockchain reorganization should happen: such a
+reorganization could delay the deregistration to the point that the
+substitute <em>isn’t</em> actually valid anymore, thereby invalidating the
+Blink signature.</p>
+<p>It is tempting to at least consider substitutions for deregistrations
+that are past an immutable checkpoint boundary, but again this would not
+work: though checkpoints are distributed across the network, they are a
+moving target that is external to the blockchain itself. Thus
+determining the correct set of quorum signatures would change as
+checkpoints propagate the network and so verification of having the
+<em>correct</em> set of signatures would be impossible.</p>
+<p>We believe that the 7 of 10 threshold, allowing for up to three failures
+(including deregistrations) should be sufficient to keep Blink
+operational in all but extreme circumstances (such as mass Service Node
+deregistrations). Should this prove problematic, the recommended
+approach is to increase the quorum size, slightly reduce the
+supermajority requirement, or both.</p>
+<h2 id="5-potential-attacks">5. Potential attacks<a class="headerlink" href="#5-potential-attacks" title="Permanent link">&para;</a></h2>
+<p>While the basics of the above in normal operation are fine, there are
+several edge cases that need to be addressed specifically to prevent
+accidental conflict or deliberate attacks.</p>
+<h3 id="51-double-spending-blink-tx-non-blink-tx">5.1. Double-spending Blink tx + non-Blink tx<a class="headerlink" href="#51-double-spending-blink-tx-non-blink-tx" title="Permanent link">&para;</a></h3>
+<p>This attack would work by privately mining a block where the inputs used
+in a Blink transaction are spent, conducting a Blink transaction, then
+releasing the private block to the network after the Blink transaction
+has been approved. This would be a classic double spend, but because
+Blink transactions are 0-confirmation transactions, you don’t need a 51%
+attack; you would just need a single block and a bit of luck.</p>
+<p>The solution to this is that Blink transactions <em>in the mempool</em> are
+stronger for consensus purposes than non-Blink transactions <em>on the
+chain</em>. That is, if a Blink-signed transaction arrives in the mempool
+that conflicts with (i.e. spends the same inputs as) a transaction
+already mined on the chain then the block containing the conflicting
+non-Blink transaction is <strong>no longer</strong> a valid blockchain block and must
+be rolled back.</p>
+<p>There is a limitation to this, however: if the conflicting block has
+passed an irreversible checkpoint boundary then it is instead the Blink
+transaction that is invalid.<a href="#footnotes">[6]</a></p>
+<h3 id="52-double-spending-blink-blink">5.2. Double-spending Blink + Blink<a class="headerlink" href="#52-double-spending-blink-blink" title="Permanent link">&para;</a></h3>
+<p>Sending two parallel Blink transactions that spend some of the same
+inputs at the same signing height <em>h</em> isn’t possible: the approving
+service nodes by design will not sign twice for the same outputs, and to
+actually be accepted a Blink transaction must be signed by a
+supermajority of the service nodes in the (unique) signing quorum.</p>
+<p>Sending two Blink transactions at different heights, however, can be a
+potential issue if exploited by something I will call “quorum hopping”
+and address in the next section.</p>
+<h3 id="53-quorum-hopping">5.3. Quorum hopping<a class="headerlink" href="#53-quorum-hopping" title="Permanent link">&para;</a></h3>
+<p>In order to double-spend Blink transactions it is necessary to “quorum
+hop” – that is, to have your transaction signed by two independent sets
+of quorums. Practically speaking, that means that that you need one
+Blink transaction signed by <em>Q₁</em> and <em>Q₂</em>, and another spending the same
+outputs signed by <em>Q₃</em> and <em>Q₄</em>.<a href="#footnotes">[7]</a></p>
+<p>For the purposes of illustration, I’ll continue with <a href="#432-tx-example-two">TX example
+two</a> from Figure 2, and I’ll assume the attacker has an
+arbitrary amount of hash power available. In order to quorum hop, the
+attacker needs to get signatures from <em>Q₁</em> and <em>Q₂</em> <strong>and</strong> signatures
+for another transaction spending the same outputs from <em>Q₃</em> and <em>Q₄</em>.
+The basic assurance is that while the current network is at height 1006,
+<em>Q₄</em> won’t sign a transaction. However, 1006 is close enough to the
+quorum endpoint that the attacker does get a choice between the <em>Q₁/Q₂</em>
+pair and the <em>Q₂/Q₃</em> pair: though <em>Q₂/Q₃</em> is the proper quorum pair for
+a truthful <em>h</em>=1006 request, we allow him to claim <em>h</em>=1004 (to allow
+for network latency).</p>
+<p>To get a successful signing from the <em>Q₃/Q₄</em> quorum pair, however, the
+second Blink transaction must request a signing height of at least
+<em>h</em>=1010, and the quorum won’t accept such a height unless it locally
+sees at least <em>h</em>=1008. This means the attacker needs to get two new
+blocks on the network quickly but not too quickly: if too fast, the
+transaction may reach too many of the <em>Q₁/Q₂</em> quorum members that the
+first tx signature fails. If too slow, the signed transaction broadcast
+from <em>Q₁/Q₂</em> service nodes may reach enough <em>Q₃/Q₄</em> service nodes that
+signing of the second transaction fails. Thus we’ll assume that there is
+some small window for “goldilocks” timing: timing that is not too fast
+to reach <em>Q₁/Q₂</em> and not too slow to reach <em>Q₃/Q₄</em> after the first
+transaction.</p>
+<p>The timing of the attack would go like this:</p>
+<ol>
+<li>
+<p>Privately mine and withhold 2 blocks (heights 1007 and 1008).</p>
+</li>
+<li>
+<p>Initiate a Blink signing at <em>h</em>=1004 (thus using the <em>Q₁/Q₂</em> quorum
+    pair).</p>
+</li>
+<li>
+<p>Release the withheld blocks; ideally send them directly to <em>Q₃/Q₄</em>
+    quorum members.</p>
+</li>
+<li>
+<p>Initiate the conflicting transaction Blink signing at <em>h</em>=1008 (thus
+    using <em>Q₃/Q₄</em>).</p>
+</li>
+</ol>
+<p>If successful, nodes on the network will end up receiving two conflict
+Blink transactions with valid signatures. First, for a unique consensus
+rule, we need to pick a consensus winner, which is easy enough: we
+simple prefer the Blink transaction with an earlier signing height and
+reject the later one.<a href="#footnotes">[8]</a></p>
+<p>Second, and more important, we want to make the attack to be
+“impossible”<a href="#footnotes">[9]</a>. This is done by effectively adding a delay to
+Blink signing in potentially problematic case, effectively shortening
+the “goldilocks” window to nothing. Specifically the proposed delay is
+as follows: when a quorum service node is asked to sign a transaction at
+height <em>h</em>, it checks the time when it received the critical block that
+allowed the given quorum pair associated with height <em>h</em>. If this
+critical block was received less than 5 seconds ago, it delays the Blink
+checks and signing until at least 5 seconds have elapsed since that
+critical block was was received by the given service node.</p>
+<p>For example, the critical block for a signing height of 1007 would be
+1003; for 1010 it would be 1008:</p>
+<p><img alt="Figure 4: Quorum critical blocks" src="../../assets/images/quorum-critical.svg" /></p>
+<p>The whole idea here is to add enough of a delay that the Blink
+transaction being signed by <em>Q₁/Q₂</em> has time to propagate to enough
+<em>Q₃/Q₄</em> service nodes that they will see the double-spending attempt
+and thus fail to build enough signatures to Blink the transaction. 5
+seconds should generally be much more than enough for reach all the
+quorum members, but we don’t actually need it to reach all: rather it is
+enough to reach just a supermajority-busting minority or <em>either</em> <em>Q₃</em>
+or <em>Q₄</em> service nodes.</p>
+<p>A delay of up to 5-seconds is highly undesirable for a Blink
+transaction, of course, so it is worth considering how unlikely this
+delay would be under typical blockchain activity when an honest user is
+sending a Blink transaction.</p>
+<p>Let’s suppose the user submits a transaction to sign at height <em>h=1010</em>,
+and so quorum service nodes check when they received block <em>h=1008</em> to
+figure out whether they need to delay. In order to trigger a delay, we
+need <em>h=1008</em> to have been received by the service node less than 5
+seconds before the signing request is received. Adding an extra couple
+of seconds for blocks to reach service nodes, this means we need to have
+found 3 (or more) blocks on the network in approximately 7 seconds.
+Given LOKI’s 120-second block target, the probability of seeing this
+naturally is approximately 0.000031[^prob_7s]; even if we allowed for
+increased network latency to delay block transmission by 5 seconds the
+probability of triggering the delay is still only 0.000091. These
+probabilities are <em>also</em> worst cases conditional on using the first
+block in a new quorum (which itself only occurs 1/5 of the time). If we
+consider the probabilities for a transaction signed at <em>h=1011</em>, we
+would need 4 network blocks received in the same timeframe: that is,
+0.00000046 for a 7-second window and 0.00000188 for a 10-second window.</p>
+<p>Thus suffice it to say that the probability of an honest user
+accidentally hitting the delay is small. Even if they <em>do</em> hit it
+because of extremely bad luck, the only consequence is a delay of at
+most 5 seconds for their Blink confirmation.</p>
+<h3 id="54-signature-withholding">5.4. Signature withholding<a class="headerlink" href="#54-signature-withholding" title="Permanent link">&para;</a></h3>
+<p>The design requires the Blink quorum itself to disseminate the Blink
+transaction to the network. This has one potential advantage of having
+the transaction go out faster (service nodes are often better
+connected), but the more important reason is to prevent the caller from
+withholding the Blink transaction to cancel out a later Blink
+transaction. Such an attack would work as follows:</p>
+<ol>
+<li>Attacker constructs a Blink transaction sending funds to himself; he
+    submits at the current height using quorums <em>Q₁</em> and <em>Q₂</em>. Instead
+    of immediately transmitting the signed transaction to the network,
+    however, he stores it.</li>
+<li>He then waits a few blocks for a height that will let him use a
+    different quorum pair, <em>Q₃</em> and <em>Q₄</em>.</li>
+<li>The attacker constructs another Blink transaction sending the same
+    outputs to an exotic car dealer who, seeing the Blink transaction on
+    the network, hands over the keys to a brand new Italian sports car.</li>
+<li>While driving off, the attacker releases the initial Blink
+    signatures which replaces the car payment transaction with his
+    earlier transaction to himself, making the car payment permanently
+    unspendable.</li>
+</ol>
+<p>To avoid the problem, we need to force the transaction dissemination as
+quickly as possible: thus mandating that the service node quorums should
+themselves broadcast it; this effectively means the Blink transaction
+will be broadcast to the network from 14–20 well-connected nodes. As a
+side effect, this broad dissemination method also ensures that Blink
+transactions reach all nodes very quickly.</p>
+<h3 id="55-51-attack-to-reorganize-the-blink-quorum">5.5. 51% attack to reorganize the Blink quorum<a class="headerlink" href="#55-51-attack-to-reorganize-the-blink-quorum" title="Permanent link">&para;</a></h3>
+<p>The idea behind this attack is that an attacker would submit a blink
+transaction then attempt to invalidate it by using a 51% attack to
+reorganize the blockchain far enough back as to disrupt the quorum seed,
+thus making the blink signatures on the transaction no longer valid.
+This attack is prevented by requiring a long (35-block) lag for quorum
+determination <em>and</em> not having service nodes sign a transaction if they
+do not see their quorum seed height as checkpoint-immutable. See <a href="#422-quorum-selection-block-and-checkpointing-rationale">Quorum selection block and checkpointingrationale</a> for more
+details.</p>
+<h2 id="6-future-ideas">6. Future ideas<a class="headerlink" href="#6-future-ideas" title="Permanent link">&para;</a></h2>
+<p>There are myriad ways the Blink implementation could be extended and
+advanced; this section is laying out some of them. Note that there is no
+guarantee that all of these will be implemented.</p>
+<h3 id="61-dynamic-fees">6.1. Dynamic fees<a class="headerlink" href="#61-dynamic-fees" title="Permanent link">&para;</a></h3>
+<p>In the <a href="#33-fees">Fees</a> section we currently mandate that the miner
+transaction fee for a Blink transaction must always be set to the
+“normal” priority fee. This is sub-optimal: a dynamic system that sets
+a fee based on the blockchain activity. For example, the transaction
+priority (and thus the fee) could be calculated by considering the
+average fee and fill percentage of the 60 blocks ending 30 blocks before
+the Blink height to calculate a fee. The Blink portion of the fee could
+similarly be dynamic based on the number of recent Blink transactions on
+the blockchain.</p>
+<h3 id="62-merging-transactions">6.2. Merging transactions<a class="headerlink" href="#62-merging-transactions" title="Permanent link">&para;</a></h3>
+<p>Given a pair of Blink transactions on the mempool, it ought to be
+possible to merge them into a single transaction. For example, if Kee
+blinks funds to Jason and Jason reblinks those funds to Simon, it ought
+to be possible (at least in some situations) to merge the transactions
+in such a way that both can be replaced with a single merged transaction
+that spends all the same outputs and pays the right recipients, but is
+combined into a single, smaller transaction on the blockchain.</p>
+<p>The privacy components of Loki’s underlying design certainly complicates
+the idea, but it is worth pursuing at least some research into whether
+and how this could be accomplished.</p>
+<p>In theory this combining could also be done for regular transactions,
+but starting this with Blink with its much stronger guarantees of
+blockchain acceptance seems safer.</p>
+<h3 id="63-allowing-different-blink-supermajority-levels">6.3. Allowing different Blink supermajority levels<a class="headerlink" href="#63-allowing-different-blink-supermajority-levels" title="Permanent link">&para;</a></h3>
+<p>In this plan we simply specify a quorum of 10 and supermajority of 7. It
+seems plausible, however, to let advanced users require an extra
+paranoid level of security by including a flag requesting a higher level
+of signing: for example, requiring 8 or 9 signatures per quorum. This
+would increase the likelihood of failures due to quorum communication
+issues, and would likely slightly increase the typical Blink time, but
+would be entirely feasible to support.</p>
+<p>One question mark around this is whether it would be a particularly
+valuable addition for LOKI users. On the one hand it would allow extra
+choice, but there is uncertainty as to whether this extra choice would
+actually be used.</p>
+<p>A larger concern is that the option of a “more secure” mode would imply
+that the default 7/10 supermajority requirement is somehow less secure,
+despite the design (as laid out in this document) explicitly targetting
+building a secure system.</p>
+<p>Indeed the only security gained from a higher quorum level is higher
+protection again quorum ownership by an adversary. As the statistics in
+the <a href="#421-overlapping-quorums-rationale">Overlapping quorums rationale</a>
+point out, however, this is already an extremely low risk even for
+someone in control of a huge portion of the network’s service nodes.</p>
+<p>Thus it might be preferable to <em>not</em> offer such a feature explicitly to
+undermine that the current Blink system is already designed to be highly
+secure. Users who need an extra paranoid level of security will always
+be better off using a regular transaction and waiting for many
+confirmations plus service node checkpoints.</p>
+<h3 id="64-quorum-communication-via-mesh-network">6.4. Quorum communication via mesh network<a class="headerlink" href="#64-quorum-communication-via-mesh-network" title="Permanent link">&para;</a></h3>
+<p>The idea proposed above for intra-quorum communication is simple, but
+probably does not scale well to larger quorum (such as the 20-node
+quorum used for checkpoints). An alternative approach is to use a
+partially connected mesh network over which some SNs route messages for
+other SNs. This complicated the mechanism (because more node-to-node
+routing is required) and slightly reduces the speed, but network latency
+is less of a concern for checkpointing than it is for Blink
+transactions.</p>
+<h3 id="65-carrying-traffic-over-lokinet">6.5. Carrying traffic over lokinet<a class="headerlink" href="#65-carrying-traffic-over-lokinet" title="Permanent link">&para;</a></h3>
+<p>One aspect to consider in the future is the possibility of carrying all
+blink coordination traffic over lokinet rather than establishing direct
+public IP SN-to-SN connections. Such transmission can still be fast by
+using 0-hop paths within lokinet (which are effectively just encrypted
+direction connections). There is no particular reason that this data
+needs to be encrypted or hidden, but this would have some advantage for
+lokinet by providing cover traffic, and would let lokinet deal with any
+connection nuances.</p>
+<p>One technical caveat raised by lokinet devs when discussing this idea is
+that we would have to take steps to ensure that lokinet’s connectivity
+parameters remain sufficiently high to not partition the network:</p>
 <blockquote>
-<p>To do:  what is blink?</p>
+<p>So the idea is that snodes within a quorum are going to talk to each
+other. If this goes over 0-hop lokinet then their lokinet routers will
+have connections to one-another. This is fine. The possible issue
+arises because lokinet routers have a preset minimum number of
+connections to other routers that they want to maintain. If this
+minimum is low enough that it is satisfied by the quorum size then the
+routers may not seek out connections to other routers and, in theory,
+that quorum could become partitioned from the network by way of all
+the routers only connecting to one-another and not other routers
+outside their quorum.</p>
+<p>It doesn’t seem super likely to happen, and is easily prevented anyway
+by setting <code>min_conn_count</code> > <code>quorum_size</code>, but it is technically
+possible without that mitigation so I figure we may as well set our
+desired minimum connection count for the routers higher just in case.</p>
 </blockquote>
-</blockquote>
-<p>In a typical blockchain system, the confirmation time for any given transaction is the time it takes for a transaction to be included in a block. Because of competing miners, withheld blocks, and Finney attacks, recipients usually require a number of additional blocks to be created on top of the block which holds a transaction before it is considered to be complete. Depending on a multitude of factors specific to each blockchain, this process can often take 10-60 minutes, which is inconvenient for merchants and customers who must wait for confirmations before they release goods or commence services.</p>
-<p>Because of Loki’s Service Node architecture, near instant transactions are possible. Blink enables the same transactions that would occur on the Loki mainchain to be confirmed before being included in a block, assuring both the sender and the receiver of the validity of the transaction and protecting the receiver against a double spend.</p>
-<p>Blink works in a similar fashion to DASH’s InstantSend. Each block, a <a href="../../ServiceNodes/SNOverview/">Service Node</a> <a href="../../Advanced/SwarmFlagging/">swarm</a> is deterministically selected to act as a set of witnesses that confirm a transactions validity and lock the transaction from being spent twice. Instead of the unspent outputs used in the transaction being locked (like in DASH), key images are locked.  Key images are unique keys that are attached to each unspent output in a <a href="../../Advanced/CryptoNoteElements/">ring signature</a>. To provide immediate 11 confirmations, Blink gives authority to the selected <a href="../../Advanced/SwarmFlagging/">swarm</a> to signal to the network that a key image associated with an output should be locked until the transaction is included in a block.  If a double spend of the same unspent output is attempted, an identical key image is produced, which would be rejected by the swarm and thus the network as a whole.</p>
-<p>Users will have the ability to pay a higher fee to send a Blink transaction which will confirm in seconds rather than in minutes.  This opens up a range of new use cases for Loki where face-to-face payments become increasingly practical and online payments become easier tonintegrate. All of the privacy features inherent in Loki are uncompromised throughout this process.</p>
+<p>Another possibility is to include some sort of flag to tell lokinet to
+not consider this a connection for the purposes of maintaining the
+minimum connection count.</p>
+<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
+<ol>
+<li id="fn1">  This split is purely for the sake of example and not meant to be
+    taken as a concrete plan to change the coinbase reward to these
+    particular values. Any such change in reward structure is obviously
+    entirely outside the purview of this document.
+
+<li id="fn2">  A node that is one minute behind the network will fall to more than
+    2 blocks away from the proper height 0.18% of the time; with two
+    minute lag the node will exceed 2 blocks 1.89% of the time; a
+    thirty-second-slow node will be a problem 0.013% of the time. Since
+    a node lagging by any of these values occurs only rarely (not
+    consistently), the actual probability of users encountering such
+    failures on a decently connected node should be much lower.
+
+<li id="fn3">  It is possible for the quorum to return an error status indicating
+    that the lokid should retry at a new height; it is up to the lokid
+    whether it wants to do this or return an error to the client.
+
+<li id="fn4">  This is actually a bit more complicated because new transactions can
+    be submitted that spend the Blink transaction outputs or that
+    include the Blink transaction outputs as a decoy. That means those
+    transactions themselves will depend on the Blink transaction, adding
+    further chaining.
+
+<li id="fn5">  Effectively the only way to get a tx in block *h* that refers to a
+    tx in block *h* or *h-1* is if a blockchain reorganization that
+    dumps transactions back into the mempool happens; this typically
+    only occurs in a 51% attack so can be considered rare enough to
+    provide a high assurance of the link between transactions.
+
+<li id="fn6">  This case is virtually impossible in normal operations, but it must
+    still be specified and handled for completeness of consensus rules.
+
+<li id="fn7">  You could hop further, of course, to *Q₄* and *Q₅*, but the attack
+    is the same: it is just more costly to pull off.
+
+<li id="fn8">  In theory there could be transactions that reference the second
+    transaction’s outputs that would also need to be ejected from the
+    mempool. Given that the window of opportunity here is extremely
+    small, this seems a negligible concern.
+
+<li id="fn9">  In a practical sense, of course. More technically, we want the
+    attack to be extremely difficult to carry out.
                 
                   
                 
@@ -1496,7 +4055,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Messenger/" title="Messenger" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../LokiServicesOverview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1505,19 +4064,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Messenger
+                Overview
               </span>
             </div>
           </a>
         
         
-          <a href="../../Advanced/TechnicalSpecs/" title="Technical Specs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Technical Specs
+                Denial of Service Attacks
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1531,10 +4090,6 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Add Copyright
-          </div>
         
         powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
@@ -1557,6 +4112,8 @@
     
       <a href="https://www.youtube.com/lokinetwork" class="md-footer-social__link fa fa-youtube"></a>
     
+      <a href="https://www.facebook.com/LokiNetwork/" class="md-footer-social__link fa fa-facebook"></a>
+    
   </div>
 
       
@@ -1570,10 +4127,12 @@
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
-    
-    
+        <script src="../../JAVASCRIPT/links.js"></script>
       
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+        <script src="../../JAVASCRIPT/style.js"></script>
+      
+    
+    
       
     
   </body>

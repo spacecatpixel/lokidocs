@@ -10,8 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="The Loki CLI wallet is a wallet first developed by Monero. Loki has added additional commands ontop of the monero-wallet-cli and this document goes through all the Loki and Monero CLI commands available within the loki-wallet-cli.">
       
-        <link rel="canonical" href="https://loki-project.github.io/loki-docs/Wallets/CliWallet/WalletCommands/">
+      
+        <link rel="canonical" href="https://docs.loki.network/Wallets/CliWallet/WalletCommands/">
       
       
       
@@ -38,7 +40,7 @@
     
     
       
-        <title>CLI Wallet Commands - Loki Docs</title>
+        <title>Loki Documentation | Loki and Monero CLI Command Guide</title>
       
     
     
@@ -52,10 +54,6 @@
       <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Regular:300,400,400i,700|Roboto">
-        <style>body,input{font-family:"Roboto Regular","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
@@ -100,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#commands" tabindex="1" class="md-skip">
+      <a href="../../../#loki-cli-guide" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,9 +107,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.loki.network" title="Loki Docs" class="md-header-nav__button md-logo">
           
-            <img src="../../../Loki_favicon32x32.png" width="24" height="24">
+            <img src="../../../logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -196,6 +194,157 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../WalletsOverview/" title="Wallets" class="md-tabs__link md-tabs__link--active">
+          Wallets
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Mining/MiningOverview/" title="Mining" class="md-tabs__link">
+          Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../ServiceNodes/SNOverview/" title="Service Nodes" class="md-tabs__link">
+          Service Nodes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Lokinet/LokinetOverview/" title="Lokinet" class="md-tabs__link">
+          Lokinet
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../LokiServices/Messenger/Session/" title="Session" class="md-tabs__link">
+          Session
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../LokiServices/Blink/" title="Blink" class="md-tabs__link">
+          Blink
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Advanced/CheckpointingLip3/" title="Checkpointing" class="md-tabs__link">
+          Checkpointing
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Advanced/PulseLip5/" title="Pulse" class="md-tabs__link">
+          Pulse
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Developer/SNRPCGuide/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -205,9 +354,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-nav__button md-logo">
+    <a href="https://docs.loki.network" title="Loki Docs" class="md-nav__button md-logo">
       
-        <img src="../../../Loki_favicon32x32.png" width="48" height="48">
+        <img src="../../../logo.svg" width="48" height="48">
       
     </a>
     Loki Docs
@@ -254,46 +403,34 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
+  <li class="md-nav__item">
+    <a href="../../../Introduction/LokiNetwork/" title="Introduction" class="md-nav__link">
       Introduction
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Introduction
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Introduction/LokiNetwork/" title="Loki Network" class="md-nav__link">
-      Loki Network
     </a>
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
-    <a href="../../../Introduction/BeginnersGuide/" title="Where to begin?" class="md-nav__link">
-      Where to begin?
+    <a href="../../../Introduction/GettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
   </li>
 
     
@@ -306,13 +443,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-5">
       Wallets
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-5">
         Wallets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -336,8 +473,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../WhatWalletToUse/" title="What wallet to use?" class="md-nav__link">
-      What wallet to use?
+    <a href="../../WhatWalletToUse/" title="Which wallet should I use?" class="md-nav__link">
+      Which wallet should I use?
     </a>
   </li>
 
@@ -349,14 +486,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-3-3">
-      Web Wallet (LokiLocker)
+    <label class="md-nav__link" for="nav-5-3">
+      Addresses
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        Web Wallet (LokiLocker)
+      <label class="md-nav__title" for="nav-5-3">
+        Addresses
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -367,8 +504,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../WebWallet/TroubleshootWebWallet/" title="Troubleshooting Web Wallet" class="md-nav__link">
-      Troubleshooting Web Wallet
+    <a href="../../Addresses/MainAddress/" title="Main Address" class="md-nav__link">
+      Main Address
     </a>
   </li>
 
@@ -378,69 +515,9 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2">
-    
-    <label class="md-nav__link" for="nav-3-3-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-3-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../../WebWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      Graphical User interface (GUI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        Graphical User interface (GUI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../GuiWallet/TroubleshootGui/" title="Troubleshooting GUI Wallet" class="md-nav__link">
-      Troubleshooting GUI Wallet
+    <a href="../../Addresses/SubAddress/" title="Sub Address" class="md-nav__link">
+      Sub Address
     </a>
   </li>
 
@@ -450,28 +527,9 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2">
-    
-    <label class="md-nav__link" for="nav-3-4-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../../GuiWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
+    <a href="../../Addresses/IntegratedAddress/" title="Integrated Address" class="md-nav__link">
+      Integrated Address
     </a>
   </li>
 
@@ -481,112 +539,14 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
-    
-    <label class="md-nav__link" for="nav-3-5">
-      Mobile Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-5">
-        Mobile Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../MobileWallet/TroubleshootMobileWallet/" title="Troubleshooting Mobile Wallet" class="md-nav__link">
-      Troubleshooting Mobile Wallet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
-    
-    <label class="md-nav__link" for="nav-3-5-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-5-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MobileWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
-    
-    <label class="md-nav__link" for="nav-3-6">
-      Command Line Integrated (CLI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-6">
-        Command Line Integrated (CLI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../TroubleshootCli/" title="Troubleshooting CLI Wallet" class="md-nav__link">
-      Troubleshooting CLI Wallet
+    <a href="../../Multisignature/" title="Multsignature" class="md-nav__link">
+      Multsignature
     </a>
   </li>
 
@@ -600,17 +560,53 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2" type="checkbox" id="nav-3-6-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5" checked>
     
-    <label class="md-nav__link" for="nav-3-6-2">
+    <label class="md-nav__link" for="nav-5-5">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-6-2">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../GuiWallet/loki-electron-guide/" title="Electron Gui Setup" class="md-nav__link">
+      Electron Gui Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MobileWallet/RestoreMobileWalletGuide/" title="Mobile Wallet Restore" class="md-nav__link">
+      Mobile Wallet Restore
+    </a>
+  </li>
+
         
           
           
@@ -760,8 +756,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-spend-proof" title="6 Spend Proof:" class="md-nav__link">
-    6 Spend Proof:
+  <a href="#6-spend-proof" title="6 Spend Proof" class="md-nav__link">
+    6 Spend Proof
   </a>
   
     <nav class="md-nav">
@@ -787,8 +783,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-tx-proof" title="7 TX Proof:" class="md-nav__link">
-    7 TX Proof:
+  <a href="#7-tx-proof" title="7 TX Proof" class="md-nav__link">
+    7 TX Proof
   </a>
   
     <nav class="md-nav">
@@ -814,8 +810,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-tx-key" title="8 TX key:" class="md-nav__link">
-    8 TX key:
+  <a href="#8-tx-key" title="8 TX key" class="md-nav__link">
+    8 TX key
   </a>
   
     <nav class="md-nav">
@@ -897,15 +893,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../WalletRestoreSeed/" title="CLI Restoring Wallet from Seed" class="md-nav__link">
+      CLI Restoring Wallet from Seed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WalletRestoreKeys/" title="CLI Restoring Wallet from Keys" class="md-nav__link">
+      CLI Restoring Wallet from Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2-3" type="checkbox" id="nav-3-6-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5-8" type="checkbox" id="nav-5-5-8">
     
-    <label class="md-nav__link" for="nav-3-6-2-3">
+    <label class="md-nav__link" for="nav-5-5-8">
       Multisig
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-6-2-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-5-8">
         Multisig
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -935,30 +955,25 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../Multisigniture/" title="Multsigniture" class="md-nav__link">
-      Multsigniture
+    <a href="../MofNMultisig/" title="M/N Multsig" class="md-nav__link">
+      M/N Multsig
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -974,13 +989,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-6">
       Mining
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-6">
         Mining
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1022,13 +1037,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-7">
       Service Nodes
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-7">
         Service Nodes
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1052,18 +1067,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../ServiceNodes/ServiceNodeFunctions/" title="Service Node Functions" class="md-nav__link">
-      Service Node Functions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../../ServiceNodes/StakingRequirement/" title="Staking Requirement" class="md-nav__link">
       Staking Requirement
     </a>
@@ -1075,15 +1078,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/DeregistrationRules/" title="Deregistration Rules" class="md-nav__link">
+      Deregistration Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/InfiniteStakingPrimer/" title="Infinite Staking Primer" class="md-nav__link">
+      Infinite Staking Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-7-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
+      <label class="md-nav__title" for="nav-7-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1095,8 +1122,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../ServiceNodes/SNFullGuide/" title="Service Node Full Guide" class="md-nav__link">
-      Service Node Full Guide
+    <a href="../../../ServiceNodes/DebianPackageGuide/" title="Service Node Setup Guide" class="md-nav__link">
+      Service Node Setup Guide
     </a>
   </li>
 
@@ -1107,7 +1134,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+    <a href="../../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
       Service Node RPC Guide
     </a>
   </li>
@@ -1119,8 +1146,80 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../ServiceNodes/RunServiceNodeAsService/" title="Service Node As Service Guide" class="md-nav__link">
-      Service Node As Service Guide
+    <a href="../../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/launcherconfig/" title="Launcher Config File" class="md-nav__link">
+      Launcher Config File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-nav__link">
+      Service Node Legacy Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/StorageServerGuide-Testnet/" title="Service Node TESTNET Guide" class="md-nav__link">
+      Service Node TESTNET Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/OpenPort22023/" title="Port 22023 Not Open" class="md-nav__link">
+      Port 22023 Not Open
     </a>
   </li>
 
@@ -1142,13 +1241,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-8">
       Lokinet
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-8">
         Lokinet
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1162,6 +1261,18 @@
   <li class="md-nav__item">
     <a href="../../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/PublicTestingGuide/" title="Public Testing Overview" class="md-nav__link">
+      Public Testing Overview
     </a>
   </li>
 
@@ -1195,27 +1306,15 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../Lokinet/DeveloperInfo/" title="Developers" class="md-nav__link">
-      Developers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
     
-    <label class="md-nav__link" for="nav-6-5">
+    <label class="md-nav__link" for="nav-8-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-5">
+      <label class="md-nav__title" for="nav-8-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1227,8 +1326,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Lokinet/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
+    <a href="../../../Lokinet/Guides/LokinetGuiGuide/" title="Linux GUI Guide" class="md-nav__link">
+      Linux GUI Guide
     </a>
   </li>
 
@@ -1239,8 +1338,104 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Lokinet/Guides/SNApps/" title="SNApps" class="md-nav__link">
-      SNApps
+    <a href="../../../Lokinet/Guides/lokinet-mac-guide/" title="macOS Gui Guide" class="md-nav__link">
+      macOS Gui Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/ReverseSSHGuide/" title="Anonymous Reverse SSH Guide" class="md-nav__link">
+      Anonymous Reverse SSH Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/lokinet-linux-guide/" title="Linux Command-line Guide" class="md-nav__link">
+      Linux Command-line Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/Install/" title="Linux - Build-It-Yourself" class="md-nav__link">
+      Linux - Build-It-Yourself
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/AccessingSNApps/" title="Accessing SNApps" class="md-nav__link">
+      Accessing SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/LokinetIRC/" title="Joining a Lokinet IRC Chat" class="md-nav__link">
+      Joining a Lokinet IRC Chat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/HostingSNApps/" title="Hosting SNApps" class="md-nav__link">
+      Hosting SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/LokinetConfig/" title="Lokinet config files" class="md-nav__link">
+      Lokinet config files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Lokinet/Guides/LokinetRouter/" title="Set up a Lokinet Router" class="md-nav__link">
+      Set up a Lokinet Router
     </a>
   </li>
 
@@ -1274,14 +1469,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-7">
-      Loki Services
+    <label class="md-nav__link" for="nav-9">
+      Session
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Loki Services
+      <label class="md-nav__title" for="nav-9">
+        Session
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1292,7 +1487,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+    <a href="../../../LokiServices/Messenger/Session/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -1304,11 +1499,215 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../LokiServices/Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
+    <a href="../../../LokiServices/Messenger/LokiNameSystem/" title="Loki Name System" class="md-nav__link">
+      Loki Name System
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/threat_model/" title="Threat Models" class="md-nav__link">
+      Threat Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/infrastructure/" title="Infrastructure" class="md-nav__link">
+      Infrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/message_routing/" title="Message Routing" class="md-nav__link">
+      Message Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/group_chats/" title="Group Chats" class="md-nav__link">
+      Group Chats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/testing/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/multidevice/" title="Multi-Device" class="md-nav__link">
+      Multi-Device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/client_side_protection/" title="Client Side Protection" class="md-nav__link">
+      Client Side Protection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/attachments/" title="Attachments" class="md-nav__link">
+      Attachments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/HowToRegisterSessionNames/" title="Register Session/Wallet names" class="md-nav__link">
+      Register Session/Wallet names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/multi_device_setup/" title="Multi-Device Setup" class="md-nav__link">
+      Multi-Device Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/opengroup_setup/" title="OpenGroup Setup" class="md-nav__link">
+      OpenGroup Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/JoinOpenGroupMobile/" title="Join Open Group on Mobile" class="md-nav__link">
+      Join Open Group on Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/JoinOpenGroupDesktop/" title="Join Open Group on Desktop" class="md-nav__link">
+      Join Open Group on Desktop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Blink
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Blink
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -1334,17 +1733,425 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-11">
+      Checkpointing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Checkpointing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/CheckpointingLip3/" title="Checkpointing LIP" class="md-nav__link">
+      Checkpointing LIP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/CheckpointingUpdate/" title="Safely Receiving Loki" class="md-nav__link">
+      Safely Receiving Loki
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Pulse
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Pulse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/PulseLip5/" title="Loki Documentation | Loki Proof of Stake | Pulse" class="md-nav__link">
+      Loki Documentation | Loki Proof of Stake | Pulse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
       Advanced
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-13">
         Advanced
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-1" type="checkbox" id="nav-13-1">
+    
+    <label class="md-nav__link" for="nav-13-1">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-1">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/DaemonRPCGuide/" title="Daemon RPC Guide - Old" class="md-nav__link">
+      Daemon RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/DaemonRPCBeta/" title="Daemon RPC Guide - Beta" class="md-nav__link">
+      Daemon RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/WalletRPCGuide/" title="Wallet RPC Guide - Old" class="md-nav__link">
+      Wallet RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/WalletRPCBeta/" title="Wallet RPC Guide - Beta" class="md-nav__link">
+      Wallet RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/FAQ/" title="Developer FAQ" class="md-nav__link">
+      Developer FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Loki Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
+        Loki Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Blink/" title="Blink" class="md-nav__link">
+      Blink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
+    
+    <label class="md-nav__link" for="nav-13-3">
+      Attack Prevention
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-3">
+        Attack Prevention
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-4" type="checkbox" id="nav-13-4">
+    
+    <label class="md-nav__link" for="nav-13-4">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-4">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/HowToContributeToLokiDocs/" title="How to Contribute to LokiDocs" class="md-nav__link">
+      How to Contribute to LokiDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
+      Vulnerability Response
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/Issue_Template/" title="Github Issue Template Example" class="md-nav__link">
+      Github Issue Template Example
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-5" type="checkbox" id="nav-13-5">
+    
+    <label class="md-nav__link" for="nav-13-5">
+      Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-5">
+        Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Governance/Governance/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
         
           
           
@@ -1411,85 +2218,6 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-6" type="checkbox" id="nav-8-6">
-    
-    <label class="md-nav__link" for="nav-8-6">
-      Attack Prevention
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-6">
-        Attack Prevention
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
-      Denial of Service Attacks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
-      IP and Packet Blocking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
-      Swarm Flagging
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-7" type="checkbox" id="nav-8-7">
-    
-    <label class="md-nav__link" for="nav-8-7">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-7">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
     <a href="../../../Advanced/lokid/" title="lokid" class="md-nav__link">
       lokid
@@ -1502,24 +2230,19 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../Advanced/CompilingGuide/" title="Compiling Loki from source" class="md-nav__link">
-      Compiling Loki from source
-    </a>
-  </li>
-
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-12" type="checkbox" id="nav-13-12">
+    
+    <label class="md-nav__link" for="nav-13-12">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-12">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/UsingLokinet/" title="Using Lokinet" class="md-nav__link">
-      Using Lokinet
-    </a>
-  </li>
-
         
           
           
@@ -1551,134 +2274,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
-      Service Node RPC Guide
+    <a href="../../../Advanced/AcceptingLoki/" title="Accepting Loki for Merchants and Exchanges" class="md-nav__link">
+      Accepting Loki for Merchants and Exchanges
     </a>
   </li>
 
         
       </ul>
     </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../FAQ/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Contributing
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Contributing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Contributing/Github/" title="How to Contribute to LokiDocs" class="md-nav__link">
-      How to Contribute to LokiDocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
-      Vulnerability Response
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      Governance
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Governance
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Governance/Governance/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
-      The Loki Foundation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
-      Loki Funding System
-    </a>
   </li>
 
         
@@ -1811,8 +2414,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-spend-proof" title="6 Spend Proof:" class="md-nav__link">
-    6 Spend Proof:
+  <a href="#6-spend-proof" title="6 Spend Proof" class="md-nav__link">
+    6 Spend Proof
   </a>
   
     <nav class="md-nav">
@@ -1838,8 +2441,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-tx-proof" title="7 TX Proof:" class="md-nav__link">
-    7 TX Proof:
+  <a href="#7-tx-proof" title="7 TX Proof" class="md-nav__link">
+    7 TX Proof
   </a>
   
     <nav class="md-nav">
@@ -1865,8 +2468,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-tx-key" title="8 TX key:" class="md-nav__link">
-    8 TX key:
+  <a href="#8-tx-key" title="8 TX key" class="md-nav__link">
+    8 TX key
   </a>
   
     <nav class="md-nav">
@@ -1951,13 +2554,19 @@
                   <a href="https://github.com/loki-project/loki-docs/edit/master/docs/Wallets/CliWallet/WalletCommands.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="commands">Commands:<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
+                <h1 id="loki-cli-guide">Loki CLI Guide<a class="headerlink" href="#loki-cli-guide" title="Permanent link">&para;</a></h1>
+<p>The Loki CLI wallet is a wallet first developed by Monero. Loki has added additional commands ontop of the <code>monero-wallet-cli</code> and this document goes through all the Loki and Monero CLI commands available within the <code>loki-wallet-cli</code>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e6NwsJbm5wY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <h2 id="displaying-commands">Displaying commands<a class="headerlink" href="#displaying-commands" title="Permanent link">&para;</a></h2>
 <p>The <code>loki-wallet-cli</code> has multiple commands to conduct different operations on the Loki Blockchain. By typing <code>help</code> and clicking enter after loading your wallet will bring up the commands that can be used.</p>
 <h2 id="1-accounts">1 Accounts<a class="headerlink" href="#1-accounts" title="Permanent link">&para;</a></h2>
 <h3 id="11-creating-new-account">1.1 Creating new account<a class="headerlink" href="#11-creating-new-account" title="Permanent link">&para;</a></h3>
 <p>When a wallet is generated it will automatically have an account labelled <code>Primary account</code> with index <code>0</code>. If at any time you wish to create an additional account use the command:</p>
-<p><code>account new &lt;label text with white spaces allowed&gt;</code></p>
+<div class="codehilite"><pre><span></span>account new &lt;label text with white spaces allowed&gt;
+</pre></div>
+
+
 <p>This command will create a subaddress which is labelled with a tag and index number. This subaddress will share the same seed as your Primary address. To ensure this new account is displayed you must type <code>exit</code> to save your session.</p>
 <p>You will note that there is now an asterisk to the left of index 1. The asterisks show us the account in which the commands we run will apply to.</p>
 <blockquote>
@@ -1986,8 +2595,11 @@
 </pre></div>
 
 
-<p>To switch between the accounts you have created run the command:
-<code>account switch &lt;index&gt;</code></p>
+<p>To switch between the accounts you have created run the command:</p>
+<div class="codehilite"><pre><span></span>account switch &lt;index&gt;
+</pre></div>
+
+
 <p>After running the command a similar output shown below will be on your terminal.</p>
 <div class="codehilite"><pre><span></span>[wallet L9LnR2]: account switch 0
 [wallet L9LnR2]: Currently selected account: [0] Primary account
@@ -1998,7 +2610,10 @@
 
 <h3 id="13-changing-account-labels">1.3 Changing account labels<a class="headerlink" href="#13-changing-account-labels" title="Permanent link">&para;</a></h3>
 <p>To change the label name connected to a specific Loki Primary or Sub-address use the command:</p>
-<p><code>account label &lt;index&gt; &lt;label text with white spaces allowed&gt;</code></p>
+<div class="codehilite"><pre><span></span>account label &lt;index&gt; &lt;label text with white spaces allowed&gt;
+</pre></div>
+
+
 <p>Replacing <code>&lt;index&gt;</code> with the index number associated with the account you wish to relabel, and replacing <code>&lt;label text with white spaces allowed&gt;</code> with the new label you would like to name the specified account.</p>
 <p>Below shows the current accounts and labels for a specific wallet.</p>
 <div class="codehilite"><pre><span></span>[wallet LCmjSH]: Untagged accounts:
@@ -2036,7 +2651,10 @@
 
 
 <p>We can tag a single account with the following command:</p>
-<p><code>account tag &lt;tag_name&gt; &lt;account_index&gt;</code></p>
+<div class="codehilite"><pre><span></span>account tag &lt;tag_name&gt; &lt;account_index&gt;
+</pre></div>
+
+
 <div class="codehilite"><pre><span></span>[wallet LVP3bv]: account tag Pets 1
 [wallet LVP3bv]: Accounts with tag: Pets
 [wallet LVP3bv]: Tag&#39;s description:
@@ -2048,7 +2666,10 @@
 
 
 <p>When needing to perform multiple tags we can do it through one command:</p>
-<p><code>account tag &lt;tag_name&gt; &lt;account_index_1&gt; [&lt;account_index_2&gt; ...]</code></p>
+<div class="codehilite"><pre><span></span>account tag &lt;tag_name&gt; &lt;account_index_1&gt; [&lt;account_index_2&gt; ...]
+</pre></div>
+
+
 <div class="codehilite"><pre><span></span>[wallet LVP3bv]: account tag Family 2 3
 [wallet LVP3bv]: Accounts with tag: Family
 [wallet LVP3bv]: Tag&#39;s description:
@@ -2061,7 +2682,10 @@
 
 
 <p>Similarly we can untag accounts by running the following command:</p>
-<p><code>account untag &lt;account_index_1&gt; [&lt;account_index_2&gt; ...]</code></p>
+<div class="codehilite"><pre><span></span>account untag &lt;account_index_1&gt; [&lt;account_index_2&gt; ...]
+</pre></div>
+
+
 <p>Using the above exampled wallet we will remove our “Dog” account from “Pets”.</p>
 <div class="codehilite"><pre><span></span>[wallet LVP3bv]: account untag 1
 [wallet LVP3bv]: Accounts with tag: Family
@@ -2083,7 +2707,10 @@
 
 <h3 id="15-adding-tag-descriptions">1.5 Adding Tag descriptions<a class="headerlink" href="#15-adding-tag-descriptions" title="Permanent link">&para;</a></h3>
 <p>If you require additional information attached to a specific tag you can add a description with the following command:</p>
-<p><code>account tag_description &lt;tag_name&gt; &lt;description&gt;</code></p>
+<div class="codehilite"><pre><span></span>account tag_description &lt;tag_name&gt; &lt;description&gt;
+</pre></div>
+
+
 <p>For example:</p>
 <div class="codehilite"><pre><span></span>[wallet LVP3bv]: account tag_description Family This is my family.
 [wallet LVP3bv]: Accounts with tag: Family
@@ -2098,8 +2725,7 @@
 
 <h2 id="2-balance">2 Balance<a class="headerlink" href="#2-balance" title="Permanent link">&para;</a></h2>
 <p>To check the balance of your wallet you can run one of two commands:</p>
-<p><code>balance</code></p>
-<p><code>balance detail</code></p>
+<p><code>balance</code> or <code>balance detail</code></p>
 <p>Running the command <code>balance</code> will generated a simple output showing your balance and unlocked balance of the specific account you are in. For example:</p>
 <div class="codehilite"><pre><span></span>[wallet T6TmZX]: balance
 Currently selected account: [0] Primary account
@@ -2122,20 +2748,29 @@ Address Balance Unlocked balance Outputs Label
 <p>There are other commands that will also output the balance which have been covered by this guide, such as the <code>account</code> command.</p>
 <h2 id="3-getting-the-block-height">3 Getting the Block Height<a class="headerlink" href="#3-getting-the-block-height" title="Permanent link">&para;</a></h2>
 <p>To show the blockchain height run the command:</p>
-<p><code>bc_height</code></p>
+<div class="codehilite"><pre><span></span>bc_height
+</pre></div>
+
+
 <h2 id="4-blackballing-transactions">4 Blackballing Transactions<a class="headerlink" href="#4-blackballing-transactions" title="Permanent link">&para;</a></h2>
 <p>Blackballing transactions allows you to ignore others' outputs (containers of money) that are known to be spent in a certain transaction.</p>
 <p>For example let’s imagine that txid: <code>4f4b371a0da8858bbeab8a40ff37de1f6ff33e64a616e5ced8239062570b7542</code> is known to be fake and if this txid is seen within a RingCT transaction the network can assume it is fake, therefore an actor has a better chance of deducing the real transaction within the RingCT.</p>
 <p>By blackballing the above txid we remove the chance of it being used within our RingCT.</p>
 <p>To do this we will use the following command:</p>
-<p><code>blackball &lt;output public key&gt; | &lt;filename&gt; [add]</code></p>
+<div class="codehilite"><pre><span></span>blackball &lt;output public key&gt; | &lt;filename&gt; [add]
+</pre></div>
+
+
 <p>For example:</p>
 <div class="codehilite"><pre><span></span>[wallet LAXk6e]: blackball 4f4b371a0da8858bbeab8a40ff37de1f6ff33e64a616e5ced8239062570b7542
 </pre></div>
 
 
 <p>To check if the txid was added to our list of txids not to use we can use the following command:</p>
-<p><code>blackballed &lt;output public key&gt;</code></p>
+<div class="codehilite"><pre><span></span>blackballed &lt;output public key&gt;
+</pre></div>
+
+
 <p>If the txid is on our list the following will output:</p>
 <div class="codehilite"><pre><span></span>[wallet LAXk6e]: blackballed 4f4b371a0da8858bbeab8a40ff37de1f6ff33e64a616e5ced8239062570b7542
 [wallet LAXk6e]: Blackballed: &lt;4f4b371a0da8858bbeab8a40ff37de1f6ff33e64a616e5ced8239062570b7542&gt;
@@ -2149,7 +2784,10 @@ Address Balance Unlocked balance Outputs Label
 
 
 <p>To unblackball a txid use the following command:</p>
-<p><code>unblackball &lt;output public key&gt;</code></p>
+<div class="codehilite"><pre><span></span>unblackball &lt;output public key&gt;
+</pre></div>
+
+
 <p>For example:</p>
 <div class="codehilite"><pre><span></span>[wallet LAXk6e]: unblackball 4f4b371a0da8858bbeab8a40ff37de1f6ff33e64a616e5ced8239062570b7542
 </pre></div>
@@ -2160,10 +2798,16 @@ Address Balance Unlocked balance Outputs Label
 <p>For example let’s imagine you see a car for sale but they will accept Loki as payment, however they have advised in their online listing that they are only interested in serious buyers and require you to prove you have the Loki within your initial contact. Luckily we can use the Reserve Proof commands for this proof.</p>
 <h3 id="51-generate-reserve-proof">5.1 Generate Reserve Proof<a class="headerlink" href="#51-generate-reserve-proof" title="Permanent link">&para;</a></h3>
 <p>To begin we will need to run the <code>get_reserve_proof</code> command to generate our proof.</p>
-<p><code>get_reserve_proof (all|&lt;amount&gt;) [&lt;message&gt;]</code></p>
+<div class="codehilite"><pre><span></span>get_reserve_proof (all|&lt;amount&gt;) [&lt;message&gt;]
+</pre></div>
+
+
 <p>If the individual you are sending this proof to requires you to prove you have 1000 Loki you will need to replace the section <code>(all|&lt;amount&gt;)</code> with a 1000, otherwise replace it with the amount you need to prove you have reserved. If you want to put an extra layer of encryption over the file replace <code>[&lt;message&gt;]</code> with a password.</p>
 <p>Your command will similar to the below command:</p>
-<p><code>get_reserve_proof 1000 Car</code></p>
+<div class="codehilite"><pre><span></span>get_reserve_proof 1000 Car
+</pre></div>
+
+
 <p>The Cli will request your wallet password and once your password is entered it will tell you it generated a signature file.</p>
 <div class="codehilite"><pre><span></span>[wallet T6TmZX]: get_reserve_proof 1000 Car
 Wallet password:
@@ -2173,9 +2817,15 @@ signature file saved to: loki_reserve_proof
 
 <p>This signature file <code>loki_reserve_proof</code> will be saved in your Loki folder, where your daemon and wallet keys are. Keep in mind every time you run the <code>get_reserve_proof</code> command it will overwrite your <code>loki_reserve_proof</code> file.</p>
 <p>You will want to send this file to the person who requires the proof. You can upload the <code>loki_reserve_proof</code> file through <a href="https://transfer.sh/">https://transfer.sh/</a> by running the command within the folder of your signature file:</p>
-<p><code>curl --upload-file ./loki_reserve_proof https://transfer.sh/loki_reserve_proof</code></p>
+<div class="codehilite"><pre><span></span>curl --upload-file ./loki_reserve_proof https://transfer.sh/loki_reserve_proof`
+</pre></div>
+
+
 <p>The terminal will then print out a link to your signature file which you can then provide to the individual performing the check.</p>
-<p><code>https://transfer.sh/QhoC7/loki_reserve_proof</code></p>
+<div class="codehilite"><pre><span></span>https://transfer.sh/QhoC7/loki_reserve_proof
+</pre></div>
+
+
 <p>Make sure you provide the following to the individual who will be checking your reserve proof:</p>
 <ul>
 <li>
@@ -2191,10 +2841,16 @@ signature file saved to: loki_reserve_proof
 <h3 id="52-checking-reserve-proof">5.2 Checking Reserve Proof<a class="headerlink" href="#52-checking-reserve-proof" title="Permanent link">&para;</a></h3>
 <p>To check a reserve proof we need to first have the <code>loki_reserve_proof</code> file in our Loki folder.</p>
 <p>If you do not have the <code>loki_reserve_proof</code> file in your loki folder request the individual sending the file to you to use <a href="https://transfer.sh/">https://transfer.sh/</a>, once they send you the link to their <code>loki_reserve_proof</code> you can use the following command to download it.</p>
-<p><code>curl &lt;link&gt; -o loki_reserve_proof</code></p>
+<div class="codehilite"><pre><span></span>curl &lt;link&gt; -o loki_reserve_proof
+</pre></div>
+
+
 <p>Replacing <code>&lt;link&gt;</code> with the link to download the <code>loki_reserve_proof</code>.</p>
 <p>Now that the <code>loki_reserve_proof</code> is in our folder we can run the following command:</p>
-<p><code>check_reserve_proof &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<div class="codehilite"><pre><span></span>check_reserve_proof &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]
+</pre></div>
+
+
 <p>Where <code>&lt;address&gt;</code> is the address of the wallet where the command get_reserve_proof was ran. <code>&lt;signiture_file&gt;</code> is the file that was received from the individual sending you the reserve proof, normally generated as <code>loki_reserve_proof</code> and <code>&lt;message&gt;</code> is the key set by the individual who sent you the reserve proof.</p>
 <p>Therefor for the previous example where we created a reserve proof for 1000 loki and signed with “car”, we would run the command:</p>
 <div class="codehilite"><pre><span></span>check_reserve_proof T6TmZX8EzZVjS9zNg7zAsrEQFDgcVC2qV2ZMyoWsbyK4SNB2SwMHZtMhPSsFyTmRBQUaGVF5k3qy5CMFM6Lvj7gi3AeszDag7 loki_reserve_proof Car
@@ -2207,15 +2863,21 @@ signature file saved to: loki_reserve_proof
 
 
 <p>You may note that it shows a reserve proof which is greater than 1000, this is because the command is adding up all the transactions into the address specified until it is greater than the reserve proof set.</p>
-<h2 id="6-spend-proof">6 Spend Proof:<a class="headerlink" href="#6-spend-proof" title="Permanent link">&para;</a></h2>
+<h2 id="6-spend-proof">6 Spend Proof<a class="headerlink" href="#6-spend-proof" title="Permanent link">&para;</a></h2>
 <p>Spend Proofs are used to generate a signature proving that you generated a TXID, with the option to sign the spend proof with a key.</p>
-<p>For example let’s imagine you have bought a car from a dealership with loki and have sent 1000 loki to the seller. Unfortunately the dealer does not know which transaction is yours as he has received 5 transactions of 1000 loki in the same block for 5 different cars. He knows the txid’s but wants you to prove that you have generate one of the txid’s in his list. Luckily we can prove we generated the txid by using the get_spend_proof command.</p>
+<p>For example let’s imagine you have bought a car from a dealership with loki and have sent 1000 loki to the seller. Unfortunately the dealer does not know which transaction is yours as he has received 5 transactions of 1000 loki in the same block for 5 different cars. He knows the txid’s but wants you to prove that you have generate one of the txid’s in his list. Luckily we can prove we generated the txid by using the <code>get_spend_proof</code> command.</p>
 <h3 id="61-generate-spend-proof">6.1 Generate Spend Proof<a class="headerlink" href="#61-generate-spend-proof" title="Permanent link">&para;</a></h3>
 <p>To begin we will first need to find the txid associated with our transaction. To do this run the following command in our wallet:</p>
-<p><code>show_transfers</code></p>
+<div class="codehilite"><pre><span></span>show_transfers
+</pre></div>
+
+
 <p>The terminal will output a list of transactions in and out of your address. You should have a transaction in your list with the amount you spent to the dealership. Copy the txid(by highlighting) associated with this transaction and save it in a notepad for later.</p>
 <p>We can now run the <code>get_spend_proof</code> command to generate our proof.</p>
-<p><code>get_spend_proof &lt;txid&gt; [&lt;message&gt;]</code></p>
+<div class="codehilite"><pre><span></span>get_spend_proof &lt;txid&gt; [&lt;message&gt;]
+</pre></div>
+
+
 <p>Replacing <code>&lt;txid&gt;</code> with the txid of our transfer out and replacing <code>&lt;message&gt;</code> if we want to add a password to the proof. If all went well the terminal will output the following text:</p>
 <div class="codehilite"><pre><span></span>signature file saved to: loki_spend_proof
 </pre></div>
@@ -2269,7 +2931,7 @@ signature file saved to: loki_reserve_proof
 
 
 <p>If you receive a <code>Good signature</code> message that should be a good proof that the txid you are checking was generated from the sender. Keep in mind however that this can potentially not always be the case, considering someone could get access to someone else's computer thus having access to this file.</p>
-<h2 id="7-tx-proof">7 TX Proof:<a class="headerlink" href="#7-tx-proof" title="Permanent link">&para;</a></h2>
+<h2 id="7-tx-proof">7 TX Proof<a class="headerlink" href="#7-tx-proof" title="Permanent link">&para;</a></h2>
 <p>TX Proofs are used to generate a signature file proving that you generated a TXID, with the option to sign the spend proof with a key. TX proofs work similar to Reserve Proof’s and Spend Proofs however they show more detailed information.</p>
 <p>For example let’s imagine you have bought a car from a dealership with loki and have sent 1000 loki to the seller. Unfortunately the dealer does not know which transaction is yours as he has received 5 transactions of 1000 loki in the same block for 5 different cars. He knows the txid’s but wants you to prove that you have generate one of the txid’s in his list. Luckily we can prove we generated the txid by using the get_tx_proof command.</p>
 <h3 id="71-generate-spend-proof">7.1 Generate Spend Proof<a class="headerlink" href="#71-generate-spend-proof" title="Permanent link">&para;</a></h3>
@@ -2342,7 +3004,7 @@ This transaction has 1 confirmations
 
 
 <p>If you receive a <code>Good signature</code> message that should be a good proof that the txid you are checking was generated from the sender. Keep in mind however that this can potentially not always be the case, considering someone could get access to someone else's computer thus having access to this file.</p>
-<h2 id="8-tx-key">8 TX key:<a class="headerlink" href="#8-tx-key" title="Permanent link">&para;</a></h2>
+<h2 id="8-tx-key">8 TX key<a class="headerlink" href="#8-tx-key" title="Permanent link">&para;</a></h2>
 <p>A TX key is a private key associated with a TXid. Only the wallet that has sent the transaction can generate a TX key from the TXID that both parties can see. A TX key can be used to validate a transaction on a case by case basis. In essence, you can provide the tx key, txid and the receiver address to someone to prove you had generate that transaction.</p>
 <h3 id="81-view-tx-key">8.1 View TX key<a class="headerlink" href="#81-view-tx-key" title="Permanent link">&para;</a></h3>
 <p>To view the TX key of a specific transaction you have generate you will need to run the command:</p>
@@ -2459,13 +3121,13 @@ note found: This is a tx note example.
           </a>
         
         
-          <a href="../2of2Multisig/" title="2/2 Multisig" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../WalletRestoreSeed/" title="CLI Restoring Wallet from Seed" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                2/2 Multisig
+                CLI Restoring Wallet from Seed
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2479,10 +3141,6 @@ note found: This is a tx note example.
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Add Copyright
-          </div>
         
         powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
@@ -2505,6 +3163,8 @@ note found: This is a tx note example.
     
       <a href="https://www.youtube.com/lokinetwork" class="md-footer-social__link fa fa-youtube"></a>
     
+      <a href="https://www.facebook.com/LokiNetwork/" class="md-footer-social__link fa fa-facebook"></a>
+    
   </div>
 
       
@@ -2518,10 +3178,12 @@ note found: This is a tx note example.
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
-    
-    
+        <script src="../../../JAVASCRIPT/links.js"></script>
       
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+        <script src="../../../JAVASCRIPT/style.js"></script>
+      
+    
+    
       
     
   </body>

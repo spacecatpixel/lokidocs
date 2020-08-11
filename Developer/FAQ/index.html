@@ -1,0 +1,2520 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="See the FAQ questions and answers for Loki Hardforks and changes. See information on Bulletproofs, Service Nodes and Hardfork changes.">
+      
+      
+        <link rel="canonical" href="https://docs.loki.network/Developer/FAQ/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../Loki_favicon32x32.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Loki Documentation | Loki Developer FAQ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../CSS/style.css">
+    
+      <link rel="stylesheet" href="../../CSS/font.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#faq" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.loki.network" title="Loki Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../../logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Loki Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Developer FAQ
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/loki-project/loki-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      lokidocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Wallets/WalletsOverview/" title="Wallets" class="md-tabs__link">
+          Wallets
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Mining/MiningOverview/" title="Mining" class="md-tabs__link">
+          Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ServiceNodes/SNOverview/" title="Service Nodes" class="md-tabs__link">
+          Service Nodes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Lokinet/LokinetOverview/" title="Lokinet" class="md-tabs__link">
+          Lokinet
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../LokiServices/Messenger/Session/" title="Session" class="md-tabs__link">
+          Session
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../LokiServices/Blink/" title="Blink" class="md-tabs__link">
+          Blink
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Advanced/CheckpointingLip3/" title="Checkpointing" class="md-tabs__link">
+          Checkpointing
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Advanced/PulseLip5/" title="Pulse" class="md-tabs__link">
+          Pulse
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../SNRPCGuide/" title="Advanced" class="md-tabs__link md-tabs__link--active">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://docs.loki.network" title="Loki Docs" class="md-nav__button md-logo">
+      
+        <img src="../../logo.svg" width="48" height="48">
+      
+    </a>
+    Loki Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/loki-project/loki-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      lokidocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Introduction/LokiNetwork/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Introduction/GettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/WalletsOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/WhatWalletToUse/" title="Which wallet should I use?" class="md-nav__link">
+      Which wallet should I use?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Addresses
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        Addresses
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/MainAddress/" title="Main Address" class="md-nav__link">
+      Main Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/SubAddress/" title="Sub Address" class="md-nav__link">
+      Sub Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/IntegratedAddress/" title="Integrated Address" class="md-nav__link">
+      Integrated Address
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Multisignature/" title="Multsignature" class="md-nav__link">
+      Multsignature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/GuiWallet/loki-electron-guide/" title="Electron Gui Setup" class="md-nav__link">
+      Electron Gui Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/MobileWallet/RestoreMobileWalletGuide/" title="Mobile Wallet Restore" class="md-nav__link">
+      Mobile Wallet Restore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/loki-wallet-cliMacSetup/" title="CLI Mac Setup" class="md-nav__link">
+      CLI Mac Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletCommands/" title="CLI Wallet Commands" class="md-nav__link">
+      CLI Wallet Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreSeed/" title="CLI Restoring Wallet from Seed" class="md-nav__link">
+      CLI Restoring Wallet from Seed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreKeys/" title="CLI Restoring Wallet from Keys" class="md-nav__link">
+      CLI Restoring Wallet from Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5-8" type="checkbox" id="nav-5-5-8">
+    
+    <label class="md-nav__link" for="nav-5-5-8">
+      Multisig
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-5-8">
+        Multisig
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/2of2Multisig/" title="2/2 Multisig" class="md-nav__link">
+      2/2 Multisig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/2of3Multisig/" title="2/3 Multisig" class="md-nav__link">
+      2/3 Multisig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/MofNMultisig/" title="M/N Multsig" class="md-nav__link">
+      M/N Multsig
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Mining/MiningOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Mining/ASICResistance/" title="ASIC Resistance" class="md-nav__link">
+      ASIC Resistance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Service Nodes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Service Nodes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/SNOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/StakingRequirement/" title="Staking Requirement" class="md-nav__link">
+      Staking Requirement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/DeregistrationRules/" title="Deregistration Rules" class="md-nav__link">
+      Deregistration Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/InfiniteStakingPrimer/" title="Infinite Staking Primer" class="md-nav__link">
+      Infinite Staking Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
+    
+    <label class="md-nav__link" for="nav-7-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/DebianPackageGuide/" title="Service Node Setup Guide" class="md-nav__link">
+      Service Node Setup Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/launcherconfig/" title="Launcher Config File" class="md-nav__link">
+      Launcher Config File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-nav__link">
+      Service Node Legacy Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/StorageServerGuide-Testnet/" title="Service Node TESTNET Guide" class="md-nav__link">
+      Service Node TESTNET Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/OpenPort22023/" title="Port 22023 Not Open" class="md-nav__link">
+      Port 22023 Not Open
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Lokinet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Lokinet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/PublicTestingGuide/" title="Public Testing Overview" class="md-nav__link">
+      Public Testing Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/SNApps/" title="SNApps" class="md-nav__link">
+      SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/LLARP/" title="LLARP" class="md-nav__link">
+      LLARP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
+    
+    <label class="md-nav__link" for="nav-8-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetGuiGuide/" title="Linux GUI Guide" class="md-nav__link">
+      Linux GUI Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/lokinet-mac-guide/" title="macOS Gui Guide" class="md-nav__link">
+      macOS Gui Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ReverseSSHGuide/" title="Anonymous Reverse SSH Guide" class="md-nav__link">
+      Anonymous Reverse SSH Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/lokinet-linux-guide/" title="Linux Command-line Guide" class="md-nav__link">
+      Linux Command-line Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/Install/" title="Linux - Build-It-Yourself" class="md-nav__link">
+      Linux - Build-It-Yourself
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/AccessingSNApps/" title="Accessing SNApps" class="md-nav__link">
+      Accessing SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetIRC/" title="Joining a Lokinet IRC Chat" class="md-nav__link">
+      Joining a Lokinet IRC Chat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/HostingSNApps/" title="Hosting SNApps" class="md-nav__link">
+      Hosting SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetConfig/" title="Lokinet config files" class="md-nav__link">
+      Lokinet config files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetRouter/" title="Set up a Lokinet Router" class="md-nav__link">
+      Set up a Lokinet Router
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+      Exit Nodes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Session
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Session
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/Session/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/LokiNameSystem/" title="Loki Name System" class="md-nav__link">
+      Loki Name System
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/threat_model/" title="Threat Models" class="md-nav__link">
+      Threat Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/infrastructure/" title="Infrastructure" class="md-nav__link">
+      Infrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/message_routing/" title="Message Routing" class="md-nav__link">
+      Message Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/group_chats/" title="Group Chats" class="md-nav__link">
+      Group Chats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/testing/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/multidevice/" title="Multi-Device" class="md-nav__link">
+      Multi-Device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/client_side_protection/" title="Client Side Protection" class="md-nav__link">
+      Client Side Protection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/attachments/" title="Attachments" class="md-nav__link">
+      Attachments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/HowToRegisterSessionNames/" title="Register Session/Wallet names" class="md-nav__link">
+      Register Session/Wallet names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/multi_device_setup/" title="Multi-Device Setup" class="md-nav__link">
+      Multi-Device Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/opengroup_setup/" title="OpenGroup Setup" class="md-nav__link">
+      OpenGroup Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/JoinOpenGroupMobile/" title="Join Open Group on Mobile" class="md-nav__link">
+      Join Open Group on Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/JoinOpenGroupDesktop/" title="Join Open Group on Desktop" class="md-nav__link">
+      Join Open Group on Desktop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Blink
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Blink
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Blink/" title="Blink" class="md-nav__link">
+      Blink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Checkpointing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Checkpointing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/CheckpointingLip3/" title="Checkpointing LIP" class="md-nav__link">
+      Checkpointing LIP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/CheckpointingUpdate/" title="Safely Receiving Loki" class="md-nav__link">
+      Safely Receiving Loki
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Pulse
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Pulse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/PulseLip5/" title="Loki Documentation | Loki Proof of Stake | Pulse" class="md-nav__link">
+      Loki Documentation | Loki Proof of Stake | Pulse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" checked>
+    
+    <label class="md-nav__link" for="nav-13">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-1" type="checkbox" id="nav-13-1" checked>
+    
+    <label class="md-nav__link" for="nav-13-1">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-1">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DaemonRPCGuide/" title="Daemon RPC Guide - Old" class="md-nav__link">
+      Daemon RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DaemonRPCBeta/" title="Daemon RPC Guide - Beta" class="md-nav__link">
+      Daemon RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WalletRPCGuide/" title="Wallet RPC Guide - Old" class="md-nav__link">
+      Wallet RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WalletRPCBeta/" title="Wallet RPC Guide - Beta" class="md-nav__link">
+      Wallet RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Developer FAQ
+      </label>
+    
+    <a href="./" title="Developer FAQ" class="md-nav__link md-nav__link--active">
+      Developer FAQ
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardfork-version-10-bulletproofs" title="Hardfork Version 10: Bulletproofs" class="md-nav__link">
+    Hardfork Version 10: Bulletproofs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_block_template-updates" title="get_block_template Updates" class="md-nav__link">
+    get_block_template Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-reward-amounts-from-block-outputs" title="Extracting Reward Amounts from Block Outputs" class="md-nav__link">
+    Extracting Reward Amounts from Block Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardfork-version-9-service-nodes" title="Hardfork Version 9: Service Nodes" class="md-nav__link">
+    Hardfork Version 9: Service Nodes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-reward-amounts-from-block-outputs_1" title="Extracting Reward Amounts from Block Outputs" class="md-nav__link">
+    Extracting Reward Amounts from Block Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Loki Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
+        Loki Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Blink/" title="Blink" class="md-nav__link">
+      Blink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
+    
+    <label class="md-nav__link" for="nav-13-3">
+      Attack Prevention
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-3">
+        Attack Prevention
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-4" type="checkbox" id="nav-13-4">
+    
+    <label class="md-nav__link" for="nav-13-4">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-4">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/HowToContributeToLokiDocs/" title="How to Contribute to LokiDocs" class="md-nav__link">
+      How to Contribute to LokiDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
+      Vulnerability Response
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/Issue_Template/" title="Github Issue Template Example" class="md-nav__link">
+      Github Issue Template Example
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-5" type="checkbox" id="nav-13-5">
+    
+    <label class="md-nav__link" for="nav-13-5">
+      Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-5">
+        Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/Governance/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/TechnicalSpecs/" title="Technical Specs" class="md-nav__link">
+      Technical Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/Cryptoeconomics/" title="Cryptoeconomics" class="md-nav__link">
+      Cryptoeconomics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/SybilResistance/" title="Sybil Resistance" class="md-nav__link">
+      Sybil Resistance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/DynamicBlockSize/" title="Dynamic Block Size" class="md-nav__link">
+      Dynamic Block Size
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/CryptoNoteElements/" title="CryptoNote Elements" class="md-nav__link">
+      CryptoNote Elements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/lokid/" title="lokid" class="md-nav__link">
+      lokid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-12" type="checkbox" id="nav-13-12">
+    
+    <label class="md-nav__link" for="nav-13-12">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-12">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/UsingTor/" title="Using Tor" class="md-nav__link">
+      Using Tor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/Debugging/" title="Debugging" class="md-nav__link">
+      Debugging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/AcceptingLoki/" title="Accepting Loki for Merchants and Exchanges" class="md-nav__link">
+      Accepting Loki for Merchants and Exchanges
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardfork-version-10-bulletproofs" title="Hardfork Version 10: Bulletproofs" class="md-nav__link">
+    Hardfork Version 10: Bulletproofs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_block_template-updates" title="get_block_template Updates" class="md-nav__link">
+    get_block_template Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-reward-amounts-from-block-outputs" title="Extracting Reward Amounts from Block Outputs" class="md-nav__link">
+    Extracting Reward Amounts from Block Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardfork-version-9-service-nodes" title="Hardfork Version 9: Service Nodes" class="md-nav__link">
+    Hardfork Version 9: Service Nodes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extracting-reward-amounts-from-block-outputs_1" title="Extracting Reward Amounts from Block Outputs" class="md-nav__link">
+    Extracting Reward Amounts from Block Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/loki-project/loki-docs/edit/master/docs/Developer/FAQ.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
+<h2 id="hardfork-version-10-bulletproofs">Hardfork Version 10: Bulletproofs<a class="headerlink" href="#hardfork-version-10-bulletproofs" title="Permanent link">&para;</a></h2>
+<h3 id="get_block_template-updates"><code>get_block_template</code> Updates<a class="headerlink" href="#get_block_template-updates" title="Permanent link">&para;</a></h3>
+<p>Due to batching of Governance rewards the calculation of rewards has been updated in Loki. As a side effect of this, in the <code>get_block_template</code> json response, <code>expected_reward</code> now returns only the miner reward instead of the entire block reward.</p>
+<p>For example, pre-hardfork 9, if the block reward was 100, <code>expected_reward</code> returned 100, even though ~50% of the reward was sent to the service node. Post Bulletproofs hardfork, <code>expected_reward</code> now returns 50, which is the exact amount the miner would receive.</p>
+<p>A real example of this is on the testnet, for block 63056.</p>
+<p>Calling <code>get_block_template</code> on block 63056</p>
+<div class="codehilite"><pre><span></span>curl -X POST http://127.0.0.1:38157/json_rpc -d &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:&quot;0&quot;,&quot;method&quot;:&quot;get_block_template&quot;,&quot;params&quot;:{&quot;wallet_address&quot;:&quot;T6TBLkrPd7KQubsczrfHCEi5T4prNEH5Sax9phVicLp9H5s2xAvnJaYWs26xL2s2wy838FXdmgds2TDX5f75wnLt1Zxmiq3rm&quot;,&quot;reserve_size&quot;:60}&#39; -H &#39;Content-Type: application/json&#39;
+{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;blockhashing_blob&quot;: &quot;0a0ad9e3c6e0050e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd00000000add4d0b6d74e9d17d4e65a64e2f6f47959a3fa60cd92af0f9ac0a771a31920ec01&quot;,
+    &quot;blocktemplate_blob&quot;: &quot;0a0ad9e3c6e0050e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd000000000302eeec03eeec0300eeec0301ffd0ec0302fea381ab840102eea98077132617bdf7c78c211674e704a73a82b5e6fb2361e9f08c20403b301dd2d28f85930102cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e90500835651a101019a58d937a55a6a7b6df6c42aba6d6790be8f5b1b2bfecdb8658ba0836e285912023c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101dda172e3c0d0da4381557e1d65319d0cfb0da9f6d83b716de5b8e127ddd7f572fcb147715be4f8f3cd5d25aae839e217bda00bb7bb02c21b00cdd5a18cd38aba0000&quot;,
+    &quot;difficulty&quot;: 11367,
+    &quot;expected_reward&quot;: 35523678718,
+    &quot;height&quot;: 63056,
+    &quot;prev_hash&quot;: &quot;0e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd&quot;,
+    &quot;reserved_offset&quot;: 176,
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;untrusted&quot;: false
+  }
+}
+</pre></div>
+
+
+<p>Calling <code>get_block</code> on block 63056</p>
+<div class="codehilite"><pre><span></span>{
+  &quot;id&quot;: &quot;0&quot;,
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;blob&quot;: &quot;0a0ae7e3c6e0050e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708ddd43bd8000302eeec03eeec0300eeec0301ffd0ec0302fea381ab840102ee55cf39cb6f15d22454101cccf6b7d41f1fdb5588e463404eca4b56cbd5bbc3d2d28f85930102cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e9050083565163014e8a0d6c156a927b0f10a790d4cacede2cb2cd3b6f3fc3ed98664c303c08b97b0101dda172e3c0d0da4381557e1d65319d0cfb0da9f6d83b716de5b8e127ddd7f572fcb147715be4f8f3cd5d25aae839e217bda00bb7bb02c21b00cdd5a18cd38aba0000&quot;,
+    &quot;block_header&quot;: {
+      &quot;block_size&quot;: 197,
+      &quot;block_weight&quot;: 197,
+      &quot;cumulative_difficulty&quot;: 607871777,
+      &quot;depth&quot;: 1,
+      &quot;difficulty&quot;: 11367,
+      &quot;hash&quot;: &quot;737da055d2fb78f07200a7f3ee0acbf9b00ec3536ab27920a656dd75a253fab6&quot;,
+      &quot;height&quot;: 63056,
+      &quot;major_version&quot;: 10,
+      &quot;minor_version&quot;: 10,
+      &quot;nonce&quot;: 14171092,
+      &quot;num_txes&quot;: 0,
+      &quot;orphan_status&quot;: false,
+      &quot;pow_hash&quot;: &quot;&quot;,
+      &quot;prev_hash&quot;: &quot;0e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd&quot;,
+      &quot;reward&quot;: 74994432848,
+      &quot;timestamp&quot;: 1544663527
+    },
+    &quot;json&quot;: {
+      &quot;major_version&quot;: 10,
+      &quot;minor_version&quot;: 10,
+      &quot;timestamp&quot;: 1544663527,
+      &quot;prev_id&quot;: &quot;0e34f22aeb5fc6ef48e99f9b7e87f3c72666a944c0e5e8c13659e09c934708dd&quot;,
+      &quot;nonce&quot;: 14171092,
+      &quot;miner_tx&quot;: {
+        &quot;version&quot;: 3,
+        &quot;output_unlock_times&quot;: [ 63086, 63086 ],
+        &quot;is_deregister&quot;: &quot;00&quot;,
+        &quot;unlock_time&quot;: 63086,
+        &quot;vin&quot;: [ { &quot;gen&quot;: { &quot;height&quot;: 63056 } } ],
+        &quot;vout&quot;: [
+          {
+            &quot;amount&quot;: 35523678718,
+            &quot;target&quot;: { &quot;key&quot;: &quot;ee55cf39cb6f15d22454101cccf6b7d41f1fdb5588e463404eca4b56cbd5bbc3&quot; }
+          },
+          {
+            &quot;amount&quot;: 39470754130,
+            &quot;target&quot;: { &quot;key&quot;: &quot;cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e90500835651&quot; }
+          }
+        ],
+        &quot;extra&quot;: [ 1, 78, 138, 13, 108, 21, 106, 146, 123, 15, 16, 167, 144, 212, 202, 206, 222, 44,
+          178, 205, 59, 111, 63, 195, 237, 152, 102, 76, 48, 60, 8, 185, 123, 1, 1, 221, 161, 114,
+          227, 192, 208, 218, 67, 129, 85, 126, 29, 101, 49, 157, 12, 251, 13, 169, 246, 216, 59,
+          113, 109, 229, 184, 225, 39, 221, 215, 245, 114, 252, 177, 71, 113, 91, 228, 248, 243,
+          205, 93, 37, 170, 232, 57, 226, 23, 189, 160, 11, 183, 187, 2, 194, 27, 0, 205, 213, 161,
+          140, 211, 138, 186 ],
+        &quot;rct_signatures&quot;: { &quot;type&quot;: 0 }
+      },
+      &quot;tx_hashes&quot;: []
+    },
+    &quot;miner_tx_hash&quot;: &quot;6993f786d3bcf50a2ae242d245b4de519c38903c062d59f8a30ed2af1f80934b&quot;,
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;untrusted&quot;: false
+  }
+}
+</pre></div>
+
+
+<p>Of importance, from <code>get_block_template</code></p>
+<div class="codehilite"><pre><span></span>  ...
+  &quot;expected_reward&quot;: 35523678718,
+  ...
+</pre></div>
+
+
+<p>And <code>get_block</code></p>
+<div class="codehilite"><pre><span></span>  ...
+  &quot;vout&quot;: [
+    {
+      &quot;amount&quot;: 35523678718,
+      &quot;target&quot;: { &quot;key&quot;: &quot;ee55cf39cb6f15d22454101cccf6b7d41f1fdb5588e463404eca4b56cbd5bbc3&quot; }
+    },
+    {
+      &quot;amount&quot;: 39470754130,
+      &quot;target&quot;: { &quot;key&quot;: &quot;cee0e4e9534167d66200577aa84b73c318ea494538b1a0af5521e90500835651&quot; }
+    }
+  ],
+  ...
+</pre></div>
+
+
+<p>The <code>expected_reward</code> is the same amount as the 1st vout amount in <code>get_block</code> which is the miner output (the 2nd being the Service Node Output). In summary, the <code>expected_reward</code> returned by <code>get_block_template</code> is exactly the reward the miner will receive.</p>
+<h3 id="extracting-reward-amounts-from-block-outputs">Extracting Reward Amounts from Block Outputs<a class="headerlink" href="#extracting-reward-amounts-from-block-outputs" title="Permanent link">&para;</a></h3>
+<p>In the Bulletproofs hardfork, batching of Governance rewards was introduced and removes the governance output from most miner transactions. This means, for most blocks the outputs will only include the Miner reward and the Service Node reward.</p>
+<p>The Governance reward is paid out every <code>GOVERNANCE_REWARD_INTERVAL</code> number of blocks, in code this is checked as <code>(block_height % GOVERNANCE_REWARD_INTERVAL == 0)</code>.</p>
+<div class="codehilite"><pre><span></span>Block Outputs
+[  0] Miner Reward
+[ ..] Service Node Reward
+[  N]
+[N+1] Governance Reward (Appears every GOVERNANCE_REWARD_INTERVAL blocks)
+</pre></div>
+
+
+<p>An example miner transaction JSON output with the Governance reward</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;output_unlock_times&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">49030</span><span class="p">,</span> <span class="mi">49030</span><span class="p">,</span> <span class="mi">49030</span><span class="p">,</span> <span class="mi">49030</span><span class="p">,</span> <span class="mi">49030</span> <span class="p">],</span>
+  <span class="nt">&quot;is_deregister&quot;</span><span class="p">:</span> <span class="s2">&quot;00&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unlock_time&quot;</span><span class="p">:</span> <span class="mi">49030</span><span class="p">,</span>
+  <span class="nt">&quot;vin&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;gen&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">49000</span> <span class="p">}</span> <span class="p">}</span> <span class="p">],</span>
+  <span class="nt">&quot;vout&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">39242919169</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;1b318acc5674f71997c69710e2de96baa4d1776f19e5938381fa6f12d2d80eb8&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">22237654195</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;4bb2511f0e46de56b07dfec51499feb027cb2f8ea6eff4ed93b176ef0d3de534&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10682794662</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;77446399029849e67ebd1df7728241920b7fa16c48c7794bf9dc15605b5d35f9&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10682794662</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;0fe5af8f07c09f07291d7e9b13ec45f35d2535a04e1ca710a1acad4c6f1a6665&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">4376229747993</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;f1a6a802c4708a1c6eb083078290087d3974ce6ea72251821cd47c64325cf98f&quot;</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;extra&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">194</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">183</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">195</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">231</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">227</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">227</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">154</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">80</span> <span class="p">],</span>
+  <span class="nt">&quot;rct_signatures&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>An example miner transaction JSON output without the Governance reward</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;output_unlock_times&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">49029</span><span class="p">,</span> <span class="mi">49029</span> <span class="p">],</span>
+  <span class="nt">&quot;is_deregister&quot;</span><span class="p">:</span> <span class="s2">&quot;00&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unlock_time&quot;</span><span class="p">:</span> <span class="mi">49029</span><span class="p">,</span>
+  <span class="nt">&quot;vin&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;gen&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">48999</span> <span class="p">}</span> <span class="p">}</span> <span class="p">],</span>
+  <span class="nt">&quot;vout&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">39243204162</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;f57b08e200dc36a27b4cfe7ad4276103951c832153a46e3ba0fa613493dcd989&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">43603560179</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;6d5e496c1171ca87345f43203ca14bbd09928368322372b621c9d56ee5c04816&quot;</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;extra&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">237</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">178</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">237</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">154</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">183</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">227</span> <span class="p">],</span>
+  <span class="nt">&quot;rct_signatures&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="hardfork-version-9-service-nodes">Hardfork Version 9: Service Nodes<a class="headerlink" href="#hardfork-version-9-service-nodes" title="Permanent link">&para;</a></h2>
+<h3 id="extracting-reward-amounts-from-block-outputs_1">Extracting Reward Amounts from Block Outputs<a class="headerlink" href="#extracting-reward-amounts-from-block-outputs_1" title="Permanent link">&para;</a></h3>
+<p>This hardfork introduces Service Node rewards to the outputs of the miner transaction. Service Nodes can split the given reward with up to 4 participants. Then, at most the miner transaction can have a maximum of 6 outputs, 1 reserved for the miner, 1 for governance, up to 4 for service node participants.</p>
+<div class="codehilite"><pre><span></span>Transaction Outputs
+[  0] Miner Reward
+[ ..] Service Node Reward
+[  N]
+[N+1] Governance Reward
+</pre></div>
+
+
+<p>An example miner transaction JSON output with 4 service node participants looks like</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;output_unlock_times&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">155552</span><span class="p">,</span> <span class="mi">155552</span><span class="p">,</span> <span class="mi">155552</span><span class="p">,</span> <span class="mi">155552</span><span class="p">,</span> <span class="mi">155552</span><span class="p">,</span> <span class="mi">155552</span> <span class="p">],</span>
+  <span class="nt">&quot;is_deregister&quot;</span><span class="p">:</span> <span class="s2">&quot;00&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;unlock_time&quot;</span><span class="p">:</span> <span class="mi">155552</span><span class="p">,</span>
+  <span class="nt">&quot;vin&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;gen&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">155522</span> <span class="p">}</span> <span class="p">}</span> <span class="p">],</span>
+  <span class="nt">&quot;vout&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">21165158143</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;8e0870425ad7f7709d6a4125a7088f0dd284e5b0415248b4b8556678ad4f3a3d&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">6221340556</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;03491d83a076a74df6c6d726aeffd2cc4c59ae56107c730a195ee329d838e088&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">6607995571</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;a54619d6b0b68c8d824445336d5dd246338aa7482546118f48d32f5d92a3aad8&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">6874654507</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;3941327ebcb42c3fa78fa450e0d7d1cf40b501832f0b4d9cc7a4654b4c1f685b&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">3769035241</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;a8184d530cb7180590c04a19c38ba52c055d6ffcdfdad2fb62b8802477f11117&quot;</span> <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">2347302587</span><span class="p">,</span>
+      <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;554f16bd4a06364b27edf898b5358b4e3f5c1218f3dc415d48eb2bff4707cf42&quot;</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;extra&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">183</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">141</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">146</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">129</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">172</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">195</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">188</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span>
+  <span class="nt">&quot;rct_signatures&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../WalletRPCBeta/" title="Wallet RPC Guide - Beta" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Wallet RPC Guide - Beta
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../LokiServices/LokiServicesOverview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Overview
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/loki-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/loki_project" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://t.me/LokiCommunity" class="md-footer-social__link fa fa-telegram"></a>
+    
+      <a href="https://www.reddit.com/r/LokiProject" class="md-footer-social__link fa fa-reddit"></a>
+    
+      <a href="https://www.youtube.com/lokinetwork" class="md-footer-social__link fa fa-youtube"></a>
+    
+      <a href="https://www.facebook.com/LokiNetwork/" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../JAVASCRIPT/links.js"></script>
+      
+        <script src="../../JAVASCRIPT/style.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -10,8 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet or onion routing protocol. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.">
       
-        <link rel="canonical" href="https://loki-project.github.io/loki-docs/Lokinet/Guides/ExitNode/">
+      
+        <link rel="canonical" href="https://docs.loki.network/Lokinet/Guides/ExitNode/">
       
       
       
@@ -38,7 +40,7 @@
     
     
       
-        <title>Exit Nodes - Loki Docs</title>
+        <title>Loki Documentation | Lokinet Exit Node Guide</title>
       
     
     
@@ -52,10 +54,6 @@
       <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Regular:300,400,400i,700|Roboto">
-        <style>body,input{font-family:"Roboto Regular","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
@@ -109,9 +107,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.loki.network" title="Loki Docs" class="md-header-nav__button md-logo">
           
-            <img src="../../../Loki_favicon32x32.png" width="24" height="24">
+            <img src="../../../logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -196,6 +194,157 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Wallets/WalletsOverview/" title="Wallets" class="md-tabs__link">
+          Wallets
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Mining/MiningOverview/" title="Mining" class="md-tabs__link">
+          Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../ServiceNodes/SNOverview/" title="Service Nodes" class="md-tabs__link">
+          Service Nodes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../LokinetOverview/" title="Lokinet" class="md-tabs__link md-tabs__link--active">
+          Lokinet
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../LokiServices/Messenger/Session/" title="Session" class="md-tabs__link">
+          Session
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../LokiServices/Blink/" title="Blink" class="md-tabs__link">
+          Blink
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Advanced/CheckpointingLip3/" title="Checkpointing" class="md-tabs__link">
+          Checkpointing
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Advanced/PulseLip5/" title="Pulse" class="md-tabs__link">
+          Pulse
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Developer/SNRPCGuide/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -205,9 +354,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-nav__button md-logo">
+    <a href="https://docs.loki.network" title="Loki Docs" class="md-nav__button md-logo">
       
-        <img src="../../../Loki_favicon32x32.png" width="48" height="48">
+        <img src="../../../logo.svg" width="48" height="48">
       
     </a>
     Loki Docs
@@ -254,46 +403,34 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
+  <li class="md-nav__item">
+    <a href="../../../Introduction/LokiNetwork/" title="Introduction" class="md-nav__link">
       Introduction
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Introduction
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Introduction/LokiNetwork/" title="Loki Network" class="md-nav__link">
-      Loki Network
     </a>
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
-    <a href="../../../Introduction/BeginnersGuide/" title="Where to begin?" class="md-nav__link">
-      Where to begin?
+    <a href="../../../Introduction/GettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
   </li>
 
     
@@ -304,13 +441,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-5">
       Wallets
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-5">
         Wallets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -334,8 +471,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Wallets/WhatWalletToUse/" title="What wallet to use?" class="md-nav__link">
-      What wallet to use?
+    <a href="../../../Wallets/WhatWalletToUse/" title="Which wallet should I use?" class="md-nav__link">
+      Which wallet should I use?
     </a>
   </li>
 
@@ -347,14 +484,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-3-3">
-      Web Wallet (LokiLocker)
+    <label class="md-nav__link" for="nav-5-3">
+      Addresses
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        Web Wallet (LokiLocker)
+      <label class="md-nav__title" for="nav-5-3">
+        Addresses
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -365,8 +502,49 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Wallets/WebWallet/TroubleshootWebWallet/" title="Troubleshooting Web Wallet" class="md-nav__link">
-      Troubleshooting Web Wallet
+    <a href="../../../Wallets/Addresses/MainAddress/" title="Main Address" class="md-nav__link">
+      Main Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Wallets/Addresses/SubAddress/" title="Sub Address" class="md-nav__link">
+      Sub Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Wallets/Addresses/IntegratedAddress/" title="Integrated Address" class="md-nav__link">
+      Integrated Address
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Wallets/Multisignature/" title="Multsignature" class="md-nav__link">
+      Multsignature
     </a>
   </li>
 
@@ -378,13 +556,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
     
-    <label class="md-nav__link" for="nav-3-3-2">
+    <label class="md-nav__link" for="nav-5-5">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-3-2">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -396,40 +574,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Wallets/WebWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
+    <a href="../../../Wallets/GuiWallet/loki-electron-guide/" title="Electron Gui Setup" class="md-nav__link">
+      Electron Gui Setup
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      Graphical User interface (GUI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        Graphical User interface (GUI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -437,30 +586,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Wallets/GuiWallet/TroubleshootGui/" title="Troubleshooting GUI Wallet" class="md-nav__link">
-      Troubleshooting GUI Wallet
+    <a href="../../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
     </a>
   </li>
 
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2">
-    
-    <label class="md-nav__link" for="nav-3-4-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -468,143 +598,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Wallets/GuiWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
+    <a href="../../../Wallets/MobileWallet/RestoreMobileWalletGuide/" title="Mobile Wallet Restore" class="md-nav__link">
+      Mobile Wallet Restore
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
-    
-    <label class="md-nav__link" for="nav-3-5">
-      Mobile Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-5">
-        Mobile Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Wallets/MobileWallet/TroubleshootMobileWallet/" title="Troubleshooting Mobile Wallet" class="md-nav__link">
-      Troubleshooting Mobile Wallet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
-    
-    <label class="md-nav__link" for="nav-3-5-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-5-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Wallets/MobileWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
-    
-    <label class="md-nav__link" for="nav-3-6">
-      Command Line Integrated (CLI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-6">
-        Command Line Integrated (CLI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Wallets/CliWallet/TroubleshootCli/" title="Troubleshooting CLI Wallet" class="md-nav__link">
-      Troubleshooting CLI Wallet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2" type="checkbox" id="nav-3-6-2">
-    
-    <label class="md-nav__link" for="nav-3-6-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-6-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -635,15 +633,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../Wallets/CliWallet/WalletRestoreSeed/" title="CLI Restoring Wallet from Seed" class="md-nav__link">
+      CLI Restoring Wallet from Seed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Wallets/CliWallet/WalletRestoreKeys/" title="CLI Restoring Wallet from Keys" class="md-nav__link">
+      CLI Restoring Wallet from Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2-3" type="checkbox" id="nav-3-6-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5-8" type="checkbox" id="nav-5-5-8">
     
-    <label class="md-nav__link" for="nav-3-6-2-3">
+    <label class="md-nav__link" for="nav-5-5-8">
       Multisig
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-6-2-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-5-8">
         Multisig
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -673,30 +695,25 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../../Wallets/Multisigniture/" title="Multsigniture" class="md-nav__link">
-      Multsigniture
+    <a href="../../../Wallets/CliWallet/MofNMultisig/" title="M/N Multsig" class="md-nav__link">
+      M/N Multsig
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -712,13 +729,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-6">
       Mining
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-6">
         Mining
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -760,13 +777,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-7">
       Service Nodes
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-7">
         Service Nodes
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -790,18 +807,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../ServiceNodes/ServiceNodeFunctions/" title="Service Node Functions" class="md-nav__link">
-      Service Node Functions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../../ServiceNodes/StakingRequirement/" title="Staking Requirement" class="md-nav__link">
       Staking Requirement
     </a>
@@ -813,15 +818,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/DeregistrationRules/" title="Deregistration Rules" class="md-nav__link">
+      Deregistration Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/InfiniteStakingPrimer/" title="Infinite Staking Primer" class="md-nav__link">
+      Infinite Staking Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-7-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
+      <label class="md-nav__title" for="nav-7-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -833,8 +862,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../ServiceNodes/SNFullGuide/" title="Service Node Full Guide" class="md-nav__link">
-      Service Node Full Guide
+    <a href="../../../ServiceNodes/DebianPackageGuide/" title="Service Node Setup Guide" class="md-nav__link">
+      Service Node Setup Guide
     </a>
   </li>
 
@@ -845,7 +874,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+    <a href="../../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
       Service Node RPC Guide
     </a>
   </li>
@@ -857,8 +886,80 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../ServiceNodes/RunServiceNodeAsService/" title="Service Node As Service Guide" class="md-nav__link">
-      Service Node As Service Guide
+    <a href="../../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/launcherconfig/" title="Launcher Config File" class="md-nav__link">
+      Launcher Config File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-nav__link">
+      Service Node Legacy Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/StorageServerGuide-Testnet/" title="Service Node TESTNET Guide" class="md-nav__link">
+      Service Node TESTNET Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ServiceNodes/OpenPort22023/" title="Port 22023 Not Open" class="md-nav__link">
+      Port 22023 Not Open
     </a>
   </li>
 
@@ -882,13 +983,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-8">
       Lokinet
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-8">
         Lokinet
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -902,6 +1003,18 @@
   <li class="md-nav__item">
     <a href="../../LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PublicTestingGuide/" title="Public Testing Overview" class="md-nav__link">
+      Public Testing Overview
     </a>
   </li>
 
@@ -934,30 +1047,18 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../../DeveloperInfo/" title="Developers" class="md-nav__link">
-      Developers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5" checked>
     
-    <label class="md-nav__link" for="nav-6-5">
+    <label class="md-nav__link" for="nav-8-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-5">
+      <label class="md-nav__title" for="nav-8-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -969,8 +1070,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
+    <a href="../LokinetGuiGuide/" title="Linux GUI Guide" class="md-nav__link">
+      Linux GUI Guide
     </a>
   </li>
 
@@ -981,8 +1082,104 @@
 
 
   <li class="md-nav__item">
-    <a href="../SNApps/" title="SNApps" class="md-nav__link">
-      SNApps
+    <a href="../lokinet-mac-guide/" title="macOS Gui Guide" class="md-nav__link">
+      macOS Gui Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ReverseSSHGuide/" title="Anonymous Reverse SSH Guide" class="md-nav__link">
+      Anonymous Reverse SSH Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lokinet-linux-guide/" title="Linux Command-line Guide" class="md-nav__link">
+      Linux Command-line Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Install/" title="Linux - Build-It-Yourself" class="md-nav__link">
+      Linux - Build-It-Yourself
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AccessingSNApps/" title="Accessing SNApps" class="md-nav__link">
+      Accessing SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LokinetIRC/" title="Joining a Lokinet IRC Chat" class="md-nav__link">
+      Joining a Lokinet IRC Chat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../HostingSNApps/" title="Hosting SNApps" class="md-nav__link">
+      Hosting SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LokinetConfig/" title="Lokinet config files" class="md-nav__link">
+      Lokinet config files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LokinetRouter/" title="Set up a Lokinet Router" class="md-nav__link">
+      Set up a Lokinet Router
     </a>
   </li>
 
@@ -1018,6 +1215,80 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toynet-exit-public-key-list-by-region" title="Toynet exit public key list by region:" class="md-nav__link">
+    Toynet exit public key list by region:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toynet-first-hop-public-key-list-with-ip" title="Toynet first hop public key list with IP" class="md-nav__link">
+    Toynet first hop public key list with IP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-routes" title="Set up routes" class="md-nav__link">
+    Set up routes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-x" title="OS X" class="md-nav__link">
+    OS X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#prequesites" title="Prequesites" class="md-nav__link">
@@ -1073,6 +1344,19 @@
     Email Templates
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copyright-infringement-email-response" title="Copyright infringement Email Response" class="md-nav__link">
+    Copyright infringement Email Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1122,14 +1406,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-7">
-      Loki Services
+    <label class="md-nav__link" for="nav-9">
+      Session
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Loki Services
+      <label class="md-nav__title" for="nav-9">
+        Session
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1140,7 +1424,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+    <a href="../../../LokiServices/Messenger/Session/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -1152,11 +1436,215 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../LokiServices/Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
+    <a href="../../../LokiServices/Messenger/LokiNameSystem/" title="Loki Name System" class="md-nav__link">
+      Loki Name System
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/threat_model/" title="Threat Models" class="md-nav__link">
+      Threat Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/infrastructure/" title="Infrastructure" class="md-nav__link">
+      Infrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/message_routing/" title="Message Routing" class="md-nav__link">
+      Message Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/group_chats/" title="Group Chats" class="md-nav__link">
+      Group Chats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/testing/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/multidevice/" title="Multi-Device" class="md-nav__link">
+      Multi-Device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/client_side_protection/" title="Client Side Protection" class="md-nav__link">
+      Client Side Protection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/attachments/" title="Attachments" class="md-nav__link">
+      Attachments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/HowToRegisterSessionNames/" title="Register Session/Wallet names" class="md-nav__link">
+      Register Session/Wallet names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/multi_device_setup/" title="Multi-Device Setup" class="md-nav__link">
+      Multi-Device Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/opengroup_setup/" title="OpenGroup Setup" class="md-nav__link">
+      OpenGroup Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/JoinOpenGroupMobile/" title="Join Open Group on Mobile" class="md-nav__link">
+      Join Open Group on Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Messenger/JoinOpenGroupDesktop/" title="Join Open Group on Desktop" class="md-nav__link">
+      Join Open Group on Desktop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Blink
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Blink
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -1182,17 +1670,425 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-11">
+      Checkpointing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Checkpointing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/CheckpointingLip3/" title="Checkpointing LIP" class="md-nav__link">
+      Checkpointing LIP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/CheckpointingUpdate/" title="Safely Receiving Loki" class="md-nav__link">
+      Safely Receiving Loki
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Pulse
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Pulse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/PulseLip5/" title="Loki Documentation | Loki Proof of Stake | Pulse" class="md-nav__link">
+      Loki Documentation | Loki Proof of Stake | Pulse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
       Advanced
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-13">
         Advanced
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-1" type="checkbox" id="nav-13-1">
+    
+    <label class="md-nav__link" for="nav-13-1">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-1">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/DaemonRPCGuide/" title="Daemon RPC Guide - Old" class="md-nav__link">
+      Daemon RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/DaemonRPCBeta/" title="Daemon RPC Guide - Beta" class="md-nav__link">
+      Daemon RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/WalletRPCGuide/" title="Wallet RPC Guide - Old" class="md-nav__link">
+      Wallet RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/WalletRPCBeta/" title="Wallet RPC Guide - Beta" class="md-nav__link">
+      Wallet RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Developer/FAQ/" title="Developer FAQ" class="md-nav__link">
+      Developer FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Loki Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
+        Loki Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../LokiServices/Blink/" title="Blink" class="md-nav__link">
+      Blink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
+    
+    <label class="md-nav__link" for="nav-13-3">
+      Attack Prevention
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-3">
+        Attack Prevention
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-4" type="checkbox" id="nav-13-4">
+    
+    <label class="md-nav__link" for="nav-13-4">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-4">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/HowToContributeToLokiDocs/" title="How to Contribute to LokiDocs" class="md-nav__link">
+      How to Contribute to LokiDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
+      Vulnerability Response
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Contributing/Issue_Template/" title="Github Issue Template Example" class="md-nav__link">
+      Github Issue Template Example
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-5" type="checkbox" id="nav-13-5">
+    
+    <label class="md-nav__link" for="nav-13-5">
+      Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-5">
+        Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Governance/Governance/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
         
           
           
@@ -1259,85 +2155,6 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-6" type="checkbox" id="nav-8-6">
-    
-    <label class="md-nav__link" for="nav-8-6">
-      Attack Prevention
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-6">
-        Attack Prevention
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
-      Denial of Service Attacks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
-      IP and Packet Blocking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
-      Swarm Flagging
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-7" type="checkbox" id="nav-8-7">
-    
-    <label class="md-nav__link" for="nav-8-7">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-7">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
     <a href="../../../Advanced/lokid/" title="lokid" class="md-nav__link">
       lokid
@@ -1350,24 +2167,19 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../Advanced/CompilingGuide/" title="Compiling Loki from source" class="md-nav__link">
-      Compiling Loki from source
-    </a>
-  </li>
-
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-12" type="checkbox" id="nav-13-12">
+    
+    <label class="md-nav__link" for="nav-13-12">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-12">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Advanced/UsingLokinet/" title="Using Lokinet" class="md-nav__link">
-      Using Lokinet
-    </a>
-  </li>
-
         
           
           
@@ -1399,134 +2211,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
-      Service Node RPC Guide
+    <a href="../../../Advanced/AcceptingLoki/" title="Accepting Loki for Merchants and Exchanges" class="md-nav__link">
+      Accepting Loki for Merchants and Exchanges
     </a>
   </li>
 
         
       </ul>
     </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../FAQ/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Contributing
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Contributing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Contributing/Github/" title="How to Contribute to LokiDocs" class="md-nav__link">
-      How to Contribute to LokiDocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
-      Vulnerability Response
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      Governance
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Governance
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Governance/Governance/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
-      The Loki Foundation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
-      Loki Funding System
-    </a>
   </li>
 
         
@@ -1554,6 +2246,80 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toynet-exit-public-key-list-by-region" title="Toynet exit public key list by region:" class="md-nav__link">
+    Toynet exit public key list by region:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toynet-first-hop-public-key-list-with-ip" title="Toynet first hop public key list with IP" class="md-nav__link">
+    Toynet first hop public key list with IP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-routes" title="Set up routes" class="md-nav__link">
+    Set up routes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-x" title="OS X" class="md-nav__link">
+    OS X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#prequesites" title="Prequesites" class="md-nav__link">
@@ -1609,6 +2375,19 @@
     Email Templates
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copyright-infringement-email-response" title="Copyright infringement Email Response" class="md-nav__link">
+    Copyright infringement Email Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1650,7 +2429,52 @@
                 
                 
                 <h1 id="lokinet-exit-node-guide">LokiNET Exit Node Guide<a class="headerlink" href="#lokinet-exit-node-guide" title="Permanent link">&para;</a></h1>
-<p>// TODO: exit node overview goes here</p>
+<p>Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet or onion router. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.</p>
+<h2 id="client">Client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h2>
+<p>Lokinet clients can use exit nodes without the need to host a service node.</p>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<p>To use an exit node as a client, add the following option to the <code>[network]</code> section in <code>lokinet.ini</code> </p>
+<div class="codehilite"><pre><span></span> exit-node=exitnodehexpublickeygoeshere
+ strict-connect=firsthophexpublickeygoeshere
+</pre></div>
+
+
+<p>This sets to use an exit node by its public identity key and sets a strict first hop by its public identity key.
+We set a strict first hope so that we can easily set up the routing table.</p>
+<h5 id="toynet-exit-public-key-list-by-region">Toynet exit public key list by region:<a class="headerlink" href="#toynet-exit-public-key-list-by-region" title="Permanent link">&para;</a></h5>
+<p>Romania:</p>
+<ul>
+<li><code>b61df944b8547af56201c6c7528ed86289566dcf73358c5ef8e3b4e628671399</code></li>
+</ul>
+<h5 id="toynet-first-hop-public-key-list-with-ip">Toynet first hop public key list with IP<a class="headerlink" href="#toynet-first-hop-public-key-list-with-ip" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><code>8df8ca1cc9d39d381f0efafdf58e2569457675a1e543189bea8279522aee6461</code> <code>167.114.185.46</code></p>
+</li>
+<li>
+<p><code>3dcb5a34d015a7bbb4636be83991e00cbeff13fe7834e0d5452ffe9a5af5a5be</code> <code>162.243.164.223</code></p>
+</li>
+</ul>
+<h3 id="set-up-routes">Set up routes<a class="headerlink" href="#set-up-routes" title="Permanent link">&para;</a></h3>
+<p>In this example your first hop is at <code>162.243.164.223</code> and your network's default gateway is <code>192.168.0.1</code></p>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p>// TODO: document me</p>
+<h4 id="os-x">OS X<a class="headerlink" href="#os-x" title="Permanent link">&para;</a></h4>
+<p>// TODO: document me</p>
+<h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
+<p>Set the route that routes everything over lokinet do the following as root:</p>
+<div class="codehilite"><pre><span></span># ip route add 162.243.164.223 via 192.168.0.1
+# ip route del default
+# ip route add default dev lokitun0
+</pre></div>
+
+
+<p>To unset the route everything over lokinet route do the following as root:</p>
+<div class="codehilite"><pre><span></span># ip route del default
+# ip route add default via 192.168.0.1
+</pre></div>
+
+
 <h2 id="prequesites">Prequesites<a class="headerlink" href="#prequesites" title="Permanent link">&para;</a></h2>
 <p>// TODO: technical prequesites goes here</p>
 <h2 id="technical">Technical<a class="headerlink" href="#technical" title="Permanent link">&para;</a></h2>
@@ -1661,19 +2485,78 @@
 <p>// TODO: talk about OS level limits for IPv4 exits</p>
 <p>// TODO: talk about ipv6 exit requirements, i.e. a /120 to /64</p>
 <h2 id="legal">Legal<a class="headerlink" href="#legal" title="Permanent link">&para;</a></h2>
-<p>// TODO: legal overivew</p>
+<p>Running a Lokinet Exit node simply means that you are requesting and relaying packets of data on someone else's behalf, a vast majority of the traffic in mixnets and onion routers comprised of legal and non malicious traffic. Statically over the course of running a <a href="../../../ServiceNodes/SNOverview/">Service Node</a> you are likely to run into a few users who abuse their anonymity to send or receive information that may be explicitly malicious, therefor it is important that we discuss the legal implications of this malicious traffic.</p>
+<p>In most countries Exit nodes are viewed in much the same way as ISP's are, that is that they are usually classed as data transmitters, which makes them exempt from criminal or civil liability based on the data they transmit. This means they are also covered by exceptions in the EUCD and DMCA laws which stipulate content regulation on the internet in the US and Europe respectively.</p>
+<p>Despite this its important to consider that unlike ISP's exit node operators usually do not have large legal teams and a budget to fight prosecutions in court. Although a legal suit has never been brought against a Tor exit node operator, these are risks that each operator must control for.</p>
+<p>For this reason you should always check the laws of the relevant country you are operating your Service Node out of. If you run into legal challenges we recommend contacting the EFF who may be interested in hearing a case of Exit Node prosecution.</p>
+<p>Although all relevant information, it still stands as likely the most contact you are going to receive as you run an exit node is with your ISP or VPS provider who is likely to forward DMCA takedown notices, or abuse requests to the email address you used to sign up with. </p>
 <h3 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Permanent link">&para;</a></h3>
-<p>// TODO: overview of exit traffic legality in various regions</p>
+<p>The Loki foundation or the writers of this guide are not responsible for any legal implications you may face because you operate a Loki Service Node. </p>
 <h3 id="email-templates">Email Templates<a class="headerlink" href="#email-templates" title="Permanent link">&para;</a></h3>
-<p>// TODO: links to response templates go here</p>
-<div class="codehilite"><pre><span></span>Dear Sir/Madam,
+<p>If you decided to run a Service Node with exit functionality there are a couple of common abuse emails you will run into, so its a good idea to reduce the time spent answering emails to use some available templates.</p>
+<h4 id="copyright-infringement-email-response"><strong>Copyright infringement Email Response</strong><a class="headerlink" href="#copyright-infringement-email-response" title="Permanent link">&para;</a></h4>
+<p><strong>European ISP</strong></p>
+<div class="codehilite"><pre><span></span>Dear [ISP]:
 
-[Insert response template here]
+Thank you for forwarding me the notice you received from [copyright claimant] regarding [content]. I would like to assure you that I am not hosting the claimed infringing materials, and furthermore, both the Digital Millennium Copyright Act&#39;s (&quot;DMCA&quot;) and the European Union Copyright Directive (“EUCD”) safe harbors likely protect you from liability arising from this complaint. The notice is likely based upon misunderstandings about the law and about some of the software I run.
 
-Best of luck, [Exit node oper name/organization here]
+As you may know as part of the European Union Copyright Directive exceptions are provided per Article 5, these exceptions are mandatory for each member state. These exceptions allow for “Temporary acts of reproduction referred to in Article 2, which are transient or incidental [and] an integral and essential part of a technological process and whose sole purpose is to enable:
+a transmission in a network between third parties by an intermediary”. These Laws protect both Internet Service providers and similar intermediaries who simply relay traffic.
+
+
+The notification you received is certainly not proof of any copyright infringement; a notice claiming infringement is not the same as a determination of infringement. I have not infringed any copyrights and do not intend to do so. Therefore, you should continue to be protected under the EUCD Article 5  without taking any further action.
+
+You may be curious about what prompted the faulty notice. It was likely triggered by a program I run called Lokinet. Lokinet is a software that helps users to enhance their privacy, security, and safety online. It does not host any content. Rather, it is part of a network of nodes called Service Nodes that operate on the Internet and simply pass packets among themselves before sending them to their destinations, just as any Internet intermediary does. The difference is that Lokinet tunnels the connections such that no hop can learn both the source and destination of the packets, giving users protection from nefarious snooping on network traffic. The result is that, unlike most other Internet traffic, the final IP address that the recipient receives is not the IP address of the sender. Lokinet protects users against hazards such as harassment, spam, and identity theft. The Lokinet software is developed by the Loki foundation a non for profit organization, and run by community Service Node operators. I hope, as an organization committed to protecting the privacy of its customers, you&#39;ll agree that this is a valuable technology.
+
+Thank you for working with me on this matter. As a loyal subscriber, I appreciate your notifying me of this issue and hope that the protections of DMCA 512 put any concerns you may have to rest. If not, please contact me with any further questions.
+
+Very truly yours,
+Your customer, [User]
 </pre></div>
 
 
+<p><strong>American ISP</strong></p>
+<div class="codehilite"><pre><span></span>Dear [ISP]:
+
+Thank you for forwarding me the notice you received from [copyright claimant] regarding [content]. I would like to assure you that I am not hosting the claimed infringing materials, and furthermore, the Digital Millennium Copyright Act&#39;s (&quot;DMCA&quot;) safe harbors likely protect you from liability arising from this complaint. The notice is likely based upon misunderstandings about the law and about some of the software I run.
+
+As you know, the DMCA creates four &quot;safe harbors&quot; for service providers to protect them from copyright liability for the acts of their users, when the ISPs fulfill certain requirements. (17 U.S.C. § 512) The DMCA&#39;s requirements vary depending on the ISP&#39;s role. You may be familiar with the &quot;notice and takedown&quot; provisions of section 512(c) of the DMCA; however, those do not apply when an ISP merely acts as a conduit. Instead, the &quot;conduit&quot; safe harbor of section 512(a) of the DMCA has different and less burdensome eligibility requirements, as the D.C. Circuit Court of Appeals held in RIAA v. Verizon (see https://www.eff.org/sites/default/files/filenode/RIAA_v_Verizon/20030121-riaa-v-verizon-order.pdf) and the Eighth Circuit Court of Appeals confirmed in RIAA v. Charter (see https://w2.eff.org/IP/P2P/Charter/033802P.pdf).
+
+Under DMCA 512(a), service providers like you are typically protected from damages for copyright infringement claims if you also maintain &quot;a policy that provides for termination in appropriate circumstances of subscribers and account holders of the service provider&#39;s system or network who are repeat infringers.&quot; If you have and implement such a policy, and you otherwise qualify for the safe harbor, you should be free from fear of copyright damages.
+
+As for what makes a reasonable policy, as the law says, it&#39;s one that terminates subscribers who are repeat infringers. The notification you received is certainly not proof of the &quot;repeat infringement&quot; that is required under the law before you need to terminate my account. In fact, it&#39;s not even proof of any copyright infringement; a notice claiming infringement is not the same as a determination of infringement. I have not infringed any copyrights and do not intend to do so. Therefore, you should continue to be protected under the DMCA 512(a) safe harbor without taking any further action.
+
+You may be curious about what prompted the faulty notice. It was likely triggered by a program I run called Lokinet. Lokinet is a software that helps users to enhance their privacy, security, and safety online. It does not host any content. Rather, it is part of a network of nodes called Service Nodes that operate on the Internet and simply pass packets among themselves before sending them to their destinations, just as any Internet intermediary does. The difference is that Lokinet tunnels the connections such that no hop can learn both the source and destination of the packets, giving users protection from nefarious snooping on network traffic. The result is that, unlike most other Internet traffic, the final IP address that the recipient receives is not the IP address of the sender. Lokinet protects users against hazards such as harassment, spam, and identity theft. The Lokinet software is developed by the Loki foundation a non for profit organization, and run by community Service Node operators. I hope, as an organization committed to protecting the privacy of its customers, you&#39;ll agree that this is a valuable technology.
+
+Thank you for working with me on this matter. As a loyal subscriber, I appreciate your notifying me of this issue and hope that the protections of DMCA 512 put any concerns you may have to rest. If not, please contact me with any further questions.```
+
+Very truly yours,
+Your customer, [User]
+</pre></div>
+
+
+<p><strong>General Statement</strong></p>
+<div class="codehilite"><pre><span></span>The IP address in question is a Loki exit node.
+https://www.torproject.org/overview.html
+
+There is little we can do to trace this matter further. As can be seen
+from the overview page, Lokinet is designed to make tracing of
+users impossible. The Loki network is run by hundreds of node operators who
+use the free software provided by the Loki Foundation to operate Lokinet routers and exit nodes.
+Client connections are routed through multiple relays, and are
+multiplexed together on the connections between relays. The system
+does not record logs of client connections or previous hops.
+
+This is because Lokinet is a censorship resistance, privacy,
+and anonymity system it can be used by whistle blowers, journalists, abuse victims, stalker
+Targets, law enforcement, just to name a few.
+
+Unfortunately, some people misuse the network. However, compared to
+the rate of legitimate use the fraction of misuse is small and abuse complaints are rare. however because of the nature of anonymity networks little can be done to trace the origin of these malicious users.
+</pre></div>
+
+
+<p>//TODO: Add additional templates once DNSRBL is added</p>
 <h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
 <p>// TODO: insert best practices here</p>
 <p>// TODO: abuse complaints</p>
@@ -1704,7 +2587,7 @@ Best of luck, [Exit node oper name/organization here]
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../SNApps/" title="SNApps" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../LokinetRouter/" title="Set up a Lokinet Router" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1713,13 +2596,13 @@ Best of luck, [Exit node oper name/organization here]
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                SNApps
+                Set up a Lokinet Router
               </span>
             </div>
           </a>
         
         
-          <a href="../../../LokiServices/LokiServicesOverview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../LokiServices/Messenger/Session/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1739,10 +2622,6 @@ Best of luck, [Exit node oper name/organization here]
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Add Copyright
-          </div>
         
         powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
@@ -1765,6 +2644,8 @@ Best of luck, [Exit node oper name/organization here]
     
       <a href="https://www.youtube.com/lokinetwork" class="md-footer-social__link fa fa-youtube"></a>
     
+      <a href="https://www.facebook.com/LokiNetwork/" class="md-footer-social__link fa fa-facebook"></a>
+    
   </div>
 
       
@@ -1778,10 +2659,12 @@ Best of luck, [Exit node oper name/organization here]
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
-    
-    
+        <script src="../../../JAVASCRIPT/links.js"></script>
       
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+        <script src="../../../JAVASCRIPT/style.js"></script>
+      
+    
+    
       
     
   </body>

@@ -10,8 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="A cryptocurrency stake involves holding a specific cryptocoin in a wallet for a particular period of time. The Loki staking requirement is the minimum amount of Loki that is required to stake.">
       
-        <link rel="canonical" href="https://loki-project.github.io/loki-docs/ServiceNodes/StakingRequirement/">
+      
+        <link rel="canonical" href="https://docs.loki.network/ServiceNodes/StakingRequirement/">
       
       
       
@@ -38,7 +40,7 @@
     
     
       
-        <title>Staking Requirement - Loki Docs</title>
+        <title>Loki Documentation | Loki Service Node Staking Requirement</title>
       
     
     
@@ -52,10 +54,6 @@
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Regular:300,400,400i,700|Roboto">
-        <style>body,input{font-family:"Roboto Regular","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -109,9 +107,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.loki.network" title="Loki Docs" class="md-header-nav__button md-logo">
           
-            <img src="../../Loki_favicon32x32.png" width="24" height="24">
+            <img src="../../logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -196,6 +194,157 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Wallets/WalletsOverview/" title="Wallets" class="md-tabs__link">
+          Wallets
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Mining/MiningOverview/" title="Mining" class="md-tabs__link">
+          Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../SNOverview/" title="Service Nodes" class="md-tabs__link md-tabs__link--active">
+          Service Nodes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Lokinet/LokinetOverview/" title="Lokinet" class="md-tabs__link">
+          Lokinet
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../LokiServices/Messenger/Session/" title="Session" class="md-tabs__link">
+          Session
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../LokiServices/Blink/" title="Blink" class="md-tabs__link">
+          Blink
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Advanced/CheckpointingLip3/" title="Checkpointing" class="md-tabs__link">
+          Checkpointing
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Advanced/PulseLip5/" title="Pulse" class="md-tabs__link">
+          Pulse
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Developer/SNRPCGuide/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -205,9 +354,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://loki-project.github.io/loki-docs/" title="Loki Docs" class="md-nav__button md-logo">
+    <a href="https://docs.loki.network" title="Loki Docs" class="md-nav__button md-logo">
       
-        <img src="../../Loki_favicon32x32.png" width="48" height="48">
+        <img src="../../logo.svg" width="48" height="48">
       
     </a>
     Loki Docs
@@ -254,46 +403,34 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
+  <li class="md-nav__item">
+    <a href="../../Introduction/LokiNetwork/" title="Introduction" class="md-nav__link">
       Introduction
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Introduction
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Introduction/LokiNetwork/" title="Loki Network" class="md-nav__link">
-      Loki Network
     </a>
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
-    <a href="../../Introduction/BeginnersGuide/" title="Where to begin?" class="md-nav__link">
-      Where to begin?
+    <a href="../../Introduction/GettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
   </li>
 
     
@@ -304,13 +441,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-5">
       Wallets
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-5">
         Wallets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -334,8 +471,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/WhatWalletToUse/" title="What wallet to use?" class="md-nav__link">
-      What wallet to use?
+    <a href="../../Wallets/WhatWalletToUse/" title="Which wallet should I use?" class="md-nav__link">
+      Which wallet should I use?
     </a>
   </li>
 
@@ -347,14 +484,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-3-3">
-      Web Wallet (LokiLocker)
+    <label class="md-nav__link" for="nav-5-3">
+      Addresses
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        Web Wallet (LokiLocker)
+      <label class="md-nav__title" for="nav-5-3">
+        Addresses
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -365,8 +502,49 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/WebWallet/TroubleshootWebWallet/" title="Troubleshooting Web Wallet" class="md-nav__link">
-      Troubleshooting Web Wallet
+    <a href="../../Wallets/Addresses/MainAddress/" title="Main Address" class="md-nav__link">
+      Main Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/SubAddress/" title="Sub Address" class="md-nav__link">
+      Sub Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/IntegratedAddress/" title="Integrated Address" class="md-nav__link">
+      Integrated Address
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Multisignature/" title="Multsignature" class="md-nav__link">
+      Multsignature
     </a>
   </li>
 
@@ -378,13 +556,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
     
-    <label class="md-nav__link" for="nav-3-3-2">
+    <label class="md-nav__link" for="nav-5-5">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-3-2">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -396,40 +574,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/WebWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
+    <a href="../../Wallets/GuiWallet/loki-electron-guide/" title="Electron Gui Setup" class="md-nav__link">
+      Electron Gui Setup
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      Graphical User interface (GUI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        Graphical User interface (GUI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -437,30 +586,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/GuiWallet/TroubleshootGui/" title="Troubleshooting GUI Wallet" class="md-nav__link">
-      Troubleshooting GUI Wallet
+    <a href="../GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
     </a>
   </li>
 
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2">
-    
-    <label class="md-nav__link" for="nav-3-4-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -468,143 +598,11 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/GuiWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
+    <a href="../../Wallets/MobileWallet/RestoreMobileWalletGuide/" title="Mobile Wallet Restore" class="md-nav__link">
+      Mobile Wallet Restore
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
-    
-    <label class="md-nav__link" for="nav-3-5">
-      Mobile Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-5">
-        Mobile Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Wallets/MobileWallet/TroubleshootMobileWallet/" title="Troubleshooting Mobile Wallet" class="md-nav__link">
-      Troubleshooting Mobile Wallet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
-    
-    <label class="md-nav__link" for="nav-3-5-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-5-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Wallets/MobileWallet/placeholder/" title="to be added" class="md-nav__link">
-      to be added
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
-    
-    <label class="md-nav__link" for="nav-3-6">
-      Command Line Integrated (CLI) Wallet
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-6">
-        Command Line Integrated (CLI) Wallet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Wallets/CliWallet/TroubleshootCli/" title="Troubleshooting CLI Wallet" class="md-nav__link">
-      Troubleshooting CLI Wallet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2" type="checkbox" id="nav-3-6-2">
-    
-    <label class="md-nav__link" for="nav-3-6-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-6-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -635,15 +633,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreSeed/" title="CLI Restoring Wallet from Seed" class="md-nav__link">
+      CLI Restoring Wallet from Seed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreKeys/" title="CLI Restoring Wallet from Keys" class="md-nav__link">
+      CLI Restoring Wallet from Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2-3" type="checkbox" id="nav-3-6-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5-8" type="checkbox" id="nav-5-5-8">
     
-    <label class="md-nav__link" for="nav-3-6-2-3">
+    <label class="md-nav__link" for="nav-5-5-8">
       Multisig
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-6-2-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-5-8">
         Multisig
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -673,30 +695,25 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../Wallets/Multisigniture/" title="Multsigniture" class="md-nav__link">
-      Multsigniture
+    <a href="../../Wallets/CliWallet/MofNMultisig/" title="M/N Multsig" class="md-nav__link">
+      M/N Multsig
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -712,13 +729,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-6">
       Mining
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-6">
         Mining
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -762,13 +779,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-7">
       Service Nodes
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-7">
         Service Nodes
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -782,18 +799,6 @@
   <li class="md-nav__item">
     <a href="../SNOverview/" title="Overview" class="md-nav__link">
       Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ServiceNodeFunctions/" title="Service Node Functions" class="md-nav__link">
-      Service Node Functions
     </a>
   </li>
 
@@ -835,19 +840,6 @@
     Service Node Staking Requirement
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lsr-at-specific-dates" title="LSR at Specific Dates" class="md-nav__link">
-    LSR at Specific Dates
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -866,15 +858,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../DeregistrationRules/" title="Deregistration Rules" class="md-nav__link">
+      Deregistration Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../InfiniteStakingPrimer/" title="Infinite Staking Primer" class="md-nav__link">
+      Infinite Staking Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-7-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
+      <label class="md-nav__title" for="nav-7-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -886,8 +902,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../SNFullGuide/" title="Service Node Full Guide" class="md-nav__link">
-      Service Node Full Guide
+    <a href="../DebianPackageGuide/" title="Service Node Setup Guide" class="md-nav__link">
+      Service Node Setup Guide
     </a>
   </li>
 
@@ -898,7 +914,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
       Service Node RPC Guide
     </a>
   </li>
@@ -910,8 +926,80 @@
 
 
   <li class="md-nav__item">
-    <a href="../RunServiceNodeAsService/" title="Service Node As Service Guide" class="md-nav__link">
-      Service Node As Service Guide
+    <a href="../GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../launcherconfig/" title="Launcher Config File" class="md-nav__link">
+      Launcher Config File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-nav__link">
+      Service Node Legacy Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StorageServerGuide-Testnet/" title="Service Node TESTNET Guide" class="md-nav__link">
+      Service Node TESTNET Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../OpenPort22023/" title="Port 22023 Not Open" class="md-nav__link">
+      Port 22023 Not Open
     </a>
   </li>
 
@@ -933,13 +1021,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-8">
       Lokinet
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-8">
         Lokinet
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -953,6 +1041,18 @@
   <li class="md-nav__item">
     <a href="../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
       Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/PublicTestingGuide/" title="Public Testing Overview" class="md-nav__link">
+      Public Testing Overview
     </a>
   </li>
 
@@ -986,27 +1086,15 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../Lokinet/DeveloperInfo/" title="Developers" class="md-nav__link">
-      Developers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
     
-    <label class="md-nav__link" for="nav-6-5">
+    <label class="md-nav__link" for="nav-8-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-5">
+      <label class="md-nav__title" for="nav-8-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1018,8 +1106,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Lokinet/Guides/TestNetRelay/" title="Test Network Relay" class="md-nav__link">
-      Test Network Relay
+    <a href="../../Lokinet/Guides/LokinetGuiGuide/" title="Linux GUI Guide" class="md-nav__link">
+      Linux GUI Guide
     </a>
   </li>
 
@@ -1030,8 +1118,104 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Lokinet/Guides/SNApps/" title="SNApps" class="md-nav__link">
-      SNApps
+    <a href="../../Lokinet/Guides/lokinet-mac-guide/" title="macOS Gui Guide" class="md-nav__link">
+      macOS Gui Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ReverseSSHGuide/" title="Anonymous Reverse SSH Guide" class="md-nav__link">
+      Anonymous Reverse SSH Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/lokinet-linux-guide/" title="Linux Command-line Guide" class="md-nav__link">
+      Linux Command-line Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/Install/" title="Linux - Build-It-Yourself" class="md-nav__link">
+      Linux - Build-It-Yourself
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/AccessingSNApps/" title="Accessing SNApps" class="md-nav__link">
+      Accessing SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetIRC/" title="Joining a Lokinet IRC Chat" class="md-nav__link">
+      Joining a Lokinet IRC Chat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/HostingSNApps/" title="Hosting SNApps" class="md-nav__link">
+      Hosting SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetConfig/" title="Lokinet config files" class="md-nav__link">
+      Lokinet config files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetRouter/" title="Set up a Lokinet Router" class="md-nav__link">
+      Set up a Lokinet Router
     </a>
   </li>
 
@@ -1065,14 +1249,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-7">
-      Loki Services
+    <label class="md-nav__link" for="nav-9">
+      Session
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Loki Services
+      <label class="md-nav__title" for="nav-9">
+        Session
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1083,7 +1267,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+    <a href="../../LokiServices/Messenger/Session/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -1095,11 +1279,215 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LokiServices/Messenger/" title="Messenger" class="md-nav__link">
-      Messenger
+    <a href="../../LokiServices/Messenger/LokiNameSystem/" title="Loki Name System" class="md-nav__link">
+      Loki Name System
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/threat_model/" title="Threat Models" class="md-nav__link">
+      Threat Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/infrastructure/" title="Infrastructure" class="md-nav__link">
+      Infrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/message_routing/" title="Message Routing" class="md-nav__link">
+      Message Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/group_chats/" title="Group Chats" class="md-nav__link">
+      Group Chats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/testing/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/multidevice/" title="Multi-Device" class="md-nav__link">
+      Multi-Device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/client_side_protection/" title="Client Side Protection" class="md-nav__link">
+      Client Side Protection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/attachments/" title="Attachments" class="md-nav__link">
+      Attachments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/HowToRegisterSessionNames/" title="Register Session/Wallet names" class="md-nav__link">
+      Register Session/Wallet names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/multi_device_setup/" title="Multi-Device Setup" class="md-nav__link">
+      Multi-Device Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/opengroup_setup/" title="OpenGroup Setup" class="md-nav__link">
+      OpenGroup Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/JoinOpenGroupMobile/" title="Join Open Group on Mobile" class="md-nav__link">
+      Join Open Group on Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/JoinOpenGroupDesktop/" title="Join Open Group on Desktop" class="md-nav__link">
+      Join Open Group on Desktop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Blink
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Blink
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -1125,17 +1513,425 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-11">
+      Checkpointing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Checkpointing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/CheckpointingLip3/" title="Checkpointing LIP" class="md-nav__link">
+      Checkpointing LIP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/CheckpointingUpdate/" title="Safely Receiving Loki" class="md-nav__link">
+      Safely Receiving Loki
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Pulse
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Pulse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/PulseLip5/" title="Loki Documentation | Loki Proof of Stake | Pulse" class="md-nav__link">
+      Loki Documentation | Loki Proof of Stake | Pulse
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
       Advanced
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-13">
         Advanced
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-1" type="checkbox" id="nav-13-1">
+    
+    <label class="md-nav__link" for="nav-13-1">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-1">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/DaemonRPCGuide/" title="Daemon RPC Guide - Old" class="md-nav__link">
+      Daemon RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/DaemonRPCBeta/" title="Daemon RPC Guide - Beta" class="md-nav__link">
+      Daemon RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/WalletRPCGuide/" title="Wallet RPC Guide - Old" class="md-nav__link">
+      Wallet RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/WalletRPCBeta/" title="Wallet RPC Guide - Beta" class="md-nav__link">
+      Wallet RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/FAQ/" title="Developer FAQ" class="md-nav__link">
+      Developer FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Loki Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
+        Loki Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Blink/" title="Blink" class="md-nav__link">
+      Blink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
+    
+    <label class="md-nav__link" for="nav-13-3">
+      Attack Prevention
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-3">
+        Attack Prevention
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-4" type="checkbox" id="nav-13-4">
+    
+    <label class="md-nav__link" for="nav-13-4">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-4">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/HowToContributeToLokiDocs/" title="How to Contribute to LokiDocs" class="md-nav__link">
+      How to Contribute to LokiDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
+      Vulnerability Response
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/Issue_Template/" title="Github Issue Template Example" class="md-nav__link">
+      Github Issue Template Example
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-5" type="checkbox" id="nav-13-5">
+    
+    <label class="md-nav__link" for="nav-13-5">
+      Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-5">
+        Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/Governance/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
         
           
           
@@ -1202,85 +1998,6 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-6" type="checkbox" id="nav-8-6">
-    
-    <label class="md-nav__link" for="nav-8-6">
-      Attack Prevention
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-6">
-        Attack Prevention
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
-      Denial of Service Attacks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
-      IP and Packet Blocking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
-      Swarm Flagging
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-7" type="checkbox" id="nav-8-7">
-    
-    <label class="md-nav__link" for="nav-8-7">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-7">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
     <a href="../../Advanced/lokid/" title="lokid" class="md-nav__link">
       lokid
@@ -1293,24 +2010,19 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../Advanced/CompilingGuide/" title="Compiling Loki from source" class="md-nav__link">
-      Compiling Loki from source
-    </a>
-  </li>
-
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-12" type="checkbox" id="nav-13-12">
+    
+    <label class="md-nav__link" for="nav-13-12">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-12">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/UsingLokinet/" title="Using Lokinet" class="md-nav__link">
-      Using Lokinet
-    </a>
-  </li>
-
         
           
           
@@ -1342,134 +2054,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Advanced/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
-      Service Node RPC Guide
+    <a href="../../Advanced/AcceptingLoki/" title="Accepting Loki for Merchants and Exchanges" class="md-nav__link">
+      Accepting Loki for Merchants and Exchanges
     </a>
   </li>
 
         
       </ul>
     </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Contributing
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Contributing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Contributing/Github/" title="How to Contribute to LokiDocs" class="md-nav__link">
-      How to Contribute to LokiDocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
-      Vulnerability Response
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      Governance
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Governance
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Governance/Governance/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
-      The Loki Foundation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
-      Loki Funding System
-    </a>
   </li>
 
         
@@ -1503,19 +2095,6 @@
     Service Node Staking Requirement
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lsr-at-specific-dates" title="LSR at Specific Dates" class="md-nav__link">
-    LSR at Specific Dates
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -1540,885 +2119,12 @@
                 <h1 id="staking-requirement">Staking Requirement<a class="headerlink" href="#staking-requirement" title="Permanent link">&para;</a></h1>
 <p>A stake involves holding a specific cryptocoin in a wallet for a particular period of time. A staking requirement is the minimum amount of said cryptocoin that is required to stake.</p>
 <h2 id="service-node-staking-requirement">Service Node Staking Requirement<a class="headerlink" href="#service-node-staking-requirement" title="Permanent link">&para;</a></h2>
-<p>To register as a <a href="../SNOverview/">Service Node</a>, an operator creates a time-locked output of the required amount which unlocks after a minimum of 21,600 blocks have elapsed (approximately 30 days). In the extra field of the transaction, the Service Node operator includes the Loki address which may receive Service Node rewards. This address will also be used as the public key for Service Node operations such as <a href="../../Advanced/SwarmFlagging/">swarm</a> voting.</p>
-<p>Before each node joins the Service Node network, other nodes must individually validate that the said nodes collateral outlay matches the required amount, as per the decreasing collateralisation requirement. Although collateral transactions  expire after 30 days, the wallet will have an opt-in automatic re-collateralisation feature.</p>
-<p>The staking requirement started at 45,000 during Service Node launch (block height 101250), descends non-linearly to ~10,000 by year 4 (block height 1036800), and increases linearly to 15,000 by year 14 (block height 3628800), according to the equation:</p>
-<p><img alt="LSR" src="../../assets/LSRformula.JPG" /></p>
-<h3 id="lsr-at-specific-dates">LSR at Specific Dates<a class="headerlink" href="#lsr-at-specific-dates" title="Permanent link">&para;</a></h3>
-<p><details>
-  <summary>Click to expand data</summary></p>
-<table>
-<thead>
-<tr>
-<th align="center">Date (MM/YYYY)</th>
-<th align="center">Block Height</th>
-<th align="center">Staking Requirement (Loki)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">09/2018</td>
-<td align="center">101250</td>
-<td align="center">45000</td>
-</tr>
-<tr>
-<td align="center">10/2018</td>
-<td align="center">122850</td>
-<td align="center">41181</td>
-</tr>
-<tr>
-<td align="center">11/2018</td>
-<td align="center">144450</td>
-<td align="center">37780</td>
-</tr>
-<tr>
-<td align="center">12/2018</td>
-<td align="center">166050</td>
-<td align="center">34749</td>
-</tr>
-<tr>
-<td align="center">01/2019</td>
-<td align="center">187650</td>
-<td align="center">32049</td>
-</tr>
-<tr>
-<td align="center">02/2019</td>
-<td align="center">209250</td>
-<td align="center">29643</td>
-</tr>
-<tr>
-<td align="center">03/2019</td>
-<td align="center">230850</td>
-<td align="center">27500</td>
-</tr>
-<tr>
-<td align="center">04/2019</td>
-<td align="center">252450</td>
-<td align="center">25591</td>
-</tr>
-<tr>
-<td align="center">05/2019</td>
-<td align="center">274050</td>
-<td align="center">23890</td>
-</tr>
-<tr>
-<td align="center">06/2019</td>
-<td align="center">295650</td>
-<td align="center">22374</td>
-</tr>
-<tr>
-<td align="center">07/2019</td>
-<td align="center">317250</td>
-<td align="center">21024</td>
-</tr>
-<tr>
-<td align="center">08/2019</td>
-<td align="center">338850</td>
-<td align="center">19822</td>
-</tr>
-<tr>
-<td align="center">09/2019</td>
-<td align="center">360450</td>
-<td align="center">18750</td>
-</tr>
-<tr>
-<td align="center">10/2019</td>
-<td align="center">382050</td>
-<td align="center">17795</td>
-</tr>
-<tr>
-<td align="center">11/2019</td>
-<td align="center">403650</td>
-<td align="center">16945</td>
-</tr>
-<tr>
-<td align="center">12/2019</td>
-<td align="center">425250</td>
-<td align="center">16187</td>
-</tr>
-<tr>
-<td align="center">01/2020</td>
-<td align="center">446850</td>
-<td align="center">15512</td>
-</tr>
-<tr>
-<td align="center">02/2020</td>
-<td align="center">468450</td>
-<td align="center">14911</td>
-</tr>
-<tr>
-<td align="center">03/2020</td>
-<td align="center">490050</td>
-<td align="center">14375</td>
-</tr>
-<tr>
-<td align="center">04/2020</td>
-<td align="center">511650</td>
-<td align="center">13898</td>
-</tr>
-<tr>
-<td align="center">05/2020</td>
-<td align="center">533250</td>
-<td align="center">13472</td>
-</tr>
-<tr>
-<td align="center">06/2020</td>
-<td align="center">554850</td>
-<td align="center">13094</td>
-</tr>
-<tr>
-<td align="center">07/2020</td>
-<td align="center">576450</td>
-<td align="center">12756</td>
-</tr>
-<tr>
-<td align="center">08/2020</td>
-<td align="center">598050</td>
-<td align="center">12455</td>
-</tr>
-<tr>
-<td align="center">09/2020</td>
-<td align="center">619650</td>
-<td align="center">12188</td>
-</tr>
-<tr>
-<td align="center">10/2020</td>
-<td align="center">641250</td>
-<td align="center">11949</td>
-</tr>
-<tr>
-<td align="center">11/2020</td>
-<td align="center">662850</td>
-<td align="center">11736</td>
-</tr>
-<tr>
-<td align="center">12/2020</td>
-<td align="center">684450</td>
-<td align="center">11547</td>
-</tr>
-<tr>
-<td align="center">01/2021</td>
-<td align="center">706050</td>
-<td align="center">11378</td>
-</tr>
-<tr>
-<td align="center">02/2021</td>
-<td align="center">727650</td>
-<td align="center">11228</td>
-</tr>
-<tr>
-<td align="center">03/2021</td>
-<td align="center">749250</td>
-<td align="center">11094</td>
-</tr>
-<tr>
-<td align="center">04/2021</td>
-<td align="center">770850</td>
-<td align="center">10974</td>
-</tr>
-<tr>
-<td align="center">05/2021</td>
-<td align="center">792450</td>
-<td align="center">10868</td>
-</tr>
-<tr>
-<td align="center">06/2021</td>
-<td align="center">814050</td>
-<td align="center">10773</td>
-</tr>
-<tr>
-<td align="center">07/2021</td>
-<td align="center">835650</td>
-<td align="center">10689</td>
-</tr>
-<tr>
-<td align="center">08/2021</td>
-<td align="center">857250</td>
-<td align="center">10614</td>
-</tr>
-<tr>
-<td align="center">09/2021</td>
-<td align="center">878850</td>
-<td align="center">10547</td>
-</tr>
-<tr>
-<td align="center">10/2021</td>
-<td align="center">900450</td>
-<td align="center">10487</td>
-</tr>
-<tr>
-<td align="center">11/2021</td>
-<td align="center">922050</td>
-<td align="center">10434</td>
-</tr>
-<tr>
-<td align="center">12/2021</td>
-<td align="center">943650</td>
-<td align="center">10387</td>
-</tr>
-<tr>
-<td align="center">01/2022</td>
-<td align="center">965250</td>
-<td align="center">10345</td>
-</tr>
-<tr>
-<td align="center">02/2022</td>
-<td align="center">986850</td>
-<td align="center">10307</td>
-</tr>
-<tr>
-<td align="center">03/2022</td>
-<td align="center">1008450</td>
-<td align="center">10273</td>
-</tr>
-<tr>
-<td align="center">04/2022</td>
-<td align="center">1030050</td>
-<td align="center">10244</td>
-</tr>
-<tr>
-<td align="center">05/2022</td>
-<td align="center">1051650</td>
-<td align="center">10217</td>
-</tr>
-<tr>
-<td align="center">06/2022</td>
-<td align="center">1073250</td>
-<td align="center">10193</td>
-</tr>
-<tr>
-<td align="center">07/2022</td>
-<td align="center">1094850</td>
-<td align="center">10172</td>
-</tr>
-<tr>
-<td align="center">08/2022</td>
-<td align="center">1116450</td>
-<td align="center">10154</td>
-</tr>
-<tr>
-<td align="center">09/2022</td>
-<td align="center">1138050</td>
-<td align="center">10195</td>
-</tr>
-<tr>
-<td align="center">10/2022</td>
-<td align="center">1159650</td>
-<td align="center">10237</td>
-</tr>
-<tr>
-<td align="center">11/2022</td>
-<td align="center">1181250</td>
-<td align="center">10279</td>
-</tr>
-<tr>
-<td align="center">12/2022</td>
-<td align="center">1202850</td>
-<td align="center">10320</td>
-</tr>
-<tr>
-<td align="center">01/2023</td>
-<td align="center">1224450</td>
-<td align="center">10362</td>
-</tr>
-<tr>
-<td align="center">02/2023</td>
-<td align="center">1246050</td>
-<td align="center">10404</td>
-</tr>
-<tr>
-<td align="center">03/2023</td>
-<td align="center">1267650</td>
-<td align="center">10445</td>
-</tr>
-<tr>
-<td align="center">04/2023</td>
-<td align="center">1289250</td>
-<td align="center">10487</td>
-</tr>
-<tr>
-<td align="center">05/2023</td>
-<td align="center">1310850</td>
-<td align="center">10529</td>
-</tr>
-<tr>
-<td align="center">06/2023</td>
-<td align="center">1332450</td>
-<td align="center">10570</td>
-</tr>
-<tr>
-<td align="center">07/2023</td>
-<td align="center">1354050</td>
-<td align="center">10612</td>
-</tr>
-<tr>
-<td align="center">08/2023</td>
-<td align="center">1375650</td>
-<td align="center">10654</td>
-</tr>
-<tr>
-<td align="center">09/2023</td>
-<td align="center">1397250</td>
-<td align="center">10695</td>
-</tr>
-<tr>
-<td align="center">10/2023</td>
-<td align="center">1418850</td>
-<td align="center">10737</td>
-</tr>
-<tr>
-<td align="center">11/2023</td>
-<td align="center">1440450</td>
-<td align="center">10779</td>
-</tr>
-<tr>
-<td align="center">12/2023</td>
-<td align="center">1462050</td>
-<td align="center">10820</td>
-</tr>
-<tr>
-<td align="center">01/2024</td>
-<td align="center">1483650</td>
-<td align="center">10862</td>
-</tr>
-<tr>
-<td align="center">02/2024</td>
-<td align="center">1505250</td>
-<td align="center">10904</td>
-</tr>
-<tr>
-<td align="center">03/2024</td>
-<td align="center">1526850</td>
-<td align="center">10945</td>
-</tr>
-<tr>
-<td align="center">04/2024</td>
-<td align="center">1548450</td>
-<td align="center">10987</td>
-</tr>
-<tr>
-<td align="center">05/2024</td>
-<td align="center">1570050</td>
-<td align="center">11029</td>
-</tr>
-<tr>
-<td align="center">06/2024</td>
-<td align="center">1591650</td>
-<td align="center">11070</td>
-</tr>
-<tr>
-<td align="center">07/2024</td>
-<td align="center">1613250</td>
-<td align="center">11112</td>
-</tr>
-<tr>
-<td align="center">08/2024</td>
-<td align="center">1634850</td>
-<td align="center">11154</td>
-</tr>
-<tr>
-<td align="center">09/2024</td>
-<td align="center">1656450</td>
-<td align="center">11195</td>
-</tr>
-<tr>
-<td align="center">10/2024</td>
-<td align="center">1678050</td>
-<td align="center">11237</td>
-</tr>
-<tr>
-<td align="center">11/2024</td>
-<td align="center">1699650</td>
-<td align="center">11279</td>
-</tr>
-<tr>
-<td align="center">12/2024</td>
-<td align="center">1721250</td>
-<td align="center">11320</td>
-</tr>
-<tr>
-<td align="center">01/2025</td>
-<td align="center">1742850</td>
-<td align="center">11362</td>
-</tr>
-<tr>
-<td align="center">02/2025</td>
-<td align="center">1764450</td>
-<td align="center">11404</td>
-</tr>
-<tr>
-<td align="center">03/2025</td>
-<td align="center">1786050</td>
-<td align="center">11445</td>
-</tr>
-<tr>
-<td align="center">04/2025</td>
-<td align="center">1807650</td>
-<td align="center">11487</td>
-</tr>
-<tr>
-<td align="center">05/2025</td>
-<td align="center">1829250</td>
-<td align="center">11529</td>
-</tr>
-<tr>
-<td align="center">06/2025</td>
-<td align="center">1850850</td>
-<td align="center">11570</td>
-</tr>
-<tr>
-<td align="center">07/2025</td>
-<td align="center">1872450</td>
-<td align="center">11612</td>
-</tr>
-<tr>
-<td align="center">08/2025</td>
-<td align="center">1894050</td>
-<td align="center">11654</td>
-</tr>
-<tr>
-<td align="center">09/2025</td>
-<td align="center">1915650</td>
-<td align="center">11695</td>
-</tr>
-<tr>
-<td align="center">10/2025</td>
-<td align="center">1937250</td>
-<td align="center">11737</td>
-</tr>
-<tr>
-<td align="center">11/2025</td>
-<td align="center">1958850</td>
-<td align="center">11779</td>
-</tr>
-<tr>
-<td align="center">12/2025</td>
-<td align="center">1980450</td>
-<td align="center">11820</td>
-</tr>
-<tr>
-<td align="center">01/2026</td>
-<td align="center">2002050</td>
-<td align="center">11862</td>
-</tr>
-<tr>
-<td align="center">02/2026</td>
-<td align="center">2023650</td>
-<td align="center">11904</td>
-</tr>
-<tr>
-<td align="center">03/2026</td>
-<td align="center">2045250</td>
-<td align="center">11945</td>
-</tr>
-<tr>
-<td align="center">04/2026</td>
-<td align="center">2066850</td>
-<td align="center">11987</td>
-</tr>
-<tr>
-<td align="center">05/2026</td>
-<td align="center">2088450</td>
-<td align="center">12029</td>
-</tr>
-<tr>
-<td align="center">06/2026</td>
-<td align="center">2110050</td>
-<td align="center">12070</td>
-</tr>
-<tr>
-<td align="center">07/2026</td>
-<td align="center">2131650</td>
-<td align="center">12112</td>
-</tr>
-<tr>
-<td align="center">08/2026</td>
-<td align="center">2153250</td>
-<td align="center">12154</td>
-</tr>
-<tr>
-<td align="center">09/2026</td>
-<td align="center">2174850</td>
-<td align="center">12195</td>
-</tr>
-<tr>
-<td align="center">10/2026</td>
-<td align="center">2196450</td>
-<td align="center">12237</td>
-</tr>
-<tr>
-<td align="center">11/2026</td>
-<td align="center">2218050</td>
-<td align="center">12279</td>
-</tr>
-<tr>
-<td align="center">12/2026</td>
-<td align="center">2239650</td>
-<td align="center">12320</td>
-</tr>
-<tr>
-<td align="center">01/2027</td>
-<td align="center">2261250</td>
-<td align="center">12362</td>
-</tr>
-<tr>
-<td align="center">02/2027</td>
-<td align="center">2282850</td>
-<td align="center">12404</td>
-</tr>
-<tr>
-<td align="center">03/2027</td>
-<td align="center">2304450</td>
-<td align="center">12445</td>
-</tr>
-<tr>
-<td align="center">04/2027</td>
-<td align="center">2326050</td>
-<td align="center">12487</td>
-</tr>
-<tr>
-<td align="center">05/2027</td>
-<td align="center">2347650</td>
-<td align="center">12529</td>
-</tr>
-<tr>
-<td align="center">06/2027</td>
-<td align="center">2369250</td>
-<td align="center">12570</td>
-</tr>
-<tr>
-<td align="center">07/2027</td>
-<td align="center">2390850</td>
-<td align="center">12612</td>
-</tr>
-<tr>
-<td align="center">08/2027</td>
-<td align="center">2412450</td>
-<td align="center">12654</td>
-</tr>
-<tr>
-<td align="center">09/2027</td>
-<td align="center">2434050</td>
-<td align="center">12695</td>
-</tr>
-<tr>
-<td align="center">10/2027</td>
-<td align="center">2455650</td>
-<td align="center">12737</td>
-</tr>
-<tr>
-<td align="center">11/2027</td>
-<td align="center">2477250</td>
-<td align="center">12779</td>
-</tr>
-<tr>
-<td align="center">12/2027</td>
-<td align="center">2498850</td>
-<td align="center">12820</td>
-</tr>
-<tr>
-<td align="center">01/2028</td>
-<td align="center">2520450</td>
-<td align="center">12862</td>
-</tr>
-<tr>
-<td align="center">02/2028</td>
-<td align="center">2542050</td>
-<td align="center">12904</td>
-</tr>
-<tr>
-<td align="center">03/2028</td>
-<td align="center">2563650</td>
-<td align="center">12945</td>
-</tr>
-<tr>
-<td align="center">04/2028</td>
-<td align="center">2585250</td>
-<td align="center">12987</td>
-</tr>
-<tr>
-<td align="center">05/2028</td>
-<td align="center">2606850</td>
-<td align="center">13029</td>
-</tr>
-<tr>
-<td align="center">06/2028</td>
-<td align="center">2628450</td>
-<td align="center">13070</td>
-</tr>
-<tr>
-<td align="center">07/2028</td>
-<td align="center">2650050</td>
-<td align="center">13112</td>
-</tr>
-<tr>
-<td align="center">08/2028</td>
-<td align="center">2671650</td>
-<td align="center">13154</td>
-</tr>
-<tr>
-<td align="center">09/2028</td>
-<td align="center">2693250</td>
-<td align="center">13195</td>
-</tr>
-<tr>
-<td align="center">10/2028</td>
-<td align="center">2714850</td>
-<td align="center">13237</td>
-</tr>
-<tr>
-<td align="center">11/2028</td>
-<td align="center">2736450</td>
-<td align="center">13279</td>
-</tr>
-<tr>
-<td align="center">12/2028</td>
-<td align="center">2758050</td>
-<td align="center">13320</td>
-</tr>
-<tr>
-<td align="center">01/2029</td>
-<td align="center">2779650</td>
-<td align="center">13362</td>
-</tr>
-<tr>
-<td align="center">02/2029</td>
-<td align="center">2801250</td>
-<td align="center">13404</td>
-</tr>
-<tr>
-<td align="center">03/2029</td>
-<td align="center">2822850</td>
-<td align="center">13445</td>
-</tr>
-<tr>
-<td align="center">04/2029</td>
-<td align="center">2844450</td>
-<td align="center">13487</td>
-</tr>
-<tr>
-<td align="center">05/2029</td>
-<td align="center">2866050</td>
-<td align="center">13529</td>
-</tr>
-<tr>
-<td align="center">06/2029</td>
-<td align="center">2887650</td>
-<td align="center">13570</td>
-</tr>
-<tr>
-<td align="center">07/2029</td>
-<td align="center">2909250</td>
-<td align="center">13612</td>
-</tr>
-<tr>
-<td align="center">08/2029</td>
-<td align="center">2930850</td>
-<td align="center">13654</td>
-</tr>
-<tr>
-<td align="center">09/2029</td>
-<td align="center">2952450</td>
-<td align="center">13695</td>
-</tr>
-<tr>
-<td align="center">10/2029</td>
-<td align="center">2974050</td>
-<td align="center">13737</td>
-</tr>
-<tr>
-<td align="center">11/2029</td>
-<td align="center">2995650</td>
-<td align="center">13779</td>
-</tr>
-<tr>
-<td align="center">12/2029</td>
-<td align="center">3017250</td>
-<td align="center">13820</td>
-</tr>
-<tr>
-<td align="center">01/2030</td>
-<td align="center">3038850</td>
-<td align="center">13862</td>
-</tr>
-<tr>
-<td align="center">02/2030</td>
-<td align="center">3060450</td>
-<td align="center">13904</td>
-</tr>
-<tr>
-<td align="center">03/2030</td>
-<td align="center">3082050</td>
-<td align="center">13945</td>
-</tr>
-<tr>
-<td align="center">04/2030</td>
-<td align="center">3103650</td>
-<td align="center">13987</td>
-</tr>
-<tr>
-<td align="center">05/2030</td>
-<td align="center">3125250</td>
-<td align="center">14029</td>
-</tr>
-<tr>
-<td align="center">06/2030</td>
-<td align="center">3146850</td>
-<td align="center">14070</td>
-</tr>
-<tr>
-<td align="center">07/2030</td>
-<td align="center">3168450</td>
-<td align="center">14112</td>
-</tr>
-<tr>
-<td align="center">08/2030</td>
-<td align="center">3190050</td>
-<td align="center">14154</td>
-</tr>
-<tr>
-<td align="center">09/2030</td>
-<td align="center">3211650</td>
-<td align="center">14195</td>
-</tr>
-<tr>
-<td align="center">10/2030</td>
-<td align="center">3233250</td>
-<td align="center">14237</td>
-</tr>
-<tr>
-<td align="center">11/2030</td>
-<td align="center">3254850</td>
-<td align="center">14279</td>
-</tr>
-<tr>
-<td align="center">12/2030</td>
-<td align="center">3276450</td>
-<td align="center">14320</td>
-</tr>
-<tr>
-<td align="center">01/2031</td>
-<td align="center">3298050</td>
-<td align="center">14362</td>
-</tr>
-<tr>
-<td align="center">02/2031</td>
-<td align="center">3319650</td>
-<td align="center">14404</td>
-</tr>
-<tr>
-<td align="center">03/2031</td>
-<td align="center">3341250</td>
-<td align="center">14445</td>
-</tr>
-<tr>
-<td align="center">04/2031</td>
-<td align="center">3362850</td>
-<td align="center">14487</td>
-</tr>
-<tr>
-<td align="center">05/2031</td>
-<td align="center">3384450</td>
-<td align="center">14529</td>
-</tr>
-<tr>
-<td align="center">06/2031</td>
-<td align="center">3406050</td>
-<td align="center">14570</td>
-</tr>
-<tr>
-<td align="center">07/2031</td>
-<td align="center">3427650</td>
-<td align="center">14612</td>
-</tr>
-<tr>
-<td align="center">08/2031</td>
-<td align="center">3449250</td>
-<td align="center">14654</td>
-</tr>
-<tr>
-<td align="center">09/2031</td>
-<td align="center">3470850</td>
-<td align="center">14695</td>
-</tr>
-<tr>
-<td align="center">10/2031</td>
-<td align="center">3492450</td>
-<td align="center">14737</td>
-</tr>
-<tr>
-<td align="center">11/2031</td>
-<td align="center">3514050</td>
-<td align="center">14779</td>
-</tr>
-<tr>
-<td align="center">12/2031</td>
-<td align="center">3535650</td>
-<td align="center">14820</td>
-</tr>
-<tr>
-<td align="center">01/2032</td>
-<td align="center">3557250</td>
-<td align="center">14862</td>
-</tr>
-<tr>
-<td align="center">02/2032</td>
-<td align="center">3578850</td>
-<td align="center">14904</td>
-</tr>
-<tr>
-<td align="center">03/2032</td>
-<td align="center">3600450</td>
-<td align="center">14945</td>
-</tr>
-<tr>
-<td align="center">04/2032</td>
-<td align="center">3622050</td>
-<td align="center">14987</td>
-</tr>
-<tr>
-<td align="center">05/2032</td>
-<td align="center">3643650</td>
-<td align="center">15000</td>
-</tr>
-<tr>
-<td align="center">06/2032</td>
-<td align="center">3665250</td>
-<td align="center">15000</td>
-</tr>
-<tr>
-<td align="center">07/2032</td>
-<td align="center">3686850</td>
-<td align="center">15000</td>
-</tr>
-<tr>
-<td align="center">08/2032</td>
-<td align="center">3708450</td>
-<td align="center">15000</td>
-</tr>
-<tr>
-<td align="center">09/2032</td>
-<td align="center">3730050</td>
-<td align="center">15000</td>
-</tr>
-<tr>
-<td align="center">10/2032</td>
-<td align="center">3751650</td>
-<td align="center">15000</td>
-</tr>
-<tr>
-<td align="center">11/2032</td>
-<td align="center">3773250</td>
-<td align="center">15000</td>
-</tr>
-<tr>
-<td align="center">12/2032</td>
-<td align="center">3794850</td>
-<td align="center">15000</td>
-</tr>
-</tbody>
-</table>
-</details>
+<p>A Loki staking Requirement is the collateral requirement an operator stakes through a time-locked output, which can be unlocked as per the contributor's request. Upon a request to unlock the funds they will stay locked for an additional 15 days where the contributor will still receive rewards. In the extra field of the transaction, the Service Node operator includes the Loki address which may receive Service Node rewards. This address will also be used as the public key for Service Node operations such as <a href="../../Advanced/SwarmFlagging/">swarm</a> voting.</p>
+<p>Before each node joins the Service Node network, other nodes must individually validate that the said nodes collateral outlay matches the required amount, as per the decreasing collateralisation requirement. If the node is offline for a reasonable time, its uptime proof will not be sent to the other nodes resulting in a deregister of the node. Deregistered nodes will have their collateral requirement locked for 30 days.</p>
+<p>The staking requirement started at 45,000 during Service Node launch (block height 101250), and was to descend non-linearly to ~10,000 by year 4 (block height 1036800). A change was made at block height 230704 to have the LSR descend non-linearly to ~15000. An aproximation of the formula is as follows:
+<center><img alt="LSR" src="../../assets/LSR.svg" /></center></p>
+<p>Where <em>LSR</em> is the Loki Staking Requirement and <em>h</em> is the block height.</p>
+<p>To find out the <a href="https://imaginary.stream/sn/">loki staking requirement click here</a>.</p>
                 
                   
                 
@@ -2439,7 +2145,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ServiceNodeFunctions/" title="Service Node Functions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../SNOverview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2448,19 +2154,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Service Node Functions
+                Overview
               </span>
             </div>
           </a>
         
         
-          <a href="../SNFullGuide/" title="Service Node Full Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../DeregistrationRules/" title="Deregistration Rules" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Service Node Full Guide
+                Deregistration Rules
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2474,10 +2180,6 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Add Copyright
-          </div>
         
         powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
@@ -2500,6 +2202,8 @@
     
       <a href="https://www.youtube.com/lokinetwork" class="md-footer-social__link fa fa-youtube"></a>
     
+      <a href="https://www.facebook.com/LokiNetwork/" class="md-footer-social__link fa fa-facebook"></a>
+    
   </div>
 
       
@@ -2513,10 +2217,12 @@
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
-    
-    
+        <script src="../../JAVASCRIPT/links.js"></script>
       
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+        <script src="../../JAVASCRIPT/style.js"></script>
+      
+    
+    
       
     
   </body>

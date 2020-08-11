@@ -1,0 +1,2972 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="The following Loki Improvement Proposal (LIP) will discuss this idea, with the view that a Proof of Stake (PoS) scheme should be adopted. This LIP will also outline how this could be achieved in Loki with a new PoS scheme called “Pulse”.">
+      
+      
+        <link rel="canonical" href="https://docs.loki.network/Advanced/PulseLip5/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../Loki_favicon32x32.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Loki Documentation | Loki Proof of Stake | Pulse</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../CSS/style.css">
+    
+      <link rel="stylesheet" href="../../CSS/font.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#loki-proof-of-stake-mechanism-pulse" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.loki.network" title="Loki Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../../logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Loki Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Loki Documentation | Loki Proof of Stake | Pulse
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/loki-project/loki-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      lokidocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Wallets/WalletsOverview/" title="Wallets" class="md-tabs__link">
+          Wallets
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Mining/MiningOverview/" title="Mining" class="md-tabs__link">
+          Mining
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ServiceNodes/SNOverview/" title="Service Nodes" class="md-tabs__link">
+          Service Nodes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Lokinet/LokinetOverview/" title="Lokinet" class="md-tabs__link">
+          Lokinet
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../LokiServices/Messenger/Session/" title="Session" class="md-tabs__link">
+          Session
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../LokiServices/Blink/" title="Blink" class="md-tabs__link">
+          Blink
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../CheckpointingLip3/" title="Checkpointing" class="md-tabs__link">
+          Checkpointing
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Pulse" class="md-tabs__link md-tabs__link--active">
+          Pulse
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Developer/SNRPCGuide/" title="Advanced" class="md-tabs__link">
+          Advanced
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://docs.loki.network" title="Loki Docs" class="md-nav__button md-logo">
+      
+        <img src="../../logo.svg" width="48" height="48">
+      
+    </a>
+    Loki Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/loki-project/loki-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      lokidocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Introduction/LokiNetwork/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Introduction/GettingStarted/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Wallets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Wallets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/WalletsOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/WhatWalletToUse/" title="Which wallet should I use?" class="md-nav__link">
+      Which wallet should I use?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Addresses
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        Addresses
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/MainAddress/" title="Main Address" class="md-nav__link">
+      Main Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/SubAddress/" title="Sub Address" class="md-nav__link">
+      Sub Address
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Addresses/IntegratedAddress/" title="Integrated Address" class="md-nav__link">
+      Integrated Address
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/Multisignature/" title="Multsignature" class="md-nav__link">
+      Multsignature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/GuiWallet/loki-electron-guide/" title="Electron Gui Setup" class="md-nav__link">
+      Electron Gui Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/MobileWallet/RestoreMobileWalletGuide/" title="Mobile Wallet Restore" class="md-nav__link">
+      Mobile Wallet Restore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/loki-wallet-cliMacSetup/" title="CLI Mac Setup" class="md-nav__link">
+      CLI Mac Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletCommands/" title="CLI Wallet Commands" class="md-nav__link">
+      CLI Wallet Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreSeed/" title="CLI Restoring Wallet from Seed" class="md-nav__link">
+      CLI Restoring Wallet from Seed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/WalletRestoreKeys/" title="CLI Restoring Wallet from Keys" class="md-nav__link">
+      CLI Restoring Wallet from Keys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5-8" type="checkbox" id="nav-5-5-8">
+    
+    <label class="md-nav__link" for="nav-5-5-8">
+      Multisig
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-5-8">
+        Multisig
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/2of2Multisig/" title="2/2 Multisig" class="md-nav__link">
+      2/2 Multisig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/2of3Multisig/" title="2/3 Multisig" class="md-nav__link">
+      2/3 Multisig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Wallets/CliWallet/MofNMultisig/" title="M/N Multsig" class="md-nav__link">
+      M/N Multsig
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Mining
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Mining
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Mining/MiningOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Mining/ASICResistance/" title="ASIC Resistance" class="md-nav__link">
+      ASIC Resistance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Service Nodes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Service Nodes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/SNOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/StakingRequirement/" title="Staking Requirement" class="md-nav__link">
+      Staking Requirement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/DeregistrationRules/" title="Deregistration Rules" class="md-nav__link">
+      Deregistration Rules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/InfiniteStakingPrimer/" title="Infinite Staking Primer" class="md-nav__link">
+      Infinite Staking Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
+    
+    <label class="md-nav__link" for="nav-7-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/DebianPackageGuide/" title="Service Node Setup Guide" class="md-nav__link">
+      Service Node Setup Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/launcherconfig/" title="Launcher Config File" class="md-nav__link">
+      Launcher Config File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-nav__link">
+      Service Node Legacy Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/StorageServerGuide-Testnet/" title="Service Node TESTNET Guide" class="md-nav__link">
+      Service Node TESTNET Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ServiceNodes/OpenPort22023/" title="Port 22023 Not Open" class="md-nav__link">
+      Port 22023 Not Open
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Lokinet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Lokinet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/LokinetOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/PublicTestingGuide/" title="Public Testing Overview" class="md-nav__link">
+      Public Testing Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/SNApps/" title="SNApps" class="md-nav__link">
+      SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/LLARP/" title="LLARP" class="md-nav__link">
+      LLARP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
+    
+    <label class="md-nav__link" for="nav-8-5">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-5">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetGuiGuide/" title="Linux GUI Guide" class="md-nav__link">
+      Linux GUI Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/lokinet-mac-guide/" title="macOS Gui Guide" class="md-nav__link">
+      macOS Gui Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ReverseSSHGuide/" title="Anonymous Reverse SSH Guide" class="md-nav__link">
+      Anonymous Reverse SSH Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/lokinet-linux-guide/" title="Linux Command-line Guide" class="md-nav__link">
+      Linux Command-line Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/Install/" title="Linux - Build-It-Yourself" class="md-nav__link">
+      Linux - Build-It-Yourself
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/AccessingSNApps/" title="Accessing SNApps" class="md-nav__link">
+      Accessing SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetIRC/" title="Joining a Lokinet IRC Chat" class="md-nav__link">
+      Joining a Lokinet IRC Chat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/HostingSNApps/" title="Hosting SNApps" class="md-nav__link">
+      Hosting SNApps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetConfig/" title="Lokinet config files" class="md-nav__link">
+      Lokinet config files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/LokinetRouter/" title="Set up a Lokinet Router" class="md-nav__link">
+      Set up a Lokinet Router
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lokinet/Guides/ExitNode/" title="Exit Nodes" class="md-nav__link">
+      Exit Nodes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Session
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Session
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/Session/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/LokiNameSystem/" title="Loki Name System" class="md-nav__link">
+      Loki Name System
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/threat_model/" title="Threat Models" class="md-nav__link">
+      Threat Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/infrastructure/" title="Infrastructure" class="md-nav__link">
+      Infrastructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/message_routing/" title="Message Routing" class="md-nav__link">
+      Message Routing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/group_chats/" title="Group Chats" class="md-nav__link">
+      Group Chats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/testing/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/multidevice/" title="Multi-Device" class="md-nav__link">
+      Multi-Device
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/client_side_protection/" title="Client Side Protection" class="md-nav__link">
+      Client Side Protection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/attachments/" title="Attachments" class="md-nav__link">
+      Attachments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-11" type="checkbox" id="nav-9-11">
+    
+    <label class="md-nav__link" for="nav-9-11">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-11">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/HowToRegisterSessionNames/" title="Register Session/Wallet names" class="md-nav__link">
+      Register Session/Wallet names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/multi_device_setup/" title="Multi-Device Setup" class="md-nav__link">
+      Multi-Device Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/opengroup_setup/" title="OpenGroup Setup" class="md-nav__link">
+      OpenGroup Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/JoinOpenGroupMobile/" title="Join Open Group on Mobile" class="md-nav__link">
+      Join Open Group on Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Messenger/JoinOpenGroupDesktop/" title="Join Open Group on Desktop" class="md-nav__link">
+      Join Open Group on Desktop
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Blink
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Blink
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Blink/" title="Blink" class="md-nav__link">
+      Blink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Checkpointing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Checkpointing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CheckpointingLip3/" title="Checkpointing LIP" class="md-nav__link">
+      Checkpointing LIP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CheckpointingUpdate/" title="Safely Receiving Loki" class="md-nav__link">
+      Safely Receiving Loki
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      Pulse
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Pulse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Loki Documentation | Loki Proof of Stake | Pulse
+      </label>
+    
+    <a href="./" title="Loki Documentation | Loki Proof of Stake | Pulse" class="md-nav__link md-nav__link--active">
+      Loki Documentation | Loki Proof of Stake | Pulse
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-case-for-pos" title="The Case for PoS" class="md-nav__link">
+    The Case for PoS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#increases-the-investment-that-is-needed-to-attack-loki" title="Increases the Investment That Is Needed to Attack Loki" class="md-nav__link">
+    Increases the Investment That Is Needed to Attack Loki
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#it-presents-an-increased-sunken-cost-for-an-attacker" title="It Presents an Increased Sunken Cost for an Attacker" class="md-nav__link">
+    It Presents an Increased Sunken Cost for an Attacker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-environmental-impact" title="Reduced Environmental Impact" class="md-nav__link">
+    Reduced Environmental Impact
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pulse-overview" title="Pulse Overview" class="md-nav__link">
+    Pulse Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pulse-specifics" title="Pulse Specifics" class="md-nav__link">
+    Pulse Specifics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposal-round" title="Proposal Round" class="md-nav__link">
+    Proposal Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-round" title="Commit Round" class="md-nav__link">
+    Commit Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reveal-round" title="Reveal Round" class="md-nav__link">
+    Reveal Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-submission" title="Block Submission" class="md-nav__link">
+    Block Submission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-times" title="Proposed Times" class="md-nav__link">
+    Proposed Times
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-pulse" title="Properties of Pulse" class="md-nav__link">
+    Properties of Pulse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-and-presumptions" title="Prerequisites and Presumptions" class="md-nav__link">
+    Prerequisites and Presumptions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-reward-restructure" title="Block Reward Restructure" class="md-nav__link">
+    Block Reward Restructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-synchronicity" title="Time Synchronicity" class="md-nav__link">
+    Time Synchronicity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-nodes" title="Service Nodes" class="md-nav__link">
+    Service Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fault-tolerance" title="Fault Tolerance" class="md-nav__link">
+    Fault Tolerance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#failures" title="Failures" class="md-nav__link">
+    Failures
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeouts-and-swap-blocks" title="Timeouts and Swap Blocks" class="md-nav__link">
+    Timeouts and Swap Blocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demerits-and-deregistrations" title="Demerits and Deregistrations" class="md-nav__link">
+    Demerits and Deregistrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-failure-cases" title="Common Failure Cases" class="md-nav__link">
+    Common Failure Cases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leader-does-not-submit-a-candidate-block" title="Leader Does Not Submit a Candidate Block" class="md-nav__link">
+    Leader Does Not Submit a Candidate Block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-enough-validators-participate-in-the-commit-or-reveal-rounds" title="Not Enough Validators Participate in the Commit or Reveal Rounds" class="md-nav__link">
+    Not Enough Validators Participate in the Commit or Reveal Rounds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validators-are-unable-to-submit-a-block-due-to-differences-in-revealed-values" title="Validators Are Unable to Submit a Block Due to Differences in Revealed Values" class="md-nav__link">
+    Validators Are Unable to Submit a Block Due to Differences in Revealed Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-signs-two-different-blocks" title="Validator Signs Two Different Blocks" class="md-nav__link">
+    Validator Signs Two Different Blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traditional-pos-attacks" title="Traditional PoS Attacks" class="md-nav__link">
+    Traditional PoS Attacks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stake-grind-attacks" title="Stake grind attacks" class="md-nav__link">
+    Stake grind attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-range-attacks" title="Long Range Attacks" class="md-nav__link">
+    Long Range Attacks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-nodes" title="Online Nodes" class="md-nav__link">
+    Online Nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syncing-nodes-or-partially-offline-nodes" title="Syncing Nodes or Partially Offline Nodes" class="md-nav__link">
+    Syncing Nodes or Partially Offline Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nothing-at-stake" title="Nothing at Stake" class="md-nav__link">
+    Nothing at Stake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos-attacks" title="DDOS attacks" class="md-nav__link">
+    DDOS attacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations" title="Considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety-of-commit-reveal-schemes" title="Safety of Commit Reveal schemes" class="md-nav__link">
+    Safety of Commit Reveal schemes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocktimes" title="Blocktimes" class="md-nav__link">
+    Blocktimes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-1" type="checkbox" id="nav-13-1">
+    
+    <label class="md-nav__link" for="nav-13-1">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-1">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/DaemonRPCGuide/" title="Daemon RPC Guide - Old" class="md-nav__link">
+      Daemon RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/DaemonRPCBeta/" title="Daemon RPC Guide - Beta" class="md-nav__link">
+      Daemon RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/WalletRPCGuide/" title="Wallet RPC Guide - Old" class="md-nav__link">
+      Wallet RPC Guide - Old
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/WalletRPCBeta/" title="Wallet RPC Guide - Beta" class="md-nav__link">
+      Wallet RPC Guide - Beta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Developer/FAQ/" title="Developer FAQ" class="md-nav__link">
+      Developer FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+    
+    <label class="md-nav__link" for="nav-13-2">
+      Loki Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-2">
+        Loki Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/LokiServicesOverview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LokiServices/Blink/" title="Blink" class="md-nav__link">
+      Blink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
+    
+    <label class="md-nav__link" for="nav-13-3">
+      Attack Prevention
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-3">
+        Attack Prevention
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DenialofServiceAttacks/" title="Denial of Service Attacks" class="md-nav__link">
+      Denial of Service Attacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IPandPacketBlocking/" title="IP and Packet Blocking" class="md-nav__link">
+      IP and Packet Blocking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SwarmFlagging/" title="Swarm Flagging" class="md-nav__link">
+      Swarm Flagging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-4" type="checkbox" id="nav-13-4">
+    
+    <label class="md-nav__link" for="nav-13-4">
+      Contributing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-4">
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/HowToContributeToLokiDocs/" title="How to Contribute to LokiDocs" class="md-nav__link">
+      How to Contribute to LokiDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/VULNERABILITY_RESPONSE_LOKI/" title="Vulnerability Response" class="md-nav__link">
+      Vulnerability Response
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Contributing/Issue_Template/" title="Github Issue Template Example" class="md-nav__link">
+      Github Issue Template Example
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-5" type="checkbox" id="nav-13-5">
+    
+    <label class="md-nav__link" for="nav-13-5">
+      Governance
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-5">
+        Governance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/Governance/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/TheLokiFoundation/" title="The Loki Foundation" class="md-nav__link">
+      The Loki Foundation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Governance/LokiFundingSystem/" title="Loki Funding System" class="md-nav__link">
+      Loki Funding System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TechnicalSpecs/" title="Technical Specs" class="md-nav__link">
+      Technical Specs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Cryptoeconomics/" title="Cryptoeconomics" class="md-nav__link">
+      Cryptoeconomics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SybilResistance/" title="Sybil Resistance" class="md-nav__link">
+      Sybil Resistance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DynamicBlockSize/" title="Dynamic Block Size" class="md-nav__link">
+      Dynamic Block Size
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CryptoNoteElements/" title="CryptoNote Elements" class="md-nav__link">
+      CryptoNote Elements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lokid/" title="lokid" class="md-nav__link">
+      lokid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-12" type="checkbox" id="nav-13-12">
+    
+    <label class="md-nav__link" for="nav-13-12">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-13-12">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UsingTor/" title="Using Tor" class="md-nav__link">
+      Using Tor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Debugging/" title="Debugging" class="md-nav__link">
+      Debugging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AcceptingLoki/" title="Accepting Loki for Merchants and Exchanges" class="md-nav__link">
+      Accepting Loki for Merchants and Exchanges
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-case-for-pos" title="The Case for PoS" class="md-nav__link">
+    The Case for PoS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#increases-the-investment-that-is-needed-to-attack-loki" title="Increases the Investment That Is Needed to Attack Loki" class="md-nav__link">
+    Increases the Investment That Is Needed to Attack Loki
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#it-presents-an-increased-sunken-cost-for-an-attacker" title="It Presents an Increased Sunken Cost for an Attacker" class="md-nav__link">
+    It Presents an Increased Sunken Cost for an Attacker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-environmental-impact" title="Reduced Environmental Impact" class="md-nav__link">
+    Reduced Environmental Impact
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pulse-overview" title="Pulse Overview" class="md-nav__link">
+    Pulse Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pulse-specifics" title="Pulse Specifics" class="md-nav__link">
+    Pulse Specifics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposal-round" title="Proposal Round" class="md-nav__link">
+    Proposal Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-round" title="Commit Round" class="md-nav__link">
+    Commit Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reveal-round" title="Reveal Round" class="md-nav__link">
+    Reveal Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-submission" title="Block Submission" class="md-nav__link">
+    Block Submission
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-times" title="Proposed Times" class="md-nav__link">
+    Proposed Times
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-pulse" title="Properties of Pulse" class="md-nav__link">
+    Properties of Pulse
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-and-presumptions" title="Prerequisites and Presumptions" class="md-nav__link">
+    Prerequisites and Presumptions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-reward-restructure" title="Block Reward Restructure" class="md-nav__link">
+    Block Reward Restructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-synchronicity" title="Time Synchronicity" class="md-nav__link">
+    Time Synchronicity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-nodes" title="Service Nodes" class="md-nav__link">
+    Service Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fault-tolerance" title="Fault Tolerance" class="md-nav__link">
+    Fault Tolerance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#failures" title="Failures" class="md-nav__link">
+    Failures
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeouts-and-swap-blocks" title="Timeouts and Swap Blocks" class="md-nav__link">
+    Timeouts and Swap Blocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demerits-and-deregistrations" title="Demerits and Deregistrations" class="md-nav__link">
+    Demerits and Deregistrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-failure-cases" title="Common Failure Cases" class="md-nav__link">
+    Common Failure Cases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leader-does-not-submit-a-candidate-block" title="Leader Does Not Submit a Candidate Block" class="md-nav__link">
+    Leader Does Not Submit a Candidate Block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-enough-validators-participate-in-the-commit-or-reveal-rounds" title="Not Enough Validators Participate in the Commit or Reveal Rounds" class="md-nav__link">
+    Not Enough Validators Participate in the Commit or Reveal Rounds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validators-are-unable-to-submit-a-block-due-to-differences-in-revealed-values" title="Validators Are Unable to Submit a Block Due to Differences in Revealed Values" class="md-nav__link">
+    Validators Are Unable to Submit a Block Due to Differences in Revealed Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validator-signs-two-different-blocks" title="Validator Signs Two Different Blocks" class="md-nav__link">
+    Validator Signs Two Different Blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traditional-pos-attacks" title="Traditional PoS Attacks" class="md-nav__link">
+    Traditional PoS Attacks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stake-grind-attacks" title="Stake grind attacks" class="md-nav__link">
+    Stake grind attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-range-attacks" title="Long Range Attacks" class="md-nav__link">
+    Long Range Attacks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-nodes" title="Online Nodes" class="md-nav__link">
+    Online Nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syncing-nodes-or-partially-offline-nodes" title="Syncing Nodes or Partially Offline Nodes" class="md-nav__link">
+    Syncing Nodes or Partially Offline Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nothing-at-stake" title="Nothing at Stake" class="md-nav__link">
+    Nothing at Stake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos-attacks" title="DDOS attacks" class="md-nav__link">
+    DDOS attacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations" title="Considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety-of-commit-reveal-schemes" title="Safety of Commit Reveal schemes" class="md-nav__link">
+    Safety of Commit Reveal schemes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocktimes" title="Blocktimes" class="md-nav__link">
+    Blocktimes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/loki-project/loki-docs/edit/master/docs/Advanced/PulseLip5.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="loki-proof-of-stake-mechanism-pulse">Loki Proof of Stake Mechanism: Pulse<a class="headerlink" href="#loki-proof-of-stake-mechanism-pulse" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span>Metadata 
+LIP Number: 5 
+Title: Pulse [Foundation Vote] [Not Yet Voted]
+Author/s: Kee Jefferys
+Status: Final 
+Type: Core
+Created: date (2019-09-17) 
+</pre></div>
+
+
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>As Loki moves closer to enabling <a href="../../ServiceNodes/SNOverview/">Service Node</a> checkpointing on the mainnet, the role miners play in the Loki ecosystem has come under question. Historically, Loki <a href="../../Mining/MiningOverview/">miners</a> have secured the blockchain with Proof of Work (PoW), produced blocks, and organised transactions. However Service Node <a href="../CheckpointingLip3/">checkpointing</a> will provide security to the blockchain, diminishing a miner’s role to that of only producing blocks and organising transactions. </p>
+<p>This naturally raises questions about whether miners can, or should be, removed in favour of a system where Service Nodes directly produce blocks, order transactions and secure the chain. </p>
+<p>The following Loki Improvement Proposal (LIP) will discuss this idea, with the view that a Proof of Stake (PoS) scheme should be adopted. This LIP will also outline how this could be achieved in Loki with a new PoS scheme called “Pulse”.</p>
+<h3 id="the-case-for-pos">The Case for PoS<a class="headerlink" href="#the-case-for-pos" title="Permanent link">&para;</a></h3>
+<p>There are several clear arguments that can be made for the adoption of PoS for Loki which I will elaborate on. </p>
+<h3 id="increases-the-investment-that-is-needed-to-attack-loki">Increases the Investment That Is Needed to Attack Loki<a class="headerlink" href="#increases-the-investment-that-is-needed-to-attack-loki" title="Permanent link">&para;</a></h3>
+<p>To double spend a transaction, an attacker needs to produce an alternate blockchain with more cumulative difficulty in secret, which reverses a previously spent transaction. Assuming the malicious miner is not using advanced strategies (selfish mining, cartels), this requires the miner obtain 51% of the hashing power. </p>
+<p>Using RandomXL, Loki’s current mining algorithm which is optimized for CPU performance, a Ryzen 1700 is able to produce about 4500 hashes per second. The total hashrate for Loki is currently about 17 Megahashes. Let's assume every miner is using a Ryzen 1700. This would equate to about 3,691 Ryzen 1700 chips on the Loki Network. If we estimate the hardware cost (including peripherals) of a malicious attacker, each of these miners could conservatively cost 400$ USD[1]. This means that for 51% of the hashrate to be obtained, an attacker would have to buy about 730,000$ USD worth of hardware to successfully attack the network. Keep in mind this uses very conservative estimates with consumer level pricing. It's likely that an attacker would be able to decrease their cost per unit well below 400$ USD, or the attacker could rent the equivalent hashing power, further reducing the cost of an attack.</p>
+<p>Compromising Masternode PoS would require that the malicious party or consortium own or rent control over 51% of the staked supply. As of the time of writing,, Loki has 620 staked Service Nodes and each stake is approximately 22,000 Loki. This means the malicious operators would need to gain control of about 13.6 million Loki, and with the current cost of Loki at ~0.15$ USD, this equates to about 2 million USD. This scenario ignores the fact that attempting to obtain such a large amount of Loki from the open market would inevitably lead to an increase in price (as with lower supply, and fixed demand, price increases) which would further inflate the cost. </p>
+<h3 id="it-presents-an-increased-sunken-cost-for-an-attacker">It Presents an Increased Sunken Cost for an Attacker<a class="headerlink" href="#it-presents-an-increased-sunken-cost-for-an-attacker" title="Permanent link">&para;</a></h3>
+<p>RandomXL is designed to provide increased performance on hardware similar to general purpose CPUs, which means that hardware used in any attack is not a sunk cost as it can be recovered by selling or repurposing hardware used in the attack. In a Proof of Stake system where attackers have to buy into the network, performing an attack is likely to reduce users trust in the security of the network, making users likely to sell coins and devalue the attackers own stake. This makes it harder for the attacker to recoup their costs when selling their stake back to the network. </p>
+<h3 id="reduced-environmental-impact">Reduced Environmental Impact<a class="headerlink" href="#reduced-environmental-impact" title="Permanent link">&para;</a></h3>
+<p>Proof of Work by its nature requires thousands of miners compete against each other to solve computationally hard mathematical problems. Many people are concerned about the environmental impact of mining, as it uses a massive amount of electricity. Proof of Stake, as implemented in Pulse does not require these energy intensive calculations: instead, it relies on the cooperation of Loki Service Nodes — which use comparatively small amounts of electricity. </p>
+<h2 id="pulse-overview">Pulse Overview<a class="headerlink" href="#pulse-overview" title="Permanent link">&para;</a></h2>
+<p>Every 120 seconds, a leader is chosen from the top of the Service Node list. This leader creates a candidate block which they send to 11 randomly chosen Service Node validators. The validators ensure the block is valid, then perform a group ceremony to create a random value. Once the ceremony is finished, each validator includes the final random value in the candidate block, which they sign and send to their validator peers. Once a candidate block has more than 7 signatures, it can be published to the network as a valid block. The process is then repeated to create the next block.</p>
+<h3 id="pulse-specifics">Pulse Specifics<a class="headerlink" href="#pulse-specifics" title="Permanent link">&para;</a></h3>
+<h4 id="proposal-round">Proposal Round<a class="headerlink" href="#proposal-round" title="Permanent link">&para;</a></h4>
+<p>A single leader chosen sequentially from the Service Node list, plus a group of 11 validators chosen deterministically from the random value included in the last block.
+The leader scans the transaction pool and collects valid transactions into a block. With this information, the leader creates a candidate block which contains a coinbase transaction. The leader is rewarded according to the Service Node coinbase formula, and receives any transaction tx fees included in the block.
+The leader signs this candidate block and sends it to all of the validators, who each send it to 3 others until all validators successfully receive the candidate block.
+Every validator should now wait {candidate_wait}.</p>
+<h4 id="commit-round">Commit Round<a class="headerlink" href="#commit-round" title="Permanent link">&para;</a></h4>
+<p>After waiting {candidate_wait}, every validator now generates a 128 bit integer, and commits to that integer by sending the hash of that integer to all other validators.
+Validators now wait {commit_wait}.</p>
+<h4 id="reveal-round">Reveal Round<a class="headerlink" href="#reveal-round" title="Permanent link">&para;</a></h4>
+<p>After waiting {commit_wait}, validators may reveal the pre-image of the hash — which in this case is the random integer they committed to. They then send the pre-image of their committed hash to all validating peers.
+Validators now wait {reveal_wait}.
+After waiting {reveal_wait}, all validators should now have a subset of the revealed values, which they can combine locally to produce the final random value. Validators can add this to the candidate block and sign the resultant block. This signature is then sent to all other validators.  </p>
+<h4 id="block-submission">Block Submission<a class="headerlink" href="#block-submission" title="Permanent link">&para;</a></h4>
+<p>All validators now wait {submit_wait}.
+Once {submit_wait} has elapsed, validators check the validity of the other validator’s signatures, ensuring they are signing the same candidate block and signing the same final random integer.
+Once signatures are validated, any validator in the quorum may submit a block to the network which includes at least 7 signatures from the group of validators.  </p>
+<h4 id="proposed-times">Proposed Times<a class="headerlink" href="#proposed-times" title="Permanent link">&para;</a></h4>
+<p>{candidate_wait} = 30 seconds
+{commit wait} = 20 seconds
+{reveal_wait} = 30 seconds
+{submit_wait} = 40 seconds</p>
+<h3 id="properties-of-pulse">Properties of Pulse<a class="headerlink" href="#properties-of-pulse" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Partially synchronous with reasonable timeouts</li>
+<li>Produces an unpredictable value that cannot be significantly biased by members of the quorum</li>
+<li>The scheme tolerates failure of up to ~45% of Service Nodes assuming a quorum size of 11</li>
+<li>Targets a blocktime of 120 seconds</li>
+</ul>
+<h2 id="prerequisites-and-presumptions">Prerequisites and Presumptions<a class="headerlink" href="#prerequisites-and-presumptions" title="Permanent link">&para;</a></h2>
+<h3 id="block-reward-restructure">Block Reward Restructure<a class="headerlink" href="#block-reward-restructure" title="Permanent link">&para;</a></h3>
+<p>To implement Pulse, we assume miners have been completely removed from the network, and that mining rewards are either being reallocated to Service Nodes or not created at all. The current logic of sequentially rewarding each Service Node in a sorted list would be preserved, however for a Service Node to win this reward they must act honestly as a leader by producing a valid candidate block.</p>
+<h3 id="time-synchronicity">Time Synchronicity<a class="headerlink" href="#time-synchronicity" title="Permanent link">&para;</a></h3>
+<p>We assume that Service Nodes maintain relative synchronicity (within the boundary of the enforced timeouts), which means that when an event like a creation of a new block is triggered, all Service Nodes should react to this event within a reasonable amount of time. </p>
+<h3 id="service-nodes">Service Nodes<a class="headerlink" href="#service-nodes" title="Permanent link">&para;</a></h3>
+<p>We assume that a large and diverse network of staked Service Nodes exist; and that these Service Nodes will act as validators and leaders in the scheme. Because of their significant stake they may be punished by having their stake locked for a period of time (currently 30 days) using a deregistration transaction. </p>
+<h2 id="fault-tolerance">Fault Tolerance<a class="headerlink" href="#fault-tolerance" title="Permanent link">&para;</a></h2>
+<h3 id="failures">Failures<a class="headerlink" href="#failures" title="Permanent link">&para;</a></h3>
+<p>To make the first implementation of Pulse fairly straightforward, there will only ever be one way in which it can fail: a timeout. Initially this will sacrifice some speed — especially when recovering offline validators or leaders — however, this process can be sped up significantly once we have assessed the stability of the protocol in a live environment.</p>
+<h4 id="timeouts-and-swap-blocks">Timeouts and Swap Blocks<a class="headerlink" href="#timeouts-and-swap-blocks" title="Permanent link">&para;</a></h4>
+<p>A timeout occurs when a valid block is not produced after max_timeout, which is the sum of all of the wait periods — effectively 120 seconds. As soon as the leader of the next quorum detects a timeout, they may immediately begin building and distributing a candidate block with a “swap” tag to their validators. If this block is signed by the validators, the swap tag will indicate that there was a quorum failure to newly syncing nodes, and nodes who have been offline. The next leader can always be calculated by XOR’ing the last randomly produced value by a counter which iterates every time a block isn’t created [2].</p>
+<h4 id="demerits-and-deregistrations">Demerits and Deregistrations<a class="headerlink" href="#demerits-and-deregistrations" title="Permanent link">&para;</a></h4>
+<p>Validators in a quorum can submit intent to demerit messages at any stage for a leader (or any other validator in their quorum) if they feel they have not followed the protocol. For example, if a leader never publishes a candidate block, any validator in the quorum may send an intent to demerit message to their other peers. If this message is signed by the majority of other validators it may be submitted to the network as a demerit point message. This message is not a transaction, and simply propagates through the p2p layer. When obligation quorums are created, each node selected for that obligation quorum checks their local log for demerit points, and if more than a predefined amount of demerit points have been seen in a period of time then a deregistration or decommission transaction with the relevant signed demerit points can be submitted to the network.  </p>
+<h3 id="common-failure-cases">Common Failure Cases<a class="headerlink" href="#common-failure-cases" title="Permanent link">&para;</a></h3>
+<p>To get a better understanding of Pulse, it is worth discussing what happens in some common failure cases.</p>
+<ul>
+<li>A leader does not submit a candidate block</li>
+<li>Not enough validators participate in the commit or reveal rounds</li>
+<li>Validators sign two different blocks </li>
+<li>Validators are unable to submit a block due to differences in revealed values </li>
+</ul>
+<h4 id="leader-does-not-submit-a-candidate-block">Leader Does Not Submit a Candidate Block<a class="headerlink" href="#leader-does-not-submit-a-candidate-block" title="Permanent link">&para;</a></h4>
+<p>If a leader fails to construct and send a candidate block, the validators will be triggered to submit an intent to demerit message. If this message is signed by a simple majority of the quorum, a demerit point can be applied to the leader. The next leader will trigger the creation of a new block when max_timeout has elapsed. </p>
+<h4 id="not-enough-validators-participate-in-the-commit-or-reveal-rounds">Not Enough Validators Participate in the Commit or Reveal Rounds<a class="headerlink" href="#not-enough-validators-participate-in-the-commit-or-reveal-rounds" title="Permanent link">&para;</a></h4>
+<p>Although all Service Nodes are incentivised to cooperate during the commit and reveal phases of the protocol to avoid demerit points, some participants may act maliciously or go offline during the process. The protocol should be able to tolerate the failure of 6 of 11 nodes during the commit reveal stage. </p>
+<p>As above, any validator that does not participate in a commit or reveal round, or reveals a different value from their commitment, can be flagged by other validators with an intent to demerit message. If this message is signed by a majority of nodes, this message can be submitted to the network as evidence of a node’s non-performance in a block creation quorum. </p>
+<p>If more than 6 of 11 nodes do not participate in the commit or reveal round, the quorum will not be able to create a block — which means the next quorum can take over block creation when max_timeout is reached. </p>
+<h4 id="validators-are-unable-to-submit-a-block-due-to-differences-in-revealed-values">Validators Are Unable to Submit a Block Due to Differences in Revealed Values<a class="headerlink" href="#validators-are-unable-to-submit-a-block-due-to-differences-in-revealed-values" title="Permanent link">&para;</a></h4>
+<p>There may be a number of cases where not all of the Service Nodes correctly receive all of the committed or revealed values. This will lead to the final random value that a validator calculates not matching the rest of the validators values. </p>
+<p>As with other errors the scheme will progress normally as long as the revealed values for 7 of the 11 validators match. Nodes with invalid revealed values can query the other validators in their quorum again to receive any values they missed during the two rounds.</p>
+<p>If more than 7 nodes disagree on the final revealed value, then the scheme will fail after max_timeout and the next leader may begin the process of producing a new block.</p>
+<h4 id="validator-signs-two-different-blocks">Validator Signs Two Different Blocks<a class="headerlink" href="#validator-signs-two-different-blocks" title="Permanent link">&para;</a></h4>
+<p>Any Service Node, including a validator or leader, may submit a deregistration transaction if they can produce signatures from any other Service Node that signs multiple blocks which compete for the same height, or signs a competing chain once more than two checkpoints have been applied.</p>
+<p>This means that any node that signs blocks indiscriminately in block creation quorums will be immediately removed from the network with their funds locked. </p>
+<h2 id="traditional-pos-attacks">Traditional PoS Attacks<a class="headerlink" href="#traditional-pos-attacks" title="Permanent link">&para;</a></h2>
+<h3 id="stake-grind-attacks">Stake grind attacks<a class="headerlink" href="#stake-grind-attacks" title="Permanent link">&para;</a></h3>
+<p>Stake grinding usually refers to a class of attacks where a validator or leader can iterate values to bias the selection of the next chosen validator. Since validators are chosen by using a collaboratively generated random integer in each block, it is possible to bias the results of the scheme. However the only way to do this effectively is for a validator to choose not to reveal a value that they previously committed. In the context of Service Node selection for the next quorum, this biasing is extremely weak, and the action of committing but failing to reveal a value leads to a demerit message being submitted for the validator who performs such an action, making this attack infeasible.</p>
+<h3 id="long-range-attacks">Long Range Attacks<a class="headerlink" href="#long-range-attacks" title="Permanent link">&para;</a></h3>
+<p>Long range attacks are attacks where nodes that are syncing the chain, or that are offline for a period of time, can be convinced of an alternate state of the chain. This occurs because old Service Nodes can use previously held Service Node keys to resign blocks that appear as alternate chains.</p>
+<h4 id="online-nodes">Online Nodes<a class="headerlink" href="#online-nodes" title="Permanent link">&para;</a></h4>
+<p>The Loki blockchain already provides a solution for online nodes with Service Node checkpointing. This prevents Service Nodes from altering blocks that have received more than 2 checkpoints[3]. However, tackling the problem of nodes that go offline and miss more than two checkpoints in a row or nodes who are syncing for the first time is more difficult.</p>
+<h4 id="syncing-nodes-or-partially-offline-nodes">Syncing Nodes or Partially Offline Nodes<a class="headerlink" href="#syncing-nodes-or-partially-offline-nodes" title="Permanent link">&para;</a></h4>
+<p>When a node has no previous state of the blockchain, or has been offline long enough to miss enough checkpoints that it is infeasible for it to validate the non alteration of blocks, it must use an external trusted source to correctly identify the main chain. This is usually referred to as weak subjectivity [4].</p>
+<p>The easiest way to solve this issue is to allow syncing Service Nodes, and Service Nodes that have been offline to refer to the seed nodes to ascertain what is the true chain. This is already the case in Proof of Work blockchains, since seed nodes provide the initial list of peers to sync from. To implement weak subjectivity in Loki, seed nodes should additionally provide a list of the latest checkpoints, so that when a client is syncing they can ensure they are syncing to the correct chain — and not being segmented onto a network with valid but altered signatures.</p>
+<h3 id="nothing-at-stake">Nothing at Stake<a class="headerlink" href="#nothing-at-stake" title="Permanent link">&para;</a></h3>
+<p>The ‘nothing at stake’ problem references a validator’s tendency to sign or authorise multiple competing blocks in a Proof of Stake system. They are incentivised to do this because they can’t be sure which chain will become the true chain in the long term, thereby they should sign competing blocks to ensure they don't miss rewards. </p>
+<p>With Pulse, the ‘nothing at stake’ problem is prevented by allowing nodes in the network to submit evidence of double signed blocks. If this evidence can be validated, the offending node can be deregistered from the network, providing a punishment for nodes who do not effectively choose a single block to sign. </p>
+<h3 id="ddos-attacks">DDOS attacks<a class="headerlink" href="#ddos-attacks" title="Permanent link">&para;</a></h3>
+<p>All Service Nodes in the Loki network maintain a public IP address so they are reachable by other Service Nodes and <a href="https://lokinet.org">Lokinet</a>/<a href="https://getsession.org">Session</a> users. These IP addresses are held in a distributed list that anyone can access. This opens the Service Node network and especially block producing quorums to DDoS attacks. For example, an attacker could wait for a block to be successfully published and immediately identify the members of the next quorum who will produce a block. With this information, they could launch a DDoS attack aimed to interrupt the communication between validators, or between the leader and validators. If successful, they would prevent a new block from being produced and could continue this attack on successive quorums. </p>
+<p>Although individual Service Nodes have incentives to prevent DDoS attacks (so they can earn rewards and avoid demerit points), there are some protections we can offer in the Loki software suite which can be deployed in the case that the previous block has failed to be produced. The most trivial protection is that after a failure in block creation, Service Nodes in the next selected quorum should ignore any connections from IP addresses which do not belong to another Service Node. This limits the scope of the attacker’s DDoS to only Service Nodes — which are costly to operate and far less numerous than a botnet-like DDoS attack. Service Node operators could also reasonably rate limit other Service Nodes on a per key basis, choosing not to respond to Service Nodes who put undue strain on their own networks. </p>
+<h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
+<h3 id="safety-of-commit-reveal-schemes">Safety of Commit Reveal schemes<a class="headerlink" href="#safety-of-commit-reveal-schemes" title="Permanent link">&para;</a></h3>
+<p>Collaborative commit reveal schemes for generating random values are well studied, and limitations on such schemes are well known [5][6][7]. The primary downside to using this type of scheme is that although committed values cannot be changed after they have been committed, a contributor to the scheme may bias the results by not revealing their committed value at all.</p>
+<p>For example, say a block creation quorum produces a value between 0 and 10 each block, and Alice wants to run an online casino which uses this random integer to flip a coin, with bets being placed on heads or tails. Alice’s casino algorithm reads the random integer from the blockchain and if the random value is between 0-4 then the coin is tails, and if it's between 5-10 it’s heads.</p>
+<p>A possible attack on this application would be for a Service Node operator, let’s call her “Mallory”, to wait to become a validator in a quorum, act honestly, and commit to a random value. Once she has committed to the scheme, she waits for the other validators to reveal their original integers. She can now calculate the shared random result for those validators that have revealed. Let’s suppose their combined final value will be 3. Using this information and whatever deterministic algorithm that is used to combine each validators contribution, Mallory can now decide whether or not she wants to reveal her result and add her contribution to this data.</p>
+<p>If Mallory bets on tails and realises revealing her commitment would change the overall result to heads, then she should not reveal her commitment. If her commitment (when combined with the other commitments) still selects a number under 3, then she can reveal her committed value. Of course, the cost of not revealing a commitment is demerit points being applied to Mallory’s Service Node which will lead to deregistration in the event that Mallory has not revealed her commitments consistently. However, as long as Mallory’s winnings are more than the cost of being deregistered from the Service Node network, her dishonest actions are financially incentivised.</p>
+<p>It should be clear from this example that Service Nodes can significantly bias the results of decisions which have few available outcomes, like a coin toss.  So applications should not use the random integer we are creating for these type of use cases! The Loki blockchain, however, does not use the source of randomness in this way. We use the randomness to choose Service Nodes in a Service Node list, where biasing the results has an insignificant effect as the possible outcomes are far more numerous. With Pulse, the randomness seeds an algorithm that chooses a combination of 11 nodes out of currently about 620 nodes. Mallory, in this case, would be able to choose between two (and only two) different random samples of 11 nodes from the selection of 620, but this single extra choice is highly unlikely to provide a notable benefit in terms of opportunistic selection.</p>
+<h3 id="blocktimes">Blocktimes<a class="headerlink" href="#blocktimes" title="Permanent link">&para;</a></h3>
+<p>In Loki, a block is created on average every 120 seconds, however block production is distributed on an exponential distribution, meaning blocks will often be created earlier or later than expected. This effect is exacerbated during large hashrate fluctuations, and this unpredictability can be frustrating for users waiting for transactions to confirm.</p>
+<p>Blocktime in Pulse is controlled through mandatory wait periods that are added at each stage of block creation. Conservative estimates have been taken for the first implementation of the proposed scheme, allowing for nodes who maintain relative synchronicity to successfully participate in the scheme. It's likely that after testing we can reduce or eliminate some of these mandatory wait periods thereby reducing the blocktime. However, in the first implementation, we target a predictable block time of 120 seconds — excluding the rare case where block creation fails. In this case, a block would be created in the subsequent 120 seconds. This means that in a majority of cases users won't be left wondering when the next block is coming, since blocks will be predictability created every 120 seconds. </p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Pulse is a robust yet simple scheme which provides a clear vision for the future of block creation and transaction ordering in the Loki Network. Pulse does this while also increasing security and decreasing the need to use energy intensive proof of work. Additionally, it better aligns existing incentive structures to reward those who do the most work to create order, and secure the network.</p>
+<p>[1]"PC part picker Ryzen 1700 build" https://pcpartpicker.com/list/wGVPyX.</p>
+<p>[2]"Exclusive or - Wikipedia." https://en.wikipedia.org/wiki/Exclusive_or.</p>
+<p>[3]"loki-improvement-proposals/LIP-3.md at master · loki-project ... - GitHub." 
+https://github.com/loki-project/loki-improvement-proposals/blob/master/LIPS/LIP-3.md.</p>
+<p>[4]"Weak Subjectivity - Definition | Binance Academy." https://www.binance.vision/glossary/weak-subjectivity. </p>
+<p>[5]"RANDAO beacon exploitability analysis, round 2 - Casper - Ethereum ...." https://ethresear.ch/t/randao-beacon-exploitability-analysis-round-2/1980. </p>
+<p>[6] "RNG exploitability analysis assuming pure RANDAO-based main chain." https://ethresear.ch/t/rng-exploitability-analysis-assuming-pure-randao-based-main-chain/1825. </p>
+<p>[7] "Statistical Model Checking of RANDAO's ... - Semantic Scholar." https://pdfs.semanticscholar.org/c267/d8b8383c0dd9103f9920e1e7c448cb063376.pdf.</p>
+<p><em>Special thanks to Jason Rhinelander, for helping me proofread and refine some of the concepts in this LIP.</em></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../CheckpointingUpdate/" title="Safely Receiving Loki" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Safely Receiving Loki
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Service Node RPC Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/loki-project" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/loki_project" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://t.me/LokiCommunity" class="md-footer-social__link fa fa-telegram"></a>
+    
+      <a href="https://www.reddit.com/r/LokiProject" class="md-footer-social__link fa fa-reddit"></a>
+    
+      <a href="https://www.youtube.com/lokinetwork" class="md-footer-social__link fa fa-youtube"></a>
+    
+      <a href="https://www.facebook.com/LokiNetwork/" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../JAVASCRIPT/links.js"></script>
+      
+        <script src="../../JAVASCRIPT/style.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
