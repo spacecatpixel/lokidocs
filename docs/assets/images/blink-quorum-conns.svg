@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="526pt" height="285pt" viewBox="0.00 0.00 526.00 285.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 281)">
+<title>bqcomm</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-281 522,-281 522,4 -4,4"/>
+
+<g id="node1" class="node">
+<title>q0</title>
+<polygon fill="none" stroke="#000000" points="0,-23.5 0,-276.5 428,-276.5 428,-23.5 0,-23.5"/>
+<text text-anchor="middle" x="21.5" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">Q</text>
+<polyline fill="none" stroke="#000000" points="0,-253.5 43,-253.5 "/>
+<text text-anchor="middle" x="21.5" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₁</text>
+<polyline fill="none" stroke="#000000" points="0,-230.5 43,-230.5 "/>
+<text text-anchor="middle" x="21.5" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₂</text>
+<polyline fill="none" stroke="#000000" points="0,-207.5 43,-207.5 "/>
+<text text-anchor="middle" x="21.5" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₃</text>
+<polyline fill="none" stroke="#000000" points="0,-184.5 43,-184.5 "/>
+<text text-anchor="middle" x="21.5" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₄</text>
+<polyline fill="none" stroke="#000000" points="0,-161.5 43,-161.5 "/>
+<text text-anchor="middle" x="21.5" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₅</text>
+<polyline fill="none" stroke="#000000" points="0,-138.5 43,-138.5 "/>
+<text text-anchor="middle" x="21.5" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₆</text>
+<polyline fill="none" stroke="#000000" points="0,-115.5 43,-115.5 "/>
+<text text-anchor="middle" x="21.5" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₇</text>
+<polyline fill="none" stroke="#000000" points="0,-92.5 43,-92.5 "/>
+<text text-anchor="middle" x="21.5" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₈</text>
+<polyline fill="none" stroke="#000000" points="0,-69.5 43,-69.5 "/>
+<text text-anchor="middle" x="21.5" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₉</text>
+<polyline fill="none" stroke="#000000" points="0,-46.5 43,-46.5 "/>
+<text text-anchor="middle" x="21.5" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₁₀</text>
+<polyline fill="none" stroke="#000000" points="43,-23.5 43,-276.5 "/>
+<text text-anchor="middle" x="62" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₁</text>
+<polyline fill="none" stroke="#000000" points="43,-253.5 81,-253.5 "/>
+<text text-anchor="middle" x="62" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="43,-230.5 81,-230.5 "/>
+<text text-anchor="middle" x="62" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="43,-207.5 81,-207.5 "/>
+<text text-anchor="middle" x="62" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="43,-184.5 81,-184.5 "/>
+<text text-anchor="middle" x="62" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="43,-161.5 81,-161.5 "/>
+<text text-anchor="middle" x="62" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="43,-138.5 81,-138.5 "/>
+<text text-anchor="middle" x="62" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="43,-115.5 81,-115.5 "/>
+<text text-anchor="middle" x="62" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="43,-92.5 81,-92.5 "/>
+<text text-anchor="middle" x="62" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="43,-69.5 81,-69.5 "/>
+<text text-anchor="middle" x="62" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="43,-46.5 81,-46.5 "/>
+<text text-anchor="middle" x="62" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="81,-23.5 81,-276.5 "/>
+<text text-anchor="middle" x="100" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₂</text>
+<polyline fill="none" stroke="#000000" points="81,-253.5 119,-253.5 "/>
+<text text-anchor="middle" x="100" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="81,-230.5 119,-230.5 "/>
+<text text-anchor="middle" x="100" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="81,-207.5 119,-207.5 "/>
+<text text-anchor="middle" x="100" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="81,-184.5 119,-184.5 "/>
+<text text-anchor="middle" x="100" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="81,-161.5 119,-161.5 "/>
+<text text-anchor="middle" x="100" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="81,-138.5 119,-138.5 "/>
+<text text-anchor="middle" x="100" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="81,-115.5 119,-115.5 "/>
+<text text-anchor="middle" x="100" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="81,-92.5 119,-92.5 "/>
+<text text-anchor="middle" x="100" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="81,-69.5 119,-69.5 "/>
+<text text-anchor="middle" x="100" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="81,-46.5 119,-46.5 "/>
+<text text-anchor="middle" x="100" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="119,-23.5 119,-276.5 "/>
+<text text-anchor="middle" x="138" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₃</text>
+<polyline fill="none" stroke="#000000" points="119,-253.5 157,-253.5 "/>
+<text text-anchor="middle" x="138" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="119,-230.5 157,-230.5 "/>
+<text text-anchor="middle" x="138" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="119,-207.5 157,-207.5 "/>
+<text text-anchor="middle" x="138" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="119,-184.5 157,-184.5 "/>
+<text text-anchor="middle" x="138" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="119,-161.5 157,-161.5 "/>
+<text text-anchor="middle" x="138" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="119,-138.5 157,-138.5 "/>
+<text text-anchor="middle" x="138" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="119,-115.5 157,-115.5 "/>
+<text text-anchor="middle" x="138" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="119,-92.5 157,-92.5 "/>
+<text text-anchor="middle" x="138" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="119,-69.5 157,-69.5 "/>
+<text text-anchor="middle" x="138" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="119,-46.5 157,-46.5 "/>
+<text text-anchor="middle" x="138" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="157,-23.5 157,-276.5 "/>
+<text text-anchor="middle" x="176" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₄</text>
+<polyline fill="none" stroke="#000000" points="157,-253.5 195,-253.5 "/>
+<text text-anchor="middle" x="176" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="157,-230.5 195,-230.5 "/>
+<text text-anchor="middle" x="176" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="157,-207.5 195,-207.5 "/>
+<text text-anchor="middle" x="176" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="157,-184.5 195,-184.5 "/>
+<text text-anchor="middle" x="176" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="157,-161.5 195,-161.5 "/>
+<text text-anchor="middle" x="176" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="157,-138.5 195,-138.5 "/>
+<text text-anchor="middle" x="176" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="157,-115.5 195,-115.5 "/>
+<text text-anchor="middle" x="176" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="157,-92.5 195,-92.5 "/>
+<text text-anchor="middle" x="176" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="157,-69.5 195,-69.5 "/>
+<text text-anchor="middle" x="176" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="157,-46.5 195,-46.5 "/>
+<text text-anchor="middle" x="176" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="195,-23.5 195,-276.5 "/>
+<text text-anchor="middle" x="214" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₅</text>
+<polyline fill="none" stroke="#000000" points="195,-253.5 233,-253.5 "/>
+<text text-anchor="middle" x="214" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="195,-230.5 233,-230.5 "/>
+<text text-anchor="middle" x="214" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="195,-207.5 233,-207.5 "/>
+<text text-anchor="middle" x="214" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="195,-184.5 233,-184.5 "/>
+<text text-anchor="middle" x="214" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="195,-161.5 233,-161.5 "/>
+<text text-anchor="middle" x="214" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="195,-138.5 233,-138.5 "/>
+<text text-anchor="middle" x="214" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="195,-115.5 233,-115.5 "/>
+<text text-anchor="middle" x="214" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="195,-92.5 233,-92.5 "/>
+<text text-anchor="middle" x="214" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="195,-69.5 233,-69.5 "/>
+<text text-anchor="middle" x="214" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="195,-46.5 233,-46.5 "/>
+<text text-anchor="middle" x="214" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="233,-23.5 233,-276.5 "/>
+<text text-anchor="middle" x="252" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₆</text>
+<polyline fill="none" stroke="#000000" points="233,-253.5 271,-253.5 "/>
+<text text-anchor="middle" x="252" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="233,-230.5 271,-230.5 "/>
+<text text-anchor="middle" x="252" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="233,-207.5 271,-207.5 "/>
+<text text-anchor="middle" x="252" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="233,-184.5 271,-184.5 "/>
+<text text-anchor="middle" x="252" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="233,-161.5 271,-161.5 "/>
+<text text-anchor="middle" x="252" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="233,-138.5 271,-138.5 "/>
+<text text-anchor="middle" x="252" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="233,-115.5 271,-115.5 "/>
+<text text-anchor="middle" x="252" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="233,-92.5 271,-92.5 "/>
+<text text-anchor="middle" x="252" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="233,-69.5 271,-69.5 "/>
+<text text-anchor="middle" x="252" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="233,-46.5 271,-46.5 "/>
+<text text-anchor="middle" x="252" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="271,-23.5 271,-276.5 "/>
+<text text-anchor="middle" x="290" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₇</text>
+<polyline fill="none" stroke="#000000" points="271,-253.5 309,-253.5 "/>
+<text text-anchor="middle" x="290" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="271,-230.5 309,-230.5 "/>
+<text text-anchor="middle" x="290" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="271,-207.5 309,-207.5 "/>
+<text text-anchor="middle" x="290" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="271,-184.5 309,-184.5 "/>
+<text text-anchor="middle" x="290" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="271,-161.5 309,-161.5 "/>
+<text text-anchor="middle" x="290" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="271,-138.5 309,-138.5 "/>
+<text text-anchor="middle" x="290" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="271,-115.5 309,-115.5 "/>
+<text text-anchor="middle" x="290" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="271,-92.5 309,-92.5 "/>
+<text text-anchor="middle" x="290" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="271,-69.5 309,-69.5 "/>
+<text text-anchor="middle" x="290" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="271,-46.5 309,-46.5 "/>
+<text text-anchor="middle" x="290" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="309,-23.5 309,-276.5 "/>
+<text text-anchor="middle" x="328" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₈</text>
+<polyline fill="none" stroke="#000000" points="309,-253.5 347,-253.5 "/>
+<text text-anchor="middle" x="328" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="309,-230.5 347,-230.5 "/>
+<text text-anchor="middle" x="328" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="309,-207.5 347,-207.5 "/>
+<text text-anchor="middle" x="328" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="309,-184.5 347,-184.5 "/>
+<text text-anchor="middle" x="328" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="309,-161.5 347,-161.5 "/>
+<text text-anchor="middle" x="328" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="309,-138.5 347,-138.5 "/>
+<text text-anchor="middle" x="328" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="309,-115.5 347,-115.5 "/>
+<text text-anchor="middle" x="328" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="309,-92.5 347,-92.5 "/>
+<text text-anchor="middle" x="328" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="309,-69.5 347,-69.5 "/>
+<text text-anchor="middle" x="328" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="309,-46.5 347,-46.5 "/>
+<text text-anchor="middle" x="328" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="347,-23.5 347,-276.5 "/>
+<text text-anchor="middle" x="366" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₉</text>
+<polyline fill="none" stroke="#000000" points="347,-253.5 385,-253.5 "/>
+<text text-anchor="middle" x="366" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="347,-230.5 385,-230.5 "/>
+<text text-anchor="middle" x="366" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="347,-207.5 385,-207.5 "/>
+<text text-anchor="middle" x="366" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="347,-184.5 385,-184.5 "/>
+<text text-anchor="middle" x="366" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="347,-161.5 385,-161.5 "/>
+<text text-anchor="middle" x="366" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="347,-138.5 385,-138.5 "/>
+<text text-anchor="middle" x="366" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="347,-115.5 385,-115.5 "/>
+<text text-anchor="middle" x="366" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="347,-92.5 385,-92.5 "/>
+<text text-anchor="middle" x="366" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="347,-69.5 385,-69.5 "/>
+<text text-anchor="middle" x="366" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+<polyline fill="none" stroke="#000000" points="347,-46.5 385,-46.5 "/>
+<text text-anchor="middle" x="366" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="385,-23.5 385,-276.5 "/>
+<text text-anchor="middle" x="406.5" y="-261.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₁₀</text>
+<polyline fill="none" stroke="#000000" points="385,-253.5 428,-253.5 "/>
+<text text-anchor="middle" x="406.5" y="-238.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="385,-230.5 428,-230.5 "/>
+<text text-anchor="middle" x="406.5" y="-215.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="385,-207.5 428,-207.5 "/>
+<text text-anchor="middle" x="406.5" y="-192.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="385,-184.5 428,-184.5 "/>
+<text text-anchor="middle" x="406.5" y="-169.3" font-family="Times,serif" font-size="14.00" fill="#000000">i</text>
+<polyline fill="none" stroke="#000000" points="385,-161.5 428,-161.5 "/>
+<text text-anchor="middle" x="406.5" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="385,-138.5 428,-138.5 "/>
+<text text-anchor="middle" x="406.5" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="385,-115.5 428,-115.5 "/>
+<text text-anchor="middle" x="406.5" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="385,-92.5 428,-92.5 "/>
+<text text-anchor="middle" x="406.5" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="385,-69.5 428,-69.5 "/>
+<text text-anchor="middle" x="406.5" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">o</text>
+<polyline fill="none" stroke="#000000" points="385,-46.5 428,-46.5 "/>
+<text text-anchor="middle" x="406.5" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">x</text>
+</g>
+
+<g id="node2" class="node">
+<title>q1</title>
+<polygon fill="none" stroke="#000000" points="464,-.5 464,-161.5 518,-161.5 518,-.5 464,-.5"/>
+<text text-anchor="middle" x="491" y="-146.3" font-family="Times,serif" font-size="14.00" fill="#000000">Q'</text>
+<polyline fill="none" stroke="#000000" points="464,-138.5 518,-138.5 "/>
+<text text-anchor="middle" x="491" y="-123.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₁</text>
+<polyline fill="none" stroke="#000000" points="464,-115.5 518,-115.5 "/>
+<text text-anchor="middle" x="491" y="-100.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₂</text>
+<polyline fill="none" stroke="#000000" points="464,-92.5 518,-92.5 "/>
+<text text-anchor="middle" x="491" y="-77.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₃</text>
+<polyline fill="none" stroke="#000000" points="464,-69.5 518,-69.5 "/>
+<text text-anchor="middle" x="491" y="-54.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₄</text>
+<polyline fill="none" stroke="#000000" points="464,-46.5 518,-46.5 "/>
+<text text-anchor="middle" x="491" y="-31.3" font-family="Times,serif" font-size="14.00" fill="#000000">SN₅</text>
+<polyline fill="none" stroke="#000000" points="464,-23.5 518,-23.5 "/>
+<text text-anchor="middle" x="491" y="-8.3" font-family="Times,serif" font-size="14.00" fill="#000000">...</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>q0:x1-&gt;q1:i1</title>
+<path fill="none" stroke="#000000" d="M428,-127C440,-127 445.25,-127 453.875,-127"/>
+<polygon fill="#000000" stroke="#000000" points="454,-130.5001 464,-127 454,-123.5001 454,-130.5001"/>
+</g>
+
+<g id="edge2" class="edge">
+<title>q0:x2-&gt;q1:i2</title>
+<path fill="none" stroke="#000000" d="M428,-104C440,-104 445.25,-104 453.875,-104"/>
+<polygon fill="#000000" stroke="#000000" points="454,-107.5001 464,-104 454,-100.5001 454,-107.5001"/>
+</g>
+
+<g id="edge3" class="edge">
+<title>q0:x3-&gt;q1:i3</title>
+<path fill="none" stroke="#000000" d="M428,-81C440,-81 445.25,-81 453.875,-81"/>
+<polygon fill="#000000" stroke="#000000" points="454,-84.5001 464,-81 454,-77.5001 454,-84.5001"/>
+</g>
+
+<g id="edge4" class="edge">
+<title>q0:x4-&gt;q1:i4</title>
+<path fill="none" stroke="#000000" d="M428,-58C440,-58 445.25,-58 453.875,-58"/>
+<polygon fill="#000000" stroke="#000000" points="454,-61.5001 464,-58 454,-54.5001 454,-61.5001"/>
+</g>
+
+<g id="edge5" class="edge">
+<title>q0:x5-&gt;q1:i5</title>
+<path fill="none" stroke="#000000" d="M428,-35C440,-35 445.25,-35 453.875,-35"/>
+<polygon fill="#000000" stroke="#000000" points="454,-38.5001 464,-35 454,-31.5001 454,-38.5001"/>
+</g>
+</g>
+</svg>

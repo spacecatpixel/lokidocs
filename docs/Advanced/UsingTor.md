@@ -1,3 +1,6 @@
+title: Loki Documentation | Using Loki through Tor
+description: While Loki isn't made to integrate with Tor, it can be used wrapped with torsocks. This document shows the parameters and environemnt variables that you need to change to allow Tor functionality.
+
 # Using Tor
 
 While Loki isn't made to integrate with Tor, it can be used wrapped with torsocks, by

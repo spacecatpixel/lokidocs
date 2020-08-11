@@ -1,6 +1,61 @@
+title: Loki Documentation | Lokinet Exit Node Guide
+description: Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet or onion routing protocol. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
+
 # LokiNET Exit Node Guide
 
-// TODO: exit node overview goes here
+Exit nodes allow users to make requests to the wider internet and return those requests through a mixnet or onion router. If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
+
+## Client 
+
+Lokinet clients can use exit nodes without the need to host a service node.
+
+### Configuration
+
+To use an exit node as a client, add the following option to the `[network]` section in `lokinet.ini` 
+
+     exit-node=exitnodehexpublickeygoeshere
+     strict-connect=firsthophexpublickeygoeshere
+     
+This sets to use an exit node by its public identity key and sets a strict first hop by its public identity key.
+We set a strict first hope so that we can easily set up the routing table.
+     
+##### Toynet exit public key list by region:
+
+Romania:
+
+* `b61df944b8547af56201c6c7528ed86289566dcf73358c5ef8e3b4e628671399`
+    
+##### Toynet first hop public key list with IP
+
+* `8df8ca1cc9d39d381f0efafdf58e2569457675a1e543189bea8279522aee6461` `167.114.185.46`
+
+* `3dcb5a34d015a7bbb4636be83991e00cbeff13fe7834e0d5452ffe9a5af5a5be` `162.243.164.223`
+  
+  
+### Set up routes
+
+In this example your first hop is at `162.243.164.223` and your network's default gateway is `192.168.0.1`
+
+#### Windows
+
+// TODO: document me
+
+#### OS X
+
+// TODO: document me
+
+#### Linux
+
+Set the route that routes everything over lokinet do the following as root:
+
+    # ip route add 162.243.164.223 via 192.168.0.1
+    # ip route del default
+    # ip route add default dev lokitun0
+
+To unset the route everything over lokinet route do the following as root:
+
+    # ip route del default
+    # ip route add default via 192.168.0.1
 
 ## Prequesites
 
@@ -22,7 +77,7 @@
 
 ## Legal
 
-Running a Lokinet Exit node simply means that you are requesting and relaying packets of data on someone else's behalf, a vast majority of the traffic in mixnets comprised of legal and non malicious traffic. Statically over the course of running a Service Node you are likely to run into a few users who abuse their anonymity to send or receive information that may be explicitly malicious, therefor it is important that we discuss the legal implications of this malicious traffic.
+Running a Lokinet Exit node simply means that you are requesting and relaying packets of data on someone else's behalf, a vast majority of the traffic in mixnets and onion routers comprised of legal and non malicious traffic. Statically over the course of running a [Service Node](../../ServiceNodes/SNOverview.md) you are likely to run into a few users who abuse their anonymity to send or receive information that may be explicitly malicious, therefor it is important that we discuss the legal implications of this malicious traffic.
 
 In most countries Exit nodes are viewed in much the same way as ISP's are, that is that they are usually classed as data transmitters, which makes them exempt from criminal or civil liability based on the data they transmit. This means they are also covered by exceptions in the EUCD and DMCA laws which stipulate content regulation on the internet in the US and Europe respectively.
 
@@ -32,18 +87,15 @@ For this reason you should always check the laws of the relevant country you are
 
 Although all relevant information, it still stands as likely the most contact you are going to receive as you run an exit node is with your ISP or VPS provider who is likely to forward DMCA takedown notices, or abuse requests to the email address you used to sign up with. 
 
-
 ### Disclaimer
 
 The Loki foundation or the writers of this guide are not responsible for any legal implications you may face because you operate a Loki Service Node. 
-
-
 
 ### Email Templates
 
 If you decided to run a Service Node with exit functionality there are a couple of common abuse emails you will run into, so its a good idea to reduce the time spent answering emails to use some available templates.
 
-**Copyright infringement Email Response**
+####**Copyright infringement Email Response**
 
 **European ISP**
 

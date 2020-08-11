@@ -1,11 +1,14 @@
-#Cryptoeconomics
+title: Loki.network Documentation | Loki Cryptoeconomics
+description: This document explains the cryptocurrency economics of the Loki Coin. It goes into details about the Loki Block Reward, Mining Reward, Service Node reward and governance reward. The circulating supply for Loki cryptocurrency is available in raw data.
+
+# Cryptoeconomics
 
 Loki is a Blockchain network oriented toward the provision of privacy-preserving services over a network of [Service Nodes](../ServiceNodes/SNOverview.md). The salient cryptoeconomic problem is how to incentivise actors in the Loki network to operate Service Nodes in a manner compatible with the objectives of the Loki network, in particular decentralisation and privacy.
 
 To solve this problem the Loki Project team commissioned two Economic papers:
 
-1. [Cryptoeconomics of the Loki Network](https://loki.network/wp-content/uploads/2018/08/CryptoEconomicsOfTheLokiNetworkHistoric.pdf): This Economic Report was commissioned to characterise the game theory behind incentivising Service Node operators. 
-2. [Loki Cryptoeconomics](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf): This Report was commissioned to apply the game theory specific to the Loki Networks economics.
+1. [Cryptoeconomics of the Loki Network](https://loki.network/cryptoeconomics): This Economic Report was commissioned to characterise the game theory behind incentivising Service Node operators. 
+2. [Loki Cryptoeconomics](https://loki.network/proposal): This Report was commissioned to apply the game theory specific to the Loki Networks economics.
 
 These 2 papers analysed the [Block Reward](#block-reward), [Block Reward Split](#block-reward-split), [Inflation](#inflation), [Circulating Supply](#circulating-supply) and the amount of potential Service Nodes on the network to develop a cryptoeconomic solution to incentivise Service Node Operators.
 
@@ -18,20 +21,31 @@ The Loki Block Reward is generated in a similar manner to most proof-of-work cry
 
 The amount of Loki rewarded `BR` to the network at each block height `h` follows the following equation:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;BR = 28 + \frac{100}{2^{(\frac{h}{64800})}}" title="\Large BR = 28 + \frac{100}{2^{\frac{*h*}{64800}}}" />
+<center>![Block Reward Formula](../assets/blockreward.svg)</center>
 
-This block reward formula is a result of [Loki's Cryptoeconomic study](https://loki.network/wp-content/uploads/2018/08/LokiCryptoeconomicHistoric.pdf), on the 30th of July, 2018, at block 64324, the Loki block reward went from being calculated in terms of the circulating supply with an emission speed factor of 20, to be derived from the block height.
+This block reward formula is a result of [Loki's Cryptoeconomic study](https://loki.network/proposal), on the 30th of July, 2018, at block 64324, the Loki block reward went from being calculated in terms of the circulating supply with an emission speed factor of 20, to be derived from the block height.
 
 ### Block Reward Split
 
-As Service Node's went live on 20th of September, 2018, at block 101250, the addition of a Block Reward split was required to financially incentivise [Service Node](../ServiceNodes/SNOverview.md) Operators to maintain and run Service Nodes. During the fork on the 30th of July, 2018, the Block Reward was hard coded to split the reward as follows:
+As Service Node's went live on 20th of September, 2018, at block 101250, the addition of a Block Reward split was required to financially incentivise [Service Node](../ServiceNodes/SNOverview.md) Operators to maintain and run Service Nodes. 
 
+At HF15, the Block Reward was hard coded to split the reward as follows:
 
 |Party|Percent of Reward|
 |------|-------|
-|Service Nodes|50%|
-|Miners|45%|
-|Governance|5%|
+|Service Nodes|66%|
+|Miners|24%|
+|Governance|10%|
+
+And once [Pulse](../Advanced/PulseLip5.md) comes at HF16, the block reward will be hard coded to split the reward as follows.
+
+|Party|Percent of Reward|
+|------|-------|
+|Service Nodes|90%|
+|Governance|10%|
+
+
+- [Discussion and Pull Request](https://github.com/loki-project/loki-core/pull/1061)
 
 #### Mining Reward
 As well as collecting transactions fees, 45% of the block reward is awarded to the miner that constructs the block.

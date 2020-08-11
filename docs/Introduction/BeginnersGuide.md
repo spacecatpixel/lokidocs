@@ -1,3 +1,0 @@
-# Beginners Guide
-
->> TO DO

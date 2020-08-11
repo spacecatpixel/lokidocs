@@ -1,3 +1,6 @@
+title: Loki.network Documentation | Loki Debugging
+description: This section contains general instructions for debugging failed installs or problems encountered with Loki. First ensure you are running the latest version built from the Github repo.
+
 # Debugging
 
 This section contains general instructions for debugging failed installs or problems encountered with Loki. First ensure you are running the latest version built from the Github repo.

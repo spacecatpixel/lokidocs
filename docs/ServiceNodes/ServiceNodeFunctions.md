@@ -1,6 +1,9 @@
-# Service Node Functions
+title: Loki Documentation | Loki Service Node Functions.
+description: What do Loki Service Nodes do? Loki Service Nodes begin as a Remote Node, you might be familiar with the Monero Remote Nodes. 
 
-## Remote Nodes
+## Service Node Functions
+
+### Remote Nodes
 
 On any given cryptocurrency network, storing a full copy of the blockchain is not possible or practical for many users.   In Bitcoin and Ethereum, users can choose to connect to a public full node that holds a copy of the blockchain and can query and submit transactions to the network. This works because Bitcoin and Ethereum full nodes can efficiently search the blockchain for transactions that have the users public key as the target.
 
@@ -10,11 +13,11 @@ Additionally, malicious remote node operators running one of the few popular nod
 
 Loki circumvents these issues by requiring each [Service Node](../ServiceNodes/SNOverview.md) to act as a remote node that can be used by general users. Service Nodes naturally lend themselves to this work as they already hold a full copy of the  blockchain and form a widely distributed network of high bandwidth nodes. By using Service Nodes as remote nodes, there is an inherent financial limitation as to how much of the remote node network any given party can own, and therefore, how much data a malicious node operator can collect.
 
-# Future Service Node Functions
+## Future Service Node Functions
 
-## Exit Nodes
+### Exit Nodes
 
-Exit nodes allow users to make requests to the wider internet and return those requests through a [mixnet](../Lokinet/LLARP.md). If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
+Exit nodes allow users to make requests to the wider internet and return those requests through an [onion routing protocol](../Lokinet/LLARP.md). If used correctly, exit nodes allow users to browse the internet privately and without the users IP address being exposed to the server.
 
 Although the operation of exit nodes is essential to Loki’s extended utility, forcing all [Service Node](../ServiceNodes/SNOverview.md) operators to act as exit nodes could be detrimental. Acting as an exit node may expose the operator to legal risks, as users of the exit node may perform malicious activity whilst using it as a proxy. As exit nodes simply relay traffic from the internet to the end user, exit nodes often receive Digital Millennium Copyright Act (DMCA) requests or are often assumed to be the source of hacking attempts. Although in most jurisdictions safe harboring laws may protect exit node operators, internet service providers that carry Service Node traffic on their servers may fear legal risks and often cut off service to the exit node.
 
