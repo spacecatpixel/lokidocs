@@ -835,6 +835,26 @@
     Service Nodes Overview
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-based-resistance-to-sybil-attack" title="Market-based Resistance To Sybil Attack" class="md-nav__link">
+    Market-based Resistance To Sybil Attack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppression-of-circulating-supply" title="Suppression of Circulating Supply" class="md-nav__link">
+    Suppression of Circulating Supply
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -956,18 +976,6 @@
   <li class="md-nav__item">
     <a href="../GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
       Gui Staking Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../launcherconfig/" title="Launcher Config File" class="md-nav__link">
-      Launcher Config File
     </a>
   </li>
 
@@ -2130,6 +2138,26 @@
     Service Nodes Overview
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-based-resistance-to-sybil-attack" title="Market-based Resistance To Sybil Attack" class="md-nav__link">
+    Market-based Resistance To Sybil Attack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppression-of-circulating-supply" title="Suppression of Circulating Supply" class="md-nav__link">
+    Suppression of Circulating Supply
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2197,7 +2225,9 @@
 </table>
 <h2 id="service-nodes-overview">Service Nodes Overview<a class="headerlink" href="#service-nodes-overview" title="Permanent link">&para;</a></h2>
 <p>Much of Loki’s networking functionality and scalability is enabled by a set of incentivised nodes called Service Nodes.  To operate a Service Node, an operator <a href="../StakingRequirement/">time-locks a significant amount of Loki</a> and provides a minimum level of bandwidth and storage to the network. In return for their services, Loki Service Node operators receive a portion of the block reward from each block.</p>
-<p>The resulting network provides <a href="../../Advanced/SybilResistance/">market-based resistance to Sybil attacks</a>, addressing a range of problems with existing onion routers and privacy-centric services. This resistance is based on supply and demand interactions which help prevent single actors from having a large enough stake in Loki to have a significant negative impact on the second-layer privacy services Loki provides. <a href="https://github.com/dashpay/dash/wiki/Whitepaper">DASH</a> first theorised that Sybil attack resistant networks can be derived from cryptoeconomics. As an attacker accumulates Loki, the  circulating supply decreases, in turn applying demand-side pressure, driving the price of Loki up. As this continues, it becomes increasingly costly for additional Loki to be purchased, making the attack prohibitively expensive.</p>
+<h3 id="market-based-resistance-to-sybil-attack">Market-based Resistance To Sybil Attack<a class="headerlink" href="#market-based-resistance-to-sybil-attack" title="Permanent link">&para;</a></h3>
+<p>The resulting network provides <a href="../../Advanced/SybilResistance/">market-based resistance to Sybil attacks</a>, addressing a range of problems with existing onion routers and privacy-centric services. This resistance is based on supply and demand interactions which help prevent single actors from having a large enough stake in Loki to have a significant negative impact on the second-layer privacy services Loki provides. As an attacker accumulates Loki, the  circulating supply decreases, in turn applying demand-side pressure, driving the price of Loki up. As this continues, it becomes increasingly costly for additional Loki to be purchased, making the attack prohibitively expensive.</p>
+<h3 id="suppression-of-circulating-supply">Suppression of Circulating Supply<a class="headerlink" href="#suppression-of-circulating-supply" title="Permanent link">&para;</a></h3>
 <p>To achieve this economic protection, Loki encourages the active suppression of the circulating supply. In particular, the <a href="../../Advanced/Cryptoeconomics/">emissions curve</a> and <a href="../StakingRequirement/">collateral requirements</a> must be designed to ensure enough circulating supply is locked and reasonable returns are provided for operators to ensure <a href="../../Advanced/SybilResistance/">Sybil attack resistance</a>.</p>
 <h2 id="express-guide">Express Guide<a class="headerlink" href="#express-guide" title="Permanent link">&para;</a></h2>
 <p>Start a new service node by running these four commands on your server:</p>

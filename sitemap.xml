@@ -146,11 +146,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.loki.network/ServiceNodes/launcherconfig/</loc>
-     <lastmod>2020-08-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://docs.loki.network/ServiceNodes/SNFullGuideLegacy/</loc>
      <lastmod>2020-08-11</lastmod>
      <changefreq>daily</changefreq>
