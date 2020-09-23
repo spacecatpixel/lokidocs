@@ -73,7 +73,7 @@ To access the GUI client all you need to do is open up the lokinet-gui applicati
 
 Simply jump into the lokinet-gui client and click the power button.
 
-![lokinet-gui](../../assets/lokinetGui.png)
+![lokinet-gui](../../assets/lokinetGui.PNG)
 
 
 ## Browse Lokinet - Stay Private
