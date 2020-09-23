@@ -52,48 +52,39 @@ on linux you can use `host`, the loki address to query is the same but the resol
 host -t cname localhost.loki 127.3.2.1
 ```
 
+## 3. Install nginx
 
-## 3. Creating your SNApp
-Create a new directory within your home folder by running the following command in a terminal:
-
-```
-mkdir ~/snapp/
-```
-Create an index file within your new folder.
+Install a proper web server:
 
 ```
-touch ~/snapp/index.html
+sudo apt install nginx
 ```
 
-This file will hold the content of what will be served on your SNApp. Run the following command to access your new index.html file.
+Configure to run nginx only on the lokinet interface, in `/etc/nginx/sites-enabled/default` change any `listen` directives to use the lokinet ip and remove any ipv6 `listen` directives.
+
+By default you can drop files into `/var/www/html` to serve them. make sure they are accessable via the `www-data` user or whatever user `nginx` runs as.
+
+TIP: You can make nginx generate a directory listing by puting `autoindex on;` into the `location` block in the nginx config file.
+
+
+## 4. Security
+
+Make sure no services bind to all interfaces.
+
+suggested firewall settings when using nginx:
 
 ```
-vi ~/snapp/index.html
-```
+# change me to the range used by lokinet
+LOKINET_RANGE=10.0.0.0/16
 
-Click `a` to start adding text to your index.html file.
+# drop all from lokinet
+ufw deny from $LOKINET_RANGE
 
-Type out `Hello Lokinet` and click the escape button.
-
-Once the escape button is clicked it will allow for commands to be inputed again.
-
-Now type `:w` and click enter to write to the file.
-
-Then type `:q` and click enter to quit editing the file, this will take you back to the directory you were in before `~/snapp/`.
-
-## 4. Serving your SNApp
-
-Now we will serve our index.html file to the lokinet by running the following command within our snapp folder.
+# allow tcp 80 from lokinet
+ufw allow 80/tcp from $LOKINET_RANGE
 
 ```
-sudo python3 -m http.server --bind <ip> <port>
-```
 
-For this example our pubkey is set to `lokitun0` which has address `172.16.10.1`. The `<port>` number can be whatever we define it. Therefor the command we would run for this example would be:
-```
-sudo python3 -m http.server --bind 172.16.10.1 80
-``` 
-Now if you go to the .loki address you saved before your message “hello lokinet” will be displayed. 
 
 Jump onto the lokinet irc and see if others can access your SNApp.
 

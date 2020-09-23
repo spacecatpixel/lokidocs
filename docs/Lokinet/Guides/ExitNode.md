@@ -9,53 +9,18 @@ Exit nodes allow users to make requests to the wider internet and return those r
 
 Lokinet clients can use exit nodes without the need to host a service node.
 
-### Configuration
+To turn the vpn on:
 
-To use an exit node as a client, add the following option to the `[network]` section in `lokinet.ini` 
+```bash
+lokinet-vpn --up --exit exitaddressgoeshere.loki --token authcodegoeshere
+```
 
-     exit-node=exitnodehexpublickeygoeshere
-     strict-connect=firsthophexpublickeygoeshere
-     
-This sets to use an exit node by its public identity key and sets a strict first hop by its public identity key.
-We set a strict first hope so that we can easily set up the routing table.
-     
-##### Toynet exit public key list by region:
+To turn the vpn off:
 
-Romania:
+```bash
+lokinet-vpn --down
+```
 
-* `b61df944b8547af56201c6c7528ed86289566dcf73358c5ef8e3b4e628671399`
-    
-##### Toynet first hop public key list with IP
-
-* `8df8ca1cc9d39d381f0efafdf58e2569457675a1e543189bea8279522aee6461` `167.114.185.46`
-
-* `3dcb5a34d015a7bbb4636be83991e00cbeff13fe7834e0d5452ffe9a5af5a5be` `162.243.164.223`
-  
-  
-### Set up routes
-
-In this example your first hop is at `162.243.164.223` and your network's default gateway is `192.168.0.1`
-
-#### Windows
-
-// TODO: document me
-
-#### OS X
-
-// TODO: document me
-
-#### Linux
-
-Set the route that routes everything over lokinet do the following as root:
-
-    # ip route add 162.243.164.223 via 192.168.0.1
-    # ip route del default
-    # ip route add default dev lokitun0
-
-To unset the route everything over lokinet route do the following as root:
-
-    # ip route del default
-    # ip route add default via 192.168.0.1
 
 ## Prequesites
 
@@ -177,8 +142,6 @@ the rate of legitimate use the fraction of misuse is small and abuse complaints 
 // TODO: ipv6 implications
 
 ### Worst Case Emergencies
-
-// TODO: link to EFF resources
 
 // TODO: insert info about handling police here
 

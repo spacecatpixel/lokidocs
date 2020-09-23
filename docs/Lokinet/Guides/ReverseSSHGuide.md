@@ -38,10 +38,10 @@ Install Lokinet:
 sudo apt install lokinet
 ```
 
-Make your .loki address static (you might have to remove the ~ from this command depending on which user you are logged in as):
+Make your .loki address static:
 
 ```
-sudo nano ~/etc/loki/lokinet.ini
+sudo nano /etc/loki/lokinet.ini
 ```
 
 Scroll to the bottom of the file in the [Network] section and add the following line: 

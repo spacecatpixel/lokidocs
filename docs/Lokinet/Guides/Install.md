@@ -1,87 +1,91 @@
 title: Loki Documentation | Lokinet Linux Install Guide
 description: This guide describes building linux binaries from source. To download built binaries, head to lokinet.org for release files. 
 
-# LokiNET install guide - Linux
+# Initial Setup for Linux
 
-This guide describes building linux binaries from source. To download built binaries, head to [lokinet.org](https://lokinet.org/) for release files. 
+Installing lokinet on linux is easy
 
-To Compile, download the [lastest release](https://github.com/loki-project/loki-network/releases) of Lokinet for your platform.
+## For debian based distros
 
-If you encounter a compiler error, report it [here](https://github.com/loki-project/loki-network/issues) using the following template found [here](../../../Contributing/Issue_Template/)
+add the debian repo:
 
-
-##Initial Setup for Linux
-
-###1. Set up Non-root User
-
-Best practice when running a public server is to not run your software as the root user. We will create a non-root user to our server by running the following command.
-
-```
-sudo adduser <username>
+```bash
+sudo apt update 
+sudo apt install curl 
+curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
+echo "deb https://deb.loki.network $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/loki.list
+apt update
 ```
 
-Replacing `<username>` with a name you will log-in with. For this user-guide we will use `lokitestnet` as our username.
+... then install lokinet:
 
-If you use the same username the command will look like:
-
-```
-sudo adduser lokitestnet
+```bash
+sudo apt install lokinet
 ```
 
-Once ran the terminal will prompt you for a new password for your newly created user. Use a different password to the root password.
+You are now done, dns has been set up and you should be good to go.
 
-Once the password has been set, the terminal will prompt for a few details about the individual running the user. You can hit enter through each of the inputs as the details are not important for the purposes of accessing Lokinet.
+## Linux Mint
 
-Once that’s done, run the following two commands to give our new account admin privileges and to change to such account.
+Linux Mint is super easy for new users so they decided that special snowflake release names that require an extra step to use apt repos was a good idea. 
 
-```
-sudo usermod -aG sudo lokitestnet
-su - lokitestnet
-```
+Check [this](https://linuxmint.com/download_all.php) lookup table and replace the linux mint release name with the ubuntu release name in `/etc/apt/sources.list.d/loki.list` .
 
-###2. Computer Preparation
-We should update our package lists, the below command downloads the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs.
+## Other Distros
 
-Run the following command:
+Build from source.
 
-```
-sudo apt-get update
-```
+requirements:
 
-You will notice a bunch of package lists were downloaded, once this is complete run the below command to fetch new versions of any packages we currently have installed on the system.
+* c++17 compiler
+* cmake
+* git
+* pkg-config
+* setcap
+* sqlite3
+* libunbound
+* libuv 1.x
+* zmq
+* libsodium >= 1.0.18 
 
-```
-sudo apt-get upgrade
-```
-
-You will be prompted to authorise the use of disk space, type `y` and enter to authorise.
-
-> Note: If you are prompted at any time that a version of any file is available then click the up and down arrows until you are hovering over install the package maintainer’s version and click enter.
-
-###3.  Dependencies
-You will need to install some build dependencies, run the following command to install all the build dependencies required for Lokinet:
-
-```
-sudo apt install build-essential cmake libcap-dev wget git resolvconf curl libuv1-dev libsodium-dev libcurl4-openssl-dev
-```
+... then clone the repo and build it:
 
 
-Once you’ve installed the dependencies we will now clone the loki-network repository:
-```
-git clone https://github.com/loki-project/loki-network
-cd loki-network
-```
-###4. Build for normal operation
-Run the following two commands to build for operation:
-
-```
-make
-sudo make install
+```bash
+git clone --recursive https://github.com/loki-project/loki-network
+mkdir loki-network/build
+cd loki-network/build
+cmake ..
+make -j$(nproc)
+sudo make install # this part is NOT optional
 ```
 
-###5. Setting your DNS 
+### Bootstraping Lokinet
 
-Next we need to edit our resolv.conf files and add our dns resolver.
+To bootstrap lokinet run the following as normal user once:
+
+```bash
+lokinet -g
+lokinet-bootstrap
+```
+
+then to run lokinet in the foreground as normal user:
+
+```bash
+lokinet
+```
+
+### Setting your DNS 
+
+These steps are not needed when using the debian packages.
+
+#### systemd-resolved
+
+If you use `systemd-resolved` copy `contrib/systemd-resolved/lokinet.conf` to `/etc/systemd/resolve.d.conf/10-lokinet.conf` and restart systemd-resolved using `sudo systemctl restart systemd-resolved`
+
+#### resolvconf
+
+If you don't use systemd-resolved, use resolveconf.
 
 Run the following command: 
 
@@ -104,17 +108,6 @@ Next we need to update our /etc/resolv.conf file by running the command:
 sudo resolvconf -u
 ```
 
----
-
-### Optional: Building a debian package
-
-If you want a debian package install the debian maintainer packages needed
-
-    $ sudo apt install debuild
-
-...and then build one like so:
-
-    $ debuild -us -b
 ---
 ### Finish
 

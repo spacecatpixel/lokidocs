@@ -95,9 +95,6 @@ This guide will help you gain access to SNApps, to access the guide [click here]
 The guide will cover:
 
 - Initialising Lokinet for the first time.
-
-- Running `./lokinet`.
-
 - Accessing your first SNApp.
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report your issues to the [Loki-network](https://github.com/loki-project/loki-network/issues) repository if you find them, especially if you solved the issue.
@@ -111,16 +108,5 @@ Alternatively, all you need to do is download your favourite IRC client, have `.
 
 This guide will help you host your own SNApp, to access the guide [click here](../Guides/HostingSNApps.md).
 
-The guide will cover:
-
-- Finding your Lokinet pubkey.
-
-- Editing our `lokinet.ini` file to enable persistent SNApps.
-
-- Creating a directory for your SNApp's code.
-
-- Creating an `index.html` file with `Hello Lokinet` to display to the network.
-
-- Serving your SNApp directory to the Lokinet and accessing it through your browser.
 
 Follow the guide and report to the moderators with any issues on the #lokinet-help channel on [discord](https://discord.gg/67GXfD6). Dont forget to report your issues to the [Loki-network](https://github.com/loki-project/loki-network/issues) repository if you find them, especially if you solved the issue.
