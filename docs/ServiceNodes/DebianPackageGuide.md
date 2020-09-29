@@ -28,9 +28,9 @@ One of:
 Start a new service node by running these four commands:
 
 ```
-curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 
-echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+echo "deb https://deb.loki.network $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/loki.list
 
 apt update
 
@@ -52,7 +52,7 @@ appropriate value (see below).
 
 The following command installed Jagermans public key used to sign the Binaries.
 ```
-curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 ```
 
 The second command tells `apt` where to find the packages and needs you to replace `<DISTRO>` with your distro.
@@ -70,7 +70,7 @@ Alternatively your `<Distro>` can be found by using the following list:
 - focal    (Ubuntu 20.04)
 
 ```
-echo "deb https://deb.imaginary.stream <DISTRO> main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+echo "deb https://deb.loki.network <DISTRO> main" | sudo tee /etc/apt/sources.list.d/loki.list
 ```
 
 Then resync your package repositories with:
@@ -162,6 +162,13 @@ into `/etc/loki/loki.conf` and then restart lokid using:
 
 ```
 sudo systemctl restart loki-node
+```
+
+For example, to run lokid as a service node, the `loki-service-node` helper package will configure loki.conf with these options (you can add them directly if not using the `loki-service-node` helper package):
+```
+service-node=1
+service-node-public-ip=1.2.3.4
+storage-server-port=22021
 ```
 
 ---
