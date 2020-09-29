@@ -23,9 +23,9 @@ To achieve this economic protection, Loki encourages the active suppression of t
 Start a new service node by running these four commands on your server:
 
 ```
-curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 
-echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+echo "deb https://deb.loki.network $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/loki.list
 
 apt update
 
