@@ -72,6 +72,7 @@ nav:
 #      - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
 #      - 'Legacy to Launcher Update Guide': 'ServiceNodes/UpdateGuide.md'
       - 'Service Node Setup Guide': 'ServiceNodes/DebianPackageGuide.md'
+      - 'Loki-Launcher to Debian Update Guide': 'ServiceNodes/LauncherToDeb.md'
       - 'Service Node RPC Guide': 'Developer/SNRPCGuide.md'
       - 'Gui Staking Guide': 'ServiceNodes/GUIStakingGuide.md'
 #      - 'Launcher Config File': 'ServiceNodes/launcherconfig.md'
