@@ -28,13 +28,13 @@ One of:
 Start a new service node by running these four commands:
 
 ```
-curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
+sudo curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 
 echo "deb https://deb.loki.network $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/loki.list
 
-apt update
+sudo apt update
 
-apt install loki-service-node
+sudo apt install loki-service-node
 ```
 
 The services will run via systemd as `loki-node.service`, `loki-storage-server.service`, and
@@ -52,7 +52,7 @@ appropriate value (see below).
 
 The following command installed Jagermans public key used to sign the Binaries.
 ```
-curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
+sudo curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 ```
 
 The second command tells `apt` where to find the packages and needs you to replace `<DISTRO>` with your distro.
