@@ -158,7 +158,6 @@ nav:
        - 'The Loki Foundation': 'Governance/TheLokiFoundation.md'
        - 'Loki Funding System': 'Governance/LokiFundingSystem.md'
 
-    - 'Technical Specs' : 'Advanced/TechnicalSpecs.md'
     - 'Cryptoeconomics' : 'Advanced/Cryptoeconomics.md'
     - 'Sybil Resistance' : 'Advanced/SybilResistance.md'
     - 'Dynamic Block Size': 'Advanced/DynamicBlockSize.md'
