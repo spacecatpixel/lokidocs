@@ -53,7 +53,9 @@ Service Nodes are required to:
     
 -   Be called into quorums which give them authority over instant transactions ([Blink](../LokiServices/Blink.md))
     
--   Create new blocks ([Pulse](../Advanced/PulseLip5.md), *coming soon*)
+-   Create new blocks, ([Pulse](../Advanced/PulseLip5.md))
+
+-   Route end user’s internet traffic, either as an exit node or relay, [Lokinet](https://lokinet.org).
 
 ## Guides & Resources
 

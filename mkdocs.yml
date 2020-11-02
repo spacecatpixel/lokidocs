@@ -53,9 +53,10 @@ nav:
            - '2/3 Multisig': 'Wallets/CliWallet/2of3Multisig.md'
            - 'M/N Multsig': 'Wallets/CliWallet/MofNMultisig.md'
 
-- Mining:
-    - 'Overview': 'Mining/MiningOverview.md'
-    - 'ASIC Resistance': 'Mining/ASICResistance.md'
+# Outdated, moved to POS 
+#- Mining:
+#    - 'Overview': 'Mining/MiningOverview.md'
+#    - 'ASIC Resistance': 'Mining/ASICResistance.md'
 #    - Guides:
 #      - 'XMR-Stak Mining': 'Mining/XMR-StakGuide.md'
 #      - 'XMR-Stak Linux Mining': 'Mining/XMR-Stak-Linux-Guide.md'
@@ -67,7 +68,7 @@ nav:
 #    - 'Service Node Functions': 'ServiceNodes/ServiceNodeFunctions.md'
     - 'Staking Requirement': 'ServiceNodes/StakingRequirement.md'
     - 'Deregistration Rules': 'ServiceNodes/DeregistrationRules.md'
-    - 'Infinite Staking Primer': 'ServiceNodes/InfiniteStakingPrimer.md'
+#    - 'Infinite Staking Primer': 'ServiceNodes/InfiniteStakingPrimer.md'
     - Guides:
 #      - 'Service Node Full Guide': 'ServiceNodes/SNFullGuide.md'
 #      - 'Legacy to Launcher Update Guide': 'ServiceNodes/UpdateGuide.md'

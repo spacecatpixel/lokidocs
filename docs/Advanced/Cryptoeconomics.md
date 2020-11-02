@@ -32,9 +32,8 @@ As Service Node's went live on 20th of September, 2018, at block 101250, the add
 
 |Party|Percent of Reward|
 |------|-------|
-|Service Nodes|50%|
-|Miners|45%|
-|Governance|5%|
+|Service Nodes|90%|
+|Governance|10%|
 
 #### Mining Reward
 As well as collecting transactions fees, 45% of the block reward is awarded to the miner that constructs the block.

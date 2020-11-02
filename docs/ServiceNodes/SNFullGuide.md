@@ -60,15 +60,12 @@ To understand what a [Service Node](SNOverview.md) is, you can refer to the [whi
 
 -   Act as remote nodes for users.
 
-It is also worth noting that Service Nodes are quite basic at the moment, and operators will need to stay up to date with new updates to keep in line with software and hardware requirements. Once all of the updates are out, Service Nodes will also:
-
 -   Route end user’s internet traffic, either as an exit node or relay.
 
 -   Monitor other Service Nodes and vote on their performance.
 
 -   Be called into quorums which give them authority over instant transactions ([Blink](../LokiServices/Blink.md)).
 
-Once these features come out, Service Node operation will require better servers, particularly when it comes to bandwidth. For the purposes of this guide, however, we will only consider the current requirements.
 
 ---
 

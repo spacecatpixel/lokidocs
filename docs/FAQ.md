@@ -90,6 +90,8 @@ description: What is Loki? Does Loki have Masternodes? What is Session? Loki FAQ
 
 * [Is Lokinet more private than Tor?](#is-lokinet-more-private-than-tor)
 
+* [What is LNS?](#what-is-lns)
+
 * [What protocol does Lokinet use?](#what-protocol-does-lokinet-use)
 
 * [What can I access using Lokinet?](#what-can-i-access-using-lokinet)
@@ -122,11 +124,11 @@ General
 
 ###**What is Loki?**
 
-Loki provides users with tools to interact online in an anonymous, decentralised, secure and private way. By combining a private transaction network, the $LOKI cryptocurrency, and economically incentivised [Service Nodes](../ServiceNodes/SNOverview), Loki has created a trustless quorum-based onion router called [Lokinet](../Lokinet/LokinetOverview). Built into Lokinet is [Session](../LokiServices/Session) — a decentralised, anonymous and private messaging service. Front end applications, known as [Service Node Apps](../Lokinet/SNApps) (SNApps) operate on Lokinet, and will allow browser integration and contribution from our open-source community.
+Loki provides users with tools to interact online in an anonymous, decentralised, secure and private way. By combining a private transaction network, the $LOKI cryptocurrency, and economically incentivised [Service Nodes](../ServiceNodes/SNOverview), Loki has created a trustless quorum-based onion router called [Lokinet](../Lokinet/LokinetOverview). The Loki infrastructure has allowed [Session](../LokiServices/Session) to be built — a decentralised, anonymous and private messaging service. Front end applications, known as [Service Node Apps](../Lokinet/SNApps) (SNApps) operate on Lokinet, and will allow browser integration and contribution from our open-source community.
 
 ###**Is Loki Proof of Work (PoW) or Proof of Service (PoS)?**
 
-Loki uses a hybrid of [Proof of Work](https://en.wikipedia.org/wiki/Proof-of-work_system) and [Proof of Service](../ServiceNodes/SNOverview), similar to how DASH is secured by PoW but also has a reward for their masternodes through a Proof of Service.
+Loki is [Proof of Service(POS)](../ServiceNodes/SNOverview).
 
 ###**What is the token supply?**
 
@@ -144,7 +146,7 @@ Loki provides both private transaction and private communication functionality, 
 
 ###**Is Loki an ERC20 token?**
 
-Loki is not an ERC20 token. Loki is its own coin, running its own mainnet. See [lokiblocks.com](https://lokiblocks.com)
+Loki is mainly it's own coin maintained by it's own blockchain, however a wrapped version of the Loki coin has been deployed onto the Ethereum Blockchain - called wLoki. You can read more about it at [chainflip](https://wloki.chainflip.io/#/). 
 
 ###**Why the name Loki?**
 
@@ -174,7 +176,7 @@ In the future, the community may decide that this reward is unnecessary, or of t
 
 ###**What is the block reward for mining?**
 
-The exact block reward can be found at [www.lokiblocks.com](https://www.lokiblocks.com). This block reward is split as follows: 66% of the block reward goes to service nodes, 24% to miners, and 10% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
+The exact block reward can be found at [www.lokiblocks.com](https://www.lokiblocks.com). This block reward is split as follows: 90% of the block reward goes to service nodes and 10% to the governance pool. You can see more details on the block reward split [here](../Advanced/Cryptoeconomics/#block-reward-split)
 
 ###**What is the block generation time?**
 
@@ -329,6 +331,12 @@ The Tor network relies on volunteer-operated relays, with very little barrier to
 One of Tor’s most well-documented weaknesses is its reliance on a relatively small set of central directory authority servers that allow clients to find nodes in the Tor network. If these directory authorities are compromised, it would endanger the stability of the entire Tor network. 
 
 Instead of relying on central directory authorities, Lokinet uses the Loki blockchain as a form of decentralised directory authority, meaning that Lokinet isn’t reliant on any kind of central server — the network is fully decentralised.
+
+### What is LNS?
+
+LNS provides human readable, globally unique mappings to cryptographically secure long form .loki addresses.
+
+By burning loki you can register one of these entries for up to 10 years. You can also periodically update the address that the mapping points to.
 
 ### What protocol does Lokinet use?
 
