@@ -92,6 +92,7 @@ nav:
     - Guides:
         - 'Linux GUI Guide': 'Lokinet/Guides/LokinetGuiGuide.md'
         - 'macOS Gui Guide': 'Lokinet/Guides/lokinet-mac-guide.md'
+        - 'Exit Provider Guide': 'Lokinet/Guides/ExitProvider.md'
         - 'Anonymous Reverse SSH Guide': 'Lokinet/Guides/ReverseSSHGuide.md'
         - 'Linux Command-line Guide': 'Lokinet/Guides/lokinet-linux-guide.md'
 #        - 'Lokinet Windows Guide': 'Lokinet/Guides/lokinet-windows-guide.md'
