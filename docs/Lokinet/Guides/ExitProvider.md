@@ -10,9 +10,9 @@ This document will guide you in the process of setting up an authenticated exit 
 This document is written for the target audience of people who know how to run a commercial VPN.
 
 
-## Archetectual overview
+## Architectual overview
 
-The high level "bird's eye view" of the archetecture of an exit provider is hub and spoke.
+The high level "bird's eye view" of the architecture of an exit provider is hub and spoke.
 Multiple Lokinet clients provide exit connectivity and all phone home to an auth server over a ZMQ socket.
 The auth server will tell a lokinet exit provider if a loki address + auth code pair is valid at the current time.
 This pair is sent when a lokinet exit user establishes a new flow (convtag) with the exit, this happens on a regular interval.
@@ -29,7 +29,7 @@ Requirements for the auth server:
 
 ## Guide
 
-First off if you haven't already, add the lokinet apt repository:
+First off, if you haven't already, add the lokinet apt repository:
 
 ```
     sudo curl -so /etc/apt/trusted.gpg.d/loki.gpg https://deb.loki.network/pub.gpg
@@ -37,7 +37,7 @@ First off if you haven't already, add the lokinet apt repository:
     sudo apt update
 ```
 
-On ubuntu you can install the deps via:
+On ubuntu you can install the dependencies via:
 
 ```
     $ sudo apt install python3-dev cmake git build-essential liblokimq-dev
@@ -65,7 +65,7 @@ You can run a test version of the auth server using:
 
 The `--bind` flag tells where to bind the zmq socket, it also takes `ipc:///path/to/auth.socket` to bind to a unix socket.
 
-The `--cmd` flag is a path to a script or executable that is used for the actual logic of the authentication, the script is passed to arguments: `clientaddress.loki` and `base64_encoded_auth_code`, the script should return exit code 0 on auth success or non-zero on auth failure.
+The `--cmd` flag is a path to a script or executable that is used for the actual logic of the authentication, the script is passed two arguments: `clientaddress.loki` and `base64_encoded_auth_code`, the script should return exit code 0 on auth success or non-zero on auth failure.
 
 An example implementation of this script could be the following shell script:
 
