@@ -40,27 +40,27 @@ First off, if you haven't already, add the lokinet apt repository:
 On ubuntu you can install the dependencies via:
 
 ```
-    $ sudo apt install python3-dev cmake git build-essential liblokimq-dev
+    sudo apt install python3-dev cmake git build-essential liblokimq-dev
 ```
 
 Clone the repository for the auth server and build it.
 
 ```
-    $ git clone --recursive https://github.com/loki-project/loki-pylokimq -b stable pylokimq
-    $ cd pylokimq
-    $ python3 setup.py build
+    git clone --recursive https://github.com/loki-project/loki-pylokimq -b stable pylokimq
+    cd pylokimq
+    python3 setup.py build
 ```
 
 Install the built python module:
 
 ```
-    $ sudo python3 setup.py install
+    sudo python3 setup.py install
 ```
 
 You can run a test version of the auth server using:
 
 ```
-    $ python3 -m lokinet.auth --bind tcp://127.0.0.1:5555 --cmd /bin/true 
+    python3 -m lokinet.auth --bind tcp://127.0.0.1:5555 --cmd /bin/true 
 ```
 
 The `--bind` flag tells where to bind the zmq socket, it also takes `ipc:///path/to/auth.socket` to bind to a unix socket.
@@ -76,7 +76,7 @@ grep $(sha256sum <<<"$2" | cut -d' ' -f1) /etc/loki/auth-codes.txt
 
 with this example script an auth code can be generated and added via:
 ```
-    $ sha256sum <<<"$(base64 -e 'code goes here')" | cut -d' ' -f1 >> /etc/loki/auth-codes.txt
+    sha256sum <<<"$(base64 -e 'code goes here')" | cut -d' ' -f1 >> /etc/loki/auth-codes.txt
 ```
 
 NOTE: operators are advised to **not** use this example implementation.
@@ -94,7 +94,14 @@ The suggested configuration for lokinet exits are as such:
     exit=true
     hops=2
     paths=8
+    reachable=1
+    ifaddr=10.0.0.1/16
     keyfile=/var/lib/lokinet/exit.private
     auth=lmq
     auth-lmq=tcp://auth.server.goes.here:5555
+```                 
+post setup for exit (as root) given eth0 is used to get to the internet:
+```
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+    iptables -t nat -A POSTROUTING -s 10.0.0.0/16 -o eth0 -j MASQUERADE
 ```
