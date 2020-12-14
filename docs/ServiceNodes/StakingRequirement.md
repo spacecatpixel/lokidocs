@@ -5,7 +5,13 @@ description: A cryptocurrency stake involves holding a specific cryptocoin in a 
 
 A stake involves holding a specific cryptocoin in a wallet for a particular period of time. A staking requirement is the minimum amount of said cryptocoin that is required to stake.
 
-## Service Node Staking Requirement
+Today the staking requirement for a full service node is 15,000 Loki. 
+
+## Pooling Staking Requirement
+
+A service node operator can choose to stake a minimum 25% of the staking requirement (3750 Loki) and accept additional stakes from other Loki holders to complete the full staking requirement(15,000 Loki). Each contributor will need to stake at a minimum 25% of the staking requirement however if the first three contributors stake more than 25% it would leave the last contributor to stake less than the required amount. 
+
+## Service Node Staking Requirement History
 A Loki staking Requirement is the collateral requirement an operator stakes through a time-locked output, which can be unlocked as per the contributor's request. Upon a request to unlock the funds they will stay locked for an additional 15 days where the contributor will still receive rewards. In the extra field of the transaction, the Service Node operator includes the Loki address which may receive Service Node rewards. This address will also be used as the public key for Service Node operations such as [swarm](../Advanced/SwarmFlagging.md) voting.
 
 Before each node joins the Service Node network, other nodes must individually validate that the said nodes collateral outlay matches the required amount, as per the decreasing collateralisation requirement. If the node is offline for a reasonable time, its uptime proof will not be sent to the other nodes resulting in a deregister of the node. Deregistered nodes will have their collateral requirement locked for 30 days.
