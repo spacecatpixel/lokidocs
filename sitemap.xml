@@ -1,371 +1,371 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://docs.loki.network/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Introduction/LokiNetwork/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Introduction/GettingStarted/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/FAQ/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/WalletsOverview/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/WhatWalletToUse/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/Addresses/MainAddress/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/Addresses/SubAddress/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/Addresses/IntegratedAddress/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/Multisignature/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/GuiWallet/loki-electron-guide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/GUIStakingGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/MobileWallet/RestoreMobileWalletGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/CliWallet/loki-wallet-cliMacSetup/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/CliWallet/WalletCommands/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/CliWallet/WalletRestoreSeed/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/CliWallet/WalletRestoreKeys/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/CliWallet/2of2Multisig/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/CliWallet/2of3Multisig/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Wallets/CliWallet/MofNMultisig/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Mining/MiningOverview/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Mining/ASICResistance/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/SNOverview/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/StakingRequirement/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/DeregistrationRules/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/InfiniteStakingPrimer/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/DebianPackageGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Developer/SNRPCGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/GUIStakingGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/SNFullGuideLegacy/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/StorageServerGuide-Testnet/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/ServiceNodes/OpenPort22023/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/LokinetOverview/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/PublicTestingGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/SNApps/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/LLARP/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/LokinetGuiGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/lokinet-mac-guide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/ReverseSSHGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/lokinet-linux-guide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/Install/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/AccessingSNApps/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/LokinetIRC/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/HostingSNApps/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/LokinetConfig/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/LokinetRouter/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Lokinet/Guides/ExitNode/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/Session/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/LokiNameSystem/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/threat_model/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/infrastructure/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/message_routing/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/group_chats/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/testing/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/multidevice/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/client_side_protection/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/attachments/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/HowToRegisterSessionNames/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/multi_device_setup/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/opengroup_setup/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/JoinOpenGroupMobile/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Messenger/JoinOpenGroupDesktop/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Blink/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/CheckpointingLip3/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/CheckpointingUpdate/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/PulseLip5/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Developer/SNRPCGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Developer/DaemonRPCGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Developer/DaemonRPCBeta/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Developer/WalletRPCGuide/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Developer/WalletRPCBeta/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Developer/FAQ/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/LokiServicesOverview/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/LokiServices/Blink/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/DenialofServiceAttacks/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/IPandPacketBlocking/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/SwarmFlagging/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Contributing/HowToContributeToLokiDocs/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Contributing/VULNERABILITY_RESPONSE_LOKI/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Contributing/Issue_Template/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Governance/Governance/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Governance/TheLokiFoundation/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Governance/LokiFundingSystem/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/TechnicalSpecs/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/Cryptoeconomics/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/SybilResistance/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/DynamicBlockSize/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/CryptoNoteElements/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/lokid/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/UsingTor/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/Debugging/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.loki.network/Advanced/AcceptingLoki/</loc>
-     <lastmod>2020-08-24</lastmod>
+     <lastmod>2021-02-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
